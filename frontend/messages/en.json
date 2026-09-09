@@ -3,7 +3,11 @@
     "home": {
       "title": "Nu-Isoleren | Insulation, façade works & moisture treatment",
       "description": "Cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment. Nu-Isoleren serves customers across Flanders and Wallonia. Get advice with no obligation."
-    }
+    },
+    "projects": {
+    "title": "Our Projects | Insulation & Facade Renovations | Nu-Isoleren",
+    "description": "Explore completed insulation and facade projects by Nu-Isoleren across Belgium. Cavity wall insulation, roof insulation, and modern render finishes."
+  }
   },
    "Header": {
     "reviews": "Excellent",
@@ -113,5 +117,44 @@
         "description": "We continuously innovate and partner exclusively with top-tier manufacturers. Premium materials and modern methods guarantee maximum energy returns."
       }
     }
+  },
+  "ProjectsSection": {
+    "badge": "OUR PROJECTS",
+    "title": "Real work. Visible results.",
+    "cta": "View all projects"
+  },
+
+
+
+
+
+
+
+
+  "ProjectsPage": {
+    "badge": "Our Work",
+    "title": "Explore our recent projects",
+    "description": "From cavity wall and roof insulation to silicone render facade renovations. Browse our completed projects across Belgium.",
+    "noProjects": "No projects found for this selection.",
+    "filtersTitle": "Filters",
+    "projectsCount": "{count} projects",
+    "reset": "Reset",
+    "serviceLabel": "Services",
+    "cityLabel": "Locations",
+    "page": "Page {current} of {total}",
+    "prev": "Previous",
+    "next": "Next",
+    "searchCityPlaceholder": "Search city...",
+    "noCitiesFound": "No locations found"
+  },
+  "ProjectDetailPage": {
+   "backLink": "Back to all projects",
+    "serviceLabel": "Service",
+    "locationLabel": "Location",
+    "galleryTitle": "Project Gallery",
+    "ctaTitleWithService": "Interested in {service} in {city}?",
+    "ctaTitleFallback": "Looking to insulate your property?",
+    "ctaDescription": "Request a free, non-binding quote today. Our specialist will inspect your property and provide tailored advice.",
+    "ctaButton": "Request a free quote"
   }
 }

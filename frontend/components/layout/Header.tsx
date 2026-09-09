@@ -98,7 +98,7 @@ export default function Header() {
               />
             </Link>
             <Link
-              href="/"
+              href="/projects"
               className="hover:text-[#C82024] transition lg:text-lg"
             >
               {t("mainbar.projects")}

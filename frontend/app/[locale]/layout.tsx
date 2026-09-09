@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import "../globals.css";
 
+import { AlternateLinksProvider } from '@/context/AlternateLinksContext';
+
 import Header from '@/components/layout/Header';
 import FloatingButtons from '@/components/layout/FloatingButtons';
 
@@ -25,14 +27,16 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body suppressHydrationWarning>
-      <NextIntlClientProvider messages={messages}>
-        <Header />
-        <FloatingButtons />
-        <main className="min-h-screen">
-            {children}
-        </main>
-      </NextIntlClientProvider>
-    </body>
+        <AlternateLinksProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            <FloatingButtons />
+            <main className="min-h-screen">
+                {children}
+            </main>
+          </NextIntlClientProvider>
+        </AlternateLinksProvider>
+      </body>
     </html>
   );
 }

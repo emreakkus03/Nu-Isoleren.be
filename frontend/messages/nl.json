@@ -3,6 +3,10 @@
   "home": {
     "title": "Nu-Isoleren | Isolatie, gevelwerken & vochtbestrijding",
     "description": "Spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding. Nu-Isoleren helpt u in Vlaanderen en Wallonië. Vraag vrijblijvend advies."
+  },
+  "projects": {
+    "title": "Onze Realisaties | Isolatie, gevelwerken & vochtbestrijding Projecten | Nu-Isoleren",
+    "description": "Bekijk recente projecten van Nu-Isoleren: spouwmuurisolatie, dakisolatie en crepi gevelafwerking in Vlaanderen en Wallonië. Ontdek onze kwaliteit en vakkennis."
   }
 },
   "Header": {
@@ -113,5 +117,45 @@
         "description": "Wij innoveren continu en werken uitsluitend met de beste partners in de markt. Door te kiezen voor hoogwaardige EPS en innovatieve technieken, haalt u maximaal rendement uit uw investering."
       }
     }
+  },
+  "ProjectsSection": {
+    "badge": "ONZE REALISATIES",
+    "title": "Echte werken. Zichtbare resultaten.",
+    "cta": "Bekijk alle realisaties"
+  },
+
+
+
+
+
+
+
+
+  "ProjectsPage": {
+    "badge": "Onze Werken",
+    "title": "Ontdek onze recente realisaties",
+    "description": "Van spouwmuurisolatie en dakisolatie tot crepi gevelrenovatie. Bekijk onze uitgevoerde projecten in heel Vlaanderen en Brussel.",
+    "noProjects": "Geen projecten gevonden voor deze selectie.",
+    "filtersTitle": "Filters",
+    "projectsCount": "{count} realisaties",
+    "reset": "Wissen",
+    "serviceLabel": "Diensten",
+    "cityLabel": "Locaties",
+    "page": "Pagina {current} van {total}",
+    "prev": "Vorige",
+    "next": "Volgende",
+    "searchCityPlaceholder": "Zoek gemeente...",
+    "noCitiesFound": "Geen gemeenten gevonden"
+  },
+  "ProjectDetailPage": {
+   "backLink": "Terug naar alle realisaties",
+    "serviceLabel": "Dienst",
+    "locationLabel": "Locatie",
+    "galleryTitle": "Foto's van de werken",
+    "ctaTitleWithService": "Interesse in {service} in {city}?",
+    "ctaTitleFallback": "Heeft uw woning ook nood aan isolatie?",
+    "ctaDescription": "Vraag een gratis en vrijblijvende offerte aan voor uw project. Onze specialist komt bij u langs voor advies op maat.",
+    "ctaButton": "Vraag een gratis offerte aan"
   }
+
 }

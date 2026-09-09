@@ -3,7 +3,11 @@
     "home": {
       "title": "Nu-Isoleren | Isolation, travaux de façade & lutte contre l’humidité",
       "description": "Isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité. Nu-Isoleren vous accompagne en Flandre et en Wallonie. Demandez un conseil sans engagement."
-    }
+    },
+    "projects": {
+    "title": "Nos Réalisations | Projets d'Isolation & Façades | Nu-Isoleren",
+    "description": "Découvrez les chantiers récents de Nu-Isoleren : isolation des murs creux, toitures et crépi de façade en Flandre et Wallonie. Qualité et savoir-faire garantis."
+  }
   },
     "Header": {
     "reviews": "Excellent",
@@ -113,5 +117,45 @@
         "description": "Nous collaborons avec les meilleurs fournisseurs du secteur. En optant pour des isolants haute performance, vous maximisez la rentabilité de votre investissement."
       }
     }
+  },
+  "ProjectsSection": {
+    "badge": "NOS RÉALISATIONS",
+    "title": "Vrais chantiers. Résultats visibles.",
+    "cta": "Voir toutes nos réalisations"
+  },
+
+
+
+
+
+
+
+
+
+  "ProjectsPage": {
+    "badge": "Nos Chantiers",
+    "title": "Découvrez nos réalisations récentes",
+    "description": "De l'isolation des murs creux et toitures au crépi de façade. Découvrez nos chantiers en Flandre, à Bruxelles et en Wallonie.",
+    "noProjects": "Aucun projet trouvé pour cette sélection.",
+    "filtersTitle": "Filtres",
+    "projectsCount": "{count} réalisations",
+    "reset": "Effacer",
+    "serviceLabel": "Services",
+    "cityLabel": "Localisations",
+    "page": "Page {current} sur {total}",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "searchCityPlaceholder": "Rechercher une commune...",
+    "noCitiesFound": "Aucune commune trouvée"
+  },
+  "ProjectDetailPage": {
+    "backLink": "Retour à toutes les réalisations",
+    "serviceLabel": "Service",
+    "locationLabel": "Localisation",
+    "galleryTitle": "Photos du chantier",
+    "ctaTitleWithService": "Intéressé par {service} à {city} ?",
+    "ctaTitleFallback": "Votre habitation a-t-elle besoin d'isolation ?",
+    "ctaDescription": "Demandez un devis gratuit et sans engagement. Notre spécialiste se déplace pour un diagnostic thermique sur mesure.",
+    "ctaButton": "Demander un devis gratuit"
   }
 }

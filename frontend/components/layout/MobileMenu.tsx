@@ -55,7 +55,7 @@ export default function MobileMenu() {
                 {t('mainbar.services')}
                 <Image src="/icons/red-arrow-down.svg" alt="Arrow" width={20} height={20} className="-rotate-90" />
               </Link>
-              <Link href="/" onClick={closeMenu} className="hover:text-[#C82024] border-b border-gray-100 pb-2">{t('mainbar.projects')}</Link>
+              <Link href="/projects" onClick={closeMenu} className="hover:text-[#C82024] border-b border-gray-100 pb-2">{t('mainbar.projects')}</Link>
               <Link href="/" onClick={closeMenu} className="hover:text-[#C82024] border-b border-gray-100 pb-2">{t('mainbar.pricing')}</Link>
               <Link href="/" onClick={closeMenu} className="hover:text-[#C82024] border-b border-gray-100 pb-2">{t('mainbar.knowledgeBase')}</Link>
             </nav>
