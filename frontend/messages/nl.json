@@ -71,5 +71,27 @@
         "description": "Definitieve bestrijding van opstijgend vocht via professionele muurinjecties met garantie."
       }
     }
+  },
+  "PriceCalculatorTeaser": {
+    "badge": "BEREKEN UW PRIJS",
+    "title": "Wat kost uw project ongeveer?",
+    "subtitle": "Selecteer uw werken en bereken vrijblijvend uw indicatieve prijs.",
+    "usps": {
+      "free": "Gratis & Vrijblijvend",
+      "fast": "In 2 minuten",
+      "noCommitment": "Geen verplichting"
+    },
+    "cardTitle": "Welke werken wilt u laten uitvoeren?",
+    "cta": "Start uw berekening",
+    "services": {
+      "cavityWall": "Spouwmuurisolatie",
+      "externalWall": "Buitenmuurisolatie",
+      "roofInsulation": "Dakisolatie",
+      "crepi": "Crepi",
+      "facadeCleaning": "Gevelreiniging",
+      "hydrofuge": "Hydrofuge",
+      "cavityEmptying": "Spouw leegmaken",
+      "risingDamp": "Opstijgend vocht"
+    }
   }
 }

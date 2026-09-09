@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 
 import Hero from '@/components/home/Hero';
 import ServicesSection from '@/components/home/ServicesSection';
+import PriceCalculatorTeaser from '@/components/home/PriceCalculatorTeaser';
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const { locale } = await params;
@@ -22,6 +23,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <ServicesSection />
+      <PriceCalculatorTeaser />
     </main>
   );
 }

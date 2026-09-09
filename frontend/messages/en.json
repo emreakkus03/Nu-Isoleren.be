@@ -71,5 +71,27 @@
         "description": "Permanent rising damp elimination using certified wall injections with warranty."
       }
     }
+  },
+  "PriceCalculatorTeaser": {
+    "badge": "CALCULATE YOUR PRICE",
+    "title": "How much does your project cost approximately?",
+    "subtitle": "Select your works and calculate your indicative price without obligation.",
+    "usps": {
+      "free": "Free & Without obligation",
+      "fast": "In 2 minutes",
+      "noCommitment": "No obligation"
+    },
+    "cardTitle": "Which works do you want to carry out?",
+    "cta": "Start calculation",
+    "services": {
+      "cavityWall": "Cavity wall insulation",
+      "externalWall": "External wall insulation",
+      "roofInsulation": "Roof insulation",
+      "crepi": "Crepi / Render",
+      "facadeCleaning": "Facade cleaning",
+      "hydrofuge": "Hydrofuge",
+      "cavityEmptying": "Cavity clearance",
+      "risingDamp": "Rising damp"
+    }
   }
 }

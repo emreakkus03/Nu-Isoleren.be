@@ -71,5 +71,27 @@
         "description": "Traitement définitif par injection professionnelle avec garantie de résultat."
       }
     }
+  },
+  "PriceCalculatorTeaser": {
+    "badge": "CALCULEZ VOTRE PRIX",
+    "title": "Combien coûte environ votre projet ?",
+    "subtitle": "Sélectionnez vos travaux et calculez sans engagement votre prix indicatif.",
+    "usps": {
+      "free": "Gratuit & Sans engagement",
+      "fast": "En 2 minutes",
+      "noCommitment": "Aucune obligation"
+    },
+    "cardTitle": "Quels travaux souhaitez-vous réaliser ?",
+    "cta": "Commencer le calcul",
+    "services": {
+      "cavityWall": "Isolation des murs creux",
+      "externalWall": "Isolation mur extérieur",
+      "roofInsulation": "Isolation de toiture",
+      "crepi": "Crépi",
+      "facadeCleaning": "Nettoyage de façade",
+      "hydrofuge": "Hydrofuge",
+      "cavityEmptying": "Vidage de coulisse",
+      "risingDamp": "Humidité ascensionnelle"
+    }
   }
 }
