@@ -35,5 +35,41 @@
     "title": "Rendez votre logement plus confortable, économe en énergie et mieux protégé.",
     "subtitle": "De l'isolation des murs creux et toitures au crépi, nettoyage de façade, hydrofuge et humidité.",
     "cta": "Calculez votre prix"
+  },
+  "ServicesSection": {
+    "title": "Découvrez nos solutions pour votre logement",
+    "subtitle": "De l'isolation et façades au traitement de l'humidité : nous offrons une solution adaptée à votre bien.",
+    "items": {
+      "cavityWall": {
+        "badge": "Isolation",
+        "title": "Isolation des murs creux",
+        "description": "Économisez jusqu'à 30% sur vos coûts d'énergie en isolant efficacement vos murs creux."
+      },
+      "roofInsulation": {
+        "badge": "Isolation",
+        "title": "Isolation de toiture",
+        "description": "Conservez la chaleur et respectez les normes avec une isolation de toiture performante."
+      },
+      "crepi": {
+        "badge": "Façades & Isolation",
+        "title": "Crépi",
+        "description": "Modernisez vos murs extérieurs en combinant finition esthétique et isolation thermique."
+      },
+      "facadeCleaning": {
+        "badge": "Façades",
+        "title": "Nettoyage de façade",
+        "description": "Éliminez saletés, mousses et dépôts sans détériorer vos briques ou joints."
+      },
+      "hydrofuge": {
+        "badge": "Façades",
+        "title": "Hydrofuge",
+        "description": "Rendez vos façades imperméables et protégez vos murs des infiltrations d'eau."
+      },
+      "risingDamp": {
+        "badge": "Traitement de l'humidité",
+        "title": "Humidité ascensionnelle",
+        "description": "Traitement définitif par injection professionnelle avec garantie de résultat."
+      }
+    }
   }
 }

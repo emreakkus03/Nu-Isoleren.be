@@ -35,5 +35,41 @@
     "title": "Maak uw woning comfortabeler, energiezuiniger en beter beschermd.",
     "subtitle": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging, hydrofuge en vochtbestrijding.",
     "cta": "Bereken uw prijs"
+  },
+  "ServicesSection": {
+    "title": "Ontdek onze oplossingen voor uw woning",
+    "subtitle": "Van isolatie en gevelwerken tot vochtbestrijding: wij bieden een passende oplossing voor uw woning.",
+    "items": {
+      "cavityWall": {
+        "badge": "Isolatie",
+        "title": "Spouwmuurisolatie",
+        "description": "Bespaar tot 30% op energiekosten door uw spouwmuren naadloos te laten na isoleren."
+      },
+      "roofInsulation": {
+        "badge": "Isolatie",
+        "title": "Dakisolatie",
+        "description": "Houd warmte binnen en voldoe aan de strengste energienormen met hoogwaardige dakisolatie."
+      },
+      "crepi": {
+        "badge": "Gevelwerken & Isolatie",
+        "title": "Crepi",
+        "description": "Geef uw gevel een moderne uitstraling en combineer esthetiek direct met buitengevelisolatie."
+      },
+      "facadeCleaning": {
+        "badge": "Gevelwerken",
+        "title": "Gevelreiniging",
+        "description": "Verwijder vuil, mos en aanslag grondig zonder uw metselwerk of voegen te beschadigen."
+      },
+      "hydrofuge": {
+        "badge": "Gevelwerken",
+        "title": "Hydrofuge",
+        "description": "Maak uw gevel waterafstotend en bescherm uw muren tegen doorslaand vocht en vorstschade."
+      },
+      "risingDamp": {
+        "badge": "Vochtbestrijding",
+        "title": "Opstijgend vocht",
+        "description": "Definitieve bestrijding van opstijgend vocht via professionele muurinjecties met garantie."
+      }
+    }
   }
 }

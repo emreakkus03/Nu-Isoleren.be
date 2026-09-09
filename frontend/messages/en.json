@@ -35,5 +35,41 @@
     "title": "Make your home more comfortable, energy efficient, and better protected.",
     "subtitle": "From cavity wall and roof insulation to render, facade cleaning, hydrofuge, and damp proofing.",
     "cta": "Calculate your price"
+  },
+  "ServicesSection": {
+    "title": "Discover our solutions for your home",
+    "subtitle": "From insulation and facade works to damp proofing: we offer a suitable solution for your home.",
+    "items": {
+      "cavityWall": {
+        "badge": "Insulation",
+        "title": "Cavity wall insulation",
+        "description": "Save up to 30% on heating costs by insulating your cavity walls efficiently."
+      },
+      "roofInsulation": {
+        "badge": "Insulation",
+        "title": "Roof insulation",
+        "description": "Keep heat inside and meet energy regulations with premium roof insulation."
+      },
+      "crepi": {
+        "badge": "Facades & Insulation",
+        "title": "Render / Crepi",
+        "description": "Give your exterior a modern finish while adding exterior wall insulation."
+      },
+      "facadeCleaning": {
+        "badge": "Facades",
+        "title": "Facade cleaning",
+        "description": "Thoroughly remove dirt and moss without damaging your brickwork or joints."
+      },
+      "hydrofuge": {
+        "badge": "Facades",
+        "title": "Hydrofuge",
+        "description": "Make your walls water-repellent and protect them against damp and frost damage."
+      },
+      "risingDamp": {
+        "badge": "Moisture control",
+        "title": "Rising damp",
+        "description": "Permanent rising damp elimination using certified wall injections with warranty."
+      }
+    }
   }
 }
