@@ -93,5 +93,25 @@
       "cavityEmptying": "Vidage de coulisse",
       "risingDamp": "Humidité ascensionnelle"
     }
+  },
+  "WhyChooseUs": {
+    "badge": "POURQUOI NOUS CHOISIR ?",
+    "title": "Plus de 10 ans d'expertise en isolation sans faille.",
+    "description": "Avec plus de 10 ans d'expérience, <highlight>Nu-Isoleren.be</highlight> est devenu un partenaire de confiance partout en Belgique. Nos techniciens certifiés utilisent des méthodes de pointe et des matériaux durables pour vous garantir confort et économies d'énergie.",
+    "cta": "Découvrez notre histoire",
+    "features": {
+      "expertise": {
+        "title": "10+ Ans d'Expertise",
+        "description": "En tant qu'entreprise certifiée, nous disposons d'une solide expérience. Nos spécialistes maîtrisent les techniques modernes et assurent une qualité irréprochable."
+      },
+      "cleanWork": {
+        "title": "Finition 100% Propre",
+        "description": "Après les travaux, aucune trace n'est visible. Les percements sont rebouchés à la couleur exacte du joint et nous laissons votre maison impeccable."
+      },
+      "quality": {
+        "title": "Qualité & Innovation",
+        "description": "Nous collaborons avec les meilleurs fournisseurs du secteur. En optant pour des isolants haute performance, vous maximisez la rentabilité de votre investissement."
+      }
+    }
   }
 }

@@ -93,5 +93,25 @@
       "cavityEmptying": "Cavity clearance",
       "risingDamp": "Rising damp"
     }
+  },
+  "WhyChooseUs": {
+    "badge": "WHY CHOOSE US?",
+    "title": "More than 10 years of expertise in seamless insulation.",
+    "description": "With over 10 years of experience, <highlight>Nu-Isoleren.be</highlight> has become a trusted specialist across Belgium. Our certified technicians apply advanced techniques and premium materials to ensure an energy-efficient and comfortable home.",
+    "cta": "Discover our story",
+    "features": {
+      "expertise": {
+        "title": "10+ Years of Expertise",
+        "description": "As a certified insulation specialist, we bring years of experience. Our experts know exactly what they do, working with the latest methods to ensure top quality."
+      },
+      "cleanWork": {
+        "title": "100% Clean Finish",
+        "description": "No traces are left behind after completion. Injection holes are precisely sealed to match your existing mortar color, leaving your home spotless."
+      },
+      "quality": {
+        "title": "Quality & Innovation",
+        "description": "We continuously innovate and partner exclusively with top-tier manufacturers. Premium materials and modern methods guarantee maximum energy returns."
+      }
+    }
   }
 }

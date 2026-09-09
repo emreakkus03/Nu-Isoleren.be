@@ -93,5 +93,25 @@
       "cavityEmptying": "Spouw leegmaken",
       "risingDamp": "Opstijgend vocht"
     }
+  },
+  "WhyChooseUs": {
+    "badge": "WAAROM KIEZEN VOOR ONS?",
+    "title": "Meer dan 10 jaar de expert in naadloze isolatie.",
+    "description": "Met meer dan 10 jaar ervaring is <highlight>Nu-Isoleren.be</highlight> uitgegroeid tot een betrouwbare partner in heel België. Onze gecertificeerde technici werken met de modernste technieken en hoogwaardige materialen. Of het nu gaat om uw spouw of gevel, wij leveren altijd maatwerk voor een energiezuinig en comfortabel thuis.",
+    "cta": "Ontdek ons verhaal",
+    "features": {
+      "expertise": {
+        "title": "10+ Jaar Expertise",
+        "description": "Als gecertificeerd isolatiebedrijf hebben wij jarenlange ervaring. Onze vakspecialisten weten precies wat ze doen, werken met de nieuwste technieken en garanderen altijd de hoogste kwaliteit."
+      },
+      "cleanWork": {
+        "title": "100% Schone Afwerking",
+        "description": "Na afronding is er niets meer zichtbaar van onze werkzaamheden. Gaten worden netjes in de juiste voegkleur opgevuld en we laten uw woning en de omgeving altijd brandschoon achter."
+      },
+      "quality": {
+        "title": "Kwaliteit & Innovatie",
+        "description": "Wij innoveren continu en werken uitsluitend met de beste partners in de markt. Door te kiezen voor hoogwaardige EPS en innovatieve technieken, haalt u maximaal rendement uit uw investering."
+      }
+    }
   }
 }
