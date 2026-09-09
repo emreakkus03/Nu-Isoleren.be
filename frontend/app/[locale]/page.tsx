@@ -1,6 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
+import Hero from '@/components/home/Hero';
+
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const { locale } = await params;
   
@@ -16,8 +18,8 @@ export default function HomePage() {
   const t = useTranslations('Hero');
 
   return (
-    <main className="p-20">
-      
+    <main>
+      <Hero />
     </main>
   );
 }

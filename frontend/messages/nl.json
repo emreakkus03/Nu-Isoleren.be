@@ -29,5 +29,11 @@
     "mail": "Mail ons op",
     "number": "+32 (0) 800 63 63 5",
     "mailAddress": "info@nu-isoleren.be"
+  },
+  "Hero": {
+    "badge": "ISOLATIE • GEVELWERKEN • VOCHTBESTRIJDING",
+    "title": "Maak uw woning comfortabeler, energiezuiniger en beter beschermd.",
+    "subtitle": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging, hydrofuge en vochtbestrijding.",
+    "cta": "Bereken uw prijs"
   }
 }

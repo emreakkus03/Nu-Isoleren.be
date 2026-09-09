@@ -13,30 +13,42 @@ export default function Header() {
   return (
     <header className="w-full bg-white flex flex-col z-50 sticky top-0 border-b border-gray-200 shadow-sm">
       <div className="bg-gray-50 border-b border-gray-100 w-full">
-        
         <div className="max-w-7xl w-full mx-auto py-2 px-4 md:px-6 text-sm flex justify-center md:justify-between items-center">
-          
           <GoogleReviews label={t("reviews")} />
 
           <div className="hidden md:flex items-center gap-3 lg:gap-6 font-medium text-gray-700 text-xs lg:text-sm">
-            <Link href="/" className="hover:text-[#C82024] transition whitespace-nowrap">
+            <Link
+              href="/"
+              className="hover:text-[#C82024] transition whitespace-nowrap"
+            >
               {t("topbar.serviceAreas")}
             </Link>
-            <Link href="/" className="hover:text-[#C82024] transition whitespace-nowrap">
+            <Link
+              href="/"
+              className="hover:text-[#C82024] transition whitespace-nowrap"
+            >
               {t("topbar.aboutUs")}
             </Link>
-            <Link href="/" className="hover:text-[#C82024] transition whitespace-nowrap">
+            <Link
+              href="/"
+              className="hover:text-[#C82024] transition whitespace-nowrap"
+            >
               {t("topbar.grants")}
             </Link>
-            <Link href="/" className="hover:text-[#C82024] transition whitespace-nowrap">
+            <Link
+              href="/"
+              className="hover:text-[#C82024] transition whitespace-nowrap"
+            >
               {t("topbar.faq")}
             </Link>
-            <Link href="/" className="hover:text-[#C82024] transition whitespace-nowrap">
+            <Link
+              href="/"
+              className="hover:text-[#C82024] transition whitespace-nowrap"
+            >
               {t("topbar.contact")}
             </Link>
             <LanguageSwitcher />
           </div>
-          
         </div>
       </div>
 
@@ -46,10 +58,11 @@ export default function Header() {
             <Image
               src="/logo/logo.svg"
               alt="Nu-Isoleren Logo"
-              width={200}
-              height={50}
+              width={160}
+              height={40}
               priority
-              className="w-[160px] h-auto"
+              style={{ height: 'auto' }}
+              className="w-[160px]"
             />
           </Link>
 
@@ -59,7 +72,6 @@ export default function Header() {
         </div>
 
         <div className="hidden md:flex items-center justify-between w-full">
-          
           <Link href="/" className="flex-1 flex justify-start shrink-0">
             <Image
               src="/logo/logo.svg"
@@ -67,7 +79,8 @@ export default function Header() {
               width={200}
               height={50}
               priority
-              className="w-[200px] h-auto"
+              style={{ height: 'auto' }}
+              className="w-[200px]"
             />
           </Link>
 
@@ -84,13 +97,22 @@ export default function Header() {
                 height={24}
               />
             </Link>
-            <Link href="/" className="hover:text-[#C82024] transition lg:text-lg">
+            <Link
+              href="/"
+              className="hover:text-[#C82024] transition lg:text-lg"
+            >
               {t("mainbar.projects")}
             </Link>
-            <Link href="/" className="hover:text-[#C82024] transition lg:text-lg">
+            <Link
+              href="/"
+              className="hover:text-[#C82024] transition lg:text-lg"
+            >
               {t("mainbar.pricing")}
             </Link>
-            <Link href="/" className="hover:text-[#C82024] transition lg:text-lg">
+            <Link
+              href="/"
+              className="hover:text-[#C82024] transition lg:text-lg"
+            >
               {t("mainbar.knowledgeBase")}
             </Link>
           </nav>
@@ -102,12 +124,11 @@ export default function Header() {
             >
               {t("mainbar.cta")}
             </Link>
-            
+
             <div className="lg:hidden flex items-center">
               <MobileMenu />
             </div>
           </div>
-          
         </div>
       </div>
 

@@ -29,5 +29,11 @@
     "mail": "Email us",
     "number": "+32 (0) 800 63 63 5",
     "mailAddress": "info@nu-isoleren.be"
+  },
+  "Hero": {
+    "badge": "INSULATION • FAÇADES • MOISTURE CONTROL",
+    "title": "Make your home more comfortable, energy efficient, and better protected.",
+    "subtitle": "From cavity wall and roof insulation to render, facade cleaning, hydrofuge, and damp proofing.",
+    "cta": "Calculate your price"
   }
 }

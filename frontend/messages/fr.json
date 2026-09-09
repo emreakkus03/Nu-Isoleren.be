@@ -29,5 +29,11 @@
     "mail": "Envoyez un e-mail",
      "number": "+32 (0) 800 63 63 5",
     "mailAddress": "info@nu-isoleren.be"
+  },
+  "Hero": {
+    "badge": "ISOLATION • FAÇADES • TRAITEMENT DE L'HUMIDITÉ",
+    "title": "Rendez votre logement plus confortable, économe en énergie et mieux protégé.",
+    "subtitle": "De l'isolation des murs creux et toitures au crépi, nettoyage de façade, hydrofuge et humidité.",
+    "cta": "Calculez votre prix"
   }
 }
