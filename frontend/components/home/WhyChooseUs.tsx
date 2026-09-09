@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
                   width={key === 'cleanWork' ? 96 : 72}
                   height={key === 'cleanWork' ? 96 : 72}
                   className={`object-contain transition-transform ${
-                    key === 'cleanWork' ? 'scale-125' : ''
+                    key === 'cleanWork' ? 'scale-150' : ''
                   }`}
                 />
               </div>
