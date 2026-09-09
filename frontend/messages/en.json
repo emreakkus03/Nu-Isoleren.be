@@ -1,0 +1,33 @@
+{
+    "Seo": {
+    "home": {
+      "title": "Nu-Isoleren | Insulation, façade works & moisture treatment",
+      "description": "Cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment. Nu-Isoleren serves customers across Flanders and Wallonia. Get advice with no obligation."
+    }
+  },
+   "Header": {
+    "reviews": "Excellent",
+    "topbar": {
+      "serviceAreas": "Service Areas",
+      "aboutUs": "About Us",
+      "grants": "Grants",
+      "faq": "FAQ",
+      "contact": "Contact",
+        "language": "Language:"
+    },
+    "mainbar": {
+        "home": "Home",
+      "services": "Services",
+      "projects": "Projects",
+      "pricing": "Pricing",
+      "knowledgeBase": "Knowledge Base",
+      "cta": "Free Quote"
+    }
+  },
+  "Floating": {
+    "call": "Call us",
+    "mail": "Email us",
+    "number": "+32 (0) 800 63 63 5",
+    "mailAddress": "info@nu-isoleren.be"
+  }
+}

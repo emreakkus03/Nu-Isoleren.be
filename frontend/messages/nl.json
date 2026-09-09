@@ -1,0 +1,33 @@
+{
+    "Seo": {
+  "home": {
+    "title": "Nu-Isoleren | Isolatie, gevelwerken & vochtbestrijding",
+    "description": "Spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding. Nu-Isoleren helpt u in Vlaanderen en Wallonië. Vraag vrijblijvend advies."
+  }
+},
+  "Header": {
+    "reviews": "Uitstekend",
+    "topbar": {
+      "serviceAreas": "Werkgebieden",
+      "aboutUs": "Over ons",
+      "grants": "Premies",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "language": "Taal:"
+    },
+    "mainbar": {
+        "home": "Home",
+      "services": "Diensten",
+      "projects": "Realisaties",
+      "pricing": "Prijzen",
+      "knowledgeBase": "Kennisbank",
+      "cta": "Gratis Offerte"
+    }
+  },
+  "Floating": {
+    "call": "Bel ons op",
+    "mail": "Mail ons op",
+    "number": "+32 (0) 800 63 63 5",
+    "mailAddress": "info@nu-isoleren.be"
+  }
+}

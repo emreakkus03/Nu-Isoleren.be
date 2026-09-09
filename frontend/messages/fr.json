@@ -1,0 +1,33 @@
+{
+    "Seo": {
+    "home": {
+      "title": "Nu-Isoleren | Isolation, travaux de façade & lutte contre l’humidité",
+      "description": "Isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité. Nu-Isoleren vous accompagne en Flandre et en Wallonie. Demandez un conseil sans engagement."
+    }
+  },
+    "Header": {
+    "reviews": "Excellent",
+    "topbar": {
+      "serviceAreas": "Zones d'intervention",
+      "aboutUs": "À propos",
+      "grants": "Primes",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "language": "Langue:"
+    },
+    "mainbar": {
+        "home": "Accueil",
+      "services": "Services",
+      "projects": "Réalisations",
+      "pricing": "Prix",
+      "knowledgeBase": "Base de connaissances",
+      "cta": "Devis Gratuit"
+    }
+  },
+  "Floating": {
+    "call": "Appelez-nous",
+    "mail": "Envoyez un e-mail",
+     "number": "+32 (0) 800 63 63 5",
+    "mailAddress": "info@nu-isoleren.be"
+  }
+}
