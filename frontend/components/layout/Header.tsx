@@ -6,6 +6,7 @@ import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import GoogleReviews from "@/components/layout/GoogleReviews";
 import MobileMenu from "@/components/layout/MobileMenu";
 import MobileQuickContact from "@/components/layout/MobileQuickContact";
+import HeaderNav from "@/components/layout/HeaderNav";
 
 export default function Header() {
   const t = useTranslations("Header");
@@ -84,38 +85,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="hidden lg:flex justify-center items-center gap-8 font-medium text-gray-900 shrink-0 px-4">
-            <Link
-              href="/"
-              className="flex items-center gap-1 hover:text-[#C82024] transition lg:text-lg"
-            >
-              {t("mainbar.services")}
-              <Image
-                src="/icons/red-arrow-down.svg"
-                alt="Arrow"
-                width={24}
-                height={24}
-              />
-            </Link>
-            <Link
-              href="/projects"
-              className="hover:text-[#C82024] transition lg:text-lg"
-            >
-              {t("mainbar.projects")}
-            </Link>
-            <Link
-              href="/"
-              className="hover:text-[#C82024] transition lg:text-lg"
-            >
-              {t("mainbar.pricing")}
-            </Link>
-            <Link
-              href="/"
-              className="hover:text-[#C82024] transition lg:text-lg"
-            >
-              {t("mainbar.knowledgeBase")}
-            </Link>
-          </nav>
+          <HeaderNav />
 
           <div className="flex-1 flex justify-end items-center gap-4">
             <Link

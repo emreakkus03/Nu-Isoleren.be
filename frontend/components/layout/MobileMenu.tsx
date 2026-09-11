@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Link } from '@/i18n/routing';
+import { Link, usePathname } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import Image from 'next/image';
@@ -10,6 +10,29 @@ export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('Header');
   const tFloating = useTranslations('Floating');
+
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
+  const getMainLinkClasses = (href: string) => {
+    const active = isActive(href);
+    return `border-b border-gray-100 pb-2 transition flex items-center justify-between ${
+      active ? 'text-[#C82024] font-bold' : 'text-gray-900 hover:text-[#C82024]'
+    }`;
+  };
+
+  const getSubLinkClasses = (href: string) => {
+    const active = isActive(href);
+    return `transition flex items-center justify-between ${
+      active ? 'text-[#C82024] font-bold' : 'text-gray-500 hover:text-gray-900'
+    }`;
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -48,24 +71,100 @@ export default function MobileMenu() {
 
           <div className="flex flex-col px-8 pb-12 gap-8">
             <nav className="flex flex-col gap-6 text-xl font-bold text-gray-900">
-              <Link href="/" onClick={closeMenu} className="hover:text-[#C82024] border-b border-gray-100 pb-2">
-                {t('mainbar.home')}
+              <Link 
+                href="/" 
+                onClick={closeMenu} 
+                className={getMainLinkClasses('/')}
+              >
+                <span>{t('mainbar.home')}</span>
+                {isActive('/') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
               </Link>
-              <Link href="/" onClick={closeMenu} className="hover:text-[#C82024] flex items-center justify-between border-b border-gray-100 pb-2">
-                {t('mainbar.services')}
-                <Image src="/icons/red-arrow-down.svg" alt="Arrow" width={20} height={20} className="-rotate-90" />
+
+              <Link 
+                href="/" 
+                onClick={closeMenu} 
+                className={getMainLinkClasses('/services')}
+              >
+                <span className="flex items-center gap-2">
+                  {t('mainbar.services')}
+                  <Image src="/icons/red-arrow-down.svg" alt="Arrow" width={20} height={20} className="-rotate-90" />
+                </span>
+                {isActive('/services') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
               </Link>
-              <Link href="/projects" onClick={closeMenu} className="hover:text-[#C82024] border-b border-gray-100 pb-2">{t('mainbar.projects')}</Link>
-              <Link href="/" onClick={closeMenu} className="hover:text-[#C82024] border-b border-gray-100 pb-2">{t('mainbar.pricing')}</Link>
-              <Link href="/" onClick={closeMenu} className="hover:text-[#C82024] border-b border-gray-100 pb-2">{t('mainbar.knowledgeBase')}</Link>
+
+              <Link 
+                href="/projects" 
+                onClick={closeMenu} 
+                className={getMainLinkClasses('/projects')}
+              >
+                <span>{t('mainbar.projects')}</span>
+                {isActive('/projects') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+              </Link>
+
+              <Link 
+                href="/" 
+                onClick={closeMenu} 
+                className={getMainLinkClasses('/pricing')}
+              >
+                <span>{t('mainbar.pricing')}</span>
+                {isActive('/pricing') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+              </Link>
+
+              <Link 
+                href="/" 
+                onClick={closeMenu} 
+                className={getMainLinkClasses('/knowledge')}
+              >
+                <span>{t('mainbar.knowledgeBase')}</span>
+                {isActive('/knowledge') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+              </Link>
             </nav>
 
             <nav className="flex flex-col gap-4 text-gray-500 font-medium mt-2">
-              <Link href="/" onClick={closeMenu}>{t('topbar.serviceAreas')}</Link>
-              <Link href="/" onClick={closeMenu}>{t('topbar.aboutUs')}</Link>
-              <Link href="/" onClick={closeMenu}>{t('topbar.grants')}</Link>
-              <Link href="/" onClick={closeMenu}>{t('topbar.faq')}</Link>
-              <Link href="/" onClick={closeMenu}>{t('topbar.contact')}</Link>
+              <Link 
+                href="/" 
+                onClick={closeMenu} 
+                className={getSubLinkClasses('/werkgebied')}
+              >
+                <span>{t('topbar.serviceAreas')}</span>
+                {isActive('/werkgebied') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+              </Link>
+
+              <Link 
+                href="/" 
+                onClick={closeMenu} 
+                className={getSubLinkClasses('/over-ons')}
+              >
+                <span>{t('topbar.aboutUs')}</span>
+                {isActive('/over-ons') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+              </Link>
+
+              <Link 
+                href="/" 
+                onClick={closeMenu} 
+                className={getSubLinkClasses('/premies')}
+              >
+                <span>{t('topbar.grants')}</span>
+                {isActive('/premies') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+              </Link>
+
+              <Link 
+                href="/" 
+                onClick={closeMenu} 
+                className={getSubLinkClasses('/faq')}
+              >
+                <span>{t('topbar.faq')}</span>
+                {isActive('/faq') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+              </Link>
+
+              <Link 
+                href="/" 
+                onClick={closeMenu} 
+                className={getSubLinkClasses('/contact')}
+              >
+                <span>{t('topbar.contact')}</span>
+                {isActive('/contact') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+              </Link>
             </nav>
 
             <div className="mt-2 flex flex-col gap-6">
@@ -83,7 +182,7 @@ export default function MobileMenu() {
               </Link>
 
               <div className="flex flex-col gap-3 bg-gray-50 rounded-2xl p-4 border border-gray-100">
-              <a 
+                <a 
                   href={`tel:${rawPhoneNumber}`}
                   className="flex items-center gap-3 text-gray-800 hover:text-[#C82024] transition text-sm font-semibold"
                 >
