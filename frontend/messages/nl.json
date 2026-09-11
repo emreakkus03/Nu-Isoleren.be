@@ -5,10 +5,15 @@
     "description": "Spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding. Nu-Isoleren helpt u in Vlaanderen en Wallonië. Vraag vrijblijvend advies."
   },
   "projects": {
-    "title": "Onze Realisaties | Isolatie, gevelwerken & vochtbestrijding Projecten | Nu-Isoleren",
-    "description": "Bekijk recente projecten van Nu-Isoleren: spouwmuurisolatie, dakisolatie en crepi gevelafwerking in Vlaanderen en Wallonië. Ontdek onze kwaliteit en vakkennis."
+     "title": "Onze Realisaties | Isolatie & gevelwerken | Nu-Isoleren",
+  "description": "Bekijk gerealiseerde projecten van Nu-Isoleren op het gebied van spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding in Vlaanderen en Wallonië."
   }
 },
+
+"Breadcrumbs": {
+  "home": "Home",
+    "projects": "Realisaties"
+  },
   "Header": {
     "reviews": "Uitstekend",
     "topbar": {
@@ -132,9 +137,9 @@
 
 
   "ProjectsPage": {
-    "badge": "Onze Werken",
-    "title": "Ontdek onze recente realisaties",
-    "description": "Van spouwmuurisolatie en dakisolatie tot crepi gevelrenovatie. Bekijk onze uitgevoerde projecten in heel Vlaanderen en Brussel.",
+   "badge": "ONZE REALISATIES",
+  "title": "Echte projecten. Zichtbare resultaten.",
+  "description": "Bekijk onze gerealiseerde projecten op het gebied van spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding.",
     "noProjects": "Geen projecten gevonden voor deze selectie.",
     "filtersTitle": "Filters",
     "projectsCount": "{count} realisaties",

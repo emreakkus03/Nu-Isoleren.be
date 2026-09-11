@@ -5,9 +5,14 @@
       "description": "Cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment. Nu-Isoleren serves customers across Flanders and Wallonia. Get advice with no obligation."
     },
     "projects": {
-    "title": "Our Projects | Insulation & Facade Renovations | Nu-Isoleren",
-    "description": "Explore completed insulation and facade projects by Nu-Isoleren across Belgium. Cavity wall insulation, roof insulation, and modern render finishes."
-  }
+  "title": "Our Projects | Insulation & Façade Works | Nu-Isoleren",
+  "description": "Explore projects completed by Nu-Isoleren, including cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
+}
+  },
+
+  "Breadcrumbs": {
+    "home": "Home",
+    "projects": "Projects"
   },
    "Header": {
     "reviews": "Excellent",
@@ -132,9 +137,9 @@
 
 
   "ProjectsPage": {
-    "badge": "Our Work",
-    "title": "Explore our recent projects",
-    "description": "From cavity wall and roof insulation to silicone render facade renovations. Browse our completed projects across Belgium.",
+     "badge": "OUR PROJECTS",
+  "title": "Real projects. Visible results.",
+  "description": "Explore our completed projects in cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment.",
     "noProjects": "No projects found for this selection.",
     "filtersTitle": "Filters",
     "projectsCount": "{count} projects",

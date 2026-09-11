@@ -3,6 +3,7 @@ import ServiceCard from '@/components/ui/ServiceCard';
 import { getAllProjects, getProjectFilters } from '@/lib/projects';
 import ProjectFilters from '@/components/projects/ProjectFilters';
 import Pagination from '@/components/projects/Pagination';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,6 +27,7 @@ export default async function ProjectsPage({ params, searchParams }: ProjectsPag
   const { locale } = await params;
   const resolvedSearchParams = await searchParams;
   const t = await getTranslations({ locale, namespace: 'ProjectsPage' });
+  const tBreadcrumb = await getTranslations({ locale, namespace: 'Breadcrumbs' });
 
   const [projectsData, filtersData] = await Promise.all([
     getAllProjects(locale, resolvedSearchParams),
@@ -34,11 +36,17 @@ export default async function ProjectsPage({ params, searchParams }: ProjectsPag
 
   const { data: projects, meta } = projectsData;
 
+  const breadcrumbs = [
+    { label: tBreadcrumb('home'), href: '/' },
+    { label: tBreadcrumb('projects') },
+  ];
+
   return (
     <main className="min-h-screen bg-slate-50 pt-16 pb-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         
-        <div className="max-w-3xl mb-10">
+        <Breadcrumbs items={breadcrumbs} />
+        <div className="max-w-4xl mb-10">
           <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
             {t('badge')}
           </span>

@@ -1,9 +1,10 @@
-import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/routing';
-import Image from 'next/image';
-import { getProjectBySlug } from '@/lib/projects';
-import ProjectSlugSync from '@/components/projects/ProjectSlugSync';
+import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/routing";
+import Image from "next/image";
+import { getProjectBySlug } from "@/lib/projects";
+import ProjectSlugSync from "@/components/projects/ProjectSlugSync";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 interface ProjectDetailPageProps {
   params: Promise<{
@@ -18,16 +19,18 @@ export async function generateMetadata({ params }: ProjectDetailPageProps) {
 
   if (!project) {
     return {
-      title: 'Project niet gevonden | Nu-Isoleren',
+      title: "Project niet gevonden | Nu-Isoleren",
     };
   }
 
-  const generatedTitle = project.city?.name && project.service?.name
-    ? `${project.service.name} in ${project.city.name} | Nu-Isoleren`
-    : `${project.title} | Nu-Isoleren`;
+  const generatedTitle =
+    project.city?.name && project.service?.name
+      ? `${project.service.name} in ${project.city.name} | Nu-Isoleren`
+      : `${project.title} | Nu-Isoleren`;
 
   const title = project.meta_title || generatedTitle;
-  const description = project.meta_description || project.short_description || undefined;
+  const description =
+    project.meta_description || project.short_description || undefined;
   const mainImage = project.images?.[0]?.image_url;
 
   return {
@@ -41,9 +44,15 @@ export async function generateMetadata({ params }: ProjectDetailPageProps) {
   };
 }
 
-export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+export default async function ProjectDetailPage({
+  params,
+}: ProjectDetailPageProps) {
   const { locale, slug } = await params;
-  const t = await getTranslations({ locale, namespace: 'ProjectDetailPage' });
+  const t = await getTranslations({ locale, namespace: "ProjectDetailPage" });
+  const tBreadcrumb = await getTranslations({
+    locale,
+    namespace: "Breadcrumbs",
+  });
   const project = await getProjectBySlug(slug, locale);
 
   if (!project) {
@@ -53,26 +62,28 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   const mainImage = project.images?.[0];
   const galleryImages = project.images?.slice(1) || [];
 
-  // Dynamische CTA titel samenstellen
   const serviceName = project.service?.name;
   const cityName = project.city?.name;
-  const ctaTitle = (serviceName && cityName)
-    ? t('ctaTitleWithService', { service: serviceName.toLowerCase(), city: cityName })
-    : t('ctaTitleFallback');
+  const ctaTitle =
+    serviceName && cityName
+      ? t("ctaTitleWithService", {
+          service: serviceName.toLowerCase(),
+          city: cityName,
+        })
+      : t("ctaTitleFallback");
+
+  const breadcrumbs = [
+    { label: tBreadcrumb("home"), href: "/" },
+    { label: tBreadcrumb("projects"), href: "/projects" },
+    { label: project.title },
+  ];
 
   return (
     <main className="min-h-screen bg-slate-50 pt-16 pb-20">
-        <ProjectSlugSync slugs={project.all_slugs} />
-      <div className="max-w-6xl mx-auto px-4 md:px-6">
-        
-        <div className="mb-6">
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-[#C82024] transition group"
-          >
-            <span className="transition-transform duration-200 group-hover:-translate-x-1">&larr;</span>
-            <span>{t('backLink')}</span>
-          </Link>
+      <ProjectSlugSync slugs={project.all_slugs} />
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="mb-8">
+          <Breadcrumbs items={breadcrumbs} />
         </div>
 
         <div className="mb-8">
@@ -114,27 +125,28 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
-          
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
               <h2 className="text-xl font-extrabold text-slate-900 mb-4">
                 Over dit project
               </h2>
-              
+
               {project.description ? (
-                <div 
+                <div
                   className="text-slate-800 leading-relaxed text-base sm:text-lg space-y-4 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>h3]:text-xl [&>h3]:font-bold [&>h3]:text-slate-900"
                   dangerouslySetInnerHTML={{ __html: project.description }}
                 />
               ) : (
-                <p className="text-slate-500 italic">Geen verdere beschrijving beschikbaar.</p>
+                <p className="text-slate-500 italic">
+                  Geen verdere beschrijving beschikbaar.
+                </p>
               )}
             </div>
 
             {galleryImages.length > 0 && (
               <div className="mt-10">
                 <h3 className="text-xl font-bold text-slate-900 mb-6">
-                  {t('galleryTitle')}
+                  {t("galleryTitle")}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {galleryImages.map((img) => (
@@ -161,20 +173,27 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           </div>
 
           <aside className="lg:col-span-1 flex flex-col gap-6">
-            
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col gap-4">
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                 Project Details
               </h3>
-              
+
               <div className="flex flex-col gap-3 text-sm">
                 <div className="flex justify-between items-center py-2.5 border-b border-slate-100">
-                  <span className="text-slate-500 font-medium">{t('serviceLabel')}</span>
-                  <span className="font-bold text-slate-900">{project.service?.name || '-'}</span>
+                  <span className="text-slate-500 font-medium">
+                    {t("serviceLabel")}
+                  </span>
+                  <span className="font-bold text-slate-900">
+                    {project.service?.name || "-"}
+                  </span>
                 </div>
                 <div className="flex justify-between items-center py-2.5 border-b border-slate-100">
-                  <span className="text-slate-500 font-medium">{t('locationLabel')}</span>
-                  <span className="font-bold text-slate-900">{project.city?.name || '-'}</span>
+                  <span className="text-slate-500 font-medium">
+                    {t("locationLabel")}
+                  </span>
+                  <span className="font-bold text-slate-900">
+                    {project.city?.name || "-"}
+                  </span>
                 </div>
               </div>
             </div>
@@ -184,20 +203,17 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 {ctaTitle}
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                {t('ctaDescription')}
+                {t("ctaDescription")}
               </p>
               <Link
                 href="/"
                 className="mt-2 inline-flex justify-center items-center px-5 py-3.5 rounded-xl bg-[#C82024] hover:bg-red-700 text-white font-bold text-sm transition text-center shadow-sm"
               >
-                {t('ctaButton')} &rarr;
+                {t("ctaButton")} &rarr;
               </Link>
             </div>
-
           </aside>
-
         </div>
-
       </div>
     </main>
   );

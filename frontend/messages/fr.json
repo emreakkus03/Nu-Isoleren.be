@@ -1,15 +1,20 @@
 {
-    "Seo": {
+  "Seo": {
     "home": {
       "title": "Nu-Isoleren | Isolation, travaux de façade & lutte contre l’humidité",
       "description": "Isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité. Nu-Isoleren vous accompagne en Flandre et en Wallonie. Demandez un conseil sans engagement."
     },
     "projects": {
-    "title": "Nos Réalisations | Projets d'Isolation & Façades | Nu-Isoleren",
-    "description": "Découvrez les chantiers récents de Nu-Isoleren : isolation des murs creux, toitures et crépi de façade en Flandre et Wallonie. Qualité et savoir-faire garantis."
-  }
+      "title": "Nos réalisations | Isolation & travaux de façade | Nu-Isoleren",
+      "description": "Découvrez les projets réalisés par Nu-Isoleren : isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité en Flandre et en Wallonie."
+    }
   },
-    "Header": {
+
+  "Breadcrumbs": {
+    "home": "Accueil",
+    "projects": "Réalisations"
+  },
+  "Header": {
     "reviews": "Excellent",
     "topbar": {
       "serviceAreas": "Zones d'intervention",
@@ -20,7 +25,7 @@
       "language": "Langue:"
     },
     "mainbar": {
-        "home": "Accueil",
+      "home": "Accueil",
       "services": "Services",
       "projects": "Réalisations",
       "pricing": "Prix",
@@ -31,7 +36,7 @@
   "Floating": {
     "call": "Appelez-nous",
     "mail": "Envoyez un e-mail",
-     "number": "+32 (0) 800 63 63 5",
+    "number": "+32 (0) 800 63 63 5",
     "mailAddress": "info@nu-isoleren.be"
   },
   "Hero": {
@@ -123,19 +128,10 @@
     "title": "Vrais chantiers. Résultats visibles.",
     "cta": "Voir toutes nos réalisations"
   },
-
-
-
-
-
-
-
-
-
   "ProjectsPage": {
-    "badge": "Nos Chantiers",
-    "title": "Découvrez nos réalisations récentes",
-    "description": "De l'isolation des murs creux et toitures au crépi de façade. Découvrez nos chantiers en Flandre, à Bruxelles et en Wallonie.",
+    "badge": "NOS RÉALISATIONS",
+  "title": "Des projets réels. Des résultats visibles.",
+  "description": "Découvrez nos projets réalisés en isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité.",
     "noProjects": "Aucun projet trouvé pour cette sélection.",
     "filtersTitle": "Filtres",
     "projectsCount": "{count} réalisations",
