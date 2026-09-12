@@ -3,6 +3,7 @@
 use App\Models\City;
 use App\Models\Project;
 use App\Models\Service;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -107,6 +108,44 @@ Route::middleware('throttle:60,1')->get('/projects/{slug}', function (string $sl
         ->firstOrFail();
 
     return formatProjectResponse($project, $locale);
+});
+
+Route::middleware('throttle:60,1')->get('/faqs', function (Request $request) {
+    $locale = $request->query('locale', 'nl');
+    $serviceSlug = $request->query('service') ?? $request->query('dienst');
+    $featuredHome = $request->boolean('featured_home');
+
+    $query = Faq::query()
+        ->with('service')
+        ->orderBy('sort_order', 'asc');
+
+    if ($featuredHome) {
+        $query->where('is_featured_home', true);
+    }
+
+    if ($serviceSlug) {
+        $query->whereHas('service', function ($q) use ($serviceSlug) {
+            $q->where('slug->nl', $serviceSlug)
+              ->orWhere('slug->fr', $serviceSlug)
+              ->orWhere('slug->en', $serviceSlug);
+        });
+    }
+
+    return $query->get()->map(function (Faq $faq) use ($locale) {
+        return [
+            'id' => $faq->id,
+            'question' => $faq->getTranslation('question', $locale, false) ?: $faq->getTranslation('question', 'nl'),
+            'answer' => $faq->getTranslation('answer', $locale, false) ?: $faq->getTranslation('answer', 'nl'),
+            'category' => $faq->category,
+            'service' => $faq->service ? [
+                'id' => $faq->service->id,
+                'name' => $faq->service->getTranslation('name', $locale, false) ?: $faq->service->getTranslation('name', 'nl'),
+                'slug' => $faq->service->getTranslation('slug', $locale, false) ?: $faq->service->getTranslation('slug', 'nl'),
+            ] : null,
+            'is_featured_home' => (bool) $faq->is_featured_home,
+            'sort_order' => (int) $faq->sort_order,
+        ];
+    });
 });
 
 function formatProjectResponse(Project $project, string $locale): array

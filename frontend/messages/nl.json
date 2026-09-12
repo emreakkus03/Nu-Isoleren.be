@@ -7,12 +7,17 @@
   "projects": {
      "title": "Onze Realisaties | Isolatie & gevelwerken | Nu-Isoleren",
   "description": "Bekijk gerealiseerde projecten van Nu-Isoleren op het gebied van spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding in Vlaanderen en Wallonië."
-  }
+  },
+ "faq": {
+  "title": "Veelgestelde vragen | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
+  "description": "Vind antwoorden over spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding. Nu-Isoleren helpt u in Vlaanderen en Wallonië."
+}
 },
 
 "Breadcrumbs": {
   "home": "Home",
-    "projects": "Realisaties"
+  "projects": "Realisaties",
+  "faq": "Veelgestelde Vragen"
   },
   "Header": {
     "reviews": "Uitstekend",
@@ -161,6 +166,36 @@
     "ctaTitleFallback": "Heeft uw woning ook nood aan isolatie?",
     "ctaDescription": "Vraag een gratis en vrijblijvende offerte aan voor uw project. Onze specialist komt bij u langs voor advies op maat.",
     "ctaButton": "Vraag een gratis offerte aan"
+  },
+
+
+
+
+
+
+
+
+  "FaqPage": {
+  "title": "Veelgestelde vragen over isolatie en gevelwerken",
+  "subtitle": "Vind snel duidelijke antwoorden over onze diensten, werkwijze, materialen en premies.",
+  "searchPlaceholder": "Zoek naar een vraag of onderwerp (bv. premie, spouwmuur, garantie)...",
+  "filterAll": "Alle vragen",
+  "filterGeneral": "Algemeen & Premies",
+  "noResults": "Geen vragen gevonden voor uw zoekopdracht.",
+  "cta": {
+    "title": "Staat uw vraag er niet tussen?",
+    "description": "Onze experts helpen u graag verder met gratis en vrijblijvend advies voor uw woning.",
+    "quoteButton": "Gratis offerte aanvragen",
+    "phoneButton": "Direct bellen"
   }
+},
+"HomePage": {
+  "faq": {
+    "badge": "Veelgestelde Vragen",
+    "title": "Nog vragen? Wij hebben het antwoord.",
+    "notListed": "Staat je vraag er niet bij?",
+    "viewAll": "Bekijk alle vragen"
+  }
+}
 
 }

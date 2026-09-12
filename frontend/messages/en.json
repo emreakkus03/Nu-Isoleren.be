@@ -7,6 +7,10 @@
     "projects": {
   "title": "Our Projects | Insulation & Façade Works | Nu-Isoleren",
   "description": "Explore projects completed by Nu-Isoleren, including cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
+},
+"faq": {
+  "title": "FAQ | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
+  "description": "Find answers about cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
 }
   },
 
@@ -161,5 +165,30 @@
     "ctaTitleFallback": "Looking to insulate your property?",
     "ctaDescription": "Request a free, non-binding quote today. Our specialist will inspect your property and provide tailored advice.",
     "ctaButton": "Request a free quote"
+  },
+
+
+
+  "FaqPage": {
+  "title": "Frequently asked questions about insulation and façade works",
+  "subtitle": "Find clear answers about our services, methods, materials and grants.",
+  "searchPlaceholder": "Search for a question or topic (e.g. grant, cavity wall, warranty)...",
+  "filterAll": "All questions",
+  "filterGeneral": "General & Grants",
+  "noResults": "No questions found for your search.",
+  "cta": {
+    "title": "Can't find your answer?",
+    "description": "Our experts are happy to provide free, no-obligation advice tailored to your project.",
+    "quoteButton": "Request a free quote",
+    "phoneButton": "Call us directly"
   }
+},
+"HomePage": {
+  "faq": {
+    "badge": "Frequently Asked Questions",
+    "title": "More questions? We have the answer.",
+    "notListed": "Is your question not listed?",
+    "viewAll": "View all questions"
+  }
+}
 }

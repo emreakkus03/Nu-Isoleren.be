@@ -42,10 +42,12 @@ export default async function ProjectsPage({ params, searchParams }: ProjectsPag
   ];
 
   return (
-    <main className="min-h-screen bg-slate-50 pt-16 pb-20">
+    <main className="min-h-screen bg-white pt-16 pb-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         
-        <Breadcrumbs items={breadcrumbs} />
+        <div className="mb-8">
+                  <Breadcrumbs items={breadcrumbs} />
+                </div>
         <div className="max-w-4xl mb-10">
           <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
             {t('badge')}

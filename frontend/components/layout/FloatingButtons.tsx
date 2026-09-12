@@ -4,11 +4,13 @@ import { useTranslations } from 'next-intl';
 export default function FloatingButtons() {
   const t = useTranslations('Floating');
 
+  const rawPhoneNumber = t('number').replace(/[^0-9+]/g, '');
+
   return (
     <div className="hidden md:flex fixed right-0 top-1/3 z-50 flex-col items-end gap-2 pointer-events-none">
       
       <a 
-        href="tel:+32400000000" 
+        href={`tel:${rawPhoneNumber}`}
         className="group/phone pointer-events-auto flex items-center bg-[#C82024] hover:bg-red-800 text-white p-3 rounded-l-md shadow-lg transition-colors duration-300"
       >
         <Image src="/icons/phone.svg" alt="Telefoon" width={24} height={24} className="shrink-0" />

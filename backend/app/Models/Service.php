@@ -18,4 +18,9 @@ class Service extends Model
     {
         return $this->hasMany(Project::class);
     }
+
+    public function faqs()
+{
+    return $this->hasMany(Faq::class)->orderBy('sort_order');
+}
 }

@@ -7,7 +7,11 @@
     "projects": {
       "title": "Nos réalisations | Isolation & travaux de façade | Nu-Isoleren",
       "description": "Découvrez les projets réalisés par Nu-Isoleren : isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité en Flandre et en Wallonie."
-    }
+    },
+    "faq": {
+  "title": "Questions fréquentes | Isolation, façades & humidité | Nu-Isoleren",
+  "description": "Trouvez les réponses à vos questions sur l’isolation des murs creux, l’isolation de toiture, le crépi, le nettoyage de façade, l’hydrofuge et le traitement de l’humidité en Flandre et en Wallonie."
+}
   },
 
   "Breadcrumbs": {
@@ -153,5 +157,30 @@
     "ctaTitleFallback": "Votre habitation a-t-elle besoin d'isolation ?",
     "ctaDescription": "Demandez un devis gratuit et sans engagement. Notre spécialiste se déplace pour un diagnostic thermique sur mesure.",
     "ctaButton": "Demander un devis gratuit"
+  },
+
+
+
+  "FaqPage": {
+  "title": "Questions fréquentes sur l’isolation et les travaux de façade",
+  "subtitle": "Trouvez rapidement des réponses claires sur nos services, nos méthodes, nos matériaux et les primes.",
+  "searchPlaceholder": "Recherchez une question ou un sujet (p. ex. prime, mur creux, garantie)...",
+  "filterAll": "Toutes les questions",
+  "filterGeneral": "Général & Primes",
+  "noResults": "Aucune question trouvée pour votre recherche.",
+  "cta": {
+    "title": "Vous ne trouvez pas votre réponse ?",
+    "description": "Nos experts sont à votre disposition pour vous conseiller gratuitement et sans engagement selon votre projet.",
+    "quoteButton": "Demander un devis gratuit",
+    "phoneButton": "Appeler directement"
   }
+},
+"HomePage": {
+  "faq": {
+    "badge": "Foire Aux Questions",
+    "title": "D'autres questions ? Nous avons la réponse.",
+    "notListed": "Votre question n'y figure pas ?",
+    "viewAll": "Consulter toutes les questions"
+  }
+}
 }

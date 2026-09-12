@@ -6,6 +6,7 @@ import ServicesSection from '@/components/home/ServicesSection';
 import PriceCalculatorTeaser from '@/components/home/PriceCalculatorTeaser';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ProjectsSection from '@/components/home/ProjectsSection';
+import FaqHomeSection from '@/components/home/HomeFaqSection';
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const { locale } = await params;
@@ -28,6 +29,7 @@ export default function HomePage() {
       <PriceCalculatorTeaser />
       <WhyChooseUs />
       <ProjectsSection />
+      <FaqHomeSection />
     </main>
   );
 }

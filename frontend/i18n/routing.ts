@@ -17,6 +17,12 @@ export const routing = defineRouting({
       fr: '/realisations/[slug]',
       en: '/projects/[slug]',
     },
+
+    '/faq': {
+      nl: '/veelgestelde-vragen',
+      fr: '/questions-frequentes',
+      en: '/faq',
+    },
   }
 });
 

@@ -149,7 +149,7 @@ export default function MobileMenu() {
               </Link>
 
               <Link 
-                href="/" 
+                href="/faq" 
                 onClick={closeMenu} 
                 className={getSubLinkClasses('/faq')}
               >

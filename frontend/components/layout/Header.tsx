@@ -7,6 +7,7 @@ import GoogleReviews from "@/components/layout/GoogleReviews";
 import MobileMenu from "@/components/layout/MobileMenu";
 import MobileQuickContact from "@/components/layout/MobileQuickContact";
 import HeaderNav from "@/components/layout/HeaderNav";
+import TopbarNav from "@/components/layout/TopbarNav";
 
 export default function Header() {
   const t = useTranslations("Header");
@@ -17,38 +18,12 @@ export default function Header() {
         <div className="max-w-7xl w-full mx-auto py-2 px-4 md:px-6 text-sm flex justify-center md:justify-between items-center">
           <GoogleReviews label={t("reviews")} />
 
-          <div className="hidden md:flex items-center gap-3 lg:gap-6 font-medium text-gray-700 text-xs lg:text-sm">
-            <Link
-              href="/"
-              className="hover:text-[#C82024] transition whitespace-nowrap"
-            >
-              {t("topbar.serviceAreas")}
-            </Link>
-            <Link
-              href="/"
-              className="hover:text-[#C82024] transition whitespace-nowrap"
-            >
-              {t("topbar.aboutUs")}
-            </Link>
-            <Link
-              href="/"
-              className="hover:text-[#C82024] transition whitespace-nowrap"
-            >
-              {t("topbar.grants")}
-            </Link>
-            <Link
-              href="/"
-              className="hover:text-[#C82024] transition whitespace-nowrap"
-            >
-              {t("topbar.faq")}
-            </Link>
-            <Link
-              href="/"
-              className="hover:text-[#C82024] transition whitespace-nowrap"
-            >
-              {t("topbar.contact")}
-            </Link>
+          <div className="flex items-center gap-3 lg:gap-6">
+            <TopbarNav />
+            <div className="hidden md:flex items-center px-0 py-0">
+
             <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>
