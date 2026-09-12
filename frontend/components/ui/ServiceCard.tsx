@@ -1,14 +1,19 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 
 interface ServiceCardProps {
   href: string;
-  imageSrc: string;
+  imageSrc?: string | null;
   imageAlt: string;
   title?: string;
   badge?: string;
   description?: string;
 }
+
+const FALLBACK_IMAGE = '/logo/logo.svg';
 
 export default function ServiceCard({
   href,
@@ -18,17 +23,25 @@ export default function ServiceCard({
   badge,
   description,
 }: ServiceCardProps) {
+  const initialSrc = imageSrc && imageSrc.trim() !== '' ? imageSrc : FALLBACK_IMAGE;
+  const [currentSrc, setCurrentSrc] = useState(initialSrc);
+
   return (
     <Link
       href={href as never}
       className="group relative block aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300"
     >
       <Image
-        src={imageSrc}
-        alt={imageAlt}
+        src={currentSrc}
+        alt={imageAlt || 'Service afbeelding'}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         className="object-cover transition-transform duration-500 group-hover:scale-105"
+        onError={() => {
+          if (currentSrc !== FALLBACK_IMAGE) {
+            setCurrentSrc(FALLBACK_IMAGE);
+          }
+        }}
       />
 
       {badge && (

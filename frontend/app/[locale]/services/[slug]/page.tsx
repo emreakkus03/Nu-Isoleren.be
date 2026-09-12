@@ -1,14 +1,47 @@
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getServiceBySlug } from '@/lib/services';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import ServiceToc from '@/components/services/ServiceToc';
+import DynamicBulletIcon from '@/components/ui/DynamicBulletIcon';
 
 export const dynamic = 'force-dynamic';
 
 interface ServiceDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
+}
+
+export async function generateMetadata({ params }: ServiceDetailPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const service = await getServiceBySlug(slug, locale);
+
+  if (!service) {
+    return {
+      title: 'Dienst niet gevonden | Nu-Isoleren.be',
+    };
+  }
+
+  const title = service.seo_title || `${service.hero_title || service.name} | Nu-Isoleren.be`;
+  const description =
+    service.seo_description ||
+    service.short_description ||
+    `Ontdek alles over ${service.name} bij Nu-Isoleren.be. Vraag vrijblijvend advies of een offerte aan.`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: service.hero_image
+        ? [service.hero_image]
+        : service.thumbnail
+          ? [service.thumbnail]
+          : [],
+    },
+  };
 }
 
 const formatIntroParagraphs = (rawText: string) => {
@@ -60,17 +93,16 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
           <Breadcrumbs items={breadcrumbs} />
         </div>
 
-        {/* Hero: 40% links, 60% rechts */}
-        <header className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start mb-20">
+        <header className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start mb-26">
           
-          <div className="w-full lg:w-[40%] flex flex-col gap-4 shrink-0">
+          <div className="w-full lg:w-[35%] shrink-0 flex flex-col gap-4">
             {service.eyebrow && (
               <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
                 {service.eyebrow}
               </span>
             )}
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
               {service.hero_title || service.name}
             </h1>
 
@@ -84,14 +116,14 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
             )}
           </div>
 
-          <div className="w-full lg:w-[60%] grow">
+          <div className="w-full lg:flex-1 min-w-0">
             <div className="relative w-full h-[380px] sm:h-[460px] lg:h-[500px] overflow-hidden bg-slate-100">
               <Image
                 src={service.hero_image || service.thumbnail || '/images/placeholder.jpg'}
                 alt={service.hero_title || service.name}
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 60vw"
+                sizes="(max-width: 1024px) 100vw, 65vw"
                 className="object-cover"
               />
             </div>
@@ -99,31 +131,42 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
 
         </header>
 
-        {/* Content gedeelte: matcht exact dezelfde 40% / 60% kolommen als de hero hierboven */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+        {/* Content: exact dezelfde 35% links en flex-1 rechts */}
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
           
-          {/* Linker kolom: 40% breedte met sticky inhoudstafel */}
-          <aside className="hidden lg:block lg:w-[40%] shrink-0">
+          <aside className="hidden lg:block lg:w-[35%] shrink-0 self-stretch">
             <ServiceToc items={tocItems} />
           </aside>
 
-          {/* Rechter kolom: 60% breedte, exact uitgelijnd met de foto hierboven */}
-          <section className="w-full lg:w-[60%] grow flex flex-col gap-16">
+          <section className="w-full lg:flex-1 min-w-0 flex flex-col gap-16">
             {service.sections && service.sections.length > 0 ? (
               service.sections.map((section) => (
                 <article
                   key={section.slug}
                   id={section.slug}
-                  className="scroll-mt-28 flex flex-col gap-4 border-b border-slate-100 pb-12 last:border-b-0"
+                  className="scroll-mt-32 flex flex-col gap-4 border-b border-slate-100 pb-12 last:border-b-0"
                 >
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                     {section.heading}
                   </h2>
 
                   <div
-                    className="prose prose-slate max-w-none text-slate-600 leading-relaxed"
+                    className="prose prose-slate max-w-none text-base text-slate-600 leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: section.body }}
                   />
+
+                  {section.bullet_points && section.bullet_points.length > 0 && (
+  <ul className="flex flex-col gap-3 my-2">
+    {section.bullet_points.map((bp, idx) => (
+      <li key={idx} className="flex items-start gap-3">
+        <DynamicBulletIcon icon={bp.icon} color={bp.color} />
+        <span className="text-base text-slate-700 font-medium leading-relaxed">
+          {bp.text}
+        </span>
+      </li>
+    ))}
+  </ul>
+)}
 
                   {section.images && section.images.length > 0 && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
@@ -146,7 +189,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                 </article>
               ))
             ) : (
-              <p className="text-slate-500 font-medium">Nog geen secties toegevoegd voor deze dienst.</p>
+              <p className="text-slate-500 font-medium">Geen inhoud beschikbaar.</p>
             )}
           </section>
 

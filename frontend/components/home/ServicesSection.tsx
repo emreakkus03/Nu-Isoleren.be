@@ -1,41 +1,16 @@
-import { useTranslations } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
+import { getServices } from '@/lib/services';
 import ServiceCard from '@/components/ui/ServiceCard';
 
-export default function ServicesSection() {
-  const t = useTranslations('ServicesSection');
+export default async function ServicesSection() {
+  const locale = await getLocale();
+  const t = await getTranslations('ServicesSection');
 
-  const services = [
-    {
-      key: 'cavityWall',
-      image: '/images/services/spouwmuurisolatie.png',
-      href: '/diensten',
-    },
-    {
-      key: 'roofInsulation',
-      image: '/images/services/dakisolatie.jpg',
-      href: '/diensten',
-    },
-    {
-      key: 'crepi',
-      image: '/images/services/crepi.png',
-      href: '/diensten',
-    },
-    {
-      key: 'facadeCleaning',
-      image: '/images/services/gevelreiniging.png',
-      href: '/diensten',
-    },
-    {
-      key: 'hydrofuge',
-      image: '/images/services/hydrofuge.png',
-      href: '/diensten',
-    },
-    {
-      key: 'risingDamp',
-      image: '/images/services/opstijgend-vocht.png',
-      href: '/diensten',
-    },
-  ];
+  const services = await getServices(locale, { featuredHome: true });
+
+  if (!services || services.length === 0) {
+    return null;
+  }
 
   return (
     <section className="w-full bg-white py-16 md:py-24">
@@ -52,13 +27,13 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service) => (
             <ServiceCard
-              key={service.key}
-              href={service.href}
-              imageSrc={service.image}
-              imageAlt={t(`items.${service.key}.title`)}
-              badge={t(`items.${service.key}.badge`)}
-              title={t(`items.${service.key}.title`)}
-              description={t(`items.${service.key}.description`)}
+              key={service.id}
+              href={`/diensten/${service.slug}`}
+              imageSrc={service.thumbnail || '/logo/logo.svg'}
+              imageAlt={service.name}
+              badge={service.badge}
+              title={service.name}
+              description={service.short_description || ''}
             />
           ))}
         </div>

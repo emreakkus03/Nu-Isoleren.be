@@ -10,17 +10,51 @@ class Service extends Model
 {
     use HasTranslations;
 
-    protected $fillable = ['name', 'slug'];
+    protected $fillable = [
+        'name',
+        'slug',
+        'badge',
+        'short_description',
+        'thumbnail',
+        'hero_image',
+        'eyebrow',
+        'hero_title',
+        'intro_text',
+        'sections',
+        'seo_title',
+        'seo_description',
+        'order_column',
+        'is_active',
+        'is_featured_home',
+    ];
 
-    public array $translatable = ['name', 'slug'];
+    public array $translatable = [
+        'name',
+        'slug',
+        'badge',
+        'short_description',
+        'eyebrow',
+        'hero_title',
+        'intro_text',
+        'sections',
+        'seo_title',
+        'seo_description',
+    ];
 
-    public function projects(): HasMany
+    protected $casts = [
+        'sections' => 'array',
+        'is_active' => 'boolean',
+        'is_featured_home' => 'boolean',
+        'order_column' => 'integer',
+    ];
+
+    public function faqs(): HasMany
     {
-        return $this->hasMany(Project::class);
+        return $this->hasMany(Faq::class)->orderBy('order_column');
     }
-
-    public function faqs()
+    
+    public function projects(): HasMany
 {
-    return $this->hasMany(Faq::class)->orderBy('sort_order');
+    return $this->hasMany(Project::class);
 }
 }

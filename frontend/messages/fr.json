@@ -11,12 +11,18 @@
     "faq": {
   "title": "Questions fréquentes | Isolation, façades & humidité | Nu-Isoleren",
   "description": "Trouvez les réponses à vos questions sur l’isolation des murs creux, l’isolation de toiture, le crépi, le nettoyage de façade, l’hydrofuge et le traitement de l’humidité en Flandre et en Wallonie."
+},
+"services": {
+  "title": "Services | Isolation, façades & humidité | Nu-Isoleren",
+  "description": "Découvrez les services de Nu-Isoleren : isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité en Flandre et en Wallonie."
 }
   },
 
   "Breadcrumbs": {
     "home": "Accueil",
-    "projects": "Réalisations"
+    "projects": "Réalisations",
+    "faq": "Questions fréquentes",
+    "services": "Services"
   },
   "Header": {
     "reviews": "Excellent",
@@ -34,7 +40,8 @@
       "projects": "Réalisations",
       "pricing": "Prix",
       "knowledgeBase": "Base de connaissances",
-      "cta": "Devis Gratuit"
+      "cta": "Devis Gratuit",
+      "allServices": "Tous les services"
     }
   },
   "Floating": {
@@ -182,5 +189,8 @@
     "notListed": "Votre question n'y figure pas ?",
     "viewAll": "Consulter toutes les questions"
   }
-}
+},
+
+
+"ServicesPage": { "eyebrow": "NOS SERVICES", "title": "Isolation, travaux de façade & traitement de l’humidité", "description": "De l’isolation des murs creux et de la toiture au crépi, au nettoyage de façade et au traitement de l’humidité. Découvrez nos solutions pour une habitation plus confortable, plus économe en énergie et mieux protégée." }
 }

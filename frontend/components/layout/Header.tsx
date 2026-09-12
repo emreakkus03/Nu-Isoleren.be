@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
@@ -8,9 +8,12 @@ import MobileMenu from "@/components/layout/MobileMenu";
 import MobileQuickContact from "@/components/layout/MobileQuickContact";
 import HeaderNav from "@/components/layout/HeaderNav";
 import TopbarNav from "@/components/layout/TopbarNav";
+import { getServices } from "@/lib/services";
 
-export default function Header() {
-  const t = useTranslations("Header");
+export default async function Header() {
+  const t = await getTranslations("Header");
+  const locale = await getLocale();
+  const services = await getServices(locale);
 
   return (
     <header className="w-full bg-white flex flex-col z-50 sticky top-0 border-b border-gray-200 shadow-sm">
@@ -21,8 +24,7 @@ export default function Header() {
           <div className="flex items-center gap-3 lg:gap-6">
             <TopbarNav />
             <div className="hidden md:flex items-center px-0 py-0">
-
-            <LanguageSwitcher />
+              <LanguageSwitcher />
             </div>
           </div>
         </div>
@@ -60,7 +62,7 @@ export default function Header() {
             />
           </Link>
 
-          <HeaderNav />
+          <HeaderNav services={services} />
 
           <div className="flex-1 flex justify-end items-center gap-4">
             <Link

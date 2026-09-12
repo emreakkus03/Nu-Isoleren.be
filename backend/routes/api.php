@@ -6,6 +6,7 @@ use App\Models\Service;
 use App\Models\Faq;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 Route::middleware('throttle:60,1')->get('/featured-projects', function (Request $request) {
     $locale = $request->query('locale', 'nl');
@@ -146,6 +147,113 @@ Route::middleware('throttle:60,1')->get('/faqs', function (Request $request) {
             'sort_order' => (int) $faq->sort_order,
         ];
     });
+});
+
+Route::middleware('throttle:60,1')->get('/services', function (Request $request) {
+    $locale = $request->query('locale', 'nl');
+    $featuredHome = $request->boolean('featured_home');
+
+    $query = Service::query()->where('is_active', true);
+
+    if ($featuredHome) {
+        $query->where('is_featured_home', true);
+    }
+
+    $services = $query->orderBy('order_column', 'asc')->get();
+
+    return response()->json([
+        'data' => $services->map(function ($service) use ($locale) {
+            $thumbnailUrl = null;
+                /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
+                $s3 = Storage::disk('s3');
+            if ($service->thumbnail) {
+                    $thumbnailUrl = $s3->url($service->thumbnail);
+            }
+
+            $heroImageUrl = null;
+            if ($service->hero_image) {
+                    $heroImageUrl = $s3->url($service->hero_image);
+            }
+
+            $sections = $service->getTranslation('sections', $locale, false) ?? [];
+            if (is_array($sections)) {
+                $sections = array_map(function ($sec) use ($s3) {
+                    if (!empty($sec['images']) && is_array($sec['images'])) {
+                        $sec['images'] = array_map(fn ($img) => $s3->url($img), $sec['images']);
+                    }
+                    return $sec;
+                }, $sections);
+            }
+
+            return [
+                'id' => $service->id,
+                'name' => $service->getTranslation('name', $locale, false) ?: $service->getTranslation('name', 'nl'),
+                'slug' => $service->getTranslation('slug', $locale, false) ?: $service->getTranslation('slug', 'nl'),
+                'badge' => $service->getTranslation('badge', $locale, false) ?: $service->getTranslation('badge', 'nl'),
+                'short_description' => $service->getTranslation('short_description', $locale, false),
+                'eyebrow' => $service->getTranslation('eyebrow', $locale, false),
+                'hero_title' => $service->getTranslation('hero_title', $locale, false),
+                'intro_text' => $service->getTranslation('intro_text', $locale, false),
+                'thumbnail' => $thumbnailUrl,
+                'hero_image' => $heroImageUrl,
+                'sections' => $sections,
+                'seo_title' => $service->getTranslation('seo_title', $locale, false),
+                'seo_description' => $service->getTranslation('seo_description', $locale, false),
+            ];
+        }),
+    ]);
+});
+
+Route::middleware('throttle:60,1')->get('/services/{slug}', function (Request $request, string $slug) {
+    $locale = $request->query('locale', 'nl');
+
+    $service = Service::query()
+        ->where('is_active', true)
+        ->where(function ($query) use ($slug, $locale) {
+            $query->where("slug->{$locale}", $slug)
+                  ->orWhere("slug->nl", $slug);
+        })
+        ->first();
+
+    if (! $service) {
+        return response()->json(['message' => 'Service not found'], 404);
+    }
+
+    /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
+    $s3 = Storage::disk('s3');
+    $thumbnailUrl = $service->thumbnail ? $s3->url($service->thumbnail) : null;
+    $heroImageUrl = $service->hero_image ? $s3->url($service->hero_image) : null;
+
+    $sections = $service->getTranslation('sections', $locale, false) ?? [];
+    if (is_array($sections)) {
+        $sections = array_map(function ($sec) use ($s3) {
+            if (!empty($sec['images']) && is_array($sec['images'])) {
+                $sec['images'] = array_map(fn ($img) => $s3->url($img), $sec['images']);
+            }
+            if (!empty($sec['image']) && is_string($sec['image'])) {
+                $sec['image'] = $s3->url($sec['image']);
+            }
+            return $sec;
+        }, $sections);
+    }
+
+    return response()->json([
+        'data' => [
+            'id' => $service->id,
+            'name' => $service->getTranslation('name', $locale, false) ?: $service->getTranslation('name', 'nl'),
+            'slug' => $service->getTranslation('slug', $locale, false) ?: $service->getTranslation('slug', 'nl'),
+            'badge' => $service->getTranslation('badge', $locale, false) ?: $service->getTranslation('badge', 'nl'),
+            'short_description' => $service->getTranslation('short_description', $locale, false),
+            'eyebrow' => $service->getTranslation('eyebrow', $locale, false),
+            'hero_title' => $service->getTranslation('hero_title', $locale, false),
+            'intro_text' => $service->getTranslation('intro_text', $locale, false),
+            'thumbnail' => $thumbnailUrl,
+            'hero_image' => $heroImageUrl,
+            'sections' => $sections,
+            'seo_title' => $service->getTranslation('seo_title', $locale, false),
+            'seo_description' => $service->getTranslation('seo_description', $locale, false),
+        ],
+    ]);
 });
 
 function formatProjectResponse(Project $project, string $locale): array

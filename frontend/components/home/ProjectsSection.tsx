@@ -42,7 +42,7 @@ export default async function ProjectsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project) => {
             const firstImage = project.images?.[0];
-            const imageUrl = firstImage?.image_url || '/images/placeholder.jpg';
+            const imageUrl = firstImage?.image_url || '/logo/logo.svg';
             const imageAlt = firstImage?.alt || project.title;
             const projectCardTitle = project.city?.name 
               ? `${project.service?.name} in ${project.city.name}`

@@ -11,12 +11,18 @@
 "faq": {
   "title": "FAQ | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
   "description": "Find answers about cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
+},
+"services": {
+  "title": "Services | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
+  "description": "Discover Nu-Isoleren's services: cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
 }
   },
 
   "Breadcrumbs": {
     "home": "Home",
-    "projects": "Projects"
+    "projects": "Projects",
+    "faq": "FAQ",
+    "services": "Services"
   },
    "Header": {
     "reviews": "Excellent",
@@ -34,7 +40,8 @@
       "projects": "Projects",
       "pricing": "Pricing",
       "knowledgeBase": "Knowledge Base",
-      "cta": "Free Quote"
+      "cta": "Free Quote",
+      "allServices": "All services"
     }
   },
   "Floating": {
@@ -190,5 +197,17 @@
     "notListed": "Is your question not listed?",
     "viewAll": "View all questions"
   }
+},
+
+
+"ServicesPage": {
+
+  "eyebrow": "OUR SERVICES",
+
+  "title": "Insulation, façade works & damp treatment",
+
+  "description": "From cavity wall and roof insulation to rendering, façade cleaning and damp treatment. Discover our solutions for a more comfortable, energy-efficient and better-protected home."
+
 }
+
 }

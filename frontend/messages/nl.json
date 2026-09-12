@@ -11,13 +11,18 @@
  "faq": {
   "title": "Veelgestelde vragen | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
   "description": "Vind antwoorden over spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding. Nu-Isoleren helpt u in Vlaanderen en Wallonië."
+},
+"services": {
+  "title": "Diensten | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
+  "description": "Ontdek de diensten van Nu-Isoleren: spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding in Vlaanderen en Wallonië."
 }
 },
 
 "Breadcrumbs": {
   "home": "Home",
   "projects": "Realisaties",
-  "faq": "Veelgestelde Vragen"
+  "faq": "Veelgestelde Vragen",
+  "services": "Diensten"
   },
   "Header": {
     "reviews": "Uitstekend",
@@ -35,7 +40,8 @@
       "projects": "Realisaties",
       "pricing": "Prijzen",
       "knowledgeBase": "Kennisbank",
-      "cta": "Gratis Offerte"
+      "cta": "Gratis Offerte",
+      "allServices": "Alle diensten"
     }
   },
   "Floating": {
@@ -196,6 +202,13 @@
     "notListed": "Staat je vraag er niet bij?",
     "viewAll": "Bekijk alle vragen"
   }
+},
+
+
+"ServicesPage": {
+  "eyebrow": "ONZE DIENSTEN",
+  "title": "Isolatie, gevelwerken & vochtbestrijding",
+  "description": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging en vochtbestrijding. Ontdek onze oplossingen voor een comfortabelere, energiezuinigere en beter beschermde woning."
 }
 
 }
