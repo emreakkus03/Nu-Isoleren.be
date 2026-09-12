@@ -71,7 +71,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
               <ServiceCard
                 key={service.id}
                 href={`/services/${service.slug}`}
-                imageSrc={service.thumbnail || '/images/services/placeholder.png'}
+                imageSrc={service.thumbnail }
                 imageAlt={service.name}
                 badge={service.badge}
                 title={service.name}
