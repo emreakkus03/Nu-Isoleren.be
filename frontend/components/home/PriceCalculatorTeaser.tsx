@@ -7,13 +7,13 @@ import Image from 'next/image';
 
 const SERVICE_KEYS = [
   'cavityWall',
-  'externalWall',
   'roofInsulation',
   'crepi',
   'facadeCleaning',
   'hydrofuge',
-  'cavityEmptying',
   'risingDamp',
+  'cavityEmptying',
+  'externalWall',
 ] as const;
 
 type ServiceKey = (typeof SERVICE_KEYS)[number];
