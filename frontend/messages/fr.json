@@ -42,6 +42,10 @@
     "contact": {
       "title": "Contact | Nu-Isoleren",
       "description": "Contactez Nu-Isoleren pour vos questions concernant l’isolation, les travaux de façade et le traitement de l’humidité en Flandre et en Wallonie."
+    },
+    "about": {
+      "title": "À propos | Isolation & façades | Nu-Isoleren",
+      "description": "Découvrez Nu-Isoleren, basé à Hamme. Nous réalisons des travaux d’isolation, de façade et de traitement de l’humidité en Flandre et en Wallonie."
     }
   },
 
@@ -289,6 +293,83 @@
       "responseTitle": "Délai de réponse",
       "response": "Nous essayons de répondre personnellement à chaque demande dans les meilleurs délais."
     }
+  },
+
+  "AboutPage": {
+    "hero": {
+      "breadcrumb": "À propos",
+      "badge": "À PROPOS DE NU-ISOLEREN",
+      "title": "Un savoir-faire au service de votre confort",
+      "description": "Nu-Isoleren accompagne les propriétaires avec des solutions d’isolation, de travaux de façade et de traitement de l’humidité. Depuis Hamme, nous réalisons des projets en Flandre et en Wallonie.",
+      "descriptionSecondary": "Nous associons une approche personnalisée à une exécution soignée, une communication claire et une finition propre pour chaque habitation.",
+      "imageAlt": "Véhicule d’entreprise de Nu-Isoleren"
+    },
+    "intro": {
+  "badge": "QUI SOMMES-NOUS",
+  "title": "Plus de 10 ans d’expérience en isolation et travaux de façade",
+  "description": "Basé à Hamme, Nu-Isoleren accompagne depuis plus de 10 ans les propriétaires dans leurs projets d’isolation, de façade et de traitement de l’humidité. Nous suivons chaque projet depuis la première évaluation jusqu’à l’exécution, en tenant compte de l’habitation et de sa situation spécifique.",
+  "descriptionSecondary": "Pour l’isolation des murs creux, nous travaillons selon un système certifié ATG. Nous accordons également une grande importance à une communication claire, une exécution correcte et une finition soignée. Chaque client bénéficie ainsi d’une solution techniquement réfléchie et adaptée à son habitation.",
+  "items": {
+    "experience": {
+      "title": "Plus de 10 ans d’expérience",
+      "description": "Une expérience pratique de longue date dans les travaux d’isolation, de façade et de traitement de l’humidité."
+    },
+    "atg": {
+      "title": "Certifié ATG",
+      "description": "Pour l’isolation des murs creux, nous travaillons selon un système certifié ATG et ses conditions techniques."
+    },
+    "personal": {
+      "title": "Approche personnalisée",
+      "description": "Chaque habitation est évaluée individuellement afin de proposer une solution adaptée à la situation existante."
+    },
+    "finish": {
+      "title": "Exécution correcte et soignée",
+      "description": "Nous accordons autant d’attention à la qualité technique des travaux qu’à une finition propre et soignée."
+    }
+  }
+},
+"approach": {
+  "badge": "NOTRE APPROCHE",
+  "title": "Du premier conseil à une finition soignée",
+  "description": "Une bonne exécution commence par une préparation correcte. Nous examinons d’abord la situation de votre habitation, déterminons la solution adaptée et réalisons ensuite les travaux avec soin.",
+  "steps": {
+    "assessment": {
+      "title": "Conseil & évaluation",
+      "description": "Nous examinons l’habitation, la situation existante et les travaux nécessaires afin de proposer une solution adaptée."
+    },
+    "proposal": {
+      "title": "Proposition claire",
+      "description": "Vous recevez une proposition claire avec l’approche choisie et un aperçu précis des travaux à réaliser."
+    },
+    "execution": {
+      "title": "Exécution soignée",
+      "description": "Nos professionnels réalisent les travaux avec soin et accordent une attention particulière à la qualité, aux détails et à la finition."
+    }
+  }
+},
+"materials": {
+  "badge": "MATÉRIAUX & TECHNIQUES",
+  "title": "Des solutions que nous maîtrisons techniquement",
+  "description": "Une bonne réalisation ne dépend pas uniquement du savoir-faire, mais aussi du choix de matériaux et de techniques adaptés. Nous sélectionnons donc chaque solution en fonction de l’habitation, de l’application et des exigences techniques du projet.",
+"descriptionSecondary": "Pour l’isolation des murs creux, nous travaillons avec des billes EPS de haute qualité d’Isomo nv à Courtrai-Heule, leader belge du marché depuis les années 1950.",  "items": {
+    "materials": {
+      "title": "Matériaux éprouvés",
+      "description": "Nous sélectionnons les matériaux selon leurs propriétés techniques, leur application et leur compatibilité avec l’habitation existante."
+    },
+    "innovation": {
+      "title": "Toujours évoluer",
+      "description": "Nous suivons activement les nouvelles techniques et évolutions dans les domaines de l’isolation, des façades et du traitement de l’humidité."
+    }
+  },
+  "cta": "Découvrez nos services",
+  "imageAlt": "Matériaux et techniques utilisés par Nu-Isoleren"
+},
+"projects": {
+  "badge": "NOS RÉALISATIONS",
+  "title": "De vrais projets. Des résultats visibles.",
+  "description": "Découvrez quelques-unes de nos réalisations récentes en isolation, travaux de façade et traitement de l’humidité.",
+  "cta": "Voir toutes les réalisations"
+}
   },
 
 

@@ -81,7 +81,7 @@ export default function MobileMenu() {
               </Link>
 
               <Link 
-                href="/" 
+                href="/services" 
                 onClick={closeMenu} 
                 className={getMainLinkClasses('/services')}
               >
@@ -122,21 +122,21 @@ export default function MobileMenu() {
 
             <nav className="flex flex-col gap-4 text-gray-500 font-medium mt-2">
               <Link 
-                href="/" 
+                href="/areas" 
                 onClick={closeMenu} 
-                className={getSubLinkClasses('/werkgebied')}
+                className={getSubLinkClasses('/areas')}
               >
                 <span>{t('topbar.serviceAreas')}</span>
-                {isActive('/werkgebied') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                {isActive('/areas') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
               </Link>
 
               <Link 
-                href="/" 
+                href="/about" 
                 onClick={closeMenu} 
-                className={getSubLinkClasses('/over-ons')}
+                className={getSubLinkClasses('/about')}
               >
                 <span>{t('topbar.aboutUs')}</span>
-                {isActive('/over-ons') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                {isActive('/about') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
               </Link>
 
               <Link 
@@ -158,7 +158,7 @@ export default function MobileMenu() {
               </Link>
 
               <Link 
-                href="/" 
+                href="/contact" 
                 onClick={closeMenu} 
                 className={getSubLinkClasses('/contact')}
               >

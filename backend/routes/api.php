@@ -32,6 +32,23 @@ Route::middleware('throttle:60,1')->get('/featured-projects', function (Request 
         ->map(fn ($project) => formatProjectResponse($project, $locale));
 });
 
+Route::middleware('throttle:60,1')->get('/recent-projects', function (Request $request) {
+    $locale = $request->query('locale', 'nl');
+    $limit = min((int) $request->query('limit', 3), 6);
+
+    return Project::query()
+        ->where('published', true)
+        ->with([
+            'service',
+            'city',
+            'images' => fn ($q) => $q->orderBy('sort_order'),
+        ])
+        ->latest()
+        ->take($limit)
+        ->get()
+        ->map(fn ($project) => formatProjectResponse($project, $locale));
+});
+
 Route::middleware('throttle:60,1')->get('/projects', function (Request $request) {
     $locale = $request->query('locale', 'nl');
     $serviceSlug = $request->query('dienst') ?? $request->query('service');

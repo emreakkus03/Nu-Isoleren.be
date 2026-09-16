@@ -52,6 +52,11 @@ export const routing = defineRouting({
       fr: '/politique-de-confidentialite',
       en: '/privacy-policy',
     },
+    '/about': {
+      nl: '/over-ons',
+      fr: '/a-propos',
+      en: '/about',
+    }
   }
 });
 

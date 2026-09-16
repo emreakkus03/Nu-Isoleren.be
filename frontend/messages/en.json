@@ -42,6 +42,10 @@
     "contact": {
       "title": "Contact | Nu-Isoleren",
       "description": "Contact Nu-Isoleren with questions about insulation, façade works and moisture treatment across Flanders and Wallonia."
+    },
+    "about": {
+      "title": "About us | Insulation & Façade Works | Nu-Isoleren",
+      "description": "Discover Nu-Isoleren, based in Hamme. We provide insulation, façade and moisture treatment services across Flanders and Wallonia."
     }
   },
 
@@ -305,6 +309,83 @@
       "responseTitle": "Response time",
       "response": "We aim to respond personally to every enquiry as quickly as possible."
     }
+  },
+
+  "AboutPage": {
+    "hero": {
+      "breadcrumb": "About us",
+      "badge": "ABOUT NU-ISOLEREN",
+      "title": "Craftsmanship for a more comfortable home",
+      "description": "Nu-Isoleren helps homeowners with insulation, façade works and moisture treatment. From Hamme, we carry out projects across Flanders and Wallonia.",
+      "descriptionSecondary": "We combine a personal approach with careful workmanship, clear communication and a clean finish for every home.",
+      "imageAlt": "Nu-Isoleren company vehicle"
+    },
+    "intro": {
+  "badge": "WHO WE ARE",
+  "title": "More than 10 years of experience in insulation and façade works",
+  "description": "Based in Hamme, Nu-Isoleren has been helping homeowners with insulation, façade works and moisture treatment for more than 10 years. We guide each project from the initial assessment through to completion, taking the home and its specific situation into account.",
+  "descriptionSecondary": "For cavity wall insulation, we work according to an ATG-certified system. We also place strong emphasis on clear communication, correct installation and a clean finish. This allows us to provide each customer with a technically sound solution tailored to their home.",
+  "items": {
+    "experience": {
+      "title": "More than 10 years of experience",
+      "description": "Extensive hands-on experience with insulation, façade and moisture treatment projects for existing homes."
+    },
+    "atg": {
+      "title": "ATG-certified",
+      "description": "For cavity wall insulation, we work according to an ATG-certified system and its technical requirements."
+    },
+    "personal": {
+      "title": "Personal approach",
+      "description": "Every home is assessed individually so the proposed solution matches the existing situation."
+    },
+    "finish": {
+      "title": "Correct and clean workmanship",
+      "description": "We focus on both the technical quality of the work and a clean, carefully finished result."
+    }
+  }
+},
+"approach": {
+  "badge": "OUR APPROACH",
+  "title": "From initial advice to a clean finish",
+  "description": "Good workmanship starts with proper preparation. We first assess the condition of your home, determine the right solution and then carry out the work carefully.",
+  "steps": {
+    "assessment": {
+      "title": "Advice & assessment",
+      "description": "We assess the home, the existing situation and the work required in order to determine a suitable solution."
+    },
+    "proposal": {
+      "title": "Clear proposal",
+      "description": "You receive a clear proposal outlining the chosen approach and the work that will be carried out."
+    },
+    "execution": {
+      "title": "Careful workmanship",
+      "description": "Our professionals carry out the work carefully with attention to quality, detail and a clean finish."
+    }
+  }
+},
+"materials": {
+  "badge": "MATERIALS & TECHNIQUES",
+  "title": "Solutions we can stand behind technically",
+  "description": "Good workmanship is not only about correct installation, but also about choosing suitable materials and techniques. We select each solution based on the home, the application and the technical requirements of the project.",
+"descriptionSecondary": "For cavity wall insulation, we use high-quality EPS beads from Isomo nv in Kortrijk-Heule, the Belgian market leader since the 1950s.",  "items": {
+    "materials": {
+      "title": "Proven materials",
+      "description": "We select materials based on their technical properties, intended application and suitability for the existing home."
+    },
+    "innovation": {
+      "title": "Continuing to develop",
+      "description": "We actively follow new techniques and developments in insulation, façade works and moisture treatment."
+    }
+  },
+  "cta": "View our services",
+  "imageAlt": "Materials and techniques used by Nu-Isoleren"
+},
+"projects": {
+  "badge": "OUR WORK",
+  "title": "Real projects. Real results.",
+  "description": "Discover some of our recent insulation, façade and moisture treatment projects.",
+  "cta": "View all projects"
+}
   },
 
 

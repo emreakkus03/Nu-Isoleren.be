@@ -42,6 +42,10 @@
     "contact": {
       "title": "Contact | Nu-Isoleren",
       "description": "Neem contact op met Nu-Isoleren voor vragen over isolatie, gevelwerken en vochtbestrijding in Vlaanderen en Wallonië."
+    },
+    "about": {
+      "title": "Over ons | Isolatie & gevelwerken | Nu-Isoleren",
+      "description": "Maak kennis met Nu-Isoleren uit Hamme. Wij voeren isolatie-, gevel- en vochtwerken uit voor woningen in Vlaanderen en Wallonië."
     }
   
 },
@@ -308,6 +312,83 @@
       "responseTitle": "Reactietijd",
       "response": "We proberen iedere aanvraag zo snel mogelijk persoonlijk te beantwoorden."
     }
+  },
+
+  "AboutPage": {
+    "hero": {
+      "breadcrumb": "Over ons",
+      "badge": "OVER NU-ISOLEREN",
+      "title": "Vakmanschap voor een comfortabelere woning",
+      "description": "Nu-Isoleren helpt eigenaars met oplossingen voor isolatie, gevelwerken en vochtbestrijding. Vanuit Hamme voeren we projecten uit in Vlaanderen en Wallonië.",
+      "descriptionSecondary": "We combineren een persoonlijke aanpak met aandacht voor een correcte uitvoering, duidelijke communicatie en een nette afwerking van iedere woning.",
+      "imageAlt": "Bedrijfswagen van Nu-Isoleren"
+    },
+    "intro": {
+  "badge": "WIE WE ZIJN",
+  "title": "Meer dan 10 jaar ervaring in isolatie en gevelwerken",
+  "description": "Nu-Isoleren is gevestigd in Hamme en helpt al meer dan 10 jaar eigenaars met isolatie, gevelwerken en vochtbestrijding. We begeleiden ieder project van de eerste beoordeling tot de uitvoering, met aandacht voor de woning en de specifieke situatie.",
+  "descriptionSecondary": "Voor spouwmuurisolatie werken we volgens een ATG-gecertificeerd systeem. Daarnaast hechten we veel belang aan duidelijke communicatie, een correcte uitvoering en een verzorgde afwerking. Zo krijgt iedere klant een oplossing die technisch doordacht en afgestemd is op de woning.",
+  "items": {
+    "experience": {
+      "title": "Meer dan 10 jaar ervaring",
+      "description": "Jarenlange praktijkervaring met isolatie-, gevel- en vochtwerken voor bestaande woningen."
+    },
+    "atg": {
+      "title": "ATG-gecertificeerd",
+      "description": "Voor spouwmuurisolatie werken we volgens een ATG-gecertificeerd systeem en de bijbehorende technische voorwaarden."
+    },
+    "personal": {
+      "title": "Persoonlijke aanpak",
+      "description": "Iedere woning wordt afzonderlijk bekeken zodat de voorgestelde oplossing past bij de bestaande situatie."
+    },
+    "finish": {
+      "title": "Correcte en nette uitvoering",
+      "description": "We besteden aandacht aan zowel de technische uitvoering als een verzorgde afwerking van de werken."
+    }
+  }
+},
+"approach": {
+  "badge": "ONZE AANPAK",
+  "title": "Van eerste advies tot nette afwerking",
+  "description": "Een goede uitvoering begint met de juiste voorbereiding. Daarom bekijken we eerst de situatie van uw woning, bespreken we welke oplossing geschikt is en voeren we de werken vervolgens zorgvuldig uit.",
+  "steps": {
+    "assessment": {
+      "title": "Advies & beoordeling",
+      "description": "We bekijken de woning, de bestaande situatie en de werken die nodig zijn om tot een passende oplossing te komen."
+    },
+    "proposal": {
+      "title": "Duidelijk voorstel",
+      "description": "U krijgt een helder voorstel met de gekozen aanpak en een duidelijk overzicht van de uit te voeren werken."
+    },
+    "execution": {
+      "title": "Zorgvuldige uitvoering",
+      "description": "Onze vakmensen voeren de werken zorgvuldig uit en besteden aandacht aan kwaliteit, detail en een nette afwerking."
+    }
+  }
+},
+"materials": {
+  "badge": "MATERIALEN & TECHNIEK",
+  "title": "Oplossingen waar we technisch achter staan",
+  "description": "Een goede uitvoering begint niet alleen bij vakmanschap, maar ook bij het gebruik van geschikte materialen en technieken. Daarom kiezen we oplossingen op basis van de woning, de toepassing en de technische vereisten van het project.",
+"descriptionSecondary": "Voor spouwmuurisolatie werken we met hoogwaardige EPS-parels van Isomo nv uit Kortrijk-Heule, de Belgische marktleider sinds de jaren '50.",  "items": {
+    "materials": {
+      "title": "Bewezen materialen",
+      "description": "We kiezen materialen op basis van hun technische eigenschappen, toepassing en geschiktheid voor de bestaande woning."
+    },
+    "innovation": {
+      "title": "Blijven ontwikkelen",
+      "description": "We volgen nieuwe technieken en ontwikkelingen binnen isolatie, gevelwerken en vochtbestrijding actief op."
+    }
+  },
+  "cta": "Bekijk onze diensten",
+  "imageAlt": "Materialen en technieken gebruikt door Nu-Isoleren"
+},
+"projects": {
+  "badge": "ONS WERK",
+  "title": "Echte projecten. Echte resultaten.",
+  "description": "Bekijk enkele van onze recente realisaties in isolatie, gevelwerken en vochtbestrijding.",
+  "cta": "Bekijk alle realisaties"
+}
   },
 
 
