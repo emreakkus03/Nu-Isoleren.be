@@ -11,7 +11,7 @@ export default function TopbarNav() {
   const pathname = usePathname();
 
   const links = [
-    { href: '/werkgebied', label: t('topbar.serviceAreas') },
+    { href: '/areas', label: t('topbar.serviceAreas') },
     { href: '/over-ons', label: t('topbar.aboutUs') },
     { href: '/premies', label: t('topbar.grants') },
     { href: '/faq', label: t('topbar.faq') },

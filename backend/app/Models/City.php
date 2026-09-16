@@ -7,8 +7,18 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class City extends Model
 {
-    protected $fillable = ['name', 'slug', 'province', 'region'];
+    protected $fillable = ['name',
+        'postal_code',
+        'slug',
+        'province',
+        'region',
+        'is_featured',];
 
+
+        protected $casts = [
+        'is_featured' => 'boolean',
+    ];
+    
     public function projects(): HasMany
     {
         return $this->hasMany(Project::class);

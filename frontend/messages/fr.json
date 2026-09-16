@@ -1,4 +1,22 @@
 {
+  "General": {
+    "company": {
+      "name": "Nu-Isoleren.be",
+      "email": "info@nu-isoleren.be",
+      "phone": "+32 (0) 800 63 63 5",
+      "phoneHref": "+3280063635",
+      "address": "Neerstraat 5, 9220 Hamme, Belgique",
+      "vat": "BE0726.774.181",
+      "serviceArea": "Flandre & Wallonie"
+    },
+    "contactPerson": {
+      "name": "An Reynders",
+      "image": "/images/team/an-reynders.jpg",
+      "title": "Discutons ensemble des possibilités",
+      "intro": "An se fera un plaisir de vous aider !",
+      "description": "Vous avez une question ou besoin d’informations supplémentaires ? N’hésitez pas à nous contacter."
+    }
+  },
   "Seo": {
     "home": {
       "title": "Nu-Isoleren | Isolation, travaux de façade & lutte contre l’humidité",
@@ -15,14 +33,24 @@
 "services": {
   "title": "Services | Isolation, façades & humidité | Nu-Isoleren",
   "description": "Découvrez les services de Nu-Isoleren : isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité en Flandre et en Wallonie."
-}
+},
+"areas": {
+  "title": "Zones d'intervention | Isolation, façades & humidité | Nu-Isoleren",
+  "description": "Nu-Isoleren est votre spécialiste agréé en isolation. Nous intervenons quotidiennement pour l'isolation des murs creux, toitures et sols dans les régions et communes suivantes."
+},
+
+    "contact": {
+      "title": "Contact | Nu-Isoleren",
+      "description": "Contactez Nu-Isoleren pour vos questions concernant l’isolation, les travaux de façade et le traitement de l’humidité en Flandre et en Wallonie."
+    }
   },
 
   "Breadcrumbs": {
     "home": "Accueil",
     "projects": "Réalisations",
     "faq": "Questions fréquentes",
-    "services": "Services"
+    "services": "Services",
+    "areas": "Zones d'intervention"
   },
   "Header": {
     "reviews": "Excellent",
@@ -192,5 +220,81 @@
 },
 
 
-"ServicesPage": { "eyebrow": "NOS SERVICES", "title": "Isolation, travaux de façade & traitement de l’humidité", "description": "De l’isolation des murs creux et de la toiture au crépi, au nettoyage de façade et au traitement de l’humidité. Découvrez nos solutions pour une habitation plus confortable, plus économe en énergie et mieux protégée." }
+"ServicesPage": { "eyebrow": "NOS SERVICES", "title": "Isolation, travaux de façade & traitement de l’humidité", "description": "De l’isolation des murs creux et de la toiture au crépi, au nettoyage de façade et au traitement de l’humidité. Découvrez nos solutions pour une habitation plus confortable, plus économe en énergie et mieux protégée." },
+"ServiceAreas": {
+    "badge": "Actif dans toute la Flandre et à Wallonie",
+    "title": "Nos Zones d'Intervention",
+    "intro": "Nu-Isoleren est votre spécialiste agréé en isolation. Nous intervenons quotidiennement pour l'isolation des murs creux, toitures et sols dans les régions suivantes.",
+    "cta_card": "Demander un devis en {province}",
+    "bottom_cta_title": "Votre commune ne figure pas dans la liste ?",
+    "bottom_cta_text": "Il est fort probable que nous soyons également actifs chez vous. Contactez-nous pour un conseil personnalisé sans engagement.",
+    "bottom_cta_button": "Contactez-nous",
+    "empty_state": "Aucune zone d'intervention disponible pour le moment."
+  },
+  "HomeAreas": {
+    "badge": "Où nous intervenons",
+    "title": "Actif en Flandre et en Wallonie",
+    "view_all": "Voir toutes les zones d'intervention"
+  },
+
+  "CityDetail": {
+    "badge": "Actif dans la région de {city} {province}",
+    "title": "Isolation et travaux de façade à {city}",
+    "intro": "Nu-Isoleren est votre spécialiste agréé à <bold>{city}</bold> et ses environs. Nous réalisons quotidiennement des travaux d'isolation et de rénovation de façade.",
+    "image_alt": "Nu-Isoleren travaux d'isolation à {city}",
+    "meta_title": "Isolation et travaux de façade à {city} | Nu-Isoleren",
+    "meta_description": "Nu-Isoleren réalise l'isolation des murs creux, toitures, crépi et traitement de façade à {city} et ses environs."
+  },
+
+
+"ContactPage": {
+    "hero": {
+      "breadcrumb": "Contact",
+      "badge": "CONTACT",
+      "title": "Comment pouvons-nous vous aider ?",
+      "description": "Vous avez une question sur l’isolation, les travaux de façade ou le traitement de l’humidité ? Contactez-nous. Nous vous conseillons volontiers de manière claire et sans engagement."
+    },
+   "form": {
+  "badge": "ENVOYEZ-NOUS UN MESSAGE",
+  "title": "Contactez-nous",
+  "description": "Remplissez le formulaire et expliquez-nous brièvement comment nous pouvons vous aider. Nous vous recontacterons dès que possible.",
+  "fields": {
+    "firstName": "Prénom *",
+    "lastName": "Nom *",
+    "email": "Adresse e-mail *",
+    "phone": "Numéro de téléphone *",
+    "message": "Votre message *"
+  },
+  "placeholders": {
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "nom@email.be",
+    "phone": "+32 ...",
+    "message": "Expliquez-nous brièvement votre question ou votre projet..."
+  },
+  "privacyPrefix": "J’ai lu la",
+  "privacyLink": "politique de confidentialité",
+  "submit": "Envoyer le message",
+  "submitting": "Envoi...",
+  "success": "Merci. Votre message a bien été reçu. Nous vous recontacterons dès que possible.",
+  "error": "Une erreur s’est produite lors de l’envoi. Veuillez réessayer ou nous contacter directement."
+},
+    "info": {
+      "badge": "CONTACT DIRECT",
+      "title": "Nous sommes à votre disposition",
+      "description": "Vous préférez nous contacter directement ? Vous pouvez également nous joindre par téléphone ou par e-mail.",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "serviceAreaTitle": "Zone d’intervention",
+      "responseTitle": "Délai de réponse",
+      "response": "Nous essayons de répondre personnellement à chaque demande dans les meilleurs délais."
+    }
+  },
+
+
+  "CtaBanner": {
+    "title": "Prêt à améliorer votre habitation ?",
+    "description": "Demandez un devis sans engagement et découvrez ce que nous pouvons faire pour votre maison.",
+    "button": "Discutez de votre projet"
+  }
 }

@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
 import Hero from '@/components/home/Hero';
@@ -7,6 +6,10 @@ import PriceCalculatorTeaser from '@/components/home/PriceCalculatorTeaser';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ProjectsSection from '@/components/home/ProjectsSection';
 import FaqHomeSection from '@/components/home/HomeFaqSection';
+import HomeServiceAreas from '@/components/home/HomeServiceAreas';
+import CtaBanner from '@/components/common/CtaBanner';
+
+import { getCities } from '@/lib/cities';
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const { locale } = await params;
@@ -19,8 +22,8 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-export default function HomePage() {
-  const t = useTranslations('Hero');
+export default async function HomePage() {
+  const { all: featuredCities } = await getCities(true);
 
   return (
     <main>
@@ -29,7 +32,9 @@ export default function HomePage() {
       <PriceCalculatorTeaser />
       <WhyChooseUs />
       <ProjectsSection />
+      <HomeServiceAreas cities={featuredCities} />
       <FaqHomeSection />
+      <CtaBanner />
     </main>
   );
 }

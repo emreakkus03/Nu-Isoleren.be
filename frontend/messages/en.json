@@ -1,4 +1,22 @@
 {
+  "General": {
+    "company": {
+      "name": "Nu-Isoleren.be",
+      "email": "info@nu-isoleren.be",
+      "phone": "+32 (0) 800 63 63 5",
+      "phoneHref": "+3280063635",
+      "address": "Neerstraat 5, 9220 Hamme, Belgium",
+      "vat": "BE0726.774.181",
+      "serviceArea": "Flanders & Wallonia"
+    },
+    "contactPerson": {
+      "name": "An Reynders",
+      "image": "/images/team/an-reynders.jpg",
+      "title": "Would you like to discuss the possibilities?",
+      "intro": "An will be happy to help you!",
+      "description": "Have a question or need more information? Feel free to get in touch with us."
+    }
+  },
     "Seo": {
     "home": {
       "title": "Nu-Isoleren | Insulation, façade works & moisture treatment",
@@ -15,14 +33,24 @@
 "services": {
   "title": "Services | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
   "description": "Discover Nu-Isoleren's services: cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
-}
+},
+"areas": {
+  "title": "Service Areas | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
+  "description": "Nu-Isoleren is your certified insulation specialist. We install cavity wall, roof, and floor insulation across the following regions and municipalities."
+},
+
+    "contact": {
+      "title": "Contact | Nu-Isoleren",
+      "description": "Contact Nu-Isoleren with questions about insulation, façade works and moisture treatment across Flanders and Wallonia."
+    }
   },
 
   "Breadcrumbs": {
     "home": "Home",
     "projects": "Projects",
     "faq": "FAQ",
-    "services": "Services"
+    "services": "Services",
+    "areas": "Service Areas"
   },
    "Header": {
     "reviews": "Excellent",
@@ -208,6 +236,83 @@
 
   "description": "From cavity wall and roof insulation to rendering, façade cleaning and damp treatment. Discover our solutions for a more comfortable, energy-efficient and better-protected home."
 
-}
+},
+"ServiceAreas": {
+    "badge": "Active throughout Flanders & Wallonia",
+    "title": "Our Service Areas",
+    "intro": "Nu-Isoleren is your certified insulation specialist. We install cavity wall, roof, and floor insulation across the following regions and municipalities.",
+    "cta_card": "Request quote in {province}",
+    "bottom_cta_title": "Don't see your municipality listed?",
+    "bottom_cta_text": "We most likely still operate in your area. Get in touch for non-binding advice.",
+    "bottom_cta_button": "Contact us",
+    "empty_state": "No service areas available yet."
+  },
+  "HomeAreas": {
+    "badge": "Where we operate",
+    "title": "Active in Flanders and Wallonia",
+    "view_all": "View all service areas"
+  },
+
+  "CityDetail": {
+    "badge": "Active in region {city} {province}",
+    "title": "Insulation and facade works in {city}",
+    "intro": "Nu-Isoleren is your certified insulation contractor in <bold>{city}</bold> and surrounding areas. We specialize in cavity wall insulation, roof insulation, and facade renovation.",
+    "image_alt": "Nu-Isoleren insulation works execution in {city}",
+    "meta_title": "Insulation and facade works in {city} | Nu-Isoleren",
+    "meta_description": "Nu-Isoleren carries out cavity wall insulation, roof insulation, render, and facade works in {city} and surrounding areas."
+  },
+
+
+"ContactPage": {
+    "hero": {
+      "breadcrumb": "Contact",
+      "badge": "CONTACT",
+      "title": "How can we help you?",
+      "description": "Do you have a question about insulation, façade works or moisture treatment? Get in touch with us. We are happy to provide clear, no-obligation advice."
+    },
+    "form": {
+  "badge": "SEND US A MESSAGE",
+  "title": "Get in touch",
+  "description": "Fill in the form and briefly tell us how we can help. We will get back to you as soon as possible.",
+  "fields": {
+    "firstName": "First name *",
+    "lastName": "Last name *",
+    "email": "Email address *",
+    "phone": "Phone number *",
+    "message": "Your message *"
+  },
+  "placeholders": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "name@email.com",
+    "phone": "+32 ...",
+    "message": "Tell us briefly about your question or project..."
+  },
+  "privacyPrefix": "I have read the",
+  "privacyLink": "privacy policy",
+  "submit": "Send message",
+  "submitting": "Sending...",
+  "success": "Thank you. Your message has been received. We will get back to you as soon as possible.",
+  "error": "Something went wrong while sending your message. Please try again or contact us directly."
+},
+    "info": {
+      "badge": "DIRECT CONTACT",
+      "title": "We are happy to help",
+      "description": "Prefer to contact us directly? You can also reach us by phone or email.",
+      "phone": "Phone",
+      "email": "Email",
+      "serviceAreaTitle": "Service area",
+      "responseTitle": "Response time",
+      "response": "We aim to respond personally to every enquiry as quickly as possible."
+    }
+  },
+
+
+
+  "CtaBanner": {
+    "title": "Ready to improve your home?",
+    "description": "Request a non-binding quote and discover what we can do for your home.",
+    "button": "Discuss your project"
+  }
 
 }

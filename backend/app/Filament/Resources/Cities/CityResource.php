@@ -6,10 +6,13 @@ use App\Filament\Resources\Cities\Pages;
 use App\Models\City;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
-use Filament\Resources\Resource;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
 
@@ -41,6 +44,11 @@ class CityResource extends Resource
 
             TextInput::make('region')
                 ->label('Regio'),
+
+            Toggle::make('is_featured')
+                ->label('Zichtbaar op homepage')
+                ->helperText('Schakel in om deze stad direct uit te lichten op de homepagina.')
+                ->default(false),
         ]);
     }
 
@@ -48,17 +56,22 @@ class CityResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->label('Stad')
                     ->sortable()
                     ->searchable(),
 
-                Tables\Columns\TextColumn::make('province')
-                    ->label('Provincie'),
+                TextColumn::make('province')
+                    ->label('Provincie')
+                    ->sortable(),
 
-                Tables\Columns\TextColumn::make('projects_count')
+                TextColumn::make('projects_count')
                     ->counts('projects')
                     ->label('Projecten'),
+
+                ToggleColumn::make('is_featured')
+                    ->label('Op Homepage')
+                    ->sortable(),
             ])
             ->actions([
                 EditAction::make(),

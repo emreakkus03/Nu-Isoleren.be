@@ -6,7 +6,13 @@ use App\Models\Service;
 use App\Models\Faq;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\ContactSubmissionController;
 use Illuminate\Support\Facades\Storage;
+
+Route::post(
+    '/contact-submissions',
+    [ContactSubmissionController::class, 'store']
+)->middleware('throttle:10,1');
 
 Route::middleware('throttle:60,1')->get('/featured-projects', function (Request $request) {
     $locale = $request->query('locale', 'nl');
@@ -255,6 +261,32 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (Request $r
         ],
     ]);
 });
+
+Route::get('/cities', function (Request $request) {
+    $query = City::query()->orderBy('name');
+
+    if ($request->boolean('featured')) {
+        $query->where('is_featured', true);
+    }
+
+    $cities = $query->get();
+
+    return response()->json([
+        'all' => $cities,
+        'grouped' => $cities->groupBy('province'),
+    ]);
+});
+
+Route::get('/cities/{slug}', function ($slug) {
+    $city = City::where('slug', $slug)
+        ->with(['projects' => function ($query) {
+            $query->latest()->take(6);
+        }])
+        ->firstOrFail();
+
+    return response()->json($city);
+});
+
 
 function formatProjectResponse(Project $project, string $locale): array
 {

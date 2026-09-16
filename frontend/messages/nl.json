@@ -1,4 +1,22 @@
 {
+  "General": {
+    "company": {
+      "name": "Nu-Isoleren.be",
+      "email": "info@nu-isoleren.be",
+      "phone": "+32 (0) 800 63 63 5",
+      "phoneHref": "+3280063635",
+      "address": "Neerstraat 5, 9220 Hamme, België",
+      "vat": "BE0726.774.181",
+      "serviceArea": "Vlaanderen & Wallonië"
+    },
+    "contactPerson": {
+      "name": "An Reynders",
+      "image": "/images/team/an-reynders.jpg",
+      "title": "Samen de mogelijkheden bespreken?",
+      "intro": "An helpt u graag verder!",
+      "description": "Vragen of extra informatie nodig? Neem dan gerust contact met ons op."
+    }
+  },
     "Seo": {
   "home": {
     "title": "Nu-Isoleren | Isolatie, gevelwerken & vochtbestrijding",
@@ -15,14 +33,25 @@
 "services": {
   "title": "Diensten | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
   "description": "Ontdek de diensten van Nu-Isoleren: spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding in Vlaanderen en Wallonië."
-}
+},
+"areas": {
+  "title": "Werkgebieden | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
+  "description": "Nu-Isoleren is uw erkende isolatiespecialist. Wij voeren dagelijks spouwmuurisolatie, dakisolatie en vloerisolatie uit in de onderstaande regio's en gemeenten."
+},
+
+    "contact": {
+      "title": "Contact | Nu-Isoleren",
+      "description": "Neem contact op met Nu-Isoleren voor vragen over isolatie, gevelwerken en vochtbestrijding in Vlaanderen en Wallonië."
+    }
+  
 },
 
 "Breadcrumbs": {
   "home": "Home",
   "projects": "Realisaties",
   "faq": "Veelgestelde Vragen",
-  "services": "Diensten"
+  "services": "Diensten",
+  "areas": "Werkgebieden"
   },
   "Header": {
     "reviews": "Uitstekend",
@@ -209,6 +238,83 @@
   "eyebrow": "ONZE DIENSTEN",
   "title": "Isolatie, gevelwerken & vochtbestrijding",
   "description": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging en vochtbestrijding. Ontdek onze oplossingen voor een comfortabelere, energiezuinigere en beter beschermde woning."
-}
+},
+"ServiceAreas": {
+    "badge": "Actief in heel Vlaanderen & Wallonië",
+    "title": "Onze Werkgebieden",
+    "intro": "Nu-Isoleren is uw erkende isolatiespecialist. Wij voeren dagelijks spouwmuurisolatie, dakisolatie en vloerisolatie uit in de onderstaande regio's en gemeenten.",
+    "cta_card": "Offerte in {province} aanvragen",
+    "bottom_cta_title": "Staat uw gemeente er niet tussen?",
+    "bottom_cta_text": "Grote kans dat we ook bij u actief zijn. Neem vrijblijvend contact op voor advies op maat.",
+    "bottom_cta_button": "Contacteer ons",
+    "empty_state": "Nog geen werkgebieden beschikbaar."
+  },
+  "HomeAreas": {
+    "badge": "Waar wij werken",
+    "title": "Actief in Vlaanderen en Wallonië",
+    "view_all": "Bekijk alle werkgebieden"
+  },
+
+  "CityDetail": {
+    "badge": "Actief in regio {city} {province}",
+    "title": "Isolatie en gevelwerken in {city}",
+    "intro": "Nu-Isoleren is uw erkende isolatiespecialist in <bold>{city}</bold> en omgeving. Wij voeren dagelijks spouwmuurisolatie, dakisolatie, crepi en gevelwerken uit met oog voor detail en maximale energiebesparing.",
+    "image_alt": "Nu-Isoleren isolatiewerken uitvoering in {city}",
+    "meta_title": "Isolatie en gevelwerken in {city} | Nu-Isoleren",
+    "meta_description": "Nu-Isoleren voert spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding uit in {city} en omgeving."
+  },
+
+
+
+  "ContactPage": {
+    "hero": {
+      "breadcrumb": "Contact",
+      "badge": "CONTACT",
+      "title": "Hoe kunnen we u helpen?",
+      "description": "Heeft u een vraag over isolatie, gevelwerken of vochtbestrijding? Neem contact met ons op. We helpen u graag verder met duidelijk en vrijblijvend advies."
+    },
+    "form": {
+  "badge": "STUUR ONS EEN BERICHT",
+  "title": "Neem contact met ons op",
+  "description": "Vul het formulier in en vertel ons kort waarmee we u kunnen helpen. We nemen zo snel mogelijk contact met u op.",
+  "fields": {
+    "firstName": "Voornaam *",
+    "lastName": "Achternaam *",
+    "email": "E-mailadres *",
+    "phone": "Telefoonnummer *",
+    "message": "Uw bericht *"
+  },
+  "placeholders": {
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "naam@email.be",
+    "phone": "+32 ...",
+    "message": "Vertel ons kort over uw vraag of project..."
+  },
+  "privacyPrefix": "Ik heb het",
+  "privacyLink": "privacybeleid gelezen",
+  "submit": "Bericht versturen",
+  "submitting": "Versturen...",
+  "success": "Bedankt. Uw bericht is goed ontvangen. We nemen zo snel mogelijk contact met u op.",
+  "error": "Er ging iets mis bij het versturen. Probeer het opnieuw of neem rechtstreeks contact met ons op."
+},
+    "info": {
+      "badge": "RECHTSTREEKS CONTACT",
+      "title": "We helpen u graag verder",
+      "description": "Heeft u liever rechtstreeks contact? U kunt ons ook telefonisch of per e-mail bereiken.",
+      "phone": "Telefoon",
+      "email": "E-mail",
+      "serviceAreaTitle": "Werkgebied",
+      "responseTitle": "Reactietijd",
+      "response": "We proberen iedere aanvraag zo snel mogelijk persoonlijk te beantwoorden."
+    }
+  },
+
+
+  "CtaBanner": {
+    "title": "Klaar om uw woning te verbeteren?",
+    "description": "Vraag vrijblijvend een offerte aan en ontdek wat we voor uw woning kunnen betekenen.",
+    "button": "Bespreek uw project"
+  }
 
 }

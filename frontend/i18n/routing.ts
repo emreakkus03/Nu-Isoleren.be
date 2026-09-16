@@ -32,6 +32,26 @@ export const routing = defineRouting({
       fr: '/questions-frequentes',
       en: '/faq',
     },
+    '/areas': {
+      nl: '/werkgebieden',
+      fr: '/zones-intervention',
+      en: '/areas',
+    },
+    '/areas/[slug]': {
+      nl: '/werkgebieden/[slug]',
+      fr: '/zones-intervention/[slug]',
+      en: '/areas/[slug]',
+    },
+    '/contact': {
+      nl: '/contact',
+      fr: '/contact',
+      en: '/contact',
+    },
+    '/privacy-policy': {
+      nl: '/privacybeleid',
+      fr: '/politique-de-confidentialite',
+      en: '/privacy-policy',
+    },
   }
 });
 
