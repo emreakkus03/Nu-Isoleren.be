@@ -35,4 +35,27 @@ return [
         ],
     ],
 
+    'brevo' => [
+    'enabled' => env('BREVO_ENABLED', false),
+    'api_key' => env('BREVO_API_KEY'),
+
+    'sender' => [
+        'email' => env('BREVO_SENDER_EMAIL'),
+        'name' => env('BREVO_SENDER_NAME', 'Nu-Isoleren'),
+    ],
+
+    'admin' => [
+        'email' => env('BREVO_ADMIN_EMAIL'),
+        'name' => env('BREVO_ADMIN_NAME', 'Nu-Isoleren'),
+    ],
+],
+
+'filament_url' => env('FILAMENT_URL'),
+'crm' => [
+    'enabled' => env('CRM_ENABLED', false),
+    'webhook_url' => env('CRM_WEBHOOK_URL'),
+    'webhook_secret' => env('CRM_WEBHOOK_SECRET'),
+    'timeout' => (int) env('CRM_TIMEOUT', 10),
+],
+
 ];

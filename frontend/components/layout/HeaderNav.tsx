@@ -116,8 +116,8 @@ export default function HeaderNav({ services = [] }: HeaderNavProps) {
       </Link>
 
       <Link
-        href="/"
-        className={getLinkClasses('/pricing')}
+        href="/prices"
+        className={getLinkClasses('/prices')}
       >
         {t('mainbar.pricing')}
       </Link>

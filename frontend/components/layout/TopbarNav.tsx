@@ -13,7 +13,7 @@ export default function TopbarNav() {
   const links = [
     { href: '/areas', label: t('topbar.serviceAreas') },
     { href: '/about', label: t('topbar.aboutUs') },
-    { href: '/premies', label: t('topbar.grants') },
+    { href: '/grants', label: t('topbar.grants') },
     { href: '/faq', label: t('topbar.faq') },
     { href: '/contact', label: t('topbar.contact') },
   ];

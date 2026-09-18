@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import type { ComponentProps } from 'react';
 
 interface CtaBannerProps {
   title?: string;
@@ -32,7 +33,7 @@ export default function CtaBanner({
 
           <div className="shrink-0">
             <Link
-              href='/'
+              href={(buttonHref || t('buttonHref')) as ComponentProps<typeof Link>['href']}
               className="inline-flex items-center gap-2.5 bg-white hover:bg-slate-50 text-[#C82024] text-sm sm:text-base font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full transition shadow-sm hover:shadow-md active:scale-95 group"
             >
               <span>{buttonText || t('button')}</span>

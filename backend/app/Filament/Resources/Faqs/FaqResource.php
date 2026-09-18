@@ -103,6 +103,9 @@ class FaqResource extends Resource
                             'general' => 'Algemeen',
                             'grants' => 'Premies & Subsidies',
                             'pricing' => 'Prijzen & Offertes',
+                            'epc' => 'EPC / PEB',
+                            'energy_savings' => 'Energiebesparing',
+                            'home_check' => 'Woningcheck',
                         ])
                         ->default('general')
                         ->required(),
@@ -139,6 +142,9 @@ class FaqResource extends Resource
                     ->label('Categorie')
                     ->formatStateUsing(fn(string $state): string => match ($state) {
                         'general' => 'Algemeen',
+                        'home_check' => 'Woningcheck',
+                        'epc' => 'EPC / PEB',
+                        'energy_savings' => 'Energiebesparing',
                         'grants' => 'Premies',
                         'pricing' => 'Prijzen',
                         default => $state,

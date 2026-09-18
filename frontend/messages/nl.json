@@ -17,28 +17,27 @@
       "description": "Vragen of extra informatie nodig? Neem dan gerust contact met ons op."
     }
   },
-    "Seo": {
-  "home": {
-    "title": "Nu-Isoleren | Isolatie, gevelwerken & vochtbestrijding",
-    "description": "Spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding. Nu-Isoleren helpt u in Vlaanderen en Wallonië. Vraag vrijblijvend advies."
-  },
-  "projects": {
-     "title": "Onze Realisaties | Isolatie & gevelwerken | Nu-Isoleren",
-  "description": "Bekijk gerealiseerde projecten van Nu-Isoleren op het gebied van spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding in Vlaanderen en Wallonië."
-  },
- "faq": {
-  "title": "Veelgestelde vragen | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
-  "description": "Vind antwoorden over spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding. Nu-Isoleren helpt u in Vlaanderen en Wallonië."
-},
-"services": {
-  "title": "Diensten | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
-  "description": "Ontdek de diensten van Nu-Isoleren: spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding in Vlaanderen en Wallonië."
-},
-"areas": {
-  "title": "Werkgebieden | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
-  "description": "Nu-Isoleren is uw erkende isolatiespecialist. Wij voeren dagelijks spouwmuurisolatie, dakisolatie en vloerisolatie uit in de onderstaande regio's en gemeenten."
-},
-
+  "Seo": {
+    "home": {
+      "title": "Nu-Isoleren | Isolatie, gevelwerken & vochtbestrijding",
+      "description": "Spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding. Nu-Isoleren helpt u in Vlaanderen en Wallonië. Vraag vrijblijvend advies."
+    },
+    "projects": {
+      "title": "Onze Realisaties | Isolatie & gevelwerken | Nu-Isoleren",
+      "description": "Bekijk gerealiseerde projecten van Nu-Isoleren op het gebied van spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding in Vlaanderen en Wallonië."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
+      "description": "Vind antwoorden over spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding. Nu-Isoleren helpt u in Vlaanderen en Wallonië."
+    },
+    "services": {
+      "title": "Diensten | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
+      "description": "Ontdek de diensten van Nu-Isoleren: spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding in Vlaanderen en Wallonië."
+    },
+    "areas": {
+      "title": "Werkgebieden | Isolatie, gevelwerken & vochtbestrijding | Nu-Isoleren",
+      "description": "Nu-Isoleren is uw erkende isolatiespecialist. Wij voeren dagelijks spouwmuurisolatie, dakisolatie en vloerisolatie uit in de onderstaande regio's en gemeenten."
+    },
     "contact": {
       "title": "Contact | Nu-Isoleren",
       "description": "Neem contact op met Nu-Isoleren voor vragen over isolatie, gevelwerken en vochtbestrijding in Vlaanderen en Wallonië."
@@ -46,16 +45,22 @@
     "about": {
       "title": "Over ons | Isolatie & gevelwerken | Nu-Isoleren",
       "description": "Maak kennis met Nu-Isoleren uit Hamme. Wij voeren isolatie-, gevel- en vochtwerken uit voor woningen in Vlaanderen en Wallonië."
+    },
+    "prices": {
+      "title": "Isolatieprijzen & berekeningen | Nu-Isoleren",
+      "description": "Bekijk richtprijzen voor isolatie, gevelwerken en vochtbestrijding. Bereken uw prijs, energiebesparing en EPC-waarde en ontdek welke werken bij uw woning passen."
+    },
+    "epcCalculator": {
+      "title": "EPC waarde berekenen | Gratis EPC calculator | Nu-Isoleren",
+      "description": "Bereken een indicatieve EPC-waarde van uw woning. Beantwoord enkele vragen over isolatie, ramen en verwarming en krijg direct een eerste EPC-inschatting."
     }
-  
-},
-
-"Breadcrumbs": {
-  "home": "Home",
-  "projects": "Realisaties",
-  "faq": "Veelgestelde Vragen",
-  "services": "Diensten",
-  "areas": "Werkgebieden"
+  },
+  "Breadcrumbs": {
+    "home": "Home",
+    "projects": "Realisaties",
+    "faq": "Veelgestelde Vragen",
+    "services": "Diensten",
+    "areas": "Werkgebieden"
   },
   "Header": {
     "reviews": "Uitstekend",
@@ -68,7 +73,7 @@
       "language": "Taal:"
     },
     "mainbar": {
-        "home": "Home",
+      "home": "Home",
       "services": "Diensten",
       "projects": "Realisaties",
       "pricing": "Prijzen",
@@ -172,18 +177,10 @@
     "title": "Echte werken. Zichtbare resultaten.",
     "cta": "Bekijk alle realisaties"
   },
-
-
-
-
-
-
-
-
   "ProjectsPage": {
-   "badge": "ONZE REALISATIES",
-  "title": "Echte projecten. Zichtbare resultaten.",
-  "description": "Bekijk onze gerealiseerde projecten op het gebied van spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding.",
+    "badge": "ONZE REALISATIES",
+    "title": "Echte projecten. Zichtbare resultaten.",
+    "description": "Bekijk onze gerealiseerde projecten op het gebied van spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding.",
     "noProjects": "Geen projecten gevonden voor deze selectie.",
     "filtersTitle": "Filters",
     "projectsCount": "{count} realisaties",
@@ -197,7 +194,7 @@
     "noCitiesFound": "Geen gemeenten gevonden"
   },
   "ProjectDetailPage": {
-   "backLink": "Terug naar alle realisaties",
+    "backLink": "Terug naar alle realisaties",
     "serviceLabel": "Dienst",
     "locationLabel": "Locatie",
     "galleryTitle": "Foto's van de werken",
@@ -206,44 +203,34 @@
     "ctaDescription": "Vraag een gratis en vrijblijvende offerte aan voor uw project. Onze specialist komt bij u langs voor advies op maat.",
     "ctaButton": "Vraag een gratis offerte aan"
   },
-
-
-
-
-
-
-
-
   "FaqPage": {
-  "title": "Veelgestelde vragen over isolatie en gevelwerken",
-  "subtitle": "Vind snel duidelijke antwoorden over onze diensten, werkwijze, materialen en premies.",
-  "searchPlaceholder": "Zoek naar een vraag of onderwerp (bv. premie, spouwmuur, garantie)...",
-  "filterAll": "Alle vragen",
-  "filterGeneral": "Algemeen & Premies",
-  "noResults": "Geen vragen gevonden voor uw zoekopdracht.",
-  "cta": {
-    "title": "Staat uw vraag er niet tussen?",
-    "description": "Onze experts helpen u graag verder met gratis en vrijblijvend advies voor uw woning.",
-    "quoteButton": "Gratis offerte aanvragen",
-    "phoneButton": "Direct bellen"
-  }
-},
-"HomePage": {
-  "faq": {
-    "badge": "Veelgestelde Vragen",
-    "title": "Nog vragen? Wij hebben het antwoord.",
-    "notListed": "Staat je vraag er niet bij?",
-    "viewAll": "Bekijk alle vragen"
-  }
-},
-
-
-"ServicesPage": {
-  "eyebrow": "ONZE DIENSTEN",
-  "title": "Isolatie, gevelwerken & vochtbestrijding",
-  "description": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging en vochtbestrijding. Ontdek onze oplossingen voor een comfortabelere, energiezuinigere en beter beschermde woning."
-},
-"ServiceAreas": {
+    "title": "Veelgestelde vragen over isolatie en gevelwerken",
+    "subtitle": "Vind snel duidelijke antwoorden over onze diensten, werkwijze, materialen en premies.",
+    "searchPlaceholder": "Zoek naar een vraag of onderwerp (bv. premie, spouwmuur, garantie)...",
+    "filterAll": "Alle vragen",
+    "filterGeneral": "Algemeen & Premies",
+    "noResults": "Geen vragen gevonden voor uw zoekopdracht.",
+    "cta": {
+      "title": "Staat uw vraag er niet tussen?",
+      "description": "Onze experts helpen u graag verder met gratis en vrijblijvend advies voor uw woning.",
+      "quoteButton": "Gratis offerte aanvragen",
+      "phoneButton": "Direct bellen"
+    }
+  },
+  "HomePage": {
+    "faq": {
+      "badge": "Veelgestelde Vragen",
+      "title": "Nog vragen? Wij hebben het antwoord.",
+      "notListed": "Staat je vraag er niet bij?",
+      "viewAll": "Bekijk alle vragen"
+    }
+  },
+  "ServicesPage": {
+    "eyebrow": "ONZE DIENSTEN",
+    "title": "Isolatie, gevelwerken & vochtbestrijding",
+    "description": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging en vochtbestrijding. Ontdek onze oplossingen voor een comfortabelere, energiezuinigere en beter beschermde woning."
+  },
+  "ServiceAreas": {
     "badge": "Actief in heel Vlaanderen & Wallonië",
     "title": "Onze Werkgebieden",
     "intro": "Nu-Isoleren is uw erkende isolatiespecialist. Wij voeren dagelijks spouwmuurisolatie, dakisolatie en vloerisolatie uit in de onderstaande regio's en gemeenten.",
@@ -258,7 +245,6 @@
     "title": "Actief in Vlaanderen en Wallonië",
     "view_all": "Bekijk alle werkgebieden"
   },
-
   "CityDetail": {
     "badge": "Actief in regio {city} {province}",
     "title": "Isolatie en gevelwerken in {city}",
@@ -267,9 +253,6 @@
     "meta_title": "Isolatie en gevelwerken in {city} | Nu-Isoleren",
     "meta_description": "Nu-Isoleren voert spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding uit in {city} en omgeving."
   },
-
-
-
   "ContactPage": {
     "hero": {
       "breadcrumb": "Contact",
@@ -278,30 +261,30 @@
       "description": "Heeft u een vraag over isolatie, gevelwerken of vochtbestrijding? Neem contact met ons op. We helpen u graag verder met duidelijk en vrijblijvend advies."
     },
     "form": {
-  "badge": "STUUR ONS EEN BERICHT",
-  "title": "Neem contact met ons op",
-  "description": "Vul het formulier in en vertel ons kort waarmee we u kunnen helpen. We nemen zo snel mogelijk contact met u op.",
-  "fields": {
-    "firstName": "Voornaam *",
-    "lastName": "Achternaam *",
-    "email": "E-mailadres *",
-    "phone": "Telefoonnummer *",
-    "message": "Uw bericht *"
-  },
-  "placeholders": {
-    "firstName": "Voornaam",
-    "lastName": "Achternaam",
-    "email": "naam@email.be",
-    "phone": "+32 ...",
-    "message": "Vertel ons kort over uw vraag of project..."
-  },
-  "privacyPrefix": "Ik heb het",
-  "privacyLink": "privacybeleid gelezen",
-  "submit": "Bericht versturen",
-  "submitting": "Versturen...",
-  "success": "Bedankt. Uw bericht is goed ontvangen. We nemen zo snel mogelijk contact met u op.",
-  "error": "Er ging iets mis bij het versturen. Probeer het opnieuw of neem rechtstreeks contact met ons op."
-},
+      "badge": "STUUR ONS EEN BERICHT",
+      "title": "Neem contact met ons op",
+      "description": "Vul het formulier in en vertel ons kort waarmee we u kunnen helpen. We nemen zo snel mogelijk contact met u op.",
+      "fields": {
+        "firstName": "Voornaam *",
+        "lastName": "Achternaam *",
+        "email": "E-mailadres *",
+        "phone": "Telefoonnummer *",
+        "message": "Uw bericht *"
+      },
+      "placeholders": {
+        "firstName": "Voornaam",
+        "lastName": "Achternaam",
+        "email": "naam@email.be",
+        "phone": "+32 ...",
+        "message": "Vertel ons kort over uw vraag of project..."
+      },
+      "privacyPrefix": "Ik heb het",
+      "privacyLink": "privacybeleid gelezen",
+      "submit": "Bericht versturen",
+      "submitting": "Versturen...",
+      "success": "Bedankt. Uw bericht is goed ontvangen. We nemen zo snel mogelijk contact met u op.",
+      "error": "Er ging iets mis bij het versturen. Probeer het opnieuw of neem rechtstreeks contact met ons op."
+    },
     "info": {
       "badge": "RECHTSTREEKS CONTACT",
       "title": "We helpen u graag verder",
@@ -313,7 +296,6 @@
       "response": "We proberen iedere aanvraag zo snel mogelijk persoonlijk te beantwoorden."
     }
   },
-
   "AboutPage": {
     "hero": {
       "breadcrumb": "Over ons",
@@ -324,78 +306,1564 @@
       "imageAlt": "Bedrijfswagen van Nu-Isoleren"
     },
     "intro": {
-  "badge": "WIE WE ZIJN",
-  "title": "Meer dan 10 jaar ervaring in isolatie en gevelwerken",
-  "description": "Nu-Isoleren is gevestigd in Hamme en helpt al meer dan 10 jaar eigenaars met isolatie, gevelwerken en vochtbestrijding. We begeleiden ieder project van de eerste beoordeling tot de uitvoering, met aandacht voor de woning en de specifieke situatie.",
-  "descriptionSecondary": "Voor spouwmuurisolatie werken we volgens een ATG-gecertificeerd systeem. Daarnaast hechten we veel belang aan duidelijke communicatie, een correcte uitvoering en een verzorgde afwerking. Zo krijgt iedere klant een oplossing die technisch doordacht en afgestemd is op de woning.",
-  "items": {
-    "experience": {
-      "title": "Meer dan 10 jaar ervaring",
-      "description": "Jarenlange praktijkervaring met isolatie-, gevel- en vochtwerken voor bestaande woningen."
+      "badge": "WIE WE ZIJN",
+      "title": "Meer dan 10 jaar ervaring in isolatie en gevelwerken",
+      "description": "Nu-Isoleren is gevestigd in Hamme en helpt al meer dan 10 jaar eigenaars met isolatie, gevelwerken en vochtbestrijding. We begeleiden ieder project van de eerste beoordeling tot de uitvoering, met aandacht voor de woning en de specifieke situatie.",
+      "descriptionSecondary": "Voor spouwmuurisolatie werken we volgens een ATG-gecertificeerd systeem. Daarnaast hechten we veel belang aan duidelijke communicatie, een correcte uitvoering en een verzorgde afwerking. Zo krijgt iedere klant een oplossing die technisch doordacht en afgestemd is op de woning.",
+      "items": {
+        "experience": {
+          "title": "Meer dan 10 jaar ervaring",
+          "description": "Jarenlange praktijkervaring met isolatie-, gevel- en vochtwerken voor bestaande woningen."
+        },
+        "atg": {
+          "title": "ATG-gecertificeerd",
+          "description": "Voor spouwmuurisolatie werken we volgens een ATG-gecertificeerd systeem en de bijbehorende technische voorwaarden."
+        },
+        "personal": {
+          "title": "Persoonlijke aanpak",
+          "description": "Iedere woning wordt afzonderlijk bekeken zodat de voorgestelde oplossing past bij de bestaande situatie."
+        },
+        "finish": {
+          "title": "Correcte en nette uitvoering",
+          "description": "We besteden aandacht aan zowel de technische uitvoering als een verzorgde afwerking van de werken."
+        }
+      }
     },
-    "atg": {
-      "title": "ATG-gecertificeerd",
-      "description": "Voor spouwmuurisolatie werken we volgens een ATG-gecertificeerd systeem en de bijbehorende technische voorwaarden."
+    "approach": {
+      "badge": "ONZE AANPAK",
+      "title": "Van eerste advies tot nette afwerking",
+      "description": "Een goede uitvoering begint met de juiste voorbereiding. Daarom bekijken we eerst de situatie van uw woning, bespreken we welke oplossing geschikt is en voeren we de werken vervolgens zorgvuldig uit.",
+      "steps": {
+        "assessment": {
+          "title": "Advies & beoordeling",
+          "description": "We bekijken de woning, de bestaande situatie en de werken die nodig zijn om tot een passende oplossing te komen."
+        },
+        "proposal": {
+          "title": "Duidelijk voorstel",
+          "description": "U krijgt een helder voorstel met de gekozen aanpak en een duidelijk overzicht van de uit te voeren werken."
+        },
+        "execution": {
+          "title": "Zorgvuldige uitvoering",
+          "description": "Onze vakmensen voeren de werken zorgvuldig uit en besteden aandacht aan kwaliteit, detail en een nette afwerking."
+        }
+      }
     },
-    "personal": {
-      "title": "Persoonlijke aanpak",
-      "description": "Iedere woning wordt afzonderlijk bekeken zodat de voorgestelde oplossing past bij de bestaande situatie."
-    },
-    "finish": {
-      "title": "Correcte en nette uitvoering",
-      "description": "We besteden aandacht aan zowel de technische uitvoering als een verzorgde afwerking van de werken."
-    }
-  }
-},
-"approach": {
-  "badge": "ONZE AANPAK",
-  "title": "Van eerste advies tot nette afwerking",
-  "description": "Een goede uitvoering begint met de juiste voorbereiding. Daarom bekijken we eerst de situatie van uw woning, bespreken we welke oplossing geschikt is en voeren we de werken vervolgens zorgvuldig uit.",
-  "steps": {
-    "assessment": {
-      "title": "Advies & beoordeling",
-      "description": "We bekijken de woning, de bestaande situatie en de werken die nodig zijn om tot een passende oplossing te komen."
-    },
-    "proposal": {
-      "title": "Duidelijk voorstel",
-      "description": "U krijgt een helder voorstel met de gekozen aanpak en een duidelijk overzicht van de uit te voeren werken."
-    },
-    "execution": {
-      "title": "Zorgvuldige uitvoering",
-      "description": "Onze vakmensen voeren de werken zorgvuldig uit en besteden aandacht aan kwaliteit, detail en een nette afwerking."
-    }
-  }
-},
-"materials": {
-  "badge": "MATERIALEN & TECHNIEK",
-  "title": "Oplossingen waar we technisch achter staan",
-  "description": "Een goede uitvoering begint niet alleen bij vakmanschap, maar ook bij het gebruik van geschikte materialen en technieken. Daarom kiezen we oplossingen op basis van de woning, de toepassing en de technische vereisten van het project.",
-"descriptionSecondary": "Voor spouwmuurisolatie werken we met hoogwaardige EPS-parels van Isomo nv uit Kortrijk-Heule, de Belgische marktleider sinds de jaren '50.",  "items": {
     "materials": {
-      "title": "Bewezen materialen",
-      "description": "We kiezen materialen op basis van hun technische eigenschappen, toepassing en geschiktheid voor de bestaande woning."
+      "badge": "MATERIALEN & TECHNIEK",
+      "title": "Oplossingen waar we technisch achter staan",
+      "description": "Een goede uitvoering begint niet alleen bij vakmanschap, maar ook bij het gebruik van geschikte materialen en technieken. Daarom kiezen we oplossingen op basis van de woning, de toepassing en de technische vereisten van het project.",
+      "descriptionSecondary": "Voor spouwmuurisolatie werken we met hoogwaardige EPS-parels van Isomo nv uit Kortrijk-Heule, de Belgische marktleider sinds de jaren '50.",
+      "items": {
+        "materials": {
+          "title": "Bewezen materialen",
+          "description": "We kiezen materialen op basis van hun technische eigenschappen, toepassing en geschiktheid voor de bestaande woning."
+        },
+        "innovation": {
+          "title": "Blijven ontwikkelen",
+          "description": "We volgen nieuwe technieken en ontwikkelingen binnen isolatie, gevelwerken en vochtbestrijding actief op."
+        }
+      },
+      "cta": "Bekijk onze diensten",
+      "imageAlt": "Materialen en technieken gebruikt door Nu-Isoleren"
     },
-    "innovation": {
-      "title": "Blijven ontwikkelen",
-      "description": "We volgen nieuwe technieken en ontwikkelingen binnen isolatie, gevelwerken en vochtbestrijding actief op."
+    "projects": {
+      "badge": "ONS WERK",
+      "title": "Echte projecten. Echte resultaten.",
+      "description": "Bekijk enkele van onze recente realisaties in isolatie, gevelwerken en vochtbestrijding.",
+      "cta": "Bekijk alle realisaties"
     }
   },
-  "cta": "Bekijk onze diensten",
-  "imageAlt": "Materialen en technieken gebruikt door Nu-Isoleren"
-},
-"projects": {
-  "badge": "ONS WERK",
-  "title": "Echte projecten. Echte resultaten.",
-  "description": "Bekijk enkele van onze recente realisaties in isolatie, gevelwerken en vochtbestrijding.",
-  "cta": "Bekijk alle realisaties"
+  "PricesPage": {
+    "hero": {
+      "breadcrumb": "Prijzen",
+      "badge": "PRIJZEN & BEREKENINGEN",
+      "title": "Prijzen voor isolatie, gevelwerken en vochtbestrijding",
+      "description": "De prijs van uw project hangt af van de woning, de oppervlakte, het materiaal en de gekozen uitvoering. Ontdek welke factoren de prijs bepalen en krijg met onze berekeningen een eerste indicatie voor uw woning.",
+      "cta": "Bekijk onze berekeningen"
+    },
+    "tools": {
+      "badge": "BEREKEN & CONTROLEER",
+      "title": "Krijg snel inzicht in uw woning",
+      "description": "Gebruik onze gratis berekeningen voor een eerste inschatting van de kosten, energiebesparing, EPC-waarde of geschikte werken voor uw woning.",
+      "price": {
+        "title": "Bereken uw prijs",
+        "description": "Kies de werken die u wilt laten uitvoeren en krijg een eerste indicatieve prijs voor uw woning.",
+        "cta": "Prijs berekenen"
+      },
+      "savings": {
+        "title": "Bereken uw energiebesparing",
+        "description": "Ontdek hoeveel energie u mogelijk kunt besparen door uw woning beter te isoleren.",
+        "cta": "Besparing berekenen"
+      },
+      "epc": {
+        "title": "Schat uw EPC-waarde",
+        "description": "Beantwoord enkele vragen over uw woning en krijg een indicatieve inschatting van uw EPC-waarde.",
+        "cta": "EPC-waarde schatten"
+      },
+      "homeCheck": {
+        "title": "Doe de woningcheck",
+        "description": "Weet u niet welke werken uw woning nodig heeft? Ontdek welke oplossingen bij uw situatie passen.",
+        "cta": "Start de woningcheck"
+      }
+    },
+    "servicePrices": {
+      "badge": "PRIJS PER DIENST",
+      "title": "Wat kosten onze werkzaamheden?",
+      "description": "Bekijk de richtprijzen per dienst. De uiteindelijke prijs hangt af van onder andere de oppervlakte, de toestand van de woning, de gekozen uitvoering en de bereikbaarheid.",
+      "calculate": "Bereken uw prijs",
+      "service": "Bekijk dienst",
+      "disclaimer": "De vermelde prijzen zijn indicatieve richtprijzen. Voor een exacte prijs bekijken we steeds de specifieke situatie van uw woning.",
+      "cavityWall": {
+        "title": "Spouwmuurisolatie",
+        "price": "€21 – €25 per m²",
+        "description": "De prijs wordt onder andere bepaald door de oppervlakte, de breedte en toestand van de spouw en de bereikbaarheid van de gevel."
+      },
+      "roof": {
+        "title": "Dakisolatie",
+        "price": "€X – €X",
+        "description": "De prijs hangt af van het type dak, de oppervlakte, het gekozen isolatiemateriaal en de manier waarop de isolatie wordt geplaatst."
+      },
+      "crepi": {
+        "title": "Crepi",
+        "price": "€X – €X",
+        "description": "De prijs wordt beïnvloed door de oppervlakte van de gevel, de ondergrond, de gewenste afwerking en eventuele gevelisolatie."
+      },
+      "facadeCleaning": {
+        "title": "Gevelreiniging",
+        "price": "€X – €X",
+        "description": "De kostprijs hangt af van de oppervlakte, de vervuiling, het gevelmateriaal en de geschikte reinigingsmethode."
+      },
+      "hydrofuge": {
+        "title": "Hydrofuge",
+        "price": "€X – €X",
+        "description": "De prijs hangt voornamelijk af van de geveloppervlakte, de toestand van de gevel en de voorbereiding die vooraf nodig is."
+      },
+      "cavityRemoval": {
+        "title": "Spouwmuurisolatie verwijderen",
+        "price": "€X – €X",
+        "description": "De prijs wordt bepaald door de hoeveelheid bestaande isolatie, de bereikbaarheid van de spouw en de toestand van de gevel."
+      },
+      "risingDamp": {
+        "title": "Opstijgend vocht behandelen",
+        "price": "€X – €X",
+        "description": "De kostprijs hangt af van de omvang van het vochtprobleem, de lengte en dikte van de muren en de gekozen behandeling."
+      }
+    },
+    "methodology": {
+      "badge": "TRANSPARANTE RICHTPRIJZEN",
+      "title": "Hoe komen onze richtprijzen tot stand?",
+      "description": "De prijzen op deze pagina zijn bedoeld als realistische eerste indicatie. We baseren ze op onze gebruikelijke prijsranges voor de verschillende werkzaamheden, maar iedere woning en ieder project is anders.",
+      "items": {
+        "ranges": {
+          "title": "Richtprijzen per dienst",
+          "description": "Waar mogelijk tonen we een duidelijke prijsrange per vierkante meter of per type werkzaamheden."
+        },
+        "project": {
+          "title": "Afgestemd op de situatie",
+          "description": "De uiteindelijke prijs wordt bepaald door de technische situatie, de omvang van de werken en de gekozen uitvoering."
+        },
+        "quote": {
+          "title": "Exacte prijs via offerte",
+          "description": "Voor een definitieve prijs bekijken we uw project afzonderlijk en ontvangt u een offerte op maat."
+        }
+      }
+    },
+    "examples": {
+      "badge": "PRIJSVOORBEELDEN",
+      "title": "Wat kost een gemiddeld project?",
+      "description": "Bekijk enkele eenvoudige voorbeelden op basis van onze richtprijzen. Zo krijgt u snel een idee van de mogelijke kost voor uw woning.",
+      "cavityWall": {
+        "title": "Spouwmuurisolatie",
+        "example": "Voorbeeld: 100 m²",
+        "price": "€2.100 – €2.500"
+      },
+      "roof": {
+        "title": "Dakisolatie",
+        "example": "Voorbeeld: 80 m²",
+        "price": "€X – €X"
+      },
+      "crepi": {
+        "title": "Crepi",
+        "example": "Voorbeeld: 100 m²",
+        "price": "€X – €X"
+      },
+      "facadeCleaning": {
+        "title": "Gevelreiniging",
+        "example": "Voorbeeld: 100 m²",
+        "price": "€X – €X"
+      },
+      "hydrofuge": {
+        "title": "Hydrofuge",
+        "example": "Voorbeeld: 100 m²",
+        "price": "€X – €X"
+      },
+      "cavityRemoval": {
+        "title": "Spouwmuurisolatie verwijderen",
+        "example": "Voorbeeld: 100 m²",
+        "price": "€X – €X"
+      },
+      "risingDamp": {
+        "title": "Opstijgend vocht behandelen",
+        "example": "Voorbeeld: 10 lopende meter",
+        "price": "€X – €X"
+      },
+      "cta": "Bereken uw prijs",
+      "disclaimer": "Indicatieve voorbeelden. De exacte prijs hangt af van uw woning en project."
+    },
+    "grants": {
+      "badge": "PREMIES & KOSTPRIJS",
+      "title": "Premies kunnen uw uiteindelijke investering verlagen",
+      "description": "Voor bepaalde isolatiewerken kunt u mogelijk gebruikmaken van premies of financiële ondersteuning. Welke voorwaarden gelden, hangt onder andere af van het type werkzaamheden, uw woning en de geldende regelgeving.",
+      "descriptionSecondary": "Bekijk daarom niet alleen de uitvoeringsprijs, maar ook welke premies voor uw project van toepassing kunnen zijn.",
+      "cta": "Bekijk alle premies"
+    },
+    "faq": {
+      "badge": "VEELGESTELDE VRAGEN",
+      "title": "Veelgestelde vragen over prijzen en berekeningen",
+      "description": "Vind antwoorden op veelgestelde vragen over isolatieprijzen, offertes, EPC-berekeningen en de kosten van uw project."
+    }
+  },
+  "EpcPage": {
+    "hero": {
+      "pricesBreadcrumb": "Prijzen",
+      "breadcrumb": "EPC-waarde berekenen",
+      "badge": "EPC-CALCULATOR",
+      "title": "Bereken de EPC-waarde van uw woning",
+      "description": "Beantwoord enkele vragen over uw woning, isolatie, ramen en verwarming en krijg een eerste inschatting van de energieprestatie van uw woning.",
+      "disclaimer": "De berekening is indicatief en vervangt geen officieel EPC-attest.",
+      "cta": "Start de EPC-berekening"
+    },
+    "calculator": {
+      "badge": "EPC-BEREKENING",
+      "title": "Schat de energieprestatie van uw woning",
+      "description": "Beantwoord enkele vragen over uw woning en installaties. Op basis daarvan maken we een indicatieve inschatting van de energieprestatie.",
+      "progress": "Stap {current} van {total}",
+      "previous": "Vorige",
+      "next": "Volgende",
+      "calculate": "Bereken mijn EPC",
+      "calculating": "EPC wordt berekend...",
+      "error": "De berekening kon niet worden uitgevoerd. Probeer het opnieuw.",
+      "comingSoon": "Deze stap bouwen we hierna.",
+      "disclaimer": "Deze calculator geeft een indicatieve inschatting en vervangt geen officieel EPC- of PEB-certificaat.",
+      "building": {
+        "badge": "UW WONING",
+        "title": "Vertel ons eerst iets over uw woning",
+        "description": "Deze basisgegevens helpen ons om de juiste regionale methode en uitgangspunten voor de berekening te bepalen.",
+        "region": {
+          "question": "Waar ligt uw woning?",
+          "options": {
+            "flanders": "Vlaanderen",
+            "brussels": "Brussel",
+            "wallonia": "Wallonië"
+          }
+        },
+        "type": {
+          "question": "Welk type woning heeft u?",
+          "options": {
+            "detached": "Vrijstaande woning",
+            "semi_detached": "Halfopen bebouwing",
+            "terraced": "Gesloten bebouwing / rijwoning",
+            "apartment": "Appartement"
+          }
+        },
+        "constructionYear": {
+          "label": "Wat is het bouwjaar?",
+          "placeholder": "Bijv. 1985",
+          "help": "Geef het oorspronkelijke bouwjaar van de woning in."
+        },
+        "floorArea": {
+          "label": "Verwarmde vloeroppervlakte",
+          "placeholder": "Bijv. 145",
+          "help": "Geef een zo goed mogelijke schatting van de verwarmde vloeroppervlakte."
+        }
+      },
+      "roof": {
+        "badge": "DAK & ZOLDER",
+        "title": "Hoe is uw dak geïsoleerd?",
+        "description": "Het dak of de zoldervloer vormt een belangrijk deel van de thermische schil van uw woning.",
+        "type": {
+          "question": "Welk type dak bevindt zich boven uw woning?",
+          "apartmentHelp": "Woont u in een appartement met een andere verwarmde woning boven u? Kies dan ‘Geen rechtstreeks dak’.",
+          "options": {
+            "pitched": "Hellend dak",
+            "flat": "Plat dak",
+            "mixed": "Combinatie van hellend en plat dak",
+            "no_direct_roof": "Geen rechtstreeks dak"
+          }
+        },
+        "insulationLocation": {
+          "question": "Waar bevindt de isolatie zich?",
+          "help": "Bij een onverwarmde zolder kan de isolatie bijvoorbeeld in de zoldervloer zitten in plaats van in het dak.",
+          "options": {
+            "roof": "In het dak",
+            "attic_floor": "In de zoldervloer",
+            "both": "In het dak én de zoldervloer",
+            "none": "Geen isolatie",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "material": {
+          "question": "Welk isolatiemateriaal is voornamelijk gebruikt?",
+          "options": {
+            "mineral_wool": "Glaswol of rotswol",
+            "pir_pur": "PIR of PUR",
+            "eps_xps": "EPS of XPS",
+            "cellulose_wood_fibre": "Cellulose of houtvezel",
+            "other": "Ander materiaal",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "thickness": {
+          "label": "Hoe dik is de isolatielaag?",
+          "placeholder": "Bijv. 16",
+          "help": "Een schatting is voldoende. Weet u de dikte niet, kies dan bij het materiaal ‘Ik weet het niet’."
+        }
+      },
+      "walls": {
+        "badge": "BUITENMUREN",
+        "title": "Hoe zijn uw buitenmuren geïsoleerd?",
+        "description": "De isolatie van buitenmuren heeft een belangrijke invloed op het warmteverlies en de energieprestatie van uw woning.",
+        "type": {
+          "question": "Hoe zijn uw buitenmuren geïsoleerd?",
+          "options": {
+            "cavity": "Spouwmuurisolatie",
+            "external": "Isolatie langs buiten",
+            "internal": "Isolatie langs binnen",
+            "mixed": "Combinatie van verschillende systemen",
+            "none": "Geen muurisolatie",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "material": {
+          "question": "Welk isolatiemateriaal is voornamelijk gebruikt?",
+          "options": {
+            "mineral_wool": "Glaswol of rotswol",
+            "pir_pur": "PIR of PUR",
+            "eps_xps": "EPS of XPS",
+            "cellulose_wood_fibre": "Cellulose of houtvezel",
+            "other": "Ander materiaal",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "thickness": {
+          "label": "Hoe dik is de isolatielaag?",
+          "placeholder": "Bijv. 8"
+        }
+      },
+      "floor": {
+        "badge": "VLOER",
+        "title": "Hoe is de vloer van uw woning opgebouwd?",
+        "description": "Ook via de vloer kan warmte verloren gaan. Daarom kijken we naar wat zich onder de verwarmde ruimtes bevindt en of de vloer geïsoleerd is.",
+        "boundary": {
+          "question": "Wat bevindt zich onder de verwarmde vloer?",
+          "options": {
+            "ground": "Volle grond",
+            "basement": "Kelder",
+            "crawl_space": "Kruipruimte",
+            "outside": "Buitenlucht",
+            "heated_space": "Andere verwarmde ruimte",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "insulated": {
+          "question": "Is de vloer geïsoleerd?"
+        },
+        "answers": {
+          "yes": "Ja",
+          "no": "Nee",
+          "unknown": "Ik weet het niet"
+        },
+        "material": {
+          "question": "Welk isolatiemateriaal is gebruikt?",
+          "options": {
+            "mineral_wool": "Glaswol of rotswol",
+            "pir_pur": "PIR of PUR",
+            "eps_xps": "EPS of XPS",
+            "cellulose_wood_fibre": "Cellulose of houtvezel",
+            "other": "Ander materiaal",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "thickness": {
+          "label": "Hoe dik is de isolatielaag?"
+        }
+      },
+      "windows": {
+        "badge": "RAMEN",
+        "title": "Welke ramen heeft uw woning?",
+        "description": "Het type beglazing en raamprofiel beïnvloeden hoeveel warmte via de ramen verloren gaat.",
+        "glazing": {
+          "question": "Welk type beglazing heeft uw woning voornamelijk?",
+          "options": {
+            "single": "Enkel glas",
+            "double": "Gewoon dubbel glas",
+            "high_efficiency_double": "Hoogrendementsglas",
+            "triple": "Driedubbel glas",
+            "mixed": "Verschillende soorten beglazing",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "frame": {
+          "question": "Welk type raamprofielen heeft uw woning voornamelijk?",
+          "options": {
+            "wood": "Hout",
+            "pvc": "PVC",
+            "aluminium": "Aluminium",
+            "mixed": "Verschillende materialen",
+            "unknown": "Ik weet het niet"
+          }
+        }
+      },
+      "heating": {
+        "badge": "VERWARMING & WARM WATER",
+        "title": "Hoe wordt uw woning verwarmd?",
+        "source": {
+          "question": "Waarmee wordt uw woning voornamelijk verwarmd?",
+          "options": {
+            "gas": "Aardgas",
+            "oil": "Stookolie",
+            "heat_pump": "Warmtepomp",
+            "electric": "Elektriciteit",
+            "wood_pellets": "Hout of pellets",
+            "district": "Warmtenet",
+            "other": "Andere energiebron",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "system": {
+          "question": "Welk verwarmingssysteem heeft u?",
+          "options": {
+            "condensing_boiler": "Condensatieketel",
+            "non_condensing_boiler": "Niet-condenserende ketel",
+            "heat_pump_air_water": "Lucht-waterwarmtepomp",
+            "heat_pump_ground_water": "Geothermische warmtepomp",
+            "heat_pump_air_air": "Lucht-luchtwarmtepomp",
+            "electric_resistance": "Directe elektrische verwarming",
+            "stove": "Kachel",
+            "district": "Warmtenet",
+            "other": "Ander systeem",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "year": {
+          "label": "Wanneer werd de verwarmingsinstallatie geplaatst?",
+          "placeholder": "Bijv. 2018",
+          "help": "Laat dit leeg als u het installatiejaar niet weet."
+        },
+        "hotWater": {
+          "question": "Hoe wordt uw sanitair warm water geproduceerd?",
+          "options": {
+            "same_as_heating": "Via dezelfde installatie als de verwarming",
+            "electric_boiler": "Elektrische boiler",
+            "heat_pump_boiler": "Warmtepompboiler",
+            "gas_water_heater": "Gasboiler of doorstromer",
+            "solar_supported": "Met ondersteuning van een zonneboiler",
+            "other": "Ander systeem",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "cooling": {
+          "question": "Heeft uw woning actieve koeling?",
+          "options": {
+            "none": "Geen actieve koeling",
+            "air_conditioning": "Airconditioning",
+            "heat_pump": "Koeling via warmtepomp",
+            "other": "Ander systeem",
+            "unknown": "Ik weet het niet"
+          }
+        }
+      },
+      "ventilation": {
+        "badge": "VENTILATIE",
+        "title": "Hoe wordt uw woning geventileerd?",
+        "description": "Ventilatie heeft invloed op de energieprestatie en zorgt tegelijk voor voldoende verse lucht in de woning.",
+        "naturalOpenings": {
+          "question": "Zijn er ventilatieroosters of andere permanente toevoeropeningen aanwezig?"
+        },
+        "mechanicalExtraction": {
+          "question": "Wordt lucht mechanisch afgevoerd, bijvoorbeeld in badkamer, toilet of keuken?"
+        },
+        "mechanicalSupply": {
+          "question": "Wordt verse lucht mechanisch toegevoerd naar leef- of slaapkamers?"
+        },
+        "heatRecovery": {
+          "question": "Heeft het ventilatiesysteem warmteterugwinning?"
+        },
+        "answers": {
+          "yes": "Ja",
+          "no": "Nee",
+          "unknown": "Ik weet het niet"
+        }
+      },
+      "renewable": {
+        "badge": "HERNIEUWBARE ENERGIE",
+        "title": "Maakt uw woning gebruik van hernieuwbare energie?",
+        "description": "Zonnepanelen en zonne-energie kunnen de berekende energieprestatie van uw woning beïnvloeden.",
+        "solarPanels": {
+          "question": "Heeft uw woning zonnepanelen?"
+        },
+        "solarPower": {
+          "label": "Wat is het totale vermogen van de zonnepanelen?",
+          "placeholder": "Bijv. 4.2",
+          "help": "U vindt het totale piekvermogen meestal op de offerte of technische fiche van uw installatie."
+        },
+        "solarThermal": {
+          "question": "Heeft uw woning een zonneboiler?"
+        },
+        "answers": {
+          "yes": "Ja",
+          "no": "Nee",
+          "unknown": "Ik weet het niet"
+        }
+      },
+      "result": {
+        "badge": "UW RESULTAAT",
+        "title": "Geschatte energieprestatie",
+        "description": "Op basis van de ingevulde woningkenmerken krijgt u onderstaande indicatieve inschatting.",
+        "score": "Geschatte energiescore",
+        "label": "Geschat energielabel",
+        "range": "Verwachte bandbreedte",
+        "warning": "Dit resultaat is een indicatieve schatting en geen officieel EPC- of PEB-certificaat. Een officiële energiescore kan alleen worden vastgesteld volgens de bevoegde regionale certificatiemethode.",
+        "again": "Opnieuw berekenen"
+      }
+    },
+    "explanation": {
+      "badge": "ENERGIEPRESTATIE",
+      "title": "Wat betekent uw EPC- of PEB-score?",
+      "description": "De energiescore geeft aan hoe energiezuinig een woning presteert onder gestandaardiseerde omstandigheden. De score wordt uitgedrukt in kilowattuur primaire energie per vierkante meter per jaar, oftewel kWh/(m² jaar).",
+      "secondary": "Hoe lager de energiescore, hoe energiezuiniger de woning. De berekening houdt onder meer rekening met de isolatie van dak, muren en vloer, ramen, verwarming, sanitair warm water, ventilatie en hernieuwbare energie.",
+      "score": {
+        "badge": "ENERGIESCORE",
+        "title": "Een lagere score betekent een betere energieprestatie",
+        "description": "De score drukt de berekende jaarlijkse energieprestatie uit per vierkante meter van de woning. Een woning met een lagere score heeft doorgaans minder primaire energie nodig om onder dezelfde standaardomstandigheden te functioneren."
+      },
+      "label": {
+        "badge": "ENERGIELABEL",
+        "title": "Het label maakt de energiescore eenvoudiger leesbaar",
+        "description": "De numerieke energiescore wordt gekoppeld aan een energielabel. Vlaanderen, Brussel en Wallonië gebruiken elk hun eigen labelschaal en grenswaarden."
+      },
+      "usage": {
+        "badge": "THEORETISCHE BEREKENING",
+        "title": "Uw EPC- of PEB-score is niet hetzelfde als uw energiefactuur",
+        "description": "Een energieprestatiecertificaat gebruikt vaste uitgangspunten zodat woningen onderling kunnen worden vergeleken. Uw werkelijke energieverbruik kan hoger of lager liggen door bijvoorbeeld verwarmingsgedrag, bezetting en persoonlijke gewoonten."
+      }
+    },
+    "labels": {
+      "badge": "EPC- & PEB-LABELS",
+      "title": "Welke energiescore hoort bij welk label?",
+      "description": "De grenswaarden van energielabels verschillen per gewest. Bekijk hieronder hoe een EPC- of PEB-score wordt ingedeeld in Vlaanderen, Brussel en Wallonië.",
+      "energyLabel": "Energielabel",
+      "regions": {
+        "flanders": "Vlaanderen",
+        "brussels": "Brussel",
+        "wallonia": "Wallonië"
+      },
+      "content": {
+        "flanders": {
+          "title": "EPC-labels in Vlaanderen",
+          "description": "In Vlaanderen loopt het EPC-label voor woningen van A+ tot F. Een lagere energiescore betekent een energiezuinigere woning.",
+          "note": "De weergegeven grenswaarden volgen de Vlaamse EPC-labelschaal voor residentiële gebouweenheden. Alleen een officieel EPC kan het definitieve label van een woning vaststellen."
+        },
+        "brussels": {
+          "title": "PEB-labels in Brussel",
+          "description": "In het Brussels Hoofdstedelijk Gewest loopt de huidige PEB-schaal voor woningen van A tot G.",
+          "note": "Brussel gebruikt een eigen PEB-methodiek en eigen grenswaarden. Een Vlaamse EPC-score kan daarom niet rechtstreeks als Brussels PEB-label worden geïnterpreteerd."
+        },
+        "wallonia": {
+          "title": "PEB-labels in Wallonië",
+          "description": "Wallonië gebruikt voor woningen een PEB-schaal van A++ tot G, op basis van de specifieke theoretische primaire energieconsumptie.",
+          "note": "Wallonië gebruikt een eigen PEB-berekeningsmethode en labelschaal. Alleen een officieel PEB-certificaat bepaalt het definitieve label."
+        }
+      }
+    },
+    "improvements": {
+      "badge": "EPC VERBETEREN",
+      "title": "Hoe kunt u uw EPC-waarde verbeteren?",
+      "description": "Een betere energieprestatie begint meestal bij het beperken van warmteverlies. Isolatie van het dak en de buitenmuren kan daarom een belangrijke rol spelen bij het verbeteren van de energiescore van een woning.",
+      "cavity": {
+        "title": "Spouwmuurisolatie",
+        "description": "Heeft uw woning een geschikte ongeïsoleerde spouwmuur, dan kan spouwmuurisolatie het warmteverlies via de buitenmuren beperken. De aanwezige muurisolatie wordt meegenomen bij de bepaling van de energieprestatie.",
+        "link": "Bekijk spouwmuurisolatie"
+      },
+      "roof": {
+        "title": "Dakisolatie",
+        "description": "Via een onvoldoende geïsoleerd dak kan veel warmte verloren gaan. Afhankelijk van de woning kan het dak zelf of de zoldervloer worden geïsoleerd om de thermische schil te verbeteren.",
+        "link": "Bekijk dakisolatie"
+      },
+      "facade": {
+        "title": "Gevelisolatie met crepi",
+        "description": "Wanneer spouwmuurisolatie niet mogelijk of onvoldoende is, kan isolatie langs de buitenzijde van de gevel een oplossing zijn. De isolatielaag wordt daarbij gecombineerd met een nieuwe gevelafwerking.",
+        "link": "Bekijk crepi met isolatie"
+      },
+      "other": {
+        "title": "Ook andere onderdelen beïnvloeden uw energiescore",
+        "description": "Naast isolatiewerken houdt een energieprestatieberekening ook rekening met ramen en deuren, verwarmingsinstallaties, sanitair warm water, ventilatie en hernieuwbare energie.",
+        "windows": {
+          "title": "Ramen & beglazing",
+          "description": "Hoogrendements- of driedubbele beglazing kan het warmteverlies via ramen beperken, vooral wanneer nog enkel of oud dubbel glas aanwezig is."
+        },
+        "heating": {
+          "title": "Verwarming",
+          "description": "Het rendement en type verwarmingssysteem hebben invloed op het berekende energiegebruik van de woning."
+        },
+        "solar": {
+          "title": "Zonne-energie",
+          "description": "Zonnepanelen en zonneboilers kunnen bijdragen aan de energieprestatie doordat een deel van de benodigde energie hernieuwbaar wordt opgewekt."
+        }
+      },
+      "note": "Welke maatregel de grootste invloed heeft, verschilt per woning. Een officiële EPC- of PEB-berekening en de bijbehorende aanbevelingen geven meer detail over de specifieke situatie van een woning."
+    },
+    "indicative": {
+      "badge": "INDICATIEVE BEREKENING",
+      "title": "Waarom is deze EPC- of PEB-berekening een schatting?",
+      "description": "Onze calculator geeft een eerste inschatting van de energieprestatie op basis van de woninggegevens die u zelf invult. Een officiële EPC- of PEB-berekening gebruikt meer technische gegevens en wordt uitgevoerd volgens de methode van het bevoegde gewest.",
+      "data": {
+        "title": "Uw ingevoerde woninggegevens",
+        "description": "De berekening gebruikt onder meer het woningtype, bouwjaar, oppervlakte, isolatie, beglazing, verwarming, ventilatie en hernieuwbare energie."
+      },
+      "assumptions": {
+        "title": "Ontbrekende informatie wordt geschat",
+        "description": "Wanneer bepaalde technische gegevens niet bekend zijn, moet de calculator met aannames werken. Daardoor kan de werkelijke energiescore afwijken van de berekende waarde."
+      },
+      "official": {
+        "title": "Een officieel attest vereist een officiële beoordeling",
+        "description": "Alleen een officieel EPC- of PEB-certificaat dat volgens de regionale certificatiemethode wordt opgesteld, bepaalt de definitieve energiescore en het officiële energielabel."
+      },
+      "notice": {
+        "title": "Belangrijk:",
+        "description": "gebruik het resultaat als eerste indicatie van de energieprestatie van uw woning, niet als officieel EPC- of PEB-attest."
+      }
+    },
+    "faq": {
+      "badge": "VEELGESTELDE VRAGEN",
+      "title": "Veelgestelde vragen over EPC en PEB",
+      "description": "Vind antwoorden over EPC-waarden, energielabels, onze calculator en het verbeteren van de energieprestatie van uw woning."
+    }
+  },
+  "EnergySavingsPage": {
+    "metadata": {
+      "title": "Energiebesparing berekenen met isolatie | Nu-Isoleren",
+      "description": "Bereken hoeveel energie u mogelijk kunt besparen met dakisolatie, spouwmuurisolatie of gevelisolatie. Ontvang gratis een indicatieve inschatting voor uw woning."
+    },
+    "hero": {
+      "pricesBreadcrumb": "Prijzen",
+      "breadcrumb": "Energiebesparing berekenen",
+      "badge": "ENERGIEBESPARING BEREKENEN",
+      "title": "Hoeveel kunt u besparen met isolatie?",
+      "description": "Bereken gratis hoeveel energie u mogelijk kunt besparen door uw woning beter te isoleren. Vul enkele gegevens over uw woning en huidige isolatie in en ontvang een indicatieve inschatting van uw jaarlijkse energiebesparing.",
+      "cta": "Bereken mijn besparing",
+      "disclaimer": "De berekening is indicatief. De werkelijke besparing hangt af van uw woning, energieverbruik en verwarmingsgedrag."
+    },
+    "calculator": {
+      "badge": "BESPARINGSCALCULATOR",
+      "title": "Bereken uw mogelijke energiebesparing",
+      "description": "Beantwoord enkele vragen over uw woning, huidige isolatie en verwarmingssituatie. U krijgt daarna een indicatieve inschatting van hoeveel verwarmingsenergie u met isolatie kunt besparen.",
+      "calculating": "Besparing wordt berekend...",
+      "error": "De energiebesparing kon niet worden berekend. Probeer het opnieuw.",
+      "result": {
+        "badge": "UW RESULTAAT",
+        "title": "Uw geschatte energiebesparing",
+        "description": "Op basis van uw woning, huidige isolatie, verwarmingssituatie en gekozen isolatiemaatregel krijgt u onderstaande indicatieve inschatting.",
+        "energy": "Geschatte energiebesparing",
+        "percentage": "Geschatte besparing",
+        "heatingEnergy": "van uw jaarlijkse verwarmingsenergie",
+        "range": "Verwachte bandbreedte",
+        "rangeDescription": "De werkelijke besparing kan afwijken afhankelijk van uw woning, de uitvoering van de isolatiewerken en uw verwarmingsgedrag.",
+        "cost": "Geschatte financiële besparing",
+        "year": "jaar",
+        "perYear": "per jaar",
+        "warning": "Deze berekening is indicatief en is geen energieaudit of garantie op uw toekomstige energieverbruik of energiefactuur. De werkelijke besparing hangt onder meer af van de bestaande constructie, de uitvoering van de isolatiewerken, het weer, de binnentemperatuur en uw verwarmingsgedrag.",
+        "again": "Opnieuw berekenen"
+      },
+      "progress": "Stap {current} van {total}",
+      "previous": "Vorige",
+      "next": "Volgende",
+      "calculate": "Bereken mijn besparing",
+      "disclaimer": "Deze calculator geeft een indicatieve inschatting. Werkelijke besparingen hangen onder meer af van de woning, uitvoering, binnentemperatuur en het verwarmingsgedrag.",
+      "building": {
+        "badge": "STAP 1",
+        "title": "Vertel ons iets over uw woning",
+        "description": "Met enkele basisgegevens kunnen we de grootte en warmtebehoefte van de woning beter inschatten.",
+        "region": {
+          "question": "In welk gewest ligt de woning?",
+          "options": {
+            "flanders": "Vlaanderen",
+            "brussels": "Brussel",
+            "wallonia": "Wallonië"
+          }
+        },
+        "type": {
+          "question": "Welk type woning heeft u?",
+          "options": {
+            "detached": "Vrijstaande woning",
+            "semi_detached": "Halfopen bebouwing",
+            "terraced": "Rijwoning",
+            "apartment": "Appartement"
+          }
+        },
+        "year": {
+          "label": "Bouwjaar",
+          "placeholder": "Bijv. 1975"
+        },
+        "area": {
+          "label": "Verwarmde vloeroppervlakte",
+          "placeholder": "Bijv. 140"
+        }
+      },
+      "insulation": {
+        "badge": "STAP 2",
+        "title": "Hoe is uw woning momenteel geïsoleerd?",
+        "description": "De bestaande isolatie bepaalt hoeveel extra warmteverlies met nieuwe isolatiewerken kan worden beperkt.",
+        "roof": {
+          "question": "Hoe is het dak momenteel geïsoleerd?",
+          "options": {
+            "none": "Niet geïsoleerd",
+            "limited": "Beperkt of oude isolatie",
+            "insulated": "Goed geïsoleerd",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "walls": {
+          "question": "Hoe zijn de buitenmuren momenteel geïsoleerd?",
+          "options": {
+            "none": "Niet geïsoleerd",
+            "limited": "Beperkt of oude isolatie",
+            "insulated": "Goed geïsoleerd",
+            "unknown": "Ik weet het niet"
+          }
+        }
+      },
+      "measure": {
+        "badge": "STAP 3",
+        "title": "Welke isolatiewerken wilt u berekenen?",
+        "description": "Selecteer de isolatiemaatregel waarvoor u een indicatie van de mogelijke energiebesparing wilt ontvangen.",
+        "type": {
+          "question": "Welke maatregel wilt u uitvoeren?",
+          "options": {
+            "cavity_wall": "Spouwmuurisolatie",
+            "roof": "Dakisolatie",
+            "external_wall": "Gevelisolatie"
+          }
+        },
+        "surface": {
+          "label": "Geschatte te isoleren oppervlakte",
+          "placeholder": "Bijv. 90",
+          "help": "Een schatting is voldoende. Voor muren gaat het om de buitengeveloppervlakte en voor dakisolatie om het te isoleren dak- of zolderoppervlak."
+        }
+      },
+      "heating": {
+        "badge": "STAP 4",
+        "title": "Hoe verwarmt u de woning?",
+        "description": "Uw verwarmingssysteem en huidige energiegebruik helpen om de potentiële besparing beter in te schatten.",
+        "source": {
+          "question": "Wat is de belangrijkste verwarmingsbron?",
+          "options": {
+            "gas": "Aardgas",
+            "oil": "Stookolie",
+            "electric": "Elektrische verwarming",
+            "heat_pump": "Warmtepomp",
+            "wood_pellets": "Hout of pellets",
+            "other": "Andere"
+          }
+        },
+        "consumption": {
+          "label": "Jaarlijks energieverbruik",
+          "placeholder": "Bijv. 18000"
+        },
+        "cost": {
+          "label": "Jaarlijkse verwarmingskost (optioneel)",
+          "placeholder": "Bijv. 1800"
+        },
+        "help": "Vul uw jaarlijkse energieverbruik in kWh in. U vindt dit meestal op uw jaarafrekening. Als u ook uw jaarlijkse verwarmingskost invult, kunnen we daarnaast een indicatieve financiële besparing tonen."
+      }
+    },
+    "explanation": {
+      "badge": "HOE WERKT DE BEREKENING?",
+      "title": "Hoe berekenen we uw mogelijke energiebesparing?",
+      "description": "Een woning verliest warmte via onder andere het dak en de buitenmuren. Door een slecht of beperkt geïsoleerd bouwdeel beter te isoleren, kan dat warmteverlies verminderen. Onze calculator schat hoeveel verschil de gekozen isolatiemaatregel in uw situatie kan maken.",
+      "steps": {
+        "current": {
+          "title": "Huidige situatie",
+          "description": "We schatten eerst het huidige warmteverlies op basis van onder andere het bouwjaar, de bestaande isolatie en de oppervlakte van het bouwdeel."
+        },
+        "improved": {
+          "title": "Situatie na isolatie",
+          "description": "Daarna schatten we hoeveel het warmteverlies kan dalen wanneer het gekozen bouwdeel beter wordt geïsoleerd."
+        },
+        "result": {
+          "title": "Uw geschatte besparing",
+          "description": "Het verschil vertalen we naar een indicatieve energiebesparing in kWh, een percentage en, indien ingevuld, een geschatte financiële besparing."
+        }
+      },
+      "factors": {
+        "title": "Welke gegevens gebruiken we?",
+        "description": "De berekening houdt rekening met verschillende gegevens die invloed hebben op het mogelijke effect van isolatie.",
+        "items": {
+          "building": "Type woning",
+          "year": "Bouwjaar",
+          "insulation": "Huidige isolatie",
+          "surface": "Te isoleren oppervlakte",
+          "heating": "Verwarmingsbron",
+          "consumption": "Jaarlijks energieverbruik"
+        }
+      },
+      "notice": "De berekening blijft een indicatieve inschatting. De exacte energiebesparing kan verschillen door onder andere de werkelijke constructie van de woning, de kwaliteit van de uitvoering, het weer, de binnentemperatuur en het verwarmingsgedrag."
+    },
+    "measures": {
+      "badge": "ISOLATIEMAATREGELEN",
+      "title": "Met welke isolatie kunt u energie besparen?",
+      "description": "Niet elke isolatiemaatregel heeft in iedere woning hetzelfde effect. De mogelijke besparing hangt vooral af van hoeveel warmte het bouwdeel vandaag verliest en hoe goed het al geïsoleerd is.",
+      "suitableLabel": "Vooral interessant wanneer",
+      "items": {
+        "cavity": {
+          "title": "Spouwmuurisolatie",
+          "description": "Bij spouwmuurisolatie wordt de ruimte tussen de binnen- en buitenmuur gevuld met isolatiemateriaal. Hierdoor kan het warmteverlies via de buitenmuren aanzienlijk worden beperkt zonder de volledige gevel te vernieuwen.",
+          "suitable": "De woning een geschikte, lege of onvoldoende geïsoleerde spouwmuur heeft."
+        },
+        "roof": {
+          "title": "Dakisolatie",
+          "description": "Warmte stijgt op en een slecht geïsoleerd dak kan daardoor een belangrijke bron van warmteverlies zijn. Dak- of zoldervloerisolatie helpt om meer warmte binnen de verwarmde woning te houden.",
+          "suitable": "Het dak niet, beperkt of met verouderde isolatie is geïsoleerd."
+        },
+        "facade": {
+          "title": "Gevelisolatie",
+          "description": "Bij gevelisolatie wordt aan de buitenzijde van de woning een isolerende laag aangebracht. Dit kan het warmteverlies via buitenmuren sterk verminderen en tegelijk de buitengevel vernieuwen.",
+          "suitable": "Spouwmuurisolatie niet mogelijk of onvoldoende is, of wanneer de gevel toch wordt gerenoveerd."
+        }
+      },
+      "cta": {
+        "title": "Welke isolatiemethode past bij uw woning?",
+        "description": "Bekijk onze isolatie- en geveloplossingen en ontdek welke mogelijkheden er zijn voor uw woning.",
+        "button": "Bekijk onze diensten"
+      }
+    },
+    "factors": {
+      "badge": "UW WERKELIJKE BESPARING",
+      "title": "Waarvan hangt uw werkelijke energiebesparing af?",
+      "description": "De uitkomst van de calculator is een inschatting. Twee woningen met dezelfde oppervlakte kunnen in de praktijk toch een andere energiebesparing realiseren. Dat komt doordat verschillende technische en menselijke factoren een rol spelen.",
+      "important": {
+        "title": "Een berekening blijft een indicatie",
+        "description": "De calculator vergelijkt een geschatte huidige situatie met een verbeterde situatie na isolatie. Voor een exacte beoordeling van uw woning zijn onder meer de werkelijke constructie, isolatiedikte en staat van het gebouw nodig."
+      },
+      "items": {
+        "existingInsulation": {
+          "title": "Bestaande isolatie",
+          "description": "Hoe slechter een dak of buitenmuur vandaag geïsoleerd is, hoe groter de potentiële vermindering van warmteverlies doorgaans kan zijn."
+        },
+        "construction": {
+          "title": "Bouwjaar en constructie",
+          "description": "De opbouw van muren, dak en andere bouwdelen beïnvloedt hoeveel warmte de woning verliest en hoeveel verbetering met extra isolatie mogelijk is."
+        },
+        "surface": {
+          "title": "Te isoleren oppervlakte",
+          "description": "De grootte van het dak of de buitenmuren die worden geïsoleerd heeft rechtstreeks invloed op de hoeveelheid warmteverlies die kan worden verminderd."
+        },
+        "heating": {
+          "title": "Verwarmingssysteem",
+          "description": "Het type verwarming en het rendement van het systeem beïnvloeden hoeveel aangekochte energie nodig is om dezelfde hoeveelheid warmte in de woning te leveren."
+        },
+        "temperature": {
+          "title": "Binnentemperatuur en weer",
+          "description": "Een hogere binnentemperatuur en koudere weersomstandigheden vergroten het temperatuurverschil tussen binnen en buiten en daarmee het warmteverlies."
+        },
+        "behaviour": {
+          "title": "Verwarmingsgedrag",
+          "description": "Hoe lang en hoe vaak u verwarmt, welke ruimtes worden verwarmd en hoe u met thermostaten omgaat, hebben invloed op uw uiteindelijke energieverbruik."
+        }
+      }
+    },
+    "faq": {
+      "badge": "VEELGESTELDE VRAGEN",
+      "title": "Veelgestelde vragen over energiebesparing met isolatie",
+      "description": "Vind antwoorden over onze besparingscalculator, energiebesparing met isolatie en de factoren die uw werkelijke resultaat beïnvloeden."
+    }
+  },
+  "HomeInsulationCheckPage": {
+    "metadata": {
+      "title": "Woningcheck: welke isolatie heeft mijn woning nodig? | Nu-Isoleren",
+      "description": "Doe gratis de woningcheck van Nu-Isoleren en ontdek welke isolatie- en geveloplossingen mogelijk interessant zijn voor uw woning."
+    },
+    "hero": {
+      "pricesBreadcrumb": "Prijzen & berekeningen",
+      "breadcrumb": "Woningcheck",
+      "badge": "GRATIS WONINGCHECK",
+      "title": "Welke isolatie heeft uw woning nodig?",
+      "description": "Beantwoord enkele korte vragen over uw woning, dak, buitenmuren, gevel en eventuele vochtproblemen. U krijgt daarna een persoonlijk overzicht van de oplossingen van Nu-Isoleren die mogelijk interessant zijn voor uw woning.",
+      "disclaimer": "De woningcheck geeft een eerste indicatie en vervangt geen technische inspectie ter plaatse.",
+      "cta": "Start de woningcheck"
+    },
+    "check": {
+      "badge": "WONINGCHECK",
+      "title": "Ontdek welke oplossingen bij uw woning passen",
+      "description": "Beantwoord vier korte stappen over uw woning, dak, buitenmuren en eventuele vochtproblemen. Daarna tonen we welke oplossingen van Nu-Isoleren mogelijk interessant zijn.",
+      "progress": "Stap {current} van {total}",
+      "previous": "Vorige",
+      "next": "Volgende",
+      "showResult": "Bekijk mijn resultaat",
+      "disclaimer": "De woningcheck geeft een eerste indicatie op basis van uw antwoorden en vervangt geen technische inspectie ter plaatse.",
+      "building": {
+        "badge": "STAP 1",
+        "title": "Vertel ons iets over uw woning",
+        "description": "Het bouwjaar en woningtype geven een eerste indicatie van de mogelijke opbouw en isolatie van uw woning.",
+        "region": {
+          "question": "In welk gewest ligt uw woning?",
+          "options": {
+            "flanders": "Vlaanderen",
+            "wallonia": "Wallonië"
+          }
+        },
+        "type": {
+          "question": "Welk type woning heeft u?",
+          "options": {
+            "detached": "Vrijstaande woning",
+            "semi_detached": "Halfopen bebouwing",
+            "terraced": "Rijwoning",
+            "apartment": "Appartement"
+          }
+        },
+        "year": {
+          "label": "Wat is het bouwjaar van de woning?",
+          "placeholder": "Bijv. 1975"
+        }
+      },
+      "roof": {
+        "badge": "STAP 2",
+        "title": "Hoe is uw dak geïsoleerd?",
+        "description": "Een niet of beperkt geïsoleerd dak kan een belangrijke bron van warmteverlies zijn.",
+        "insulation": {
+          "question": "Welke situatie past het best bij uw dak?",
+          "options": {
+            "none": "Niet geïsoleerd",
+            "old": "Oude of beperkte isolatie",
+            "good": "Goed geïsoleerd",
+            "unknown": "Ik weet het niet"
+          }
+        }
+      },
+      "walls": {
+        "badge": "STAP 3",
+        "title": "Hoe zit het met uw buitenmuren en gevel?",
+        "description": "We bekijken of spouwmuurisolatie, gevelisolatie of een behandeling van de gevel mogelijk interessant kan zijn.",
+        "cavity": {
+          "question": "Heeft uw woning een spouwmuur?",
+          "options": {
+            "yes": "Ja",
+            "no": "Nee",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "cavityInsulation": {
+          "question": "Hoe is de spouw momenteel geïsoleerd?",
+          "options": {
+            "none": "Niet geïsoleerd",
+            "old": "Oude of problematische isolatie",
+            "good": "Goed geïsoleerd",
+            "unknown": "Ik weet het niet"
+          }
+        },
+        "facade": {
+          "question": "Hoe zou u de staat van uw buitengevel omschrijven?",
+          "options": {
+            "good": "In goede staat",
+            "dirty": "Sterk vervuild",
+            "damaged": "Verouderd of beschadigd",
+            "moisture": "Vochtig of poreus",
+            "unknown": "Ik weet het niet"
+          }
+        }
+      },
+      "moisture": {
+        "badge": "STAP 4",
+        "title": "Heeft u vochtproblemen in huis?",
+        "description": "Bepaalde vochtproblemen vragen eerst om een correcte diagnose voordat verdere isolatie- of renovatiewerken worden uitgevoerd.",
+        "status": {
+          "question": "Welke situatie herkent u het meest?",
+          "options": {
+            "none": "Geen vochtproblemen",
+            "rising": "Vochtplekken onderaan de muren",
+            "mould": "Schimmel of loskomend pleisterwerk",
+            "unknown": "Ik weet het niet"
+          }
+        }
+      },
+      "result": {
+        "badge": "UW WONINGCHECK",
+        "title": "Deze oplossingen kunnen interessant zijn voor uw woning",
+        "description": "Op basis van uw antwoorden hebben we de mogelijke aandachtspunten voor uw woning gekoppeld aan oplossingen die Nu-Isoleren uitvoert.",
+        "priorities": {
+          "high": "Hoge prioriteit",
+          "recommended": "Aanbevolen",
+          "check": "Controle aanbevolen"
+        },
+        "services": {
+          "roof_insulation": {
+            "title": "Dakisolatie",
+            "description": "Uw antwoorden wijzen erop dat uw dak niet, beperkt of mogelijk onvoldoende geïsoleerd is. Een beter geïsoleerd dak kan het warmteverlies van de woning verminderen en het wooncomfort verbeteren.",
+            "nuIsoleren": "Nu-Isoleren plaatst dakisolatie met onder andere glaswol of PIR-isolatieplaten."
+          },
+          "cavity_wall_insulation": {
+            "title": "Spouwmuurisolatie",
+            "description": "Uw woning heeft mogelijk een spouw die niet of onvoldoende geïsoleerd is. Wanneer de spouw technisch geschikt is, kan spouwmuurisolatie het warmteverlies via de buitenmuren verminderen.",
+            "nuIsoleren": "Nu-Isoleren isoleert geschikte spouwmuren met hoogwaardige EPS-parels."
+          },
+          "cavity_cleaning": {
+            "title": "Spouw schoonmaken",
+            "description": "U geeft aan dat er oude of mogelijk problematische isolatie in de spouw aanwezig is. In bepaalde situaties moet die eerst worden verwijderd voordat nieuwe spouwmuurisolatie kan worden geplaatst.",
+            "nuIsoleren": "Nu-Isoleren verwijdert onder andere oude spouwisolatie en maakt de spouw klaar voor een nieuwe isolatieoplossing."
+          },
+          "external_wall_insulation": {
+            "title": "Gevelisolatie met crepi",
+            "description": "Wanneer spouwmuurisolatie niet mogelijk of onvoldoende is, kan buitengevelisolatie een alternatief zijn. Hierbij wordt de gevel langs buiten geïsoleerd en opnieuw afgewerkt.",
+            "nuIsoleren": "Nu-Isoleren plaatst gevelisolatie met isolatieplaten en werkt de gevel af met crepi."
+          },
+          "facade_cleaning": {
+            "title": "Gevelreiniging",
+            "description": "Uw gevel lijkt vooral vervuild. Een professionele gevelreiniging kan aanslag, vuil en verontreiniging verwijderen en de oorspronkelijke uitstraling van de gevel herstellen.",
+            "nuIsoleren": "Nu-Isoleren reinigt buitengevels professioneel en bekijkt welke reinigingsmethode geschikt is voor de ondergrond."
+          },
+          "hydrofuge": {
+            "title": "Hydrofuge",
+            "description": "Een vochtige of poreuze buitengevel kan regenwater gemakkelijker opnemen. Na controle van de oorzaak kan een waterafstotende behandeling helpen om de gevel beter tegen weersinvloeden te beschermen.",
+            "nuIsoleren": "Nu-Isoleren behandelt geschikte gevels met hydrofuge om de buitenmuur waterafstotend te maken."
+          },
+          "rising_damp": {
+            "title": "Behandeling van opstijgend vocht",
+            "description": "Vochtplekken onderaan binnenmuren kunnen wijzen op opstijgend vocht. Schimmel of beschadigd pleisterwerk kan ook andere oorzaken hebben, waardoor een controle ter plaatse belangrijk is.",
+            "nuIsoleren": "Nu-Isoleren behandelt opstijgend vocht door de muren gericht te injecteren met een vochtwerend product."
+          }
+        },
+        "viewService": "Bekijk deze oplossing",
+        "noRecommendations": {
+          "title": "Geen duidelijke aandachtspunten gevonden",
+          "description": "Op basis van uw antwoorden zien we geen directe isolatie- of vochtproblemen waarvoor we een duidelijke aanbeveling kunnen doen. Wilt u zekerheid, dan kan een controle ter plaatse meer duidelijkheid geven."
+        },
+        "notice": "Deze woningcheck is indicatief. De technische staat van een dak, spouwmuur, gevel of vochtprobleem kan alleen correct worden beoordeeld na een inspectie ter plaatse.",
+        "contact": "Vraag persoonlijk advies",
+        "again": "Woningcheck opnieuw doen"
+      }
+      
+    },
+    "advice": {
+        "badge": "VAN CHECK NAAR OPLOSSING",
+        "title": "Van woningcheck naar de juiste aanpak",
+        "description": "Elke woning is anders. De woningcheck helpt om mogelijke aandachtspunten snel zichtbaar te maken en koppelt die aan oplossingen die Nu-Isoleren zelf uitvoert.",
+        "points": {
+          "check": "U krijgt op basis van uw antwoorden een eerste indicatie van mogelijke isolatie-, gevel- of vochtproblemen.",
+          "solution": "De woningcheck koppelt deze aandachtspunten rechtstreeks aan passende diensten van Nu-Isoleren.",
+          "inspection": "Voor de definitieve oplossing bekijken we de technische situatie indien nodig ter plaatse."
+        },
+        "notice": "Een online woningcheck kan niet alle details van een woning beoordelen. De staat van de spouw, het dak, de gevel en eventuele vochtproblemen kan ter plaatse nauwkeuriger worden onderzocht.",
+        "imageAlt": "Afgewerkte woning na isolatie- en gevelwerken door Nu-Isoleren"
+      },
+      "faq": {
+  "badge": "VEELGESTELDE VRAGEN",
+  "title": "Veelgestelde vragen over uw woning isoleren",
+  "description": "Vind antwoorden over de woningcheck, geschikte isolatiemaatregelen, spouwmuren, vochtproblemen en de oplossingen van Nu-Isoleren."
 }
   },
 
+  "GrantsPage": {
+  "metadata": {
+    "title": "Isolatiepremies 2026 in België | Nu-Isoleren",
+    "description": "Ontdek welke isolatiepremies en renovatiesteun er in 2026 bestaan in Vlaanderen, Brussel en Wallonië. Bekijk de voorwaarden per gewest."
+  },
+
+  "hero": {
+    "breadcrumb": "Premies",
+    "badge": "ISOLATIEPREMIES 2026",
+    "title": "Welke isolatiepremies zijn er in België?",
+    "description": "Voor isolatie- en renovatiewerken bestaan verschillende premies en steunmaatregelen. De voorwaarden en bedragen verschillen per gewest. Bekijk de actuele mogelijkheden voor Vlaanderen, Brussel en Wallonië."
+  },
+
+  "intro": {
+    "badge": "PREMIES & STEUNMAATREGELEN",
+    "title": "Premies voor het isoleren en renoveren van uw woning",
+    "imageAlt": "Afbeelding van een woning in België met een isolatiepremie",
+    "description": "Wie investeert in dakisolatie, muurisolatie of andere energetische renovatiewerken kan in bepaalde situaties recht hebben op financiële steun. Welke premie van toepassing is, hangt onder andere af van het gewest waarin de woning ligt, het type werken en uw persoonlijke situatie.",
+    "descriptionSecond": "Nu-Isoleren helpt u hieronder om snel naar de juiste informatie voor uw gewest te gaan. Op de detailpagina's vindt u de belangrijkste voorwaarden, ondersteunde isolatiewerken en informatie over de aanvraag."
+  },
+
+  "regions": {
+    "badge": "KIES UW GEWEST",
+    "title": "Bekijk de isolatiepremies in uw gewest",
+    
+    "description": "De regels voor renovatie- en isolatiepremies verschillen tussen Vlaanderen, Brussel en Wallonië.",
+
+    "flanders": {
+      "title": "Isolatiepremies Vlaanderen",
+      "description": "Bekijk welke Vlaamse premies en steunmaatregelen van toepassing kunnen zijn op isolatie- en renovatiewerken.",
+      "button": "Bekijk premies in Vlaanderen"
+    },
+
+    "brussels": {
+      "title": "Isolatiepremies Brussel",
+      "description": "Bekijk de beschikbare informatie over premies en steun voor energetische renovaties in het Brussels Hoofdstedelijk Gewest.",
+      "button": "Bekijk premies in Brussel"
+    },
+
+    "wallonia": {
+      "title": "Isolatiepremies Wallonië",
+      "description": "Ontdek welke Waalse steunmaatregelen mogelijk bestaan voor isolatie en energetische renovatiewerken.",
+      "button": "Bekijk premies in Wallonië"
+    }
+  },
+  "faq": {
+  "badge": "VEELGESTELDE VRAGEN",
+  "title": "Veelgestelde vragen over isolatiepremies",
+  "description": "Vind antwoorden op algemene vragen over isolatiepremies, regionale verschillen en steun voor dak-, muur- en gevelisolatie."
+}
+},
+"FlandersGrantsPage": {
+  "metadata": {
+    "title": "Isolatiepremies Vlaanderen 2026 & 2027 | Nu-Isoleren",
+    "description": "Ontdek de actuele isolatiepremies in Vlaanderen in 2026, waaronder Mijn VerbouwPremie voor dakisolatie en buitenmuurisolatie. Bekijk bedragen, voorwaarden en wijzigingen voor 2027."
+  },
+
+  "hero": {
+    "parentBreadcrumb": "Premies",
+    "breadcrumb": "Vlaanderen",
+    "badge": "ISOLATIEPREMIES VLAANDEREN",
+    "title": "Isolatiepremies in Vlaanderen in 2026",
+    "description": "Wie zijn woning isoleert, kan in bepaalde situaties recht hebben op Mijn VerbouwPremie. De regels zijn sinds 1 maart 2026 gewijzigd. Bekijk hieronder wie nog in aanmerking komt, welke isolatiewerken ondersteund worden en hoeveel premie mogelijk is.",
+    "updated": "Laatst bijgewerkt: september 2026"
+  },
+
+ "update": {
+  "badge": "BELANGRIJKE UPDATE 2026",
+  "title": "Hoeveel bedraagt Mijn VerbouwPremie voor isolatie?",
+  "description": "Sinds 1 maart 2026 komen eigenaar-bewoners uit inkomenscategorie 1 en 2 niet meer in aanmerking voor Mijn VerbouwPremie voor deze isolatiewerken. Voor inkomenscategorie 3 en 4 blijft financiële steun mogelijk.",
+
+  "table": {
+    "work": "Isolatiewerk",
+    "category1": "Inkomenscategorie 1",
+    "category2": "Inkomenscategorie 2",
+    "category3": "Inkomenscategorie 3",
+    "category4": "Inkomenscategorie 4",
+
+    "rows": {
+      "roof": {
+        "label": "Dakisolatie",
+        "category1": "n.v.t.",
+        "category2": "n.v.t.",
+        "category3": "Tot € 4.025 (max. 35% van de factuur)",
+        "category4": "Tot € 5.750 (max. 50% van de factuur)"
+      },
+
+      "floor": {
+        "label": "Vloerisolatie",
+        "category1": "n.v.t.",
+        "category2": "n.v.t.",
+        "category3": "Tot € 1.050 (max. 35% van de factuur)",
+        "category4": "Tot € 1.500 (max. 50% van de factuur)"
+      },
+
+      "wall": {
+        "label": "Muurisolatie",
+        "category1": "n.v.t.",
+        "category2": "n.v.t.",
+        "category3": "Tot € 3.500 (max. 35% van de factuur)",
+        "category4": "Tot € 5.000 (max. 50% van de factuur)"
+      }
+    }
+  },
+
+  "notice": "De bovenstaande bedragen zijn maximale premiebedragen. Het uiteindelijke bedrag hangt af van de in aanmerking komende factuur, uw inkomenscategorie en de geldende voorwaarden van Mijn VerbouwPremie. De aanvraagdatum bepaalt welke regeling van toepassing is."
+},
+"intro": {
+  "badge": "MIJN VERBOUWPREMIE",
+  "title": "Wat is Mijn VerbouwPremie?",
+  "description": "Mijn VerbouwPremie is een premie van de Vlaamse overheid voor renovatie en energiebesparende investeringen aan woningen en appartementen in het Vlaamse Gewest.",
+  "descriptionSecond": "Voor Nu-Isoleren zijn vooral de categorieën dak en buitenmuur relevant. Daaronder vallen onder andere dakisolatie, spouwmuurisolatie en buitengevelisolatie.",
+  "highlight": "Of u recht heeft op een premie hangt onder andere af van uw inkomenscategorie, het type woning, de uitgevoerde werken en de technische voorwaarden.",
+  "imageAlt": "Woning in Vlaanderen tijdens energetische renovatie en isolatiewerken"
+},
+"eligibility": {
+  "badge": "VOOR WIE?",
+  "title": "Wie komt in aanmerking voor een isolatiepremie?",
+  "description": "Voor premieaanvragen vanaf 1 maart 2026 komen eigenaar-bewoners uit inkomenscategorie 3 en 4 nog in aanmerking voor Mijn VerbouwPremie voor dak- en muurisolatie. Uw inkomen en gezinssituatie bepalen tot welke categorie u behoort.",
+  "points": {
+    "building": "De woning of het appartement moet in het Vlaamse Gewest liggen en voor 1 januari 2006 aangesloten zijn op het elektriciteitsnet, of volgens het kadaster voor die datum voor het eerst in gebruik zijn genomen.",
+    "income": "Voor uw inkomenscategorie wordt gekeken naar het laatst beschikbare aanslagbiljet op het moment van de premieaanvraag.",
+    "property": "Wie naast de premiewoning nog een andere woning, appartement of bouwgrond volledig in volle eigendom heeft, valt als eigenaar-bewoner automatisch in inkomenscategorie 1."
+  },
+  "table": {
+    "situation": "Gezinssituatie",
+    "category4": "Categorie 4",
+    "category3": "Categorie 3",
+    "single": {
+      "label": "Alleenstaande",
+      "category4": "Tot € 24.750",
+      "category3": "€ 24.750 – € 43.240"
+    },
+    "family": {
+      "label": "Koppel of alleenstaande + 1 persoon ten laste",
+      "category4": "Tot € 37.110",
+      "category3": "€ 37.110 – € 60.520"
+    },
+    "extra": {
+      "label": "Per bijkomende persoon ten laste",
+      "category4": "+ € 4.420",
+      "category3": "+ € 4.420"
+    },
+    "notice": "Deze inkomensgrenzen gelden voor premieaanvragen vanaf 1 januari 2026. De aanvraagdatum, het laatst beschikbare aanslagbiljet en uw gezinssituatie zijn bepalend."
+  }
+},
+
+"works": {
+  "badge": "ISOLATIEWERKEN",
+  "title": "Welke isolatiewerken komen in aanmerking?",
+  "description": "Voor Mijn VerbouwPremie gelden per type isolatiewerk technische voorwaarden. Voor de diensten van Nu-Isoleren zijn vooral dakisolatie, spouwmuurisolatie en buitengevelisolatie relevant.",
+  "roof": {
+    "title": "Dakisolatie",
+    "description": "Nieuwe dak- of zoldervloerisolatie kan in aanmerking komen wanneer de isolatie voldoet aan de technische voorwaarden van Mijn VerbouwPremie.",
+    "requirement1": "De nieuw geplaatste isolatie moet een Rd-waarde van minstens 4,5 m²K/W hebben.",
+    "requirement2": "Bij isolatie van een hellend dak is langs de binnenzijde een correct uitgevoerd dampscherm vereist."
+  },
+  "cavity": {
+    "title": "Spouwmuurisolatie",
+    "description": "Ook het na-isoleren van een geschikte bestaande spouwmuur valt onder de categorie buitenmuur.",
+    "requirement1": "De spouw moet volledig worden gevuld, minimaal 50 mm breed zijn en het isolatiemateriaal mag een lambdawaarde van maximaal 0,065 W/mK hebben.",
+    "requirement2": "De werken moeten worden uitgevoerd door een STS 71-1-erkende aannemer. Een reeds gedeeltelijk geïsoleerde spouw komt niet in aanmerking voor bijkomende navulling."
+  },
+  "facade": {
+    "title": "Buitengevelisolatie",
+    "description": "Isolatie langs de buitenzijde van de gevel kan eveneens onder de categorie buitenmuur vallen, bijvoorbeeld bij een gevelrenovatie met isolatie en crepi.",
+    "requirement1": "De nieuwe buitenmuurisolatie langs de buitenzijde moet minstens een Rd-waarde van 3 m²K/W hebben.",
+    "requirement2": "Gevelafwerking zoals crepi komt enkel mee in aanmerking wanneer ze gecombineerd wordt met voldoende nieuwe buitenmuurisolatie."
+  },
+  "notice": "De isolatiewerken moeten voldoen aan alle technische en administratieve voorwaarden die gelden op het moment van uw premieaanvraag."
+},
+
+"application": {
+  "badge": "PREMIE AANVRAGEN",
+  "title": "Hoe vraagt u Mijn VerbouwPremie aan?",
+  "description": "De premie wordt aangevraagd nadat de werken zijn uitgevoerd en u over de vereiste facturen en attesten beschikt.",
+  "steps": {
+    "works": {
+      "title": "Laat de isolatiewerken uitvoeren",
+      "description": "Voor dak- en buitenmuurisolatie komen enkel werken uitgevoerd door een aannemer in aanmerking. Voor bepaalde technieken gelden bijkomende erkenningsvoorwaarden."
+    },
+    "documents": {
+      "title": "Verzamel facturen en attesten",
+      "description": "Bewaar de eindfactuur, eventuele voorschot- en tussentijdse facturen en het vereiste aannemersattest. Voor spouwmuurisolatie is ook het VVO-attest STS 71-1 vereist."
+    },
+    "portal": {
+      "title": "Dien de aanvraag in via Mijn VerbouwLoket",
+      "description": "U dient Mijn VerbouwPremie digitaal in via Mijn VerbouwLoket en vraagt de premie per categorie van werken aan."
+    },
+    "followup": {
+      "title": "Volg uw aanvraag op",
+      "description": "Na indiening kunt u de aanvraag verder opvolgen via Mijn VerbouwLoket. De overheid kan bijkomende bewijsstukken opvragen."
+    }
+  },
+  "notice": "De facturen mogen op de datum van de premieaanvraag maximaal 2 jaar oud zijn. Dien uw aanvraag daarom tijdig in."
+},
+
+"future": {
+  "badge": "VOORUITBLIK 2027",
+  "title": "Wat verandert er mogelijk in 2027?",
+  "description": "De Vlaamse Regering bereidt een uitbreiding van Mijn VerbouwPremie voor bepaalde verhuurders voor. Verhuurders die onder voorwaarden betaalbaar verhuren, zouden toegang kunnen krijgen tot een premiepercentage van 35%, vergelijkbaar met inkomenscategorie 3.",
+  "social": "Voor verhuurders die hun woning minstens negen jaar via een woonmaatschappij verhuren, is daarnaast een mogelijke extra bonus aangekondigd boven op het premiepercentage van inkomenscategorie 4.",
+  "warning": "Deze wijzigingen zijn aangekondigd, maar waren in september 2026 nog niet definitief goedgekeurd. Nu-Isoleren past deze pagina aan zodra de definitieve regelgeving gepubliceerd wordt."
+}
+},
+
+"BrusselsGrantsPage": {
+  "metadata": {
+    "title": "Isolatiepremies Brussel 2026 & 2027 | RENOLUTION & ECORENO",
+    "description": "Bekijk de actuele situatie rond isolatiepremies in Brussel in 2026 en 2027. Lees meer over RENOLUTION, het ECORENO-krediet en beschikbare renovatiesteun."
+  },
+
+  "hero": {
+    "parentBreadcrumb": "Premies",
+    "breadcrumb": "Brussel",
+    "badge": "ISOLATIEPREMIES BRUSSEL",
+    "title": "Isolatiepremies in Brussel in 2026",
+    "description": "De situatie rond renovatie- en isolatiepremies in het Brussels Hoofdstedelijk Gewest is in 2026 uitzonderlijk. Bekijk de actuele status van de RENOLUTION-premies en welke andere vormen van renovatiesteun momenteel beschikbaar zijn.",
+    "updated": "Laatst bijgewerkt: september 2026",
+    "imageAlt": "Woningen in Brussel waar energetische renovatie mogelijk is"
+  },
+
+  "status": {
+    "badge": "BELANGRIJKE UPDATE 2026",
+    "title": "Geen RENOLUTION-aanvragen voor eindfacturen uit 2025 of 2026",
+    "description": "Volgens het Brussels Hoofdstedelijk Gewest is er momenteel nog geen regeringsbeslissing genomen over eventuele RENOLUTION-premies voor 2025 en 2026.",
+    "highlight": "Op dit moment kunnen geen RENOLUTION-premieaanvragen worden ingediend voor werken waarvan de eindfactuur uit 2025 of 2026 dateert.",
+    "notice": "Premiebedragen en voorwaarden uit vroegere RENOLUTION-regelingen, zoals die van 2024, mogen daarom niet als actuele premie-informatie voor 2026 worden beschouwd."
+  },
+
+  "renolution": {
+    "badge": "RENOLUTION",
+    "title": "Wat zijn de RENOLUTION-premies?",
+    "description": "Sinds 1 januari 2022 is RENOLUTION de naam van het Brusselse systeem waarin de vroegere Energiepremies, de premie voor renovatie van het woonmilieu en de premie voor gevelverfraaiing werden samengebracht.",
+    "descriptionSecond": "Het systeem omvatte steun voor uiteenlopende renovatie- en energiebesparende werkzaamheden, waaronder isolatie. Voor eindfacturen uit 2025 en 2026 is momenteel echter geen nieuwe premieregeling beschikbaar om een aanvraag op te baseren.",
+    "highlight": "Plan renovatiewerken in Brussel daarom niet op basis van oude RENOLUTION-bedragen zonder eerst de actuele officiële situatie te controleren.",
+    "imageAlt": "Renovatie van een woning in het Brussels Hoofdstedelijk Gewest"
+  },
+
+  "support": {
+    "badge": "STEUN IN 2026",
+    "title": "Welke renovatiesteun is momenteel wel beschikbaar?",
+    "description": "Het ontbreken van een actuele RENOLUTION-premieregeling betekent niet dat er helemaal geen financiële ondersteuning bestaat. Afhankelijk van uw situatie zijn andere vormen van steun of financiering mogelijk.",
+
+    "ecoreno": {
+      "title": "ECORENO-krediet",
+      "description": "Een financieringsoplossing voor renovatiewerken aan een woning in het Brussels Hoofdstedelijk Gewest, waaronder werkzaamheden die de energieprestatie verbeteren."
+    },
+
+    "municipal": {
+      "title": "Gemeentelijke steun",
+      "description": "Sommige Brusselse gemeenten bieden eigen premies of financiële voordelen aan. De voorwaarden en beschikbaarheid verschillen per gemeente."
+    },
+
+    "vat": {
+      "title": "6% btw bij renovatie",
+      "description": "Voor bepaalde renovatiewerken kan onder de wettelijke voorwaarden het verlaagde btw-tarief van 6% van toepassing zijn. Dit is een fiscaal voordeel en geen RENOLUTION-premie."
+    },
+
+    "notice": "Welke steun voor u van toepassing is, hangt onder andere af van het type woning, uw statuut, uw inkomen en de geplande werken."
+  },
+
+  "ecoreno": {
+    "badge": "ECORENO-KREDIET",
+    "title": "Renovatiewerken financieren met het ECORENO-krediet",
+    "description": "Het ECORENO-krediet biedt een financieringsoplossing voor verschillende renovatiewerken aan een woning in Brussel.",
+    "notGrant": "ECORENO is een lening en geen renovatiepremie.",
+
+    "table": {
+      "item": "Onderdeel",
+      "details": "Actuele situatie",
+
+      "rate": {
+        "label": "Rentevoet",
+        "value": "Preferentieel tarief van 2,5% tot 3,5%, afhankelijk van de toepasselijke voorwaarden en inkomensbarema's."
+      },
+
+      "applicants": {
+        "label": "Voor wie?",
+        "value": "Eigenaars, toekomstige eigenaars en huurders van een woning in het Brussels Hoofdstedelijk Gewest kunnen onder voorwaarden in aanmerking komen."
+      },
+
+      "works": {
+        "label": "Welke werken?",
+        "value": "Onder andere klassieke renovatiewerken, verbetering van de energieprestatie, veiligheid, gezondheid en bewoonbaarheid en bepaalde werken rond autonomie."
+      },
+
+      "contractor": {
+        "label": "Uitvoering",
+        "value": "De werken moeten worden uitgevoerd door een professionele aannemer die aan de toepasselijke beroeps- en registratievoorwaarden voldoet."
+      }
+    },
+
+    "notice": "Volgens de actuele informatie van Homegrade is het ECORENO-krediet momenteel niet beschikbaar voor eigenaar-verhuurders of verenigingen van mede-eigenaars. Er gelden daarnaast financiële en administratieve voorwaarden."
+  },
+
+  "future": {
+    "badge": "VOORUITBLIK 2027",
+    "title": "Wat weten we over de Brusselse premies in 2027?",
+    "description": "Voor 2027 publiceren we pas concrete premiebedragen en voorwaarden wanneer die officieel door het Brussels Hoofdstedelijk Gewest zijn vastgesteld.",
+    "descriptionSecond": "In september 2026 is er nog geen definitieve RENOLUTION-regeling voor 2027 gepubliceerd waarop betrouwbare premiebedragen voor isolatiewerken kunnen worden gebaseerd.",
+    "warning": "Nu-Isoleren vermeldt bewust geen geschatte of oude premiebedragen als informatie voor 2027. Deze pagina wordt aangepast wanneer nieuwe officiële regelgeving beschikbaar is."
+  },
+
+  "sources": {
+    "title": "Bronnen & actualiteit",
+    "description": "Deze pagina werd in september 2026 gecontroleerd op basis van actuele informatie van het Brussels Hoofdstedelijk Gewest en Homegrade. Regelingen en voorwaarden kunnen wijzigen.",
+    "region": "Brussels Hoofdstedelijk Gewest",
+    "homegrade": "Homegrade – ECORENO",
+    "back": "Terug naar alle premies"
+  }
+},
+
+"WalloniaGrantsPage": {
+  "metadata": {
+    "title": "Isolatiepremies Wallonië 2026 & 2027 | Nu-Isoleren",
+    "description": "Bekijk de actuele isolatiepremies in Wallonië in 2026 en het nieuwe renovatiestelsel vanaf 1 oktober 2026. Ontdek bedragen, inkomenscategorieën, Rénopack en Rénoprêt."
+  },
+
+  "hero": {
+    "parentBreadcrumb": "Premies",
+    "breadcrumb": "Wallonië",
+    "badge": "ISOLATIEPREMIES WALLONIË",
+    "title": "Isolatiepremies in Wallonië in 2026",
+    "description": "De Waalse renovatiesteun verandert ingrijpend in 2026. Het tijdelijke stelsel van Primes Habitation loopt af op 30 september 2026 en wordt vanaf 1 oktober vervangen door een nieuw systeem rond Rénopack en Rénoprêt.",
+    "updated": "Laatst bijgewerkt: september 2026",
+    "imageAlt": "Woning in Wallonië tijdens energetische renovatiewerken"
+  },
+
+  "transition": {
+    "badge": "BELANGRIJKE OVERGANG 2026",
+    "title": "Op 1 oktober 2026 verandert de Waalse renovatiesteun",
+    "description": "In september 2026 zijn twee verschillende systemen relevant. Welke regeling voor u geldt, hangt af van het moment waarop uw project en aanvraag vallen.",
+
+    "current": {
+      "date": "Tot 30 september 2026",
+      "title": "Primes Habitation 2025-2026",
+      "description": "Het tijdelijke premiestelsel blijft van toepassing tot en met 30 september 2026. De aanvraag voor de premie, inclusief de eindfactuur, moet uiterlijk op die datum worden ingediend."
+    },
+
+    "new": {
+      "date": "Vanaf 1 oktober 2026",
+      "title": "Nieuw renovatiestelsel",
+      "description": "De regionale steun verschuift naar Rénopack en Rénoprêt. Het nieuwe systeem focust op energie-intensieve woningen die via een renovatie een voldoende grote verbetering van hun PEB-label realiseren."
+    },
+
+    "notice": "De onderstaande premies per m² gelden voor het tijdelijke stelsel tot en met 30 september 2026 en mogen niet als premiebedragen voor het nieuwe systeem vanaf 1 oktober 2026 worden gebruikt."
+  },
+
+  "currentPremiums": {
+    "badge": "PRIMES HABITATION 2025-2026",
+    "title": "Hoeveel bedraagt de huidige isolatiepremie in Wallonië?",
+    "description": "Binnen het tijdelijke stelsel wordt een basisbedrag vermenigvuldigd volgens de inkomenscategorie van het huishouden. Hieronder staan de bedragen voor werken die relevant zijn voor de diensten van Nu-Isoleren.",
+
+    "table": {
+      "work": "Werk",
+
+      "rows": {
+        "roof": {
+          "label": "Dak- of zolderisolatie",
+          "r1": "€ 120/m²",
+          "r2": "€ 80/m²",
+          "r3": "€ 60/m²",
+          "r4": "€ 40/m²"
+        },
+
+        "wall": {
+          "label": "Thermische muurisolatie",
+          "r1": "€ 52,80/m²",
+          "r2": "€ 35,20/m²",
+          "r3": "€ 26,40/m²",
+          "r4": "€ 17,60/m²"
+        },
+
+        "damp": {
+          "label": "Behandeling opstijgend vocht",
+          "r1": "€ 19,20/lm",
+          "r2": "€ 12,80/lm",
+          "r3": "€ 9,60/lm",
+          "r4": "€ 6,40/lm"
+        }
+      }
+    },
+
+    "notice": "Voor inkomenscategorie R1 en R2 is de premie beperkt tot maximaal 70% van de in aanmerking komende factuurbedragen. Voor R3 en R4 geldt een maximum van 50%. Voor bio-based isolatiematerialen bestaan binnen het tijdelijke stelsel hogere basisbedragen."
+  },
+
+  "eligibility": {
+    "badge": "VOORWAARDEN TOT 30 SEPTEMBER",
+    "title": "Wie komt nog in aanmerking voor Primes Habitation?",
+    "description": "Voor het tijdelijke stelsel gelden voorwaarden voor zowel de aanvrager, de woning als de uitvoering van de werken.",
+
+    "points": {
+      "location": "De woning moet in het Waalse Gewest liggen, buiten het grondgebied van de Duitstalige Gemeenschap.",
+      "age": "Het gebouw moet meer dan 15 jaar oud zijn.",
+      "usage": "Het gebouw moet voor meer dan 50% bestemd zijn of worden voor bewoning.",
+      "contractor": "De werken moeten worden uitgevoerd door een aannemer die is ingeschreven in de Kruispuntbank van Ondernemingen en waar vereist over de juiste beroepsbekwaamheid beschikt.",
+      "audit": "Voor de meeste renovatiewerken is vóór de start een Audit Logement verplicht. Voor dakwerken en thermische isolatie van dak of zolder is die voorafgaande audit niet verplicht."
+    },
+
+    "imageAlt": "Energiezuinige renovatie van een woning in Wallonië"
+  },
+
+  "newRegime": {
+    "badge": "VANAF 1 OKTOBER 2026",
+    "title": "Hoe werkt het nieuwe Waalse renovatiestelsel?",
+    "description": "Vanaf 1 oktober 2026 wordt de steun gericht op woningen met een zwakke energieprestatie. Het project moet de woning naar een duidelijk beter PEB-label brengen.",
+
+    "peb": {
+      "gf": {
+        "label": "PEB F of G",
+        "value": "De renovatie moet de woning minstens naar PEB-label D brengen."
+      },
+
+      "e": {
+        "label": "PEB E",
+        "value": "De renovatie moet de woning minstens naar PEB-label C brengen."
+      }
+    },
+
+    "audit": "Een voorafgaande audit wordt verplicht om toegang te krijgen tot de nieuwe financiering. De steun wordt berekend over het volledige renovatieproject en niet langer afzonderlijk per isolatiewerk."
+  },
+
+  "loans": {
+    "badge": "RÉNOPACK & RÉNOPRÊT",
+    "title": "Welke financiële steun geldt vanaf oktober 2026?",
+    "description": "De Waalse steun wordt opgebouwd rond twee renovatieleningen. De inkomenscategorie bepaalt welk systeem en welke vermindering van toepassing is.",
+
+    "table": {
+      "category": "Categorie",
+      "income": "Referentie-inkomen",
+      "loan": "Financiering",
+      "reduction": "Vermindering terugbetaling",
+
+      "rows": {
+        "c1": {
+          "income": "Tot € 28.900",
+          "loan": "Rénopack aan 0%",
+          "reduction": "50%"
+        },
+
+        "c2": {
+          "income": "€ 28.900,01 – € 41.100",
+          "loan": "Rénopack aan 0%",
+          "reduction": "40%"
+        },
+
+        "c3": {
+          "income": "€ 41.100,01 – € 67.100",
+          "loan": "Rénopack aan 0%",
+          "reduction": "15%"
+        },
+
+        "c4": {
+          "income": "€ 67.100,01 – € 122.800",
+          "loan": "Rénoprêt aan preferentieel tarief",
+          "reduction": "0%"
+        }
+      }
+    },
+
+    "renopack": {
+      "title": "Rénopack",
+      "description": "Voor categorie C1, C2 en C3. Het gaat om een renteloze renovatielening gecombineerd met een vermindering van het bedrag dat uiteindelijk moet worden terugbetaald."
+    },
+
+    "renopret": {
+      "title": "Rénoprêt",
+      "description": "Voor categorie C4, eigenaar-verhuurders en verenigingen van mede-eigenaars. De rente wordt bepaald volgens de toepasselijke voorwaarden en ligt onder de gewone marktvoorwaarden."
+    },
+
+    "notice": "Voor een eengezinswoning kan de financiering oplopen tot € 75.000. De officiële percentages voor C1, C2 en C3 omvatten volgens de Waalse overheid ook de mogelijke verhoging van 5% voor het gebruik van ecomaterialen. De inkomensbedragen zijn geïndexeerd op 1 januari 2026."
+  },
+
+  "application": {
+    "badge": "WAT MOET U DOEN?",
+    "title": "Welke procedure geldt voor uw renovatie?",
+    "description": "Door de overgang op 1 oktober 2026 is het belangrijk om eerst vast te stellen onder welk systeem uw renovatieproject valt.",
+
+    "before": {
+      "title": "Tot 30 september 2026",
+      "description": "Aanvragen binnen het tijdelijke Primes Habitation-stelsel moeten uiterlijk op 30 september 2026 worden ingediend, inclusief de eindfactuur. De aanvraag kan via Mon Espace of via de officiële formulieren gebeuren."
+    },
+
+    "after": {
+      "title": "Vanaf 1 oktober 2026",
+      "description": "Nieuwe projecten vallen onder het nieuwe Rénopack- en Rénoprêtstelsel. Een voorafgaande audit is verplicht en het volledige renovatieproject moet voldoen aan de voorwaarden rond PEB-verbetering en financiering."
+    }
+  },
+
+  "sources": {
+    "title": "Bronnen & actualiteit",
+    "description": "Deze pagina werd in september 2026 gecontroleerd op basis van officiële informatie van de Waalse overheid. De overgang naar het nieuwe stelsel vindt plaats op 1 oktober 2026 en voorwaarden kunnen verder administratief worden verduidelijkt.",
+    "current": "Wallonië – Primes Habitation 2025-2026",
+    "new": "Wallonië – nieuw renovatiestelsel",
+    "back": "Terug naar alle premies"
+  }
+},
 
   "CtaBanner": {
     "title": "Klaar om uw woning te verbeteren?",
     "description": "Vraag vrijblijvend een offerte aan en ontdek wat we voor uw woning kunnen betekenen.",
     "button": "Bespreek uw project"
   }
-
 }

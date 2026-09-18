@@ -7,6 +7,9 @@ use App\Models\Faq;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ContactSubmissionController;
+use App\Http\Controllers\Api\EnergySavingsController;
+use App\Http\Controllers\Api\QuoteRequestController;
+use App\Http\Controllers\Api\EnergyRatingController;
 use Illuminate\Support\Facades\Storage;
 
 Route::post(
@@ -137,6 +140,7 @@ Route::middleware('throttle:60,1')->get('/projects/{slug}', function (string $sl
 Route::middleware('throttle:60,1')->get('/faqs', function (Request $request) {
     $locale = $request->query('locale', 'nl');
     $serviceSlug = $request->query('service') ?? $request->query('dienst');
+    $category = $request->query('category');
     $featuredHome = $request->boolean('featured_home');
 
     $query = Faq::query()
@@ -147,24 +151,32 @@ Route::middleware('throttle:60,1')->get('/faqs', function (Request $request) {
         $query->where('is_featured_home', true);
     }
 
+    if ($category) {
+        $query->where('category', $category);
+    }
+
     if ($serviceSlug) {
         $query->whereHas('service', function ($q) use ($serviceSlug) {
             $q->where('slug->nl', $serviceSlug)
-              ->orWhere('slug->fr', $serviceSlug)
-              ->orWhere('slug->en', $serviceSlug);
+                ->orWhere('slug->fr', $serviceSlug)
+                ->orWhere('slug->en', $serviceSlug);
         });
     }
 
     return $query->get()->map(function (Faq $faq) use ($locale) {
         return [
             'id' => $faq->id,
-            'question' => $faq->getTranslation('question', $locale, false) ?: $faq->getTranslation('question', 'nl'),
-            'answer' => $faq->getTranslation('answer', $locale, false) ?: $faq->getTranslation('answer', 'nl'),
+            'question' => $faq->getTranslation('question', $locale, false)
+                ?: $faq->getTranslation('question', 'nl'),
+            'answer' => $faq->getTranslation('answer', $locale, false)
+                ?: $faq->getTranslation('answer', 'nl'),
             'category' => $faq->category,
             'service' => $faq->service ? [
                 'id' => $faq->service->id,
-                'name' => $faq->service->getTranslation('name', $locale, false) ?: $faq->service->getTranslation('name', 'nl'),
-                'slug' => $faq->service->getTranslation('slug', $locale, false) ?: $faq->service->getTranslation('slug', 'nl'),
+                'name' => $faq->service->getTranslation('name', $locale, false)
+                    ?: $faq->service->getTranslation('name', 'nl'),
+                'slug' => $faq->service->getTranslation('slug', $locale, false)
+                    ?: $faq->service->getTranslation('slug', 'nl'),
             ] : null,
             'is_featured_home' => (bool) $faq->is_featured_home,
             'sort_order' => (int) $faq->sort_order,
@@ -176,105 +188,348 @@ Route::middleware('throttle:60,1')->get('/services', function (Request $request)
     $locale = $request->query('locale', 'nl');
     $featuredHome = $request->boolean('featured_home');
 
-    $query = Service::query()->where('is_active', true);
+    $query = Service::query()
+        ->where('is_active', true);
 
     if ($featuredHome) {
         $query->where('is_featured_home', true);
     }
 
-    $services = $query->orderBy('order_column', 'asc')->get();
+    $services = $query
+        ->orderBy('order_column', 'asc')
+        ->get();
 
     return response()->json([
         'data' => $services->map(function ($service) use ($locale) {
-            $thumbnailUrl = null;
-                /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
-                $s3 = Storage::disk('s3');
-            if ($service->thumbnail) {
-                    $thumbnailUrl = $s3->url($service->thumbnail);
-            }
+            /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
+            $s3 = Storage::disk('s3');
 
-            $heroImageUrl = null;
-            if ($service->hero_image) {
-                    $heroImageUrl = $s3->url($service->hero_image);
-            }
+            $thumbnailUrl = $service->thumbnail
+                ? $s3->url($service->thumbnail)
+                : null;
 
-            $sections = $service->getTranslation('sections', $locale, false) ?? [];
+            $heroImageUrl = $service->hero_image
+                ? $s3->url($service->hero_image)
+                : null;
+
+            $sections = $service->getTranslation(
+                'sections',
+                $locale,
+                false
+            ) ?? [];
+
             if (is_array($sections)) {
-                $sections = array_map(function ($sec) use ($s3) {
-                    if (!empty($sec['images']) && is_array($sec['images'])) {
-                        $sec['images'] = array_map(fn ($img) => $s3->url($img), $sec['images']);
-                    }
-                    return $sec;
-                }, $sections);
+                $sections = array_map(
+                    function ($sec) use ($s3) {
+                        if (
+                            !empty($sec['images']) &&
+                            is_array($sec['images'])
+                        ) {
+                            $sec['images'] = array_map(
+                                fn ($img) => $s3->url($img),
+                                $sec['images']
+                            );
+                        }
+
+                        return $sec;
+                    },
+                    $sections
+                );
             }
+
+            $nlSlug = $service->getTranslation(
+                'slug',
+                'nl',
+                false
+            );
 
             return [
                 'id' => $service->id,
-                'name' => $service->getTranslation('name', $locale, false) ?: $service->getTranslation('name', 'nl'),
-                'slug' => $service->getTranslation('slug', $locale, false) ?: $service->getTranslation('slug', 'nl'),
-                'badge' => $service->getTranslation('badge', $locale, false) ?: $service->getTranslation('badge', 'nl'),
-                'short_description' => $service->getTranslation('short_description', $locale, false),
-                'eyebrow' => $service->getTranslation('eyebrow', $locale, false),
-                'hero_title' => $service->getTranslation('hero_title', $locale, false),
-                'intro_text' => $service->getTranslation('intro_text', $locale, false),
-                'thumbnail' => $thumbnailUrl,
-                'hero_image' => $heroImageUrl,
-                'sections' => $sections,
-                'seo_title' => $service->getTranslation('seo_title', $locale, false),
-                'seo_description' => $service->getTranslation('seo_description', $locale, false),
+
+                'name' =>
+                    $service->getTranslation(
+                        'name',
+                        $locale,
+                        false
+                    )
+                    ?: $service->getTranslation(
+                        'name',
+                        'nl'
+                    ),
+
+                'slug' =>
+                    $service->getTranslation(
+                        'slug',
+                        $locale,
+                        false
+                    )
+                    ?: $nlSlug,
+
+                'alternate_slugs' => [
+                    'nl' =>
+                        $nlSlug,
+
+                    'fr' =>
+                        $service->getTranslation(
+                            'slug',
+                            'fr',
+                            false
+                        )
+                        ?: $nlSlug,
+
+                    'en' =>
+                        $service->getTranslation(
+                            'slug',
+                            'en',
+                            false
+                        )
+                        ?: $nlSlug,
+                ],
+
+                'badge' =>
+                    $service->getTranslation(
+                        'badge',
+                        $locale,
+                        false
+                    )
+                    ?: $service->getTranslation(
+                        'badge',
+                        'nl'
+                    ),
+
+                'short_description' =>
+                    $service->getTranslation(
+                        'short_description',
+                        $locale,
+                        false
+                    ),
+
+                'eyebrow' =>
+                    $service->getTranslation(
+                        'eyebrow',
+                        $locale,
+                        false
+                    ),
+
+                'hero_title' =>
+                    $service->getTranslation(
+                        'hero_title',
+                        $locale,
+                        false
+                    ),
+
+                'intro_text' =>
+                    $service->getTranslation(
+                        'intro_text',
+                        $locale,
+                        false
+                    ),
+
+                'thumbnail' =>
+                    $thumbnailUrl,
+
+                'hero_image' =>
+                    $heroImageUrl,
+
+                'sections' =>
+                    $sections,
+
+                'seo_title' =>
+                    $service->getTranslation(
+                        'seo_title',
+                        $locale,
+                        false
+                    ),
+
+                'seo_description' =>
+                    $service->getTranslation(
+                        'seo_description',
+                        $locale,
+                        false
+                    ),
             ];
         }),
     ]);
 });
 
-Route::middleware('throttle:60,1')->get('/services/{slug}', function (Request $request, string $slug) {
+Route::middleware('throttle:60,1')->get('/services/{slug}', function (
+    Request $request,
+    string $slug
+) {
     $locale = $request->query('locale', 'nl');
 
     $service = Service::query()
         ->where('is_active', true)
         ->where(function ($query) use ($slug, $locale) {
-            $query->where("slug->{$locale}", $slug)
-                  ->orWhere("slug->nl", $slug);
+            $query
+                ->where("slug->{$locale}", $slug)
+                ->orWhere('slug->nl', $slug)
+                ->orWhere('slug->fr', $slug)
+                ->orWhere('slug->en', $slug);
         })
         ->first();
 
-    if (! $service) {
-        return response()->json(['message' => 'Service not found'], 404);
+    if (!$service) {
+        return response()->json([
+            'message' => 'Service not found',
+        ], 404);
     }
 
     /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
     $s3 = Storage::disk('s3');
-    $thumbnailUrl = $service->thumbnail ? $s3->url($service->thumbnail) : null;
-    $heroImageUrl = $service->hero_image ? $s3->url($service->hero_image) : null;
 
-    $sections = $service->getTranslation('sections', $locale, false) ?? [];
+    $thumbnailUrl = $service->thumbnail
+        ? $s3->url($service->thumbnail)
+        : null;
+
+    $heroImageUrl = $service->hero_image
+        ? $s3->url($service->hero_image)
+        : null;
+
+    $sections = $service->getTranslation(
+        'sections',
+        $locale,
+        false
+    ) ?? [];
+
     if (is_array($sections)) {
-        $sections = array_map(function ($sec) use ($s3) {
-            if (!empty($sec['images']) && is_array($sec['images'])) {
-                $sec['images'] = array_map(fn ($img) => $s3->url($img), $sec['images']);
-            }
-            if (!empty($sec['image']) && is_string($sec['image'])) {
-                $sec['image'] = $s3->url($sec['image']);
-            }
-            return $sec;
-        }, $sections);
+        $sections = array_map(
+            function ($sec) use ($s3) {
+                if (
+                    !empty($sec['images']) &&
+                    is_array($sec['images'])
+                ) {
+                    $sec['images'] = array_map(
+                        fn ($img) => $s3->url($img),
+                        $sec['images']
+                    );
+                }
+
+                if (
+                    !empty($sec['image']) &&
+                    is_string($sec['image'])
+                ) {
+                    $sec['image'] =
+                        $s3->url($sec['image']);
+                }
+
+                return $sec;
+            },
+            $sections
+        );
     }
+
+    $nlSlug = $service->getTranslation(
+        'slug',
+        'nl',
+        false
+    );
 
     return response()->json([
         'data' => [
             'id' => $service->id,
-            'name' => $service->getTranslation('name', $locale, false) ?: $service->getTranslation('name', 'nl'),
-            'slug' => $service->getTranslation('slug', $locale, false) ?: $service->getTranslation('slug', 'nl'),
-            'badge' => $service->getTranslation('badge', $locale, false) ?: $service->getTranslation('badge', 'nl'),
-            'short_description' => $service->getTranslation('short_description', $locale, false),
-            'eyebrow' => $service->getTranslation('eyebrow', $locale, false),
-            'hero_title' => $service->getTranslation('hero_title', $locale, false),
-            'intro_text' => $service->getTranslation('intro_text', $locale, false),
-            'thumbnail' => $thumbnailUrl,
-            'hero_image' => $heroImageUrl,
-            'sections' => $sections,
-            'seo_title' => $service->getTranslation('seo_title', $locale, false),
-            'seo_description' => $service->getTranslation('seo_description', $locale, false),
+
+            'name' =>
+                $service->getTranslation(
+                    'name',
+                    $locale,
+                    false
+                )
+                ?: $service->getTranslation(
+                    'name',
+                    'nl'
+                ),
+
+            'slug' =>
+                $service->getTranslation(
+                    'slug',
+                    $locale,
+                    false
+                )
+                ?: $nlSlug,
+
+            'alternate_slugs' => [
+                'nl' =>
+                    $nlSlug,
+
+                'fr' =>
+                    $service->getTranslation(
+                        'slug',
+                        'fr',
+                        false
+                    )
+                    ?: $nlSlug,
+
+                'en' =>
+                    $service->getTranslation(
+                        'slug',
+                        'en',
+                        false
+                    )
+                    ?: $nlSlug,
+            ],
+
+            'badge' =>
+                $service->getTranslation(
+                    'badge',
+                    $locale,
+                    false
+                )
+                ?: $service->getTranslation(
+                    'badge',
+                    'nl'
+                ),
+
+            'short_description' =>
+                $service->getTranslation(
+                    'short_description',
+                    $locale,
+                    false
+                ),
+
+            'eyebrow' =>
+                $service->getTranslation(
+                    'eyebrow',
+                    $locale,
+                    false
+                ),
+
+            'hero_title' =>
+                $service->getTranslation(
+                    'hero_title',
+                    $locale,
+                    false
+                ),
+
+            'intro_text' =>
+                $service->getTranslation(
+                    'intro_text',
+                    $locale,
+                    false
+                ),
+
+            'thumbnail' =>
+                $thumbnailUrl,
+
+            'hero_image' =>
+                $heroImageUrl,
+
+            'sections' =>
+                $sections,
+
+            'seo_title' =>
+                $service->getTranslation(
+                    'seo_title',
+                    $locale,
+                    false
+                ),
+
+            'seo_description' =>
+                $service->getTranslation(
+                    'seo_description',
+                    $locale,
+                    false
+                ),
         ],
     ]);
 });
@@ -303,6 +558,21 @@ Route::get('/cities/{slug}', function ($slug) {
 
     return response()->json($city);
 });
+
+Route::middleware('throttle:20,1')->post(
+    '/energy-rating/estimate',
+    [EnergyRatingController::class, 'estimate']
+);
+
+Route::middleware('throttle:20,1')->post(
+    '/energy-savings/calculate',
+    [EnergySavingsController::class, 'calculate']
+);
+
+
+Route::post('/quote-requests', [QuoteRequestController::class, 'store'])
+    ->middleware('throttle:10,1');
+    
 
 
 function formatProjectResponse(Project $project, string $locale): array

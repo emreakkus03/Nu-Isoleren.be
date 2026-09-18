@@ -2,6 +2,11 @@ export interface ServiceItem {
   id: number;
   name: string;
   slug: string;
+  alternate_slugs: {
+  nl: string;
+  fr: string;
+  en: string;
+};
   badge: string;
   short_description: string | null;
   eyebrow: string | null;

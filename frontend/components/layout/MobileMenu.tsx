@@ -140,12 +140,12 @@ export default function MobileMenu() {
               </Link>
 
               <Link 
-                href="/" 
+                href="/grants" 
                 onClick={closeMenu} 
-                className={getSubLinkClasses('/premies')}
+                className={getSubLinkClasses('/grants')}
               >
                 <span>{t('topbar.grants')}</span>
-                {isActive('/premies') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                {isActive('/grants') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
               </Link>
 
               <Link 

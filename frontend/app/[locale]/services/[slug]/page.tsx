@@ -7,6 +7,7 @@ import { getServiceBySlug } from '@/lib/services';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import ServiceToc from '@/components/services/ServiceToc';
 import DynamicBulletIcon from '@/components/ui/DynamicBulletIcon';
+import ServiceAlternateLinks from '@/components/services/ServiceAlternateLinks';
 
 export const dynamic = 'force-dynamic';
 
@@ -1216,6 +1217,9 @@ export default async function ServiceDetailPage({
 
   return (
     <main className="min-h-screen bg-white pt-8 sm:pt-12 lg:pt-16 pb-20 sm:pb-24 w-full overflow-x-clip">
+       <ServiceAlternateLinks
+      alternateSlugs={service.alternate_slugs}
+    />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0">
         <div className="mb-6 sm:mb-8 overflow-x-auto py-1">
           <Breadcrumbs

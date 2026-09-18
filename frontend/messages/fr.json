@@ -27,18 +27,17 @@
       "description": "Découvrez les projets réalisés par Nu-Isoleren : isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité en Flandre et en Wallonie."
     },
     "faq": {
-  "title": "Questions fréquentes | Isolation, façades & humidité | Nu-Isoleren",
-  "description": "Trouvez les réponses à vos questions sur l’isolation des murs creux, l’isolation de toiture, le crépi, le nettoyage de façade, l’hydrofuge et le traitement de l’humidité en Flandre et en Wallonie."
-},
-"services": {
-  "title": "Services | Isolation, façades & humidité | Nu-Isoleren",
-  "description": "Découvrez les services de Nu-Isoleren : isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité en Flandre et en Wallonie."
-},
-"areas": {
-  "title": "Zones d'intervention | Isolation, façades & humidité | Nu-Isoleren",
-  "description": "Nu-Isoleren est votre spécialiste agréé en isolation. Nous intervenons quotidiennement pour l'isolation des murs creux, toitures et sols dans les régions et communes suivantes."
-},
-
+      "title": "Questions fréquentes | Isolation, façades & humidité | Nu-Isoleren",
+      "description": "Trouvez les réponses à vos questions sur l’isolation des murs creux, l’isolation de toiture, le crépi, le nettoyage de façade, l’hydrofuge et le traitement de l’humidité en Flandre et en Wallonie."
+    },
+    "services": {
+      "title": "Services | Isolation, façades & humidité | Nu-Isoleren",
+      "description": "Découvrez les services de Nu-Isoleren : isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité en Flandre et en Wallonie."
+    },
+    "areas": {
+      "title": "Zones d'intervention | Isolation, façades & humidité | Nu-Isoleren",
+      "description": "Nu-Isoleren est votre spécialiste agréé en isolation. Nous intervenons quotidiennement pour l'isolation des murs creux, toitures et sols dans les régions et communes suivantes."
+    },
     "contact": {
       "title": "Contact | Nu-Isoleren",
       "description": "Contactez Nu-Isoleren pour vos questions concernant l’isolation, les travaux de façade et le traitement de l’humidité en Flandre et en Wallonie."
@@ -46,9 +45,16 @@
     "about": {
       "title": "À propos | Isolation & façades | Nu-Isoleren",
       "description": "Découvrez Nu-Isoleren, basé à Hamme. Nous réalisons des travaux d’isolation, de façade et de traitement de l’humidité en Flandre et en Wallonie."
+    },
+    "prices": {
+      "title": "Prix isolation & calculateurs | Nu-Isoleren",
+      "description": "Consultez nos prix indicatifs pour l’isolation, les façades et le traitement de l’humidité. Calculez votre prix, vos économies d’énergie et votre valeur PEB."
+    },
+    "epcCalculator": {
+      "title": "Calcul PEB maison | Estimateur PEB gratuit | Nu-Isoleren",
+      "description": "Estimez la performance PEB de votre habitation grâce à notre outil gratuit. Isolation, fenêtres, chauffage et autres caractéristiques sont prises en compte."
     }
   },
-
   "Breadcrumbs": {
     "home": "Accueil",
     "projects": "Réalisations",
@@ -173,8 +179,8 @@
   },
   "ProjectsPage": {
     "badge": "NOS RÉALISATIONS",
-  "title": "Des projets réels. Des résultats visibles.",
-  "description": "Découvrez nos projets réalisés en isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité.",
+    "title": "Des projets réels. Des résultats visibles.",
+    "description": "Découvrez nos projets réalisés en isolation des murs creux, isolation de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l’humidité.",
     "noProjects": "Aucun projet trouvé pour cette sélection.",
     "filtersTitle": "Filtres",
     "projectsCount": "{count} réalisations",
@@ -197,35 +203,34 @@
     "ctaDescription": "Demandez un devis gratuit et sans engagement. Notre spécialiste se déplace pour un diagnostic thermique sur mesure.",
     "ctaButton": "Demander un devis gratuit"
   },
-
-
-
   "FaqPage": {
-  "title": "Questions fréquentes sur l’isolation et les travaux de façade",
-  "subtitle": "Trouvez rapidement des réponses claires sur nos services, nos méthodes, nos matériaux et les primes.",
-  "searchPlaceholder": "Recherchez une question ou un sujet (p. ex. prime, mur creux, garantie)...",
-  "filterAll": "Toutes les questions",
-  "filterGeneral": "Général & Primes",
-  "noResults": "Aucune question trouvée pour votre recherche.",
-  "cta": {
-    "title": "Vous ne trouvez pas votre réponse ?",
-    "description": "Nos experts sont à votre disposition pour vous conseiller gratuitement et sans engagement selon votre projet.",
-    "quoteButton": "Demander un devis gratuit",
-    "phoneButton": "Appeler directement"
-  }
-},
-"HomePage": {
-  "faq": {
-    "badge": "Foire Aux Questions",
-    "title": "D'autres questions ? Nous avons la réponse.",
-    "notListed": "Votre question n'y figure pas ?",
-    "viewAll": "Consulter toutes les questions"
-  }
-},
-
-
-"ServicesPage": { "eyebrow": "NOS SERVICES", "title": "Isolation, travaux de façade & traitement de l’humidité", "description": "De l’isolation des murs creux et de la toiture au crépi, au nettoyage de façade et au traitement de l’humidité. Découvrez nos solutions pour une habitation plus confortable, plus économe en énergie et mieux protégée." },
-"ServiceAreas": {
+    "title": "Questions fréquentes sur l’isolation et les travaux de façade",
+    "subtitle": "Trouvez rapidement des réponses claires sur nos services, nos méthodes, nos matériaux et les primes.",
+    "searchPlaceholder": "Recherchez une question ou un sujet (p. ex. prime, mur creux, garantie)...",
+    "filterAll": "Toutes les questions",
+    "filterGeneral": "Général & Primes",
+    "noResults": "Aucune question trouvée pour votre recherche.",
+    "cta": {
+      "title": "Vous ne trouvez pas votre réponse ?",
+      "description": "Nos experts sont à votre disposition pour vous conseiller gratuitement et sans engagement selon votre projet.",
+      "quoteButton": "Demander un devis gratuit",
+      "phoneButton": "Appeler directement"
+    }
+  },
+  "HomePage": {
+    "faq": {
+      "badge": "Foire Aux Questions",
+      "title": "D'autres questions ? Nous avons la réponse.",
+      "notListed": "Votre question n'y figure pas ?",
+      "viewAll": "Consulter toutes les questions"
+    }
+  },
+  "ServicesPage": {
+    "eyebrow": "NOS SERVICES",
+    "title": "Isolation, travaux de façade & traitement de l’humidité",
+    "description": "De l’isolation des murs creux et de la toiture au crépi, au nettoyage de façade et au traitement de l’humidité. Découvrez nos solutions pour une habitation plus confortable, plus économe en énergie et mieux protégée."
+  },
+  "ServiceAreas": {
     "badge": "Actif dans toute la Flandre et à Wallonie",
     "title": "Nos Zones d'Intervention",
     "intro": "Nu-Isoleren est votre spécialiste agréé en isolation. Nous intervenons quotidiennement pour l'isolation des murs creux, toitures et sols dans les régions suivantes.",
@@ -240,7 +245,6 @@
     "title": "Actif en Flandre et en Wallonie",
     "view_all": "Voir toutes les zones d'intervention"
   },
-
   "CityDetail": {
     "badge": "Actif dans la région de {city} {province}",
     "title": "Isolation et travaux de façade à {city}",
@@ -249,40 +253,38 @@
     "meta_title": "Isolation et travaux de façade à {city} | Nu-Isoleren",
     "meta_description": "Nu-Isoleren réalise l'isolation des murs creux, toitures, crépi et traitement de façade à {city} et ses environs."
   },
-
-
-"ContactPage": {
+  "ContactPage": {
     "hero": {
       "breadcrumb": "Contact",
       "badge": "CONTACT",
       "title": "Comment pouvons-nous vous aider ?",
       "description": "Vous avez une question sur l’isolation, les travaux de façade ou le traitement de l’humidité ? Contactez-nous. Nous vous conseillons volontiers de manière claire et sans engagement."
     },
-   "form": {
-  "badge": "ENVOYEZ-NOUS UN MESSAGE",
-  "title": "Contactez-nous",
-  "description": "Remplissez le formulaire et expliquez-nous brièvement comment nous pouvons vous aider. Nous vous recontacterons dès que possible.",
-  "fields": {
-    "firstName": "Prénom *",
-    "lastName": "Nom *",
-    "email": "Adresse e-mail *",
-    "phone": "Numéro de téléphone *",
-    "message": "Votre message *"
-  },
-  "placeholders": {
-    "firstName": "Prénom",
-    "lastName": "Nom",
-    "email": "nom@email.be",
-    "phone": "+32 ...",
-    "message": "Expliquez-nous brièvement votre question ou votre projet..."
-  },
-  "privacyPrefix": "J’ai lu la",
-  "privacyLink": "politique de confidentialité",
-  "submit": "Envoyer le message",
-  "submitting": "Envoi...",
-  "success": "Merci. Votre message a bien été reçu. Nous vous recontacterons dès que possible.",
-  "error": "Une erreur s’est produite lors de l’envoi. Veuillez réessayer ou nous contacter directement."
-},
+    "form": {
+      "badge": "ENVOYEZ-NOUS UN MESSAGE",
+      "title": "Contactez-nous",
+      "description": "Remplissez le formulaire et expliquez-nous brièvement comment nous pouvons vous aider. Nous vous recontacterons dès que possible.",
+      "fields": {
+        "firstName": "Prénom *",
+        "lastName": "Nom *",
+        "email": "Adresse e-mail *",
+        "phone": "Numéro de téléphone *",
+        "message": "Votre message *"
+      },
+      "placeholders": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "nom@email.be",
+        "phone": "+32 ...",
+        "message": "Expliquez-nous brièvement votre question ou votre projet..."
+      },
+      "privacyPrefix": "J’ai lu la",
+      "privacyLink": "politique de confidentialité",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi...",
+      "success": "Merci. Votre message a bien été reçu. Nous vous recontacterons dès que possible.",
+      "error": "Une erreur s’est produite lors de l’envoi. Veuillez réessayer ou nous contacter directement."
+    },
     "info": {
       "badge": "CONTACT DIRECT",
       "title": "Nous sommes à votre disposition",
@@ -294,7 +296,6 @@
       "response": "Nous essayons de répondre personnellement à chaque demande dans les meilleurs délais."
     }
   },
-
   "AboutPage": {
     "hero": {
       "breadcrumb": "À propos",
@@ -305,73 +306,1579 @@
       "imageAlt": "Véhicule d’entreprise de Nu-Isoleren"
     },
     "intro": {
-  "badge": "QUI SOMMES-NOUS",
-  "title": "Plus de 10 ans d’expérience en isolation et travaux de façade",
-  "description": "Basé à Hamme, Nu-Isoleren accompagne depuis plus de 10 ans les propriétaires dans leurs projets d’isolation, de façade et de traitement de l’humidité. Nous suivons chaque projet depuis la première évaluation jusqu’à l’exécution, en tenant compte de l’habitation et de sa situation spécifique.",
-  "descriptionSecondary": "Pour l’isolation des murs creux, nous travaillons selon un système certifié ATG. Nous accordons également une grande importance à une communication claire, une exécution correcte et une finition soignée. Chaque client bénéficie ainsi d’une solution techniquement réfléchie et adaptée à son habitation.",
-  "items": {
-    "experience": {
-      "title": "Plus de 10 ans d’expérience",
-      "description": "Une expérience pratique de longue date dans les travaux d’isolation, de façade et de traitement de l’humidité."
+      "badge": "QUI SOMMES-NOUS",
+      "title": "Plus de 10 ans d’expérience en isolation et travaux de façade",
+      "description": "Basé à Hamme, Nu-Isoleren accompagne depuis plus de 10 ans les propriétaires dans leurs projets d’isolation, de façade et de traitement de l’humidité. Nous suivons chaque projet depuis la première évaluation jusqu’à l’exécution, en tenant compte de l’habitation et de sa situation spécifique.",
+      "descriptionSecondary": "Pour l’isolation des murs creux, nous travaillons selon un système certifié ATG. Nous accordons également une grande importance à une communication claire, une exécution correcte et une finition soignée. Chaque client bénéficie ainsi d’une solution techniquement réfléchie et adaptée à son habitation.",
+      "items": {
+        "experience": {
+          "title": "Plus de 10 ans d’expérience",
+          "description": "Une expérience pratique de longue date dans les travaux d’isolation, de façade et de traitement de l’humidité."
+        },
+        "atg": {
+          "title": "Certifié ATG",
+          "description": "Pour l’isolation des murs creux, nous travaillons selon un système certifié ATG et ses conditions techniques."
+        },
+        "personal": {
+          "title": "Approche personnalisée",
+          "description": "Chaque habitation est évaluée individuellement afin de proposer une solution adaptée à la situation existante."
+        },
+        "finish": {
+          "title": "Exécution correcte et soignée",
+          "description": "Nous accordons autant d’attention à la qualité technique des travaux qu’à une finition propre et soignée."
+        }
+      }
     },
-    "atg": {
-      "title": "Certifié ATG",
-      "description": "Pour l’isolation des murs creux, nous travaillons selon un système certifié ATG et ses conditions techniques."
+    "approach": {
+      "badge": "NOTRE APPROCHE",
+      "title": "Du premier conseil à une finition soignée",
+      "description": "Une bonne exécution commence par une préparation correcte. Nous examinons d’abord la situation de votre habitation, déterminons la solution adaptée et réalisons ensuite les travaux avec soin.",
+      "steps": {
+        "assessment": {
+          "title": "Conseil & évaluation",
+          "description": "Nous examinons l’habitation, la situation existante et les travaux nécessaires afin de proposer une solution adaptée."
+        },
+        "proposal": {
+          "title": "Proposition claire",
+          "description": "Vous recevez une proposition claire avec l’approche choisie et un aperçu précis des travaux à réaliser."
+        },
+        "execution": {
+          "title": "Exécution soignée",
+          "description": "Nos professionnels réalisent les travaux avec soin et accordent une attention particulière à la qualité, aux détails et à la finition."
+        }
+      }
     },
-    "personal": {
-      "title": "Approche personnalisée",
-      "description": "Chaque habitation est évaluée individuellement afin de proposer une solution adaptée à la situation existante."
-    },
-    "finish": {
-      "title": "Exécution correcte et soignée",
-      "description": "Nous accordons autant d’attention à la qualité technique des travaux qu’à une finition propre et soignée."
-    }
-  }
-},
-"approach": {
-  "badge": "NOTRE APPROCHE",
-  "title": "Du premier conseil à une finition soignée",
-  "description": "Une bonne exécution commence par une préparation correcte. Nous examinons d’abord la situation de votre habitation, déterminons la solution adaptée et réalisons ensuite les travaux avec soin.",
-  "steps": {
-    "assessment": {
-      "title": "Conseil & évaluation",
-      "description": "Nous examinons l’habitation, la situation existante et les travaux nécessaires afin de proposer une solution adaptée."
-    },
-    "proposal": {
-      "title": "Proposition claire",
-      "description": "Vous recevez une proposition claire avec l’approche choisie et un aperçu précis des travaux à réaliser."
-    },
-    "execution": {
-      "title": "Exécution soignée",
-      "description": "Nos professionnels réalisent les travaux avec soin et accordent une attention particulière à la qualité, aux détails et à la finition."
-    }
-  }
-},
-"materials": {
-  "badge": "MATÉRIAUX & TECHNIQUES",
-  "title": "Des solutions que nous maîtrisons techniquement",
-  "description": "Une bonne réalisation ne dépend pas uniquement du savoir-faire, mais aussi du choix de matériaux et de techniques adaptés. Nous sélectionnons donc chaque solution en fonction de l’habitation, de l’application et des exigences techniques du projet.",
-"descriptionSecondary": "Pour l’isolation des murs creux, nous travaillons avec des billes EPS de haute qualité d’Isomo nv à Courtrai-Heule, leader belge du marché depuis les années 1950.",  "items": {
     "materials": {
-      "title": "Matériaux éprouvés",
-      "description": "Nous sélectionnons les matériaux selon leurs propriétés techniques, leur application et leur compatibilité avec l’habitation existante."
+      "badge": "MATÉRIAUX & TECHNIQUES",
+      "title": "Des solutions que nous maîtrisons techniquement",
+      "description": "Une bonne réalisation ne dépend pas uniquement du savoir-faire, mais aussi du choix de matériaux et de techniques adaptés. Nous sélectionnons donc chaque solution en fonction de l’habitation, de l’application et des exigences techniques du projet.",
+      "descriptionSecondary": "Pour l’isolation des murs creux, nous travaillons avec des billes EPS de haute qualité d’Isomo nv à Courtrai-Heule, leader belge du marché depuis les années 1950.",
+      "items": {
+        "materials": {
+          "title": "Matériaux éprouvés",
+          "description": "Nous sélectionnons les matériaux selon leurs propriétés techniques, leur application et leur compatibilité avec l’habitation existante."
+        },
+        "innovation": {
+          "title": "Toujours évoluer",
+          "description": "Nous suivons activement les nouvelles techniques et évolutions dans les domaines de l’isolation, des façades et du traitement de l’humidité."
+        }
+      },
+      "cta": "Découvrez nos services",
+      "imageAlt": "Matériaux et techniques utilisés par Nu-Isoleren"
     },
-    "innovation": {
-      "title": "Toujours évoluer",
-      "description": "Nous suivons activement les nouvelles techniques et évolutions dans les domaines de l’isolation, des façades et du traitement de l’humidité."
+    "projects": {
+      "badge": "NOS RÉALISATIONS",
+      "title": "De vrais projets. Des résultats visibles.",
+      "description": "Découvrez quelques-unes de nos réalisations récentes en isolation, travaux de façade et traitement de l’humidité.",
+      "cta": "Voir toutes les réalisations"
     }
   },
-  "cta": "Découvrez nos services",
-  "imageAlt": "Matériaux et techniques utilisés par Nu-Isoleren"
+  "PricesPage": {
+    "hero": {
+      "breadcrumb": "Prix",
+      "badge": "PRIX & CALCULS",
+      "title": "Prix de l’isolation, des façades et du traitement de l’humidité",
+      "description": "Le prix de votre projet dépend de votre habitation, de la surface, des matériaux et de la solution choisie. Découvrez les facteurs qui influencent le prix et obtenez une première estimation grâce à nos outils de calcul.",
+      "cta": "Voir nos calculateurs"
+    },
+    "tools": {
+      "badge": "CALCULEZ & VÉRIFIEZ",
+      "title": "Obtenez rapidement un aperçu de votre habitation",
+      "description": "Utilisez nos outils gratuits pour obtenir une première estimation du prix, des économies d’énergie, de la valeur PEB ou des travaux adaptés à votre habitation.",
+      "price": {
+        "title": "Calculez votre prix",
+        "description": "Choisissez les travaux que vous souhaitez réaliser et obtenez une première estimation du prix pour votre habitation.",
+        "cta": "Calculer le prix"
+      },
+      "savings": {
+        "title": "Calculez vos économies d’énergie",
+        "description": "Découvrez combien d’énergie vous pourriez économiser en améliorant l’isolation de votre habitation.",
+        "cta": "Calculer les économies"
+      },
+      "epc": {
+        "title": "Estimez votre valeur PEB",
+        "description": "Répondez à quelques questions sur votre habitation et obtenez une estimation indicative de votre performance énergétique.",
+        "cta": "Estimer la valeur PEB"
+      },
+      "homeCheck": {
+        "title": "Faites le diagnostic de votre habitation",
+        "description": "Vous ne savez pas quels travaux sont nécessaires ? Découvrez les solutions adaptées à votre habitation.",
+        "cta": "Commencer le diagnostic"
+      }
+    },
+    "servicePrices": {
+      "badge": "PRIX PAR SERVICE",
+      "title": "Combien coûtent nos travaux ?",
+      "description": "Consultez les prix indicatifs par service. Le prix final dépend notamment de la surface, de l’état de l’habitation, de la solution choisie et de l’accessibilité.",
+      "calculate": "Calculer votre prix",
+      "service": "Voir le service",
+      "disclaimer": "Les prix indiqués sont des estimations. Pour établir un prix exact, nous tenons toujours compte de la situation spécifique de votre habitation.",
+      "cavityWall": {
+        "title": "Isolation des murs creux",
+        "price": "21 € – 25 € par m²",
+        "description": "Le prix dépend notamment de la surface, de la largeur et de l’état de la coulisse ainsi que de l’accessibilité de la façade."
+      },
+      "roof": {
+        "title": "Isolation de toiture",
+        "price": "X € – X €",
+        "description": "Le prix dépend du type de toiture, de la surface, du matériau isolant choisi et de la méthode de pose."
+      },
+      "crepi": {
+        "title": "Crépi",
+        "price": "X € – X €",
+        "description": "Le prix varie selon la surface de la façade, le support, la finition souhaitée et la présence éventuelle d’une isolation extérieure."
+      },
+      "facadeCleaning": {
+        "title": "Nettoyage de façade",
+        "price": "X € – X €",
+        "description": "Le coût dépend de la surface, du niveau d’encrassement, du matériau de façade et de la méthode de nettoyage appropriée."
+      },
+      "hydrofuge": {
+        "title": "Hydrofuge",
+        "price": "X € – X €",
+        "description": "Le prix dépend principalement de la surface, de l’état de la façade et des travaux préparatoires nécessaires."
+      },
+      "cavityRemoval": {
+        "title": "Retrait de l’isolation des murs creux",
+        "price": "X € – X €",
+        "description": "Le prix dépend de la quantité d’isolant existant, de l’accessibilité de la coulisse et de l’état de la façade."
+      },
+      "risingDamp": {
+        "title": "Traitement de l’humidité ascensionnelle",
+        "price": "X € – X €",
+        "description": "Le coût dépend de l’ampleur du problème d’humidité, de la longueur et de l’épaisseur des murs et du traitement choisi."
+      }
+    },
+    "methodology": {
+      "badge": "PRIX INDICATIFS TRANSPARENTS",
+      "title": "Comment déterminons-nous nos prix indicatifs ?",
+      "description": "Les prix affichés sur cette page donnent une première estimation réaliste. Ils sont basés sur nos fourchettes de prix habituelles pour les différents travaux, mais chaque habitation et chaque projet est unique.",
+      "items": {
+        "ranges": {
+          "title": "Prix indicatifs par service",
+          "description": "Lorsque cela est possible, nous indiquons une fourchette claire par mètre carré ou par type de travaux."
+        },
+        "project": {
+          "title": "Adapté à la situation",
+          "description": "Le prix final dépend de la situation technique, de l’ampleur des travaux et de la solution choisie."
+        },
+        "quote": {
+          "title": "Prix exact sur devis",
+          "description": "Pour obtenir un prix définitif, nous examinons votre projet individuellement et établissons un devis sur mesure."
+        }
+      }
+    },
+    "examples": {
+      "badge": "EXEMPLES DE PRIX",
+      "title": "Combien coûte un projet moyen ?",
+      "description": "Découvrez quelques exemples simples basés sur nos prix indicatifs. Vous obtenez ainsi rapidement une idée du coût possible pour votre habitation.",
+      "cavityWall": {
+        "title": "Isolation des murs creux",
+        "example": "Exemple : 100 m²",
+        "price": "2.100 € – 2.500 €"
+      },
+      "roof": {
+        "title": "Isolation de toiture",
+        "example": "Exemple : 80 m²",
+        "price": "X € – X €"
+      },
+      "crepi": {
+        "title": "Crépi",
+        "example": "Exemple : 100 m²",
+        "price": "X € – X €"
+      },
+      "facadeCleaning": {
+        "title": "Nettoyage de façade",
+        "example": "Exemple : 100 m²",
+        "price": "X € – X €"
+      },
+      "hydrofuge": {
+        "title": "Hydrofuge",
+        "example": "Exemple : 100 m²",
+        "price": "X € – X €"
+      },
+      "cavityRemoval": {
+        "title": "Retrait de l’isolation des murs creux",
+        "example": "Exemple : 100 m²",
+        "price": "X € – X €"
+      },
+      "risingDamp": {
+        "title": "Traitement de l’humidité ascensionnelle",
+        "example": "Exemple : 10 mètres courants",
+        "price": "X € – X €"
+      },
+      "cta": "Calculer votre prix",
+      "disclaimer": "Exemples indicatifs. Le prix exact dépend de votre habitation et de votre projet."
+    },
+    "grants": {
+      "badge": "PRIMES & COÛT FINAL",
+      "title": "Les primes peuvent réduire votre investissement final",
+      "description": "Pour certains travaux d’isolation, vous pouvez éventuellement bénéficier de primes ou d’aides financières. Les conditions dépendent notamment du type de travaux, de votre habitation et de la réglementation en vigueur.",
+      "descriptionSecondary": "Ne regardez donc pas uniquement le prix des travaux, mais aussi les primes qui peuvent éventuellement s’appliquer à votre projet.",
+      "cta": "Voir toutes les primes"
+    },
+    "faq": {
+      "badge": "QUESTIONS FRÉQUENTES",
+      "title": "Questions fréquentes sur les prix et les calculs",
+      "description": "Trouvez les réponses aux questions fréquentes sur les prix de l’isolation, les devis, les estimations PEB et le coût de votre projet."
+    }
+  },
+  "EpcPage": {
+    "hero": {
+      "pricesBreadcrumb": "Tarifs",
+      "breadcrumb": "Calcul PEB",
+      "badge": "CALCULATEUR PEB",
+      "title": "Estimez la performance PEB de votre habitation",
+      "description": "Répondez à quelques questions sur votre habitation, son isolation, ses fenêtres et son chauffage afin d’obtenir une première estimation de sa performance énergétique.",
+      "disclaimer": "Cette estimation est indicative et ne remplace pas un certificat PEB officiel.",
+      "cta": "Commencer le calcul PEB"
+    },
+    "calculator": {
+      "badge": "CALCUL PEB",
+      "title": "Estimez la performance énergétique de votre habitation",
+      "description": "Répondez à quelques questions sur votre habitation et ses installations afin d’obtenir une estimation indicative de sa performance énergétique.",
+      "progress": "Étape {current} sur {total}",
+     "previous": "Précédent",
+"next": "Suivant",
+"calculate": "Estimer mon PEB",
+"calculating": "Calcul du PEB en cours...",
+"error": "Le calcul n’a pas pu être effectué. Veuillez réessayer.",
+"comingSoon": "Cette étape sera ajoutée ensuite.",
+      "disclaimer": "Ce calcul fournit une estimation indicative et ne remplace pas un certificat PEB officiel.",
+      "building": {
+        "badge": "VOTRE HABITATION",
+        "title": "Commençons par quelques informations sur votre habitation",
+        "description": "Ces informations de base nous permettent de sélectionner la méthode régionale et les hypothèses appropriées.",
+        "region": {
+          "question": "Dans quelle région se situe votre habitation ?",
+          "options": {
+            "flanders": "Flandre",
+            "brussels": "Bruxelles",
+            "wallonia": "Wallonie"
+          }
+        },
+        "type": {
+          "question": "Quel est votre type d’habitation ?",
+          "options": {
+            "detached": "Maison quatre façades",
+            "semi_detached": "Maison trois façades",
+            "terraced": "Maison mitoyenne",
+            "apartment": "Appartement"
+          }
+        },
+        "constructionYear": {
+          "label": "Quelle est l’année de construction ?",
+          "placeholder": "Ex. 1985",
+          "help": "Indiquez l’année de construction d’origine de l’habitation."
+        },
+        "floorArea": {
+          "label": "Surface de plancher chauffée",
+          "placeholder": "Ex. 145",
+          "help": "Indiquez la meilleure estimation possible de la surface de plancher chauffée."
+        }
+      },
+      "roof": {
+        "badge": "TOITURE & GRENIER",
+        "title": "Comment votre toiture est-elle isolée ?",
+        "description": "La toiture ou le plancher du grenier constitue une partie importante de l’enveloppe thermique de votre habitation.",
+        "type": {
+          "question": "Quel type de toiture se trouve au-dessus de votre habitation ?",
+          "apartmentHelp": "Si un autre logement chauffé se trouve directement au-dessus de votre appartement, choisissez « Pas de toiture directe ».",
+          "options": {
+            "pitched": "Toiture inclinée",
+            "flat": "Toiture plate",
+            "mixed": "Combinaison de toiture inclinée et plate",
+            "no_direct_roof": "Pas de toiture directe"
+          }
+        },
+        "insulationLocation": {
+          "question": "Où se trouve l’isolation ?",
+          "help": "Dans le cas d’un grenier non chauffé, l’isolation peut se trouver dans le plancher du grenier plutôt que dans la toiture.",
+          "options": {
+            "roof": "Dans la toiture",
+            "attic_floor": "Dans le plancher du grenier",
+            "both": "Dans la toiture et le plancher du grenier",
+            "none": "Pas d’isolation",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "material": {
+          "question": "Quel matériau isolant a principalement été utilisé ?",
+          "options": {
+            "mineral_wool": "Laine de verre ou laine de roche",
+            "pir_pur": "PIR ou PUR",
+            "eps_xps": "EPS ou XPS",
+            "cellulose_wood_fibre": "Cellulose ou fibre de bois",
+            "other": "Autre matériau",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "thickness": {
+          "label": "Quelle est l’épaisseur de l’isolation ?",
+          "placeholder": "Ex. 16",
+          "help": "Une estimation suffit. Si vous ne connaissez pas l’épaisseur, choisissez « Je ne sais pas » pour le matériau."
+        }
+      },
+      "walls": {
+        "badge": "MURS EXTÉRIEURS",
+        "title": "Comment vos murs extérieurs sont-ils isolés ?",
+        "description": "L’isolation des murs extérieurs influence fortement les pertes de chaleur et la performance énergétique de votre habitation.",
+        "type": {
+          "question": "Comment vos murs extérieurs sont-ils isolés ?",
+          "options": {
+            "cavity": "Isolation des murs creux",
+            "external": "Isolation par l’extérieur",
+            "internal": "Isolation par l’intérieur",
+            "mixed": "Combinaison de plusieurs systèmes",
+            "none": "Pas d’isolation des murs",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "material": {
+          "question": "Quel matériau isolant a principalement été utilisé ?",
+          "options": {
+            "mineral_wool": "Laine de verre ou laine de roche",
+            "pir_pur": "PIR ou PUR",
+            "eps_xps": "EPS ou XPS",
+            "cellulose_wood_fibre": "Cellulose ou fibre de bois",
+            "other": "Autre matériau",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "thickness": {
+          "label": "Quelle est l’épaisseur de l’isolation ?",
+          "placeholder": "Ex. 8"
+        }
+      },
+      "floor": {
+        "badge": "PLANCHER",
+        "title": "Comment le plancher de votre habitation est-il constitué ?",
+        "description": "La chaleur peut également se perdre par le plancher. Nous examinons donc ce qui se trouve sous les espaces chauffés et si le plancher est isolé.",
+        "boundary": {
+          "question": "Qu’y a-t-il sous le plancher chauffé ?",
+          "options": {
+            "ground": "Sol",
+            "basement": "Cave",
+            "crawl_space": "Vide sanitaire",
+            "outside": "Air extérieur",
+            "heated_space": "Autre espace chauffé",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "insulated": {
+          "question": "Le plancher est-il isolé ?"
+        },
+        "answers": {
+          "yes": "Oui",
+          "no": "Non",
+          "unknown": "Je ne sais pas"
+        },
+        "material": {
+          "question": "Quel matériau isolant a été utilisé ?",
+          "options": {
+            "mineral_wool": "Laine de verre ou laine de roche",
+            "pir_pur": "PIR ou PUR",
+            "eps_xps": "EPS ou XPS",
+            "cellulose_wood_fibre": "Cellulose ou fibre de bois",
+            "other": "Autre matériau",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "thickness": {
+          "label": "Quelle est l’épaisseur de l’isolation ?"
+        }
+      },
+      "windows": {
+        "badge": "FENÊTRES",
+        "title": "Quels types de fenêtres possède votre habitation ?",
+        "description": "Le type de vitrage et de châssis influence les pertes de chaleur par les fenêtres.",
+        "glazing": {
+          "question": "Quel type de vitrage est principalement présent ?",
+          "options": {
+            "single": "Simple vitrage",
+            "double": "Double vitrage classique",
+            "high_efficiency_double": "Double vitrage à haut rendement",
+            "triple": "Triple vitrage",
+            "mixed": "Plusieurs types de vitrage",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "frame": {
+          "question": "Quel type de châssis est principalement présent ?",
+          "options": {
+            "wood": "Bois",
+            "pvc": "PVC",
+            "aluminium": "Aluminium",
+            "mixed": "Plusieurs matériaux",
+            "unknown": "Je ne sais pas"
+          }
+        }
+      },
+      "heating": {
+        "badge": "CHAUFFAGE & EAU CHAUDE",
+        "title": "Comment votre habitation est-elle chauffée ?",
+        "source": {
+          "question": "Quel est le principal mode de chauffage de votre habitation ?",
+          "options": {
+            "gas": "Gaz naturel",
+            "oil": "Mazout",
+            "heat_pump": "Pompe à chaleur",
+            "electric": "Électricité",
+            "wood_pellets": "Bois ou pellets",
+            "district": "Réseau de chaleur",
+            "other": "Autre source d’énergie",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "system": {
+          "question": "Quel système de chauffage possédez-vous ?",
+          "options": {
+            "condensing_boiler": "Chaudière à condensation",
+            "non_condensing_boiler": "Chaudière non à condensation",
+            "heat_pump_air_water": "Pompe à chaleur air-eau",
+            "heat_pump_ground_water": "Pompe à chaleur géothermique",
+            "heat_pump_air_air": "Pompe à chaleur air-air",
+            "electric_resistance": "Chauffage électrique direct",
+            "stove": "Poêle",
+            "district": "Réseau de chaleur",
+            "other": "Autre système",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "year": {
+          "label": "Quand l’installation de chauffage a-t-elle été installée ?",
+          "placeholder": "Ex. 2018",
+          "help": "Laissez ce champ vide si vous ne connaissez pas l’année d’installation."
+        },
+        "hotWater": {
+          "question": "Comment votre eau chaude sanitaire est-elle produite ?",
+          "options": {
+            "same_as_heating": "Par la même installation que le chauffage",
+            "electric_boiler": "Boiler électrique",
+            "heat_pump_boiler": "Boiler thermodynamique",
+            "gas_water_heater": "Chauffe-eau au gaz",
+            "solar_supported": "Avec l’aide d’un chauffe-eau solaire",
+            "other": "Autre système",
+            "unknown": "Je ne sais pas"
+          }
+        },
+        "cooling": {
+          "question": "Votre habitation dispose-t-elle d’un refroidissement actif ?",
+          "options": {
+            "none": "Pas de refroidissement actif",
+            "air_conditioning": "Climatisation",
+            "heat_pump": "Refroidissement via pompe à chaleur",
+            "other": "Autre système",
+            "unknown": "Je ne sais pas"
+          }
+        }
+      },
+      "ventilation": {
+        "badge": "VENTILATION",
+        "title": "Comment votre habitation est-elle ventilée ?",
+        "description": "La ventilation influence la performance énergétique tout en assurant un apport suffisant d’air frais dans l’habitation.",
+        "naturalOpenings": {
+          "question": "Des grilles de ventilation ou d’autres ouvertures permanentes d’amenée d’air sont-elles présentes ?"
+        },
+        "mechanicalExtraction": {
+          "question": "L’air est-il extrait mécaniquement, par exemple dans la salle de bains, les toilettes ou la cuisine ?"
+        },
+        "mechanicalSupply": {
+          "question": "L’air frais est-il insufflé mécaniquement dans les pièces de vie ou les chambres ?"
+        },
+        "heatRecovery": {
+          "question": "Le système de ventilation dispose-t-il d’une récupération de chaleur ?"
+        },
+        "answers": {
+          "yes": "Oui",
+          "no": "Non",
+          "unknown": "Je ne sais pas"
+        }
+      },
+      "renewable": {
+        "badge": "ÉNERGIE RENOUVELABLE",
+        "title": "Votre habitation utilise-t-elle des énergies renouvelables ?",
+        "description": "Les panneaux photovoltaïques et l’énergie solaire peuvent influencer la performance énergétique calculée de votre habitation.",
+        "solarPanels": {
+          "question": "Votre habitation possède-t-elle des panneaux photovoltaïques ?"
+        },
+        "solarPower": {
+          "label": "Quelle est la puissance totale des panneaux photovoltaïques ?",
+          "placeholder": "Ex. 4,2",
+          "help": "La puissance de crête totale figure généralement sur l’offre ou la fiche technique de votre installation."
+        },
+        "solarThermal": {
+          "question": "Votre habitation possède-t-elle un chauffe-eau solaire ?"
+        },
+        "answers": {
+          "yes": "Oui",
+          "no": "Non",
+          "unknown": "Je ne sais pas"
+        }
+      },
+      "result": {
+  "badge": "VOTRE RÉSULTAT",
+  "title": "Performance énergétique estimée",
+  "description": "Sur la base des caractéristiques renseignées, voici une estimation indicative de la performance énergétique de votre habitation.",
+  "score": "Score énergétique estimé",
+  "label": "Classe énergétique estimée",
+  "range": "Fourchette estimée",
+  "warning": "Ce résultat est une estimation indicative et ne constitue pas un certificat PEB officiel. Seule la méthode de certification régionale compétente peut déterminer une performance énergétique officielle.",
+  "again": "Recalculer"
+}
+    },
+    "explanation": {
+  "badge": "PERFORMANCE ÉNERGÉTIQUE",
+  "title": "Que signifie votre score PEB ?",
+  "description": "Le score énergétique indique la performance énergétique d’un logement dans des conditions d’utilisation standardisées. Il est exprimé en kilowattheures d’énergie primaire par mètre carré et par an, soit kWh/(m².an).",
+  "secondary": "Plus le score est faible, plus le logement est performant sur le plan énergétique. Le calcul tient notamment compte de l’isolation de la toiture, des murs et du plancher, des fenêtres, du chauffage, de l’eau chaude sanitaire, de la ventilation et des énergies renouvelables.",
+  "score": {
+    "badge": "SCORE ÉNERGÉTIQUE",
+    "title": "Un score plus faible indique une meilleure performance énergétique",
+    "description": "Le score représente la performance énergétique annuelle calculée par mètre carré de logement. Un logement avec un score plus faible nécessite généralement moins d’énergie primaire dans des conditions standardisées."
+  },
+  "label": {
+    "badge": "LABEL ÉNERGÉTIQUE",
+    "title": "Le label permet de comprendre rapidement le résultat",
+    "description": "La valeur énergétique calculée est associée à une classe énergétique. La Flandre, Bruxelles et la Wallonie utilisent chacune leur propre échelle et leurs propres seuils."
+  },
+  "usage": {
+    "badge": "CALCUL THÉORIQUE",
+    "title": "Le score PEB n’est pas votre consommation réelle",
+    "description": "La méthode PEB utilise des conditions standardisées afin de pouvoir comparer différents logements. Votre consommation réelle peut être différente selon votre comportement, le nombre d’occupants et la manière dont le logement est chauffé."
+  }
 },
-"projects": {
-  "badge": "NOS RÉALISATIONS",
-  "title": "De vrais projets. Des résultats visibles.",
-  "description": "Découvrez quelques-unes de nos réalisations récentes en isolation, travaux de façade et traitement de l’humidité.",
-  "cta": "Voir toutes les réalisations"
+"labels": {
+  "badge": "LABELS PEB & EPC",
+  "title": "Quel score énergétique correspond à quel label ?",
+  "description": "Les seuils des classes énergétiques diffèrent selon la région. Découvrez comment les scores EPC et PEB sont classés en Flandre, à Bruxelles et en Wallonie.",
+  "energyLabel": "Classe énergétique",
+  "regions": {
+    "flanders": "Flandre",
+    "brussels": "Bruxelles",
+    "wallonia": "Wallonie"
+  },
+  "content": {
+    "flanders": {
+      "title": "Labels EPC en Flandre",
+      "description": "En Flandre, le label EPC résidentiel s’étend de A+ à F. Plus le score énergétique est faible, plus le logement est performant.",
+      "note": "Les seuils affichés correspondent à l’échelle EPC flamande pour les unités résidentielles. Seul un certificat EPC officiel peut déterminer le label définitif d’un logement."
+    },
+    "brussels": {
+      "title": "Labels PEB à Bruxelles",
+      "description": "Dans la Région de Bruxelles-Capitale, l’échelle PEB actuelle des logements s’étend de A à G.",
+      "note": "Bruxelles applique sa propre méthode PEB et ses propres seuils. Un score EPC flamand ne peut donc pas être directement interprété comme un label PEB bruxellois."
+    },
+    "wallonia": {
+      "title": "Labels PEB en Wallonie",
+      "description": "En Wallonie, les logements sont classés sur une échelle PEB allant de A++ à G selon leur consommation théorique spécifique d’énergie primaire.",
+      "note": "La Wallonie applique sa propre méthode de calcul PEB et sa propre échelle de labels. Seul un certificat PEB officiel détermine le label définitif."
+    }
+  }
+},
+"improvements": {
+  "badge": "AMÉLIORER LE PEB",
+  "title": "Comment améliorer la performance PEB de votre habitation ?",
+  "description": "L’amélioration de la performance énergétique commence généralement par la réduction des pertes de chaleur. L’isolation de la toiture et des murs extérieurs peut donc jouer un rôle important dans l’amélioration du score énergétique d’un logement.",
+  "cavity": {
+    "title": "Isolation des murs creux",
+    "description": "Si votre habitation possède un mur creux adapté et non isolé, l’isolation de la coulisse peut réduire les pertes de chaleur par les murs extérieurs. L’isolation des murs est prise en compte dans l’évaluation de la performance énergétique.",
+    "link": "Voir l’isolation des murs creux"
+  },
+  "roof": {
+    "title": "Isolation de la toiture",
+    "description": "Une toiture insuffisamment isolée peut entraîner d’importantes pertes de chaleur. Selon la configuration du logement, la toiture ou le plancher du grenier peut être isolé afin d’améliorer l’enveloppe thermique.",
+    "link": "Voir l’isolation de toiture"
+  },
+  "facade": {
+    "title": "Isolation de façade avec crépi",
+    "description": "Lorsque l’isolation des murs creux n’est pas possible ou suffisante, l’isolation par l’extérieur peut constituer une solution. Une couche isolante est alors combinée à une nouvelle finition de façade.",
+    "link": "Voir le crépi avec isolation"
+  },
+  "other": {
+    "title": "D’autres éléments influencent également votre score énergétique",
+    "description": "Outre l’isolation, le calcul de la performance énergétique tient également compte des fenêtres et portes, du chauffage, de l’eau chaude sanitaire, de la ventilation et des énergies renouvelables.",
+    "windows": {
+      "title": "Fenêtres & vitrage",
+      "description": "Un vitrage à haut rendement ou triple peut réduire les pertes de chaleur, notamment lorsque le logement possède encore du simple vitrage ou un ancien double vitrage."
+    },
+    "heating": {
+      "title": "Chauffage",
+      "description": "Le rendement et le type de système de chauffage influencent la consommation énergétique calculée du logement."
+    },
+    "solar": {
+      "title": "Énergie solaire",
+      "description": "Les panneaux photovoltaïques et les chauffe-eau solaires peuvent contribuer à la performance énergétique en produisant une partie de l’énergie à partir de sources renouvelables."
+    }
+  },
+  "note": "La mesure ayant le plus d’impact dépend de chaque habitation. Un certificat PEB ou EPC officiel et ses recommandations fournissent davantage d’informations sur la situation spécifique du logement."
+},
+"indicative": {
+  "badge": "ESTIMATION INDICATIVE",
+  "title": "Pourquoi ce calcul PEB ou EPC reste-t-il une estimation ?",
+  "description": "Notre calculateur fournit une première estimation de la performance énergétique à partir des informations que vous renseignez. Un calcul PEB ou EPC officiel utilise davantage de données techniques et suit la méthode de certification de la région concernée.",
+  "data": {
+    "title": "Les caractéristiques de votre habitation",
+    "description": "Le calcul tient notamment compte du type de logement, de l’année de construction, de la superficie, de l’isolation, du vitrage, du chauffage, de la ventilation et des énergies renouvelables."
+  },
+  "assumptions": {
+    "title": "Les informations manquantes doivent être estimées",
+    "description": "Lorsque certaines données techniques ne sont pas connues, le calculateur utilise des hypothèses. Le résultat peut donc différer de la performance énergétique officielle."
+  },
+  "official": {
+    "title": "Un certificat officiel nécessite une évaluation officielle",
+    "description": "Seul un certificat PEB ou EPC établi conformément à la méthode régionale compétente peut déterminer le score énergétique et le label officiels."
+  },
+  "notice": {
+    "title": "Important :",
+    "description": "utilisez ce résultat comme première indication de la performance énergétique de votre habitation et non comme un certificat PEB ou EPC officiel."
+  }
+},
+"faq": {
+  "badge": "QUESTIONS FRÉQUENTES",
+  "title": "Questions fréquentes sur le PEB et l’EPC",
+  "description": "Découvrez les réponses aux questions courantes sur les scores énergétiques, les labels, notre calculateur et l’amélioration de la performance énergétique de votre habitation."
 }
   },
+  "EnergySavingsPage": {
+  "metadata": {
+    "title": "Calculer les économies d'énergie avec l'isolation | Nu-Isoleren",
+    "description": "Estimez les économies d'énergie possibles grâce à l'isolation de la toiture, des murs creux ou de la façade. Obtenez gratuitement une estimation indicative pour votre habitation."
+  },
+  "hero": {
+    "pricesBreadcrumb": "Tarifs",
+  "breadcrumb": "Calcul des économies d’énergie",
+    "badge": "CALCUL DES ÉCONOMIES D'ÉNERGIE",
+    "title": "Combien pouvez-vous économiser grâce à l'isolation ?",
+    "description": "Calculez gratuitement les économies d'énergie que vous pourriez réaliser en améliorant l'isolation de votre habitation. Renseignez quelques informations sur votre logement et son isolation actuelle pour obtenir une estimation indicative de vos économies annuelles.",
+    "cta": "Calculer mes économies",
+    "disclaimer": "Le résultat est indicatif. Les économies réelles dépendent de votre habitation, de votre consommation d'énergie et de vos habitudes de chauffage."
+  },
+  "calculator": {
+  "badge": "CALCULATEUR D'ÉCONOMIES",
+  "title": "Estimez vos économies d'énergie potentielles",
+  "description": "Répondez à quelques questions sur votre habitation, son isolation actuelle et son mode de chauffage. Vous recevrez ensuite une estimation indicative des économies d'énergie de chauffage que l'isolation pourrait permettre.",
+  "calculating": "Calcul des économies en cours...",
+"error": "Les économies d'énergie n'ont pas pu être calculées. Veuillez réessayer.",
+"result": {
+  "badge": "VOTRE RÉSULTAT",
+  "title": "Vos économies d'énergie estimées",
+  "description": "Sur la base de votre habitation, de son isolation actuelle, de votre système de chauffage et de la mesure d'isolation choisie, vous obtenez l'estimation indicative ci-dessous.",
+  "energy": "Économie d'énergie estimée",
+  "percentage": "Économie estimée",
+  "heatingEnergy": "de votre énergie annuelle de chauffage",
+  "range": "Fourchette estimée",
+  "rangeDescription": "Les économies réelles peuvent varier selon votre habitation, la qualité des travaux d'isolation et vos habitudes de chauffage.",
+  "cost": "Économie financière estimée",
+  "year": "an",
+  "perYear": "par an",
+  "warning": "Ce calcul est indicatif et ne constitue ni un audit énergétique ni une garantie concernant votre future consommation ou facture d'énergie. Les économies réelles dépendent notamment de la construction existante, de la qualité des travaux, des conditions météorologiques, de la température intérieure et de vos habitudes de chauffage.",
+  "again": "Recalculer"
+},
+  "progress": "Étape {current} sur {total}",
+  "previous": "Précédent",
+  "next": "Suivant",
+  "calculate": "Calculer mes économies",
+  "disclaimer": "Ce calculateur fournit une estimation indicative. Les économies réelles dépendent notamment de l'habitation, de la qualité des travaux, de la température intérieure et des habitudes de chauffage.",
+  "building": {
+    "badge": "ÉTAPE 1",
+    "title": "Parlez-nous de votre habitation",
+    "description": "Quelques informations de base nous permettent de mieux estimer la taille du logement et ses besoins en chauffage.",
+    "region": {
+      "question": "Dans quelle région se situe l'habitation ?",
+      "options": {
+        "flanders": "Flandre",
+        "brussels": "Bruxelles",
+        "wallonia": "Wallonie"
+      }
+    },
+    "type": {
+      "question": "Quel type d'habitation avez-vous ?",
+      "options": {
+        "detached": "Maison quatre façades",
+        "semi_detached": "Maison trois façades",
+        "terraced": "Maison mitoyenne",
+        "apartment": "Appartement"
+      }
+    },
+    "year": {
+      "label": "Année de construction",
+      "placeholder": "Ex. 1975"
+    },
+    "area": {
+      "label": "Surface de plancher chauffée",
+      "placeholder": "Ex. 140"
+    }
+  },
+  "insulation": {
+    "badge": "ÉTAPE 2",
+    "title": "Comment votre habitation est-elle actuellement isolée ?",
+    "description": "L'isolation existante détermine la quantité de pertes de chaleur qui peut encore être réduite grâce à de nouveaux travaux d'isolation.",
+    "roof": {
+      "question": "Comment la toiture est-elle actuellement isolée ?",
+      "options": {
+        "none": "Pas isolée",
+        "limited": "Isolation limitée ou ancienne",
+        "insulated": "Bien isolée",
+        "unknown": "Je ne sais pas"
+      }
+    },
+    "walls": {
+      "question": "Comment les murs extérieurs sont-ils actuellement isolés ?",
+      "options": {
+        "none": "Pas isolés",
+        "limited": "Isolation limitée ou ancienne",
+        "insulated": "Bien isolés",
+        "unknown": "Je ne sais pas"
+      }
+    }
+  },
+  "measure": {
+    "badge": "ÉTAPE 3",
+    "title": "Quels travaux d'isolation souhaitez-vous calculer ?",
+    "description": "Sélectionnez la mesure d'isolation pour laquelle vous souhaitez obtenir une estimation des économies d'énergie potentielles.",
+    "type": {
+      "question": "Quelle mesure souhaitez-vous réaliser ?",
+      "options": {
+        "cavity_wall": "Isolation des murs creux",
+        "roof": "Isolation de la toiture",
+        "external_wall": "Isolation de façade"
+      }
+    },
+    "surface": {
+      "label": "Surface estimée à isoler",
+      "placeholder": "Ex. 90",
+      "help": "Une estimation suffit. Pour les murs, indiquez la surface approximative des façades extérieures. Pour la toiture, indiquez la surface du toit ou du plancher de grenier à isoler."
+    }
+  },
+  "heating": {
+    "badge": "ÉTAPE 4",
+    "title": "Comment chauffez-vous votre habitation ?",
+    "description": "Votre système de chauffage et votre consommation actuelle nous aident à mieux estimer les économies potentielles.",
+    "source": {
+      "question": "Quelle est votre principale source de chauffage ?",
+      "options": {
+        "gas": "Gaz naturel",
+        "oil": "Mazout",
+        "electric": "Chauffage électrique",
+        "heat_pump": "Pompe à chaleur",
+        "wood_pellets": "Bois ou pellets",
+        "other": "Autre"
+      }
+    },
+    "consumption": {
+      "label": "Consommation annuelle d'énergie",
+      "placeholder": "Ex. 18000"
+    },
+    "cost": {
+  "label": "Coût annuel du chauffage (optionnel)",
+  "placeholder": "Ex. 1800"
+},
+"help": "Indiquez votre consommation annuelle d'énergie en kWh, généralement disponible sur votre décompte annuel. Si vous indiquez également votre coût annuel de chauffage, nous pouvons estimer les économies financières potentielles."
+  }
+},
+"explanation": {
+  "badge": "COMMENT FONCTIONNE LE CALCUL ?",
+  "title": "Comment estimons-nous vos économies d'énergie potentielles ?",
+  "description": "Une habitation perd de la chaleur notamment par la toiture et les murs extérieurs. En améliorant l'isolation d'un élément peu ou pas isolé, ces pertes de chaleur peuvent diminuer. Notre calculateur estime l'effet potentiel de la mesure d'isolation choisie dans votre situation.",
+  "steps": {
+    "current": {
+      "title": "Situation actuelle",
+      "description": "Nous estimons d'abord les pertes de chaleur actuelles sur la base notamment de l'année de construction, de l'isolation existante et de la surface concernée."
+    },
+    "improved": {
+      "title": "Situation après isolation",
+      "description": "Nous estimons ensuite dans quelle mesure les pertes de chaleur pourraient diminuer après l'amélioration de l'isolation."
+    },
+    "result": {
+      "title": "Vos économies estimées",
+      "description": "La différence est convertie en une estimation indicative des économies d'énergie en kWh, en pourcentage et, si renseigné, en économies financières."
+    }
+  },
+  "factors": {
+    "title": "Quelles données utilisons-nous ?",
+    "description": "Le calcul tient compte de plusieurs informations qui influencent l'effet potentiel de l'isolation.",
+    "items": {
+      "building": "Type d'habitation",
+      "year": "Année de construction",
+      "insulation": "Isolation actuelle",
+      "surface": "Surface à isoler",
+      "heating": "Source de chauffage",
+      "consumption": "Consommation annuelle d'énergie"
+    }
+  },
+  "notice": "Le calcul reste une estimation indicative. Les économies réelles peuvent varier en fonction notamment de la construction du bâtiment, de la qualité des travaux, des conditions météorologiques, de la température intérieure et des habitudes de chauffage."
+},
+"measures": {
+  "badge": "SOLUTIONS D'ISOLATION",
+  "title": "Avec quelle isolation pouvez-vous économiser de l'énergie ?",
+  "description": "Toutes les mesures d'isolation n'ont pas le même effet dans chaque habitation. Les économies potentielles dépendent surtout des pertes de chaleur actuelles et du niveau d'isolation existant.",
+  "suitableLabel": "Particulièrement intéressant lorsque",
+  "items": {
+    "cavity": {
+      "title": "Isolation des murs creux",
+      "description": "L'isolation des murs creux consiste à remplir l'espace entre le mur intérieur et le mur extérieur avec un matériau isolant. Cela peut réduire les pertes de chaleur par les murs sans devoir rénover entièrement la façade.",
+      "suitable": "L'habitation possède un mur creux adapté, vide ou insuffisamment isolé."
+    },
+    "roof": {
+      "title": "Isolation de la toiture",
+      "description": "La chaleur monte et une toiture mal isolée peut donc représenter une source importante de pertes thermiques. L'isolation de la toiture ou du plancher du grenier aide à conserver davantage de chaleur dans l'habitation.",
+      "suitable": "La toiture n'est pas isolée, est peu isolée ou possède une isolation ancienne."
+    },
+    "facade": {
+      "title": "Isolation de façade",
+      "description": "L'isolation de façade consiste à appliquer une couche isolante sur les murs extérieurs. Elle peut fortement réduire les pertes de chaleur tout en permettant de rénover l'aspect extérieur de l'habitation.",
+      "suitable": "L'isolation des murs creux n'est pas possible ou suffisante, ou lorsque la façade doit de toute façon être rénovée."
+    }
+  },
+  "cta": {
+    "title": "Quelle méthode d'isolation convient à votre habitation ?",
+    "description": "Découvrez nos solutions d'isolation et de façade afin de voir quelles possibilités correspondent à votre logement.",
+    "button": "Voir nos services"
+  }
+},
+"factors": {
+  "badge": "VOS ÉCONOMIES RÉELLES",
+  "title": "De quoi dépendent vos économies d'énergie réelles ?",
+  "description": "Le résultat du calculateur reste une estimation. Deux habitations ayant la même superficie peuvent obtenir des économies différentes dans la pratique, car plusieurs facteurs techniques et humains interviennent.",
+  "important": {
+    "title": "Un calcul reste une estimation",
+    "description": "Le calculateur compare une situation actuelle estimée avec une situation améliorée après isolation. Pour une évaluation précise, il faut notamment connaître la construction réelle, l'épaisseur de l'isolation et l'état du bâtiment."
+  },
+  "items": {
+    "existingInsulation": {
+      "title": "Isolation existante",
+      "description": "Plus une toiture ou un mur extérieur est actuellement mal isolé, plus la réduction potentielle des pertes de chaleur peut généralement être importante."
+    },
+    "construction": {
+      "title": "Année et type de construction",
+      "description": "La composition des murs, de la toiture et des autres éléments du bâtiment influence les pertes de chaleur ainsi que le potentiel d'amélioration."
+    },
+    "surface": {
+      "title": "Surface à isoler",
+      "description": "La superficie de la toiture ou des murs extérieurs à isoler influence directement la quantité de pertes de chaleur pouvant être réduite."
+    },
+    "heating": {
+      "title": "Système de chauffage",
+      "description": "Le type de chauffage et son rendement influencent la quantité d'énergie achetée nécessaire pour fournir la même quantité de chaleur dans l'habitation."
+    },
+    "temperature": {
+      "title": "Température intérieure et météo",
+      "description": "Une température intérieure plus élevée et des conditions extérieures plus froides augmentent l'écart de température entre l'intérieur et l'extérieur, ainsi que les pertes de chaleur."
+    },
+    "behaviour": {
+      "title": "Habitudes de chauffage",
+      "description": "La durée de chauffage, les pièces chauffées et l'utilisation du thermostat influencent également la consommation énergétique finale."
+    }
+  }
+},
+"faq": {
+  "badge": "QUESTIONS FRÉQUENTES",
+  "title": "Questions fréquentes sur les économies d'énergie grâce à l'isolation",
+  "description": "Découvrez les réponses aux questions fréquentes sur notre calculateur, les économies d'énergie liées à l'isolation et les facteurs qui influencent le résultat réel."
+}
+},
 
+"HomeInsulationCheckPage": {
+  "metadata": {
+    "title": "Diagnostic isolation : quelle isolation pour votre maison ? | Nu-Isoleren",
+    "description": "Faites gratuitement le diagnostic de Nu-Isoleren et découvrez quelles solutions d'isolation, de façade et d'humidité peuvent être adaptées à votre habitation."
+  },
+  "hero": {
+    "pricesBreadcrumb": "Tarifs & calculs",
+    "breadcrumb": "Diagnostic isolation",
+    "badge": "DIAGNOSTIC GRATUIT",
+    "title": "Quelle isolation convient à votre habitation ?",
+    "description": "Répondez à quelques questions sur votre habitation, votre toiture, vos murs extérieurs, votre façade et d'éventuels problèmes d'humidité. Vous recevrez ensuite un aperçu personnalisé des solutions de Nu-Isoleren qui pourraient convenir à votre logement.",
+    "disclaimer": "Ce diagnostic fournit une première indication et ne remplace pas une inspection technique sur place.",
+    "cta": "Commencer le diagnostic"
+  },
+  "check": {
+  "badge": "DIAGNOSTIC DE L'HABITATION",
+  "title": "Découvrez quelles solutions conviennent à votre habitation",
+  "description": "Répondez à quatre courtes étapes concernant votre habitation, votre toiture, vos murs extérieurs et d'éventuels problèmes d'humidité. Nous vous indiquerons ensuite quelles solutions de Nu-Isoleren peuvent être intéressantes.",
+  "progress": "Étape {current} sur {total}",
+  "previous": "Précédent",
+  "next": "Suivant",
+  "showResult": "Voir mon résultat",
+  "disclaimer": "Ce diagnostic fournit une première indication basée sur vos réponses et ne remplace pas une inspection technique sur place.",
+
+  "building": {
+    "badge": "ÉTAPE 1",
+    "title": "Parlez-nous de votre habitation",
+    "description": "L'année de construction et le type d'habitation donnent une première indication sur la structure et l'isolation possibles du bâtiment.",
+    "region": {
+      "question": "Dans quelle région se situe votre habitation ?",
+      "options": {
+        "flanders": "Flandre",
+        "wallonia": "Wallonie"
+      }
+    },
+    "type": {
+      "question": "Quel type d'habitation avez-vous ?",
+      "options": {
+        "detached": "Maison quatre façades",
+        "semi_detached": "Maison trois façades",
+        "terraced": "Maison mitoyenne",
+        "apartment": "Appartement"
+      }
+    },
+    "year": {
+      "label": "Quelle est l'année de construction de l'habitation ?",
+      "placeholder": "Ex. 1975"
+    }
+  },
+
+  "roof": {
+    "badge": "ÉTAPE 2",
+    "title": "Comment votre toiture est-elle isolée ?",
+    "description": "Une toiture peu ou pas isolée peut constituer une source importante de pertes de chaleur.",
+    "insulation": {
+      "question": "Quelle situation correspond le mieux à votre toiture ?",
+      "options": {
+        "none": "Pas isolée",
+        "old": "Isolation ancienne ou limitée",
+        "good": "Bien isolée",
+        "unknown": "Je ne sais pas"
+      }
+    }
+  },
+
+  "walls": {
+    "badge": "ÉTAPE 3",
+    "title": "Qu'en est-il de vos murs extérieurs et de votre façade ?",
+    "description": "Nous vérifions si l'isolation des murs creux, l'isolation extérieure ou un traitement de façade peut être intéressant.",
+    "cavity": {
+      "question": "Votre habitation possède-t-elle des murs creux ?",
+      "options": {
+        "yes": "Oui",
+        "no": "Non",
+        "unknown": "Je ne sais pas"
+      }
+    },
+    "cavityInsulation": {
+      "question": "Comment la coulisse est-elle actuellement isolée ?",
+      "options": {
+        "none": "Pas isolée",
+        "old": "Isolation ancienne ou problématique",
+        "good": "Bien isolée",
+        "unknown": "Je ne sais pas"
+      }
+    },
+    "facade": {
+      "question": "Comment décririez-vous l'état de votre façade extérieure ?",
+      "options": {
+        "good": "En bon état",
+        "dirty": "Fortement encrassée",
+        "damaged": "Ancienne ou endommagée",
+        "moisture": "Humide ou poreuse",
+        "unknown": "Je ne sais pas"
+      }
+    }
+  },
+
+  "moisture": {
+    "badge": "ÉTAPE 4",
+    "title": "Avez-vous des problèmes d'humidité ?",
+    "description": "Certains problèmes d'humidité nécessitent d'abord un diagnostic correct avant d'effectuer des travaux d'isolation ou de rénovation.",
+    "status": {
+      "question": "Quelle situation reconnaissez-vous le mieux ?",
+      "options": {
+        "none": "Aucun problème d'humidité",
+        "rising": "Taches d'humidité au bas des murs",
+        "mould": "Moisissures ou enduit qui se détache",
+        "unknown": "Je ne sais pas"
+      }
+    }
+  },
+
+  "result": {
+    "badge": "VOTRE DIAGNOSTIC",
+    "title": "Ces solutions peuvent être intéressantes pour votre habitation",
+    "description": "Sur la base de vos réponses, nous avons associé les points d'attention possibles de votre habitation aux solutions proposées par Nu-Isoleren.",
+
+    "priorities": {
+      "high": "Priorité élevée",
+      "recommended": "Recommandé",
+      "check": "Contrôle recommandé"
+    },
+
+    "services": {
+      "roof_insulation": {
+        "title": "Isolation de la toiture",
+        "description": "Vos réponses indiquent que votre toiture n'est pas isolée, est peu isolée ou pourrait être insuffisamment isolée. Une meilleure isolation peut réduire les pertes de chaleur et améliorer le confort.",
+        "nuIsoleren": "Nu-Isoleren réalise l'isolation des toitures notamment avec de la laine de verre ou des panneaux PIR."
+      },
+
+      "cavity_wall_insulation": {
+        "title": "Isolation des murs creux",
+        "description": "Votre habitation possède peut-être une coulisse qui n'est pas ou insuffisamment isolée. Lorsque celle-ci est techniquement adaptée, son isolation peut réduire les pertes de chaleur par les murs extérieurs.",
+        "nuIsoleren": "Nu-Isoleren isole les murs creux adaptés avec des billes EPS de haute qualité."
+      },
+
+      "cavity_cleaning": {
+        "title": "Nettoyage des murs creux",
+        "description": "Vous indiquez qu'une isolation ancienne ou potentiellement problématique est présente dans la coulisse. Dans certaines situations, elle doit être retirée avant la pose d'une nouvelle isolation.",
+        "nuIsoleren": "Nu-Isoleren retire notamment les anciennes isolations et prépare la coulisse pour une nouvelle solution d'isolation."
+      },
+
+      "external_wall_insulation": {
+        "title": "Isolation de façade avec crépi",
+        "description": "Lorsque l'isolation des murs creux n'est pas possible ou suffisante, l'isolation extérieure peut constituer une alternative. La façade est alors isolée par l'extérieur puis recouverte d'une nouvelle finition.",
+        "nuIsoleren": "Nu-Isoleren pose des panneaux isolants sur la façade et réalise ensuite une finition en crépi."
+      },
+
+      "facade_cleaning": {
+        "title": "Nettoyage de façade",
+        "description": "Votre façade semble principalement encrassée. Un nettoyage professionnel peut éliminer les salissures et dépôts et redonner à la façade son aspect d'origine.",
+        "nuIsoleren": "Nu-Isoleren nettoie professionnellement les façades extérieures avec une méthode adaptée au support."
+      },
+
+      "hydrofuge": {
+        "title": "Hydrofuge de façade",
+        "description": "Une façade humide ou poreuse peut absorber plus facilement l'eau de pluie. Après avoir vérifié la cause du problème, un traitement hydrofuge peut mieux protéger la façade contre les intempéries.",
+        "nuIsoleren": "Nu-Isoleren applique un traitement hydrofuge sur les façades adaptées afin de rendre les murs extérieurs déperlants."
+      },
+
+      "rising_damp": {
+        "title": "Traitement de l'humidité ascensionnelle",
+        "description": "Des taches d'humidité au bas des murs intérieurs peuvent indiquer des remontées capillaires. Les moisissures ou les enduits endommagés peuvent également avoir d'autres causes, ce qui rend un diagnostic sur place important.",
+        "nuIsoleren": "Nu-Isoleren traite l'humidité ascensionnelle en injectant les murs avec un produit hydrofuge adapté."
+      }
+    },
+
+    "viewService": "Voir cette solution",
+
+    "noRecommendations": {
+      "title": "Aucun point d'attention évident détecté",
+      "description": "Sur la base de vos réponses, nous ne constatons pas de problème direct d'isolation ou d'humidité permettant une recommandation claire. Une inspection sur place peut toutefois apporter davantage de certitude."
+    },
+
+    "notice": "Ce diagnostic est indicatif. L'état technique d'une toiture, d'un mur creux, d'une façade ou d'un problème d'humidité ne peut être évalué correctement qu'après une inspection sur place.",
+
+    "contact": "Demander un conseil personnalisé",
+    "again": "Refaire le diagnostic"
+  }
+},
+  "advice": {
+  "badge": "DU DIAGNOSTIC À LA SOLUTION",
+  "title": "Du diagnostic de votre habitation à la bonne solution",
+  "description": "Chaque habitation est différente. Le diagnostic permet d'identifier rapidement les principaux points d'attention et de les associer aux solutions réalisées par Nu-Isoleren.",
+  "points": {
+    "check": "Sur la base de vos réponses, vous obtenez une première indication des éventuels problèmes d'isolation, de façade ou d'humidité.",
+    "solution": "Le diagnostic associe directement ces points d'attention aux services adaptés proposés par Nu-Isoleren.",
+    "inspection": "Pour déterminer la solution définitive, nous pouvons examiner la situation technique sur place si nécessaire."
+  },
+  "notice": "Un diagnostic en ligne ne permet pas d'évaluer tous les détails d'une habitation. L'état des murs creux, de la toiture, de la façade et des éventuels problèmes d'humidité peut être analysé plus précisément sur place.",
+  "imageAlt": "Habitation achevée après des travaux d'isolation et de façade réalisés par Nu-Isoleren"
+},
+"faq": {
+  "badge": "QUESTIONS FRÉQUENTES",
+  "title": "Questions fréquentes sur l'isolation de votre habitation",
+  "description": "Découvrez les réponses aux questions sur le diagnostic, les solutions d'isolation, les murs creux, les problèmes d'humidité et les services de Nu-Isoleren."
+}
+},
+
+"GrantsPage": {
+  "metadata": {
+    "title": "Primes isolation 2026 en Belgique | Nu-Isoleren",
+    "description": "Découvrez les primes et aides disponibles en 2026 pour les travaux d'isolation en Flandre, à Bruxelles et en Wallonie."
+  },
+
+  "hero": {
+    "breadcrumb": "Primes",
+    "badge": "PRIMES ISOLATION 2026",
+    "title": "Quelles primes existent pour l'isolation en Belgique ?",
+    "description": "Différentes primes et aides peuvent soutenir les travaux d'isolation et de rénovation. Les conditions et les montants varient selon la région. Consultez les possibilités actuelles en Flandre, à Bruxelles et en Wallonie."
+  },
+
+  "intro": {
+    "badge": "PRIMES & AIDES",
+    "title": "Des aides pour isoler et rénover votre habitation",
+    "imageAlt": "Image d'une maison en Belgique avec une subvention pour l'isolation",
+    "description": "Les investissements dans l'isolation de la toiture, des murs ou d'autres travaux de rénovation énergétique peuvent, dans certaines situations, donner droit à une aide financière. Les primes disponibles dépendent notamment de la région, du type de travaux et de votre situation personnelle.",
+    "descriptionSecond": "Nu-Isoleren vous aide à accéder rapidement aux informations correspondant à votre région. Les pages détaillées présentent les principales conditions, les travaux d'isolation concernés et les informations relatives à la demande."
+  },
+
+  "regions": {
+    "badge": "CHOISISSEZ VOTRE RÉGION",
+    "title": "Consultez les primes d'isolation dans votre région",
+    
+    "description": "Les règles concernant les primes de rénovation et d'isolation diffèrent entre la Flandre, Bruxelles et la Wallonie.",
+
+    "flanders": {
+      "title": "Primes isolation en Flandre",
+      "description": "Découvrez les primes et aides flamandes pouvant concerner vos travaux d'isolation et de rénovation.",
+      "button": "Voir les primes en Flandre"
+    },
+
+    "brussels": {
+      "title": "Primes isolation à Bruxelles",
+      "description": "Consultez les informations disponibles sur les aides à la rénovation énergétique en Région de Bruxelles-Capitale.",
+      "button": "Voir les primes à Bruxelles"
+    },
+
+    "wallonia": {
+      "title": "Primes isolation en Wallonie",
+      "description": "Découvrez les aides wallonnes qui peuvent concerner les travaux d'isolation et de rénovation énergétique.",
+      "button": "Voir les primes en Wallonie"
+    }
+  },
+  "faq": {
+  "badge": "QUESTIONS FRÉQUENTES",
+  "title": "Questions fréquentes sur les primes d'isolation",
+  "description": "Trouvez des réponses aux questions générales sur les primes d'isolation, les différences régionales et les aides pour l'isolation de la toiture, des murs et des façades."
+}
+},
+
+"FlandersGrantsPage": {
+  "metadata": {
+    "title": "Primes isolation Flandre 2026 & 2027 | Nu-Isoleren",
+    "description": "Découvrez les primes d'isolation actuelles en Flandre en 2026, notamment Mijn VerbouwPremie pour l'isolation de la toiture et des murs extérieurs. Consultez les montants, conditions et changements prévus pour 2027."
+  },
+
+  "hero": {
+    "parentBreadcrumb": "Primes",
+    "breadcrumb": "Flandre",
+    "badge": "PRIMES ISOLATION EN FLANDRE",
+    "title": "Primes d'isolation en Flandre en 2026",
+    "description": "Les personnes qui isolent leur habitation peuvent, dans certaines situations, bénéficier de Mijn VerbouwPremie. Les règles ont changé depuis le 1er mars 2026. Découvrez ci-dessous qui peut encore en bénéficier, quels travaux d'isolation sont soutenus et quels montants sont possibles.",
+    "updated": "Dernière mise à jour : septembre 2026"
+  },
+
+  "update": {
+    "badge": "MISE À JOUR IMPORTANTE 2026",
+    "title": "Quel est le montant de Mijn VerbouwPremie pour l'isolation ?",
+    "description": "Depuis le 1er mars 2026, les propriétaires-occupants des catégories de revenus 1 et 2 ne bénéficient plus de Mijn VerbouwPremie pour ces travaux d'isolation. Une aide financière reste possible pour les catégories de revenus 3 et 4.",
+
+    "table": {
+      "work": "Travaux d'isolation",
+      "category1": "Catégorie de revenus 1",
+      "category2": "Catégorie de revenus 2",
+      "category3": "Catégorie de revenus 3",
+      "category4": "Catégorie de revenus 4",
+
+      "rows": {
+        "roof": {
+          "label": "Isolation de la toiture",
+          "category1": "Non applicable",
+          "category2": "Non applicable",
+          "category3": "Jusqu'à 4 025 € (max. 35 % de la facture)",
+          "category4": "Jusqu'à 5 750 € (max. 50 % de la facture)"
+        },
+
+        "floor": {
+          "label": "Isolation du sol",
+          "category1": "Non applicable",
+          "category2": "Non applicable",
+          "category3": "Jusqu'à 1 050 € (max. 35 % de la facture)",
+          "category4": "Jusqu'à 1 500 € (max. 50 % de la facture)"
+        },
+
+        "wall": {
+          "label": "Isolation des murs",
+          "category1": "Non applicable",
+          "category2": "Non applicable",
+          "category3": "Jusqu'à 3 500 € (max. 35 % de la facture)",
+          "category4": "Jusqu'à 5 000 € (max. 50 % de la facture)"
+        }
+      }
+    },
+
+    "notice": "Les montants ci-dessus sont des montants maximaux. Le montant final dépend de la facture admissible, de votre catégorie de revenus et des conditions applicables à Mijn VerbouwPremie. La date de la demande détermine le régime applicable."
+  },
+
+ "intro": {
+  "badge": "MIJN VERBOUWPREMIE",
+  "title": "Qu'est-ce que Mijn VerbouwPremie ?",
+  "description": "Mijn VerbouwPremie est une prime du gouvernement flamand destinée aux travaux de rénovation et aux investissements visant à améliorer la performance énergétique des maisons et appartements situés en Région flamande.",
+  "descriptionSecond": "Pour Nu-Isoleren, les catégories les plus pertinentes sont principalement la toiture et les murs extérieurs. Elles comprennent notamment l'isolation de la toiture, l'isolation des murs creux et l'isolation extérieure des façades.",
+  "highlight": "Votre droit à une prime dépend notamment de votre catégorie de revenus, du type d'habitation, des travaux réalisés et des conditions techniques applicables.",
+  "imageAlt": "Habitation en Flandre pendant des travaux de rénovation énergétique et d'isolation"
+},
+"eligibility": {
+  "badge": "POUR QUI ?",
+  "title": "Qui peut bénéficier d'une prime d'isolation ?",
+  "description": "Pour les demandes introduites à partir du 1er mars 2026, les propriétaires-occupants des catégories de revenus 3 et 4 peuvent encore bénéficier de Mijn VerbouwPremie pour l'isolation de la toiture et des murs.",
+  "points": {
+    "building": "L'habitation ou l'appartement doit se situer en Région flamande et avoir été raccordé au réseau électrique avant le 1er janvier 2006, ou avoir été occupé pour la première fois avant cette date selon les données cadastrales.",
+    "income": "La catégorie de revenus est déterminée sur la base du dernier avertissement-extrait de rôle disponible au moment de la demande.",
+    "property": "Un propriétaire-occupant qui possède également en pleine propriété une autre maison, un appartement ou un terrain à bâtir est automatiquement classé dans la catégorie de revenus 1."
+  },
+  "table": {
+    "situation": "Situation familiale",
+    "category4": "Catégorie 4",
+    "category3": "Catégorie 3",
+    "single": {
+      "label": "Personne seule",
+      "category4": "Jusqu'à 24 750 €",
+      "category3": "24 750 € – 43 240 €"
+    },
+    "family": {
+      "label": "Couple ou personne seule + 1 personne à charge",
+      "category4": "Jusqu'à 37 110 €",
+      "category3": "37 110 € – 60 520 €"
+    },
+    "extra": {
+      "label": "Par personne à charge supplémentaire",
+      "category4": "+ 4 420 €",
+      "category3": "+ 4 420 €"
+    },
+    "notice": "Ces plafonds s'appliquent aux demandes introduites à partir du 1er janvier 2026."
+  }
+},
+
+"works": {
+  "badge": "TRAVAUX D'ISOLATION",
+  "title": "Quels travaux d'isolation sont éligibles ?",
+  "description": "Mijn VerbouwPremie impose des conditions techniques différentes selon le type d'isolation. Pour les services de Nu-Isoleren, l'isolation de la toiture, des murs creux et des façades extérieures est particulièrement pertinente.",
+  "roof": {
+    "title": "Isolation de la toiture",
+    "description": "Une nouvelle isolation de la toiture ou du plancher du grenier peut être éligible lorsqu'elle répond aux exigences techniques.",
+    "requirement1": "La nouvelle isolation doit atteindre une valeur Rd d'au moins 4,5 m²K/W.",
+    "requirement2": "Pour une toiture inclinée isolée par l'intérieur, un pare-vapeur correctement posé est requis."
+  },
+  "cavity": {
+    "title": "Isolation des murs creux",
+    "description": "Le remplissage d'un mur creux existant adapté relève de la catégorie des murs extérieurs.",
+    "requirement1": "La coulisse doit être entièrement remplie, mesurer au moins 50 mm et le matériau isolant doit avoir une valeur lambda maximale de 0,065 W/mK.",
+    "requirement2": "Les travaux doivent être réalisés par un entrepreneur reconnu STS 71-1. Une coulisse déjà partiellement isolée ne peut pas bénéficier d'un remplissage complémentaire."
+  },
+  "facade": {
+    "title": "Isolation extérieure de façade",
+    "description": "L'isolation par l'extérieur peut également relever de la catégorie des murs extérieurs, notamment lors d'une rénovation de façade avec isolation et crépi.",
+    "requirement1": "L'isolation extérieure nouvellement posée doit atteindre une valeur Rd minimale de 3 m²K/W.",
+    "requirement2": "La finition de façade, comme le crépi, n'est prise en compte que lorsqu'elle est combinée à une nouvelle isolation extérieure suffisante."
+  },
+  "notice": "Les travaux doivent respecter toutes les conditions techniques et administratives en vigueur au moment de la demande."
+},
+
+"application": {
+  "badge": "DEMANDER LA PRIME",
+  "title": "Comment demander Mijn VerbouwPremie ?",
+  "description": "La demande est introduite après la réalisation des travaux, lorsque vous disposez des factures et attestations nécessaires.",
+  "steps": {
+    "works": {
+      "title": "Faites réaliser les travaux",
+      "description": "Pour l'isolation de la toiture et des murs extérieurs, les travaux doivent être réalisés par un entrepreneur. Certaines techniques nécessitent une reconnaissance spécifique."
+    },
+    "documents": {
+      "title": "Rassemblez les factures et attestations",
+      "description": "Conservez la facture finale, les éventuelles factures intermédiaires et l'attestation de l'entrepreneur. Pour l'isolation des murs creux, l'attestation VVO STS 71-1 est également requise."
+    },
+    "portal": {
+      "title": "Introduisez la demande via Mijn VerbouwLoket",
+      "description": "La demande de Mijn VerbouwPremie est introduite en ligne via Mijn VerbouwLoket, séparément pour chaque catégorie de travaux."
+    },
+    "followup": {
+      "title": "Suivez votre dossier",
+      "description": "Après l'introduction, vous pouvez suivre votre demande dans Mijn VerbouwLoket. Des pièces justificatives supplémentaires peuvent être demandées."
+    }
+  },
+  "notice": "Les factures ne peuvent pas dater de plus de 2 ans au moment de la demande."
+},
+
+"future": {
+  "badge": "PERSPECTIVES 2027",
+  "title": "Quels changements sont envisagés pour 2027 ?",
+  "description": "Le gouvernement flamand prépare une extension de Mijn VerbouwPremie pour certains propriétaires-bailleurs louant leur logement à un prix abordable. Ils pourraient bénéficier d'un taux de 35 %, comparable à la catégorie de revenus 3.",
+  "social": "Une prime supplémentaire a également été annoncée pour certains propriétaires qui louent leur logement pendant au moins neuf ans via une société de logement.",
+  "warning": "En septembre 2026, ces modifications n'étaient pas encore définitivement approuvées. Nu-Isoleren mettra cette page à jour lorsque les règles définitives seront publiées."
+}
+},
+
+"BrusselsGrantsPage": {
+  "metadata": {
+    "title": "Primes isolation Bruxelles 2026 & 2027 | RENOLUTION & ECORENO",
+    "description": "Découvrez la situation actuelle des primes d'isolation à Bruxelles en 2026 et 2027, ainsi que les informations sur RENOLUTION, le crédit ECORENO et les autres aides à la rénovation."
+  },
+
+  "hero": {
+    "parentBreadcrumb": "Primes",
+    "breadcrumb": "Bruxelles",
+    "badge": "PRIMES ISOLATION BRUXELLES",
+    "title": "Primes d'isolation à Bruxelles en 2026",
+    "description": "La situation des primes de rénovation et d'isolation en Région de Bruxelles-Capitale est particulière en 2026. Découvrez le statut actuel des Primes RENOLUTION et les autres formes d'aide à la rénovation actuellement disponibles.",
+    "updated": "Dernière mise à jour : septembre 2026",
+    "imageAlt": "Habitations à Bruxelles pouvant faire l'objet d'une rénovation énergétique"
+  },
+
+  "status": {
+    "badge": "MISE À JOUR IMPORTANTE 2026",
+    "title": "Pas de demande RENOLUTION pour les factures de solde de 2025 ou 2026",
+    "description": "Selon la Région de Bruxelles-Capitale, aucune décision gouvernementale n'a encore été prise concernant d'éventuelles Primes RENOLUTION pour 2025 et 2026.",
+    "highlight": "À l'heure actuelle, aucune demande de Prime RENOLUTION ne peut être introduite pour des travaux dont la facture de solde est datée de 2025 ou 2026.",
+    "notice": "Les montants et conditions provenant d'anciens régimes RENOLUTION, notamment ceux de 2024, ne doivent donc pas être considérés comme des informations actuelles pour 2026."
+  },
+
+  "renolution": {
+    "badge": "RENOLUTION",
+    "title": "Que sont les Primes RENOLUTION ?",
+    "description": "Depuis le 1er janvier 2022, RENOLUTION est le nom du système bruxellois qui regroupe les anciennes Primes Énergie, les primes à la rénovation de l'habitat et les primes à l'embellissement des façades.",
+    "descriptionSecond": "Le système concernait différents travaux de rénovation et d'amélioration énergétique, notamment l'isolation. Pour les factures de solde datées de 2025 ou 2026, aucun nouveau régime de primes n'est actuellement disponible pour introduire une demande.",
+    "highlight": "Ne planifiez donc pas des travaux de rénovation à Bruxelles sur la base d'anciens montants RENOLUTION sans vérifier au préalable la situation officielle actuelle.",
+    "imageAlt": "Rénovation énergétique d'une habitation en Région de Bruxelles-Capitale"
+  },
+
+  "support": {
+    "badge": "AIDES EN 2026",
+    "title": "Quelles aides à la rénovation sont actuellement disponibles ?",
+    "description": "L'absence d'un régime RENOLUTION actuel ne signifie pas qu'aucun soutien financier n'existe. Selon votre situation, d'autres formes d'aide ou de financement peuvent être disponibles.",
+
+    "ecoreno": {
+      "title": "Crédit ECORENO",
+      "description": "Une solution de financement pour des travaux de rénovation d'un logement situé en Région de Bruxelles-Capitale, notamment les travaux visant à améliorer sa performance énergétique."
+    },
+
+    "municipal": {
+      "title": "Aides communales",
+      "description": "Certaines communes bruxelloises proposent leurs propres primes ou avantages financiers. Les conditions et la disponibilité varient selon la commune."
+    },
+
+    "vat": {
+      "title": "TVA réduite à 6 %",
+      "description": "Certains travaux de rénovation peuvent, sous les conditions légales applicables, bénéficier du taux de TVA réduit à 6 %. Il s'agit d'un avantage fiscal et non d'une Prime RENOLUTION."
+    },
+
+    "notice": "Les aides applicables dépendent notamment du type de logement, de votre statut, de vos revenus et des travaux envisagés."
+  },
+
+  "ecoreno": {
+    "badge": "CRÉDIT ECORENO",
+    "title": "Financer vos travaux avec le crédit ECORENO",
+    "description": "Le crédit ECORENO offre une solution de financement pour différents travaux de rénovation d'un logement situé à Bruxelles.",
+    "notGrant": "ECORENO est un crédit et non une prime à la rénovation.",
+
+    "table": {
+      "item": "Élément",
+      "details": "Situation actuelle",
+
+      "rate": {
+        "label": "Taux d'intérêt",
+        "value": "Taux préférentiel de 2,5 % à 3,5 %, selon les conditions applicables et les barèmes de revenus."
+      },
+
+      "applicants": {
+        "label": "Pour qui ?",
+        "value": "Les propriétaires, futurs propriétaires et locataires d'un logement situé en Région de Bruxelles-Capitale peuvent être éligibles sous certaines conditions."
+      },
+
+      "works": {
+        "label": "Quels travaux ?",
+        "value": "Notamment les travaux de rénovation classiques, l'amélioration de la performance énergétique, la sécurité, la salubrité, l'habitabilité et certains travaux liés à l'autonomie."
+      },
+
+      "contractor": {
+        "label": "Réalisation",
+        "value": "Les travaux doivent être réalisés par un entrepreneur professionnel respectant les conditions d'enregistrement et d'accès à la profession applicables."
+      }
+    },
+
+    "notice": "Selon les informations actuelles de Homegrade, le crédit ECORENO n'est actuellement pas accessible aux propriétaires bailleurs ni aux associations de copropriétaires. Des conditions financières et administratives supplémentaires s'appliquent."
+  },
+
+  "future": {
+    "badge": "PERSPECTIVES 2027",
+    "title": "Que sait-on des primes bruxelloises pour 2027 ?",
+    "description": "Pour 2027, nous ne publierons des montants et conditions précis que lorsqu'ils auront été officiellement établis par la Région de Bruxelles-Capitale.",
+    "descriptionSecond": "En septembre 2026, aucun régime RENOLUTION définitif pour 2027 n'a encore été publié permettant d'indiquer des montants fiables pour les travaux d'isolation.",
+    "warning": "Nu-Isoleren choisit de ne pas présenter d'anciens montants ou d'estimations comme s'ils étaient applicables en 2027. Cette page sera mise à jour lorsque de nouvelles règles officielles seront publiées."
+  },
+
+  "sources": {
+    "title": "Sources & actualité",
+    "description": "Cette page a été vérifiée en septembre 2026 sur la base des informations actuelles de la Région de Bruxelles-Capitale et de Homegrade. Les régimes et conditions peuvent évoluer.",
+    "region": "Région de Bruxelles-Capitale",
+    "homegrade": "Homegrade – ECORENO",
+    "back": "Retour à toutes les primes"
+  }
+},
+
+"WalloniaGrantsPage": {
+  "metadata": {
+    "title": "Primes isolation Wallonie 2026 & 2027 | Nu-Isoleren",
+    "description": "Découvrez les primes d'isolation en Wallonie en 2026 et le nouveau régime de soutien à partir du 1er octobre 2026. Montants, catégories de revenus, Rénopack et Rénoprêt."
+  },
+
+  "hero": {
+    "parentBreadcrumb": "Primes",
+    "breadcrumb": "Wallonie",
+    "badge": "PRIMES ISOLATION WALLONIE",
+    "title": "Primes d'isolation en Wallonie en 2026",
+    "description": "Le soutien wallon à la rénovation change profondément en 2026. Le régime temporaire des Primes Habitation prend fin le 30 septembre 2026 et est remplacé, à partir du 1er octobre, par un nouveau système basé sur le Rénopack et le Rénoprêt.",
+    "updated": "Dernière mise à jour : septembre 2026",
+    "imageAlt": "Habitation en Wallonie pendant des travaux de rénovation énergétique"
+  },
+
+  "transition": {
+    "badge": "TRANSITION IMPORTANTE EN 2026",
+    "title": "Le soutien wallon à la rénovation change le 1er octobre 2026",
+    "description": "En septembre 2026, deux systèmes différents doivent être distingués. Le régime applicable dépend du moment auquel votre projet et votre demande sont introduits.",
+
+    "current": {
+      "date": "Jusqu'au 30 septembre 2026",
+      "title": "Primes Habitation 2025-2026",
+      "description": "Le régime temporaire reste applicable jusqu'au 30 septembre 2026 inclus. La demande de prime, accompagnée de la facture finale, doit être introduite au plus tard à cette date."
+    },
+
+    "new": {
+      "date": "À partir du 1er octobre 2026",
+      "title": "Nouveau régime de soutien",
+      "description": "Le soutien régional s'articulera autour du Rénopack et du Rénoprêt. Le système ciblera les logements énergivores dont la rénovation permet une amélioration suffisante du label PEB."
+    },
+
+    "notice": "Les montants au m² repris ci-dessous concernent uniquement le régime temporaire prenant fin le 30 septembre 2026 et ne doivent pas être utilisés comme montants du nouveau régime."
+  },
+
+  "currentPremiums": {
+    "badge": "PRIMES HABITATION 2025-2026",
+    "title": "Quel est le montant actuel des primes d'isolation en Wallonie ?",
+    "description": "Dans le régime temporaire, un montant de base est multiplié en fonction de la catégorie de revenus du ménage. Le tableau ci-dessous reprend les travaux pertinents pour les services proposés par Nu-Isoleren.",
+
+    "table": {
+      "work": "Travaux",
+
+      "rows": {
+        "roof": {
+          "label": "Isolation du toit ou des combles",
+          "r1": "120 €/m²",
+          "r2": "80 €/m²",
+          "r3": "60 €/m²",
+          "r4": "40 €/m²"
+        },
+
+        "wall": {
+          "label": "Isolation thermique des murs",
+          "r1": "52,80 €/m²",
+          "r2": "35,20 €/m²",
+          "r3": "26,40 €/m²",
+          "r4": "17,60 €/m²"
+        },
+
+        "damp": {
+          "label": "Traitement de l'humidité ascensionnelle",
+          "r1": "19,20 €/mc",
+          "r2": "12,80 €/mc",
+          "r3": "9,60 €/mc",
+          "r4": "6,40 €/mc"
+        }
+      }
+    },
+
+    "notice": "Pour les catégories R1 et R2, la prime est limitée à 70 % maximum du montant TVAC des postes éligibles. Pour les catégories R3 et R4, la limite est de 50 %. Des montants de base plus élevés existent pour certains isolants biosourcés."
+  },
+
+  "eligibility": {
+    "badge": "CONDITIONS JUSQU'AU 30 SEPTEMBRE",
+    "title": "Qui peut encore bénéficier des Primes Habitation ?",
+    "description": "Le régime temporaire impose des conditions relatives au demandeur, au logement et à la réalisation des travaux.",
+
+    "points": {
+      "location": "Le logement doit être situé en Région wallonne, hors territoire de la Communauté germanophone.",
+      "age": "Le bâtiment doit avoir plus de 15 ans.",
+      "usage": "Le bâtiment doit être destiné principalement au logement, à plus de 50 %.",
+      "contractor": "Les travaux doivent être réalisés par un entrepreneur inscrit à la Banque-Carrefour des Entreprises et disposant, lorsque nécessaire, de l'accès à la profession requis.",
+      "audit": "Un Audit Logement préalable est nécessaire pour la plupart des travaux. Il n'est toutefois pas obligatoire pour les travaux de toiture et l'isolation thermique du toit ou des combles."
+    },
+
+    "imageAlt": "Rénovation énergétique d'une habitation en Wallonie"
+  },
+
+  "newRegime": {
+    "badge": "À PARTIR DU 1ER OCTOBRE 2026",
+    "title": "Comment fonctionnera le nouveau régime wallon ?",
+    "description": "À partir du 1er octobre 2026, le soutien sera concentré sur les logements ayant une faible performance énergétique. Le projet devra permettre une amélioration suffisante du label PEB.",
+
+    "peb": {
+      "gf": {
+        "label": "PEB F ou G",
+        "value": "La rénovation devra permettre d'atteindre au minimum le label PEB D."
+      },
+
+      "e": {
+        "label": "PEB E",
+        "value": "La rénovation devra permettre d'atteindre au minimum le label PEB C."
+      }
+    },
+
+    "audit": "Un audit préalable sera obligatoire pour accéder au financement. L'aide sera calculée globalement sur l'ensemble du projet de rénovation et non plus séparément pour chaque type de travaux."
+  },
+
+  "loans": {
+    "badge": "RÉNOPACK & RÉNOPRÊT",
+    "title": "Quel soutien financier s'appliquera à partir d'octobre 2026 ?",
+    "description": "Le nouveau soutien wallon reposera sur deux solutions de financement. La catégorie de revenus déterminera le type de prêt et la réduction applicable.",
+
+    "table": {
+      "category": "Catégorie",
+      "income": "Revenu de référence",
+      "loan": "Financement",
+      "reduction": "Réduction du montant à rembourser",
+
+      "rows": {
+        "c1": {
+          "income": "Jusqu'à 28 900 €",
+          "loan": "Rénopack à 0 %",
+          "reduction": "50 %"
+        },
+
+        "c2": {
+          "income": "28 900,01 € – 41 100 €",
+          "loan": "Rénopack à 0 %",
+          "reduction": "40 %"
+        },
+
+        "c3": {
+          "income": "41 100,01 € – 67 100 €",
+          "loan": "Rénopack à 0 %",
+          "reduction": "15 %"
+        },
+
+        "c4": {
+          "income": "67 100,01 € – 122 800 €",
+          "loan": "Rénoprêt à taux préférentiel",
+          "reduction": "0 %"
+        }
+      }
+    },
+
+    "renopack": {
+      "title": "Rénopack",
+      "description": "Destiné aux catégories C1, C2 et C3. Il s'agit d'un prêt à taux zéro combiné à une réduction du montant qui doit finalement être remboursé."
+    },
+
+    "renopret": {
+      "title": "Rénoprêt",
+      "description": "Destiné à la catégorie C4, aux propriétaires-bailleurs et aux associations de copropriétaires. Le taux dépend des conditions applicables et reste préférentiel par rapport aux conditions du marché."
+    },
+
+    "notice": "Pour une maison unifamiliale, le financement pourra atteindre 75 000 €. Selon la Wallonie, les pourcentages officiels des catégories C1, C2 et C3 comprennent la majoration éventuelle de 5 % liée à l'utilisation d'écomatériaux. Les plafonds de revenus sont indexés au 1er janvier 2026."
+  },
+
+  "application": {
+    "badge": "QUELLE DÉMARCHE SUIVRE ?",
+    "title": "Quelle procédure s'applique à votre rénovation ?",
+    "description": "En raison du changement de régime au 1er octobre 2026, il est important de déterminer d'abord sous quel système votre projet de rénovation se situe.",
+
+    "before": {
+      "title": "Jusqu'au 30 septembre 2026",
+      "description": "Les demandes relevant du régime temporaire des Primes Habitation doivent être introduites au plus tard le 30 septembre 2026, facture finale comprise. La demande peut être introduite via Mon Espace ou à l'aide des formulaires officiels."
+    },
+
+    "after": {
+      "title": "À partir du 1er octobre 2026",
+      "description": "Les nouveaux projets relèveront du système Rénopack et Rénoprêt. Un audit préalable sera obligatoire et le projet global devra respecter les conditions relatives à l'amélioration du PEB et au financement."
+    }
+  },
+
+  "sources": {
+    "title": "Sources & actualité",
+    "description": "Cette page a été vérifiée en septembre 2026 sur la base des informations officielles de la Wallonie. Le passage au nouveau régime est prévu le 1er octobre 2026 et certaines modalités administratives peuvent encore être précisées.",
+    "current": "Wallonie – Primes Habitation 2025-2026",
+    "new": "Wallonie – nouveau régime de rénovation",
+    "back": "Retour à toutes les primes"
+  }
+},
 
   "CtaBanner": {
     "title": "Prêt à améliorer votre habitation ?",

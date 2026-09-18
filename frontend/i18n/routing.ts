@@ -56,7 +56,49 @@ export const routing = defineRouting({
       nl: '/over-ons',
       fr: '/a-propos',
       en: '/about',
-    }
+    },
+    '/prices': {
+      nl: '/prijzen',
+      fr: '/tarifs',
+      en: '/prices',
+    },
+    '/prices/epc-calculator': {
+  nl: '/prijzen/epc-waarde-berekenen',
+  fr: '/tarifs/calcul-peb',
+  en: '/prices/epc-rating-calculator',
+},
+'/prices/energy-savings-calculator': {
+    nl: '/prijzen/energiebesparing-berekenen',
+    fr: '/tarifs/calcul-economies-energie',
+    en: '/prices/energy-savings-calculator',
+  },
+  '/prices/home-insulation-check': {
+  nl: '/prijzen/woningcheck',
+  fr: '/tarifs/diagnostic-isolation',
+  en: '/prices/home-insulation-check',
+},
+'/grants': {
+  nl: '/premies',
+  fr: '/primes',
+  en: '/grants',
+},
+'/grants/flanders': {
+  nl: '/premies/vlaanderen',
+  fr: '/primes/flandre',
+  en: '/grants/flanders',
+},
+
+'/grants/brussels': {
+  nl: '/premies/brussel',
+  fr: '/primes/bruxelles',
+  en: '/grants/brussels',
+},
+
+'/grants/wallonia': {
+  nl: '/premies/wallonie',
+  fr: '/primes/wallonie',
+  en: '/grants/wallonia',
+},
   }
 });
 

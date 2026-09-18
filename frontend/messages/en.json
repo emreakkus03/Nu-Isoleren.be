@@ -17,28 +17,27 @@
       "description": "Have a question or need more information? Feel free to get in touch with us."
     }
   },
-    "Seo": {
+  "Seo": {
     "home": {
       "title": "Nu-Isoleren | Insulation, façade works & moisture treatment",
       "description": "Cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment. Nu-Isoleren serves customers across Flanders and Wallonia. Get advice with no obligation."
     },
     "projects": {
-  "title": "Our Projects | Insulation & Façade Works | Nu-Isoleren",
-  "description": "Explore projects completed by Nu-Isoleren, including cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
-},
-"faq": {
-  "title": "FAQ | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
-  "description": "Find answers about cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
-},
-"services": {
-  "title": "Services | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
-  "description": "Discover Nu-Isoleren's services: cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
-},
-"areas": {
-  "title": "Service Areas | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
-  "description": "Nu-Isoleren is your certified insulation specialist. We install cavity wall, roof, and floor insulation across the following regions and municipalities."
-},
-
+      "title": "Our Projects | Insulation & Façade Works | Nu-Isoleren",
+      "description": "Explore projects completed by Nu-Isoleren, including cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
+    },
+    "faq": {
+      "title": "FAQ | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
+      "description": "Find answers about cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
+    },
+    "services": {
+      "title": "Services | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
+      "description": "Discover Nu-Isoleren's services: cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment across Flanders and Wallonia."
+    },
+    "areas": {
+      "title": "Service Areas | Insulation, Façade Works & Moisture Treatment | Nu-Isoleren",
+      "description": "Nu-Isoleren is your certified insulation specialist. We install cavity wall, roof, and floor insulation across the following regions and municipalities."
+    },
     "contact": {
       "title": "Contact | Nu-Isoleren",
       "description": "Contact Nu-Isoleren with questions about insulation, façade works and moisture treatment across Flanders and Wallonia."
@@ -46,9 +45,16 @@
     "about": {
       "title": "About us | Insulation & Façade Works | Nu-Isoleren",
       "description": "Discover Nu-Isoleren, based in Hamme. We provide insulation, façade and moisture treatment services across Flanders and Wallonia."
+    },
+    "prices": {
+      "title": "Insulation prices & calculators | Nu-Isoleren",
+      "description": "View guide prices for insulation, façade works and moisture treatment. Calculate your price, energy savings and EPC rating and discover suitable improvements for your home."
+    },
+    "epcCalculator": {
+      "title": "EPC Rating Calculator | Free EPC Estimate | Nu-Isoleren",
+      "description": "Estimate the EPC rating of your home using our free calculator. Answer questions about insulation, windows, heating and your property to get an initial result."
     }
   },
-
   "Breadcrumbs": {
     "home": "Home",
     "projects": "Projects",
@@ -56,7 +62,7 @@
     "services": "Services",
     "areas": "Service Areas"
   },
-   "Header": {
+  "Header": {
     "reviews": "Excellent",
     "topbar": {
       "serviceAreas": "Service Areas",
@@ -64,10 +70,10 @@
       "grants": "Grants",
       "faq": "FAQ",
       "contact": "Contact",
-        "language": "Language:"
+      "language": "Language:"
     },
     "mainbar": {
-        "home": "Home",
+      "home": "Home",
       "services": "Services",
       "projects": "Projects",
       "pricing": "Pricing",
@@ -171,18 +177,10 @@
     "title": "Real work. Visible results.",
     "cta": "View all projects"
   },
-
-
-
-
-
-
-
-
   "ProjectsPage": {
-     "badge": "OUR PROJECTS",
-  "title": "Real projects. Visible results.",
-  "description": "Explore our completed projects in cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment.",
+    "badge": "OUR PROJECTS",
+    "title": "Real projects. Visible results.",
+    "description": "Explore our completed projects in cavity wall insulation, roof insulation, render, façade cleaning, waterproofing and moisture treatment.",
     "noProjects": "No projects found for this selection.",
     "filtersTitle": "Filters",
     "projectsCount": "{count} projects",
@@ -196,7 +194,7 @@
     "noCitiesFound": "No locations found"
   },
   "ProjectDetailPage": {
-   "backLink": "Back to all projects",
+    "backLink": "Back to all projects",
     "serviceLabel": "Service",
     "locationLabel": "Location",
     "galleryTitle": "Project Gallery",
@@ -205,43 +203,34 @@
     "ctaDescription": "Request a free, non-binding quote today. Our specialist will inspect your property and provide tailored advice.",
     "ctaButton": "Request a free quote"
   },
-
-
-
   "FaqPage": {
-  "title": "Frequently asked questions about insulation and façade works",
-  "subtitle": "Find clear answers about our services, methods, materials and grants.",
-  "searchPlaceholder": "Search for a question or topic (e.g. grant, cavity wall, warranty)...",
-  "filterAll": "All questions",
-  "filterGeneral": "General & Grants",
-  "noResults": "No questions found for your search.",
-  "cta": {
-    "title": "Can't find your answer?",
-    "description": "Our experts are happy to provide free, no-obligation advice tailored to your project.",
-    "quoteButton": "Request a free quote",
-    "phoneButton": "Call us directly"
-  }
-},
-"HomePage": {
-  "faq": {
-    "badge": "Frequently Asked Questions",
-    "title": "More questions? We have the answer.",
-    "notListed": "Is your question not listed?",
-    "viewAll": "View all questions"
-  }
-},
-
-
-"ServicesPage": {
-
-  "eyebrow": "OUR SERVICES",
-
-  "title": "Insulation, façade works & damp treatment",
-
-  "description": "From cavity wall and roof insulation to rendering, façade cleaning and damp treatment. Discover our solutions for a more comfortable, energy-efficient and better-protected home."
-
-},
-"ServiceAreas": {
+    "title": "Frequently asked questions about insulation and façade works",
+    "subtitle": "Find clear answers about our services, methods, materials and grants.",
+    "searchPlaceholder": "Search for a question or topic (e.g. grant, cavity wall, warranty)...",
+    "filterAll": "All questions",
+    "filterGeneral": "General & Grants",
+    "noResults": "No questions found for your search.",
+    "cta": {
+      "title": "Can't find your answer?",
+      "description": "Our experts are happy to provide free, no-obligation advice tailored to your project.",
+      "quoteButton": "Request a free quote",
+      "phoneButton": "Call us directly"
+    }
+  },
+  "HomePage": {
+    "faq": {
+      "badge": "Frequently Asked Questions",
+      "title": "More questions? We have the answer.",
+      "notListed": "Is your question not listed?",
+      "viewAll": "View all questions"
+    }
+  },
+  "ServicesPage": {
+    "eyebrow": "OUR SERVICES",
+    "title": "Insulation, façade works & damp treatment",
+    "description": "From cavity wall and roof insulation to rendering, façade cleaning and damp treatment. Discover our solutions for a more comfortable, energy-efficient and better-protected home."
+  },
+  "ServiceAreas": {
     "badge": "Active throughout Flanders & Wallonia",
     "title": "Our Service Areas",
     "intro": "Nu-Isoleren is your certified insulation specialist. We install cavity wall, roof, and floor insulation across the following regions and municipalities.",
@@ -256,7 +245,6 @@
     "title": "Active in Flanders and Wallonia",
     "view_all": "View all service areas"
   },
-
   "CityDetail": {
     "badge": "Active in region {city} {province}",
     "title": "Insulation and facade works in {city}",
@@ -265,9 +253,7 @@
     "meta_title": "Insulation and facade works in {city} | Nu-Isoleren",
     "meta_description": "Nu-Isoleren carries out cavity wall insulation, roof insulation, render, and facade works in {city} and surrounding areas."
   },
-
-
-"ContactPage": {
+  "ContactPage": {
     "hero": {
       "breadcrumb": "Contact",
       "badge": "CONTACT",
@@ -275,30 +261,30 @@
       "description": "Do you have a question about insulation, façade works or moisture treatment? Get in touch with us. We are happy to provide clear, no-obligation advice."
     },
     "form": {
-  "badge": "SEND US A MESSAGE",
-  "title": "Get in touch",
-  "description": "Fill in the form and briefly tell us how we can help. We will get back to you as soon as possible.",
-  "fields": {
-    "firstName": "First name *",
-    "lastName": "Last name *",
-    "email": "Email address *",
-    "phone": "Phone number *",
-    "message": "Your message *"
-  },
-  "placeholders": {
-    "firstName": "First name",
-    "lastName": "Last name",
-    "email": "name@email.com",
-    "phone": "+32 ...",
-    "message": "Tell us briefly about your question or project..."
-  },
-  "privacyPrefix": "I have read the",
-  "privacyLink": "privacy policy",
-  "submit": "Send message",
-  "submitting": "Sending...",
-  "success": "Thank you. Your message has been received. We will get back to you as soon as possible.",
-  "error": "Something went wrong while sending your message. Please try again or contact us directly."
-},
+      "badge": "SEND US A MESSAGE",
+      "title": "Get in touch",
+      "description": "Fill in the form and briefly tell us how we can help. We will get back to you as soon as possible.",
+      "fields": {
+        "firstName": "First name *",
+        "lastName": "Last name *",
+        "email": "Email address *",
+        "phone": "Phone number *",
+        "message": "Your message *"
+      },
+      "placeholders": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "name@email.com",
+        "phone": "+32 ...",
+        "message": "Tell us briefly about your question or project..."
+      },
+      "privacyPrefix": "I have read the",
+      "privacyLink": "privacy policy",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "success": "Thank you. Your message has been received. We will get back to you as soon as possible.",
+      "error": "Something went wrong while sending your message. Please try again or contact us directly."
+    },
     "info": {
       "badge": "DIRECT CONTACT",
       "title": "We are happy to help",
@@ -310,7 +296,6 @@
       "response": "We aim to respond personally to every enquiry as quickly as possible."
     }
   },
-
   "AboutPage": {
     "hero": {
       "breadcrumb": "About us",
@@ -321,79 +306,1586 @@
       "imageAlt": "Nu-Isoleren company vehicle"
     },
     "intro": {
-  "badge": "WHO WE ARE",
-  "title": "More than 10 years of experience in insulation and façade works",
-  "description": "Based in Hamme, Nu-Isoleren has been helping homeowners with insulation, façade works and moisture treatment for more than 10 years. We guide each project from the initial assessment through to completion, taking the home and its specific situation into account.",
-  "descriptionSecondary": "For cavity wall insulation, we work according to an ATG-certified system. We also place strong emphasis on clear communication, correct installation and a clean finish. This allows us to provide each customer with a technically sound solution tailored to their home.",
-  "items": {
-    "experience": {
-      "title": "More than 10 years of experience",
-      "description": "Extensive hands-on experience with insulation, façade and moisture treatment projects for existing homes."
+      "badge": "WHO WE ARE",
+      "title": "More than 10 years of experience in insulation and façade works",
+      "description": "Based in Hamme, Nu-Isoleren has been helping homeowners with insulation, façade works and moisture treatment for more than 10 years. We guide each project from the initial assessment through to completion, taking the home and its specific situation into account.",
+      "descriptionSecondary": "For cavity wall insulation, we work according to an ATG-certified system. We also place strong emphasis on clear communication, correct installation and a clean finish. This allows us to provide each customer with a technically sound solution tailored to their home.",
+      "items": {
+        "experience": {
+          "title": "More than 10 years of experience",
+          "description": "Extensive hands-on experience with insulation, façade and moisture treatment projects for existing homes."
+        },
+        "atg": {
+          "title": "ATG-certified",
+          "description": "For cavity wall insulation, we work according to an ATG-certified system and its technical requirements."
+        },
+        "personal": {
+          "title": "Personal approach",
+          "description": "Every home is assessed individually so the proposed solution matches the existing situation."
+        },
+        "finish": {
+          "title": "Correct and clean workmanship",
+          "description": "We focus on both the technical quality of the work and a clean, carefully finished result."
+        }
+      }
     },
-    "atg": {
-      "title": "ATG-certified",
-      "description": "For cavity wall insulation, we work according to an ATG-certified system and its technical requirements."
+    "approach": {
+      "badge": "OUR APPROACH",
+      "title": "From initial advice to a clean finish",
+      "description": "Good workmanship starts with proper preparation. We first assess the condition of your home, determine the right solution and then carry out the work carefully.",
+      "steps": {
+        "assessment": {
+          "title": "Advice & assessment",
+          "description": "We assess the home, the existing situation and the work required in order to determine a suitable solution."
+        },
+        "proposal": {
+          "title": "Clear proposal",
+          "description": "You receive a clear proposal outlining the chosen approach and the work that will be carried out."
+        },
+        "execution": {
+          "title": "Careful workmanship",
+          "description": "Our professionals carry out the work carefully with attention to quality, detail and a clean finish."
+        }
+      }
     },
-    "personal": {
-      "title": "Personal approach",
-      "description": "Every home is assessed individually so the proposed solution matches the existing situation."
-    },
-    "finish": {
-      "title": "Correct and clean workmanship",
-      "description": "We focus on both the technical quality of the work and a clean, carefully finished result."
-    }
-  }
-},
-"approach": {
-  "badge": "OUR APPROACH",
-  "title": "From initial advice to a clean finish",
-  "description": "Good workmanship starts with proper preparation. We first assess the condition of your home, determine the right solution and then carry out the work carefully.",
-  "steps": {
-    "assessment": {
-      "title": "Advice & assessment",
-      "description": "We assess the home, the existing situation and the work required in order to determine a suitable solution."
-    },
-    "proposal": {
-      "title": "Clear proposal",
-      "description": "You receive a clear proposal outlining the chosen approach and the work that will be carried out."
-    },
-    "execution": {
-      "title": "Careful workmanship",
-      "description": "Our professionals carry out the work carefully with attention to quality, detail and a clean finish."
-    }
-  }
-},
-"materials": {
-  "badge": "MATERIALS & TECHNIQUES",
-  "title": "Solutions we can stand behind technically",
-  "description": "Good workmanship is not only about correct installation, but also about choosing suitable materials and techniques. We select each solution based on the home, the application and the technical requirements of the project.",
-"descriptionSecondary": "For cavity wall insulation, we use high-quality EPS beads from Isomo nv in Kortrijk-Heule, the Belgian market leader since the 1950s.",  "items": {
     "materials": {
-      "title": "Proven materials",
-      "description": "We select materials based on their technical properties, intended application and suitability for the existing home."
+      "badge": "MATERIALS & TECHNIQUES",
+      "title": "Solutions we can stand behind technically",
+      "description": "Good workmanship is not only about correct installation, but also about choosing suitable materials and techniques. We select each solution based on the home, the application and the technical requirements of the project.",
+      "descriptionSecondary": "For cavity wall insulation, we use high-quality EPS beads from Isomo nv in Kortrijk-Heule, the Belgian market leader since the 1950s.",
+      "items": {
+        "materials": {
+          "title": "Proven materials",
+          "description": "We select materials based on their technical properties, intended application and suitability for the existing home."
+        },
+        "innovation": {
+          "title": "Continuing to develop",
+          "description": "We actively follow new techniques and developments in insulation, façade works and moisture treatment."
+        }
+      },
+      "cta": "View our services",
+      "imageAlt": "Materials and techniques used by Nu-Isoleren"
     },
-    "innovation": {
-      "title": "Continuing to develop",
-      "description": "We actively follow new techniques and developments in insulation, façade works and moisture treatment."
+    "projects": {
+      "badge": "OUR WORK",
+      "title": "Real projects. Real results.",
+      "description": "Discover some of our recent insulation, façade and moisture treatment projects.",
+      "cta": "View all projects"
     }
   },
-  "cta": "View our services",
-  "imageAlt": "Materials and techniques used by Nu-Isoleren"
+  "PricesPage": {
+    "hero": {
+      "breadcrumb": "Prices",
+      "badge": "PRICES & CALCULATORS",
+      "title": "Prices for insulation, façade works and moisture treatment",
+      "description": "The cost of your project depends on your home, the surface area, the materials and the chosen solution. Discover what affects the price and use our calculators to get an initial estimate for your home.",
+      "cta": "View our calculators"
+    },
+    "tools": {
+      "badge": "CALCULATE & CHECK",
+      "title": "Get quick insight into your home",
+      "description": "Use our free tools to get an initial estimate of costs, energy savings, EPC rating or suitable improvements for your home.",
+      "price": {
+        "title": "Calculate your price",
+        "description": "Choose the work you would like carried out and get an initial estimated price for your home.",
+        "cta": "Calculate price"
+      },
+      "savings": {
+        "title": "Calculate your energy savings",
+        "description": "Discover how much energy you could potentially save by improving the insulation of your home.",
+        "cta": "Calculate savings"
+      },
+      "epc": {
+        "title": "Estimate your EPC rating",
+        "description": "Answer a few questions about your home and get an indicative estimate of its EPC rating.",
+        "cta": "Estimate EPC rating"
+      },
+      "homeCheck": {
+        "title": "Check your home",
+        "description": "Not sure which improvements your home needs? Discover which solutions may suit your situation.",
+        "cta": "Start the home check"
+      }
+    },
+    "servicePrices": {
+      "badge": "PRICE BY SERVICE",
+      "title": "How much do our services cost?",
+      "description": "View indicative prices for each service. The final price depends on factors such as the surface area, condition of the property, chosen solution and accessibility.",
+      "calculate": "Calculate your price",
+      "service": "View service",
+      "disclaimer": "The prices shown are indicative estimates. For an exact price, we always assess the specific situation of your property.",
+      "cavityWall": {
+        "title": "Cavity wall insulation",
+        "price": "€21 – €25 per m²",
+        "description": "The price depends on factors including the surface area, width and condition of the cavity and accessibility of the façade."
+      },
+      "roof": {
+        "title": "Roof insulation",
+        "price": "€X – €X",
+        "description": "The price depends on the type of roof, surface area, selected insulation material and installation method."
+      },
+      "crepi": {
+        "title": "Crepi",
+        "price": "€X – €X",
+        "description": "The price is influenced by the façade area, existing surface, desired finish and whether external insulation is included."
+      },
+      "facadeCleaning": {
+        "title": "Façade cleaning",
+        "price": "€X – €X",
+        "description": "The cost depends on the surface area, level of contamination, façade material and appropriate cleaning method."
+      },
+      "hydrofuge": {
+        "title": "Hydrofuge treatment",
+        "price": "€X – €X",
+        "description": "The price mainly depends on the façade area, its condition and any preparation required before treatment."
+      },
+      "cavityRemoval": {
+        "title": "Cavity wall insulation removal",
+        "price": "€X – €X",
+        "description": "The price depends on the amount of existing insulation, accessibility of the cavity and condition of the façade."
+      },
+      "risingDamp": {
+        "title": "Rising damp treatment",
+        "price": "€X – €X",
+        "description": "The cost depends on the extent of the moisture problem, the length and thickness of the walls and the selected treatment."
+      }
+    },
+    "methodology": {
+      "badge": "TRANSPARENT GUIDE PRICES",
+      "title": "How do we determine our guide prices?",
+      "description": "The prices shown on this page are intended to provide a realistic first estimate. They are based on our usual price ranges for the different types of work, but every home and project is different.",
+      "items": {
+        "ranges": {
+          "title": "Guide prices by service",
+          "description": "Where possible, we show a clear price range per square metre or per type of work."
+        },
+        "project": {
+          "title": "Based on the situation",
+          "description": "The final price depends on the technical situation, the scope of the work and the chosen solution."
+        },
+        "quote": {
+          "title": "Exact price through a quote",
+          "description": "For a final price, we assess your project individually and provide a tailored quotation."
+        }
+      }
+    },
+    "examples": {
+      "badge": "PRICE EXAMPLES",
+      "title": "How much does an average project cost?",
+      "description": "View a few simple examples based on our guide prices. This gives you a quick idea of the possible cost for your home.",
+      "cavityWall": {
+        "title": "Cavity wall insulation",
+        "example": "Example: 100 m²",
+        "price": "€2,100 – €2,500"
+      },
+      "roof": {
+        "title": "Roof insulation",
+        "example": "Example: 80 m²",
+        "price": "€X – €X"
+      },
+      "crepi": {
+        "title": "Crepi",
+        "example": "Example: 100 m²",
+        "price": "€X – €X"
+      },
+      "facadeCleaning": {
+        "title": "Façade cleaning",
+        "example": "Example: 100 m²",
+        "price": "€X – €X"
+      },
+      "hydrofuge": {
+        "title": "Hydrofuge treatment",
+        "example": "Example: 100 m²",
+        "price": "€X – €X"
+      },
+      "cavityRemoval": {
+        "title": "Cavity wall insulation removal",
+        "example": "Example: 100 m²",
+        "price": "€X – €X"
+      },
+      "risingDamp": {
+        "title": "Rising damp treatment",
+        "example": "Example: 10 linear metres",
+        "price": "€X – €X"
+      },
+      "cta": "Calculate your price",
+      "disclaimer": "Indicative examples. The exact price depends on your home and project."
+    },
+    "grants": {
+      "badge": "GRANTS & FINAL COST",
+      "title": "Grants may reduce your final investment",
+      "description": "For certain insulation works, you may be eligible for grants or financial support. The applicable conditions depend on factors such as the type of work, your home and current regulations.",
+      "descriptionSecondary": "So it is worth looking not only at the execution price, but also at any grants that may apply to your project.",
+      "cta": "View all grants"
+    },
+    "faq": {
+      "badge": "FREQUENTLY ASKED QUESTIONS",
+      "title": "Frequently asked questions about prices and calculations",
+      "description": "Find answers to common questions about insulation prices, quotations, EPC estimates and the cost of your project."
+    }
+  },
+  "EpcPage": {
+    "hero": {
+      "pricesBreadcrumb": "Prices",
+      "breadcrumb": "EPC rating calculator",
+      "badge": "EPC CALCULATOR",
+      "title": "Estimate the EPC rating of your home",
+      "description": "Answer a few questions about your home, insulation, windows and heating system to get an initial estimate of its energy performance.",
+      "disclaimer": "This calculation is indicative and does not replace an official EPC certificate.",
+      "cta": "Start the EPC calculation"
+    },
+    "calculator": {
+      "badge": "EPC CALCULATION",
+      "title": "Estimate the energy performance of your home",
+      "description": "Answer a few questions about your home and its systems to receive an indicative estimate of its energy performance.",
+      "progress": "Step {current} of {total}",
+     "previous": "Previous",
+"next": "Next",
+"calculate": "Calculate my EPC",
+"calculating": "Calculating EPC...",
+"error": "The calculation could not be completed. Please try again.",
+"comingSoon": "This step will be added next.",
+      "disclaimer": "This calculator provides an indicative estimate and does not replace an official EPC or PEB certificate.",
+      "building": {
+        "badge": "YOUR HOME",
+        "title": "First, tell us a little about your home",
+        "description": "These basic details allow us to select the appropriate regional methodology and calculation assumptions.",
+        "region": {
+          "question": "Where is your home located?",
+          "options": {
+            "flanders": "Flanders",
+            "brussels": "Brussels",
+            "wallonia": "Wallonia"
+          }
+        },
+        "type": {
+          "question": "What type of home do you have?",
+          "options": {
+            "detached": "Detached house",
+            "semi_detached": "Semi-detached house",
+            "terraced": "Terraced house",
+            "apartment": "Apartment"
+          }
+        },
+        "constructionYear": {
+          "label": "What year was the property built?",
+          "placeholder": "E.g. 1985",
+          "help": "Enter the original construction year of the property."
+        },
+        "floorArea": {
+          "label": "Heated floor area",
+          "placeholder": "E.g. 145",
+          "help": "Enter your best estimate of the heated floor area."
+        }
+      },
+      "roof": {
+        "badge": "ROOF & ATTIC",
+        "title": "How is your roof insulated?",
+        "description": "The roof or attic floor forms an important part of the thermal envelope of your home.",
+        "type": {
+          "question": "What type of roof is above your home?",
+          "apartmentHelp": "If another heated apartment is directly above yours, select ‘No direct roof’.",
+          "options": {
+            "pitched": "Pitched roof",
+            "flat": "Flat roof",
+            "mixed": "Combination of pitched and flat roof",
+            "no_direct_roof": "No direct roof"
+          }
+        },
+        "insulationLocation": {
+          "question": "Where is the insulation located?",
+          "help": "With an unheated attic, the insulation may be in the attic floor rather than in the roof itself.",
+          "options": {
+            "roof": "In the roof",
+            "attic_floor": "In the attic floor",
+            "both": "In both the roof and attic floor",
+            "none": "No insulation",
+            "unknown": "I don't know"
+          }
+        },
+        "material": {
+          "question": "Which insulation material is mainly used?",
+          "options": {
+            "mineral_wool": "Glass wool or rock wool",
+            "pir_pur": "PIR or PUR",
+            "eps_xps": "EPS or XPS",
+            "cellulose_wood_fibre": "Cellulose or wood fibre",
+            "other": "Other material",
+            "unknown": "I don't know"
+          }
+        },
+        "thickness": {
+          "label": "How thick is the insulation layer?",
+          "placeholder": "E.g. 16",
+          "help": "An estimate is sufficient. If you do not know the thickness, select ‘I don't know’ for the material."
+        }
+      },
+      "walls": {
+        "badge": "EXTERNAL WALLS",
+        "title": "How are your external walls insulated?",
+        "description": "External wall insulation has an important impact on heat loss and the overall energy performance of your home.",
+        "type": {
+          "question": "How are your external walls insulated?",
+          "options": {
+            "cavity": "Cavity wall insulation",
+            "external": "External wall insulation",
+            "internal": "Internal wall insulation",
+            "mixed": "Combination of different systems",
+            "none": "No wall insulation",
+            "unknown": "I don't know"
+          }
+        },
+        "material": {
+          "question": "Which insulation material is mainly used?",
+          "options": {
+            "mineral_wool": "Glass wool or rock wool",
+            "pir_pur": "PIR or PUR",
+            "eps_xps": "EPS or XPS",
+            "cellulose_wood_fibre": "Cellulose or wood fibre",
+            "other": "Other material",
+            "unknown": "I don't know"
+          }
+        },
+        "thickness": {
+          "label": "How thick is the insulation layer?",
+          "placeholder": "E.g. 8"
+        }
+      },
+      "floor": {
+        "badge": "FLOOR",
+        "title": "How is the floor of your home constructed?",
+        "description": "Heat can also be lost through the floor. We therefore look at what lies beneath the heated areas and whether the floor is insulated.",
+        "boundary": {
+          "question": "What is beneath the heated floor?",
+          "options": {
+            "ground": "Ground",
+            "basement": "Basement",
+            "crawl_space": "Crawl space",
+            "outside": "Outside air",
+            "heated_space": "Another heated space",
+            "unknown": "I don't know"
+          }
+        },
+        "insulated": {
+          "question": "Is the floor insulated?"
+        },
+        "answers": {
+          "yes": "Yes",
+          "no": "No",
+          "unknown": "I don't know"
+        },
+        "material": {
+          "question": "Which insulation material is used?",
+          "options": {
+            "mineral_wool": "Glass wool or rock wool",
+            "pir_pur": "PIR or PUR",
+            "eps_xps": "EPS or XPS",
+            "cellulose_wood_fibre": "Cellulose or wood fibre",
+            "other": "Other material",
+            "unknown": "I don't know"
+          }
+        },
+        "thickness": {
+          "label": "How thick is the insulation layer?"
+        }
+      },
+      "windows": {
+        "badge": "WINDOWS",
+        "title": "What type of windows does your home have?",
+        "description": "The type of glazing and window frames affects how much heat is lost through the windows.",
+        "glazing": {
+          "question": "Which type of glazing is mainly installed?",
+          "options": {
+            "single": "Single glazing",
+            "double": "Standard double glazing",
+            "high_efficiency_double": "High-efficiency double glazing",
+            "triple": "Triple glazing",
+            "mixed": "Different types of glazing",
+            "unknown": "I don't know"
+          }
+        },
+        "frame": {
+          "question": "Which type of window frames are mainly installed?",
+          "options": {
+            "wood": "Wood",
+            "pvc": "PVC",
+            "aluminium": "Aluminium",
+            "mixed": "Different materials",
+            "unknown": "I don't know"
+          }
+        }
+      },
+      "heating": {
+        "badge": "HEATING & HOT WATER",
+        "title": "How is your home heated?",
+        "source": {
+          "question": "What is the main heating method in your home?",
+          "options": {
+            "gas": "Natural gas",
+            "oil": "Heating oil",
+            "heat_pump": "Heat pump",
+            "electric": "Electricity",
+            "wood_pellets": "Wood or pellets",
+            "district": "District heating",
+            "other": "Other energy source",
+            "unknown": "I don't know"
+          }
+        },
+        "system": {
+          "question": "Which heating system do you have?",
+          "options": {
+            "condensing_boiler": "Condensing boiler",
+            "non_condensing_boiler": "Non-condensing boiler",
+            "heat_pump_air_water": "Air-to-water heat pump",
+            "heat_pump_ground_water": "Ground-source heat pump",
+            "heat_pump_air_air": "Air-to-air heat pump",
+            "electric_resistance": "Direct electric heating",
+            "stove": "Stove",
+            "district": "District heating",
+            "other": "Other system",
+            "unknown": "I don't know"
+          }
+        },
+        "year": {
+          "label": "When was the heating system installed?",
+          "placeholder": "E.g. 2018",
+          "help": "Leave this blank if you do not know the installation year."
+        },
+        "hotWater": {
+          "question": "How is your domestic hot water produced?",
+          "options": {
+            "same_as_heating": "By the same system as the heating",
+            "electric_boiler": "Electric water heater",
+            "heat_pump_boiler": "Heat pump water heater",
+            "gas_water_heater": "Gas water heater",
+            "solar_supported": "With solar thermal support",
+            "other": "Other system",
+            "unknown": "I don't know"
+          }
+        },
+        "cooling": {
+          "question": "Does your home have active cooling?",
+          "options": {
+            "none": "No active cooling",
+            "air_conditioning": "Air conditioning",
+            "heat_pump": "Cooling via heat pump",
+            "other": "Other system",
+            "unknown": "I don't know"
+          }
+        }
+      },
+      "ventilation": {
+        "badge": "VENTILATION",
+        "title": "How is your home ventilated?",
+        "description": "Ventilation affects energy performance while ensuring a sufficient supply of fresh air to the home.",
+        "naturalOpenings": {
+          "question": "Are ventilation grilles or other permanent air supply openings present?"
+        },
+        "mechanicalExtraction": {
+          "question": "Is air mechanically extracted, for example from the bathroom, toilet or kitchen?"
+        },
+        "mechanicalSupply": {
+          "question": "Is fresh air mechanically supplied to living areas or bedrooms?"
+        },
+        "heatRecovery": {
+          "question": "Does the ventilation system include heat recovery?"
+        },
+        "answers": {
+          "yes": "Yes",
+          "no": "No",
+          "unknown": "I don't know"
+        }
+      },
+      "renewable": {
+        "badge": "RENEWABLE ENERGY",
+        "title": "Does your home use renewable energy?",
+        "description": "Solar panels and solar energy can influence the calculated energy performance of your home.",
+        "solarPanels": {
+          "question": "Does your home have solar panels?"
+        },
+        "solarPower": {
+          "label": "What is the total capacity of the solar panels?",
+          "placeholder": "E.g. 4.2",
+          "help": "The total peak capacity can usually be found on the quotation or technical documentation for the installation."
+        },
+        "solarThermal": {
+          "question": "Does your home have a solar thermal water heater?"
+        },
+        "answers": {
+          "yes": "Yes",
+          "no": "No",
+          "unknown": "I don't know"
+        }
+      },
+      "result": {
+  "badge": "YOUR RESULT",
+  "title": "Estimated energy performance",
+  "description": "Based on the property information provided, this is an indicative estimate of your home's energy performance.",
+  "score": "Estimated energy score",
+  "label": "Estimated energy label",
+  "range": "Estimated range",
+  "warning": "This result is an indicative estimate and is not an official EPC or PEB certificate. An official energy rating can only be determined using the relevant regional certification method.",
+  "again": "Calculate again"
+}
+    },
+    "explanation": {
+  "badge": "ENERGY PERFORMANCE",
+  "title": "What does your EPC or PEB score mean?",
+  "description": "The energy score indicates how efficiently a home performs under standardised conditions. It is expressed in kilowatt-hours of primary energy per square metre per year, or kWh/(m² year).",
+  "secondary": "The lower the energy score, the more energy efficient the property. The calculation considers factors such as roof, wall and floor insulation, windows, heating, domestic hot water, ventilation and renewable energy.",
+  "score": {
+    "badge": "ENERGY SCORE",
+    "title": "A lower score means better energy performance",
+    "description": "The score represents the calculated annual energy performance per square metre of the property. A home with a lower score generally requires less primary energy under the same standardised conditions."
+  },
+  "label": {
+    "badge": "ENERGY LABEL",
+    "title": "The label makes the energy score easier to understand",
+    "description": "The numerical energy score is converted into an energy label. Flanders, Brussels and Wallonia each use their own label scale and threshold values."
+  },
+  "usage": {
+    "badge": "THEORETICAL CALCULATION",
+    "title": "Your EPC or PEB score is not the same as your energy bill",
+    "description": "Energy performance certificates use standardised assumptions so that homes can be compared fairly. Your actual energy consumption may be higher or lower depending on occupancy, heating behaviour and personal habits."
+  }
 },
-"projects": {
-  "badge": "OUR WORK",
-  "title": "Real projects. Real results.",
-  "description": "Discover some of our recent insulation, façade and moisture treatment projects.",
-  "cta": "View all projects"
+"labels": {
+  "badge": "EPC & PEB LABELS",
+  "title": "Which energy score corresponds to which label?",
+  "description": "Energy label thresholds differ between Belgium's regions. See how EPC and PEB scores are classified in Flanders, Brussels and Wallonia.",
+  "energyLabel": "Energy label",
+  "regions": {
+    "flanders": "Flanders",
+    "brussels": "Brussels",
+    "wallonia": "Wallonia"
+  },
+  "content": {
+    "flanders": {
+      "title": "EPC labels in Flanders",
+      "description": "In Flanders, residential EPC labels range from A+ to F. A lower energy score indicates a more energy-efficient home.",
+      "note": "The displayed thresholds follow the Flemish residential EPC label scale. Only an official EPC can determine the final label of a property."
+    },
+    "brussels": {
+      "title": "PEB labels in Brussels",
+      "description": "In the Brussels-Capital Region, the current residential PEB scale ranges from A to G.",
+      "note": "Brussels uses its own PEB methodology and threshold values. A Flemish EPC score therefore cannot be directly interpreted as a Brussels PEB label."
+    },
+    "wallonia": {
+      "title": "PEB labels in Wallonia",
+      "description": "Wallonia uses a residential PEB scale ranging from A++ to G, based on the theoretical specific primary energy consumption.",
+      "note": "Wallonia uses its own PEB calculation methodology and label scale. Only an official PEB certificate determines the final label."
+    }
+  }
+},
+"improvements": {
+  "badge": "IMPROVE YOUR EPC",
+  "title": "How can you improve your home's energy rating?",
+  "description": "Improving energy performance usually starts by reducing heat loss. Roof and external wall insulation can therefore play an important role in improving a home's calculated energy performance.",
+  "cavity": {
+    "title": "Cavity wall insulation",
+    "description": "If your home has a suitable uninsulated cavity wall, cavity wall insulation can reduce heat loss through the external walls. Existing wall insulation is taken into account when assessing energy performance.",
+    "link": "View cavity wall insulation"
+  },
+  "roof": {
+    "title": "Roof insulation",
+    "description": "An inadequately insulated roof can lead to significant heat loss. Depending on the property, either the roof itself or the attic floor can be insulated to improve the thermal envelope.",
+    "link": "View roof insulation"
+  },
+  "facade": {
+    "title": "External insulation with render",
+    "description": "When cavity wall insulation is not possible or sufficient, external wall insulation can provide an alternative. The insulation layer is combined with a new rendered façade finish.",
+    "link": "View external insulation with render"
+  },
+  "other": {
+    "title": "Other parts of your home also affect the energy score",
+    "description": "In addition to insulation, energy performance calculations also consider windows and doors, heating, domestic hot water, ventilation and renewable energy.",
+    "windows": {
+      "title": "Windows & glazing",
+      "description": "High-performance or triple glazing can reduce heat loss through windows, particularly where single glazing or older double glazing is still present."
+    },
+    "heating": {
+      "title": "Heating",
+      "description": "The efficiency and type of heating system influence the calculated energy use of the property."
+    },
+    "solar": {
+      "title": "Solar energy",
+      "description": "Solar panels and solar thermal systems can contribute to energy performance by supplying part of the home's energy from renewable sources."
+    }
+  },
+  "note": "The measure with the greatest impact varies from one property to another. An official EPC or PEB assessment and its recommendations provide more detailed information for the specific property."
+},
+"indicative": {
+  "badge": "INDICATIVE ESTIMATE",
+  "title": "Why is this EPC or PEB calculation an estimate?",
+  "description": "Our calculator provides an initial estimate of a home's energy performance based on the information you enter. An official EPC or PEB assessment uses more detailed technical data and follows the certification methodology of the relevant region.",
+  "data": {
+    "title": "The information you provide",
+    "description": "The calculation considers factors such as property type, construction year, floor area, insulation, glazing, heating, ventilation and renewable energy."
+  },
+  "assumptions": {
+    "title": "Missing technical information is estimated",
+    "description": "When certain technical details are unknown, the calculator has to use assumptions. The actual official energy score may therefore differ from the estimate."
+  },
+  "official": {
+    "title": "An official certificate requires an official assessment",
+    "description": "Only an EPC or PEB certificate produced according to the relevant regional certification methodology can determine the official energy score and label."
+  },
+  "notice": {
+    "title": "Important:",
+    "description": "use this result as an initial indication of your home's energy performance, not as an official EPC or PEB certificate."
+  }
+},
+"faq": {
+  "badge": "FREQUENTLY ASKED QUESTIONS",
+  "title": "Frequently asked questions about EPC and PEB",
+  "description": "Find answers about energy scores, energy labels, our calculator and improving your home's energy performance."
 }
   },
+  "EnergySavingsPage": {
+  "metadata": {
+    "title": "Calculate Energy Savings from Insulation | Nu-Isoleren",
+    "description": "Estimate how much energy you could save with roof, cavity wall or external wall insulation. Get a free indicative estimate for your home."
+  },
+  "hero": {
+    "pricesBreadcrumb": "Prices",
+  "breadcrumb": "Energy savings calculator",
+    "badge": "ENERGY SAVINGS CALCULATOR",
+    "title": "How much could you save with insulation?",
+    "description": "Calculate how much energy you could potentially save by improving your home's insulation. Enter a few details about your property and its current insulation to receive an indicative estimate of your annual energy savings.",
+    "cta": "Calculate my savings",
+    "disclaimer": "The calculation is indicative. Actual savings depend on your property, energy consumption and heating behaviour."
+  },
+  "calculator": {
+  "badge": "SAVINGS CALCULATOR",
+  "title": "Calculate your potential energy savings",
+  "description": "Answer a few questions about your home, its current insulation and heating situation. You will then receive an indicative estimate of how much heating energy insulation could save.",
+  "calculating": "Calculating savings...",
+"error": "The energy savings could not be calculated. Please try again.",
+"result": {
+  "badge": "YOUR RESULT",
+  "title": "Your estimated energy savings",
+  "description": "Based on your property, current insulation, heating situation and selected insulation measure, you receive the indicative estimate below.",
+  "energy": "Estimated energy saving",
+  "percentage": "Estimated saving",
+  "heatingEnergy": "of your annual heating energy",
+  "range": "Expected range",
+  "rangeDescription": "Actual savings may vary depending on the property, the quality of the insulation work and your heating behaviour.",
+  "cost": "Estimated financial saving",
+  "year": "year",
+  "perYear": "per year",
+  "warning": "This calculation is indicative and is not an energy audit or a guarantee of future energy consumption or energy costs. Actual savings depend on factors including the existing construction, quality of the insulation work, weather conditions, indoor temperature and heating behaviour.",
+  "again": "Calculate again"
+},
+  "progress": "Step {current} of {total}",
+  "previous": "Previous",
+  "next": "Next",
+  "calculate": "Calculate my savings",
+  "disclaimer": "This calculator provides an indicative estimate. Actual savings depend on factors such as the property, quality of installation, indoor temperature and heating behaviour.",
+  "building": {
+    "badge": "STEP 1",
+    "title": "Tell us about your home",
+    "description": "A few basic details help us estimate the size of the property and its heating demand more accurately.",
+    "region": {
+      "question": "Which region is the property located in?",
+      "options": {
+        "flanders": "Flanders",
+        "brussels": "Brussels",
+        "wallonia": "Wallonia"
+      }
+    },
+    "type": {
+      "question": "What type of property do you have?",
+      "options": {
+        "detached": "Detached house",
+        "semi_detached": "Semi-detached house",
+        "terraced": "Terraced house",
+        "apartment": "Apartment"
+      }
+    },
+    "year": {
+      "label": "Construction year",
+      "placeholder": "E.g. 1975"
+    },
+    "area": {
+      "label": "Heated floor area",
+      "placeholder": "E.g. 140"
+    }
+  },
+  "insulation": {
+    "badge": "STEP 2",
+    "title": "How is your home currently insulated?",
+    "description": "The existing insulation determines how much additional heat loss could potentially be reduced through new insulation work.",
+    "roof": {
+      "question": "How is the roof currently insulated?",
+      "options": {
+        "none": "Not insulated",
+        "limited": "Limited or older insulation",
+        "insulated": "Well insulated",
+        "unknown": "I don't know"
+      }
+    },
+    "walls": {
+      "question": "How are the external walls currently insulated?",
+      "options": {
+        "none": "Not insulated",
+        "limited": "Limited or older insulation",
+        "insulated": "Well insulated",
+        "unknown": "I don't know"
+      }
+    }
+  },
+  "measure": {
+    "badge": "STEP 3",
+    "title": "Which insulation work would you like to calculate?",
+    "description": "Select the insulation measure for which you would like an indication of the potential energy savings.",
+    "type": {
+      "question": "Which measure would you like to carry out?",
+      "options": {
+        "cavity_wall": "Cavity wall insulation",
+        "roof": "Roof insulation",
+        "external_wall": "External wall insulation"
+      }
+    },
+    "surface": {
+      "label": "Estimated area to be insulated",
+      "placeholder": "E.g. 90",
+      "help": "An estimate is sufficient. For walls, enter the approximate external façade area. For roof insulation, enter the roof or attic floor area to be insulated."
+    }
+  },
+  "heating": {
+    "badge": "STEP 4",
+    "title": "How do you heat your home?",
+    "description": "Your heating system and current energy use help us estimate the potential savings more accurately.",
+    "source": {
+      "question": "What is your main heating source?",
+      "options": {
+        "gas": "Natural gas",
+        "oil": "Heating oil",
+        "electric": "Electric heating",
+        "heat_pump": "Heat pump",
+        "wood_pellets": "Wood or pellets",
+        "other": "Other"
+      }
+    },
+    "consumption": {
+      "label": "Annual energy consumption",
+      "placeholder": "E.g. 18000"
+    },
+   "cost": {
+  "label": "Annual heating cost (optional)",
+  "placeholder": "E.g. 1800"
+},
+"help": "Enter your annual energy consumption in kWh, which can usually be found on your annual energy statement. If you also enter your annual heating cost, we can estimate the potential financial saving."
+}
+},
+"explanation": {
+  "badge": "HOW DOES THE CALCULATION WORK?",
+  "title": "How do we calculate your potential energy savings?",
+  "description": "A home loses heat through areas such as the roof and external walls. Improving a poorly insulated building element can reduce that heat loss. Our calculator estimates the potential effect of the selected insulation measure for your situation.",
+  "steps": {
+    "current": {
+      "title": "Current situation",
+      "description": "We first estimate the current heat loss based on factors including the construction year, existing insulation and the surface area of the building element."
+    },
+    "improved": {
+      "title": "After insulation",
+      "description": "We then estimate how much the heat loss could decrease once the selected building element is better insulated."
+    },
+    "result": {
+      "title": "Your estimated savings",
+      "description": "The difference is converted into an indicative energy saving in kWh, a percentage and, when provided, an estimated financial saving."
+    }
+  },
+  "factors": {
+    "title": "Which information do we use?",
+    "description": "The calculation takes several factors into account that can affect the potential impact of insulation.",
+    "items": {
+      "building": "Property type",
+      "year": "Construction year",
+      "insulation": "Current insulation",
+      "surface": "Area to be insulated",
+      "heating": "Heating source",
+      "consumption": "Annual energy consumption"
+    }
+  },
+  "notice": "The calculation remains an indicative estimate. Actual energy savings may vary depending on factors such as the property's construction, quality of installation, weather conditions, indoor temperature and heating behaviour."
+},
+"measures": {
+  "badge": "INSULATION MEASURES",
+  "title": "Which types of insulation can help you save energy?",
+  "description": "Not every insulation measure has the same effect in every home. Potential savings mainly depend on how much heat the building element currently loses and how well it is already insulated.",
+  "suitableLabel": "Especially useful when",
+  "items": {
+    "cavity": {
+      "title": "Cavity wall insulation",
+      "description": "Cavity wall insulation fills the space between the inner and outer wall with insulating material. This can reduce heat loss through external walls without having to renovate the entire façade.",
+      "suitable": "The property has a suitable cavity wall that is empty or insufficiently insulated."
+    },
+    "roof": {
+      "title": "Roof insulation",
+      "description": "Heat rises, so a poorly insulated roof can be an important source of heat loss. Roof or attic floor insulation helps keep more heat inside the heated part of the property.",
+      "suitable": "The roof is uninsulated, poorly insulated or contains older insulation."
+    },
+    "facade": {
+      "title": "External wall insulation",
+      "description": "External wall insulation adds an insulating layer to the outside of the property. It can significantly reduce heat loss through external walls while also renewing the appearance of the façade.",
+      "suitable": "Cavity wall insulation is not possible or insufficient, or when the façade is already due for renovation."
+    }
+  },
+  "cta": {
+    "title": "Which insulation method suits your home?",
+    "description": "Explore our insulation and façade solutions to discover which options could be suitable for your property.",
+    "button": "View our services"
+  }
+},
+"factors": {
+  "badge": "YOUR ACTUAL SAVINGS",
+  "title": "What determines your actual energy savings?",
+  "description": "The calculator provides an estimate. Two homes with the same floor area can still achieve different savings in practice because several technical and behavioural factors affect energy use.",
+  "important": {
+    "title": "A calculation remains an estimate",
+    "description": "The calculator compares an estimated current situation with an improved situation after insulation. An exact assessment requires information such as the actual construction, insulation thickness and condition of the property."
+  },
+  "items": {
+    "existingInsulation": {
+      "title": "Existing insulation",
+      "description": "The poorer the current insulation of a roof or external wall, the greater the potential reduction in heat loss will generally be."
+    },
+    "construction": {
+      "title": "Construction year and structure",
+      "description": "The construction of the walls, roof and other building elements affects how much heat the property loses and how much improvement additional insulation can provide."
+    },
+    "surface": {
+      "title": "Area to be insulated",
+      "description": "The size of the roof or external walls being insulated directly affects the amount of heat loss that can potentially be reduced."
+    },
+    "heating": {
+      "title": "Heating system",
+      "description": "The type and efficiency of the heating system affect how much purchased energy is required to provide the same amount of heat inside the property."
+    },
+    "temperature": {
+      "title": "Indoor temperature and weather",
+      "description": "Higher indoor temperatures and colder outdoor conditions increase the temperature difference between inside and outside and therefore increase heat loss."
+    },
+    "behaviour": {
+      "title": "Heating behaviour",
+      "description": "How long you heat the property, which rooms are heated and how the thermostat is used all influence the final energy consumption."
+    }
+  }
+},
+"faq": {
+  "badge": "FREQUENTLY ASKED QUESTIONS",
+  "title": "Frequently asked questions about energy savings from insulation",
+  "description": "Find answers about our savings calculator, energy savings from insulation and the factors that affect your actual result."
+}
+},
+
+"HomeInsulationCheckPage": {
+  "metadata": {
+    "title": "Home Insulation Check: What Insulation Does My Home Need? | Nu-Isoleren",
+    "description": "Take the free Nu-Isoleren home check and discover which insulation, façade and moisture solutions may be suitable for your property."
+  },
+  "hero": {
+    "pricesBreadcrumb": "Prices & calculators",
+    "breadcrumb": "Home insulation check",
+    "badge": "FREE HOME CHECK",
+    "title": "What insulation does your home need?",
+    "description": "Answer a few short questions about your property, roof, external walls, façade and any moisture problems. You will then receive a personalised overview of the Nu-Isoleren solutions that may be relevant for your home.",
+    "disclaimer": "The home check provides an initial indication and does not replace a technical inspection on site.",
+    "cta": "Start the home check"
+  },
+  "check": {
+  "badge": "HOME CHECK",
+  "title": "Discover which solutions may suit your home",
+  "description": "Answer four short steps about your property, roof, external walls and any moisture problems. We will then show which Nu-Isoleren solutions may be relevant for your home.",
+  "progress": "Step {current} of {total}",
+  "previous": "Previous",
+  "next": "Next",
+  "showResult": "View my result",
+  "disclaimer": "This home check provides an initial indication based on your answers and does not replace an on-site technical inspection.",
+
+  "building": {
+    "badge": "STEP 1",
+    "title": "Tell us about your property",
+    "description": "The construction year and property type provide an initial indication of the possible construction and insulation of your home.",
+    "region": {
+      "question": "Which region is your property located in?",
+      "options": {
+        "flanders": "Flanders",
+        "wallonia": "Wallonia"
+      }
+    },
+    "type": {
+      "question": "What type of property do you have?",
+      "options": {
+        "detached": "Detached house",
+        "semi_detached": "Semi-detached house",
+        "terraced": "Terraced house",
+        "apartment": "Apartment"
+      }
+    },
+    "year": {
+      "label": "What year was the property built?",
+      "placeholder": "E.g. 1975"
+    }
+  },
+
+  "roof": {
+    "badge": "STEP 2",
+    "title": "How is your roof insulated?",
+    "description": "A roof with little or no insulation can be an important source of heat loss.",
+    "insulation": {
+      "question": "Which situation best describes your roof?",
+      "options": {
+        "none": "Not insulated",
+        "old": "Old or limited insulation",
+        "good": "Well insulated",
+        "unknown": "I don't know"
+      }
+    }
+  },
+
+  "walls": {
+    "badge": "STEP 3",
+    "title": "What is the condition of your external walls and façade?",
+    "description": "We check whether cavity wall insulation, external wall insulation or a façade treatment may be relevant.",
+    "cavity": {
+      "question": "Does your property have cavity walls?",
+      "options": {
+        "yes": "Yes",
+        "no": "No",
+        "unknown": "I don't know"
+      }
+    },
+    "cavityInsulation": {
+      "question": "How is the cavity currently insulated?",
+      "options": {
+        "none": "Not insulated",
+        "old": "Old or problematic insulation",
+        "good": "Well insulated",
+        "unknown": "I don't know"
+      }
+    },
+    "facade": {
+      "question": "How would you describe the condition of the external façade?",
+      "options": {
+        "good": "In good condition",
+        "dirty": "Heavily soiled",
+        "damaged": "Aged or damaged",
+        "moisture": "Damp or porous",
+        "unknown": "I don't know"
+      }
+    }
+  },
+
+  "moisture": {
+    "badge": "STEP 4",
+    "title": "Do you have moisture problems?",
+    "description": "Some moisture problems should be correctly diagnosed before additional insulation or renovation work is carried out.",
+    "status": {
+      "question": "Which situation best matches your home?",
+      "options": {
+        "none": "No moisture problems",
+        "rising": "Damp patches at the bottom of walls",
+        "mould": "Mould or peeling plaster",
+        "unknown": "I don't know"
+      }
+    }
+  },
+
+  "result": {
+    "badge": "YOUR HOME CHECK",
+    "title": "These solutions may be relevant for your property",
+    "description": "Based on your answers, we have matched possible areas of concern in your property with solutions offered by Nu-Isoleren.",
+
+    "priorities": {
+      "high": "High priority",
+      "recommended": "Recommended",
+      "check": "Inspection recommended"
+    },
+
+    "services": {
+      "roof_insulation": {
+        "title": "Roof insulation",
+        "description": "Your answers suggest that your roof is not insulated, has limited insulation or may be insufficiently insulated. Improving the roof insulation can reduce heat loss and improve indoor comfort.",
+        "nuIsoleren": "Nu-Isoleren installs roof insulation using solutions including glass wool and PIR insulation boards."
+      },
+
+      "cavity_wall_insulation": {
+        "title": "Cavity wall insulation",
+        "description": "Your property may have a cavity that is not or insufficiently insulated. If the cavity is technically suitable, insulating it can reduce heat loss through the external walls.",
+        "nuIsoleren": "Nu-Isoleren insulates suitable cavity walls using high-quality EPS beads."
+      },
+
+      "cavity_cleaning": {
+        "title": "Cavity wall cleaning",
+        "description": "You indicated that old or potentially problematic insulation is present in the cavity. In some situations this should first be removed before new cavity wall insulation is installed.",
+        "nuIsoleren": "Nu-Isoleren removes old insulation and prepares the cavity for a new insulation solution."
+      },
+
+      "external_wall_insulation": {
+        "title": "External wall insulation with render",
+        "description": "When cavity wall insulation is not possible or is insufficient, external wall insulation may be an alternative. The property is insulated from the outside and the façade is given a new finish.",
+        "nuIsoleren": "Nu-Isoleren installs external insulation boards and finishes the façade with render."
+      },
+
+      "facade_cleaning": {
+        "title": "Façade cleaning",
+        "description": "Your façade appears to be mainly affected by dirt or deposits. Professional cleaning can remove contamination and help restore the appearance of the exterior walls.",
+        "nuIsoleren": "Nu-Isoleren professionally cleans exterior façades using a method suited to the surface."
+      },
+
+      "hydrofuge": {
+        "title": "Water-repellent façade treatment",
+        "description": "A damp or porous façade can absorb rainwater more easily. Once the cause has been assessed, a water-repellent treatment may help protect the exterior wall against weather exposure.",
+        "nuIsoleren": "Nu-Isoleren applies hydrofuge treatment to suitable façades to make the exterior surface water repellent."
+      },
+
+      "rising_damp": {
+        "title": "Rising damp treatment",
+        "description": "Damp patches at the bottom of internal walls can indicate rising damp. Mould or damaged plaster can also have other causes, so an on-site inspection is important.",
+        "nuIsoleren": "Nu-Isoleren treats rising damp by injecting the walls with an appropriate damp-proofing product."
+      }
+    },
+
+    "viewService": "View this solution",
+
+    "noRecommendations": {
+      "title": "No obvious issues detected",
+      "description": "Based on your answers, we did not identify a direct insulation or moisture problem for which we can make a clear recommendation. An on-site inspection can provide more certainty if required."
+    },
+
+    "notice": "This home check is indicative. The technical condition of a roof, cavity wall, façade or moisture problem can only be assessed correctly through an on-site inspection.",
+
+    "contact": "Request personalised advice",
+    "again": "Start the home check again"
+  }
+  
+},
+"advice": {
+  "badge": "FROM CHECK TO SOLUTION",
+  "title": "From home check to the right solution",
+  "description": "Every property is different. The home check helps identify possible areas of concern and links them to solutions that Nu-Isoleren can carry out.",
+  "points": {
+    "check": "Based on your answers, you receive an initial indication of possible insulation, façade or moisture issues.",
+    "solution": "The home check directly links these points of attention to suitable Nu-Isoleren services.",
+    "inspection": "If required, the technical situation can be assessed on site before determining the final solution."
+  },
+  "notice": "An online home check cannot assess every detail of a property. The condition of the cavity walls, roof, façade and any moisture issues can be evaluated more accurately during an on-site inspection.",
+  "imageAlt": "Completed home after insulation and façade work by Nu-Isoleren"
+},
+"faq": {
+  "badge": "FREQUENTLY ASKED QUESTIONS",
+  "title": "Frequently asked questions about insulating your home",
+  "description": "Find answers about the home check, suitable insulation measures, cavity walls, moisture problems and Nu-Isoleren solutions."
+}
+},
+
+"GrantsPage": {
+  "metadata": {
+    "title": "Insulation Grants 2026 in Belgium | Nu-Isoleren",
+    "description": "Discover insulation and renovation grants available in 2026 in Flanders, Brussels and Wallonia, including the main conditions by region."
+  },
+
+  "hero": {
+    "breadcrumb": "Grants",
+    "badge": "INSULATION GRANTS 2026",
+    "title": "What insulation grants are available in Belgium?",
+    "description": "Different grants and support schemes may be available for insulation and renovation work. Conditions and amounts vary by region. Explore the current options for Flanders, Brussels and Wallonia."
+  },
+
+  "intro": {
+    "badge": "GRANTS & SUPPORT",
+    "title": "Financial support for insulating and renovating your home",
+    "imageAlt": "Image of a home in Belgium with an insulation subsidy",
+    "description": "Investments in roof insulation, wall insulation and other energy renovation work may qualify for financial support in certain situations. Available grants depend on factors such as the region, the type of work and your personal circumstances.",
+    "descriptionSecond": "Nu-Isoleren helps you quickly find the information for your region. The detailed pages cover the main conditions, eligible insulation work and information about applying."
+  },
+
+  "regions": {
+    "badge": "SELECT YOUR REGION",
+    "title": "View insulation grants in your region",
+    
+    "description": "Rules for renovation and insulation grants differ between Flanders, Brussels and Wallonia.",
+
+    "flanders": {
+      "title": "Insulation grants in Flanders",
+      "description": "Explore Flemish grants and support schemes that may apply to insulation and renovation work.",
+      "button": "View grants in Flanders"
+    },
+
+    "brussels": {
+      "title": "Insulation grants in Brussels",
+      "description": "Explore available information about financial support for energy renovation in the Brussels-Capital Region.",
+      "button": "View grants in Brussels"
+    },
+
+    "wallonia": {
+      "title": "Insulation grants in Wallonia",
+      "description": "Explore Walloon support schemes that may apply to insulation and energy renovation work.",
+      "button": "View grants in Wallonia"
+    }
+  },
+  "faq": {
+  "badge": "FREQUENTLY ASKED QUESTIONS",
+  "title": "Frequently asked questions about insulation grants",
+  "description": "Find answers to common questions about insulation grants, regional differences and financial support for roof, wall and façade insulation."
+}
+},
 
 
+"FlandersGrantsPage": {
+  "metadata": {
+    "title": "Insulation Grants Flanders 2026 & 2027 | Nu-Isoleren",
+    "description": "Discover the current insulation grants available in Flanders in 2026, including Mijn VerbouwPremie for roof insulation and external wall insulation. View grant amounts, eligibility conditions and changes for 2027."
+  },
+
+  "hero": {
+    "parentBreadcrumb": "Grants",
+    "breadcrumb": "Flanders",
+    "badge": "INSULATION GRANTS FLANDERS",
+    "title": "Insulation grants in Flanders in 2026",
+    "description": "Homeowners who insulate their property may, in certain situations, qualify for Mijn VerbouwPremie. The rules changed on 1 March 2026. Find out below who is still eligible, which insulation works are supported and how much financial support may be available.",
+    "updated": "Last updated: September 2026"
+  },
+
+  "update": {
+    "badge": "IMPORTANT 2026 UPDATE",
+    "title": "How much is Mijn VerbouwPremie for insulation?",
+    "description": "Since 1 March 2026, owner-occupiers in income categories 1 and 2 are no longer eligible for Mijn VerbouwPremie for these insulation works. Financial support remains available for income categories 3 and 4.",
+
+    "table": {
+      "work": "Insulation work",
+      "category1": "Income category 1",
+      "category2": "Income category 2",
+      "category3": "Income category 3",
+      "category4": "Income category 4",
+
+      "rows": {
+        "roof": {
+          "label": "Roof insulation",
+          "category1": "Not applicable",
+          "category2": "Not applicable",
+          "category3": "Up to €4,025 (max. 35% of the invoice)",
+          "category4": "Up to €5,750 (max. 50% of the invoice)"
+        },
+
+        "floor": {
+          "label": "Floor insulation",
+          "category1": "Not applicable",
+          "category2": "Not applicable",
+          "category3": "Up to €1,050 (max. 35% of the invoice)",
+          "category4": "Up to €1,500 (max. 50% of the invoice)"
+        },
+
+        "wall": {
+          "label": "Wall insulation",
+          "category1": "Not applicable",
+          "category2": "Not applicable",
+          "category3": "Up to €3,500 (max. 35% of the invoice)",
+          "category4": "Up to €5,000 (max. 50% of the invoice)"
+        }
+      }
+    },
+
+    "notice": "The amounts above are maximum grant amounts. The final amount depends on the eligible invoice, your income category and the applicable Mijn VerbouwPremie conditions. The application date determines which scheme applies."
+  },
+
+  "intro": {
+  "badge": "MIJN VERBOUWPREMIE",
+  "title": "What is Mijn VerbouwPremie?",
+  "description": "Mijn VerbouwPremie is a grant provided by the Flemish government for renovation work and energy-saving investments in houses and apartments located in the Flemish Region.",
+  "descriptionSecond": "For Nu-Isoleren, the most relevant categories are roof and external wall works. These include roof insulation, cavity wall insulation and external façade insulation.",
+  "highlight": "Eligibility depends on factors such as your income category, the type of property, the work carried out and the applicable technical conditions.",
+  "imageAlt": "Home in Flanders during energy renovation and insulation work"
+},
+"eligibility": {
+  "badge": "WHO QUALIFIES?",
+  "title": "Who qualifies for an insulation grant?",
+  "description": "For applications submitted from 1 March 2026, owner-occupiers in income categories 3 and 4 remain eligible for Mijn VerbouwPremie for roof and wall insulation.",
+  "points": {
+    "building": "The house or apartment must be located in the Flemish Region and must have been connected to the electricity distribution network before 1 January 2006, or first occupied before that date according to cadastral records.",
+    "income": "Your income category is determined using the most recently available tax assessment at the time of application.",
+    "property": "An owner-occupier who also fully owns another house, apartment or building plot is automatically placed in income category 1."
+  },
+  "table": {
+    "situation": "Household situation",
+    "category4": "Category 4",
+    "category3": "Category 3",
+    "single": {
+      "label": "Single person",
+      "category4": "Up to €24,750",
+      "category3": "€24,750 – €43,240"
+    },
+    "family": {
+      "label": "Couple or single person + 1 dependant",
+      "category4": "Up to €37,110",
+      "category3": "€37,110 – €60,520"
+    },
+    "extra": {
+      "label": "Per additional dependant",
+      "category4": "+ €4,420",
+      "category3": "+ €4,420"
+    },
+    "notice": "These income thresholds apply to applications submitted from 1 January 2026."
+  }
+},
+
+"works": {
+  "badge": "INSULATION WORK",
+  "title": "Which insulation works are eligible?",
+  "description": "Mijn VerbouwPremie applies specific technical requirements to each type of insulation work. For Nu-Isoleren, roof insulation, cavity wall insulation and external wall insulation are the most relevant.",
+  "roof": {
+    "title": "Roof insulation",
+    "description": "New roof or attic-floor insulation may qualify when it meets the technical requirements of the scheme.",
+    "requirement1": "The newly installed insulation must achieve an Rd value of at least 4.5 m²K/W.",
+    "requirement2": "When insulating a pitched roof from the inside, a correctly installed vapour barrier is required."
+  },
+  "cavity": {
+    "title": "Cavity wall insulation",
+    "description": "Insulating a suitable existing cavity wall falls under the external wall category.",
+    "requirement1": "The cavity must be completely filled, be at least 50 mm wide and the insulation material must have a maximum lambda value of 0.065 W/mK.",
+    "requirement2": "The work must be carried out by an STS 71-1 recognised contractor. A cavity that is already partially insulated does not qualify for additional filling."
+  },
+  "facade": {
+    "title": "External wall insulation",
+    "description": "Insulating an external wall from the outside may also qualify, including façade renovation combined with insulation and render.",
+    "requirement1": "New external wall insulation must achieve an Rd value of at least 3 m²K/W.",
+    "requirement2": "Façade finishes such as render are only eligible when combined with sufficient new external wall insulation."
+  },
+  "notice": "The insulation work must meet all technical and administrative requirements applicable at the time of the grant application."
+},
+
+"application": {
+  "badge": "APPLYING FOR THE GRANT",
+  "title": "How do you apply for Mijn VerbouwPremie?",
+  "description": "The grant application is submitted after the work has been completed and the required invoices and certificates are available.",
+  "steps": {
+    "works": {
+      "title": "Have the insulation work completed",
+      "description": "Roof and external wall insulation must be carried out by a contractor. Certain techniques require additional contractor certification."
+    },
+    "documents": {
+      "title": "Collect your invoices and certificates",
+      "description": "Keep the final invoice, any advance or interim invoices and the required contractor certificate. Cavity wall insulation also requires the STS 71-1 VVO certificate."
+    },
+    "portal": {
+      "title": "Apply through Mijn VerbouwLoket",
+      "description": "Mijn VerbouwPremie is applied for online through Mijn VerbouwLoket, with a separate application for each category of work."
+    },
+    "followup": {
+      "title": "Track your application",
+      "description": "After submission, you can follow the application through Mijn VerbouwLoket. The authorities may request additional supporting documents."
+    }
+  },
+  "notice": "Invoices may be no more than 2 years old on the date the grant application is submitted."
+},
+
+"future": {
+  "badge": "LOOKING AHEAD TO 2027",
+  "title": "What may change in 2027?",
+  "description": "The Flemish Government is preparing an extension of Mijn VerbouwPremie for certain private landlords who rent their property under affordability conditions. They could become eligible for a 35% grant rate, comparable to income category 3.",
+  "social": "An additional bonus has also been announced for certain landlords who rent their property through a housing company for at least nine years.",
+  "warning": "As of September 2026, these changes had not yet been finally approved. Nu-Isoleren will update this page once the definitive rules are published."
+}
+},
+
+"BrusselsGrantsPage": {
+  "metadata": {
+    "title": "Insulation Grants Brussels 2026 & 2027 | RENOLUTION & ECORENO",
+    "description": "View the current status of insulation grants in Brussels in 2026 and 2027, including RENOLUTION, the ECORENO Credit and other renovation support."
+  },
+
+  "hero": {
+    "parentBreadcrumb": "Grants",
+    "breadcrumb": "Brussels",
+    "badge": "INSULATION GRANTS BRUSSELS",
+    "title": "Insulation grants in Brussels in 2026",
+    "description": "The situation regarding renovation and insulation grants in the Brussels-Capital Region is unusual in 2026. Find out the current status of RENOLUTION Grants and which other forms of renovation support are currently available.",
+    "updated": "Last updated: September 2026",
+    "imageAlt": "Homes in Brussels suitable for energy renovation"
+  },
+
+  "status": {
+    "badge": "IMPORTANT 2026 UPDATE",
+    "title": "No RENOLUTION applications for final invoices dated 2025 or 2026",
+    "description": "According to the Brussels-Capital Region, no government decision has yet been taken regarding possible RENOLUTION Grants for 2025 and 2026.",
+    "highlight": "At present, RENOLUTION Grant applications cannot be submitted for work with a final invoice dated in 2025 or 2026.",
+    "notice": "Grant amounts and conditions from previous RENOLUTION schemes, such as the 2024 scheme, should therefore not be treated as current grant information for 2026."
+  },
+
+  "renolution": {
+    "badge": "RENOLUTION",
+    "title": "What are RENOLUTION Grants?",
+    "description": "Since 1 January 2022, RENOLUTION has been the name of the Brussels scheme combining the former Energy Grants, home renovation grants and façade improvement grants.",
+    "descriptionSecond": "The scheme covered a range of renovation and energy-efficiency work, including insulation. However, there is currently no new grant scheme available for applications based on final invoices dated in 2025 or 2026.",
+    "highlight": "Renovation work in Brussels should therefore not be planned on the basis of old RENOLUTION amounts without first checking the current official situation.",
+    "imageAlt": "Energy renovation of a home in the Brussels-Capital Region"
+  },
+
+  "support": {
+    "badge": "SUPPORT IN 2026",
+    "title": "What renovation support is currently available?",
+    "description": "The absence of a current RENOLUTION grant scheme does not mean that no financial support is available. Depending on your situation, other forms of assistance or financing may apply.",
+
+    "ecoreno": {
+      "title": "ECORENO Credit",
+      "description": "A financing solution for renovation work on a home in the Brussels-Capital Region, including work intended to improve energy performance."
+    },
+
+    "municipal": {
+      "title": "Municipal support",
+      "description": "Some Brussels municipalities provide their own grants or financial incentives. Availability and eligibility conditions vary between municipalities."
+    },
+
+    "vat": {
+      "title": "Reduced 6% VAT",
+      "description": "Certain renovation work may qualify for the reduced 6% VAT rate when the legal conditions are met. This is a tax benefit rather than a RENOLUTION Grant."
+    },
+
+    "notice": "The support available to you depends on factors including the type of property, your status, your household income and the work being planned."
+  },
+
+  "ecoreno": {
+    "badge": "ECORENO CREDIT",
+    "title": "Financing renovation work with the ECORENO Credit",
+    "description": "The ECORENO Credit provides a financing solution for various renovation works on homes located in Brussels.",
+    "notGrant": "ECORENO is a loan, not a renovation grant.",
+
+    "table": {
+      "item": "Item",
+      "details": "Current situation",
+
+      "rate": {
+        "label": "Interest rate",
+        "value": "Preferential interest rate of 2.5% to 3.5%, depending on the applicable conditions and household income thresholds."
+      },
+
+      "applicants": {
+        "label": "Who can apply?",
+        "value": "Owners, future owners and tenants of a home in the Brussels-Capital Region may qualify subject to the applicable conditions."
+      },
+
+      "works": {
+        "label": "Which work?",
+        "value": "This includes conventional renovation work, energy-performance improvements, safety, health and habitability improvements and certain adaptations relating to personal autonomy."
+      },
+
+      "contractor": {
+        "label": "Execution",
+        "value": "The work must be carried out by a professional contractor who meets the applicable registration and professional requirements."
+      }
+    },
+
+    "notice": "According to the current information from Homegrade, the ECORENO Credit is not currently available to landlord-owners or associations of co-owners. Additional financial and administrative conditions also apply."
+  },
+
+  "future": {
+    "badge": "LOOKING AHEAD TO 2027",
+    "title": "What do we know about Brussels grants in 2027?",
+    "description": "For 2027, we will only publish specific grant amounts and eligibility conditions once they have been officially established by the Brussels-Capital Region.",
+    "descriptionSecond": "As of September 2026, no definitive 2027 RENOLUTION scheme has been published that provides reliable insulation grant amounts.",
+    "warning": "Nu-Isoleren deliberately does not present old grant amounts or estimates as if they apply in 2027. This page will be updated when new official rules are published."
+  },
+
+  "sources": {
+    "title": "Sources & latest information",
+    "description": "This page was reviewed in September 2026 using current information from the Brussels-Capital Region and Homegrade. Schemes and eligibility conditions may change.",
+    "region": "Brussels-Capital Region",
+    "homegrade": "Homegrade – ECORENO",
+    "back": "Back to all grants"
+  }
+},
+
+
+"WalloniaGrantsPage": {
+  "metadata": {
+    "title": "Insulation Grants Wallonia 2026 & 2027 | Nu-Isoleren",
+    "description": "View the current insulation grants in Wallonia in 2026 and the new renovation support scheme from 1 October 2026, including Rénopack and Rénoprêt."
+  },
+
+  "hero": {
+    "parentBreadcrumb": "Grants",
+    "breadcrumb": "Wallonia",
+    "badge": "INSULATION GRANTS WALLONIA",
+    "title": "Insulation grants in Wallonia in 2026",
+    "description": "Renovation support in Wallonia changes significantly in 2026. The temporary Primes Habitation scheme ends on 30 September 2026 and is replaced from 1 October by a new system based on Rénopack and Rénoprêt.",
+    "updated": "Last updated: September 2026",
+    "imageAlt": "Home in Wallonia undergoing energy renovation work"
+  },
+
+  "transition": {
+    "badge": "IMPORTANT 2026 TRANSITION",
+    "title": "Walloon renovation support changes on 1 October 2026",
+    "description": "In September 2026, two different systems need to be distinguished. Which scheme applies depends on when the renovation project and application take place.",
+
+    "current": {
+      "date": "Until 30 September 2026",
+      "title": "Primes Habitation 2025-2026",
+      "description": "The temporary grant scheme remains applicable until 30 September 2026 inclusive. The grant application, including the final invoice, must be submitted no later than that date."
+    },
+
+    "new": {
+      "date": "From 1 October 2026",
+      "title": "New renovation support scheme",
+      "description": "Regional support will shift to Rénopack and Rénoprêt. The system will target energy-intensive homes where renovation results in a sufficient improvement of the PEB energy rating."
+    },
+
+    "notice": "The per-square-metre amounts below apply only to the temporary scheme ending on 30 September 2026 and should not be treated as grant amounts under the new scheme."
+  },
+
+  "currentPremiums": {
+    "badge": "PRIMES HABITATION 2025-2026",
+    "title": "How much is the current insulation grant in Wallonia?",
+    "description": "Under the temporary scheme, a base grant amount is multiplied according to household income category. The figures below cover work relevant to Nu-Isoleren's services.",
+
+    "table": {
+      "work": "Work",
+
+      "rows": {
+        "roof": {
+          "label": "Roof or attic insulation",
+          "r1": "€120/m²",
+          "r2": "€80/m²",
+          "r3": "€60/m²",
+          "r4": "€40/m²"
+        },
+
+        "wall": {
+          "label": "Thermal wall insulation",
+          "r1": "€52.80/m²",
+          "r2": "€35.20/m²",
+          "r3": "€26.40/m²",
+          "r4": "€17.60/m²"
+        },
+
+        "damp": {
+          "label": "Treatment of rising damp",
+          "r1": "€19.20/running metre",
+          "r2": "€12.80/running metre",
+          "r3": "€9.60/running metre",
+          "r4": "€6.40/running metre"
+        }
+      }
+    },
+
+    "notice": "For income categories R1 and R2, the grant is limited to a maximum of 70% of the VAT-inclusive eligible invoice amount. For R3 and R4, the maximum is 50%. Higher base amounts exist for certain bio-based insulation materials."
+  },
+
+  "eligibility": {
+    "badge": "CONDITIONS UNTIL 30 SEPTEMBER",
+    "title": "Who can still qualify for Primes Habitation?",
+    "description": "The temporary scheme includes conditions relating to the applicant, the property and how the work is carried out.",
+
+    "points": {
+      "location": "The property must be located in the Walloon Region, outside the territory of the German-speaking Community.",
+      "age": "The building must be more than 15 years old.",
+      "usage": "More than 50% of the building must be or become residential.",
+      "contractor": "The work must be carried out by a contractor registered with the Crossroads Bank for Enterprises and, where required, holding the necessary professional access.",
+      "audit": "A prior Housing Audit is required for most renovation work. It is not mandatory for roof work or thermal insulation of the roof or attic."
+    },
+
+    "imageAlt": "Energy renovation of a home in Wallonia"
+  },
+
+  "newRegime": {
+    "badge": "FROM 1 OCTOBER 2026",
+    "title": "How will the new Walloon renovation scheme work?",
+    "description": "From 1 October 2026, support will focus on homes with poor energy performance. The renovation project must result in a sufficient improvement in the property's PEB rating.",
+
+    "peb": {
+      "gf": {
+        "label": "PEB F or G",
+        "value": "The renovation must improve the property to at least PEB rating D."
+      },
+
+      "e": {
+        "label": "PEB E",
+        "value": "The renovation must improve the property to at least PEB rating C."
+      }
+    },
+
+    "audit": "A prior audit will be mandatory to access the new financing. Support will be calculated across the overall renovation project rather than separately for each type of insulation work."
+  },
+
+  "loans": {
+    "badge": "RÉNOPACK & RÉNOPRÊT",
+    "title": "What financial support applies from October 2026?",
+    "description": "Walloon support will be structured around two renovation loans. Household income category determines which financing system and repayment reduction applies.",
+
+    "table": {
+      "category": "Category",
+      "income": "Reference income",
+      "loan": "Financing",
+      "reduction": "Repayment reduction",
+
+      "rows": {
+        "c1": {
+          "income": "Up to €28,900",
+          "loan": "0% Rénopack",
+          "reduction": "50%"
+        },
+
+        "c2": {
+          "income": "€28,900.01 – €41,100",
+          "loan": "0% Rénopack",
+          "reduction": "40%"
+        },
+
+        "c3": {
+          "income": "€41,100.01 – €67,100",
+          "loan": "0% Rénopack",
+          "reduction": "15%"
+        },
+
+        "c4": {
+          "income": "€67,100.01 – €122,800",
+          "loan": "Preferential-rate Rénoprêt",
+          "reduction": "0%"
+        }
+      }
+    },
+
+    "renopack": {
+      "title": "Rénopack",
+      "description": "For C1, C2 and C3 households. It is a zero-interest renovation loan combined with a reduction in the amount that ultimately has to be repaid."
+    },
+
+    "renopret": {
+      "title": "Rénoprêt",
+      "description": "For C4 households, landlord-owners and associations of co-owners. The interest rate depends on the applicable conditions and is preferential compared with normal market financing."
+    },
+
+    "notice": "For a single-family home, financing may reach €75,000. According to the Walloon authorities, the official reduction percentages for C1, C2 and C3 include the possible 5% increase for the use of eco-materials. Income thresholds are indexed as of 1 January 2026."
+  },
+
+  "application": {
+    "badge": "WHAT SHOULD YOU DO?",
+    "title": "Which procedure applies to your renovation?",
+    "description": "Because the scheme changes on 1 October 2026, the first step is to determine which system your renovation project falls under.",
+
+    "before": {
+      "title": "Until 30 September 2026",
+      "description": "Applications under the temporary Primes Habitation scheme must be submitted by 30 September 2026 at the latest, including the final invoice. Applications can be made through Mon Espace or using the official forms."
+    },
+
+    "after": {
+      "title": "From 1 October 2026",
+      "description": "New projects will fall under the Rénopack and Rénoprêt system. A prior audit will be mandatory and the overall project must meet the applicable PEB improvement and financing conditions."
+    }
+  },
+
+  "sources": {
+    "title": "Sources & latest information",
+    "description": "This page was reviewed in September 2026 using official information from the Walloon authorities. The transition to the new scheme is scheduled for 1 October 2026 and administrative details may continue to be clarified.",
+    "current": "Wallonia – Primes Habitation 2025-2026",
+    "new": "Wallonia – new renovation support scheme",
+    "back": "Back to all grants"
+  }
+},
 
   "CtaBanner": {
     "title": "Ready to improve your home?",
     "description": "Request a non-binding quote and discover what we can do for your home.",
     "button": "Discuss your project"
   }
-
 }
