@@ -99,6 +99,11 @@ export const routing = defineRouting({
   fr: '/primes/wallonie',
   en: '/grants/wallonia',
 },
+'/quote': {
+  nl: '/gratis-offerte',
+  fr: '/devis-gratuit',
+  en: '/free-quote',
+},
   }
 });
 

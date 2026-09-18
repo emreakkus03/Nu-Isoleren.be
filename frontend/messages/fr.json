@@ -1880,6 +1880,116 @@
   }
 },
 
+"QuotePage": {
+  "metadata": {
+    "title": "Devis gratuit pour isolation & façades | Nu-Isoleren",
+    "description": "Demandez gratuitement et sans engagement un devis pour vos travaux d'isolation, de façade ou de traitement de l'humidité en Flandre et en Wallonie."
+  },
+
+  "hero": {
+    "badge": "GRATUIT & SANS ENGAGEMENT",
+    "title": "Demandez gratuitement votre devis",
+    "description": "Sélectionnez les travaux qui vous intéressent et laissez-nous vos coordonnées. Notre équipe examinera votre demande et vous contactera afin de discuter de votre projet.",
+
+    "points": {
+      "free": "Gratuit et sans engagement",
+      "personal": "Suivi personnalisé par notre équipe",
+      "areas": "Actif en Flandre et en Wallonie"
+    }
+  },
+
+  "form": {
+    "step": "Étape {current} sur {total}",
+
+    "services": {
+      "title": "Quels travaux souhaitez-vous réaliser ?",
+      "description": "Vous pouvez sélectionner un ou plusieurs services."
+    },
+
+    "contact": {
+      "title": "Vos coordonnées",
+      "description": "Laissez-nous vos coordonnées afin que notre équipe puisse vous contacter."
+    },
+
+    "fields": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "street": "Rue",
+      "houseNumber": "N°",
+      "postcode": "Code postal",
+      "city": "Commune",
+      "message": "Remarque ou question",
+      "messagePlaceholder": "Vous pouvez nous donner davantage d'informations sur les travaux souhaités..."
+    },
+
+    "privacy": "J'autorise Nu-Isoleren à utiliser mes données afin de me contacter au sujet de cette demande de devis. *",
+
+    "buttons": {
+      "next": "Continuer",
+      "back": "Retour",
+      "submit": "Demander un devis gratuit",
+      "submitting": "Envoi de la demande..."
+    },
+
+    "errors": {
+      "service": "Sélectionnez au moins un service.",
+      "privacy": "Vous devez donner votre consentement avant d'envoyer la demande.",
+      "submit": "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer."
+    },
+
+    "success": {
+      "title": "Votre demande a bien été reçue",
+      "description": "Merci pour votre demande de devis. Notre équipe examinera vos informations et vous contactera afin de discuter des travaux.",
+      "reference": "Numéro de référence"
+    }
+  },
+  "trust": {
+  "badge": "POURQUOI NU-ISOLEREN ?",
+  "title": "Un accompagnement clair de la demande aux travaux",
+  "description": "Nous vous accompagnons personnellement pour vos travaux d'isolation, de façade ou de traitement de l'humidité.",
+
+  "items": {
+    "free": {
+      "title": "Gratuit & sans engagement",
+      "description": "Votre demande de devis est entièrement gratuite et ne vous engage à rien."
+    },
+    "personal": {
+      "title": "Suivi personnalisé",
+      "description": "Nous examinons votre demande personnellement et discutons avec vous de la solution la plus adaptée."
+    },
+    "professional": {
+      "title": "Travaux professionnels",
+      "description": "Les travaux sont réalisés avec attention pour la qualité, les finitions et votre habitation."
+    },
+    "quality": {
+      "title": "Matériaux de qualité",
+      "description": "Nous travaillons avec des matériaux et systèmes fiables adaptés à des rénovations durables."
+    }
+  }
+},
+"process": {
+  "badge": "COMMENT ÇA MARCHE ?",
+  "title": "Voici comment se déroule votre demande",
+  "description": "Trois étapes simples entre votre demande et une proposition adaptée à votre habitation.",
+
+  "steps": {
+    "request": {
+      "title": "Demandez votre devis",
+      "description": "Sélectionnez les travaux souhaités et laissez vos coordonnées via le formulaire."
+    },
+    "contact": {
+      "title": "Nous vous contactons",
+      "description": "Nous examinons votre demande et vous contactons afin de discuter de votre habitation et des travaux."
+    },
+    "proposal": {
+      "title": "Recevez votre proposition",
+      "description": "Si nécessaire, nous planifions d'abord une visite sur place avant de vous transmettre une proposition claire."
+    }
+  }
+}
+},
   "CtaBanner": {
     "title": "Prêt à améliorer votre habitation ?",
     "description": "Demandez un devis sans engagement et découvrez ce que nous pouvons faire pour votre maison.",

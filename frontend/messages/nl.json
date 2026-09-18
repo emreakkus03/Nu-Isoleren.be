@@ -1861,6 +1861,117 @@
   }
 },
 
+"QuotePage": {
+  "metadata": {
+    "title": "Gratis offerte voor isolatie & gevelwerken | Nu-Isoleren",
+    "description": "Vraag gratis en vrijblijvend een offerte aan voor isolatie, gevelwerken of vochtbestrijding. Nu-Isoleren is actief in Vlaanderen en Wallonië."
+  },
+
+  "hero": {
+    "badge": "GRATIS & VRIJBLIJVEND",
+    "title": "Vraag gratis uw offerte aan",
+    "description": "Selecteer de werken waarin u geïnteresseerd bent en laat uw gegevens achter. Ons team bekijkt uw aanvraag en neemt contact met u op om de werken verder te bespreken.",
+
+    "points": {
+      "free": "Gratis en volledig vrijblijvend",
+      "personal": "Persoonlijke opvolging door ons team",
+      "areas": "Actief in Vlaanderen en Wallonië"
+    }
+  },
+
+  "form": {
+    "step": "Stap {current} van {total}",
+
+    "services": {
+      "title": "Welke werken wilt u laten uitvoeren?",
+      "description": "U kunt één of meerdere diensten selecteren."
+    },
+
+    "contact": {
+      "title": "Uw gegevens",
+      "description": "Laat uw gegevens achter zodat ons team contact met u kan opnemen."
+    },
+
+    "fields": {
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "email": "E-mailadres",
+      "phone": "Telefoonnummer",
+      "street": "Straat",
+      "houseNumber": "Nr.",
+      "postcode": "Postcode",
+      "city": "Gemeente",
+      "message": "Opmerking of vraag",
+      "messagePlaceholder": "Vertel ons eventueel iets meer over de gewenste werken..."
+    },
+
+    "privacy": "Ik geef Nu-Isoleren toestemming om mijn gegevens te gebruiken om contact met mij op te nemen over deze offerteaanvraag. *",
+
+    "buttons": {
+      "next": "Verder",
+      "back": "Terug",
+      "submit": "Gratis offerte aanvragen",
+      "submitting": "Aanvraag verzenden..."
+    },
+
+    "errors": {
+      "service": "Selecteer minstens één dienst.",
+      "privacy": "U moet toestemming geven voordat u de aanvraag kunt verzenden.",
+      "submit": "Er ging iets mis bij het verzenden van uw aanvraag. Probeer het opnieuw."
+    },
+
+    "success": {
+      "title": "Uw aanvraag is goed ontvangen",
+      "description": "Bedankt voor uw offerteaanvraag. Ons team bekijkt uw gegevens en neemt contact met u op om de werken verder te bespreken.",
+      "reference": "Referentienummer"
+    }
+  },
+  "trust": {
+  "badge": "WAAROM NU-ISOLEREN?",
+  "title": "Uw woning verdient een aanpak op maat",
+  "description": "Een goede renovatie begint met duidelijk advies en een correcte uitvoering. We bekijken iedere aanvraag afzonderlijk en zoeken samen naar een oplossing die technisch én praktisch bij uw woning past.",
+
+  "items": {
+    "free": {
+      "title": "Gratis & vrijblijvend",
+      "description": "U vraagt volledig gratis een offerte aan, zonder verdere verplichtingen."
+    },
+    "personal": {
+      "title": "Persoonlijke aanpak",
+      "description": "We bekijken uw woning en situatie afzonderlijk en adviseren een oplossing die daarbij past."
+    },
+    "professional": {
+      "title": "Correcte uitvoering",
+      "description": "We besteden aandacht aan zowel de technische uitvoering als een nette en verzorgde afwerking."
+    },
+    "quality": {
+      "title": "Kwaliteitsmaterialen",
+      "description": "We werken met betrouwbare materialen en systemen die geschikt zijn voor duurzame renovatiewerken."
+    }
+  }
+},
+"process": {
+  "badge": "HOE WERKT HET?",
+  "title": "Zo verloopt uw aanvraag",
+  "description": "In drie eenvoudige stappen van uw aanvraag naar een persoonlijk voorstel voor uw woning.",
+
+  "steps": {
+    "request": {
+      "title": "Vraag uw offerte aan",
+      "description": "Selecteer de gewenste werken en laat uw contactgegevens achter via het formulier."
+    },
+    "contact": {
+      "title": "Wij nemen contact op",
+      "description": "We bekijken uw aanvraag en nemen contact met u op om uw woning en de gewenste werken te bespreken."
+    },
+    "proposal": {
+      "title": "U ontvangt een voorstel",
+      "description": "Indien nodig plannen we eerst een plaatsbezoek. Daarna ontvangt u een duidelijk voorstel voor de werken."
+    }
+  }
+}
+},
+
   "CtaBanner": {
     "title": "Klaar om uw woning te verbeteren?",
     "description": "Vraag vrijblijvend een offerte aan en ontdek wat we voor uw woning kunnen betekenen.",

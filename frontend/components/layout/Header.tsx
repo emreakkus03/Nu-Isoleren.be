@@ -66,7 +66,7 @@ export default async function Header() {
 
           <div className="flex-1 flex justify-end items-center gap-4">
             <Link
-              href="/"
+              href="/quote"
               className="hidden md:inline-block bg-[#C82024] hover:bg-red-800 text-white px-6 py-2.5 rounded-full font-bold transition shadow-md whitespace-nowrap lg:text-lg"
             >
               {t("mainbar.cta")}

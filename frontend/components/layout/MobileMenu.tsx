@@ -102,12 +102,12 @@ export default function MobileMenu() {
               </Link>
 
               <Link 
-                href="/" 
+                href="/prices" 
                 onClick={closeMenu} 
-                className={getMainLinkClasses('/pricing')}
+                className={getMainLinkClasses('/prices')}
               >
                 <span>{t('mainbar.pricing')}</span>
-                {isActive('/pricing') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                {isActive('/prices') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
               </Link>
 
               <Link 
@@ -174,7 +174,7 @@ export default function MobileMenu() {
               </div>
               
               <Link 
-                href="/" 
+                href="/quote" 
                 onClick={closeMenu}
                 className="bg-[#C82024] text-white text-center py-4 rounded-full font-bold shadow-md hover:bg-red-800 transition text-lg"
               >

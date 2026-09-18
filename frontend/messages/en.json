@@ -1883,6 +1883,117 @@
   }
 },
 
+"QuotePage": {
+  "metadata": {
+    "title": "Free Quote for Insulation & Façade Work | Nu-Isoleren",
+    "description": "Request a free, no-obligation quote for insulation, façade work or damp treatment in Flanders and Wallonia."
+  },
+
+  "hero": {
+    "badge": "FREE & NO OBLIGATION",
+    "title": "Request your free quote",
+    "description": "Select the work you are interested in and leave your contact details. Our team will review your request and contact you to discuss the work.",
+
+    "points": {
+      "free": "Free and completely without obligation",
+      "personal": "Personal follow-up from our team",
+      "areas": "Active in Flanders and Wallonia"
+    }
+  },
+
+  "form": {
+    "step": "Step {current} of {total}",
+
+    "services": {
+      "title": "Which work would you like carried out?",
+      "description": "You can select one or more services."
+    },
+
+    "contact": {
+      "title": "Your details",
+      "description": "Leave your details so our team can contact you."
+    },
+
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "phone": "Phone number",
+      "street": "Street",
+      "houseNumber": "No.",
+      "postcode": "Postcode",
+      "city": "City",
+      "message": "Comment or question",
+      "messagePlaceholder": "Tell us anything else you would like us to know about the work..."
+    },
+
+    "privacy": "I give Nu-Isoleren permission to use my details to contact me regarding this quote request. *",
+
+    "buttons": {
+      "next": "Continue",
+      "back": "Back",
+      "submit": "Request free quote",
+      "submitting": "Sending request..."
+    },
+
+    "errors": {
+      "service": "Select at least one service.",
+      "privacy": "You must provide consent before submitting the request.",
+      "submit": "Something went wrong while sending your request. Please try again."
+    },
+
+    "success": {
+      "title": "Your request has been received",
+      "description": "Thank you for your quote request. Our team will review your information and contact you to discuss the work.",
+      "reference": "Reference number"
+    }
+  },
+  "trust": {
+  "badge": "WHY NU-ISOLEREN?",
+  "title": "Clear guidance from request to completion",
+  "description": "We personally guide you through your insulation, façade or damp treatment project and provide clear follow-up.",
+
+  "items": {
+    "free": {
+      "title": "Free & no obligation",
+      "description": "Your quote request is completely free and comes with no obligation."
+    },
+    "personal": {
+      "title": "Personal follow-up",
+      "description": "We review your request personally and discuss the solution that best suits your property."
+    },
+    "professional": {
+      "title": "Professional workmanship",
+      "description": "Work is carried out with attention to quality, finishing and your property."
+    },
+    "quality": {
+      "title": "Quality materials",
+      "description": "We use reliable materials and systems suited to durable renovation work."
+    }
+  }
+},
+"process": {
+  "badge": "HOW DOES IT WORK?",
+  "title": "How your request works",
+  "description": "Three simple steps from your request to a proposal tailored to your property.",
+
+  "steps": {
+    "request": {
+      "title": "Request your quote",
+      "description": "Select the work you are interested in and leave your contact details using the form."
+    },
+    "contact": {
+      "title": "We contact you",
+      "description": "We review your request and contact you to discuss your property and the work required."
+    },
+    "proposal": {
+      "title": "Receive your proposal",
+      "description": "If necessary, we first arrange a site visit. Afterwards, you receive a clear proposal for the work."
+    }
+  }
+}
+},
+
   "CtaBanner": {
     "title": "Ready to improve your home?",
     "description": "Request a non-binding quote and discover what we can do for your home.",
