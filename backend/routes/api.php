@@ -99,17 +99,44 @@ Route::middleware('throttle:60,1')->get('/project-filters', function (Request $r
     $locale = $request->query('locale', 'nl');
 
     $services = Service::query()
+        ->where('is_active', true)
+        ->whereHas('projects', function ($query) {
+            $query->where('published', true);
+        })
+        ->withCount([
+            'projects as projects_count' => function ($query) {
+                $query->where('published', true);
+            },
+        ])
+        ->orderBy('order_column')
         ->get()
-        ->map(fn ($s) => [
-            'id' => $s->id,
-            'name' => $s->getTranslation('name', $locale, false) ?: $s->getTranslation('name', 'nl'),
-            'slug' => $s->getTranslation('slug', $locale, false) ?: $s->getTranslation('slug', 'nl'),
+        ->map(fn ($service) => [
+            'id' => $service->id,
+            'name' => $service->getTranslation('name', $locale, false)
+                ?: $service->getTranslation('name', 'nl'),
+            'slug' => $service->getTranslation('slug', $locale, false)
+                ?: $service->getTranslation('slug', 'nl'),
+            'count' => $service->projects_count,
         ]);
 
     $cities = City::query()
-        ->whereHas('projects', fn ($q) => $q->where('published', true))
+        ->whereHas('projects', function ($query) {
+            $query->where('published', true);
+        })
+        ->withCount([
+            'projects as projects_count' => function ($query) {
+                $query->where('published', true);
+            },
+        ])
         ->orderBy('name')
-        ->get(['id', 'name', 'slug', 'province']);
+        ->get()
+        ->map(fn ($city) => [
+            'id' => $city->id,
+            'name' => $city->name,
+            'slug' => $city->slug,
+            'province' => $city->province,
+            'count' => $city->projects_count,
+        ]);
 
     return response()->json([
         'services' => $services,

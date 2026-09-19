@@ -48,6 +48,7 @@ export interface ProjectFilterItem {
   id: number;
   name: string;
   slug: string;
+  count: number;
   province?: string | null;
 }
 
