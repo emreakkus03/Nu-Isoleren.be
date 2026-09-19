@@ -111,7 +111,7 @@ export default function MobileMenu() {
               </Link>
 
               <Link 
-                href="/" 
+                href="/knowledge" 
                 onClick={closeMenu} 
                 className={getMainLinkClasses('/knowledge')}
               >

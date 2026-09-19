@@ -63,4 +63,9 @@ public function quoteRequests(): BelongsToMany
 {
     return $this->belongsToMany(QuoteRequest::class);
 }
+
+public function knowledgeArticles(): HasMany
+{
+    return $this->hasMany(KnowledgeArticle::class);
+}
 }

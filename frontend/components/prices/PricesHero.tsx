@@ -32,7 +32,9 @@ export default async function PricesHero({
   return (
     <section className="w-full bg-white py-10 sm:py-14 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-8">
         <Breadcrumbs items={breadcrumbs} />
+        </div>
 
         <div className="mt-10 max-w-4xl">
           <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">

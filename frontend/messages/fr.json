@@ -53,14 +53,19 @@
     "epcCalculator": {
       "title": "Calcul PEB maison | Estimateur PEB gratuit | Nu-Isoleren",
       "description": "Estimez la performance PEB de votre habitation grâce à notre outil gratuit. Isolation, fenêtres, chauffage et autres caractéristiques sont prises en compte."
-    }
+    },
+    "knowledge": {
+    "title": "Base de connaissances sur l’isolation & la rénovation | Nu-Isoleren",
+    "description": "Découvrez des informations pratiques et des conseils sur l’isolation, les façades, les problèmes d’humidité, les primes et la rénovation énergétique."
+  }
   },
   "Breadcrumbs": {
     "home": "Accueil",
     "projects": "Réalisations",
     "faq": "Questions fréquentes",
     "services": "Services",
-    "areas": "Zones d'intervention"
+    "areas": "Zones d'intervention",
+    "knowledge": "Base de connaissances"
   },
   "Header": {
     "reviews": "Excellent",
@@ -1989,6 +1994,46 @@
     }
   }
 }
+},
+
+"KnowledgePage": {
+  "metadata": {
+    "title": "Base de connaissances sur l'isolation | Nu-Isoleren",
+    "description": "Découvrez des informations pratiques sur l'isolation, les façades, l'humidité, les primes et la rénovation énergétique."
+  },
+
+  "hero": {
+    "badge": "BASE DE CONNAISSANCES",
+    "title": "Tout savoir sur l'isolation et la rénovation",
+    "description": "Conseils pratiques et réponses aux questions fréquentes sur l'isolation, les façades, l'humidité, les primes et l'énergie."
+  },
+
+  "filtersTitle": "Filtrer les articles",
+  "articlesCount": "{count, plural, =0 {Aucun article} =1 {1 article} other {# articles}}",
+  "reset": "Effacer",
+  "categoryLabel": "Sujets",
+  "readArticle": "Lire l'article",
+
+  "pagination": {
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+
+  "empty": {
+    "title": "Aucun article trouvé",
+    "description": "Aucun article n'est actuellement disponible dans cette catégorie."
+  }
+},
+"KnowledgeArticlePage": {
+  "updated": "Mis à jour le",
+  "contents": "Contenu",
+
+  "related": {
+    "badge": "PLUS DE CONSEILS",
+    "title": "Découvrez aussi ces articles",
+    "description": "Découvrez davantage d'informations pratiques et de conseils sur ce sujet."
+  }
 },
   "CtaBanner": {
     "title": "Prêt à améliorer votre habitation ?",

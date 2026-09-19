@@ -123,7 +123,7 @@ export default function HeaderNav({ services = [] }: HeaderNavProps) {
       </Link>
 
       <Link
-        href="/"
+        href="/knowledge"
         className={getLinkClasses('/knowledge')}
       >
         {t('mainbar.knowledgeBase')}

@@ -104,6 +104,18 @@ export const routing = defineRouting({
   fr: '/devis-gratuit',
   en: '/free-quote',
 },
+'/knowledge': {
+  nl: '/kennisbank',
+  fr: '/base-de-connaissances',
+  en: '/knowledge-base',
+},
+
+'/knowledge/[slug]': {
+  nl: '/kennisbank/[slug]',
+  fr: '/base-de-connaissances/[slug]',
+  en: '/knowledge-base/[slug]',
+},
+
   }
 });
 

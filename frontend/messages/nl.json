@@ -53,14 +53,20 @@
     "epcCalculator": {
       "title": "EPC waarde berekenen | Gratis EPC calculator | Nu-Isoleren",
       "description": "Bereken een indicatieve EPC-waarde van uw woning. Beantwoord enkele vragen over isolatie, ramen en verwarming en krijg direct een eerste EPC-inschatting."
-    }
+    },
+    "knowledge": {
+    "title": "Kennisbank over isolatie & renovatie | Nu-Isoleren",
+    "description": "Praktische informatie en advies over isolatie, gevelwerken, vochtproblemen, premies en energiezuinig renoveren."
+  }
   },
+  
   "Breadcrumbs": {
     "home": "Home",
     "projects": "Realisaties",
     "faq": "Veelgestelde Vragen",
     "services": "Diensten",
-    "areas": "Werkgebieden"
+    "areas": "Werkgebieden",
+    "knowledge": "Kennisbank"
   },
   "Header": {
     "reviews": "Uitstekend",
@@ -1970,6 +1976,47 @@
     }
   }
 }
+},
+
+"KnowledgePage": {
+  "metadata": {
+    "title": "Kennisbank over isolatie & renovatie | Nu-Isoleren",
+    "description": "Ontdek praktische informatie en deskundig advies over isolatie, gevelwerken, vochtproblemen, premies en energiezuinig renoveren."
+  },
+
+  "hero": {
+    "badge": "KENNISBANK",
+    "title": "Alles wat u wilt weten over isoleren en renoveren",
+    "description": "Praktische uitleg, advies en antwoorden op veelgestelde vragen over isolatie, gevelwerken, vochtproblemen, premies en energie."
+  },
+
+  "filtersTitle": "Filter artikels",
+  "articlesCount": "{count, plural, =0 {Geen artikels} =1 {1 artikel} other {# artikels}}",
+  "reset": "Wissen",
+  "categoryLabel": "Onderwerpen",
+  "readArticle": "Lees artikel",
+
+  "pagination": {
+    "previous": "Vorige",
+    "next": "Volgende",
+    "page": "Pagina {current} van {total}"
+  },
+
+  "empty": {
+    "title": "Geen artikels gevonden",
+    "description": "Er zijn momenteel geen artikels beschikbaar binnen dit onderwerp."
+  }
+},
+
+"KnowledgeArticlePage": {
+  "updated": "Bijgewerkt op",
+  "contents": "Inhoud",
+
+  "related": {
+    "badge": "MEER ADVIES",
+    "title": "Lees ook deze artikels",
+    "description": "Ontdek meer praktische informatie en advies rond dit onderwerp."
+  }
 },
 
   "CtaBanner": {

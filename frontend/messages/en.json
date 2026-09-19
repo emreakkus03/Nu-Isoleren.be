@@ -53,14 +53,19 @@
     "epcCalculator": {
       "title": "EPC Rating Calculator | Free EPC Estimate | Nu-Isoleren",
       "description": "Estimate the EPC rating of your home using our free calculator. Answer questions about insulation, windows, heating and your property to get an initial result."
-    }
+    },
+    "knowledge": {
+    "title": "Insulation & Renovation Knowledge Base | Nu-Isoleren",
+    "description": "Explore practical information and advice about insulation, façades, damp problems, grants and energy-efficient renovation."
+  }
   },
   "Breadcrumbs": {
     "home": "Home",
     "projects": "Projects",
     "faq": "FAQ",
     "services": "Services",
-    "areas": "Service Areas"
+    "areas": "Service Areas",
+    "knowledge": "Knowledge base"
   },
   "Header": {
     "reviews": "Excellent",
@@ -1992,6 +1997,47 @@
     }
   }
 }
+},
+
+"KnowledgePage": {
+  "metadata": {
+    "title": "Insulation & Renovation Knowledge Base | Nu-Isoleren",
+    "description": "Explore practical information about insulation, façades, damp problems, grants and energy-efficient renovation."
+  },
+
+  "hero": {
+    "badge": "KNOWLEDGE BASE",
+    "title": "Everything you need to know about insulation and renovation",
+    "description": "Practical advice and answers to common questions about insulation, façades, damp problems, grants and energy."
+  },
+
+  "filtersTitle": "Filter articles",
+  "articlesCount": "{count, plural, =0 {No articles} =1 {1 article} other {# articles}}",
+  "reset": "Clear",
+  "categoryLabel": "Topics",
+  "readArticle": "Read article",
+
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+
+  "empty": {
+    "title": "No articles found",
+    "description": "There are currently no articles available for this topic."
+  }
+},
+
+"KnowledgeArticlePage": {
+  "updated": "Updated on",
+  "contents": "Contents",
+
+  "related": {
+    "badge": "MORE ADVICE",
+    "title": "You may also find these articles useful",
+    "description": "Discover more practical information and advice about this topic."
+  }
 },
 
   "CtaBanner": {
