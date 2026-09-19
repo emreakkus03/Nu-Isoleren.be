@@ -116,6 +116,12 @@ export const routing = defineRouting({
   en: '/knowledge-base/[slug]',
 },
 
+'/cookie-policy': {
+  nl: '/cookiebeleid',
+  fr: '/politique-de-cookies',
+  en: '/cookie-policy',
+},
+
   }
 });
 

@@ -2019,6 +2019,44 @@
   }
 },
 
+"Footer": {
+  "reviews": {
+    "excellent": "Uitstekend",
+    "outOfFive": "uit 5",
+    "basedOn": "op basis van",
+    "reviews": "reviews"
+  },
+  "description": "Isolatie, gevelwerken & vochtbestrijding voor uw woning.",
+  "services": {
+    "title": "Diensten"
+  },
+  "workAreas": {
+    "title": "Werkgebieden",
+    "all": "Alle werkgebieden"
+  },
+  "calculate": {
+    "title": "Berekenen",
+    "epc": "EPC-schatting",
+    "savings": "Besparing",
+    "homeCheck": "Woningcheck"
+  },
+  "about": {
+    "title": "Over ons",
+    "aboutUs": "Over ons",
+    "projects": "Realisaties",
+    "knowledge": "Kennisbank",
+    "faq": "FAQ"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "legal": {
+    "privacy": "Privacybeleid",
+    "cookies": "Cookiebeleid"
+  },
+  "builtBy": "Build by"
+},
+
   "CtaBanner": {
     "title": "Klaar om uw woning te verbeteren?",
     "description": "Vraag vrijblijvend een offerte aan en ontdek wat we voor uw woning kunnen betekenen.",

@@ -2040,6 +2040,44 @@
   }
 },
 
+"Footer": {
+  "reviews": {
+    "excellent": "Excellent",
+    "outOfFive": "out of 5",
+    "basedOn": "based on",
+    "reviews": "reviews"
+  },
+  "description": "Insulation, façade works & damp treatment for your home.",
+  "services": {
+    "title": "Services"
+  },
+  "workAreas": {
+    "title": "Service areas",
+    "all": "All service areas"
+  },
+  "calculate": {
+    "title": "Calculate",
+    "epc": "EPC estimate",
+    "savings": "Energy savings",
+    "homeCheck": "Home insulation check"
+  },
+  "about": {
+    "title": "About us",
+    "aboutUs": "About us",
+    "projects": "Projects",
+    "knowledge": "Knowledge base",
+    "faq": "FAQ"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "legal": {
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy"
+  },
+  "builtBy": "Built by"
+},
+
   "CtaBanner": {
     "title": "Ready to improve your home?",
     "description": "Request a non-binding quote and discover what we can do for your home.",

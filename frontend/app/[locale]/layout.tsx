@@ -7,6 +7,7 @@ import "../globals.css";
 import { AlternateLinksProvider } from '@/context/AlternateLinksContext';
 
 import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import FloatingButtons from '@/components/layout/FloatingButtons';
 
 export default async function LocaleLayout({
@@ -34,6 +35,7 @@ export default async function LocaleLayout({
             <main className="min-h-screen">
                 {children}
             </main>
+            <Footer locale={locale} />
           </NextIntlClientProvider>
         </AlternateLinksProvider>
       </body>

@@ -2035,6 +2035,44 @@
     "description": "Découvrez davantage d'informations pratiques et de conseils sur ce sujet."
   }
 },
+
+"Footer": {
+  "reviews": {
+    "excellent": "Excellent",
+    "outOfFive": "sur 5",
+    "basedOn": "sur la base de",
+    "reviews": "avis"
+  },
+  "description": "Isolation, travaux de façade & traitement de l’humidité pour votre habitation.",
+  "services": {
+    "title": "Services"
+  },
+  "workAreas": {
+    "title": "Zones d’intervention",
+    "all": "Toutes les zones"
+  },
+  "calculate": {
+    "title": "Calculer",
+    "epc": "Estimation PEB",
+    "savings": "Économies",
+    "homeCheck": "Diagnostic isolation"
+  },
+  "about": {
+    "title": "À propos",
+    "aboutUs": "À propos de nous",
+    "projects": "Réalisations",
+    "knowledge": "Base de connaissances",
+    "faq": "FAQ"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "legal": {
+    "privacy": "Politique de confidentialité",
+    "cookies": "Politique des cookies"
+  },
+  "builtBy": "Réalisé par"
+},
   "CtaBanner": {
     "title": "Prêt à améliorer votre habitation ?",
     "description": "Demandez un devis sans engagement et découvrez ce que nous pouvons faire pour votre maison.",
