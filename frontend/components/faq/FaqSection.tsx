@@ -84,15 +84,10 @@ export default function FaqSection({ faqs, labels }: FaqSectionProps) {
       .filter((g): g is NonNullable<typeof g> => g !== null);
   }, [groups, selectedFilter, searchQuery]);
 
-  const handleFilterClick = (key: string) => {
-    setSelectedFilter(key);
-    if (key !== 'all') {
-      const el = document.getElementById(key);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  };
+ const handleFilterClick = (key: string) => {
+  setSelectedFilter(key);
+  setOpenIds([]);
+};
 
   return (
     <div className="w-full">
