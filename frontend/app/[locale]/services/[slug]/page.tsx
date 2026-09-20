@@ -7,13 +7,17 @@ import { getServiceBySlug } from '@/lib/services';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import ServiceToc from '@/components/services/ServiceToc';
 import DynamicBulletIcon from '@/components/ui/DynamicBulletIcon';
+import CtaBanner from '@/components/common/CtaBanner';
 import ServiceAlternateLinks from '@/components/services/ServiceAlternateLinks';
+import ServiceProjects from '@/components/services/ServiceProjects';
+import ServiceFaqs from '@/components/services/ServiceFaqs';
+import type { ServiceItem } from '@/types/service';
+import { getPathname } from '@/i18n/routing';
 
 export const dynamic = 'force-dynamic';
 
 const MEDIA_BASE_URL =
-  process.env.NEXT_PUBLIC_S3_PUBLIC_URL ||
-  'http://127.0.0.1:9000/nu-isoleren';
+  process.env.NEXT_PUBLIC_S3_PUBLIC_URL || 'https://localhost:8000';
 
 interface ServiceDetailPageProps {
   params: Promise<{
@@ -132,6 +136,48 @@ const formatIntroParagraphs = (rawText: string) => {
   return rawText;
 };
 
+const RICH_TEXT_CLASSES = `
+  prose prose-slate max-w-none
+  text-sm sm:text-base
+  text-black
+  leading-relaxed
+
+  [&_p]:mb-4
+  [&_p:last-child]:mb-0
+  [&_p]:text-black
+
+  [&_strong]:font-bold
+  [&_strong]:text-black
+
+  [&_em]:text-black
+
+  [&_ul]:my-5
+  [&_ol]:my-5
+  [&_li]:my-1
+  [&_li]:text-black
+
+  [&_a]:font-extrabold
+  [&_a]:text-[#1A669A]
+  [&_a]:underline
+  [&_a]:decoration-2
+  [&_a]:decoration-[#1A669A]
+  [&_a]:underline-offset-4
+  [&_a]:cursor-pointer
+  [&_a]:transition-colors
+
+ [&_a:hover]:text-[#C82024]
+[&_a:hover]:decoration-[#C82024]
+`;
+
+const splitHrefSuffix = (href: string) => {
+  const match = href.match(/^([^?#]*)(.*)$/);
+
+  return {
+    pathname: match?.[1] || href,
+    suffix: match?.[2] || '',
+  };
+};
+
 const localizeHref = (
   href: string,
   locale: string,
@@ -140,28 +186,138 @@ const localizeHref = (
     return '#';
   }
 
-  if (
-    href.startsWith('#') ||
-    href.startsWith('http://') ||
-    href.startsWith('https://') ||
-    href.startsWith('mailto:') ||
-    href.startsWith('tel:')
-  ) {
-    return href;
-  }
+  const trimmedHref = href.trim();
 
   if (
-    href.startsWith(`/${locale}/`) ||
-    href === `/${locale}`
+    trimmedHref.startsWith('#') ||
+    trimmedHref.startsWith('http://') ||
+    trimmedHref.startsWith('https://') ||
+    trimmedHref.startsWith('mailto:') ||
+    trimmedHref.startsWith('tel:')
   ) {
-    return href;
+    return trimmedHref;
   }
 
-  if (href.startsWith('/')) {
-    return `/${locale}${href}`;
+  if (
+    trimmedHref.startsWith(`/${locale}/`) ||
+    trimmedHref === `/${locale}`
+  ) {
+    return trimmedHref;
   }
 
-  return `/${locale}/${href}`;
+  const normalizedHref = trimmedHref.startsWith('/')
+    ? trimmedHref
+    : `/${trimmedHref}`;
+
+  const { pathname, suffix } =
+    splitHrefSuffix(normalizedHref);
+
+  const staticRoutes = new Set([
+    '/',
+    '/projects',
+    '/services',
+    '/faq',
+    '/areas',
+    '/contact',
+    '/privacy-policy',
+    '/about',
+    '/prices',
+    '/prices/epc-calculator',
+    '/prices/energy-savings-calculator',
+    '/prices/home-insulation-check',
+    '/grants',
+    '/grants/flanders',
+    '/grants/brussels',
+    '/grants/wallonia',
+    '/quote',
+    '/knowledge',
+    '/cookie-policy',
+  ]);
+
+  try {
+    if (staticRoutes.has(pathname)) {
+      const localizedPath = getPathname({
+        locale: locale as any,
+        href: pathname as any,
+      });
+
+      return `${localizedPath}${suffix}`;
+    }
+
+    const dynamicRoutes = [
+      {
+        prefix: '/projects/',
+        pathname: '/projects/[slug]',
+      },
+      {
+        prefix: '/services/',
+        pathname: '/services/[slug]',
+      },
+      {
+        prefix: '/areas/',
+        pathname: '/areas/[slug]',
+      },
+      {
+        prefix: '/knowledge/',
+        pathname: '/knowledge/[slug]',
+      },
+      {
+        prefix: '/materials/',
+        pathname: '/materials/[slug]',
+      },
+    ];
+
+    for (const route of dynamicRoutes) {
+      if (pathname.startsWith(route.prefix)) {
+        const slug = pathname
+          .slice(route.prefix.length)
+          .replace(/^\/+|\/+$/g, '');
+
+        if (!slug) {
+          break;
+        }
+
+        const localizedPath = getPathname({
+          locale: locale as any,
+          href: {
+            pathname: route.pathname as any,
+            params: {
+              slug,
+            },
+          } as any,
+        });
+
+        return `${localizedPath}${suffix}`;
+      }
+    }
+  } catch {
+    // Fallback hieronder voor ongekende interne routes.
+  }
+
+  return `/${locale}${pathname}${suffix}`;
+};
+
+const localizeRichTextHtml = (
+  html: string,
+  locale: string,
+) => {
+  if (!html) {
+    return '';
+  }
+
+  return html.replace(
+    /href=(["'])(.*?)\1/gi,
+    (
+      fullMatch,
+      quote: string,
+      href: string,
+    ) => {
+      const localizedHref =
+        localizeHref(href, locale);
+
+      return `href=${quote}${localizedHref}${quote}`;
+    },
+  );
 };
 
 const getContentWidthClass = (
@@ -200,37 +356,22 @@ const getImageRadiusClass = (
 
 const getButtonStyle = (
   style?: string,
-  backgroundColor?: string,
-  textColor?: string,
-  borderColor?: string,
 ) => {
   const type = style || 'filled';
 
   if (type === 'text') {
     return {
       className:
-        'inline-flex items-center gap-2 font-bold transition-opacity hover:opacity-70',
-      style: {
-        color:
-          textColor ||
-          backgroundColor ||
-          '#C82024',
-      },
+        'inline-flex items-center gap-2 font-bold text-[#C82024] transition-colors hover:text-[#1A669A]',
+      style: {},
     };
   }
 
   if (type === 'outline') {
     return {
       className:
-        'inline-flex items-center justify-center gap-2 rounded-lg border-2 px-5 py-3 text-sm font-bold transition-opacity hover:opacity-80',
+        'inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#C82024] px-5 py-3 text-sm font-bold text-[#C82024] transition-colors hover:bg-[#C82024] hover:text-[#C82024]',
       style: {
-        color:
-          textColor ||
-          borderColor ||
-          '#C82024',
-        borderColor:
-          borderColor ||
-          '#C82024',
         backgroundColor: 'transparent',
       },
     };
@@ -238,19 +379,8 @@ const getButtonStyle = (
 
   return {
     className:
-      'inline-flex items-center justify-center gap-2 rounded-lg border-2 px-5 py-3 text-sm font-bold transition-opacity hover:opacity-90',
-    style: {
-      backgroundColor:
-        backgroundColor ||
-        '#C82024',
-      color:
-        textColor ||
-        '#FFFFFF',
-      borderColor:
-        borderColor ||
-        backgroundColor ||
-        '#C82024',
-    },
+      'inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#C82024] bg-[#C82024] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90',
+    style: {},
   };
 };
 
@@ -273,9 +403,11 @@ function ArrowRightIcon() {
 function ContentBlockRenderer({
   block,
   locale,
+  service,
 }: {
   block: ContentBlock;
   locale: string;
+  service: ServiceItem;
 }) {
   const data = block.data || {};
 
@@ -287,19 +419,12 @@ function ContentBlockRenderer({
 
       return (
         <div
-          className="
-            prose prose-slate max-w-none
-            text-sm sm:text-base
-            leading-relaxed
-            prose-p:mb-4
-            prose-strong:font-bold
-            prose-strong:text-slate-900
-            prose-a:text-[#1A669A]
-            prose-a:underline
-            hover:prose-a:text-[#C82024]
-          "
+          className={RICH_TEXT_CLASSES}
           dangerouslySetInnerHTML={{
-            __html: data.content,
+            __html: localizeRichTextHtml(
+              data.content,
+              locale,
+            ),
           }}
         />
       );
@@ -342,17 +467,12 @@ function ContentBlockRenderer({
           >
             {data.content && (
               <div
-                className="
-                  prose prose-slate max-w-none
-                  text-sm sm:text-base
-                  leading-relaxed
-                  prose-p:mb-4
-                  prose-strong:text-slate-900
-                  prose-a:text-[#1A669A]
-                  prose-a:underline
-                "
+                className={RICH_TEXT_CLASSES}
                 dangerouslySetInnerHTML={{
-                  __html: data.content,
+                  __html: localizeRichTextHtml(
+                    data.content,
+                    locale,
+                  ),
                 }}
               />
             )}
@@ -495,20 +615,20 @@ function ContentBlockRenderer({
                     }
                     color={
                       data.icon_color ||
-                      '#1A669A'
+                      '#C82024'
                     }
                   />
                 </div>
 
                 <div className="min-w-0">
                   {item.title && (
-                    <h3 className="mb-1 font-bold text-slate-900">
+                    <h3 className="mb-1 font-bold text-black">
                       {item.title}
                     </h3>
                   )}
 
                   {item.text && (
-                    <p className="text-sm sm:text-base leading-relaxed text-slate-600">
+                    <p className="text-sm sm:text-base leading-relaxed text-black">
                       {item.text}
                     </p>
                   )}
@@ -550,7 +670,7 @@ function ContentBlockRenderer({
               const cardBackground =
                 item.background_color ||
                 data.background_color ||
-                '#F7F8FA';
+                '#FFFFFF';
 
               const cardImage =
                 getMediaUrl(
@@ -579,7 +699,7 @@ function ContentBlockRenderer({
                       '#E2E8F0',
                     color:
                       data.text_color ||
-                      '#0F172A',
+                      '#000000',
                   }}
                 >
                   {cardImage && (
@@ -699,12 +819,12 @@ function ContentBlockRenderer({
                         )}
                     </div>
 
-                    <h3 className="mb-2 text-lg font-extrabold text-slate-900">
+                    <h3 className="mb-2 text-lg font-extrabold text-black">
                       {item.title}
                     </h3>
 
                     {item.description && (
-                      <p className="text-sm leading-relaxed text-slate-600">
+                      <p className="text-sm leading-relaxed text-black">
                         {
                           item.description
                         }
@@ -773,12 +893,12 @@ function ContentBlockRenderer({
                 </div>
 
                 <div className="min-w-0 pt-1.5">
-                  <h3 className="font-extrabold text-slate-900">
+                  <h3 className="font-extrabold text-black">
                     {item.title}
                   </h3>
 
                   {item.description && (
-                    <p className="mt-1.5 text-sm sm:text-base leading-relaxed text-slate-600">
+                    <p className="mt-1.5 text-sm sm:text-base leading-relaxed text-black">
                       {
                         item.description
                       }
@@ -821,12 +941,7 @@ function ContentBlockRenderer({
               index: number,
             ) => {
               const button =
-                getButtonStyle(
-                  item.style,
-                  item.background_color,
-                  item.text_color,
-                  item.border_color,
-                );
+                getButtonStyle(item.style);
 
               return (
                 <a
@@ -868,12 +983,7 @@ function ContentBlockRenderer({
 
     case 'callout': {
       const button =
-        getButtonStyle(
-          data.button_style,
-          data.button_background,
-          data.button_text_color,
-          data.button_background,
-        );
+        getButtonStyle(data.button_style);
 
       return (
         <div
@@ -881,10 +991,10 @@ function ContentBlockRenderer({
           style={{
             backgroundColor:
               data.background_color ||
-              '#F1F5F9',
+              '#FFFFFF',
             color:
               data.text_color ||
-              '#0F172A',
+              '#000000',
             borderColor:
               data.border_color ||
               '#CBD5E1',
@@ -898,10 +1008,12 @@ function ContentBlockRenderer({
 
           {data.content && (
             <div
-              className="prose prose-slate max-w-none"
+              className={RICH_TEXT_CLASSES}
               dangerouslySetInnerHTML={{
-                __html:
+                __html: localizeRichTextHtml(
                   data.content,
+                  locale,
+                ),
               }}
             />
           )}
@@ -941,7 +1053,7 @@ function ContentBlockRenderer({
       return (
         <div className="overflow-x-auto rounded-xl border border-slate-200">
           {data.caption && (
-            <div className="border-b border-slate-200 bg-slate-50 px-5 py-4 font-extrabold text-slate-900">
+            <div className="border-b border-slate-200 bg-white px-5 py-4 font-extrabold text-black">
               {data.caption}
             </div>
           )}
@@ -962,16 +1074,16 @@ function ContentBlockRenderer({
                         '#E2E8F0',
                     }}
                   >
-                    <th className="px-5 py-4 font-bold text-slate-900">
+                    <th className="px-5 py-4 font-bold text-black">
                       {row.label}
                     </th>
 
-                    <td className="px-5 py-4 text-slate-600">
+                    <td className="px-5 py-4 text-black">
                       {row.value}
                     </td>
 
                     {row.extra && (
-                      <td className="px-5 py-4 text-slate-500">
+                      <td className="px-5 py-4 text-black">
                         {
                           row.extra
                         }
@@ -1011,10 +1123,10 @@ function ContentBlockRenderer({
           style={{
             backgroundColor:
               data.background_color ||
-              '#F7F8FA',
+              '#FFFFFF',
             color:
               data.text_color ||
-              '#0F172A',
+              '#000000',
           }}
         >
           {previewImage && (
@@ -1082,24 +1194,58 @@ function ContentBlockRenderer({
       );
     }
 
-    case 'projects':
-      return (
-        <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-5 text-sm text-slate-500">
-          Realisaties-blok is
-          geconfigureerd. De
-          automatische projectdata moet
-          nog gekoppeld worden.
-        </div>
-      );
+  case 'projects':
+  return (
+    <ServiceProjects
+      projects={
+        service.projects || []
+      }
+      limit={
+        Number(
+          data.limit || 3,
+        )
+      }
+      showLocation={
+        data.show_location !==
+        false
+      }
+      showDescription={
+        data.show_description ===
+        true
+      }
+      buttonLabel={
+        data.button_label
+      }
+      buttonUrl={
+        data.button_url ||
+        '/projects'
+      }
+    />
+  );
 
-    case 'faq':
-      return (
-        <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-5 text-sm text-slate-500">
-          FAQ-blok is geconfigureerd.
-          De automatische FAQ-data moet
-          nog gekoppeld worden.
-        </div>
-      );
+case 'faq':
+  return (
+    <ServiceFaqs
+      faqs={
+        service.faqs || []
+      }
+      locale={
+        locale
+      }
+      limit={
+        Number(
+          data.limit || 8,
+        )
+      }
+      buttonLabel={
+        data.button_label
+      }
+      buttonUrl={
+        data.button_url ||
+        '/faq'
+      }
+    />
+  );
 
     case 'divider':
       return data.style ===
@@ -1199,7 +1345,7 @@ export default async function ServiceDetailPage({
         tBreadcrumb(
           'services',
         ),
-      href: '/diensten',
+      href: '/services',
     },
     {
       label: service.name,
@@ -1237,19 +1383,21 @@ export default async function ServiceDetailPage({
               </span>
             )}
 
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight [overflow-wrap:anywhere]">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-tight [overflow-wrap:anywhere]">
               {service.hero_title ||
                 service.name}
             </h1>
 
             {service.intro_text && (
               <div
-                className="text-sm sm:text-base text-slate-600 leading-relaxed [overflow-wrap:anywhere] [&>p]:mb-4 last:[&>p]:mb-0"
+                className={`${RICH_TEXT_CLASSES} [overflow-wrap:anywhere]`}
                 dangerouslySetInnerHTML={{
-                  __html:
+                  __html: localizeRichTextHtml(
                     formatIntroParagraphs(
                       service.intro_text,
                     ),
+                    locale,
+                  ),
                 }}
               />
             )}
@@ -1308,7 +1456,7 @@ export default async function ServiceDetailPage({
                           '#FFFFFF',
                         color:
                           section.text_color ||
-                          '#0F172A',
+                          '#000000',
                       }}
                     >
                       <div
@@ -1320,7 +1468,7 @@ export default async function ServiceDetailPage({
                             style={{
                               color:
                                 section.text_color ||
-                                '#0F172A',
+                                '#000000',
                             }}
                           >
                             {
@@ -1331,22 +1479,12 @@ export default async function ServiceDetailPage({
 
                         {section.body && (
                           <div
-                            className="
-                              prose prose-slate max-w-none
-                              mb-6
-                              text-sm sm:text-base
-                              text-slate-600
-                              leading-relaxed
-                              prose-p:mb-4
-                              prose-strong:font-bold
-                              prose-strong:text-slate-900
-                              prose-a:text-[#1A669A]
-                              prose-a:underline
-                              hover:prose-a:text-[#C82024]
-                            "
+                            className={`${RICH_TEXT_CLASSES} mb-6`}
                             dangerouslySetInnerHTML={{
-                              __html:
+                              __html: localizeRichTextHtml(
                                 section.body,
+                                locale,
+                              ),
                             }}
                           />
                         )}
@@ -1375,11 +1513,11 @@ export default async function ServiceDetailPage({
                                       }
                                       color={
                                         bp.color ||
-                                        '#1A669A'
+                                        '#C82024'
                                       }
                                     />
 
-                                    <span className="flex-1 text-sm sm:text-base font-medium leading-relaxed text-slate-700">
+                                    <span className="flex-1 text-sm sm:text-base font-medium leading-relaxed text-black">
                                       {
                                         bp.text
                                       }
@@ -1446,15 +1584,18 @@ export default async function ServiceDetailPage({
                                   block,
                                   blockIndex,
                                 ) => (
-                                  <ContentBlockRenderer
-                                    key={`${block.type}-${blockIndex}`}
-                                    block={
-                                      block
-                                    }
-                                    locale={
-                                      locale
-                                    }
-                                  />
+                                 <ContentBlockRenderer
+  key={`${block.type}-${blockIndex}`}
+  block={
+    block
+  }
+  locale={
+    locale
+  }
+  service={
+    service
+  }
+/>
                                 ),
                               )}
                             </div>
@@ -1465,13 +1606,14 @@ export default async function ServiceDetailPage({
                 },
               )
             ) : (
-              <p className="text-slate-500 font-medium text-sm sm:text-base">
+              <p className="text-black/60 font-medium text-sm sm:text-base">
                 Geen inhoud
                 beschikbaar.
               </p>
             )}
           </section>
         </div>
+            <CtaBanner buttonHref="/quote" />
       </div>
     </main>
   );

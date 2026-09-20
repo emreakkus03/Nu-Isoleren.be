@@ -36,18 +36,24 @@ export async function getServiceBySlug(
 ): Promise<ServiceItem | null> {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://nu-isoleren-backend.ddev.site/api';
-    const res = await fetch(`${baseUrl}/services/${encodeURIComponent(slug)}?locale=${locale}`, {
-      cache: 'no-store',
-    });
+
+    const res = await fetch(
+      `${baseUrl}/services/${encodeURIComponent(slug)}?locale=${locale}`,
+      {
+        cache: 'no-store',
+      }
+    );
 
     if (!res.ok) {
       return null;
     }
 
     const json = await res.json();
+
     return json.data || null;
   } catch (error) {
     console.error(`Fout bij ophalen service '${slug}':`, error);
+
     return null;
   }
 }

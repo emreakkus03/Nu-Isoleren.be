@@ -2073,6 +2073,14 @@
   },
   "builtBy": "Réalisé par"
 },
+
+"MaterialPage": {
+  "services": {
+    "badge": "SERVICES ASSOCIÉS",
+    "title": "Où utilisons-nous ce matériau ?",
+    "description": "Découvrez les services d’isolation pour lesquels nous utilisons ce matériau."
+  }
+},
   "CtaBanner": {
     "title": "Prêt à améliorer votre habitation ?",
     "description": "Demandez un devis sans engagement et découvrez ce que nous pouvons faire pour votre maison.",

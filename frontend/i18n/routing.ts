@@ -115,6 +115,11 @@ export const routing = defineRouting({
   fr: '/base-de-connaissances/[slug]',
   en: '/knowledge-base/[slug]',
 },
+'/materials/[slug]': {
+  nl: '/[slug]',
+  fr: '/[slug]',
+  en: '/[slug]',
+},
 
 '/cookie-policy': {
   nl: '/cookiebeleid',

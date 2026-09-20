@@ -12,7 +12,19 @@ use App\Http\Controllers\Api\ContactSubmissionController;
 use App\Http\Controllers\Api\EnergySavingsController;
 use App\Http\Controllers\Api\QuoteRequestController;
 use App\Http\Controllers\Api\EnergyRatingController;
+use App\Http\Controllers\Api\MaterialController;
 use Illuminate\Support\Facades\Storage;
+
+
+Route::get(
+    '/materials',
+    [MaterialController::class, 'index']
+)->middleware('throttle:60,1');
+
+Route::get(
+    '/materials/{slug}',
+    [MaterialController::class, 'show']
+)->middleware('throttle:60,1');
 
 Route::post(
     '/contact-submissions',
@@ -404,6 +416,23 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
         ], 404);
     }
 
+    $projects = Project::query()
+        ->where('service_id', $service->id)
+        ->where('published', true)
+        ->with([
+            'service',
+            'city',
+            'images' => fn ($query) => $query->orderBy('sort_order'),
+        ])
+        ->orderBy('sort_order')
+        ->latest()
+        ->get();
+
+    $faqs = Faq::query()
+        ->where('service_id', $service->id)
+        ->orderBy('sort_order', 'asc')
+        ->get();
+
     /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
     $s3 = Storage::disk('s3');
 
@@ -429,7 +458,7 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
                     is_array($sec['images'])
                 ) {
                     $sec['images'] = array_map(
-                        fn($img) => $s3->url($img),
+                        fn ($img) => $s3->url($img),
                         $sec['images']
                     );
                 }
@@ -545,6 +574,52 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
 
             'sections' =>
             $sections,
+
+            'projects' => $projects
+                ->map(
+                    fn (Project $project) =>
+                    formatProjectResponse(
+                        $project,
+                        $locale
+                    )
+                )
+                ->values(),
+
+            'faqs' => $faqs
+                ->map(function (Faq $faq) use ($locale) {
+                    return [
+                        'id' => $faq->id,
+
+                        'question' =>
+                        $faq->getTranslation(
+                            'question',
+                            $locale,
+                            false
+                        )
+                            ?: $faq->getTranslation(
+                                'question',
+                                'nl'
+                            ),
+
+                        'answer' =>
+                        $faq->getTranslation(
+                            'answer',
+                            $locale,
+                            false
+                        )
+                            ?: $faq->getTranslation(
+                                'answer',
+                                'nl'
+                            ),
+
+                        'category' =>
+                            $faq->category,
+
+                        'sort_order' =>
+                            (int) $faq->sort_order,
+                    ];
+                })
+                ->values(),
 
             'seo_title' =>
             $service->getTranslation(

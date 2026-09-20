@@ -2057,6 +2057,13 @@
   "builtBy": "Build by"
 },
 
+"MaterialPage": {
+  "services": {
+    "badge": "GERELATEERDE DIENSTEN",
+    "title": "Waar passen we dit materiaal toe?",
+    "description": "Ontdek de isolatiediensten waarbij we dit materiaal gebruiken."
+  }
+},
   "CtaBanner": {
     "title": "Klaar om uw woning te verbeteren?",
     "description": "Vraag vrijblijvend een offerte aan en ontdek wat we voor uw woning kunnen betekenen.",

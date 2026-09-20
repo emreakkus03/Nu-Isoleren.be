@@ -2078,6 +2078,14 @@
   "builtBy": "Built by"
 },
 
+"MaterialPage": {
+  "services": {
+    "badge": "RELATED SERVICES",
+    "title": "Where do we use this material?",
+    "description": "Discover the insulation services where we use this material."
+  }
+},
+
   "CtaBanner": {
     "title": "Ready to improve your home?",
     "description": "Request a non-binding quote and discover what we can do for your home.",

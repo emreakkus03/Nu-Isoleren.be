@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+
 class Service extends Model
 {
     use HasTranslations;
@@ -67,5 +68,14 @@ public function quoteRequests(): BelongsToMany
 public function knowledgeArticles(): HasMany
 {
     return $this->hasMany(KnowledgeArticle::class);
+}
+
+public function materials(): BelongsToMany
+{
+    return $this->belongsToMany(Material::class)
+        ->withPivot('sort_order')
+        ->withTimestamps()
+        ->where('materials.is_active', true)
+        ->orderByPivot('sort_order');
 }
 }
