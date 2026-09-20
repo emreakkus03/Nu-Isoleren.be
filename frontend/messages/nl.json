@@ -257,7 +257,76 @@
     "intro": "Nu-Isoleren is uw erkende isolatiespecialist in <bold>{city}</bold> en omgeving. Wij voeren dagelijks spouwmuurisolatie, dakisolatie, crepi en gevelwerken uit met oog voor detail en maximale energiebesparing.",
     "image_alt": "Nu-Isoleren isolatiewerken uitvoering in {city}",
     "meta_title": "Isolatie en gevelwerken in {city} | Nu-Isoleren",
-    "meta_description": "Nu-Isoleren voert spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding uit in {city} en omgeving."
+    "meta_description": "Nu-Isoleren voert spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding uit in {city} en omgeving.",
+    "services": {
+    "eyebrow": "ONZE DIENSTEN",
+    "title": "Isolatie- en gevelwerken in {city}",
+    "description": "Ontdek onze oplossingen voor isolatie, gevelwerken en vochtbestrijding in {city}. We bekijken per woning welke aanpak technisch het meest geschikt is."
+  },
+  "solutions": {
+  "eyebrow": "ISOLATIEOPLOSSINGEN",
+  "title": "Welke oplossing past bij uw woning?",
+  "link_label": "Bekijk deze dienst",
+  "cavity": {
+    "description": "Heeft uw woning een geschikte spouwmuur, dan kan spouwmuurisolatie een efficiënte manier zijn om warmteverlies via de buitenmuren te beperken."
+  },
+  "facade": {
+    "description": "Wanneer de buitengevel grondiger moet worden aangepakt, kunnen isolatieplaten langs de buitenzijde gecombineerd worden met een nieuwe crepiafwerking."
+  },
+  "roof": {
+    "description": "Via een slecht geïsoleerd dak kan veel warmte verloren gaan. Afhankelijk van de dakopbouw isoleren we onder meer met glaswol of PIR-isolatie."
+  }
+},
+"projects": {
+  "eyebrow": "REALISATIES",
+  "title": "Realisaties in {city}",
+  "description": "Bekijk enkele isolatie- en gevelwerken die Nu-Isoleren heeft uitgevoerd in {city}."
+},
+"grants": {
+  "eyebrow": "PREMIES & STEUN",
+  "flanders": {
+    "title": "Premies voor isolatiewerken in {city}",
+    "description": "Voor bepaalde isolatie- en renovatiewerken aan een woning in {city} kunnen Vlaamse premies of andere steunmaatregelen van toepassing zijn. De voorwaarden hangen onder meer af van het type werk, de woning en de geldende regelgeving.",
+    "button": "Bekijk premies in Vlaanderen"
+  },
+  "wallonia": {
+    "title": "Premies voor isolatiewerken in {city}",
+    "description": "Voor bepaalde isolatie- en renovatiewerken aan een woning in {city} kunnen Waalse premies of andere steunmaatregelen van toepassing zijn. De voorwaarden hangen af van het type werk, de woning en de geldende regelgeving.",
+    "button": "Bekijk premies in Wallonië"
+  }
+},
+"process": {
+  "eyebrow": "ONZE WERKWIJZE",
+  "title": "Van aanvraag tot uitvoering",
+  "description": "We begeleiden u stap voor stap, van de eerste aanvraag tot de uitvoering en oplevering van de werken.",
+  "steps": {
+    "request": {
+      "title": "Aanvraag",
+      "description": "U neemt contact met ons op en bezorgt ons de eerste informatie over uw woning en de gewenste werken."
+    },
+    "analysis": {
+      "title": "Analyse",
+      "description": "We bekijken de situatie en beoordelen welke oplossing technisch geschikt is voor uw woning."
+    },
+    "quote": {
+      "title": "Advies & offerte",
+      "description": "U ontvangt een duidelijke toelichting van de voorgestelde werken en een offerte op maat."
+    },
+    "execution": {
+      "title": "Uitvoering",
+      "description": "Na akkoord plannen we de werken in en voeren onze vakmensen deze zorgvuldig uit."
+    },
+    "completion": {
+      "title": "Oplevering",
+      "description": "Na de uitvoering controleren we de werken en overlopen we het resultaat met u."
+    }
+  }
+},
+"nearby": {
+  "eyebrow": "WERKGEBIEDEN",
+  "title": "Ook actief rond {city}",
+  "description": "Naast {city} voert Nu-Isoleren ook isolatie- en gevelwerken uit in verschillende steden en gemeenten in de omgeving."
+}
   },
   "ContactPage": {
     "hero": {

@@ -256,7 +256,76 @@
     "intro": "Nu-Isoleren is your certified insulation contractor in <bold>{city}</bold> and surrounding areas. We specialize in cavity wall insulation, roof insulation, and facade renovation.",
     "image_alt": "Nu-Isoleren insulation works execution in {city}",
     "meta_title": "Insulation and facade works in {city} | Nu-Isoleren",
-    "meta_description": "Nu-Isoleren carries out cavity wall insulation, roof insulation, render, and facade works in {city} and surrounding areas."
+    "meta_description": "Nu-Isoleren carries out cavity wall insulation, roof insulation, render, and facade works in {city} and surrounding areas.",
+    "services": {
+    "eyebrow": "OUR SERVICES",
+    "title": "Insulation and facade works in {city}",
+    "description": "Discover our insulation, facade and moisture treatment solutions in {city}. We assess each property to determine the most suitable technical solution."
+  },
+  "solutions": {
+  "eyebrow": "INSULATION SOLUTIONS",
+  "title": "Which solution is suitable for your home?",
+  "link_label": "View this service",
+  "cavity": {
+    "description": "If your property has a suitable cavity wall, cavity wall insulation can be an efficient way to reduce heat loss through the external walls."
+  },
+  "facade": {
+    "description": "When the exterior facade requires a more extensive renovation, external insulation boards can be combined with a new rendered finish."
+  },
+  "roof": {
+    "description": "A poorly insulated roof can cause significant heat loss. Depending on the roof structure, we use materials such as glass wool or PIR insulation."
+  }
+},
+"projects": {
+  "eyebrow": "PROJECTS",
+  "title": "Projects in {city}",
+  "description": "Discover some of the insulation and facade projects completed by Nu-Isoleren in {city}."
+},
+"grants": {
+  "eyebrow": "GRANTS & SUPPORT",
+  "flanders": {
+    "title": "Insulation grants in {city}",
+    "description": "Certain insulation and renovation works on a property in {city} may qualify for grants or other support measures in Flanders. Eligibility depends on factors such as the type of work, the property and the applicable regulations.",
+    "button": "View grants in Flanders"
+  },
+  "wallonia": {
+    "title": "Insulation grants in {city}",
+    "description": "Certain insulation and renovation works on a property in {city} may qualify for grants or other support measures in Wallonia. Eligibility depends on factors such as the type of work, the property and the applicable regulations.",
+    "button": "View grants in Wallonia"
+  }
+},
+"process": {
+  "eyebrow": "OUR PROCESS",
+  "title": "From request to completion",
+  "description": "We guide you step by step, from the first enquiry through to the execution and completion of the work.",
+  "steps": {
+    "request": {
+      "title": "Request",
+      "description": "You contact us and provide the first details about your property and the work you are considering."
+    },
+    "analysis": {
+      "title": "Assessment",
+      "description": "We assess the situation and determine which solution is technically suitable for your property."
+    },
+    "quote": {
+      "title": "Advice & quote",
+      "description": "You receive a clear explanation of the proposed work together with a tailored quotation."
+    },
+    "execution": {
+      "title": "Execution",
+      "description": "Once approved, we schedule the work and our team carries it out carefully."
+    },
+    "completion": {
+      "title": "Completion",
+      "description": "After the work is finished, we inspect the result and review it with you."
+    }
+  }
+},
+"nearby": {
+  "eyebrow": "SERVICE AREAS",
+  "title": "Also active around {city}",
+  "description": "In addition to {city}, Nu-Isoleren also carries out insulation and facade works in several surrounding towns and municipalities."
+}
   },
   "ContactPage": {
     "hero": {

@@ -653,14 +653,173 @@ Route::get('/cities', function (Request $request) {
     ]);
 });
 
-Route::get('/cities/{slug}', function ($slug) {
-    $city = City::where('slug', $slug)
-        ->with(['projects' => function ($query) {
-            $query->latest()->take(6);
-        }])
+Route::get('/cities/{slug}', function (Request $request, string $slug) {
+    $locale = $request->query('locale', 'nl');
+
+    $city = City::query()
+        ->where('slug', $slug)
         ->firstOrFail();
 
-    return response()->json($city);
+    /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
+    $s3 = Storage::disk('s3');
+
+    $heroImageUrl = $city->hero_image
+        ? $s3->url($city->hero_image)
+        : null;
+
+    $projects = Project::query()
+        ->where('city_id', $city->id)
+        ->where('published', true)
+        ->with([
+            'service',
+            'city',
+            'images' => fn ($query) => $query->orderBy('sort_order'),
+        ])
+        ->orderBy('sort_order')
+        ->latest()
+        ->take(6)
+        ->get();
+
+    return response()->json([
+        'id' => $city->id,
+
+        'name' => $city->name,
+
+        'postal_code' => $city->postal_code,
+
+        'slug' => $city->slug,
+
+        'province' => $city->province,
+
+        'region' => $city->region,
+
+        'is_featured' => (bool) $city->is_featured,
+
+        'is_indexable' => (bool) $city->is_indexable,
+
+        'hero_image' => $heroImageUrl,
+
+        'hero_title' =>
+            $city->getTranslation(
+                'hero_title',
+                $locale,
+                false
+            )
+            ?: $city->getTranslation(
+                'hero_title',
+                'nl',
+                false
+            ),
+
+        'hero_intro' =>
+            $city->getTranslation(
+                'hero_intro',
+                $locale,
+                false
+            )
+            ?: $city->getTranslation(
+                'hero_intro',
+                'nl',
+                false
+            ),
+
+        'local_title' =>
+            $city->getTranslation(
+                'local_title',
+                $locale,
+                false
+            )
+            ?: $city->getTranslation(
+                'local_title',
+                'nl',
+                false
+            ),
+
+        'local_content' =>
+            $city->getTranslation(
+                'local_content',
+                $locale,
+                false
+            )
+            ?: $city->getTranslation(
+                'local_content',
+                'nl',
+                false
+            ),
+
+        'solution_intro' =>
+            $city->getTranslation(
+                'solution_intro',
+                $locale,
+                false
+            )
+            ?: $city->getTranslation(
+                'solution_intro',
+                'nl',
+                false
+            ),
+
+        'local_faqs' =>
+            $city->getTranslation(
+                'local_faqs',
+                $locale,
+                false
+            )
+            ?: $city->getTranslation(
+                'local_faqs',
+                'nl',
+                false
+            )
+            ?: [],
+
+        'seo_title' =>
+            $city->getTranslation(
+                'seo_title',
+                $locale,
+                false
+            )
+            ?: $city->getTranslation(
+                'seo_title',
+                'nl',
+                false
+            ),
+
+        'seo_description' =>
+            $city->getTranslation(
+                'seo_description',
+                $locale,
+                false
+            )
+            ?: $city->getTranslation(
+                'seo_description',
+                'nl',
+                false
+            ),
+
+        'projects' => $projects
+            ->map(
+                fn (Project $project) =>
+                    formatProjectResponse(
+                        $project,
+                        $locale
+                    )
+            ),
+            'nearby_cities' => $city->nearbyCities()
+    ->where('is_indexable', true)
+    ->orderBy('name')
+    ->get()
+    ->map(function (City $nearbyCity) {
+        return [
+            'id' => $nearbyCity->id,
+            'name' => $nearbyCity->name,
+            'slug' => $nearbyCity->slug,
+            'province' => $nearbyCity->province,
+            'region' => $nearbyCity->region,
+        ];
+    })
+  
+            ->values(),
+    ]);
 });
 
 Route::middleware('throttle:20,1')->post(

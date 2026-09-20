@@ -256,7 +256,76 @@
     "intro": "Nu-Isoleren est votre spécialiste agréé à <bold>{city}</bold> et ses environs. Nous réalisons quotidiennement des travaux d'isolation et de rénovation de façade.",
     "image_alt": "Nu-Isoleren travaux d'isolation à {city}",
     "meta_title": "Isolation et travaux de façade à {city} | Nu-Isoleren",
-    "meta_description": "Nu-Isoleren réalise l'isolation des murs creux, toitures, crépi et traitement de façade à {city} et ses environs."
+    "meta_description": "Nu-Isoleren réalise l'isolation des murs creux, toitures, crépi et traitement de façade à {city} et ses environs.",
+    "services": {
+    "eyebrow": "NOS SERVICES",
+    "title": "Isolation et travaux de façade à {city}",
+    "description": "Découvrez nos solutions d’isolation, de rénovation de façade et de traitement de l’humidité à {city}. Nous déterminons pour chaque habitation la solution techniquement la plus adaptée."
+  },
+  "solutions": {
+  "eyebrow": "SOLUTIONS D’ISOLATION",
+  "title": "Quelle solution convient à votre habitation ?",
+  "link_label": "Découvrir ce service",
+  "cavity": {
+    "description": "Lorsque l’habitation dispose d’un mur creux adapté, l’isolation du creux peut réduire efficacement les pertes de chaleur par les murs extérieurs."
+  },
+  "facade": {
+    "description": "Lorsqu’une rénovation plus complète de la façade est nécessaire, une isolation extérieure peut être combinée à une nouvelle finition en crépi."
+  },
+  "roof": {
+    "description": "Une toiture insuffisamment isolée peut entraîner d’importantes pertes de chaleur. Selon la construction du toit, nous utilisons notamment de la laine de verre ou des panneaux PIR."
+  }
+},
+"projects": {
+  "eyebrow": "RÉALISATIONS",
+  "title": "Nos réalisations à {city}",
+  "description": "Découvrez quelques travaux d’isolation et de façade réalisés par Nu-Isoleren à {city}."
+},
+"grants": {
+  "eyebrow": "PRIMES & AIDES",
+  "flanders": {
+    "title": "Primes pour les travaux d’isolation à {city}",
+    "description": "Certains travaux d’isolation et de rénovation d’une habitation à {city} peuvent bénéficier de primes ou d’autres aides en Flandre. Les conditions dépendent notamment du type de travaux, du logement et de la réglementation en vigueur.",
+    "button": "Voir les primes en Flandre"
+  },
+  "wallonia": {
+    "title": "Primes pour les travaux d’isolation à {city}",
+    "description": "Certains travaux d’isolation et de rénovation d’une habitation à {city} peuvent bénéficier de primes ou d’autres aides en Wallonie. Les conditions dépendent notamment du type de travaux, du logement et de la réglementation en vigueur.",
+    "button": "Voir les primes en Wallonie"
+  }
+},
+"process": {
+  "eyebrow": "NOTRE MÉTHODE",
+  "title": "De la demande à la réalisation",
+  "description": "Nous vous accompagnons étape par étape, de la première demande jusqu’à la réalisation et à la réception des travaux.",
+  "steps": {
+    "request": {
+      "title": "Demande",
+      "description": "Vous nous contactez et nous transmettez les premières informations concernant votre habitation et les travaux souhaités."
+    },
+    "analysis": {
+      "title": "Analyse",
+      "description": "Nous examinons la situation afin de déterminer quelle solution est techniquement adaptée à votre habitation."
+    },
+    "quote": {
+      "title": "Conseil & devis",
+      "description": "Vous recevez une explication claire des travaux proposés ainsi qu’un devis adapté à votre projet."
+    },
+    "execution": {
+      "title": "Réalisation",
+      "description": "Après votre accord, nous planifions les travaux et nos équipes les réalisent avec soin."
+    },
+    "completion": {
+      "title": "Réception",
+      "description": "Après les travaux, nous contrôlons le résultat et faisons le point avec vous."
+    }
+  }
+},
+"nearby": {
+  "eyebrow": "ZONES D’INTERVENTION",
+  "title": "Nous intervenons également autour de {city}",
+  "description": "En plus de {city}, Nu-Isoleren réalise également des travaux d’isolation et de façade dans plusieurs villes et communes des environs."
+}
   },
   "ContactPage": {
     "hero": {

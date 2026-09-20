@@ -13,7 +13,7 @@ export default function CtaBanner({
   title,
   description,
   buttonText,
-  buttonHref = '/contact',
+  buttonHref = '/quote',
 }: CtaBannerProps) {
   const t = useTranslations('CtaBanner');
 
