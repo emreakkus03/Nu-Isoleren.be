@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
 
     <div className="flex justify-center lg:justify-start">
       <Link
-        href="/"
+        href="/about"
         className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group"
       >
         <span className="underline underline-offset-4">
