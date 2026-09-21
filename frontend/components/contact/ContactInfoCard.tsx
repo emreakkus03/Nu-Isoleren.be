@@ -115,11 +115,11 @@ export default function ContactInfoCard() {
             {company('address')}
           </p>
 
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-gray-500 max-md:[overflow-wrap:anywhere]">
             {company('phone')}
           </p>
 
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-gray-500 max-md:[overflow-wrap:anywhere]">
             {company('email')}
           </p>
 

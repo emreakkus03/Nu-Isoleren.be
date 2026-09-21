@@ -33,11 +33,11 @@ export default async function BrusselsGrantsSources({
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div className="max-w-3xl">
-            <h2 className="text-xl sm:text-2xl font-extrabold text-gray-950">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-gray-950 max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
               {t('title')}
             </h2>
 
-            <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+            <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed max-md:text-center">
               {t('description')}
             </p>
 

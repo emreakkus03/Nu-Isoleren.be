@@ -42,10 +42,10 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
   ];
 
   return (
-    <main className="min-h-screen bg-white pt-16 pb-20">
+    <main className="min-h-screen bg-white page-header-start pb-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         
-        <div className="mb-8">
+        <div>
           <Breadcrumbs items={breadcrumbs} />
         </div>
 
@@ -54,7 +54,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
     {t('eyebrow')}
   </span>
 
-  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight max-md:text-balance max-md:[overflow-wrap:anywhere]">
     {t('title')}
   </h1>
 

@@ -104,7 +104,7 @@ export default function ContactForm() {
   };
 
   const inputClasses =
-    'w-full h-12 rounded-xl border border-gray-300 bg-white px-4 text-sm sm:text-base text-gray-950 outline-none transition focus:border-[#1A669A] focus:ring-2 focus:ring-[#1A669A]/10 placeholder:text-gray-400';
+    'w-full h-12 rounded-xl border border-gray-300 bg-white px-4 text-base text-gray-950 outline-none transition focus:border-[#1A669A] focus:ring-2 focus:ring-[#1A669A]/10 placeholder:text-gray-400';
 
   return (
     <form
@@ -246,7 +246,7 @@ export default function ContactForm() {
               event.target.value,
             )
           }
-          className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm sm:text-base text-gray-950 outline-none transition resize-y focus:border-[#1A669A] focus:ring-2 focus:ring-[#1A669A]/10 placeholder:text-gray-400"
+          className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base text-gray-950 outline-none transition resize-y focus:border-[#1A669A] focus:ring-2 focus:ring-[#1A669A]/10 placeholder:text-gray-400"
           placeholder={t(
             'placeholders.message',
           )}

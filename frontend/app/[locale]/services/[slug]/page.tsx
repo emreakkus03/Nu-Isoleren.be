@@ -137,7 +137,7 @@ const formatIntroParagraphs = (rawText: string) => {
 };
 
 const RICH_TEXT_CLASSES = `
-  prose prose-slate max-w-none
+  prose prose-slate max-w-none max-md:[overflow-wrap:anywhere] max-md:[&_img]:max-w-full max-md:[&_table]:block max-md:[&_table]:overflow-x-auto max-md:[&_h2]:text-center max-md:[&_h2]:text-balance
   text-sm sm:text-base
   text-black
   leading-relaxed
@@ -362,7 +362,7 @@ const getButtonStyle = (
   if (type === 'text') {
     return {
       className:
-        'inline-flex items-center gap-2 font-bold text-[#C82024] transition-colors hover:text-[#1A669A]',
+        'inline-flex max-md:max-w-full max-md:text-center max-md:min-h-11 items-center gap-2 font-bold text-[#C82024] transition-colors hover:text-[#1A669A]',
       style: {},
     };
   }
@@ -370,7 +370,7 @@ const getButtonStyle = (
   if (type === 'outline') {
     return {
       className:
-        'inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#C82024] px-5 py-3 text-sm font-bold text-[#C82024] transition-colors hover:bg-[#C82024] hover:text-[#C82024]',
+        'inline-flex max-md:max-w-full max-md:text-center max-md:min-h-11 items-center justify-center gap-2 rounded-lg border-2 border-[#C82024] px-5 py-3 text-sm font-bold text-[#C82024] transition-colors hover:bg-[#C82024] hover:text-[#C82024]',
       style: {
         backgroundColor: 'transparent',
       },
@@ -379,7 +379,7 @@ const getButtonStyle = (
 
   return {
     className:
-      'inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#C82024] bg-[#C82024] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90',
+      'inline-flex max-md:max-w-full max-md:text-center max-md:min-h-11 items-center justify-center gap-2 rounded-lg border-2 border-[#C82024] bg-[#C82024] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90',
     style: {},
   };
 };
@@ -391,7 +391,7 @@ function ArrowRightIcon() {
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
-      className="h-4 w-4"
+      className="h-4 w-4 shrink-0"
       aria-hidden="true"
     >
       <path d="M5 12h14" />
@@ -933,7 +933,7 @@ function ContentBlockRenderer({
 
       return (
         <div
-          className={`flex flex-wrap gap-3 ${alignment}`}
+          className={`flex flex-wrap gap-3 max-md:justify-center ${alignment}`}
         >
           {items.map(
             (
@@ -1138,7 +1138,7 @@ function ContentBlockRenderer({
                   'Document'
                 }
                 fill
-                sizes="128px"
+                sizes="(max-width: 640px) 100vw, 128px"
                 className="object-cover"
               />
             </div>
@@ -1362,28 +1362,28 @@ export default async function ServiceDetailPage({
     '/images/placeholder.jpg';
 
   return (
-    <main className="min-h-screen bg-white pt-8 sm:pt-12 lg:pt-16 pb-20 sm:pb-24 w-full overflow-x-clip">
+    <main className="min-h-screen bg-white page-header-start pb-20 sm:pb-24 w-full overflow-x-clip">
        <ServiceAlternateLinks
       alternateSlugs={service.alternate_slugs}
     />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0">
-        <div className="mb-6 sm:mb-8 overflow-x-auto py-1">
+        <div className="min-w-0">
           <Breadcrumbs
             items={breadcrumbs}
           />
         </div>
 
-        <header className="flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-14 items-start mb-14 sm:mb-32 w-full min-w-0">
-          <div className="w-full lg:w-[35%] shrink-0 flex flex-col gap-3 sm:gap-4 min-w-0">
+        <header className="flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-14 items-start mb-14 max-md:mb-6 sm:mb-32 w-full min-w-0">
+          <div className="page-header-content w-full lg:w-[35%] shrink-0 flex flex-col gap-3 sm:gap-4 min-w-0">
             {service.eyebrow && (
-              <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase [overflow-wrap:anywhere]">
+              <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase [overflow-wrap:anywhere] max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
                 {
                   service.eyebrow
                 }
               </span>
             )}
 
-            <h1 className="text-2xl mb-8 sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-tight [overflow-wrap:anywhere]">
+            <h1 className="text-2xl mb-8 max-md:mb-2 sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-tight [overflow-wrap:anywhere] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
               {service.hero_title ||
                 service.name}
             </h1>
@@ -1464,7 +1464,7 @@ export default async function ServiceDetailPage({
                       >
                         {section.heading && (
                           <h2
-                            className="mb-6 text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight leading-snug [overflow-wrap:anywhere]"
+                            className="mb-6 text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight leading-snug [overflow-wrap:anywhere] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center"
                             style={{
                               color:
                                 section.text_color ||

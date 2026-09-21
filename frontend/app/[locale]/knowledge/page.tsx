@@ -124,18 +124,18 @@ export default async function KnowledgePage({
   ];
 
   return (
-    <main className="min-h-screen bg-white pt-16 pb-20">
+    <main className="min-h-screen bg-white page-header-start pb-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="mb-8">
+        <div>
           <Breadcrumbs items={breadcrumbs} />
         </div>
 
-        <div className="max-w-2xl lg:max-w-3xl flex flex-col items-center md:items-start gap-4 text-white text-center md:text-left mb-16">
+        <div className="max-w-2xl lg:max-w-3xl flex flex-col items-center md:items-start gap-4 text-white text-center md:text-left mb-16 max-md:mb-10">
           <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
             {t('hero.badge')}
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight max-md:text-balance max-md:[overflow-wrap:anywhere]">
             {t('hero.title')}
           </h1>
 

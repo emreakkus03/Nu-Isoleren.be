@@ -80,9 +80,9 @@ export default async function MaterialPage({
         alternateSlugs={material.alternate_slugs}
       />
 
-      <section className="pt-8 md:pt-12">
+      <section className="page-header-start">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
-           <div className="mb-8">
+           <div>
                     <Breadcrumbs items={breadcrumbs} />
                   </div>
 

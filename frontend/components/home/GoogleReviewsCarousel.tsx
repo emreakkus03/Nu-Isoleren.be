@@ -134,7 +134,7 @@ export default function GoogleReviewsCarousel({
                 sm:w-[calc(50%-12px)]
                 lg:w-[calc(33.333%-16px)]
 
-                min-h-[250px]
+                min-h-[250px] max-md:min-h-0 max-md:self-start
 
                 flex
                 flex-col
@@ -178,7 +178,7 @@ export default function GoogleReviewsCarousel({
                 {review.text}
               </p>
 
-              <div className="mt-auto pt-6 flex items-center gap-3">
+              <div className="mt-auto max-md:mt-0 pt-6 flex items-center gap-3">
                 {review.author.photoUri && (
                   <img
                     src={review.author.photoUri}

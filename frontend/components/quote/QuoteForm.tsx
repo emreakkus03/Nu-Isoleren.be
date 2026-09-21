@@ -224,7 +224,7 @@ export default function QuoteForm({
                   onClick={() =>
                     toggleService(service.id)
                   }
-                  className={`py-2.5 px-2 sm:px-3 rounded-full text-[11px] sm:text-xs md:text-sm lg:text-base font-semibold transition text-center border leading-tight flex items-center justify-center min-h-[44px] cursor-pointer ${
+                  className={`py-2.5 px-2 sm:px-3 rounded-full text-xs md:text-sm lg:text-base font-semibold transition text-center border leading-tight max-md:[overflow-wrap:anywhere] flex items-center justify-center min-h-[44px] cursor-pointer ${
                     isSelected
                       ? 'border-[#1A669A] bg-sky-50 text-sky-950 font-bold shadow-sm'
                       : 'border-gray-200 bg-gray-50/60 text-gray-700 hover:bg-gray-100 hover:border-gray-300'
@@ -246,7 +246,7 @@ export default function QuoteForm({
             <button
               type="button"
               onClick={goToContactStep}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#C82024] hover:bg-red-800 text-white font-bold text-sm sm:text-base px-7 py-3 rounded-full cursor-pointer whitespace-nowrap transition shadow-sm hover:shadow-md active:scale-95 group"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#C82024] hover:bg-red-800 text-white font-bold text-sm sm:text-base px-7 py-3 rounded-full cursor-pointer whitespace-nowrap max-md:whitespace-normal max-md:[overflow-wrap:anywhere] transition shadow-sm hover:shadow-md active:scale-95 group"
             >
               <span>{t('buttons.next')}</span>
               <svg
@@ -376,7 +376,7 @@ export default function QuoteForm({
                 placeholder={t(
                   'fields.messagePlaceholder',
                 )}
-                className="w-full rounded-2xl border border-gray-200 bg-gray-50/60 px-4 py-3 text-sm sm:text-base text-gray-950 placeholder:text-gray-400 outline-none transition resize-none focus:bg-white focus:border-[#1A669A] focus:ring-2 focus:ring-[#1A669A]/10"
+                className="w-full rounded-2xl border border-gray-200 bg-gray-50/60 px-4 py-3 text-base text-gray-950 placeholder:text-gray-400 outline-none transition resize-none focus:bg-white focus:border-[#1A669A] focus:ring-2 focus:ring-[#1A669A]/10"
               />
             </div>
           </div>
@@ -420,7 +420,7 @@ export default function QuoteForm({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex items-center justify-center gap-2.5 bg-[#C82024] hover:bg-red-800 text-white font-bold text-sm sm:text-base px-6 py-3 rounded-full cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap transition shadow-sm hover:shadow-md active:scale-95 group"
+              className="inline-flex items-center justify-center gap-2.5 bg-[#C82024] hover:bg-red-800 text-white font-bold text-sm sm:text-base px-6 py-3 rounded-full cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap max-md:whitespace-normal max-md:[overflow-wrap:anywhere] transition shadow-sm hover:shadow-md active:scale-95 group"
             >
               <span>
                 {isSubmitting
@@ -483,7 +483,7 @@ function Input({
           onChange(event.target.value)
         }
         required={required}
-        className="w-full rounded-full border border-gray-200 bg-gray-50/60 px-4 py-3 text-sm sm:text-base text-gray-950 outline-none transition focus:bg-white focus:border-[#1A669A] focus:ring-2 focus:ring-[#1A669A]/10"
+        className="min-w-0 w-full rounded-full border border-gray-200 bg-gray-50/60 px-4 py-3 text-base text-gray-950 outline-none transition focus:bg-white focus:border-[#1A669A] focus:ring-2 focus:ring-[#1A669A]/10"
       />
     </div>
   );

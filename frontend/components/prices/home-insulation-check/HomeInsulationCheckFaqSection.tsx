@@ -56,11 +56,11 @@ export default async function HomeInsulationCheckFaqSection() {
             {t('badge')}
           </span>
 
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere]">
             {t('title')}
           </h2>
 
-          <p className="mt-5 text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-5 text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto max-md:text-center">
             {t('description')}
           </p>
         </div>

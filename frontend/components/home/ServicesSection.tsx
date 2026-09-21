@@ -16,7 +16,7 @@ export default async function ServicesSection() {
     <section className="w-full bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 flex flex-col gap-3">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight max-md:text-balance max-md:[overflow-wrap:anywhere]">
             {t('title')}
           </h2>
           <p className="text-sm sm:text-base text-gray-600 leading-relaxed">

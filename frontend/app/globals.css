@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+@utility page-header-start {
+  padding-top: --spacing(8);
+
+  @variant md {
+    padding-top: --spacing(12);
+  }
+
+  @variant lg {
+    padding-top: --spacing(16);
+  }
+}
+
+@utility page-header-content {
+  align-self: start;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > span:first-child {
+    display: block;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

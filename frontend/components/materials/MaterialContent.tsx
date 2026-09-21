@@ -38,7 +38,7 @@ export default function MaterialContent({
             <div className="py-10 sm:py-14 max-w-3xl">
               <div
                 className="
-                  prose prose-slate max-w-none
+                  prose prose-slate max-w-none max-md:[overflow-wrap:anywhere] max-md:[&_img]:max-w-full max-md:[&_table]:block max-md:[&_table]:overflow-x-auto max-md:[&_h2]:text-center max-md:[&_h2]:text-balance
                   text-sm sm:text-base
                   text-slate-600
                   leading-relaxed
@@ -69,7 +69,7 @@ export default function MaterialContent({
             >
               <div className="py-10 sm:py-14 max-w-3xl">
                 {section.heading && (
-                  <h2 className="mb-6 text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight leading-snug text-slate-900 [overflow-wrap:anywhere]">
+                  <h2 className="mb-6 text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight leading-snug text-slate-900 [overflow-wrap:anywhere] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
                     {section.heading}
                   </h2>
                 )}
@@ -77,7 +77,7 @@ export default function MaterialContent({
                 {section.body && (
                   <div
                     className="
-                      prose prose-slate max-w-none
+                      prose prose-slate max-w-none max-md:[overflow-wrap:anywhere] max-md:[&_img]:max-w-full max-md:[&_table]:block max-md:[&_table]:overflow-x-auto max-md:[&_h2]:text-center max-md:[&_h2]:text-balance
                       mb-6
                       text-sm sm:text-base
                       text-slate-600

@@ -194,7 +194,7 @@ const grantsHref = isWallonia
   return (
     <main className="min-h-screen bg-white w-full overflow-x-clip">
 
-      <section className="relative w-full min-h-[360px] sm:min-h-[400px] lg:min-h-[440px] flex items-center overflow-hidden">
+      <section className="relative w-full min-h-[360px] sm:min-h-[400px] lg:min-h-[440px] flex items-start overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage}
@@ -210,24 +210,26 @@ const grantsHref = isWallonia
         </div>
 
         <div
-          className="absolute inset-0 z-10"
+          className="absolute inset-0 z-10 max-md:hidden"
           style={{
             background:
               'linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.60) 35%, rgba(0,0,0,0.30) 65%, transparent 100%)',
           }}
         />
 
-        <div className="relative z-20 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 flex flex-col justify-center">
+        <div className="absolute inset-0 z-10 bg-black/60 md:hidden" />
 
-          <div className="mb-4 sm:mb-6 text-white/80 [&_a]:text-white/80 [&_a:hover]:text-white [&_span]:text-white text-xs sm:text-sm">
+        <div className="relative z-20 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 page-header-start pb-10 sm:pb-14 flex flex-col">
+
+          <div className="text-white/80 [&_a]:text-white/80 [&_a:hover]:text-white [&_span]:text-white text-xs sm:text-sm">
             <Breadcrumbs
               items={breadcrumbs}
             />
           </div>
 
-          <div className="max-w-2xl lg:max-w-3xl flex flex-col items-start gap-3 sm:gap-4 text-white">
+          <div className="max-w-2xl lg:max-w-3xl flex flex-col items-start max-md:items-center gap-3 sm:gap-4 text-white">
 
-            <span className="text-xs sm:text-sm font-extrabold tracking-wider text-red-400 uppercase">
+            <span className="text-xs sm:text-sm font-extrabold tracking-wider text-red-400 uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
               {tCity('badge', {
                 city:
                   city.name.toUpperCase(),
@@ -239,7 +241,7 @@ const grantsHref = isWallonia
               })}
             </span>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] text-white tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] text-white tracking-tight max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
               {heroTitle}
             </h1>
 
@@ -271,7 +273,7 @@ const grantsHref = isWallonia
                 }}
               />
             ) : (
-              <p className="text-sm sm:text-base md:text-lg text-gray-200 font-normal leading-relaxed max-w-2xl">
+              <p className="max-md:text-center text-sm sm:text-base md:text-lg text-gray-200 font-normal leading-relaxed max-w-2xl">
                 {tCity.rich(
                   'intro',
                   {
@@ -312,7 +314,7 @@ const grantsHref = isWallonia
             <div className="max-w-3xl">
 
               {city.local_title && (
-                <h2 className=" mt-10 md:mt-14 lg:mt-20 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight">
+                <h2 className=" mt-10 md:mt-14 lg:mt-20 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
                   {city.local_title}
                 </h2>
               )}
@@ -433,7 +435,7 @@ const grantsHref = isWallonia
 
               <div className="text-center mb-10 sm:mb-14">
 
-                <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight">
+                <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-md:text-balance max-md:[overflow-wrap:anywhere]">
                   {locale === 'fr'
                     ? `Questions fréquentes sur nos travaux à ${city.name}`
                     : locale === 'en'

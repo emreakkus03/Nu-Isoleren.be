@@ -36,17 +36,17 @@ export default async function ContactHero({
 
       <div className="absolute -bottom-40 right-[20%] w-[420px] h-[420px] rounded-full bg-[#1A669A]/20" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="mb-8 text-white/70 [&_a]:text-white/70 [&_a:hover]:text-white [&_span]:text-white/90 text-xs sm:text-sm">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 page-header-start pb-12 sm:pb-16 lg:pb-20">
+        <div className="text-white/70 [&_a]:text-white/70 [&_a:hover]:text-white [&_span]:text-white/90 text-xs sm:text-sm">
           <Breadcrumbs items={breadcrumbs} />
         </div>
 
-        <div className="max-w-3xl flex flex-col items-start gap-4">
-          <span className="text-sm md:text-base font-extrabold tracking-wider text-red-400 uppercase">
+        <div className="max-w-3xl flex flex-col items-start max-md:items-center max-md:text-center gap-4">
+          <span className="text-sm md:text-base font-extrabold tracking-wider text-red-400 uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
             {t('hero.badge')}
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
             {t('hero.title')}
           </h1>
 

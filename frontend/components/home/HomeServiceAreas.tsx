@@ -34,7 +34,7 @@ export default function HomeServiceAreas({ cities }: HomeServiceAreasProps) {
       {t('badge')}
     </span>
 
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere]">
       {t('title')}
     </h2>
   </div>
@@ -42,7 +42,7 @@ export default function HomeServiceAreas({ cities }: HomeServiceAreasProps) {
   <div className="flex justify-center md:justify-end">
     <Link
       href="/areas"
-      className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group whitespace-nowrap"
+      className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group whitespace-nowrap max-md:whitespace-normal max-md:justify-center max-md:text-center max-md:min-h-11"
     >
       <span>{t('view_all')}</span>
 

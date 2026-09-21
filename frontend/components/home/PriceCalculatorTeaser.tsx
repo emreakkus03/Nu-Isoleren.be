@@ -42,7 +42,7 @@ export default function PriceCalculatorTeaser() {
               {t('badge')}
             </span>
 
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.2]">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.2] max-md:text-balance max-md:[overflow-wrap:anywhere]">
               {t('title')}
             </h2>
 
@@ -99,7 +99,7 @@ export default function PriceCalculatorTeaser() {
                       key={key}
                       type="button"
                       onClick={() => setSelectedService(key)}
-                      className={`py-2.5 px-2 sm:px-3 rounded-full text-[11px] sm:text-xs md:text-sm lg:text-base font-semibold transition text-center border leading-tight flex items-center justify-center min-h-[44px] cursor-pointer ${
+                      className={`py-2.5 px-2 sm:px-3 rounded-full text-xs md:text-sm lg:text-base font-semibold transition text-center border leading-tight max-md:[overflow-wrap:anywhere] flex items-center justify-center min-h-[44px] cursor-pointer ${
                         isSelected
                           ? 'border-[#1A669A] bg-sky-50 text-sky-950 font-bold shadow-sm'
                           : 'border-gray-200 bg-gray-50/60 text-gray-700 hover:bg-gray-100 hover:border-gray-300'

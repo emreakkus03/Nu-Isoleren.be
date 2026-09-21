@@ -45,8 +45,8 @@ export default function ServiceCard({
       />
 
       {badge && (
-        <div className="absolute left-4 top-4 z-20">
-          <span className="inline-flex items-center rounded-full bg-[#1A669A] px-3 py-1.5 text-xs font-bold text-white shadow-sm backdrop-blur-sm">
+        <div className="relative mx-4 mt-4 mb-16 z-20 md:absolute md:left-4 md:top-4 md:m-0">
+          <span className="inline-flex max-w-full max-md:[overflow-wrap:anywhere] items-center rounded-full bg-[#1A669A] px-3 py-1.5 text-xs font-bold text-white shadow-sm backdrop-blur-sm">
             {badge}
           </span>
         </div>
@@ -55,11 +55,11 @@ export default function ServiceCard({
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/20 to-transparent lg:transition-opacity lg:duration-300 lg:group-hover:opacity-0" />
 
       {title && (
-        <div className="absolute bottom-0 left-0 right-0 z-20 p-4 lg:p-5 flex items-center justify-between text-white lg:group-hover:opacity-0 transition-opacity duration-300">
-          <h3 className="text-lg lg:text-xl font-bold tracking-tight">
+        <div className="absolute bottom-0 left-0 right-0 z-20 p-4 lg:p-5 flex items-center justify-between max-md:gap-3 text-white lg:group-hover:opacity-0 transition-opacity duration-300">
+          <h3 className="text-lg lg:text-xl font-bold tracking-tight max-md:min-w-0 max-md:[overflow-wrap:anywhere]">
             {title}
           </h3>
-          <span className="text-xl font-bold transition-transform duration-300 group-hover:translate-x-1">
+          <span className="text-xl font-bold max-md:shrink-0 transition-transform duration-300 group-hover:translate-x-1">
             &rarr;
           </span>
         </div>

@@ -28,15 +28,15 @@ export default async function FlandersGrantsUpdate({
     <section className="w-full bg-[#F8F9FA] py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl">
-          <span className="text-sm sm:text-base font-extrabold tracking-wider text-[#1A669A] uppercase">
+          <span className="text-sm sm:text-base font-extrabold tracking-wider text-[#1A669A] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
             {t('badge')}
           </span>
 
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
             {t('title')}
           </h2>
 
-          <p className="mt-5 text-base sm:text-lg text-gray-600 leading-relaxed">
+          <p className="mt-5 text-base sm:text-lg text-gray-600 leading-relaxed max-md:text-center">
             {t('description')}
           </p>
         </div>

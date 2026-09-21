@@ -376,7 +376,7 @@ export default function ServiceFaqs({
       </div>
 
       {buttonLabel && (
-        <div className="mt-8">
+        <div className="mt-8 max-md:text-center">
           <Link
             href={
               buttonUrl as never

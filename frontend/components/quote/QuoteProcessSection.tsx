@@ -22,7 +22,7 @@ export default async function QuoteProcessSection({
             {t('badge')}
           </span>
 
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere]">
             {t('title')}
           </h2>
 

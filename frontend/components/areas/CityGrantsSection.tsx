@@ -19,12 +19,12 @@ export default function CityGrantsSection({
     <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl border border-slate-200 px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-12">
-          <div className="max-w-3xl">
-            <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-[#1A669A] uppercase">
+          <div className="max-md:text-center max-w-3xl">
+            <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-[#1A669A] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
               {eyebrow}
             </span>
 
-            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight">
+            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
               {title}
             </h2>
 
@@ -34,14 +34,14 @@ export default function CityGrantsSection({
 
             <Link
               href={href}
-              className="mt-7 inline-flex items-center gap-2 rounded-lg bg-[#C82024] px-5 py-3 text-sm sm:text-base font-bold text-white transition-colors duration-200 hover:bg-white hover:text-[#C82024] border border-[#C82024]"
+              className="mt-7 inline-flex max-md:max-w-full max-md:justify-center items-center gap-2 rounded-lg bg-[#C82024] px-5 py-3 text-sm sm:text-base font-bold text-white transition-colors duration-200 hover:bg-white hover:text-[#C82024] border border-[#C82024]"
             >
               {buttonLabel}
 
               <svg
                 viewBox="0 0 20 20"
                 fill="none"
-                className="w-4 h-4"
+                className="w-4 h-4 shrink-0"
                 aria-hidden="true"
               >
                 <path

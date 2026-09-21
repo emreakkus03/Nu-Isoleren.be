@@ -10,7 +10,7 @@ export default function AreasHero({ breadcrumbs }: AreasHeroProps) {
   const t = useTranslations('ServiceAreas');
 
   return (
-    <section className="relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] flex items-center overflow-hidden">
+    <section className="relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] flex items-start overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/areas-hero.jpg"
@@ -24,14 +24,16 @@ export default function AreasHero({ breadcrumbs }: AreasHeroProps) {
       </div>
 
      <div 
-  className="absolute inset-0 z-10"
+  className="absolute inset-0 z-10 max-md:hidden"
   style={{
     background: 'linear-gradient(to right, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.65) 30%, rgba(15, 23, 42, 0.35) 55%, transparent 85%)'
   }}
 />
 
-      <div className="relative z-20 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 flex flex-col justify-center">
-        <div className="relative   text-white/80 [&_a]:text-white/80 [&_a:hover]:text-white [&_span]:text-white bottom-11">
+      <div className="absolute inset-0 z-10 bg-black/60 md:hidden" />
+
+      <div className="relative z-20 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 page-header-start pb-10 sm:pb-14 flex flex-col justify-center">
+        <div className="text-white/80 [&_a]:text-white/80 [&_a:hover]:text-white [&_span]:text-white">
           <Breadcrumbs items={breadcrumbs} />
         </div>
         
@@ -41,7 +43,7 @@ export default function AreasHero({ breadcrumbs }: AreasHeroProps) {
             {t('badge')}
           </span>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] text-white tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] text-white tracking-tight max-md:text-balance max-md:[overflow-wrap:anywhere]">
             {t('title')}
           </h1>
 

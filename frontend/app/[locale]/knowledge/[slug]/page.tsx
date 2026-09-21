@@ -88,9 +88,9 @@ export default async function KnowledgeArticlePage({
       alternateSlugs={article.alternate_slugs}
     />
 
-      <section className="pt-8 md:pt-12">
+      <section className="page-header-start">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 md:mb-10">
+          <div className="min-w-0">
             <Breadcrumbs items={breadcrumbs} />
           </div>
 

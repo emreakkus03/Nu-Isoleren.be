@@ -102,7 +102,7 @@ export default function FaqSection({ faqs, labels }: FaqSectionProps) {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder={labels.searchPlaceholder}
-          className="w-full pl-11 sm:pl-12 pr-12 sm:pr-14 py-3 sm:py-3.5 bg-white border border-slate-200 rounded-xl sm:rounded-2xl shadow-sm text-slate-900 placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#C82024] focus:border-transparent transition"
+          className="w-full pl-11 sm:pl-12 pr-12 sm:pr-14 py-3 sm:py-3.5 bg-white border border-slate-200 rounded-xl sm:rounded-2xl shadow-sm text-slate-900 placeholder-slate-400 text-base focus:outline-none focus:ring-2 focus:ring-[#C82024] focus:border-transparent transition"
         />
         {searchQuery && (
           <button
@@ -118,7 +118,7 @@ export default function FaqSection({ faqs, labels }: FaqSectionProps) {
         <div className="flex items-center gap-2 overflow-x-auto sm:flex-wrap sm:justify-center py-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           <button
             onClick={() => handleFilterClick('all')}
-            className={`shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition cursor-pointer ${
+            className={`shrink-0 max-md:min-h-11 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition cursor-pointer ${
               selectedFilter === 'all'
                 ? 'bg-[#C82024] text-white shadow-sm'
                 : 'bg-white text-slate-700 hover:bg-slate-50 border border-slate-200'
@@ -133,7 +133,7 @@ export default function FaqSection({ faqs, labels }: FaqSectionProps) {
               <button
                 key={group.key}
                 onClick={() => handleFilterClick(group.key)}
-                className={`shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition cursor-pointer ${
+                className={`shrink-0 max-md:min-h-11 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition cursor-pointer ${
                   isActive
                     ? 'bg-[#C82024] text-white shadow-sm'
                     : 'bg-white text-slate-700 hover:bg-slate-50 border border-slate-200'
@@ -156,7 +156,7 @@ export default function FaqSection({ faqs, labels }: FaqSectionProps) {
             <section key={group.key} id={group.key} className="scroll-mt-24 sm:scroll-mt-28">
               <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
                 <span className="w-1.5 h-5 sm:h-6 rounded-full bg-[#C82024]" />
-                <h2 className="text-lg sm:text-2xl font-bold text-slate-900 tracking-tight">
+                <h2 className="text-lg sm:text-2xl font-bold text-slate-900 tracking-tight max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
                   {group.title}
                 </h2>
               </div>

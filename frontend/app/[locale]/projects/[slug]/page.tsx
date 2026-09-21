@@ -79,10 +79,10 @@ export default async function ProjectDetailPage({
   ];
 
   return (
-    <main className="min-h-screen bg-slate-50 pt-16 pb-20">
+    <main className="min-h-screen bg-slate-50 page-header-start pb-20">
       <ProjectSlugSync slugs={project.all_slugs} />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="mb-8">
+        <div>
           <Breadcrumbs items={breadcrumbs} />
         </div>
 
@@ -101,7 +101,7 @@ export default async function ProjectDetailPage({
     )}
   </div>
 
-  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.2] mb-3">
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.2] mb-3 max-md:text-balance max-md:[overflow-wrap:anywhere]">
     {project.title}
   </h1>
 
@@ -113,7 +113,7 @@ export default async function ProjectDetailPage({
 </div>
 
         {mainImage && (
-          <div className="relative w-full h-[360px] sm:h-[480px] md:h-[540px] rounded-2xl overflow-hidden shadow-sm mb-12 bg-slate-200">
+          <div className="relative w-full aspect-[4/3] sm:aspect-auto sm:h-[480px] md:h-[540px] rounded-2xl overflow-hidden shadow-sm mb-12 bg-slate-200">
             <Image
               src={mainImage.image_url}
               alt={mainImage.alt || project.title}
@@ -128,13 +128,13 @@ export default async function ProjectDetailPage({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-              <h2 className="text-xl font-extrabold text-slate-900 mb-4">
+              <h2 className="text-xl font-extrabold text-slate-900 mb-4 max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
                 Over dit project
               </h2>
 
               {project.description ? (
                 <div
-                  className="text-slate-800 leading-relaxed text-base sm:text-lg space-y-4 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>h3]:text-xl [&>h3]:font-bold [&>h3]:text-slate-900"
+                  className="max-md:[overflow-wrap:anywhere] max-md:[&_img]:max-w-full max-md:[&_table]:block max-md:[&_table]:overflow-x-auto text-slate-800 leading-relaxed text-base sm:text-lg space-y-4 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>h3]:text-xl [&>h3]:font-bold [&>h3]:text-slate-900"
                   dangerouslySetInnerHTML={{ __html: project.description }}
                 />
               ) : (
@@ -180,7 +180,7 @@ export default async function ProjectDetailPage({
               </h3>
 
               <div className="flex flex-col gap-3 text-sm">
-                <div className="flex justify-between items-center py-2.5 border-b border-slate-100">
+                <div className="flex justify-between items-center max-md:flex-col max-md:items-start max-md:gap-1 py-2.5 border-b border-slate-100">
                   <span className="text-slate-500 font-medium">
                     {t("serviceLabel")}
                   </span>
@@ -188,7 +188,7 @@ export default async function ProjectDetailPage({
                     {project.service?.name || "-"}
                   </span>
                 </div>
-                <div className="flex justify-between items-center py-2.5 border-b border-slate-100">
+                <div className="flex justify-between items-center max-md:flex-col max-md:items-start max-md:gap-1 py-2.5 border-b border-slate-100">
                   <span className="text-slate-500 font-medium">
                     {t("locationLabel")}
                   </span>

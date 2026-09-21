@@ -30,13 +30,13 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <nav aria-label="Breadcrumb" className="mb-6">
+      <nav aria-label="Breadcrumb" className="pb-8">
         <ol className="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-500">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
 
             return (
-              <li key={index} className="flex items-center gap-2">
+              <li key={index} className="flex min-w-0 max-w-full items-center gap-2">
                 {index > 0 && <span className="text-slate-300 select-none">/</span>}
                 {item.href && !isLast ? (
                   <Link
@@ -46,7 +46,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                     {item.label}
                   </Link>
                 ) : (
-                  <span className="text-slate-900 font-semibold truncate max-w-[200px] sm:max-w-[320px]">
+                  <span className="text-slate-900 font-semibold max-md:whitespace-normal max-md:[overflow-wrap:anywhere] md:truncate max-w-[200px] sm:max-w-[320px]">
                     {item.label}
                   </span>
                 )}

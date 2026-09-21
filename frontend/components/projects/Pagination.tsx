@@ -25,12 +25,12 @@ export default function Pagination({ currentPage, lastPage }: PaginationProps) {
   };
 
   return (
-    <div className="flex justify-center items-center gap-3 mt-12">
+    <div className="max-md:flex-col max-md:text-center flex justify-center items-center gap-3 mt-12">
       <button
         type="button"
         onClick={() => goToPage(currentPage - 1)}
         disabled={currentPage <= 1}
-        className="px-4 py-2 text-sm font-semibold rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition"
+        className="max-md:min-h-11 max-md:w-full px-4 py-2 text-sm font-semibold rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition"
       >
         &larr; {t('prev')}
       </button>
@@ -43,7 +43,7 @@ export default function Pagination({ currentPage, lastPage }: PaginationProps) {
         type="button"
         onClick={() => goToPage(currentPage + 1)}
         disabled={currentPage >= lastPage}
-        className="px-4 py-2 text-sm font-semibold rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition"
+        className="max-md:min-h-11 max-md:w-full px-4 py-2 text-sm font-semibold rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition"
       >
         {t('next')} &rarr;
       </button>

@@ -30,15 +30,15 @@ export default async function HomeCheckAdvice({
           </div>
 
           <div className="max-w-xl">
-            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
               {t('badge')}
             </span>
 
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
               {t('title')}
             </h2>
 
-            <p className="mt-5 text-base sm:text-lg text-gray-600 leading-relaxed">
+            <p className="mt-5 text-base sm:text-lg text-gray-600 leading-relaxed max-md:text-center">
               {t('description')}
             </p>
 

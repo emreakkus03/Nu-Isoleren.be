@@ -10,16 +10,16 @@ export default function MaterialHero({
   material,
 }: MaterialHeroProps) {
   return (
-    <section className="w-full bg-white pt-4 pb-10 md:pt-6 md:pb-14 lg:pt-8 lg:pb-16">
+    <section className="w-full bg-white pb-10 md:pb-14 lg:pb-16">
       <div className="grid items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-14">
-        <div className="max-w-3xl">
+        <div className="page-header-content max-w-3xl max-md:text-center">
           {material.eyebrow && (
-            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
               {material.eyebrow}
             </span>
           )}
 
-          <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-950 tracking-tight leading-[1.1]">
+          <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-950 tracking-tight leading-[1.1] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
             {material.hero_title || material.name}
           </h1>
 

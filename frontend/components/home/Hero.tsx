@@ -35,7 +35,7 @@ export default function Hero() {
             {t('badge')}
           </span>
 
-          <h1 className="text-3xl md:text-4xl lg:text-[50px] font-extrabold leading-[1.15] text-white tracking-tight max-w-[340px] sm:max-w-xl md:max-w-none">
+          <h1 className="text-3xl md:text-4xl lg:text-[50px] font-extrabold leading-[1.15] text-white tracking-tight max-w-[340px] sm:max-w-xl md:max-w-none max-md:text-balance max-md:[overflow-wrap:anywhere]">
             {t('title')}
           </h1>
 
@@ -46,7 +46,7 @@ export default function Hero() {
           <div className="pt-2 flex justify-center md:justify-start w-full">
             <Link
               href="/"
-              className="inline-block bg-[#C82024] hover:bg-red-800 text-white text-base md:text-lg font-bold px-5 py-2 lg:px-5 lg:py-3 lg:text-xl rounded-full transition shadow-lg hover:shadow-xl active:scale-95"
+              className="inline-block bg-[#C82024] hover:bg-red-800 text-white text-base md:text-lg font-bold px-5 py-2 max-md:min-h-11 max-md:inline-flex max-md:items-center max-md:justify-center lg:px-5 lg:py-3 lg:text-xl rounded-full transition shadow-lg hover:shadow-xl active:scale-95"
             >
               {t('cta')}
             </Link>

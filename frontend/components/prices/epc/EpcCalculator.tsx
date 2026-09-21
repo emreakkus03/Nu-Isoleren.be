@@ -193,11 +193,11 @@ export default function EpcCalculator() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
 
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere]">
             {t("title")}
           </h2>
 
-          <p className="mt-5 text-sm sm:text-base text-gray-600 leading-relaxed">
+          <p className="mt-5 text-sm sm:text-base text-gray-600 leading-relaxed max-md:text-center">
             {t("description")}
           </p>
         </div>
@@ -296,7 +296,7 @@ export default function EpcCalculator() {
 
           
 
-          <div className="mt-10 pt-6 border-t border-gray-100 flex items-center justify-between gap-4">
+          <div className="mt-10 pt-6 border-t border-gray-100 flex max-md:flex-col-reverse items-center justify-between gap-4">
             <button
               type="button"
               onClick={handlePrevious}
@@ -311,7 +311,7 @@ export default function EpcCalculator() {
               type="button"
               onClick={handleNext}
               disabled={!canContinue || isCalculating}
-              className="inline-flex items-center gap-2.5 bg-[#C82024] hover:bg-red-800 disabled:bg-gray-300 disabled:cursor-not-allowed text-white text-sm sm:text-base font-bold px-6 sm:px-8 py-3.5 rounded-full transition shadow-sm active:scale-95"
+              className="inline-flex max-md:w-full max-md:justify-center items-center gap-2.5 bg-[#C82024] hover:bg-red-800 disabled:bg-gray-300 disabled:cursor-not-allowed text-white text-sm sm:text-base font-bold px-6 sm:px-8 py-3.5 rounded-full transition shadow-sm active:scale-95"
             >
               <span>
                 {isCalculating

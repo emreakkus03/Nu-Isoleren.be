@@ -24,7 +24,7 @@ export default async function QuoteHero({
               {t('badge')}
             </span>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.2]">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.2] max-md:text-balance max-md:[overflow-wrap:anywhere]">
               {t('title')}
             </h1>
 

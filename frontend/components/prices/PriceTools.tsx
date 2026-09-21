@@ -29,16 +29,16 @@ export default function PriceTools() {
       className="w-full bg-[#F8F9FA] py-16 md:py-24 scroll-mt-28"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-10 md:mb-14">
-          <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+        <div className="max-md:text-center max-w-3xl mb-10 md:mb-14">
+          <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
             {t('badge')}
           </span>
 
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
             {t('title')}
           </h2>
 
-          <p className="mt-5 text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl">
+          <p className="mt-5 text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl max-md:text-center">
             {t('description')}
           </p>
         </div>
@@ -50,8 +50,8 @@ export default function PriceTools() {
               href={tool.href}
               className="group bg-white border border-gray-200 rounded-2xl p-6 sm:p-7 lg:p-8 transition duration-300 hover:border-gray-300 hover:shadow-lg"
             >
-              <div className="flex items-start justify-between gap-6">
-                <div className="flex flex-col">
+              <div className="flex items-start justify-between gap-3 md:gap-6">
+                <div className="flex flex-col min-w-0 max-md:[overflow-wrap:anywhere]">
                   <span className="text-sm font-extrabold tracking-wider text-[#C82024]">
                     0{index + 1}
                   </span>

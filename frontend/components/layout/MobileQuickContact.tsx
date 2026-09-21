@@ -25,7 +25,10 @@ export default function MobileQuickContact() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [lastScrollY]);
 
   const rawPhoneNumber = tFloating('number').replace(/[^0-9+]/g, '');
@@ -33,7 +36,9 @@ export default function MobileQuickContact() {
   return (
     <div
       className={`md:hidden w-full bg-gray-50 border-t border-b border-gray-200 transition-all duration-300 overflow-hidden ${
-        isVisible ? 'max-h-14 opacity-100' : 'max-h-0 opacity-0 border-none'
+        isVisible
+          ? 'max-h-14 opacity-100'
+          : 'max-h-0 opacity-0 border-none'
       }`}
     >
       <div className="grid grid-cols-2 divide-x divide-gray-200 text-xs font-semibold">
@@ -50,7 +55,10 @@ export default function MobileQuickContact() {
               className="brightness-0 invert"
             />
           </div>
-          <span className="whitespace-nowrap">Bel direct</span>
+
+          <span className="whitespace-nowrap">
+            {tFloating('callDirect')}
+          </span>
         </a>
 
         <a
@@ -66,7 +74,10 @@ export default function MobileQuickContact() {
               className="brightness-0 invert"
             />
           </div>
-          <span className="whitespace-nowrap">Stel een vraag</span>
+
+          <span className="whitespace-nowrap">
+            {tFloating('askQuestion')}
+          </span>
         </a>
       </div>
     </div>

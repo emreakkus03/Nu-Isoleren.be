@@ -46,7 +46,7 @@ export default async function GoogleReviewsSection({
             {eyebrow}
           </span>
 
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-black">
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-black max-md:text-balance max-md:[overflow-wrap:anywhere]">
             {title}
           </h2>
         </div>

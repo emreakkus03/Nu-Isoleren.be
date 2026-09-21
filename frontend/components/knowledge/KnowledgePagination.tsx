@@ -44,14 +44,14 @@ export default function KnowledgePagination({
   };
 
   return (
-    <div className="flex items-center justify-between gap-4 pt-8 mt-8 border-t border-gray-200">
+    <div className="max-md:flex-col max-md:text-center flex items-center justify-between gap-4 pt-8 mt-8 border-t border-gray-200">
       <button
         type="button"
         disabled={currentPage <= 1}
         onClick={() =>
           goToPage(currentPage - 1)
         }
-        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-gray-200 text-sm font-bold text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer transition"
+        className="max-md:min-h-11 max-md:w-full inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-gray-200 text-sm font-bold text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer transition"
       >
         ← {t('pagination.previous')}
       </button>
@@ -69,7 +69,7 @@ export default function KnowledgePagination({
         onClick={() =>
           goToPage(currentPage + 1)
         }
-        className="inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-gray-200 text-sm font-bold text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer transition"
+        className="max-md:min-h-11 max-md:w-full inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-gray-200 text-sm font-bold text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer transition"
       >
         {t('pagination.next')} →
       </button>

@@ -55,16 +55,16 @@ export default async function FaqPage({ params }: FaqPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="min-h-screen bg-white pt-16 pb-32">
+      <main className="min-h-screen bg-white page-header-start pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="mb-12">
+          <div>
             <Breadcrumbs items={breadcrumbs} />
           </div>
         </div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16 mt-16 sm:mt-24">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <div className="page-header-content text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 max-md:text-balance max-md:[overflow-wrap:anywhere]">
               {t('title')}
             </h1>
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">

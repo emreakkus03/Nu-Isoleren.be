@@ -61,7 +61,7 @@ export default function KnowledgeFilters({
   };
 
   return (
-    <aside className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm sticky top-28">
+    <aside className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm sticky top-28 max-md:static">
       <div className="flex items-center justify-between pb-4 border-b border-slate-100">
         <div>
           <h2 className="font-bold text-slate-900 text-base">
@@ -99,7 +99,7 @@ export default function KnowledgeFilters({
             return (
               <label
                 key={category.id}
-                className="flex items-center gap-3 text-sm text-slate-700 hover:text-slate-950 cursor-pointer select-none"
+                className="flex items-center gap-3 text-sm text-slate-700 hover:text-slate-950 cursor-pointer select-none max-md:min-h-11"
               >
                 <input
                   type="checkbox"
@@ -107,7 +107,7 @@ export default function KnowledgeFilters({
                   onChange={() =>
                     updateCategory(category.slug)
                   }
-                  className="w-4 h-4 rounded border-slate-300 accent-[#C82024] cursor-pointer"
+                  className="w-4 h-4 shrink-0 rounded border-slate-300 accent-[#C82024] cursor-pointer"
                 />
 
                 <div className="flex items-center justify-between flex-1 min-w-0 gap-3">

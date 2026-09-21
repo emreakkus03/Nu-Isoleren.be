@@ -69,7 +69,7 @@ export default function ProjectFilters({
   const hasActiveFilters = Boolean(selectedService || selectedCity);
 
   return (
-    <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col gap-6 sticky top-28">
+    <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col gap-6 sticky top-28 max-md:static">
       <div className="flex items-center justify-between pb-4 border-b border-slate-100">
         <div>
           <h3 className="font-bold text-slate-900 text-base">
@@ -100,13 +100,13 @@ export default function ProjectFilters({
             return (
               <label
                 key={s.id}
-                className="flex items-center gap-3 text-sm text-slate-700 hover:text-slate-900 cursor-pointer select-none py-0.5"
+                className="flex items-center gap-3 text-sm text-slate-700 hover:text-slate-900 cursor-pointer select-none max-md:min-h-11 py-0.5"
               >
                 <input
                   type="checkbox"
                   checked={isChecked}
                   onChange={() => updateFilters("service", s.slug)}
-                  className="w-4 h-4 rounded border-slate-300 accent-[#C82024] text-[#1A669A] focus:ring-[#1A669A] cursor-pointer"
+                  className="w-4 h-4 shrink-0 rounded border-slate-300 accent-[#C82024] text-[#1A669A] focus:ring-[#1A669A] cursor-pointer"
                 />
                 <div className="flex items-center justify-between flex-1 min-w-0">
                   <span
@@ -152,13 +152,13 @@ export default function ProjectFilters({
                 return (
                   <label
                     key={c.id}
-                    className="flex items-center gap-3 text-sm text-slate-700 hover:text-slate-900 cursor-pointer select-none py-0.5"
+                    className="flex items-center gap-3 text-sm text-slate-700 hover:text-slate-900 cursor-pointer select-none max-md:min-h-11 py-0.5"
                   >
                     <input
                       type="checkbox"
                       checked={isChecked}
                       onChange={() => updateFilters("city", c.slug)}
-                      className="w-4 h-4 rounded border-slate-300 accent-[#C82024] text-[#1A669A] focus:ring-[#1A669A] cursor-pointer"
+                      className="w-4 h-4 shrink-0 rounded border-slate-300 accent-[#C82024] text-[#1A669A] focus:ring-[#1A669A] cursor-pointer"
                     />
                     <div className="flex items-center justify-between flex-1 min-w-0">
                       <span

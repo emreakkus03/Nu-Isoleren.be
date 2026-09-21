@@ -91,7 +91,10 @@
     "call": "Appelez-nous",
     "mail": "Envoyez un e-mail",
     "number": "+32 (0) 800 63 63 5",
-    "mailAddress": "info@nu-isoleren.be"
+    "mailAddress": "info@nu-isoleren.be",
+    "callDirect": "Appelez-nous",
+  "askQuestion": "Posez une question"
+
   },
   "Hero": {
     "badge": "ISOLATION • FAÇADES • TRAITEMENT DE L'HUMIDITÉ",

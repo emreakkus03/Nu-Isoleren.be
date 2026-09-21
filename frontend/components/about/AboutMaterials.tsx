@@ -24,11 +24,11 @@ export default function AboutMaterials() {
           </div>
 
           <div className="lg:col-span-6">
-            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
               {t('badge')}
             </span>
 
-            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
               {t('title')}
             </h2>
 
@@ -61,7 +61,7 @@ export default function AboutMaterials() {
               ))}
             </div>
 
-            <div className="mt-6">
+            <div className="mt-6 max-md:text-center">
               <Link
                 href="/services"
                 className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group"

@@ -16,13 +16,13 @@ export default function WhyChooseUs() {
   return (
     <section className="w-full bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pb-16 md:pb-20">
+       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pb-16 max-md:pb-6 md:pb-20">
   <div className="lg:col-span-6 flex flex-col items-center lg:items-start gap-3 md:gap-4 text-center lg:text-left">
     <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
       {t('badge')}
     </span>
 
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere]">
       {t('title')}
     </h2>
   </div>
@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
                 {t(`features.${key}.title`)}
               </h3>
 
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-sm">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-sm max-md:text-left">
                 {t(`features.${key}.description`)}
               </p>
             </div>

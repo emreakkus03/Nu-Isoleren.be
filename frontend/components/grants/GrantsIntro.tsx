@@ -27,16 +27,16 @@ export default async function GrantsIntro({
             />
           </div>
 
-          <div className="max-w-xl text-center items-center md:items-start md:text-start flex flex-col gap-4 mt-12">
+          <div className="max-w-xl text-center items-center md:items-start md:text-start flex flex-col gap-4 max-md:gap-0 mt-0 md:mt-12">
             <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
               {t('badge')}
             </span>
 
-            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere]">
               {t('title')}
             </h2>
 
-            <div className="mt-6 flex flex-col gap-4">
+            <div className="mt-6 flex flex-col gap-4 text-left">
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                 {t('description')}
               </p>

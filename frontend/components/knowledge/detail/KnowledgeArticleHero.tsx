@@ -34,14 +34,14 @@ export default async function KnowledgeArticleHero({
 
   return (
     <>
-      <div className="max-w-4xl">
+      <div className="page-header-content max-w-4xl max-md:text-center">
         {article.category && (
-          <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+          <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
             {article.category.name}
           </span>
         )}
 
-        <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-950 tracking-tight leading-[1.1]">
+        <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-950 tracking-tight leading-[1.1] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
           {article.title}
         </h1>
 
@@ -59,7 +59,7 @@ export default async function KnowledgeArticleHero({
       </div>
 
       {article.hero_image && (
-        <div className="relative w-full aspect-[16/7] mt-10 md:mt-12 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100">
+        <div className="relative w-full aspect-[16/10] md:aspect-[16/7] mt-10 md:mt-12 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100">
           <Image
             src={article.hero_image}
             alt={article.title}

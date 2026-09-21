@@ -20,7 +20,7 @@ export default async function FaqHomeSection() {
           <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
             {t('badge')}
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3 max-md:text-balance max-md:[overflow-wrap:anywhere]">
             {t('title')}
           </h2>
         </div>

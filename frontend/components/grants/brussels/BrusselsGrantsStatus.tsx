@@ -17,11 +17,11 @@ export default async function BrusselsGrantsStatus({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[0.45fr_0.55fr] gap-8 lg:gap-16">
           <div>
-            <span className="text-sm sm:text-base font-extrabold tracking-wider text-[#C82024] uppercase">
+            <span className="text-sm sm:text-base font-extrabold tracking-wider text-[#C82024] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
               {t('badge')}
             </span>
 
-            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
               {t('title')}
             </h2>
           </div>

@@ -9,16 +9,16 @@ export default function PriceMethodology() {
     <section className="w-full bg-[#F8F9FA] py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          <div className="lg:col-span-5">
-            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+          <div className="lg:col-span-5 max-md:text-center">
+            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
               {t('badge')}
             </span>
 
-            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
               {t('title')}
             </h2>
 
-            <p className="mt-5 text-sm sm:text-base text-gray-600 leading-relaxed">
+            <p className="mt-5 text-sm sm:text-base text-gray-600 leading-relaxed max-md:text-center">
               {t('description')}
             </p>
           </div>
