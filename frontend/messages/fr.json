@@ -2154,5 +2154,16 @@
     "title": "Prêt à améliorer votre habitation ?",
     "description": "Demandez un devis sans engagement et découvrez ce que nous pouvons faire pour votre maison.",
     "button": "Discutez de votre projet"
-  }
+  },
+  "googleReviews": {
+  "eyebrow": "L’AVIS DE NOS CLIENTS",
+  "title": "Ce que disent nos clients",
+  "scoreLabel": "Une note de",
+  "outOfFive": "sur 5",
+  "basedOn": "sur base de",
+  "reviews": "avis",
+  "selection": "Découvrez une sélection de nos avis Google.",
+  "previous": "Avis précédents",
+  "next": "Avis suivants"
+}
 }

@@ -40,7 +40,7 @@ export default async function ServiceAreasPage({
   const provinces = Object.keys(grouped || {});
 
   return (
-    <main className="min-h-screen bg-slate-50 w-full overflow-x-clip">
+    <main className="min-h-screen bg-white w-full overflow-x-clip">
       
       <AreasHero breadcrumbs={breadcrumbs} />
 

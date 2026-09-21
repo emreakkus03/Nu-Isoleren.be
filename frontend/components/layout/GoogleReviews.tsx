@@ -15,35 +15,65 @@ export default async function GoogleReviews({
   basedOnLabel = 'op basis van',
   reviewsLabel = 'reviews',
 }: GoogleReviewsProps) {
-  let rating = 5.0;
+  let rating: number | null = null;
   let reviewCount: number | null = null;
+  let googleMapsUri: string | null = null;
 
-  try {
-    const res = await fetch(
-      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${process.env.GOOGLE_PLACE_ID}&fields=rating,user_ratings_total&key=${process.env.GOOGLE_PLACES_API_KEY}`,
-      {
-        next: {
-          revalidate: 86400,
-        },
-      },
-    );
+  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
+  const placeId = process.env.GOOGLE_PLACE_ID;
 
-    if (res.ok) {
-      const data = await res.json();
+  if (apiKey && placeId) {
+    try {
+      const res = await fetch(
+        `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}`,
+        {
+          headers: {
+            'X-Goog-Api-Key': apiKey,
+            'X-Goog-FieldMask':
+              'rating,userRatingCount,googleMapsUri',
+          },
+          next: {
+            revalidate: 86400,
+          },
+        }
+      );
 
-      if (data.result?.rating) {
-        rating = data.result.rating;
+      if (!res.ok) {
+        console.error(
+          'Google Places fout:',
+          res.status,
+          await res.text()
+        );
+      } else {
+        const data = await res.json();
+
+        if (typeof data.rating === 'number') {
+          rating = data.rating;
+        }
+
+        if (typeof data.userRatingCount === 'number') {
+          reviewCount = data.userRatingCount;
+        }
+
+        if (typeof data.googleMapsUri === 'string') {
+          googleMapsUri = data.googleMapsUri;
+        }
       }
-
-      if (typeof data.result?.user_ratings_total === 'number') {
-        reviewCount = data.result.user_ratings_total;
-      }
+    } catch (error) {
+      console.error(
+        'Kon Google Reviews niet ophalen:',
+        error
+      );
     }
-  } catch (error) {
-    console.error('Kon Google Reviews niet ophalen', error);
   }
 
-  const reviewLink = `https://search.google.com/local/reviews?placeid=${process.env.GOOGLE_PLACE_ID}`;
+  if (rating === null) {
+    return null;
+  }
+
+  const reviewLink =
+    googleMapsUri ||
+    `https://search.google.com/local/reviews?placeid=${placeId}`;
 
   const starPercentage = (rating / 5) * 100;
 

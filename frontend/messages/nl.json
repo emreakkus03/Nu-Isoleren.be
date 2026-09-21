@@ -2137,5 +2137,16 @@
     "title": "Klaar om uw woning te verbeteren?",
     "description": "Vraag vrijblijvend een offerte aan en ontdek wat we voor uw woning kunnen betekenen.",
     "button": "Bespreek uw project"
-  }
+  },
+  "googleReviews": {
+  "eyebrow": "KLANTEN AAN HET WOORD",
+  "title": "Wat onze klanten zeggen",
+  "scoreLabel": "Een score van",
+  "outOfFive": "uit 5",
+  "basedOn": "op basis van",
+  "reviews": "reviews",
+  "selection": "Bekijk een selectie van onze Google-reviews.",
+  "previous": "Vorige reviews",
+  "next": "Volgende reviews"
+}
 }

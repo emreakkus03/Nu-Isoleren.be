@@ -2159,5 +2159,16 @@
     "title": "Ready to improve your home?",
     "description": "Request a non-binding quote and discover what we can do for your home.",
     "button": "Discuss your project"
-  }
+  },
+  "googleReviews": {
+  "eyebrow": "CUSTOMER REVIEWS",
+  "title": "What our customers say",
+  "scoreLabel": "A rating of",
+  "outOfFive": "out of 5",
+  "basedOn": "based on",
+  "reviews": "reviews",
+  "selection": "View a selection of our Google reviews.",
+  "previous": "Previous reviews",
+  "next": "Next reviews"
+}
 }
