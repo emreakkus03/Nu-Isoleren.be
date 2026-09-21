@@ -63,17 +63,19 @@ export default async function ProjectsPage({ params, searchParams }: ProjectsPag
           <Breadcrumbs items={breadcrumbs} />
         </div>
 
-        <div className="max-w-4xl mb-10 flex flex-col gap-4">
-          <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
-            {t('badge')}
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-            {t('title')}
-          </h1>
-          <p className="text-base text-slate-600 leading-relaxed">
-            {t('description')}
-          </p>
-        </div>
+       <div className="max-w-4xl mb-10 flex flex-col items-center md:items-start gap-4 text-center md:text-left">
+  <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+    {t('badge')}
+  </span>
+
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+    {t('title')}
+  </h1>
+
+  <p className="text-base text-slate-600 leading-relaxed">
+    {t('description')}
+  </p>
+</div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           

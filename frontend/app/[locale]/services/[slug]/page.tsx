@@ -1376,14 +1376,14 @@ export default async function ServiceDetailPage({
         <header className="flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-14 items-start mb-14 sm:mb-32 w-full min-w-0">
           <div className="w-full lg:w-[35%] shrink-0 flex flex-col gap-3 sm:gap-4 min-w-0">
             {service.eyebrow && (
-              <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-[#1A669A] uppercase [overflow-wrap:anywhere]">
+              <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase [overflow-wrap:anywhere]">
                 {
                   service.eyebrow
                 }
               </span>
             )}
 
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-tight [overflow-wrap:anywhere]">
+            <h1 className="text-2xl mb-8 sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-tight [overflow-wrap:anywhere]">
               {service.hero_title ||
                 service.name}
             </h1>

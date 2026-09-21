@@ -27,7 +27,7 @@ export default async function GrantsIntro({
             />
           </div>
 
-          <div className="max-w-xl">
+          <div className="max-w-xl text-center items-center md:items-start md:text-start flex flex-col gap-4 mt-12">
             <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
               {t('badge')}
             </span>

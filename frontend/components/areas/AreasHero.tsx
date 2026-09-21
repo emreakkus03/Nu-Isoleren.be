@@ -36,7 +36,7 @@ export default function AreasHero({ breadcrumbs }: AreasHeroProps) {
         </div>
         
 
-        <div className="max-w-2xl lg:max-w-3xl flex flex-col items-start gap-3 sm:gap-4 text-white">
+        <div className="max-w-2xl lg:max-w-3xl flex flex-col items-center md:items-start gap-4 text-white text-center md:text-left ">
           <span className="text-xs sm:text-sm font-bold tracking-wider text-[#fb0f12] uppercase">
             {t('badge')}
           </span>

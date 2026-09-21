@@ -49,17 +49,19 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
           <Breadcrumbs items={breadcrumbs} />
         </div>
 
-        <div className="max-w-4xl mb-10 flex flex-col gap-4">
-          <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase ">
-            {t('eyebrow')}
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-            {t('title')}
-          </h1>
-          <p className="text-base text-slate-600 leading-relaxed">
-            {t('description')}
-          </p>
-        </div>
+       <div className="max-w-4xl mb-10 flex flex-col items-center md:items-start gap-4 text-center md:text-left">
+  <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+    {t('eyebrow')}
+  </span>
+
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+    {t('title')}
+  </h1>
+
+  <p className="text-base text-slate-600 leading-relaxed">
+    {t('description')}
+  </p>
+</div>
 
         {!services || services.length === 0 ? (
           <div className="bg-white rounded-2xl p-12 text-center border border-slate-200">

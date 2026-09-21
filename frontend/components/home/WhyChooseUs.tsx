@@ -16,38 +16,44 @@ export default function WhyChooseUs() {
   return (
     <section className="w-full bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pb-16 md:pb-20">
-          <div className="lg:col-span-6 flex flex-col gap-3 md:gap-4">
-            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
-              {t('badge')}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
-              {t('title')}
-            </h2>
-          </div>
+       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pb-16 md:pb-20">
+  <div className="lg:col-span-6 flex flex-col items-center lg:items-start gap-3 md:gap-4 text-center lg:text-left">
+    <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+      {t('badge')}
+    </span>
 
-          <div className="lg:col-span-6 flex flex-col gap-5 text-gray-700 text-sm sm:text-base leading-relaxed">
-            <p>
-              {t.rich('description', {
-                highlight: (chunks) => (
-                  <span className="font-bold text-[#1A669A]">{chunks}</span>
-                ),
-              })}
-            </p>
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+      {t('title')}
+    </h2>
+  </div>
 
-            <div>
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group"
-              >
-                <span className="underline underline-offset-4">{t('cta')}</span>
-                <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
-                  &rarr;
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
+  <div className="lg:col-span-6 flex flex-col gap-5 text-gray-700 text-sm sm:text-base leading-relaxed">
+    <p className="text-left">
+      {t.rich('description', {
+        highlight: (chunks) => (
+          <span className="font-bold text-[#1A669A]">
+            {chunks}
+          </span>
+        ),
+      })}
+    </p>
+
+    <div className="flex justify-center lg:justify-start">
+      <Link
+        href="/"
+        className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group"
+      >
+        <span className="underline underline-offset-4">
+          {t('cta')}
+        </span>
+
+        <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
+          &rarr;
+        </span>
+      </Link>
+    </div>
+  </div>
+</div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 mt-4 md:mt-8">
           {FEATURE_KEYS.map((key) => (

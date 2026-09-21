@@ -34,7 +34,7 @@ export default async function GrantsHero({
              <Breadcrumbs items={breadcrumbs} />
            </div>
    
-           <div className="max-w-3xl flex flex-col items-start gap-4">
+           <div className="max-w-3xl flex flex-col text-center items-center md:items-start md:text-start gap-4">
              <span className="text-sm md:text-base font-extrabold tracking-wider text-red-400 uppercase">
                {t('badge')}
              </span>

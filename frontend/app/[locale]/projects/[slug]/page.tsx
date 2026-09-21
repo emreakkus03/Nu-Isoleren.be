@@ -86,30 +86,31 @@ export default async function ProjectDetailPage({
           <Breadcrumbs items={breadcrumbs} />
         </div>
 
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-3 mb-3">
-            {project.service && (
-              <span className="px-3.5 py-1 rounded-full text-xs font-extrabold tracking-wide uppercase bg-[#1A669A]/10 text-[#1A669A]">
-                {project.service.name}
-              </span>
-            )}
-            {project.city && (
-              <span className="px-3.5 py-1 rounded-full text-xs font-extrabold tracking-wide uppercase bg-slate-200/80 text-slate-800">
-                📍 {project.city.name}
-              </span>
-            )}
-          </div>
+       <div className="mb-8 text-center md:text-left">
+  <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-3">
+    {project.service && (
+      <span className="px-3.5 py-1 rounded-full text-xs font-extrabold tracking-wide uppercase bg-[#1A669A]/10 text-[#1A669A]">
+        {project.service.name}
+      </span>
+    )}
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.2] mb-3">
-            {project.title}
-          </h1>
+    {project.city && (
+      <span className="px-3.5 py-1 rounded-full text-xs font-extrabold tracking-wide uppercase bg-slate-200/80 text-slate-800">
+        📍 {project.city.name}
+      </span>
+    )}
+  </div>
 
-          {project.short_description && (
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-4xl">
-              {project.short_description}
-            </p>
-          )}
-        </div>
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.2] mb-3">
+    {project.title}
+  </h1>
+
+  {project.short_description && (
+    <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-4xl mx-auto md:mx-0">
+      {project.short_description}
+    </p>
+  )}
+</div>
 
         {mainImage && (
           <div className="relative w-full h-[360px] sm:h-[480px] md:h-[540px] rounded-2xl overflow-hidden shadow-sm mb-12 bg-slate-200">
@@ -206,10 +207,10 @@ export default async function ProjectDetailPage({
                 {t("ctaDescription")}
               </p>
               <Link
-                href="/"
+                href="/quote"
                 className="mt-2 inline-flex justify-center items-center px-5 py-3.5 rounded-xl bg-[#C82024] hover:bg-red-700 text-white font-bold text-sm transition text-center shadow-sm"
               >
-                {t("ctaButton")} &rarr;
+                {t("ctaButton")}
               </Link>
             </div>
           </aside>

@@ -16,28 +16,30 @@ export default async function ProjectsSection() {
     <section className="w-full bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-14">
-          <div className="flex flex-col gap-3">
-            <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
-              {t('badge')}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
-              {t('title')}
-            </h2>
-          </div>
+       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-14 text-center md:text-left">
+  <div className="flex flex-col items-center md:items-start gap-3">
+    <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
+      {t('badge')}
+    </span>
 
-          <div>
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group whitespace-nowrap"
-            >
-              <span>{t('cta')}</span>
-              <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
-                &rarr;
-              </span>
-            </Link>
-          </div>
-        </div>
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
+      {t('title')}
+    </h2>
+  </div>
+
+  <div className="flex justify-center md:justify-end">
+    <Link
+      href="/projects"
+      className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group whitespace-nowrap"
+    >
+      <span>{t('cta')}</span>
+
+      <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
+        &rarr;
+      </span>
+    </Link>
+  </div>
+</div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project) => {
