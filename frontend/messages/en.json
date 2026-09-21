@@ -446,19 +446,19 @@
   "PricesPage": {
     "hero": {
       "breadcrumb": "Prices",
-      "badge": "PRICES & CALCULATORS",
+      "badge": "PRICES & TOOLS",
       "title": "Prices for insulation, façade works and moisture treatment",
-      "description": "The cost of your project depends on your home, the surface area, the materials and the chosen solution. Discover what affects the price and use our calculators to get an initial estimate for your home.",
-      "cta": "View our calculators"
+      "description": "The cost of your project depends on factors such as the surface area, the condition of your home, the materials and the chosen solution. View our guide price for cavity wall insulation and use our free tools to learn more about your home.",
+      "cta": "View price & tools"
     },
     "tools": {
-      "badge": "CALCULATE & CHECK",
-      "title": "Get quick insight into your home",
-      "description": "Use our free tools to get an initial estimate of costs, energy savings, EPC rating or suitable improvements for your home.",
+      "badge": "PRICE & FREE TOOLS",
+      "title": "Get quick insight into your home and costs",
+      "description": "View our guide price for cavity wall insulation and use our free tools to explore your potential energy savings, EPC rating or suitable improvements for your home.",
       "price": {
-        "title": "Calculate your price",
-        "description": "Choose the work you would like carried out and get an initial estimated price for your home.",
-        "cta": "Calculate price"
+        "title": "Cavity wall insulation price",
+        "description": "Cavity wall insulation typically costs €21 to €25 per m². View the guide price and find out which factors determine the final cost.",
+        "cta": "View the guide price"
       },
       "savings": {
         "title": "Calculate your energy savings",
@@ -477,108 +477,53 @@
       }
     },
     "servicePrices": {
-      "badge": "PRICE BY SERVICE",
-      "title": "How much do our services cost?",
-      "description": "View indicative prices for each service. The final price depends on factors such as the surface area, condition of the property, chosen solution and accessibility.",
-      "calculate": "Calculate your price",
-      "service": "View service",
-      "disclaimer": "The prices shown are indicative estimates. For an exact price, we always assess the specific situation of your property.",
+      "badge": "CAVITY WALL INSULATION PRICE",
+      "title": "How much does cavity wall insulation cost?",
+      "description": "For cavity wall insulation, our usual guide price is €21 to €25 per m². The exact price depends on factors such as the surface area, the width and condition of the cavity and access to the façade.",
+      "calculate": "Request a free quote",
+      "service": "View cavity wall insulation",
+      "disclaimer": "The cavity wall insulation price is an indicative guide price. For all services, we determine the final price based on the specific circumstances of your home and project.",
       "cavityWall": {
         "title": "Cavity wall insulation",
-        "price": "€21 – €25 per m²",
-        "description": "The price depends on factors including the surface area, width and condition of the cavity and accessibility of the façade."
+        "price": "€21 – €25 per m²"
       },
-      "roof": {
-        "title": "Roof insulation",
-        "price": "€X – €X",
-        "description": "The price depends on the type of roof, surface area, selected insulation material and installation method."
-      },
-      "crepi": {
-        "title": "Crepi",
-        "price": "€X – €X",
-        "description": "The price is influenced by the façade area, existing surface, desired finish and whether external insulation is included."
-      },
-      "facadeCleaning": {
-        "title": "Façade cleaning",
-        "price": "€X – €X",
-        "description": "The cost depends on the surface area, level of contamination, façade material and appropriate cleaning method."
-      },
-      "hydrofuge": {
-        "title": "Hydrofuge treatment",
-        "price": "€X – €X",
-        "description": "The price mainly depends on the façade area, its condition and any preparation required before treatment."
-      },
-      "cavityRemoval": {
-        "title": "Cavity wall insulation removal",
-        "price": "€X – €X",
-        "description": "The price depends on the amount of existing insulation, accessibility of the cavity and condition of the façade."
-      },
-      "risingDamp": {
-        "title": "Rising damp treatment",
-        "price": "€X – €X",
-        "description": "The cost depends on the extent of the moisture problem, the length and thickness of the walls and the selected treatment."
+      "otherWorks": {
+        "title": "Pricing for other services",
+        "description": "For roof insulation, rendering, façade cleaning, water-repellent treatments, moisture treatment and removal of existing cavity wall insulation, we provide a tailored quote. The price depends on the technical condition, the scope of the work and the chosen solution.",
+        "cta": "Request a tailored quote"
       }
     },
     "methodology": {
-      "badge": "TRANSPARENT GUIDE PRICES",
-      "title": "How do we determine our guide prices?",
-      "description": "The prices shown on this page are intended to provide a realistic first estimate. They are based on our usual price ranges for the different types of work, but every home and project is different.",
+      "badge": "TRANSPARENT PRICING",
+      "title": "Why does the price vary by project?",
+      "description": "No two homes are the same. That is why we cannot publish a fixed price for every service. Where a reliable guide price is possible, we state it clearly. For a final price, we always assess the specific circumstances of the project.",
       "items": {
         "ranges": {
-          "title": "Guide prices by service",
-          "description": "Where possible, we show a clear price range per square metre or per type of work."
+          "title": "A guide price where possible",
+          "description": "For cavity wall insulation, we can provide an indicative guide price of €21 to €25 per m²."
         },
         "project": {
-          "title": "Based on the situation",
-          "description": "The final price depends on the technical situation, the scope of the work and the chosen solution."
+          "title": "Tailored to the situation",
+          "description": "The surface area, technical condition, accessibility, materials and chosen solution can influence the final price."
         },
         "quote": {
-          "title": "Exact price through a quote",
-          "description": "For a final price, we assess your project individually and provide a tailored quotation."
+          "title": "An exact price through a quote",
+          "description": "For a final price, we assess your project individually and provide a tailored quote."
         }
       }
     },
     "examples": {
-      "badge": "PRICE EXAMPLES",
-      "title": "How much does an average project cost?",
-      "description": "View a few simple examples based on our guide prices. This gives you a quick idea of the possible cost for your home.",
+      "badge": "PRICE EXAMPLE",
+      "title": "How much does 100 m² of cavity wall insulation cost?",
+      "description": "At a guide price of €21 to €25 per m², 100 m² of cavity wall insulation comes to approximately €2,100 to €2,500. The final price may vary depending on the technical condition of the home and the installation work.",
       "cavityWall": {
         "title": "Cavity wall insulation",
         "example": "Example: 100 m²",
-        "price": "€2,100 – €2,500"
+        "price": "€2,100 – €2,500",
+        "calculation": "100 m² × €21 – €25 per m²"
       },
-      "roof": {
-        "title": "Roof insulation",
-        "example": "Example: 80 m²",
-        "price": "€X – €X"
-      },
-      "crepi": {
-        "title": "Crepi",
-        "example": "Example: 100 m²",
-        "price": "€X – €X"
-      },
-      "facadeCleaning": {
-        "title": "Façade cleaning",
-        "example": "Example: 100 m²",
-        "price": "€X – €X"
-      },
-      "hydrofuge": {
-        "title": "Hydrofuge treatment",
-        "example": "Example: 100 m²",
-        "price": "€X – €X"
-      },
-      "cavityRemoval": {
-        "title": "Cavity wall insulation removal",
-        "example": "Example: 100 m²",
-        "price": "€X – €X"
-      },
-      "risingDamp": {
-        "title": "Rising damp treatment",
-        "example": "Example: 10 linear metres",
-        "price": "€X – €X"
-      },
-      "cta": "Calculate your price",
-      "disclaimer": "Indicative examples. The exact price depends on your home and project."
+      "cta": "Request a free quote",
+      "disclaimer": "Indicative example. The exact price depends on your home and project."
     },
     "grants": {
       "badge": "GRANTS & FINAL COST",

@@ -4,7 +4,7 @@ import { Link } from '@/i18n/routing';
 const TOOLS = [
   {
     key: 'price',
-    href: '/prices',
+    href: { pathname: '/prices', hash: 'spouwmuurisolatie-prijs' },
   },
   {
     key: 'savings',
@@ -25,7 +25,7 @@ export default function PriceTools() {
 
   return (
     <section
-      id="calculatings"
+      id="price-tools"
       className="w-full bg-[#F8F9FA] py-16 md:py-24 scroll-mt-28"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

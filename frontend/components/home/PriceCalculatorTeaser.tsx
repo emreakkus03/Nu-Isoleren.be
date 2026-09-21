@@ -44,16 +44,9 @@ export default function PriceCalculatorTeaser({
 
   const handleContinue = () => {
   if (helpMeChoose) {
-    router.push({
-      pathname: '/quote',
-      query: {
-        advice: 'true',
-      },
-    });
-
-    return;
-  }
-
+  router.push('/prices/home-insulation-check');
+  return;
+}
   if (selectedServiceIds.length === 0) {
     return;
   }
@@ -167,7 +160,7 @@ export default function PriceCalculatorTeaser({
                   type="button"
                   onClick={handleContinue}
                   disabled={!canContinue}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#C82024] hover:bg-red-800 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed disabled:hover:bg-gray-300 text-white font-bold text-sm sm:text-base px-6 py-3 rounded-full transition shadow-sm hover:shadow-md active:scale-95 disabled:active:scale-100 group"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#C82024] hover:bg-red-800 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed disabled:hover:bg-gray-300 text-white font-bold text-sm sm:text-base px-6 py-3 rounded-full transition shadow-sm hover:shadow-md active:scale-95 disabled:active:scale-100 group cursor-pointer"
                 >
                   <span>{t('cta')}</span>
 

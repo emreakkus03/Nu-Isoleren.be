@@ -42,8 +42,8 @@ export default async function PricesPage({
       <PricesHero locale={locale} />
       <PriceTools />
       <ServicePrices />
-      <PriceMethodology />
       <PriceExamples />
+      <PriceMethodology />
       <PriceGrants />
       <PriceFaqSection />
       <CtaBanner />

@@ -447,19 +447,19 @@
   "PricesPage": {
     "hero": {
       "breadcrumb": "Prijzen",
-      "badge": "PRIJZEN & BEREKENINGEN",
+      "badge": "PRIJZEN & TOOLS",
       "title": "Prijzen voor isolatie, gevelwerken en vochtbestrijding",
-      "description": "De prijs van uw project hangt af van de woning, de oppervlakte, het materiaal en de gekozen uitvoering. Ontdek welke factoren de prijs bepalen en krijg met onze berekeningen een eerste indicatie voor uw woning.",
-      "cta": "Bekijk onze berekeningen"
+      "description": "De prijs van uw project hangt af van onder andere de oppervlakte, de staat van uw woning, het materiaal en de gekozen uitvoering. Bekijk onze richtprijs voor spouwmuurisolatie en gebruik onze gratis tools voor meer inzicht in uw woning.",
+      "cta": "Bekijk prijs & tools"
     },
     "tools": {
-      "badge": "BEREKEN & CONTROLEER",
-      "title": "Krijg snel inzicht in uw woning",
-      "description": "Gebruik onze gratis berekeningen voor een eerste inschatting van de kosten, energiebesparing, EPC-waarde of geschikte werken voor uw woning.",
+      "badge": "PRIJS & GRATIS TOOLS",
+      "title": "Krijg snel inzicht in uw woning en kosten",
+      "description": "Bekijk onze richtprijs voor spouwmuurisolatie en gebruik onze gratis tools om uw mogelijke energiebesparing, EPC-waarde of geschikte werken voor uw woning te verkennen.",
       "price": {
-        "title": "Bereken uw prijs",
-        "description": "Kies de werken die u wilt laten uitvoeren en krijg een eerste indicatieve prijs voor uw woning.",
-        "cta": "Prijs berekenen"
+        "title": "Prijs spouwmuurisolatie",
+        "description": "Spouwmuurisolatie kost indicatief €21 tot €25 per m². Bekijk de richtprijs en ontdek welke factoren de uiteindelijke prijs bepalen.",
+        "cta": "Bekijk de richtprijs"
       },
       "savings": {
         "title": "Bereken uw energiebesparing",
@@ -478,60 +478,34 @@
       }
     },
     "servicePrices": {
-      "badge": "PRIJS PER DIENST",
-      "title": "Wat kosten onze werkzaamheden?",
-      "description": "Bekijk de richtprijzen per dienst. De uiteindelijke prijs hangt af van onder andere de oppervlakte, de toestand van de woning, de gekozen uitvoering en de bereikbaarheid.",
-      "calculate": "Bereken uw prijs",
-      "service": "Bekijk dienst",
-      "disclaimer": "De vermelde prijzen zijn indicatieve richtprijzen. Voor een exacte prijs bekijken we steeds de specifieke situatie van uw woning.",
+      "badge": "PRIJS SPOUWMUURISOLATIE",
+      "title": "Wat kost spouwmuurisolatie?",
+      "description": "Voor spouwmuurisolatie hanteren we doorgaans een richtprijs van €21 tot €25 per m². De exacte prijs hangt onder andere af van de oppervlakte, de breedte en toestand van de spouw en de bereikbaarheid van de gevel.",
+      "calculate": "Vraag gratis offerte",
+      "service": "Bekijk spouwmuurisolatie",
+      "disclaimer": "De prijs voor spouwmuurisolatie is een indicatieve richtprijs. Voor alle werkzaamheden bepalen we de definitieve prijs op basis van de specifieke situatie van uw woning en project.",
       "cavityWall": {
         "title": "Spouwmuurisolatie",
-        "price": "€21 – €25 per m²",
-        "description": "De prijs wordt onder andere bepaald door de oppervlakte, de breedte en toestand van de spouw en de bereikbaarheid van de gevel."
+        "price": "€21 – €25 per m²"
       },
-      "roof": {
-        "title": "Dakisolatie",
-        "price": "€X – €X",
-        "description": "De prijs hangt af van het type dak, de oppervlakte, het gekozen isolatiemateriaal en de manier waarop de isolatie wordt geplaatst."
-      },
-      "crepi": {
-        "title": "Crepi",
-        "price": "€X – €X",
-        "description": "De prijs wordt beïnvloed door de oppervlakte van de gevel, de ondergrond, de gewenste afwerking en eventuele gevelisolatie."
-      },
-      "facadeCleaning": {
-        "title": "Gevelreiniging",
-        "price": "€X – €X",
-        "description": "De kostprijs hangt af van de oppervlakte, de vervuiling, het gevelmateriaal en de geschikte reinigingsmethode."
-      },
-      "hydrofuge": {
-        "title": "Hydrofuge",
-        "price": "€X – €X",
-        "description": "De prijs hangt voornamelijk af van de geveloppervlakte, de toestand van de gevel en de voorbereiding die vooraf nodig is."
-      },
-      "cavityRemoval": {
-        "title": "Spouwmuurisolatie verwijderen",
-        "price": "€X – €X",
-        "description": "De prijs wordt bepaald door de hoeveelheid bestaande isolatie, de bereikbaarheid van de spouw en de toestand van de gevel."
-      },
-      "risingDamp": {
-        "title": "Opstijgend vocht behandelen",
-        "price": "€X – €X",
-        "description": "De kostprijs hangt af van de omvang van het vochtprobleem, de lengte en dikte van de muren en de gekozen behandeling."
+      "otherWorks": {
+        "title": "Prijs voor andere werkzaamheden",
+        "description": "Voor dakisolatie, crepi, gevelreiniging, hydrofuge, vochtbestrijding en het verwijderen van bestaande spouwmuurisolatie maken we een offerte op maat. De prijs hangt af van de technische situatie, de omvang van de werken en de gekozen uitvoering.",
+        "cta": "Vraag een offerte op maat"
       }
     },
     "methodology": {
-      "badge": "TRANSPARANTE RICHTPRIJZEN",
-      "title": "Hoe komen onze richtprijzen tot stand?",
-      "description": "De prijzen op deze pagina zijn bedoeld als realistische eerste indicatie. We baseren ze op onze gebruikelijke prijsranges voor de verschillende werkzaamheden, maar iedere woning en ieder project is anders.",
+      "badge": "TRANSPARANTE PRIJZEN",
+      "title": "Waarom verschilt de prijs per project?",
+      "description": "Geen twee woningen zijn hetzelfde. Daarom kunnen we niet voor iedere dienst één vaste prijs publiceren. Waar een betrouwbare richtprijs mogelijk is, vermelden we die duidelijk. Voor een definitieve prijs bekijken we altijd de specifieke situatie van het project.",
       "items": {
         "ranges": {
-          "title": "Richtprijzen per dienst",
-          "description": "Waar mogelijk tonen we een duidelijke prijsrange per vierkante meter of per type werkzaamheden."
+          "title": "Richtprijs waar mogelijk",
+          "description": "Voor spouwmuurisolatie kunnen we een indicatieve richtprijs van €21 tot €25 per m² meegeven."
         },
         "project": {
           "title": "Afgestemd op de situatie",
-          "description": "De uiteindelijke prijs wordt bepaald door de technische situatie, de omvang van de werken en de gekozen uitvoering."
+          "description": "De oppervlakte, technische toestand, bereikbaarheid, materialen en gekozen uitvoering kunnen invloed hebben op de uiteindelijke prijs."
         },
         "quote": {
           "title": "Exacte prijs via offerte",
@@ -540,46 +514,17 @@
       }
     },
     "examples": {
-      "badge": "PRIJSVOORBEELDEN",
-      "title": "Wat kost een gemiddeld project?",
-      "description": "Bekijk enkele eenvoudige voorbeelden op basis van onze richtprijzen. Zo krijgt u snel een idee van de mogelijke kost voor uw woning.",
+      "badge": "PRIJSVOORBEELD",
+      "title": "Wat kost 100 m² spouwmuurisolatie?",
+      "description": "Bij een richtprijs van €21 tot €25 per m² komt 100 m² spouwmuurisolatie indicatief uit op ongeveer €2.100 tot €2.500. De definitieve prijs kan verschillen door de technische situatie van de woning en de uitvoering.",
       "cavityWall": {
         "title": "Spouwmuurisolatie",
         "example": "Voorbeeld: 100 m²",
-        "price": "€2.100 – €2.500"
+        "price": "€2.100 – €2.500",
+        "calculation": "100 m² × €21 – €25 per m²"
       },
-      "roof": {
-        "title": "Dakisolatie",
-        "example": "Voorbeeld: 80 m²",
-        "price": "€X – €X"
-      },
-      "crepi": {
-        "title": "Crepi",
-        "example": "Voorbeeld: 100 m²",
-        "price": "€X – €X"
-      },
-      "facadeCleaning": {
-        "title": "Gevelreiniging",
-        "example": "Voorbeeld: 100 m²",
-        "price": "€X – €X"
-      },
-      "hydrofuge": {
-        "title": "Hydrofuge",
-        "example": "Voorbeeld: 100 m²",
-        "price": "€X – €X"
-      },
-      "cavityRemoval": {
-        "title": "Spouwmuurisolatie verwijderen",
-        "example": "Voorbeeld: 100 m²",
-        "price": "€X – €X"
-      },
-      "risingDamp": {
-        "title": "Opstijgend vocht behandelen",
-        "example": "Voorbeeld: 10 lopende meter",
-        "price": "€X – €X"
-      },
-      "cta": "Bereken uw prijs",
-      "disclaimer": "Indicatieve voorbeelden. De exacte prijs hangt af van uw woning en project."
+      "cta": "Vraag gratis offerte",
+      "disclaimer": "Indicatief voorbeeld. De exacte prijs hangt af van uw woning en project."
     },
     "grants": {
       "badge": "PREMIES & KOSTPRIJS",

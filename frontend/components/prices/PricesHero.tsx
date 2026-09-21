@@ -51,7 +51,7 @@ export default async function PricesHero({
 
           <div className="mt-8">
             <a
-              href="#calculatings"
+              href="#price-tools"
               className="inline-flex items-center gap-2.5 bg-[#C82024] hover:bg-red-800 text-white text-sm sm:text-base font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full transition shadow-lg hover:shadow-xl active:scale-95 group"
             >
               <span>{t('cta')}</span>

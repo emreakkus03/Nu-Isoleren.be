@@ -1,15 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 
-const EXAMPLES = [
-  'cavityWall',
-  'roof',
-  'crepi',
-  'facadeCleaning',
-  'hydrofuge',
-  'cavityRemoval',
-  'risingDamp',
-] as const;
+const EXAMPLES = ['cavityWall'] as const;
 
 export default function PriceExamples() {
   const t = useTranslations('PricesPage.examples');
@@ -53,6 +45,9 @@ export default function PriceExamples() {
                 <span className="text-base sm:text-lg font-extrabold text-[#C82024]">
                   {t(`${key}.price`)}
                 </span>
+                <p className="mt-2 text-sm text-gray-600">
+                  {t('cavityWall.calculation')}
+                </p>
               </div>
             </div>
           ))}
@@ -60,7 +55,7 @@ export default function PriceExamples() {
 
         <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
           <Link
-            href="/"
+            href="/quote"
             className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group"
           >
             <span>{t('cta')}</span>

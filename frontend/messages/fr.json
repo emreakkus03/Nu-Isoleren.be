@@ -447,19 +447,19 @@
   "PricesPage": {
     "hero": {
       "breadcrumb": "Prix",
-      "badge": "PRIX & CALCULS",
+      "badge": "PRIX & OUTILS",
       "title": "Prix de l’isolation, des façades et du traitement de l’humidité",
-      "description": "Le prix de votre projet dépend de votre habitation, de la surface, des matériaux et de la solution choisie. Découvrez les facteurs qui influencent le prix et obtenez une première estimation grâce à nos outils de calcul.",
-      "cta": "Voir nos calculateurs"
+      "description": "Le prix de votre projet dépend notamment de la surface, de l’état de votre habitation, des matériaux et de la solution choisie. Consultez notre prix indicatif pour l’isolation des murs creux et utilisez nos outils gratuits pour mieux comprendre votre habitation.",
+      "cta": "Voir le prix et les outils"
     },
     "tools": {
-      "badge": "CALCULEZ & VÉRIFIEZ",
-      "title": "Obtenez rapidement un aperçu de votre habitation",
-      "description": "Utilisez nos outils gratuits pour obtenir une première estimation du prix, des économies d’énergie, de la valeur PEB ou des travaux adaptés à votre habitation.",
+      "badge": "PRIX & OUTILS GRATUITS",
+      "title": "Faites le point sur votre habitation et les coûts",
+      "description": "Consultez notre prix indicatif pour l’isolation des murs creux et utilisez nos outils gratuits pour explorer vos économies d’énergie potentielles, votre valeur PEB ou les travaux adaptés à votre habitation.",
       "price": {
-        "title": "Calculez votre prix",
-        "description": "Choisissez les travaux que vous souhaitez réaliser et obtenez une première estimation du prix pour votre habitation.",
-        "cta": "Calculer le prix"
+        "title": "Prix de l’isolation des murs creux",
+        "description": "L’isolation des murs creux coûte à titre indicatif entre 21 € et 25 € par m². Consultez ce prix indicatif et découvrez les facteurs qui déterminent le prix final.",
+        "cta": "Voir le prix indicatif"
       },
       "savings": {
         "title": "Calculez vos économies d’énergie",
@@ -478,108 +478,53 @@
       }
     },
     "servicePrices": {
-      "badge": "PRIX PAR SERVICE",
-      "title": "Combien coûtent nos travaux ?",
-      "description": "Consultez les prix indicatifs par service. Le prix final dépend notamment de la surface, de l’état de l’habitation, de la solution choisie et de l’accessibilité.",
-      "calculate": "Calculer votre prix",
-      "service": "Voir le service",
-      "disclaimer": "Les prix indiqués sont des estimations. Pour établir un prix exact, nous tenons toujours compte de la situation spécifique de votre habitation.",
+      "badge": "PRIX DE L’ISOLATION DES MURS CREUX",
+      "title": "Combien coûte l’isolation des murs creux ?",
+      "description": "Pour l’isolation des murs creux, nous appliquons généralement un prix indicatif de 21 € à 25 € par m². Le prix exact dépend notamment de la surface, de la largeur et de l’état de la coulisse ainsi que de l’accessibilité de la façade.",
+      "calculate": "Demander un devis gratuit",
+      "service": "Découvrir l’isolation des murs creux",
+      "disclaimer": "Le prix de l’isolation des murs creux est donné à titre indicatif. Pour tous les travaux, nous déterminons le prix définitif en fonction de la situation spécifique de votre habitation et de votre projet.",
       "cavityWall": {
         "title": "Isolation des murs creux",
-        "price": "21 € – 25 € par m²",
-        "description": "Le prix dépend notamment de la surface, de la largeur et de l’état de la coulisse ainsi que de l’accessibilité de la façade."
+        "price": "21 € – 25 € par m²"
       },
-      "roof": {
-        "title": "Isolation de toiture",
-        "price": "X € – X €",
-        "description": "Le prix dépend du type de toiture, de la surface, du matériau isolant choisi et de la méthode de pose."
-      },
-      "crepi": {
-        "title": "Crépi",
-        "price": "X € – X €",
-        "description": "Le prix varie selon la surface de la façade, le support, la finition souhaitée et la présence éventuelle d’une isolation extérieure."
-      },
-      "facadeCleaning": {
-        "title": "Nettoyage de façade",
-        "price": "X € – X €",
-        "description": "Le coût dépend de la surface, du niveau d’encrassement, du matériau de façade et de la méthode de nettoyage appropriée."
-      },
-      "hydrofuge": {
-        "title": "Hydrofuge",
-        "price": "X € – X €",
-        "description": "Le prix dépend principalement de la surface, de l’état de la façade et des travaux préparatoires nécessaires."
-      },
-      "cavityRemoval": {
-        "title": "Retrait de l’isolation des murs creux",
-        "price": "X € – X €",
-        "description": "Le prix dépend de la quantité d’isolant existant, de l’accessibilité de la coulisse et de l’état de la façade."
-      },
-      "risingDamp": {
-        "title": "Traitement de l’humidité ascensionnelle",
-        "price": "X € – X €",
-        "description": "Le coût dépend de l’ampleur du problème d’humidité, de la longueur et de l’épaisseur des murs et du traitement choisi."
+      "otherWorks": {
+        "title": "Prix des autres travaux",
+        "description": "Pour l’isolation de toiture, le crépi, le nettoyage de façade, le traitement hydrofuge, le traitement de l’humidité et le retrait de l’isolation existante des murs creux, nous établissons un devis sur mesure. Le prix dépend de la situation technique, de l’ampleur des travaux et de la solution choisie.",
+        "cta": "Demander un devis sur mesure"
       }
     },
     "methodology": {
-      "badge": "PRIX INDICATIFS TRANSPARENTS",
-      "title": "Comment déterminons-nous nos prix indicatifs ?",
-      "description": "Les prix affichés sur cette page donnent une première estimation réaliste. Ils sont basés sur nos fourchettes de prix habituelles pour les différents travaux, mais chaque habitation et chaque projet est unique.",
+      "badge": "DES PRIX TRANSPARENTS",
+      "title": "Pourquoi le prix varie-t-il selon le projet ?",
+      "description": "Chaque habitation est différente. Nous ne pouvons donc pas publier un prix fixe pour chaque service. Lorsqu’un prix indicatif fiable est possible, nous le communiquons clairement. Pour établir un prix définitif, nous examinons toujours la situation spécifique du projet.",
       "items": {
         "ranges": {
-          "title": "Prix indicatifs par service",
-          "description": "Lorsque cela est possible, nous indiquons une fourchette claire par mètre carré ou par type de travaux."
+          "title": "Un prix indicatif lorsque c’est possible",
+          "description": "Pour l’isolation des murs creux, nous pouvons communiquer un prix indicatif de 21 € à 25 € par m²."
         },
         "project": {
           "title": "Adapté à la situation",
-          "description": "Le prix final dépend de la situation technique, de l’ampleur des travaux et de la solution choisie."
+          "description": "La surface, l’état technique, l’accessibilité, les matériaux et la solution choisie peuvent influencer le prix final."
         },
         "quote": {
-          "title": "Prix exact sur devis",
-          "description": "Pour obtenir un prix définitif, nous examinons votre projet individuellement et établissons un devis sur mesure."
+          "title": "Un prix exact sur devis",
+          "description": "Pour établir un prix définitif, nous examinons votre projet individuellement et vous remettons un devis sur mesure."
         }
       }
     },
     "examples": {
-      "badge": "EXEMPLES DE PRIX",
-      "title": "Combien coûte un projet moyen ?",
-      "description": "Découvrez quelques exemples simples basés sur nos prix indicatifs. Vous obtenez ainsi rapidement une idée du coût possible pour votre habitation.",
+      "badge": "EXEMPLE DE PRIX",
+      "title": "Combien coûte l’isolation de 100 m² de murs creux ?",
+      "description": "Avec un prix indicatif de 21 € à 25 € par m², l’isolation de 100 m² de murs creux revient à environ 2 100 € à 2 500 €. Le prix définitif peut varier selon la situation technique de l’habitation et la mise en œuvre.",
       "cavityWall": {
         "title": "Isolation des murs creux",
         "example": "Exemple : 100 m²",
-        "price": "2.100 € – 2.500 €"
+        "price": "2.100 € – 2.500 €",
+        "calculation": "100 m² × 21 € – 25 € par m²"
       },
-      "roof": {
-        "title": "Isolation de toiture",
-        "example": "Exemple : 80 m²",
-        "price": "X € – X €"
-      },
-      "crepi": {
-        "title": "Crépi",
-        "example": "Exemple : 100 m²",
-        "price": "X € – X €"
-      },
-      "facadeCleaning": {
-        "title": "Nettoyage de façade",
-        "example": "Exemple : 100 m²",
-        "price": "X € – X €"
-      },
-      "hydrofuge": {
-        "title": "Hydrofuge",
-        "example": "Exemple : 100 m²",
-        "price": "X € – X €"
-      },
-      "cavityRemoval": {
-        "title": "Retrait de l’isolation des murs creux",
-        "example": "Exemple : 100 m²",
-        "price": "X € – X €"
-      },
-      "risingDamp": {
-        "title": "Traitement de l’humidité ascensionnelle",
-        "example": "Exemple : 10 mètres courants",
-        "price": "X € – X €"
-      },
-      "cta": "Calculer votre prix",
-      "disclaimer": "Exemples indicatifs. Le prix exact dépend de votre habitation et de votre projet."
+      "cta": "Demander un devis gratuit",
+      "disclaimer": "Exemple indicatif. Le prix exact dépend de votre habitation et de votre projet."
     },
     "grants": {
       "badge": "PRIMES & COÛT FINAL",

@@ -7,8 +7,8 @@ export default function PriceGrants() {
   return (
     <section className="w-full bg-[#F8F9FA] py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          <div className="lg:col-span-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
             <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase max-md:block max-md:w-full max-md:text-center max-md:[overflow-wrap:anywhere]">
               {t('badge')}
             </span>
@@ -18,7 +18,7 @@ export default function PriceGrants() {
             </h2>
           </div>
 
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-7">
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               {t('description')}
             </p>
@@ -29,7 +29,7 @@ export default function PriceGrants() {
 
             <div className="mt-6 max-md:text-center">
               <Link
-                href="/"
+                href="/grants"
                 className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group"
               >
                 <span>{t('cta')}</span>
