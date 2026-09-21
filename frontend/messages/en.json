@@ -139,26 +139,19 @@
     }
   },
   "PriceCalculatorTeaser": {
-    "badge": "CALCULATE YOUR PRICE",
-    "title": "How much does your project cost approximately?",
-    "subtitle": "Select your works and calculate your indicative price without obligation.",
-    "usps": {
-      "free": "Free & Without obligation",
-      "fast": "In 2 minutes",
-      "noCommitment": "No obligation"
-    },
-    "cardTitle": "Which works do you want to carry out?",
-    "cta": "Start calculation",
-    "services": {
-      "cavityWall": "Cavity wall insulation",
-      "externalWall": "Help me choose",
-      "roofInsulation": "Roof insulation",
-      "crepi": "Crepi / Render",
-      "facadeCleaning": "Facade cleaning",
-      "hydrofuge": "Hydrofuge",
-      "cavityEmptying": "Cavity clearance",
-      "risingDamp": "Rising damp"
-    }
+    "badge": "YOUR PROJECT",
+  "title": "What work would you like to have done?",
+  "subtitle": "Select the work you are considering and tell us a little about your home. This allows us to advise you more specifically on the options for your project.",
+  "usps": {
+    "free": "Free & without obligation",
+    "fast": "In just a few steps",
+    "noCommitment": "Personal advice"
+  },
+  "cardTitle": "What work would you like to have done?",
+  "cta": "Continue",
+  "services": {
+  "helpMeChoose": "Help me choose"
+}
   },
   "WhyChooseUs": {
     "badge": "WHY CHOOSE US?",

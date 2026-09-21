@@ -10,6 +10,11 @@ interface QuotePageProps {
   params: Promise<{
     locale: string;
   }>;
+
+  searchParams: Promise<{
+    services?: string;
+    advice?: string;
+  }>;
 }
 
 interface Service {
@@ -72,8 +77,10 @@ export async function generateMetadata({
 
 export default async function QuotePage({
   params,
+  searchParams,
 }: QuotePageProps) {
   const { locale } = await params;
+  const { services: servicesParam } = await searchParams;
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
@@ -83,6 +90,19 @@ export default async function QuotePage({
 
   const services = await getServices(locale);
 
+  const availableServiceIds = new Set(
+    services.map((service) => service.id),
+  );
+
+  const initialServiceIds = (servicesParam ?? '')
+    .split(',')
+    .map(Number)
+    .filter(
+      (id) =>
+        Number.isInteger(id) &&
+        availableServiceIds.has(id),
+    );
+
   return (
     <main className="w-full min-h-screen bg-white">
       <QuoteHero locale={locale}>
@@ -90,8 +110,10 @@ export default async function QuotePage({
           services={services}
           locale={locale}
           apiUrl={apiUrl}
+          initialServiceIds={initialServiceIds}
         />
       </QuoteHero>
+
       <QuoteTrustSection locale={locale} />
       <QuoteProcessSection locale={locale} />
     </main>

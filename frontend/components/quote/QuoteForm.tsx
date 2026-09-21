@@ -40,15 +40,28 @@ const initialFormData: FormData = {
   privacy_consent: false,
 };
 
+interface QuoteFormProps {
+  services: Service[];
+  locale: string;
+  apiUrl: string;
+  initialServiceIds?: number[];
+}
+
+
+
 export default function QuoteForm({
   services,
   locale,
   apiUrl,
+  initialServiceIds = [],
 }: QuoteFormProps) {
   const t = useTranslations('QuotePage.form');
 
-  const [step, setStep] = useState(1);
-  const [selectedServices, setSelectedServices] = useState<number[]>([]);
+ const [step, setStep] = useState(initialServiceIds.length > 0 ? 2 : 1);
+
+const [selectedServices, setSelectedServices] = useState<number[]>(
+  initialServiceIds,
+);
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [reference, setReference] = useState<string | null>(null);

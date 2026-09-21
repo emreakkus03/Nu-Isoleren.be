@@ -11,11 +11,19 @@ import CtaBanner from '@/components/common/CtaBanner';
 import GoogleReviewsSection from '@/components/home/GoogleReviewsSection';
 
 import { getCities } from '@/lib/cities';
+import { getServices } from '@/lib/services';
 
-export async function generateMetadata({ params }: { params: { locale: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
-  
-  const t = await getTranslations({ locale, namespace: 'Seo.home' });
+
+  const t = await getTranslations({
+    locale,
+    namespace: 'Seo.home',
+  });
 
   return {
     title: t('title'),
@@ -23,31 +31,56 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-export default async function HomePage({ params }: { params: { locale: string } }) {
-  const { all: featuredCities } = await getCities(true);
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'googleReviews' });
+
+  const [
+    { all: featuredCities },
+    services,
+    t,
+  ] = await Promise.all([
+    getCities(true),
+    getServices(locale, {
+      featuredHome: true,
+    }),
+    getTranslations({
+      locale,
+      namespace: 'googleReviews',
+    }),
+  ]);
 
   return (
     <main>
       <Hero />
+
       <ServicesSection />
-      <PriceCalculatorTeaser />
+
+      <PriceCalculatorTeaser services={services} />
+
       <WhyChooseUs />
+
       <ProjectsSection />
+
       <GoogleReviewsSection
-  eyebrow={t('eyebrow')}
-  title={t('title')}
-  scoreLabel={t('scoreLabel')}
-  outOfFiveLabel={t('outOfFive')}
-  basedOnLabel={t('basedOn')}
-  reviewsLabel={t('reviews')}
-  selectionLabel={t('selection')}
-  previousLabel={t('previous')}
-  nextLabel={t('next')}
-/>
+        eyebrow={t('eyebrow')}
+        title={t('title')}
+        scoreLabel={t('scoreLabel')}
+        outOfFiveLabel={t('outOfFive')}
+        basedOnLabel={t('basedOn')}
+        reviewsLabel={t('reviews')}
+        selectionLabel={t('selection')}
+        previousLabel={t('previous')}
+        nextLabel={t('next')}
+      />
+
       <HomeServiceAreas cities={featuredCities} />
+
       <FaqHomeSection />
+
       <CtaBanner />
     </main>
   );

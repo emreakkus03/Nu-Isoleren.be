@@ -140,26 +140,19 @@
     }
   },
   "PriceCalculatorTeaser": {
-    "badge": "CALCULEZ VOTRE PRIX",
-    "title": "Combien coûte environ votre projet ?",
-    "subtitle": "Sélectionnez vos travaux et calculez sans engagement votre prix indicatif.",
-    "usps": {
-      "free": "Gratuit & Sans engagement",
-      "fast": "En 2 minutes",
-      "noCommitment": "Aucune obligation"
-    },
-    "cardTitle": "Quels travaux souhaitez-vous réaliser ?",
-    "cta": "Commencer le calcul",
-    "services": {
-      "cavityWall": "Isolation des murs creux",
-      "externalWall": "Aidez-moi à choisir",
-      "roofInsulation": "Isolation de toiture",
-      "crepi": "Crépi",
-      "facadeCleaning": "Nettoyage de façade",
-      "hydrofuge": "Hydrofuge",
-      "cavityEmptying": "Vidage de coulisse",
-      "risingDamp": "Humidité ascensionnelle"
-    }
+   "badge": "VOTRE PROJET",
+  "title": "Quels travaux souhaitez-vous réaliser ?",
+  "subtitle": "Sélectionnez les travaux souhaités et donnez-nous quelques informations sur votre habitation. Nous pourrons ainsi vous conseiller plus précisément sur les possibilités pour votre projet.",
+  "usps": {
+    "free": "Gratuit & sans engagement",
+    "fast": "En quelques étapes",
+    "noCommitment": "Conseils personnalisés"
+  },
+  "cardTitle": "Quels travaux souhaitez-vous faire réaliser ?",
+  "cta": "Continuer",
+  "services": {
+  "helpMeChoose": "Aidez-moi à choisir"
+}
   },
   "WhyChooseUs": {
     "badge": "POURQUOI NOUS CHOISIR ?",
