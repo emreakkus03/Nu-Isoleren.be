@@ -2107,5 +2107,24 @@
   "selection": "Découvrez une sélection de nos avis Google.",
   "previous": "Avis précédents",
   "next": "Avis suivants"
-}
+},
+  "CookieConsent": {
+    "title": "Votre confidentialité, votre choix",
+    "description": "Nous utilisons des cookies nécessaires au bon fonctionnement du site. Vous choisissez si vous souhaitez également autoriser les cookies analytiques et marketing, par exemple pour améliorer le site et mesurer nos campagnes.",
+    "acceptAll": "Tout accepter",
+    "rejectAll": "Tout refuser",
+    "preferences": "Définir mes préférences",
+    "savePreferences": "Enregistrer ma sélection",
+    "necessaryTitle": "Cookies nécessaires",
+    "necessaryDescription": "Ces cookies sont indispensables au fonctionnement de base et à la sécurité du site.",
+    "analyticsTitle": "Cookies analytiques",
+    "analyticsDescription": "Ces cookies nous aident à comprendre comment les visiteurs utilisent le site afin de l’améliorer.",
+    "marketingTitle": "Cookies marketing",
+    "marketingDescription": "Ces cookies permettent de mesurer les campagnes et les publicités et de les rendre plus pertinentes.",
+    "alwaysActive": "Toujours actifs",
+    "preferencesTitle": "Préférences de cookies",
+    "preferencesDescription": "Choisissez les cookies non essentiels que vous souhaitez autoriser. Vous pourrez modifier votre choix à tout moment.",
+    "close": "Fermer",
+    "storageUnavailable": "Votre navigateur ne peut pas enregistrer votre choix. Vos préférences s’appliquent à cette visite ; nous vous demanderons de choisir à nouveau lors de votre prochaine visite."
+  }
 }

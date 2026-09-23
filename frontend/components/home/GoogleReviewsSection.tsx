@@ -95,8 +95,8 @@ export default async function GoogleReviewsSection({
             <Image
               src="/icons/google.svg"
               alt="Google"
-              width={86}
-              height={29}
+              width={762}
+              height={248}
               className="w-[78px] sm:w-[86px] h-auto"
             />
           </a>

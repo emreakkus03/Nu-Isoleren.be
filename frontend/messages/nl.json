@@ -2089,5 +2089,24 @@
   "selection": "Bekijk een selectie van onze Google-reviews.",
   "previous": "Vorige reviews",
   "next": "Volgende reviews"
-}
+},
+  "CookieConsent": {
+    "title": "Uw privacy, uw keuze",
+    "description": "Wij gebruiken noodzakelijke cookies om de website goed te laten werken. U bepaalt of u ook analytische en marketingcookies wilt toestaan, bijvoorbeeld om de website te verbeteren en campagnes te meten.",
+    "acceptAll": "Alles aanvaarden",
+    "rejectAll": "Alles weigeren",
+    "preferences": "Voorkeuren instellen",
+    "savePreferences": "Selectie opslaan",
+    "necessaryTitle": "Noodzakelijke cookies",
+    "necessaryDescription": "Deze cookies zijn nodig voor de basiswerking en beveiliging van de website.",
+    "analyticsTitle": "Analytische cookies",
+    "analyticsDescription": "Deze cookies helpen ons begrijpen hoe bezoekers de website gebruiken, zodat we deze kunnen verbeteren.",
+    "marketingTitle": "Marketingcookies",
+    "marketingDescription": "Deze cookies worden gebruikt om campagnes en advertenties te meten en relevanter te maken.",
+    "alwaysActive": "Altijd actief",
+    "preferencesTitle": "Cookievoorkeuren",
+    "preferencesDescription": "Kies welke niet-noodzakelijke cookies u wilt toestaan. U kunt uw keuze later altijd wijzigen.",
+    "close": "Sluiten",
+    "storageUnavailable": "Uw browser kan uw keuze niet bewaren. Uw voorkeur geldt voor dit bezoek; bij een volgend bezoek vragen we opnieuw om uw keuze."
+  }
 }

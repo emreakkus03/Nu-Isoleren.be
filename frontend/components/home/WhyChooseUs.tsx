@@ -62,10 +62,10 @@ export default function WhyChooseUs() {
                 <Image
                   src={FEATURE_ICONS[key]}
                   alt={t(`features.${key}.title`)}
-                  width={key === 'cleanWork' ? 96 : 72}
-                  height={key === 'cleanWork' ? 96 : 72}
-                  className={`object-contain transition-transform ${
-                    key === 'cleanWork' ? 'scale-150' : ''
+                  width={key === 'expertise' ? 406 : key === 'cleanWork' ? 507 : 327}
+                  height={key === 'expertise' ? 341 : key === 'cleanWork' ? 475 : 327}
+                  className={`h-auto object-contain transition-transform ${
+                    key === 'cleanWork' ? 'w-24 scale-150' : 'w-[72px]'
                   }`}
                 />
               </div>

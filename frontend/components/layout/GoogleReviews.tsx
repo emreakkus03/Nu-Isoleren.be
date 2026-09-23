@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getGoogleReviews } from '@/lib/google-reviews';
 
 interface GoogleReviewsProps {
   label: string;
@@ -15,61 +16,19 @@ export default async function GoogleReviews({
   basedOnLabel = 'op basis van',
   reviewsLabel = 'reviews',
 }: GoogleReviewsProps) {
-  let rating: number | null = null;
-  let reviewCount: number | null = null;
-  let googleMapsUri: string | null = null;
+  const data = await getGoogleReviews();
 
-  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-  const placeId = process.env.GOOGLE_PLACE_ID;
-
-  if (apiKey && placeId) {
-    try {
-      const res = await fetch(
-        `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}`,
-        {
-          headers: {
-            'X-Goog-Api-Key': apiKey,
-            'X-Goog-FieldMask':
-              'rating,userRatingCount,googleMapsUri',
-          },
-          next: {
-            revalidate: 86400,
-          },
-        }
-      );
-
-      if (!res.ok) {
-        console.error(
-          'Google Places fout:',
-          res.status,
-          await res.text()
-        );
-      } else {
-        const data = await res.json();
-
-        if (typeof data.rating === 'number') {
-          rating = data.rating;
-        }
-
-        if (typeof data.userRatingCount === 'number') {
-          reviewCount = data.userRatingCount;
-        }
-
-        if (typeof data.googleMapsUri === 'string') {
-          googleMapsUri = data.googleMapsUri;
-        }
-      }
-    } catch (error) {
-      console.error(
-        'Kon Google Reviews niet ophalen:',
-        error
-      );
-    }
-  }
-
-  if (rating === null) {
+  if (!data) {
     return null;
   }
+
+  const {
+    rating,
+    reviewCount,
+    googleMapsUri,
+  } = data;
+
+  const placeId = process.env.GOOGLE_PLACE_ID;
 
   const reviewLink =
     googleMapsUri ||
@@ -106,20 +65,18 @@ export default async function GoogleReviews({
           {rating.toFixed(1)} {outOfFiveLabel}
         </span>
 
-        {reviewCount !== null && (
-          <span className="font-medium">
-            {basedOnLabel}{' '}
-            <span className="font-extrabold underline underline-offset-2">
-              {reviewCount} {reviewsLabel}
-            </span>
+        <span className="font-medium">
+          {basedOnLabel}{' '}
+          <span className="font-extrabold underline underline-offset-2">
+            {reviewCount} {reviewsLabel}
           </span>
-        )}
+        </span>
 
         <Image
           src="/icons/google.svg"
           alt="Google"
-          width={72}
-          height={24}
+          width={762}
+          height={248}
           className="ml-1 h-auto w-[64px] sm:w-[72px]"
         />
       </a>
@@ -155,9 +112,9 @@ export default async function GoogleReviews({
       <Image
         src="/icons/google.svg"
         alt="Google Reviews"
-        width={60}
-        height={20}
-        className="ml-1 w-10 md:w-[60px]"
+        width={762}
+        height={248}
+        className="ml-1 h-auto w-10 md:w-[60px]"
       />
     </a>
   );

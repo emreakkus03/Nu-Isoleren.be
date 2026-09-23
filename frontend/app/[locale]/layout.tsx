@@ -6,6 +6,8 @@ import "../globals.css";
 
 import { AlternateLinksProvider } from '@/context/AlternateLinksContext';
 
+import CookieConsent from '@/components/cookie/CookieConsent';
+
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingButtons from '@/components/layout/FloatingButtons';
@@ -30,6 +32,7 @@ export default async function LocaleLayout({
       <body suppressHydrationWarning>
         <AlternateLinksProvider>
           <NextIntlClientProvider messages={messages}>
+            <CookieConsent />
             <Header />
             <FloatingButtons />
             <main className="min-h-screen">

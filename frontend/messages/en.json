@@ -2111,5 +2111,24 @@
   "selection": "View a selection of our Google reviews.",
   "previous": "Previous reviews",
   "next": "Next reviews"
-}
+},
+  "CookieConsent": {
+    "title": "Your privacy, your choice",
+    "description": "We use necessary cookies to keep the website working properly. You decide whether to also allow analytics and marketing cookies, for example to improve the website and measure our campaigns.",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "preferences": "Set preferences",
+    "savePreferences": "Save selection",
+    "necessaryTitle": "Necessary cookies",
+    "necessaryDescription": "These cookies are needed for the basic operation and security of the website.",
+    "analyticsTitle": "Analytics cookies",
+    "analyticsDescription": "These cookies help us understand how visitors use the website so we can improve it.",
+    "marketingTitle": "Marketing cookies",
+    "marketingDescription": "These cookies are used to measure campaigns and ads and make them more relevant.",
+    "alwaysActive": "Always active",
+    "preferencesTitle": "Cookie preferences",
+    "preferencesDescription": "Choose which non-essential cookies you want to allow. You can change your choice at any time.",
+    "close": "Close",
+    "storageUnavailable": "Your browser cannot save your choice. Your preferences apply to this visit; we will ask you again on your next visit."
+  }
 }

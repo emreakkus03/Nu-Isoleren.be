@@ -1,3 +1,4 @@
+import CookiePreferencesButton from '@/components/cookie/CookiePreferencesButton';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
@@ -198,8 +199,8 @@ export default async function Footer({
                 <Image
                   src="/logo/logo.svg"
                   alt="Nu-Isoleren.be"
-                  width={230}
-                  height={70}
+                  width={942}
+                  height={239}
                   className="
                     h-auto
                     w-[180px]
@@ -531,6 +532,9 @@ export default async function Footer({
               >
                 {t('legal.cookies')}
               </Link>
+
+              <span>|</span>
+              <CookiePreferencesButton />
             </div>
 
             <p

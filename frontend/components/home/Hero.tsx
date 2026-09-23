@@ -13,7 +13,7 @@ export default function Hero() {
           alt="Nu-Isoleren Gevelwerken en Spouwmuurisolatie"
           fill
           priority
-          quality={95}
+          quality={70}
           sizes="100vw"
           className="object-cover object-[65%_center] md:object-center"
         />

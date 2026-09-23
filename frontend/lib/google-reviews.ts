@@ -5,6 +5,7 @@ export interface GoogleReviewItem {
   rating: number;
   text: string;
   relativeTime: string | null;
+  publishTime: string | null;
   googleMapsUri: string | null;
 
   author: {
@@ -55,48 +56,85 @@ const fetchGoogleReviews = async (): Promise<GoogleReviewsData | null> => {
 
     const data = await res.json();
 
-    const reviews: GoogleReviewItem[] = Array.isArray(data.reviews)
-      ? data.reviews
-          .map((review: any) => ({
-            rating:
-              typeof review.rating === 'number'
-                ? review.rating
-                : 0,
+   const reviews: GoogleReviewItem[] = Array.isArray(data.reviews)
+  ? data.reviews
+      .map((review: any) => ({
+        rating:
+          typeof review.rating === 'number'
+            ? review.rating
+            : 0,
 
-            text:
-              review.originalText?.text ||
-              review.text?.text ||
-              '',
+        text:
+          review.originalText?.text ||
+          review.text?.text ||
+          '',
 
-            relativeTime:
-              review.relativePublishTimeDescription ||
-              null,
+        relativeTime:
+          review.relativePublishTimeDescription ||
+          null,
 
-            googleMapsUri:
-              review.googleMapsUri ||
-              null,
+        publishTime:
+          typeof review.publishTime === 'string'
+            ? review.publishTime
+            : null,
 
-            author: {
-              displayName:
-                review.authorAttribution?.displayName ||
-                'Google-gebruiker',
+        googleMapsUri:
+          review.googleMapsUri ||
+          null,
 
-              uri:
-                review.authorAttribution?.uri ||
-                null,
+        author: {
+          displayName:
+            review.authorAttribution?.displayName ||
+            'Google-gebruiker',
 
-              photoUri:
-                review.authorAttribution?.photoUri ||
-                null,
-            },
-          }))
-          .filter(
-  (review: GoogleReviewItem) =>
-    review.rating >= 4 &&
-    review.text.trim().length > 0
-)
-          .slice(0, 5)
-      : [];
+          uri:
+            review.authorAttribution?.uri ||
+            null,
+
+          photoUri:
+            review.authorAttribution?.photoUri ||
+            null,
+        },
+      }))
+      .filter((review: GoogleReviewItem) => {
+        const text = review.text.trim();
+        const normalized = text.toLowerCase();
+
+        const lowValueTexts = [
+          'top',
+          'top!',
+          'top :)',
+          'top ;)',
+          'goed',
+          'prima',
+        ];
+
+        return (
+          review.rating >= 4 &&
+          text.length >= 20 &&
+          !lowValueTexts.includes(normalized)
+        );
+      })
+      .sort((a: GoogleReviewItem, b: GoogleReviewItem) => {
+        if (!a.publishTime && !b.publishTime) {
+          return 0;
+        }
+
+        if (!a.publishTime) {
+          return 1;
+        }
+
+        if (!b.publishTime) {
+          return -1;
+        }
+
+        return (
+          new Date(b.publishTime).getTime() -
+          new Date(a.publishTime).getTime()
+        );
+      })
+      .slice(0, 5)
+  : [];
 
     return {
       rating:
@@ -130,6 +168,6 @@ export const getGoogleReviews = unstable_cache(
   fetchGoogleReviews,
   ['nu-isoleren-google-reviews'],
   {
-    revalidate: 86400,
+    revalidate: 86400, 
   }
 );

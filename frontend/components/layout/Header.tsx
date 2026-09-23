@@ -36,11 +36,10 @@ export default async function Header() {
             <Image
               src="/logo/logo.svg"
               alt="Nu-Isoleren Logo"
-              width={160}
-              height={40}
+              width={942}
+              height={239}
               priority
-              style={{ height: 'auto' }}
-              className="w-[160px]"
+              className="w-[160px] h-auto"
             />
           </Link>
 
@@ -54,11 +53,10 @@ export default async function Header() {
             <Image
               src="/logo/logo.svg"
               alt="Nu-Isoleren Logo"
-              width={200}
-              height={50}
+              width={942}
+              height={239}
               priority
-              style={{ height: 'auto' }}
-              className="w-[200px]"
+              className="w-[200px] h-auto"
             />
           </Link>
 
