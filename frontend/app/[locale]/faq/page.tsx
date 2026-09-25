@@ -1,19 +1,20 @@
+import { serializeJsonLd } from '@/lib/seo/json';
+import { pageMetadata } from '@/lib/seo/metadata';
 import { getTranslations } from 'next-intl/server';
 import { getFaqs } from '@/lib/faqs';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FaqSection from '@/components/faq/FaqSection';
 import { Link } from '@/i18n/routing';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Seo.faq' });
 
-  return {
+  return pageMetadata('/faq', locale, {
     title: t('title'),
     description: t('description'),
-  };
+  });
 }
 
 interface FaqPageProps {
@@ -24,7 +25,7 @@ export default async function FaqPage({ params }: FaqPageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'FaqPage' });
   const tBreadcrumb = await getTranslations({ locale, namespace: 'Breadcrumbs' });
-  const tFloating = await getTranslations({ locale, namespace: 'Floating' });
+  const company = await getTranslations({ locale, namespace: 'General.company' });
 
   const faqs = await getFaqs(locale);
 
@@ -46,13 +47,13 @@ export default async function FaqPage({ params }: FaqPageProps) {
     })),
   };
 
-  const rawPhoneNumber = tFloating('number').replace(/[^0-9+]/g, '');
+  const rawPhoneNumber = company('phoneHref');
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
 
       <main className="min-h-screen bg-white page-header-start pb-32">

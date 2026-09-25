@@ -1,3 +1,6 @@
+import JsonLd from '@/components/seo/JsonLd';
+import { articleSchema } from '@/lib/seo/schema';
+import { contentMetadata } from '@/lib/seo/metadata';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 
@@ -17,7 +20,6 @@ interface KnowledgeArticlePageProps {
   }>;
 }
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,
@@ -35,7 +37,7 @@ export async function generateMetadata({
 
   const article = result.data;
 
-  return {
+  return contentMetadata('articles', locale, slug, {
     title:
       article.seo_title ||
       `${article.title} | Nu-Isoleren`,
@@ -44,7 +46,7 @@ export async function generateMetadata({
       article.seo_description ||
       article.excerpt ||
       undefined,
-  };
+  });
 }
 
 export default async function KnowledgeArticlePage({
@@ -84,6 +86,7 @@ export default async function KnowledgeArticlePage({
 
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd data={articleSchema(article, locale)} />
         <KnowledgeArticleAlternateLinks
       alternateSlugs={article.alternate_slugs}
     />

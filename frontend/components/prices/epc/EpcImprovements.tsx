@@ -1,27 +1,10 @@
+import { serviceSlug } from '@/lib/seo/inventory';
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 
 interface EpcImprovementsProps {
   locale: string;
 }
-
-const SERVICE_SLUGS = {
-  nl: {
-    cavity: "spouwmuurisolatie",
-    roof: "dakisolatie",
-    facade: "crepi",
-  },
-  fr: {
-    cavity: "isolation-mur-creux",
-    roof: "isolation-de-toiture",
-    facade: "crepi",
-  },
-  en: {
-    cavity: "cavity-wall-insulation",
-    roof: "roof-insulation",
-    facade: "crepi",
-  },
-} as const;
 
 export default async function EpcImprovements({
   locale,
@@ -31,10 +14,8 @@ export default async function EpcImprovements({
     namespace: "EpcPage.improvements",
   });
 
-  const currentLocale =
-    locale === "fr" || locale === "en" ? locale : "nl";
-
-  const slugs = SERVICE_SLUGS[currentLocale];
+  const [cavity, roof, facade] = await Promise.all(['spouwmuurisolatie', 'dakisolatie', 'crepi'].map(slug => serviceSlug(slug, locale)));
+  const slugs = { cavity, roof, facade };
 
   return (
     <section className="w-full bg-white py-16 md:py-24">
@@ -68,12 +49,7 @@ export default async function EpcImprovements({
             </p>
 
             <Link
-              href={{
-                pathname: "/services/[slug]",
-                params: {
-                  slug: slugs.cavity,
-                },
-              }}
+              href={slugs.cavity ? { pathname: "/services/[slug]", params: { slug: slugs.cavity } } : "/services"}
               className="inline-flex mt-5 font-bold text-[#C82024] hover:underline"
             >
               {t("cavity.link")}
@@ -94,12 +70,7 @@ export default async function EpcImprovements({
             </p>
 
             <Link
-              href={{
-                pathname: "/services/[slug]",
-                params: {
-                  slug: slugs.roof,
-                },
-              }}
+              href={slugs.roof ? { pathname: "/services/[slug]", params: { slug: slugs.roof } } : "/services"}
               className="inline-flex mt-5 font-bold text-[#C82024] hover:underline"
             >
               {t("roof.link")}
@@ -120,12 +91,7 @@ export default async function EpcImprovements({
             </p>
 
             <Link
-              href={{
-                pathname: "/services/[slug]",
-                params: {
-                  slug: slugs.facade,
-                },
-              }}
+              href={slugs.facade ? { pathname: "/services/[slug]", params: { slug: slugs.facade } } : "/services"}
               className="inline-flex mt-5 font-bold text-[#C82024] hover:underline"
             >
               {t("facade.link")}

@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Link } from '@/i18n/routing';
+import Link from 'next/link';
+import { useLocale } from 'next-intl';
+import { localizedLink } from '@/lib/seo/urls';
 
 interface ServiceCardProps {
   href: string;
@@ -26,9 +28,10 @@ export default function ServiceCard({
   const initialSrc = imageSrc && imageSrc.trim() !== '' ? imageSrc : FALLBACK_IMAGE;
   const [currentSrc, setCurrentSrc] = useState(initialSrc);
 
+  const locale = useLocale();
   return (
     <Link
-      href={href as never}
+      href={localizedLink(href, locale)}
       className="group relative block aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300"
     >
       <Image

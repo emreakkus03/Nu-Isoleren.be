@@ -4,11 +4,7 @@ import { useEffect } from 'react';
 import { useAlternateLinks } from '@/context/AlternateLinksContext';
 
 interface ServiceAlternateLinksProps {
-  alternateSlugs: {
-    nl: string;
-    fr: string;
-    en: string;
-  };
+  alternateSlugs: Record<string, string>;
 }
 
 export default function ServiceAlternateLinks({

@@ -1,3 +1,5 @@
+import { paginationOptions, validatePage, type PageSearch } from '@/lib/seo/pagination';
+import { pageMetadata } from '@/lib/seo/metadata';
 import { getTranslations } from 'next-intl/server';
 import ServiceCard from '@/components/ui/ServiceCard';
 import { getAllProjects, getProjectFilters } from '@/lib/projects';
@@ -5,21 +7,25 @@ import ProjectFilters from '@/components/projects/ProjectFilters';
 import Pagination from '@/components/projects/Pagination';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
-export const dynamic = 'force-dynamic';
 
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: Promise<{ locale: string }> 
+export async function generateMetadata({
+  params, searchParams
+}: {
+  params: Promise<{ locale: string }>; searchParams: Promise<PageSearch>
 }) {
   const { locale } = await params;
-  
+
   const t = await getTranslations({ locale, namespace: 'Seo.projects' });
 
-  return {
+  const search = await searchParams;
+  const options = paginationOptions(search);
+  const result = await getAllProjects(locale, search);
+  validatePage(search, result.meta.last_page, '/projects', locale);
+
+  return pageMetadata('/projects', locale, {
     title: t('title'),
     description: t('description'),
-  };
+  }, options);
 }
 
 interface ProjectsPageProps {
@@ -34,21 +40,14 @@ export default async function ProjectsPage({ params, searchParams }: ProjectsPag
   const tBreadcrumb = await getTranslations({ locale, namespace: 'Breadcrumbs' });
 
   const [projectsData, filtersData] = await Promise.all([
-    getAllProjects(locale, resolvedSearchParams).catch((err) => {
-      console.error('Fout bij ophalen projecten:', err);
-      return { 
-        data: [], 
-        meta: { total: 0, current_page: 1, last_page: 1 } 
-      };
-    }),
-    getProjectFilters(locale).catch((err) => {
-      console.error('Fout bij ophalen projectfilters:', err);
-      return { services: [], cities: [] };
-    }),
+    getAllProjects(locale, resolvedSearchParams),
+    getProjectFilters(locale),
   ]);
 
   const projects = projectsData?.data ?? [];
   const meta = projectsData?.meta ?? { total: 0, current_page: 1, last_page: 1 };
+
+  validatePage(resolvedSearchParams, meta.last_page, '/projects', locale);
 
   const breadcrumbs = [
     { label: tBreadcrumb('home'), href: '/' },
@@ -58,7 +57,7 @@ export default async function ProjectsPage({ params, searchParams }: ProjectsPag
   return (
     <main className="min-h-screen bg-white page-header-start pb-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        
+
         <div>
           <Breadcrumbs items={breadcrumbs} />
         </div>
@@ -78,7 +77,7 @@ export default async function ProjectsPage({ params, searchParams }: ProjectsPag
 </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          
+
           <aside className="lg:col-span-1">
             <ProjectFilters
               services={filtersData?.services ?? []}

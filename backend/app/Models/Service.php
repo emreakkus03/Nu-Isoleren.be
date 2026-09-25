@@ -3,16 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\Translatable\HasTranslations;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-
 
 class Service extends Model
 {
     use HasTranslations;
 
     protected $fillable = [
+        'is_indexable',
         'name',
         'slug',
         'badge',
@@ -44,6 +44,7 @@ class Service extends Model
     ];
 
     protected $casts = [
+        'is_indexable' => 'boolean',
         'sections' => 'array',
         'is_active' => 'boolean',
         'is_featured_home' => 'boolean',
@@ -54,28 +55,29 @@ class Service extends Model
     {
         return $this->hasMany(Faq::class)->orderBy('order_column');
     }
-    
+
     public function projects(): HasMany
-{
-    return $this->hasMany(Project::class);
-}
+    {
+        return $this->hasMany(Project::class);
+    }
 
-public function quoteRequests(): BelongsToMany
-{
-    return $this->belongsToMany(QuoteRequest::class);
-}
+    public function quoteRequests(): BelongsToMany
+    {
+        return $this->belongsToMany(QuoteRequest::class);
+    }
 
-public function knowledgeArticles(): HasMany
-{
-    return $this->hasMany(KnowledgeArticle::class);
-}
+    public function knowledgeArticles(): HasMany
+    {
+        return $this->hasMany(KnowledgeArticle::class);
+    }
 
-public function materials(): BelongsToMany
-{
-    return $this->belongsToMany(Material::class)
-        ->withPivot('sort_order')
-        ->withTimestamps()
-        ->where('materials.is_active', true)
-        ->orderByPivot('sort_order');
-}
+    public function materials(): BelongsToMany
+    {
+        return $this->belongsToMany(Material::class)
+            ->using(SeoRelation::class)
+            ->withPivot('sort_order')
+            ->withTimestamps()
+            ->where('materials.is_active', true)
+            ->orderByPivot('sort_order');
+    }
 }

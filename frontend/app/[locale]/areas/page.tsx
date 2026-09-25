@@ -1,9 +1,9 @@
+import { pageMetadata } from '@/lib/seo/metadata';
 import { getTranslations } from 'next-intl/server';
 import AreasHero from '@/components/areas/AreasHero';
 import AreaCard from '@/components/areas/AreaCard';
 import { getCities } from '@/lib/cities';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ 
   params 
@@ -13,10 +13,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Seo.areas' });
 
-  return {
+  return pageMetadata('/areas', locale, {
     title: t('title'),
     description: t('description'),
-  };
+  });
 }
 
 export default async function ServiceAreasPage({

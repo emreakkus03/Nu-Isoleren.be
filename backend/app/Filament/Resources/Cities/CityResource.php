@@ -2,13 +2,13 @@
 
 namespace App\Filament\Resources\Cities;
 
-use App\Filament\Resources\Cities\Pages;
 use App\Models\City;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
@@ -17,14 +17,13 @@ use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
-use Filament\Forms\Components\Select;
 use Illuminate\Support\Str;
 
 class CityResource extends Resource
 {
     protected static ?string $model = City::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-map-pin';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-map-pin';
 
     protected static ?string $navigationLabel = 'Gemeenten / Steden';
 
@@ -42,8 +41,7 @@ class CityResource extends Resource
                         ->required()
                         ->live(onBlur: true)
                         ->afterStateUpdated(
-                            fn ($set, ?string $state) =>
-                                $set('slug', Str::slug($state))
+                            fn ($set, ?string $state) => $set('slug', Str::slug($state))
                         ),
 
                     TextInput::make('postal_code')
@@ -68,25 +66,25 @@ class CityResource extends Resource
                 ])
                 ->columns(2),
 
-                Section::make('Omliggende werkgebieden')
-    ->description(
-        'Kies maximaal 6 steden of gemeenten die logisch rond deze locatie liggen.'
-    )
-    ->schema([
-        Select::make('nearbyCities')
-            ->label('Nabijgelegen steden')
-            ->relationship(
-                name: 'nearbyCities',
-                titleAttribute: 'name'
-            )
-            ->multiple()
-            ->searchable()
-            ->preload()
-            ->maxItems(6)
-            ->helperText(
-                'Gebruik alleen steden waarvoor een echte werkgebiedpagina bestaat.'
-            ),
-    ]),
+            Section::make('Omliggende werkgebieden')
+                ->description(
+                    'Kies maximaal 6 steden of gemeenten die logisch rond deze locatie liggen.'
+                )
+                ->schema([
+                    Select::make('nearbyCities')
+                        ->label('Nabijgelegen steden')
+                        ->relationship(
+                            name: 'nearbyCities',
+                            titleAttribute: 'name'
+                        )
+                        ->multiple()
+                        ->searchable()
+                        ->preload()
+                        ->maxItems(6)
+                        ->helperText(
+                            'Gebruik alleen steden waarvoor een echte werkgebiedpagina bestaat.'
+                        ),
+                ]),
 
             Section::make('Hero')
                 ->description(
@@ -197,8 +195,7 @@ class CityResource extends Resource
                         ->defaultItems(0)
                         ->collapsible()
                         ->itemLabel(
-                            fn (array $state): ?string =>
-                                $state['question'] ?? 'Nieuwe vraag'
+                            fn (array $state): ?string => $state['question'] ?? 'Nieuwe vraag'
                         )
                         ->columnSpanFull(),
 
@@ -216,8 +213,7 @@ class CityResource extends Resource
                         ->defaultItems(0)
                         ->collapsible()
                         ->itemLabel(
-                            fn (array $state): ?string =>
-                                $state['question'] ?? 'Nieuwe vraag'
+                            fn (array $state): ?string => $state['question'] ?? 'Nieuwe vraag'
                         )
                         ->columnSpanFull(),
 
@@ -235,8 +231,7 @@ class CityResource extends Resource
                         ->defaultItems(0)
                         ->collapsible()
                         ->itemLabel(
-                            fn (array $state): ?string =>
-                                $state['question'] ?? 'Nieuwe vraag'
+                            fn (array $state): ?string => $state['question'] ?? 'Nieuwe vraag'
                         )
                         ->columnSpanFull(),
                 ]),
@@ -277,6 +272,7 @@ class CityResource extends Resource
                     'Laat een stad pas indexeren wanneer de unieke lokale inhoud en SEO-velden klaar zijn.'
                 )
                 ->schema([
+                    Toggle::make('is_published')->label('Publiek beschikbaar')->default(true),
                     Toggle::make('is_indexable')
                         ->label('Indexeerbaar door Google')
                         ->helperText(

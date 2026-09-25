@@ -1,3 +1,4 @@
+import { contentMetadata } from '@/lib/seo/metadata';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 
@@ -17,7 +18,6 @@ interface MaterialPageProps {
   }>;
 }
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,
@@ -33,7 +33,7 @@ export async function generateMetadata({
     return {};
   }
 
-  return {
+  return contentMetadata('materials', locale, slug, {
     title:
       material.seo.title ||
       `${material.name} | Nu-Isoleren`,
@@ -42,7 +42,7 @@ export async function generateMetadata({
       material.seo.description ||
       material.short_description ||
       undefined,
-  };
+  });
 }
 
 export default async function MaterialPage({

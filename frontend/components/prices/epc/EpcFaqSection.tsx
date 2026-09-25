@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/seo/json';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { getFaqs } from '@/lib/faqs';
 
@@ -42,7 +43,7 @@ export default async function EpcFaqSection() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqStructuredData),
+          __html: serializeJsonLd(faqStructuredData),
         }}
       />
 

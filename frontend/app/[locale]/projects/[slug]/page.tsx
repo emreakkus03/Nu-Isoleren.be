@@ -1,3 +1,4 @@
+import { contentMetadata } from '@/lib/seo/metadata';
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: ProjectDetailPageProps) {
     project.meta_description || project.short_description || undefined;
   const mainImage = project.images?.[0]?.image_url;
 
-  return {
+  return contentMetadata('projects', locale, slug, {
     title,
     description,
     openGraph: {
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: ProjectDetailPageProps) {
       description,
       images: mainImage ? [mainImage] : [],
     },
-  };
+  });
 }
 
 export default async function ProjectDetailPage({

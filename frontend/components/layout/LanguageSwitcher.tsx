@@ -79,6 +79,7 @@ export default function LanguageSwitcher() {
               <button
                 key={code}
                 type="button"
+                disabled={Boolean(params.slug && (!alternateSlugs || !alternateSlugs[code]))}
                 onClick={() => handleLocaleChange(code)}
                 className={`w-full block px-4 py-2 text-sm font-bold text-center transition uppercase ${
                   currentLocale === code 

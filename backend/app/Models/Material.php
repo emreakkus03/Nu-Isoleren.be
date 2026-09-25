@@ -23,6 +23,7 @@ class Material extends Model
     ];
 
     protected $fillable = [
+        'is_indexable',
         'name',
         'slug',
         'eyebrow',
@@ -41,6 +42,7 @@ class Material extends Model
     protected function casts(): array
     {
         return [
+            'is_indexable' => 'boolean',
             'is_active' => 'boolean',
             'sort_order' => 'integer',
         ];
@@ -49,6 +51,7 @@ class Material extends Model
     public function services(): BelongsToMany
     {
         return $this->belongsToMany(Service::class)
+            ->using(SeoRelation::class)
             ->withPivot('sort_order')
             ->withTimestamps()
             ->orderByPivot('sort_order');

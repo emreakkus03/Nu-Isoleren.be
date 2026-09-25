@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Material;
+use App\Support\ContentSeo;
+use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -22,7 +24,7 @@ class MaterialController extends Controller
 
         app()->setLocale($locale);
 
-        $materials = Material::query()
+        $materials = ContentSeo::availableQuery('materials', $locale)
             ->where('is_active', true)
             ->with([
                 'services' => function ($query) {
@@ -32,12 +34,11 @@ class MaterialController extends Controller
             ->orderBy('sort_order')
             ->get()
             ->map(
-                fn (Material $material) =>
-                    $this->transformMaterial(
-                        material: $material,
-                        locale: $locale,
-                        includeSections: false,
-                    )
+                fn (Material $material) => $this->transformMaterial(
+                    material: $material,
+                    locale: $locale,
+                    includeSections: false,
+                )
             );
 
         return response()->json([
@@ -53,16 +54,9 @@ class MaterialController extends Controller
 
         app()->setLocale($locale);
 
-        $material = Material::query()
+        $material = ContentSeo::availableQuery('materials', $locale)
             ->where('is_active', true)
-            ->where(function ($query) use ($slug) {
-                foreach ($this->locales as $locale) {
-                    $query->orWhere(
-                        "slug->{$locale}",
-                        $slug,
-                    );
-                }
-            })
+            ->where("slug->{$locale}", $slug)
             ->with([
                 'services' => function ($query) {
                     $query->where('services.is_active', true);
@@ -97,25 +91,7 @@ class MaterialController extends Controller
                 $locale,
             ),
 
-            'alternate_slugs' => [
-                'nl' => $material->getTranslation(
-                    'slug',
-                    'nl',
-                    false,
-                ),
-
-                'fr' => $material->getTranslation(
-                    'slug',
-                    'fr',
-                    false,
-                ),
-
-                'en' => $material->getTranslation(
-                    'slug',
-                    'en',
-                    false,
-                ),
-            ],
+            'alternate_slugs' => ContentSeo::slugs($material),
 
             'eyebrow' => $material->getTranslation(
                 'eyebrow',
@@ -163,39 +139,39 @@ class MaterialController extends Controller
                 ),
             ],
 
-           'services' => $material->services
-    ->map(function ($service) use ($locale) {
-        return [
-            'id' => $service->id,
+            'services' => $material->services
+                ->map(function ($service) use ($locale) {
+                    return [
+                        'id' => $service->id,
 
-            'name' => $service->getTranslation(
-                'name',
-                $locale,
-            ),
+                        'name' => $service->getTranslation(
+                            'name',
+                            $locale,
+                        ),
 
-            'slug' => $service->getTranslation(
-                'slug',
-                $locale,
-            ),
+                        'slug' => $service->getTranslation(
+                            'slug',
+                            $locale,
+                        ),
 
-            'badge' => $service->getTranslation(
-                'badge',
-                $locale,
-                false,
-            ),
+                        'badge' => $service->getTranslation(
+                            'badge',
+                            $locale,
+                            false,
+                        ),
 
-            'short_description' => $service->getTranslation(
-                'short_description',
-                $locale,
-                false,
-            ),
+                        'short_description' => $service->getTranslation(
+                            'short_description',
+                            $locale,
+                            false,
+                        ),
 
-            'thumbnail' => $this->getFileUrl(
-                $service->thumbnail,
-            ),
-        ];
-    })
-    ->values(),
+                        'thumbnail' => $this->getFileUrl(
+                            $service->thumbnail,
+                        ),
+                    ];
+                })
+                ->values(),
 
             'sort_order' => $material->sort_order,
         ];
@@ -213,16 +189,14 @@ class MaterialController extends Controller
                     : []
             )
                 ->filter(
-                    fn (array $section) =>
-                        $section['is_active'] ?? true
+                    fn (array $section) => $section['is_active'] ?? true
                 )
                 ->map(function (array $section) {
                     $section['images'] = collect(
                         $section['images'] ?? []
                     )
                         ->map(
-                            fn (string $image) =>
-                                $this->getFileUrl($image)
+                            fn (string $image) => $this->getFileUrl($image)
                         )
                         ->values()
                         ->all();
@@ -255,11 +229,11 @@ class MaterialController extends Controller
     private function getFileUrl(
         ?string $path,
     ): ?string {
-        if (!$path) {
+        if (! $path) {
             return null;
         }
 
-        /** @var \Illuminate\Filesystem\FilesystemAdapter $disk */
+        /** @var FilesystemAdapter $disk */
         $disk = Storage::disk('s3');
 
         return $disk->url(

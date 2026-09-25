@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import type { GoogleReviewItem } from '@/lib/google-reviews';
 
 interface GoogleReviewsCarouselProps {
@@ -180,11 +181,13 @@ export default function GoogleReviewsCarousel({
 
               <div className="mt-auto max-md:mt-0 pt-6 flex items-center gap-3">
                 {review.author.photoUri && (
-                  <img
+                  <Image
                     src={review.author.photoUri}
                     alt={review.author.displayName}
                     width={38}
                     height={38}
+                    unoptimized
+                    loading="eager"
                     referrerPolicy="no-referrer"
                     className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover"
                   />

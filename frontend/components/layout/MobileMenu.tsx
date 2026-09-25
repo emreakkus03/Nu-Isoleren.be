@@ -45,7 +45,8 @@ export default function MobileMenu() {
 
   const closeMenu = () => setIsOpen(false);
 
-  const rawPhoneNumber = tFloating('number').replace(/[^0-9+]/g, '');
+  const company = useTranslations('General.company');
+  const rawPhoneNumber = company('phoneHref');
 
   return (
     <>

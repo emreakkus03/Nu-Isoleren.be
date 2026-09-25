@@ -1,54 +1,40 @@
+import { contentRequest } from './content-api';
 import { Project, PaginatedProjects, ProjectFiltersData } from '@/types/project';
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'http://backend.ddev.site/api';
 
 export async function getFeaturedProjects(
   locale: string = 'nl'
 ): Promise<Project[]> {
-  try {
-    const res = await fetch(
-      `${API_BASE_URL}/featured-projects?locale=${locale}`,
-      {
-        cache: 'no-store',
-      }
+    const res = await contentRequest(
+      `/featured-projects?locale=${locale}`,
+      ['projects']
     );
 
     if (!res.ok) return [];
 
     return await res.json();
-  } catch (error) {
-    console.error('Fout bij het fetchen van uitgelichte projecten:', error);
-    return [];
-  }
+
 }
 
 export async function getRecentProjects(
   locale: string = 'nl',
   limit: number = 3
 ): Promise<Project[]> {
-  try {
-    const res = await fetch(
-      `${API_BASE_URL}/recent-projects?locale=${locale}&limit=${limit}`,
-      {
-        cache: 'no-store',
-      }
+    const res = await contentRequest(
+      `/recent-projects?locale=${locale}&limit=${limit}`,
+      ['projects']
     );
 
     if (!res.ok) return [];
 
     return await res.json();
-  } catch (error) {
-    console.error('Fout bij het fetchen van recente projecten:', error);
-    return [];
-  }
+
 }
 
 export async function getAllProjects(
   locale: string = 'nl',
   searchParams?: Record<string, string | string[] | undefined>
 ): Promise<PaginatedProjects> {
-  try {
     const params = new URLSearchParams();
 
     params.set('locale', locale);
@@ -61,11 +47,9 @@ export async function getAllProjects(
       });
     }
 
-    const res = await fetch(
-      `${API_BASE_URL}/projects?${params.toString()}`,
-      {
-        cache: 'no-store',
-      }
+    const res = await contentRequest(
+      `/projects?${params.toString()}`,
+      ['projects']
     );
 
     if (!res.ok) {
@@ -81,30 +65,15 @@ export async function getAllProjects(
     }
 
     return await res.json();
-  } catch (error) {
-    console.error('Fout bij het ophalen van projecten:', error);
 
-    return {
-      data: [],
-      meta: {
-        current_page: 1,
-        last_page: 1,
-        per_page: 9,
-        total: 0,
-      },
-    };
-  }
 }
 
 export async function getProjectFilters(
   locale: string = 'nl'
 ): Promise<ProjectFiltersData> {
-  try {
-    const res = await fetch(
-      `${API_BASE_URL}/project-filters?locale=${locale}`,
-      {
-        cache: 'no-store',
-      }
+    const res = await contentRequest(
+      `/project-filters?locale=${locale}`,
+      ['projects']
     );
 
     if (!res.ok) {
@@ -115,33 +84,20 @@ export async function getProjectFilters(
     }
 
     return await res.json();
-  } catch (error) {
-    console.error('Fout bij het ophalen van filters:', error);
 
-    return {
-      services: [],
-      cities: [],
-    };
-  }
 }
 
 export async function getProjectBySlug(
   slug: string,
   locale: string = 'nl'
 ): Promise<Project | null> {
-  try {
-    const res = await fetch(
-      `${API_BASE_URL}/projects/${slug}?locale=${locale}`,
-      {
-        cache: 'no-store',
-      }
+    const res = await contentRequest(
+      `/projects/${slug}?locale=${locale}`,
+      ['projects'], true
     );
 
     if (!res.ok) return null;
 
     return await res.json();
-  } catch (error) {
-    console.error(`Fout bij fetchen van project "${slug}":`, error);
-    return null;
-  }
+
 }

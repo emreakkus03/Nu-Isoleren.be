@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname, useRouter } from '@/i18n/routing';
+import { Link } from '@/i18n/routing';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -15,46 +15,30 @@ export default function KnowledgePagination({
 }: KnowledgePaginationProps) {
   const t = useTranslations('KnowledgePage');
 
-  const router = useRouter();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
 
   if (lastPage <= 1) {
     return null;
   }
 
-  const goToPage = (page: number) => {
-    const current = new URLSearchParams(
-      Array.from(searchParams.entries()),
-    );
-
-    if (page <= 1) {
-      current.delete('page');
-    } else {
-      current.set('page', String(page));
-    }
-
-    const search = current.toString();
-
-    router.push(
-      `${pathname}${search ? `?${search}` : ''}` as Parameters<
-        typeof router.push
-      >[0],
-    );
+  const pageHref = (page: number) => {
+    const query = Object.fromEntries(searchParams.entries());
+    if (page <= 1) delete query.page;
+    else query.page = String(page);
+    return { pathname: '/knowledge' as const, query };
   };
 
   return (
     <div className="max-md:flex-col max-md:text-center flex items-center justify-between gap-4 pt-8 mt-8 border-t border-gray-200">
-      <button
-        type="button"
-        disabled={currentPage <= 1}
-        onClick={() =>
-          goToPage(currentPage - 1)
-        }
-        className="max-md:min-h-11 max-md:w-full inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-gray-200 text-sm font-bold text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer transition"
+      <Link
+        aria-disabled={currentPage <= 1}
+        tabIndex={currentPage <= 1 ? -1 : undefined}
+        onClick={event => { if (currentPage <= 1) event.preventDefault(); }}
+        href={pageHref(Math.max(1, currentPage - 1))}
+        className="max-md:min-h-11 max-md:w-full inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-gray-200 text-sm font-bold text-gray-700 hover:bg-gray-50 aria-disabled:opacity-40 aria-disabled:cursor-not-allowed cursor-pointer transition"
       >
         ← {t('pagination.previous')}
-      </button>
+      </Link>
 
       <span className="text-sm font-semibold text-gray-500">
         {t('pagination.page', {
@@ -63,16 +47,15 @@ export default function KnowledgePagination({
         })}
       </span>
 
-      <button
-        type="button"
-        disabled={currentPage >= lastPage}
-        onClick={() =>
-          goToPage(currentPage + 1)
-        }
-        className="max-md:min-h-11 max-md:w-full inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-gray-200 text-sm font-bold text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer transition"
+      <Link
+        aria-disabled={currentPage >= lastPage}
+        tabIndex={currentPage >= lastPage ? -1 : undefined}
+        onClick={event => { if (currentPage >= lastPage) event.preventDefault(); }}
+        href={pageHref(Math.min(lastPage, currentPage + 1))}
+        className="max-md:min-h-11 max-md:w-full inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-gray-200 text-sm font-bold text-gray-700 hover:bg-gray-50 aria-disabled:opacity-40 aria-disabled:cursor-not-allowed cursor-pointer transition"
       >
         {t('pagination.next')} →
-      </button>
+      </Link>
     </div>
   );
 }

@@ -1,9 +1,9 @@
+import { pageMetadata } from '@/lib/seo/metadata';
 import { getTranslations } from 'next-intl/server';
 import { getServices } from '@/lib/services';
 import ServiceCard from '@/components/ui/ServiceCard';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ 
   params 
@@ -14,10 +14,10 @@ export async function generateMetadata({
   
   const t = await getTranslations({ locale, namespace: 'Seo.services' });
 
-  return {
+  return pageMetadata('/services', locale, {
     title: t('title'),
     description: t('description'),
-  };
+  });
 }
 
 interface ServicesPageProps {
@@ -30,10 +30,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
   const [t, tBreadcrumb, services] = await Promise.all([
     getTranslations({ locale, namespace: 'ServicesPage' }),
     getTranslations({ locale, namespace: 'Breadcrumbs' }),
-    getServices(locale).catch((err) => {
-      console.error('Fout bij ophalen services op services-pagina:', err);
-      return [];
-    }),
+    getServices(locale),
   ]);
 
   const breadcrumbs = [

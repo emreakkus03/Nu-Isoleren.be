@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo/metadata';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
@@ -21,10 +22,10 @@ export async function generateMetadata({
     namespace: 'Seo.contact',
   });
 
-  return {
+  return pageMetadata('/contact', locale, {
     title: t('title'),
     description: t('description'),
-  };
+  });
 }
 
 export default async function ContactPage({

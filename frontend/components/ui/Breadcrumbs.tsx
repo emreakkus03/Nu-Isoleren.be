@@ -1,4 +1,8 @@
-import { Link } from '@/i18n/routing';
+import Link from 'next/link';
+import { getLocale } from 'next-intl/server';
+import { siteOrigin } from '@/lib/seo/config';
+import { localizedLink } from '@/lib/seo/urls';
+import { serializeJsonLd } from '@/lib/seo/json';
 
 export interface BreadcrumbItem {
   label: string;
@@ -9,8 +13,9 @@ interface BreadcrumbsProps {
   items: BreadcrumbItem[];
 }
 
-export default function Breadcrumbs({ items }: BreadcrumbsProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nu-isoleren.be';
+export default async function Breadcrumbs({ items }: BreadcrumbsProps) {
+  const baseUrl = siteOrigin();
+  const locale = await getLocale();
 
   const schemaData = {
     '@context': 'https://schema.org',
@@ -19,16 +24,16 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      ...(item.href ? { item: `${baseUrl}${item.href}` } : {}),
+      ...(item.href ? { item: `${baseUrl}${localizedLink(item.href, locale)}` } : {}),
     })),
   };
 
   return (
     <>
-      <script
+      {baseUrl && <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(schemaData) }}
+      />}
 
       <nav aria-label="Breadcrumb" className="pb-8">
         <ol className="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-500">
@@ -40,7 +45,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                 {index > 0 && <span className="text-slate-300 select-none">/</span>}
                 {item.href && !isLast ? (
                   <Link
-                    href={item.href as Parameters<typeof Link>[0]['href']}
+                    href={localizedLink(item.href, locale)}
                     className="hover:text-slate-900 transition-colors"
                   >
                     {item.label}

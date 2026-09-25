@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources\Services;
 
-use App\Filament\Resources\Services\Pages;
 use App\Models\Service;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
@@ -30,7 +29,7 @@ class ServiceResource extends Resource
 {
     protected static ?string $model = Service::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-wrench';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-wrench';
 
     protected static ?string $navigationLabel = 'Diensten';
 
@@ -109,8 +108,7 @@ class ServiceResource extends Resource
                                 ->required()
                                 ->live(onBlur: true)
                                 ->afterStateUpdated(
-                                    fn ($set, ?string $state) =>
-                                        $set('slug', Str::slug($state))
+                                    fn ($set, ?string $state) => $set('slug', Str::slug($state))
                                 ),
 
                             TextInput::make('slug')
@@ -199,8 +197,7 @@ class ServiceResource extends Resource
                             ->collapsed()
                             ->reorderable()
                             ->itemLabel(
-                                fn (array $state): ?string =>
-                                    $state['text'] ?? null
+                                fn (array $state): ?string => $state['text'] ?? null
                             ),
 
                         FileUpload::make('images')
@@ -223,8 +220,7 @@ class ServiceResource extends Resource
             ->reorderable()
             ->addActionLabel($t['add_section'])
             ->itemLabel(
-                fn (array $state): ?string =>
-                    $state['nav_title'] ?? null
+                fn (array $state): ?string => $state['nav_title'] ?? null
             );
     }
 
@@ -480,8 +476,7 @@ class ServiceResource extends Resource
                             ->reorderable()
                             ->cloneable()
                             ->itemLabel(
-                                fn (array $state): ?string =>
-                                    $state['title']
+                                fn (array $state): ?string => $state['title']
                                     ?? $state['text']
                                     ?? null
                             ),
@@ -583,8 +578,7 @@ class ServiceResource extends Resource
                             ->cloneable()
                             ->reorderable()
                             ->itemLabel(
-                                fn (array $state): ?string =>
-                                    $state['title'] ?? null
+                                fn (array $state): ?string => $state['title'] ?? null
                             ),
                     ]),
 
@@ -637,12 +631,11 @@ class ServiceResource extends Resource
                             ->cloneable()
                             ->collapsible()
                             ->itemLabel(
-                                fn (array $state): ?string =>
-                                    trim(
-                                        ($state['number'] ?? '')
-                                        . ' '
-                                        . ($state['title'] ?? '')
-                                    )
+                                fn (array $state): ?string => trim(
+                                    ($state['number'] ?? '')
+                                    .' '
+                                    .($state['title'] ?? '')
+                                )
                             ),
                     ]),
 
@@ -731,8 +724,7 @@ class ServiceResource extends Resource
                             ->cloneable()
                             ->reorderable()
                             ->itemLabel(
-                                fn (array $state): ?string =>
-                                    $state['label'] ?? null
+                                fn (array $state): ?string => $state['label'] ?? null
                             ),
                     ]),
 
@@ -999,8 +991,7 @@ class ServiceResource extends Resource
                                 ->required()
                                 ->live(onBlur: true)
                                 ->afterStateUpdated(
-                                    fn ($set, ?string $state) =>
-                                        $set('slug.nl', Str::slug($state))
+                                    fn ($set, ?string $state) => $set('slug.nl', Str::slug($state))
                                 ),
 
                             TextInput::make('slug.nl')
@@ -1061,8 +1052,7 @@ class ServiceResource extends Resource
                                 ->label('Nom du service (FR)')
                                 ->live(onBlur: true)
                                 ->afterStateUpdated(
-                                    fn ($set, ?string $state) =>
-                                        $set('slug.fr', Str::slug($state))
+                                    fn ($set, ?string $state) => $set('slug.fr', Str::slug($state))
                                 ),
 
                             TextInput::make('slug.fr')
@@ -1119,8 +1109,7 @@ class ServiceResource extends Resource
                                 ->label('Service name (EN)')
                                 ->live(onBlur: true)
                                 ->afterStateUpdated(
-                                    fn ($set, ?string $state) =>
-                                        $set('slug.en', Str::slug($state))
+                                    fn ($set, ?string $state) => $set('slug.en', Str::slug($state))
                                 ),
 
                             TextInput::make('slug.en')
@@ -1197,6 +1186,7 @@ class ServiceResource extends Resource
                         ->numeric()
                         ->default(0),
 
+                    Toggle::make('is_indexable')->label('Indexeerbaar')->default(true),
                     Toggle::make('is_active')
                         ->label('Actief')
                         ->default(true),
@@ -1220,16 +1210,14 @@ class ServiceResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->label('Dienst (NL)')
                     ->formatStateUsing(
-                        fn ($record) =>
-                            $record->getTranslation('name', 'nl', false) ?: '-'
+                        fn ($record) => $record->getTranslation('name', 'nl', false) ?: '-'
                     )
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('badge')
                     ->label('Badge (NL)')
                     ->formatStateUsing(
-                        fn ($record) =>
-                            $record->getTranslation('badge', 'nl', false) ?: '-'
+                        fn ($record) => $record->getTranslation('badge', 'nl', false) ?: '-'
                     )
                     ->badge(),
 

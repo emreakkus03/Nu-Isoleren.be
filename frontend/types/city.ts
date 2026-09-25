@@ -34,7 +34,7 @@ export interface CityProject {
 
     alt?: string | null;
 
-    [key: string]: any;
+    [key: string]: unknown;
   }>;
 
   service_type?: string | null;
@@ -49,6 +49,7 @@ export interface CityFaq {
 }
 
 export interface City {
+  alternate_slugs: Record<string, string>;
   id: number;
 
   name: string;

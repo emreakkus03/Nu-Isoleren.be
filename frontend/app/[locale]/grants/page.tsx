@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo/metadata';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
@@ -23,7 +24,7 @@ export async function generateMetadata({
     namespace: 'GrantsPage.metadata',
   });
 
-  return {
+  return pageMetadata('/grants', locale, {
     title: t('title'),
     description: t('description'),
 
@@ -32,7 +33,7 @@ export async function generateMetadata({
       description: t('description'),
       type: 'website',
     },
-  };
+  });
 }
 
 export default async function GrantsPage({

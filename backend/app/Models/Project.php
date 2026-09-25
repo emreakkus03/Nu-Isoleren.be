@@ -12,6 +12,7 @@ class Project extends Model
     use HasTranslations;
 
     protected $fillable = [
+        'is_indexable',
         'service_id',
         'city_id',
         'title',
@@ -35,6 +36,7 @@ class Project extends Model
     ];
 
     protected $casts = [
+        'is_indexable' => 'boolean',
         'featured_on_home' => 'boolean',
         'published' => 'boolean',
     ];

@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo/metadata';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
@@ -28,7 +29,7 @@ export async function generateMetadata({
     namespace: 'WalloniaGrantsPage.metadata',
   });
 
-  return {
+  return pageMetadata('/grants/wallonia', locale, {
     title: t('title'),
     description: t('description'),
     openGraph: {
@@ -36,7 +37,7 @@ export async function generateMetadata({
       description: t('description'),
       type: 'website',
     },
-  };
+  });
 }
 
 export default async function WalloniaGrantsPage({

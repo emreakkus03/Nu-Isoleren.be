@@ -3,15 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\Translatable\HasTranslations;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class City extends Model
 {
     use HasTranslations;
 
     protected $fillable = [
+        'is_published',
         'name',
         'postal_code',
         'slug',
@@ -42,6 +43,7 @@ class City extends Model
     ];
 
     protected $casts = [
+        'is_published' => 'boolean',
         'is_featured' => 'boolean',
         'is_indexable' => 'boolean',
     ];
@@ -52,12 +54,12 @@ class City extends Model
     }
 
     public function nearbyCities(): BelongsToMany
-{
-    return $this->belongsToMany(
-        City::class,
-        'city_nearby_city',
-        'city_id',
-        'nearby_city_id'
-    )->withTimestamps();
-}
+    {
+        return $this->belongsToMany(
+            City::class,
+            'city_nearby_city',
+            'city_id',
+            'nearby_city_id'
+        )->using(SeoRelation::class)->withTimestamps();
+    }
 }

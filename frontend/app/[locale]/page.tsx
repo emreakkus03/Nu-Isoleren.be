@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo/metadata';
 import { getTranslations } from 'next-intl/server';
 
 import Hero from '@/components/home/Hero';
@@ -25,10 +26,10 @@ export async function generateMetadata({
     namespace: 'Seo.home',
   });
 
-  return {
+  return pageMetadata('/', locale, {
     title: t('title'),
     description: t('description'),
-  };
+  });
 }
 
 export default async function HomePage({

@@ -1,3 +1,5 @@
+import { getServices } from '@/lib/services';
+import { pageMetadata } from '@/lib/seo/metadata';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
@@ -17,48 +19,6 @@ interface QuotePageProps {
   }>;
 }
 
-interface Service {
-  id: number;
-  name: string;
-}
-
-async function getServices(locale: string): Promise<Service[]> {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-
-  if (!apiUrl) {
-    throw new Error('NEXT_PUBLIC_API_URL is not configured.');
-  }
-
-  const response = await fetch(
-    `${apiUrl}/services?locale=${locale}`,
-    {
-      next: {
-        revalidate: 3600,
-      },
-    }
-  );
-
-  if (!response.ok) {
-    throw new Error('Could not load services.');
-  }
-
-  const result = await response.json();
-
-  const services = Array.isArray(result)
-    ? result
-    : result.data ?? [];
-
-  return services.map(
-    (service: {
-      id: number;
-      name: string;
-    }) => ({
-      id: service.id,
-      name: service.name,
-    })
-  );
-}
-
 export async function generateMetadata({
   params,
 }: QuotePageProps): Promise<Metadata> {
@@ -69,10 +29,10 @@ export async function generateMetadata({
     namespace: 'QuotePage.metadata',
   });
 
-  return {
+  return pageMetadata('/quote', locale, {
     title: t('title'),
     description: t('description'),
-  };
+  });
 }
 
 export default async function QuotePage({

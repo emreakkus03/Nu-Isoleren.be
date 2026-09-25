@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources\Projects;
 
-use App\Filament\Resources\Projects\Pages;
 use App\Models\Project;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
@@ -10,8 +9,8 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Group;
@@ -27,7 +26,7 @@ class ProjectResource extends Resource
 {
     protected static ?string $model = Project::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-photo';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-photo';
 
     protected static ?string $navigationLabel = 'Realisaties';
 
@@ -156,6 +155,7 @@ class ProjectResource extends Resource
                         ->preload()
                         ->required(),
 
+                    Toggle::make('is_indexable')->label('Indexeerbaar')->default(true),
                     Toggle::make('published')
                         ->label('Gepubliceerd')
                         ->default(true),

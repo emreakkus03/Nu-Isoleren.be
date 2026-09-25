@@ -9,17 +9,16 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Utilities\Set;
-use Illuminate\Support\Str;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
-use Filament\Schemas\Schema;
 use Filament\Schemas\Components\Utilities\Get;
-
+use Filament\Schemas\Components\Utilities\Set;
+use Filament\Schemas\Schema;
+use Illuminate\Support\Str;
 
 class KnowledgeArticleForm
 {
@@ -88,6 +87,7 @@ class KnowledgeArticleForm
                             ->label('Uitgelicht')
                             ->default(false),
 
+                        Toggle::make('is_indexable')->label('Indexeerbaar')->default(true),
                         Toggle::make('published')
                             ->label('Gepubliceerd')
                             ->default(false),
@@ -128,32 +128,32 @@ class KnowledgeArticleForm
         return Tab::make($label)
             ->schema([
                 TextInput::make("title.{$locale}")
-    ->label('Titel')
-    ->required($required)
-    ->maxLength(255)
-    ->live(onBlur: true)
-    ->afterStateUpdated(function (
-        ?string $state,
-        Set $set,
-        string $operation,
-    ) use ($locale) {
-        if ($operation !== 'create') {
-            return;
-        }
+                    ->label('Titel')
+                    ->required($required)
+                    ->maxLength(255)
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(function (
+                        ?string $state,
+                        Set $set,
+                        string $operation,
+                    ) use ($locale) {
+                        if ($operation !== 'create') {
+                            return;
+                        }
 
-        $set(
-            "slug.{$locale}",
-            Str::slug($state ?? '')
-        );
-    })
-    ->columnSpanFull(),
+                        $set(
+                            "slug.{$locale}",
+                            Str::slug($state ?? '')
+                        );
+                    })
+                    ->columnSpanFull(),
 
-TextInput::make("slug.{$locale}")
-    ->label('Slug')
-    ->required($required)
-    ->maxLength(255)
-    ->helperText('Wordt automatisch ingevuld op basis van de titel.')
-    ->columnSpanFull(),
+                TextInput::make("slug.{$locale}")
+                    ->label('Slug')
+                    ->required($required)
+                    ->maxLength(255)
+                    ->helperText('Wordt automatisch ingevuld op basis van de titel.')
+                    ->columnSpanFull(),
 
                 Textarea::make("excerpt.{$locale}")
                     ->label('Korte omschrijving')
@@ -172,31 +172,31 @@ TextInput::make("slug.{$locale}")
                         Repeater::make("sections.{$locale}")
                             ->label('Secties')
                             ->schema([
-                               TextInput::make('nav_title')
-    ->label('Navigatietitel')
-    ->required()
-    ->maxLength(100)
-    ->live(onBlur: true)
-    ->afterStateUpdated(function (
-        ?string $state,
-        Get $get,
-        Set $set,
-    ) {
-        if (blank($get('slug'))) {
-            $set(
-                'slug',
-                Str::slug($state ?? '')
-            );
-        }
-    }),
+                                TextInput::make('nav_title')
+                                    ->label('Navigatietitel')
+                                    ->required()
+                                    ->maxLength(100)
+                                    ->live(onBlur: true)
+                                    ->afterStateUpdated(function (
+                                        ?string $state,
+                                        Get $get,
+                                        Set $set,
+                                    ) {
+                                        if (blank($get('slug'))) {
+                                            $set(
+                                                'slug',
+                                                Str::slug($state ?? '')
+                                            );
+                                        }
+                                    }),
 
-TextInput::make('slug')
-    ->label('Sectie slug')
-    ->required()
-    ->maxLength(150)
-    ->helperText(
-        'Wordt automatisch ingevuld op basis van de navigatietitel.'
-    ),
+                                TextInput::make('slug')
+                                    ->label('Sectie slug')
+                                    ->required()
+                                    ->maxLength(150)
+                                    ->helperText(
+                                        'Wordt automatisch ingevuld op basis van de navigatietitel.'
+                                    ),
 
                                 TextInput::make('heading')
                                     ->label('Titel')
@@ -223,8 +223,7 @@ TextInput::make('slug')
                             ->cloneable()
                             ->reorderable()
                             ->itemLabel(
-                                fn (array $state): ?string =>
-                                    $state['nav_title']
+                                fn (array $state): ?string => $state['nav_title']
                                         ?? $state['heading']
                                         ?? 'Nieuwe sectie'
                             )

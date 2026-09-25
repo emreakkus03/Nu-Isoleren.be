@@ -1,3 +1,5 @@
+import { paginationOptions, validatePage, type PageSearch } from '@/lib/seo/pagination';
+import { pageMetadata } from '@/lib/seo/metadata';
 import { getTranslations } from 'next-intl/server';
 
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
@@ -10,12 +12,11 @@ import {
   getKnowledgeCategories,
 } from '@/lib/knowledge';
 
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
-  params,
+  params, searchParams,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }>; searchParams: Promise<PageSearch>;
 }) {
   const { locale } = await params;
 
@@ -24,10 +25,16 @@ export async function generateMetadata({
     namespace: 'Seo.knowledge',
   });
 
-  return {
+  const search = await searchParams;
+  const options = paginationOptions(search);
+  const category = typeof search.categorie === 'string' ? search.categorie : typeof search.category === 'string' ? search.category : undefined;
+  const result = await getKnowledgeArticles(locale, { category, page: options.page, perPage: 9 });
+  validatePage(search, result.meta.last_page, '/knowledge', locale);
+
+  return pageMetadata('/knowledge', locale, {
     title: t('title'),
     description: t('description'),
-  };
+  }, options);
 }
 
 interface KnowledgePageProps {
@@ -64,44 +71,16 @@ export default async function KnowledgePage({
         ? resolvedSearchParams.category
         : undefined;
 
-  const page =
-    typeof resolvedSearchParams.page === 'string'
-      ? Math.max(
-          Number.parseInt(resolvedSearchParams.page, 10) || 1,
-          1,
-        )
-      : 1;
+  const { page } = paginationOptions(resolvedSearchParams);
 
   const [articlesData, categories] = await Promise.all([
     getKnowledgeArticles(locale, {
       category,
       page,
       perPage: 9,
-    }).catch((error) => {
-      console.error(
-        'Fout bij ophalen kennisbankartikels:',
-        error,
-      );
-
-      return {
-        data: [],
-        meta: {
-          current_page: 1,
-          last_page: 1,
-          per_page: 9,
-          total: 0,
-        },
-      };
     }),
 
-    getKnowledgeCategories(locale).catch((error) => {
-      console.error(
-        'Fout bij ophalen kenniscategorieën:',
-        error,
-      );
-
-      return [];
-    }),
+    getKnowledgeCategories(locale),
   ]);
 
   const articles = articlesData?.data ?? [];
@@ -112,6 +91,8 @@ export default async function KnowledgePage({
     per_page: 9,
     total: 0,
   };
+
+  validatePage(resolvedSearchParams, meta.last_page, '/knowledge', locale);
 
   const breadcrumbs = [
     {

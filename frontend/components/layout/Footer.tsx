@@ -144,14 +144,7 @@ export default async function Footer({
       namespace: 'Footer',
     }),
 
-    getServices(locale).catch((error) => {
-      console.error(
-        'Kon diensten niet ophalen voor footer:',
-        error,
-      );
-
-      return [];
-    }),
+    getServices(locale),
   ]);
 
   const facebookUrl =
@@ -268,7 +261,7 @@ export default async function Footer({
                 </p>
 
                 <a
-                  href="tel:+3280063635"
+                  href={`tel:${(await getTranslations({ locale, namespace: 'General.company' }))('phoneHref')}`}
                   className="mt-2 block transition hover:text-[#C82024]"
                 >
                   +32 (0) 800 63 63 5

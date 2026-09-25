@@ -1,3 +1,6 @@
+import JsonLd from '@/components/seo/JsonLd';
+import { businessSchema } from '@/lib/seo/schema';
+import { indexingEnabled } from '@/lib/seo/config';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -12,6 +15,8 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingButtons from '@/components/layout/FloatingButtons';
 
+export function generateMetadata() { return indexingEnabled() ? {} : { robots: { index: false, follow: true } }; }
+
 export default async function LocaleLayout({
   children,
   params
@@ -21,7 +26,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
@@ -32,6 +37,7 @@ export default async function LocaleLayout({
       <body suppressHydrationWarning>
         <AlternateLinksProvider>
           <NextIntlClientProvider messages={messages}>
+            <JsonLd data={await businessSchema()} />
             <CookieConsent />
             <Header />
             <FloatingButtons />

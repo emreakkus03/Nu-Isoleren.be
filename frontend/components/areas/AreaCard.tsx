@@ -7,7 +7,7 @@ interface AreaCardProps {
   ctaText: string;
 }
 
-export default function AreaCard({ provinceName, cities, ctaText }: AreaCardProps) {
+export default function AreaCard({ provinceName, cities }: AreaCardProps) {
   return (
     <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:border-slate-300 transition-colors">
       <div>

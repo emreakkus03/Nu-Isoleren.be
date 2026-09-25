@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo/metadata';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
@@ -26,10 +27,10 @@ export async function generateMetadata({
     namespace: 'Seo.epcCalculator',
   });
 
-  return {
+  return pageMetadata('/prices/epc-calculator', locale, {
     title: t('title'),
     description: t('description'),
-  };
+  });
 }
 
 export default async function EpcPage({

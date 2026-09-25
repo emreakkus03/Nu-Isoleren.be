@@ -22,6 +22,20 @@ export interface GoogleReviewsData {
   reviews: GoogleReviewItem[];
 }
 
+interface GooglePlacesReview {
+  rating?: number;
+  originalText?: { text?: string } | null;
+  text?: { text?: string } | null;
+  relativePublishTimeDescription?: string;
+  publishTime?: string;
+  googleMapsUri?: string;
+  authorAttribution?: {
+    displayName?: string;
+    uri?: string;
+    photoUri?: string;
+  } | null;
+}
+
 const fetchGoogleReviews = async (): Promise<GoogleReviewsData | null> => {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
   const placeId = process.env.GOOGLE_PLACE_ID;
@@ -58,7 +72,7 @@ const fetchGoogleReviews = async (): Promise<GoogleReviewsData | null> => {
 
    const reviews: GoogleReviewItem[] = Array.isArray(data.reviews)
   ? data.reviews
-      .map((review: any) => ({
+      .map((review: GooglePlacesReview) => ({
         rating:
           typeof review.rating === 'number'
             ? review.rating

@@ -28,7 +28,7 @@ export default async function ServicesSection() {
           {services.map((service) => (
             <ServiceCard
               key={service.id}
-              href={`/diensten/${service.slug}`}
+              href={`/services/${service.slug}`}
               imageSrc={service.thumbnail || '/logo/logo.svg'}
               imageAlt={service.name}
               badge={service.badge}

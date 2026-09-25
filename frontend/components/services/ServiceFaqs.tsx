@@ -103,10 +103,10 @@ const localizeHref = (
       const localizedPath =
         getPathname({
           locale:
-            locale as any,
+            locale as Parameters<typeof getPathname>[0]['locale'],
 
           href:
-            pathname as any,
+            pathname as Extract<Parameters<typeof getPathname>[0]['href'], string>,
         });
 
       return `${localizedPath}${suffix}`;
@@ -152,7 +152,7 @@ const localizeHref = (
         pathname:
           '/materials/[slug]',
       },
-    ];
+    ] as const;
 
     for (
       const route
@@ -180,16 +180,16 @@ const localizeHref = (
         const localizedPath =
           getPathname({
             locale:
-              locale as any,
+              locale as Parameters<typeof getPathname>[0]['locale'],
 
             href: {
               pathname:
-                route.pathname as any,
+                route.pathname,
 
               params: {
                 slug,
               },
-            } as any,
+            },
           });
 
         return `${localizedPath}${suffix}`;

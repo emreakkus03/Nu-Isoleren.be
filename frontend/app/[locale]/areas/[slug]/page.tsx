@@ -1,3 +1,5 @@
+import ServiceAlternateLinks from '@/components/services/ServiceAlternateLinks';
+import { contentMetadata } from '@/lib/seo/metadata';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -14,7 +16,6 @@ import CityNearbyAreasSection from '@/components/areas/CityNearbyAreasSection';
 import CtaBanner from '@/components/common/CtaBanner';
 import { getServices } from '@/lib/services';
 
-export const dynamic = 'force-dynamic';
 
 const RICH_TEXT_CLASSES = `
   text-sm sm:text-base
@@ -87,7 +88,7 @@ export async function generateMetadata({
       city: city.name,
     });
 
-  return {
+  return contentMetadata('cities', locale, slug, {
     title,
     description,
 
@@ -103,7 +104,7 @@ export async function generateMetadata({
         ? [city.hero_image]
         : [],
     },
-  };
+  });
 }
 
 export default async function CityDetailPage({
@@ -193,6 +194,7 @@ const grantsHref = isWallonia
 
   return (
     <main className="min-h-screen bg-white w-full overflow-x-clip">
+      <ServiceAlternateLinks alternateSlugs={city.alternate_slugs} />
 
       <section className="relative w-full min-h-[360px] sm:min-h-[400px] lg:min-h-[440px] flex items-start overflow-hidden">
         <div className="absolute inset-0 z-0">

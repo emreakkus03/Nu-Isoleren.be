@@ -1,20 +1,15 @@
+import { getLocale } from 'next-intl/server';
+import { contentRequest } from './content-api';
 import { CitiesResponse, City } from '@/types/city';
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  'http://backend.ddev.site/api';
 
 export async function getCities(
   featuredOnly = false
 ): Promise<CitiesResponse> {
-  try {
-    const res = await fetch(
-      `${API_BASE_URL}/cities${
-        featuredOnly ? '?featured=1' : ''
-      }`,
-      {
-        cache: 'no-store',
-      }
+    const locale = await getLocale();
+    const res = await contentRequest(
+      `/cities?locale=${locale}${featuredOnly ? '&featured=1' : ''}`,
+      ['cities']
     );
 
     if (!res.ok) {
@@ -25,31 +20,18 @@ export async function getCities(
     }
 
     return await res.json();
-  } catch (error) {
-    console.error(
-      'Fout bij ophalen steden:',
-      error
-    );
 
-    return {
-      all: [],
-      grouped: {},
-    };
-  }
 }
 
 export async function getCityBySlug(
   slug: string,
   locale: string
 ): Promise<City | null> {
-  try {
-    const res = await fetch(
-      `${API_BASE_URL}/cities/${encodeURIComponent(
+    const res = await contentRequest(
+      `/cities/${encodeURIComponent(
         slug
       )}?locale=${locale}`,
-      {
-        cache: 'no-store',
-      }
+      ['cities'], true
     );
 
     if (!res.ok) {
@@ -57,12 +39,5 @@ export async function getCityBySlug(
     }
 
     return await res.json();
-  } catch (error) {
-    console.error(
-      `Fout bij ophalen stad ${slug}:`,
-      error
-    );
 
-    return null;
-  }
 }

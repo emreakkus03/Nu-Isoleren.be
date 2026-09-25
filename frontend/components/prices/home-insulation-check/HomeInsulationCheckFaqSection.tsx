@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '@/lib/seo/json';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { getFaqs } from '@/lib/faqs';
 
@@ -44,7 +45,7 @@ export default async function HomeInsulationCheckFaqSection() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: serializeJsonLd(
             faqStructuredData
           ),
         }}

@@ -4,7 +4,8 @@ import { useTranslations } from 'next-intl';
 export default function FloatingButtons() {
   const t = useTranslations('Floating');
 
-  const rawPhoneNumber = t('phoneHref').replace(/[^0-9+]/g, '');
+  const company = useTranslations('General.company');
+  const rawPhoneNumber = company('phoneHref');
 
   return (
     <div className="hidden md:flex fixed right-0 top-1/3 z-50 flex-col items-end gap-2 pointer-events-none">

@@ -22,6 +22,7 @@ class KnowledgeArticle extends Model
     ];
 
     protected $fillable = [
+        'is_indexable',
         'knowledge_category_id',
         'service_id',
         'title',
@@ -41,6 +42,7 @@ class KnowledgeArticle extends Model
     protected function casts(): array
     {
         return [
+            'is_indexable' => 'boolean',
             'published' => 'boolean',
             'featured' => 'boolean',
             'published_at' => 'datetime',
@@ -55,9 +57,6 @@ class KnowledgeArticle extends Model
                 $article->published_at = now();
             }
 
-            if (! $article->published) {
-                $article->published_at = null;
-            }
         });
     }
 

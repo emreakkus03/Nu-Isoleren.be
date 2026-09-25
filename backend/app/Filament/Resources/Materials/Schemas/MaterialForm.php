@@ -7,8 +7,8 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Tabs;
@@ -33,8 +33,7 @@ class MaterialForm
                                 titleAttribute: 'name',
                             )
                             ->getOptionLabelFromRecordUsing(
-                                fn (Service $record): string =>
-                                    $record->getTranslation('name', 'nl')
+                                fn (Service $record): string => $record->getTranslation('name', 'nl')
                             )
                             ->multiple()
                             ->preload()
@@ -66,6 +65,7 @@ class MaterialForm
                             ->default(0)
                             ->required(),
 
+                        Toggle::make('is_indexable')->label('Indexeerbaar')->default(true),
                         Toggle::make('is_active')
                             ->label('Actief')
                             ->default(true),
@@ -207,6 +207,7 @@ class MaterialForm
                                     ->label('Tonen in inhoudsopgave')
                                     ->default(true),
 
+                                Toggle::make('is_indexable')->label('Indexeerbaar')->default(true),
                                 Toggle::make('is_active')
                                     ->label('Actief')
                                     ->default(true),
@@ -215,8 +216,7 @@ class MaterialForm
                             ->collapsible()
                             ->reorderable()
                             ->itemLabel(
-                                fn (array $state): ?string =>
-                                    $state['heading']
+                                fn (array $state): ?string => $state['heading']
                                     ?? $state['nav_title']
                                     ?? 'Nieuwe sectie'
                             )

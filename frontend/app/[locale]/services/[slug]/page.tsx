@@ -1,3 +1,7 @@
+import type { Locale, RouteKey } from '@/lib/seo/urls';
+import JsonLd from '@/components/seo/JsonLd';
+import { serviceSchema } from '@/lib/seo/schema';
+import { contentMetadata } from '@/lib/seo/metadata';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
@@ -14,10 +18,9 @@ import ServiceFaqs from '@/components/services/ServiceFaqs';
 import type { ServiceItem } from '@/types/service';
 import { getPathname } from '@/i18n/routing';
 
-export const dynamic = 'force-dynamic';
 
 const MEDIA_BASE_URL =
-  process.env.NEXT_PUBLIC_S3_PUBLIC_URL || 'https://localhost:8000';
+  process.env.MEDIA_URL || process.env.NEXT_PUBLIC_S3_PUBLIC_URL || '';
 
 interface ServiceDetailPageProps {
   params: Promise<{
@@ -26,9 +29,66 @@ interface ServiceDetailPageProps {
   }>;
 }
 
+interface BlockItem {
+  background_color?: string;
+  description?: string;
+  icon?: string;
+  icon_color?: string;
+  image?: string;
+  image_alt?: string;
+  label?: string;
+  link_label?: string;
+  number?: string;
+  style?: string;
+  text?: string;
+  title?: string;
+  url?: string;
+  new_tab?: boolean;
+}
+interface TableRow { label?: string; value?: string; extra?: string }
+interface BlockData {
+  accent_color?: string;
+  alignment?: string;
+  alt?: string;
+  aspect_ratio?: string;
+  background_color?: string;
+  border_color?: string;
+  button_label?: string;
+  button_style?: string;
+  button_url?: string;
+  caption?: string;
+  card_style?: string;
+  color?: string;
+  content?: string;
+  description?: string;
+  document_number?: string;
+  file?: string;
+  icon_color?: string;
+  image?: string;
+  image_alt?: string;
+  image_position?: string;
+  image_radius?: string;
+  issuer?: string;
+  layout?: string;
+  preview_image?: string;
+  size?: string;
+  style?: string;
+  text_color?: string;
+  title?: string;
+  url?: string;
+  vertical_alignment?: string;
+  width?: string;
+  columns?: string | number;
+  limit?: string | number;
+  items?: BlockItem[];
+  rows?: TableRow[];
+  show_description?: boolean;
+  show_location?: boolean;
+}
+
 interface ContentBlock {
   type: string;
-  data?: Record<string, any>;
+  data?: BlockData;
 }
 
 interface ServiceSection {
@@ -100,13 +160,13 @@ export async function generateMetadata({
   const description =
     service.seo_description ||
     service.short_description ||
-    `Ontdek alles over ${service.name} bij Nu-Isoleren.be. Vraag vrijblijvend advies of een offerte aan.`;
+    undefined;
 
   const heroImage =
     getMediaUrl(service.hero_image) ||
     getMediaUrl(service.thumbnail);
 
-  return {
+  return contentMetadata('services', locale, slug, {
     title,
     description,
     openGraph: {
@@ -114,7 +174,7 @@ export async function generateMetadata({
       description,
       images: heroImage ? [heroImage] : [],
     },
-  };
+  });
 }
 
 const formatIntroParagraphs = (rawText: string) => {
@@ -237,8 +297,8 @@ const localizeHref = (
   try {
     if (staticRoutes.has(pathname)) {
       const localizedPath = getPathname({
-        locale: locale as any,
-        href: pathname as any,
+        locale: locale as Locale,
+        href: pathname as Parameters<typeof getPathname>[0]['href'],
       });
 
       return `${localizedPath}${suffix}`;
@@ -278,13 +338,13 @@ const localizeHref = (
         }
 
         const localizedPath = getPathname({
-          locale: locale as any,
+          locale: locale as Locale,
           href: {
-            pathname: route.pathname as any,
+            pathname: route.pathname as RouteKey,
             params: {
               slug,
             },
-          } as any,
+          } as Parameters<typeof getPathname>[0]['href'],
         });
 
         return `${localizedPath}${suffix}`;
@@ -600,7 +660,7 @@ function ContentBlockRenderer({
         >
           {items.map(
             (
-              item: any,
+              item: BlockItem,
               index: number,
             ) => (
               <div
@@ -664,7 +724,7 @@ function ContentBlockRenderer({
         >
           {items.map(
             (
-              item: any,
+              item: BlockItem,
               index: number,
             ) => {
               const cardBackground =
@@ -751,7 +811,7 @@ function ContentBlockRenderer({
                   {item.url && (
                     <a
                       href={localizeHref(
-                        item.url,
+                        item.url || '',
                         locale,
                       )}
                       className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#C82024]"
@@ -789,7 +849,7 @@ function ContentBlockRenderer({
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {items.map(
               (
-                item: any,
+                item: BlockItem,
                 index: number,
               ) => {
                 const stepImage =
@@ -860,7 +920,7 @@ function ContentBlockRenderer({
         <div className="flex flex-col">
           {items.map(
             (
-              item: any,
+              item: BlockItem,
               index: number,
             ) => (
               <div
@@ -937,7 +997,7 @@ function ContentBlockRenderer({
         >
           {items.map(
             (
-              item: any,
+              item: BlockItem,
               index: number,
             ) => {
               const button =
@@ -947,7 +1007,7 @@ function ContentBlockRenderer({
                 <a
                   key={index}
                   href={localizeHref(
-                    item.url,
+                    item.url || '',
                     locale,
                   )}
                   target={
@@ -1062,7 +1122,7 @@ function ContentBlockRenderer({
             <tbody>
               {rows.map(
                 (
-                  row: any,
+                  row: TableRow,
                   index: number,
                 ) => (
                   <tr
@@ -1363,6 +1423,7 @@ export default async function ServiceDetailPage({
 
   return (
     <main className="min-h-screen bg-white page-header-start pb-20 sm:pb-24 w-full overflow-x-clip">
+      <JsonLd data={serviceSchema(service, locale)} />
        <ServiceAlternateLinks
       alternateSlugs={service.alternate_slugs}
     />

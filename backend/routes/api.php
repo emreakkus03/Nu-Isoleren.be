@@ -1,20 +1,22 @@
 <?php
 
+use App\Http\Controllers\Api\ContactSubmissionController;
+use App\Http\Controllers\Api\EnergyRatingController;
+use App\Http\Controllers\Api\EnergySavingsController;
+use App\Http\Controllers\Api\MaterialController;
+use App\Http\Controllers\Api\QuoteRequestController;
+use App\Http\Controllers\Api\SeoInventoryController;
 use App\Models\City;
-use App\Models\Project;
-use App\Models\Service;
 use App\Models\Faq;
 use App\Models\KnowledgeArticle;
 use App\Models\KnowledgeCategory;
+use App\Models\Project;
+use App\Support\ContentResponse;
+use App\Support\ContentSeo;
+use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\ContactSubmissionController;
-use App\Http\Controllers\Api\EnergySavingsController;
-use App\Http\Controllers\Api\QuoteRequestController;
-use App\Http\Controllers\Api\EnergyRatingController;
-use App\Http\Controllers\Api\MaterialController;
 use Illuminate\Support\Facades\Storage;
-
 
 Route::get(
     '/materials',
@@ -32,52 +34,52 @@ Route::post(
 )->middleware('throttle:10,1');
 
 Route::middleware('throttle:60,1')->get('/featured-projects', function (Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
 
-    return Project::query()
+    return ContentSeo::availableQuery('projects', $locale)
         ->where('published', true)
         ->where('featured_on_home', true)
         ->with([
             'service',
             'city',
-            'images' => fn($q) => $q->orderBy('sort_order'),
+            'images' => fn ($q) => $q->orderBy('sort_order'),
         ])
         ->orderBy('sort_order')
         ->latest()
         ->take(3)
         ->get()
-        ->map(fn($project) => formatProjectResponse($project, $locale));
+        ->map(fn ($project) => ContentResponse::formatProjectResponse($project, $locale));
 });
 
 Route::middleware('throttle:60,1')->get('/recent-projects', function (Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
     $limit = min((int) $request->query('limit', 3), 6);
 
-    return Project::query()
+    return ContentSeo::availableQuery('projects', $locale)
         ->where('published', true)
         ->with([
             'service',
             'city',
-            'images' => fn($q) => $q->orderBy('sort_order'),
+            'images' => fn ($q) => $q->orderBy('sort_order'),
         ])
         ->latest()
         ->take($limit)
         ->get()
-        ->map(fn($project) => formatProjectResponse($project, $locale));
+        ->map(fn ($project) => ContentResponse::formatProjectResponse($project, $locale));
 });
 
 Route::middleware('throttle:60,1')->get('/projects', function (Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
     $serviceSlug = $request->query('dienst') ?? $request->query('service');
     $citySlug = $request->query('locatie') ?? $request->query('localisation') ?? $request->query('location') ?? $request->query('city');
     $perPage = (int) $request->query('per_page', 9);
 
-    $query = Project::query()
+    $query = ContentSeo::availableQuery('projects', $locale)
         ->where('published', true)
         ->with([
             'service',
             'city',
-            'images' => fn($q) => $q->orderBy('sort_order'),
+            'images' => fn ($q) => $q->orderBy('sort_order'),
         ]);
 
     if ($serviceSlug) {
@@ -99,7 +101,7 @@ Route::middleware('throttle:60,1')->get('/projects', function (Request $request)
         ->paginate($perPage);
 
     return response()->json([
-        'data' => collect($paginated->items())->map(fn($project) => formatProjectResponse($project, $locale)),
+        'data' => collect($paginated->items())->map(fn ($project) => ContentResponse::formatProjectResponse($project, $locale)),
         'meta' => [
             'current_page' => $paginated->currentPage(),
             'last_page' => $paginated->lastPage(),
@@ -110,9 +112,9 @@ Route::middleware('throttle:60,1')->get('/projects', function (Request $request)
 });
 
 Route::middleware('throttle:60,1')->get('/project-filters', function (Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
 
-    $services = Service::query()
+    $services = ContentSeo::availableQuery('services', $locale)
         ->where('is_active', true)
         ->whereHas('projects', function ($query) {
             $query->where('published', true);
@@ -124,7 +126,7 @@ Route::middleware('throttle:60,1')->get('/project-filters', function (Request $r
         ])
         ->orderBy('order_column')
         ->get()
-        ->map(fn($service) => [
+        ->map(fn ($service) => [
             'id' => $service->id,
             'name' => $service->getTranslation('name', $locale, false)
                 ?: $service->getTranslation('name', 'nl'),
@@ -144,7 +146,7 @@ Route::middleware('throttle:60,1')->get('/project-filters', function (Request $r
         ])
         ->orderBy('name')
         ->get()
-        ->map(fn($city) => [
+        ->map(fn ($city) => [
             'id' => $city->id,
             'name' => $city->name,
             'slug' => $city->slug,
@@ -159,27 +161,23 @@ Route::middleware('throttle:60,1')->get('/project-filters', function (Request $r
 });
 
 Route::middleware('throttle:60,1')->get('/projects/{slug}', function (string $slug, Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
 
-    $project = Project::query()
+    $project = ContentSeo::availableQuery('projects', $locale)
         ->where('published', true)
-        ->where(function ($query) use ($slug) {
-            $query->where("slug->nl", $slug)
-                ->orWhere("slug->fr", $slug)
-                ->orWhere("slug->en", $slug);
-        })
+        ->where("slug->{$locale}", $slug)
         ->with([
             'service',
             'city',
-            'images' => fn($q) => $q->orderBy('sort_order'),
+            'images' => fn ($q) => $q->orderBy('sort_order'),
         ])
         ->firstOrFail();
 
-    return formatProjectResponse($project, $locale);
+    return ContentResponse::formatProjectResponse($project, $locale);
 });
 
 Route::middleware('throttle:60,1')->get('/faqs', function (Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
     $serviceSlug = $request->query('service') ?? $request->query('dienst');
     $category = $request->query('category');
     $featuredHome = $request->boolean('featured_home');
@@ -226,10 +224,10 @@ Route::middleware('throttle:60,1')->get('/faqs', function (Request $request) {
 });
 
 Route::middleware('throttle:60,1')->get('/services', function (Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
     $featuredHome = $request->boolean('featured_home');
 
-    $query = Service::query()
+    $query = ContentSeo::availableQuery('services', $locale)
         ->where('is_active', true);
 
     if ($featuredHome) {
@@ -242,7 +240,7 @@ Route::middleware('throttle:60,1')->get('/services', function (Request $request)
 
     return response()->json([
         'data' => $services->map(function ($service) use ($locale) {
-            /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
+            /** @var FilesystemAdapter $s3 */
             $s3 = Storage::disk('s3');
 
             $thumbnailUrl = $service->thumbnail
@@ -263,11 +261,11 @@ Route::middleware('throttle:60,1')->get('/services', function (Request $request)
                 $sections = array_map(
                     function ($sec) use ($s3) {
                         if (
-                            !empty($sec['images']) &&
+                            ! empty($sec['images']) &&
                             is_array($sec['images'])
                         ) {
                             $sec['images'] = array_map(
-                                fn($img) => $s3->url($img),
+                                fn ($img) => $s3->url($img),
                                 $sec['images']
                             );
                         }
@@ -287,8 +285,7 @@ Route::middleware('throttle:60,1')->get('/services', function (Request $request)
             return [
                 'id' => $service->id,
 
-                'name' =>
-                $service->getTranslation(
+                'name' => $service->getTranslation(
                     'name',
                     $locale,
                     false
@@ -298,37 +295,16 @@ Route::middleware('throttle:60,1')->get('/services', function (Request $request)
                         'nl'
                     ),
 
-                'slug' =>
-                $service->getTranslation(
+                'slug' => $service->getTranslation(
                     'slug',
                     $locale,
                     false
                 )
                     ?: $nlSlug,
 
-                'alternate_slugs' => [
-                    'nl' =>
-                    $nlSlug,
+                'alternate_slugs' => ContentSeo::slugs($service),
 
-                    'fr' =>
-                    $service->getTranslation(
-                        'slug',
-                        'fr',
-                        false
-                    )
-                        ?: $nlSlug,
-
-                    'en' =>
-                    $service->getTranslation(
-                        'slug',
-                        'en',
-                        false
-                    )
-                        ?: $nlSlug,
-                ],
-
-                'badge' =>
-                $service->getTranslation(
+                'badge' => $service->getTranslation(
                     'badge',
                     $locale,
                     false
@@ -338,52 +314,43 @@ Route::middleware('throttle:60,1')->get('/services', function (Request $request)
                         'nl'
                     ),
 
-                'short_description' =>
-                $service->getTranslation(
+                'short_description' => $service->getTranslation(
                     'short_description',
                     $locale,
                     false
                 ),
 
-                'eyebrow' =>
-                $service->getTranslation(
+                'eyebrow' => $service->getTranslation(
                     'eyebrow',
                     $locale,
                     false
                 ),
 
-                'hero_title' =>
-                $service->getTranslation(
+                'hero_title' => $service->getTranslation(
                     'hero_title',
                     $locale,
                     false
                 ),
 
-                'intro_text' =>
-                $service->getTranslation(
+                'intro_text' => $service->getTranslation(
                     'intro_text',
                     $locale,
                     false
                 ),
 
-                'thumbnail' =>
-                $thumbnailUrl,
+                'thumbnail' => $thumbnailUrl,
 
-                'hero_image' =>
-                $heroImageUrl,
+                'hero_image' => $heroImageUrl,
 
-                'sections' =>
-                $sections,
+                'sections' => $sections,
 
-                'seo_title' =>
-                $service->getTranslation(
+                'seo_title' => $service->getTranslation(
                     'seo_title',
                     $locale,
                     false
                 ),
 
-                'seo_description' =>
-                $service->getTranslation(
+                'seo_description' => $service->getTranslation(
                     'seo_description',
                     $locale,
                     false
@@ -397,26 +364,20 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
     Request $request,
     string $slug
 ) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
 
-    $service = Service::query()
+    $service = ContentSeo::availableQuery('services', $locale)
         ->where('is_active', true)
-        ->where(function ($query) use ($slug, $locale) {
-            $query
-                ->where("slug->{$locale}", $slug)
-                ->orWhere('slug->nl', $slug)
-                ->orWhere('slug->fr', $slug)
-                ->orWhere('slug->en', $slug);
-        })
+        ->where("slug->{$locale}", $slug)
         ->first();
 
-    if (!$service) {
+    if (! $service) {
         return response()->json([
             'message' => 'Service not found',
         ], 404);
     }
 
-    $projects = Project::query()
+    $projects = ContentSeo::availableQuery('projects', $locale)
         ->where('service_id', $service->id)
         ->where('published', true)
         ->with([
@@ -433,7 +394,7 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
         ->orderBy('sort_order', 'asc')
         ->get();
 
-    /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
+    /** @var FilesystemAdapter $s3 */
     $s3 = Storage::disk('s3');
 
     $thumbnailUrl = $service->thumbnail
@@ -454,7 +415,7 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
         $sections = array_map(
             function ($sec) use ($s3) {
                 if (
-                    !empty($sec['images']) &&
+                    ! empty($sec['images']) &&
                     is_array($sec['images'])
                 ) {
                     $sec['images'] = array_map(
@@ -464,7 +425,7 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
                 }
 
                 if (
-                    !empty($sec['image']) &&
+                    ! empty($sec['image']) &&
                     is_string($sec['image'])
                 ) {
                     $sec['image'] =
@@ -487,8 +448,7 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
         'data' => [
             'id' => $service->id,
 
-            'name' =>
-            $service->getTranslation(
+            'name' => $service->getTranslation(
                 'name',
                 $locale,
                 false
@@ -498,37 +458,16 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
                     'nl'
                 ),
 
-            'slug' =>
-            $service->getTranslation(
+            'slug' => $service->getTranslation(
                 'slug',
                 $locale,
                 false
             )
                 ?: $nlSlug,
 
-            'alternate_slugs' => [
-                'nl' =>
-                $nlSlug,
+            'alternate_slugs' => ContentSeo::slugs($service),
 
-                'fr' =>
-                $service->getTranslation(
-                    'slug',
-                    'fr',
-                    false
-                )
-                    ?: $nlSlug,
-
-                'en' =>
-                $service->getTranslation(
-                    'slug',
-                    'en',
-                    false
-                )
-                    ?: $nlSlug,
-            ],
-
-            'badge' =>
-            $service->getTranslation(
+            'badge' => $service->getTranslation(
                 'badge',
                 $locale,
                 false
@@ -538,47 +477,39 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
                     'nl'
                 ),
 
-            'short_description' =>
-            $service->getTranslation(
+            'short_description' => $service->getTranslation(
                 'short_description',
                 $locale,
                 false
             ),
 
-            'eyebrow' =>
-            $service->getTranslation(
+            'eyebrow' => $service->getTranslation(
                 'eyebrow',
                 $locale,
                 false
             ),
 
-            'hero_title' =>
-            $service->getTranslation(
+            'hero_title' => $service->getTranslation(
                 'hero_title',
                 $locale,
                 false
             ),
 
-            'intro_text' =>
-            $service->getTranslation(
+            'intro_text' => $service->getTranslation(
                 'intro_text',
                 $locale,
                 false
             ),
 
-            'thumbnail' =>
-            $thumbnailUrl,
+            'thumbnail' => $thumbnailUrl,
 
-            'hero_image' =>
-            $heroImageUrl,
+            'hero_image' => $heroImageUrl,
 
-            'sections' =>
-            $sections,
+            'sections' => $sections,
 
             'projects' => $projects
                 ->map(
-                    fn (Project $project) =>
-                    formatProjectResponse(
+                    fn (Project $project) => ContentResponse::formatProjectResponse(
                         $project,
                         $locale
                     )
@@ -590,8 +521,7 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
                     return [
                         'id' => $faq->id,
 
-                        'question' =>
-                        $faq->getTranslation(
+                        'question' => $faq->getTranslation(
                             'question',
                             $locale,
                             false
@@ -601,8 +531,7 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
                                 'nl'
                             ),
 
-                        'answer' =>
-                        $faq->getTranslation(
+                        'answer' => $faq->getTranslation(
                             'answer',
                             $locale,
                             false
@@ -612,24 +541,20 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
                                 'nl'
                             ),
 
-                        'category' =>
-                            $faq->category,
+                        'category' => $faq->category,
 
-                        'sort_order' =>
-                            (int) $faq->sort_order,
+                        'sort_order' => (int) $faq->sort_order,
                     ];
                 })
                 ->values(),
 
-            'seo_title' =>
-            $service->getTranslation(
+            'seo_title' => $service->getTranslation(
                 'seo_title',
                 $locale,
                 false
             ),
 
-            'seo_description' =>
-            $service->getTranslation(
+            'seo_description' => $service->getTranslation(
                 'seo_description',
                 $locale,
                 false
@@ -639,7 +564,8 @@ Route::middleware('throttle:60,1')->get('/services/{slug}', function (
 });
 
 Route::get('/cities', function (Request $request) {
-    $query = City::query()->orderBy('name');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
+    $query = ContentSeo::availableQuery('cities', $locale)->orderBy('name');
 
     if ($request->boolean('featured')) {
         $query->where('is_featured', true);
@@ -654,20 +580,20 @@ Route::get('/cities', function (Request $request) {
 });
 
 Route::get('/cities/{slug}', function (Request $request, string $slug) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
 
     $city = City::query()
         ->where('slug', $slug)
         ->firstOrFail();
 
-    /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
+    /** @var FilesystemAdapter $s3 */
     $s3 = Storage::disk('s3');
 
     $heroImageUrl = $city->hero_image
         ? $s3->url($city->hero_image)
         : null;
 
-    $projects = Project::query()
+    $projects = ContentSeo::availableQuery('projects', $locale)
         ->where('city_id', $city->id)
         ->where('published', true)
         ->with([
@@ -699,72 +625,66 @@ Route::get('/cities/{slug}', function (Request $request, string $slug) {
 
         'hero_image' => $heroImageUrl,
 
-        'hero_title' =>
-            $city->getTranslation(
-                'hero_title',
-                $locale,
-                false
-            )
+        'hero_title' => $city->getTranslation(
+            'hero_title',
+            $locale,
+            false
+        )
             ?: $city->getTranslation(
                 'hero_title',
                 'nl',
                 false
             ),
 
-        'hero_intro' =>
-            $city->getTranslation(
-                'hero_intro',
-                $locale,
-                false
-            )
+        'hero_intro' => $city->getTranslation(
+            'hero_intro',
+            $locale,
+            false
+        )
             ?: $city->getTranslation(
                 'hero_intro',
                 'nl',
                 false
             ),
 
-        'local_title' =>
-            $city->getTranslation(
-                'local_title',
-                $locale,
-                false
-            )
+        'local_title' => $city->getTranslation(
+            'local_title',
+            $locale,
+            false
+        )
             ?: $city->getTranslation(
                 'local_title',
                 'nl',
                 false
             ),
 
-        'local_content' =>
-            $city->getTranslation(
-                'local_content',
-                $locale,
-                false
-            )
+        'local_content' => $city->getTranslation(
+            'local_content',
+            $locale,
+            false
+        )
             ?: $city->getTranslation(
                 'local_content',
                 'nl',
                 false
             ),
 
-        'solution_intro' =>
-            $city->getTranslation(
-                'solution_intro',
-                $locale,
-                false
-            )
+        'solution_intro' => $city->getTranslation(
+            'solution_intro',
+            $locale,
+            false
+        )
             ?: $city->getTranslation(
                 'solution_intro',
                 'nl',
                 false
             ),
 
-        'local_faqs' =>
-            $city->getTranslation(
-                'local_faqs',
-                $locale,
-                false
-            )
+        'local_faqs' => $city->getTranslation(
+            'local_faqs',
+            $locale,
+            false
+        )
             ?: $city->getTranslation(
                 'local_faqs',
                 'nl',
@@ -772,24 +692,22 @@ Route::get('/cities/{slug}', function (Request $request, string $slug) {
             )
             ?: [],
 
-        'seo_title' =>
-            $city->getTranslation(
-                'seo_title',
-                $locale,
-                false
-            )
+        'seo_title' => $city->getTranslation(
+            'seo_title',
+            $locale,
+            false
+        )
             ?: $city->getTranslation(
                 'seo_title',
                 'nl',
                 false
             ),
 
-        'seo_description' =>
-            $city->getTranslation(
-                'seo_description',
-                $locale,
-                false
-            )
+        'seo_description' => $city->getTranslation(
+            'seo_description',
+            $locale,
+            false
+        )
             ?: $city->getTranslation(
                 'seo_description',
                 'nl',
@@ -798,26 +716,25 @@ Route::get('/cities/{slug}', function (Request $request, string $slug) {
 
         'projects' => $projects
             ->map(
-                fn (Project $project) =>
-                    formatProjectResponse(
-                        $project,
-                        $locale
-                    )
+                fn (Project $project) => ContentResponse::formatProjectResponse(
+                    $project,
+                    $locale
+                )
             ),
-            'nearby_cities' => $city->nearbyCities()
-    ->where('is_indexable', true)
-    ->orderBy('name')
-    ->get()
-    ->map(function (City $nearbyCity) {
-        return [
-            'id' => $nearbyCity->id,
-            'name' => $nearbyCity->name,
-            'slug' => $nearbyCity->slug,
-            'province' => $nearbyCity->province,
-            'region' => $nearbyCity->region,
-        ];
-    })
-  
+        'nearby_cities' => $city->nearbyCities()
+            ->where('is_indexable', true)
+            ->where('is_published', true)
+            ->orderBy('name')
+            ->get()
+            ->map(function (City $nearbyCity) {
+                return [
+                    'id' => $nearbyCity->id,
+                    'name' => $nearbyCity->name,
+                    'slug' => $nearbyCity->slug,
+                    'province' => $nearbyCity->province,
+                    'region' => $nearbyCity->region,
+                ];
+            })
             ->values(),
     ]);
 });
@@ -832,13 +749,11 @@ Route::middleware('throttle:20,1')->post(
     [EnergySavingsController::class, 'calculate']
 );
 
-
 Route::post('/quote-requests', [QuoteRequestController::class, 'store'])
     ->middleware('throttle:10,1');
 
-
 Route::middleware('throttle:60,1')->get('/knowledge-categories', function (Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
 
     $categories = KnowledgeCategory::query()
         ->where('is_active', true)
@@ -852,7 +767,7 @@ Route::middleware('throttle:60,1')->get('/knowledge-categories', function (Reque
         ])
         ->orderBy('sort_order')
         ->get()
-        ->map(fn(KnowledgeCategory $category) => [
+        ->map(fn (KnowledgeCategory $category) => [
             'id' => $category->id,
 
             'name' => $category->getTranslation('name', $locale, false)
@@ -861,13 +776,7 @@ Route::middleware('throttle:60,1')->get('/knowledge-categories', function (Reque
             'slug' => $category->getTranslation('slug', $locale, false)
                 ?: $category->getTranslation('slug', 'nl'),
 
-            'alternate_slugs' => [
-                'nl' => $category->getTranslation('slug', 'nl', false),
-                'fr' => $category->getTranslation('slug', 'fr', false)
-                    ?: $category->getTranslation('slug', 'nl', false),
-                'en' => $category->getTranslation('slug', 'en', false)
-                    ?: $category->getTranslation('slug', 'nl', false),
-            ],
+            'alternate_slugs' => $category->getTranslations('slug'),
 
             'description' => $category->getTranslation('description', $locale, false)
                 ?: $category->getTranslation('description', 'nl'),
@@ -881,11 +790,11 @@ Route::middleware('throttle:60,1')->get('/knowledge-categories', function (Reque
 });
 
 Route::middleware('throttle:60,1')->get('/knowledge-articles', function (Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
     $categorySlug = $request->query('category');
     $perPage = min((int) $request->query('per_page', 9), 24);
 
-    $query = KnowledgeArticle::query()
+    $query = ContentSeo::availableQuery('articles', $locale)
         ->published()
         ->with([
             'knowledgeCategory',
@@ -908,8 +817,7 @@ Route::middleware('throttle:60,1')->get('/knowledge-articles', function (Request
     return response()->json([
         'data' => collect($paginated->items())
             ->map(
-                fn (KnowledgeArticle $article) =>
-                    formatKnowledgeArticleCard($article, $locale)
+                fn (KnowledgeArticle $article) => ContentResponse::formatKnowledgeArticleCard($article, $locale)
             ),
 
         'meta' => [
@@ -922,10 +830,10 @@ Route::middleware('throttle:60,1')->get('/knowledge-articles', function (Request
 });
 
 Route::middleware('throttle:60,1')->get('/featured-knowledge-articles', function (Request $request) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
     $limit = min((int) $request->query('limit', 3), 6);
 
-    $articles = KnowledgeArticle::query()
+    $articles = ContentSeo::availableQuery('articles', $locale)
         ->published()
         ->where('featured', true)
         ->with([
@@ -939,33 +847,27 @@ Route::middleware('throttle:60,1')->get('/featured-knowledge-articles', function
 
     return response()->json([
         'data' => $articles->map(
-            fn (KnowledgeArticle $article) =>
-                formatKnowledgeArticleCard($article, $locale)
+            fn (KnowledgeArticle $article) => ContentResponse::formatKnowledgeArticleCard($article, $locale)
         ),
     ]);
 });
-
 
 Route::middleware('throttle:60,1')->get('/knowledge-articles/{slug}', function (
     string $slug,
     Request $request
 ) {
-    $locale = $request->query('locale', 'nl');
+    $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
 
-    $article = KnowledgeArticle::query()
+    $article = ContentSeo::availableQuery('articles', $locale)
         ->published()
-        ->where(function ($query) use ($slug) {
-            $query->where('slug->nl', $slug)
-                ->orWhere('slug->fr', $slug)
-                ->orWhere('slug->en', $slug);
-        })
+        ->where("slug->{$locale}", $slug)
         ->with([
             'knowledgeCategory',
             'service',
         ])
         ->firstOrFail();
 
-    $relatedArticles = KnowledgeArticle::query()
+    $relatedArticles = ContentSeo::availableQuery('articles', $locale)
         ->published()
         ->where('id', '!=', $article->id)
         ->where(
@@ -981,388 +883,20 @@ Route::middleware('throttle:60,1')->get('/knowledge-articles/{slug}', function (
         ->get();
 
     return response()->json([
-        'data' => formatKnowledgeArticleDetail(
+        'data' => ContentResponse::formatKnowledgeArticleDetail(
             $article,
             $locale
         ),
 
         'related_articles' => $relatedArticles
             ->map(
-                fn (KnowledgeArticle $related) =>
-                    formatKnowledgeArticleCard(
-                        $related,
-                        $locale
-                    )
+                fn (KnowledgeArticle $related) => ContentResponse::formatKnowledgeArticleCard(
+                    $related,
+                    $locale
+                )
             )
             ->values(),
     ]);
 });
 
-function formatKnowledgeArticleDetail(
-    KnowledgeArticle $article,
-    string $locale
-): array {
-    /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
-    $s3 = Storage::disk('s3');
-
-    $heroImageUrl = $article->hero_image
-        ? $s3->url($article->hero_image)
-        : null;
-
-    $sections = $article->getTranslation(
-        'sections',
-        $locale,
-        false
-    ) ?? [];
-
-    if (is_array($sections)) {
-        $sections = array_map(
-            function ($section) use ($s3) {
-                if (
-                    ! empty($section['images']) &&
-                    is_array($section['images'])
-                ) {
-                    $section['images'] = array_map(
-                        fn ($image) => $s3->url($image),
-                        $section['images']
-                    );
-                }
-
-                if (
-                    ! empty($section['image']) &&
-                    is_string($section['image'])
-                ) {
-                    $section['image'] = $s3->url(
-                        $section['image']
-                    );
-                }
-
-                return $section;
-            },
-            $sections
-        );
-    }
-
-    return [
-        'id' => $article->id,
-
-        'title' => $article->getTranslation(
-            'title',
-            $locale,
-            false
-        ) ?: $article->getTranslation(
-            'title',
-            'nl'
-        ),
-
-        'slug' => $article->getTranslation(
-            'slug',
-            $locale,
-            false
-        ) ?: $article->getTranslation(
-            'slug',
-            'nl'
-        ),
-
-        'alternate_slugs' => [
-            'nl' => $article->getTranslation(
-                'slug',
-                'nl',
-                false
-            ),
-
-            'fr' => $article->getTranslation(
-                'slug',
-                'fr',
-                false
-            ) ?: $article->getTranslation(
-                'slug',
-                'nl',
-                false
-            ),
-
-            'en' => $article->getTranslation(
-                'slug',
-                'en',
-                false
-            ) ?: $article->getTranslation(
-                'slug',
-                'nl',
-                false
-            ),
-        ],
-
-        'excerpt' => $article->getTranslation(
-            'excerpt',
-            $locale,
-            false
-        ) ?: $article->getTranslation(
-            'excerpt',
-            'nl'
-        ),
-
-        'intro' => $article->getTranslation(
-            'intro',
-            $locale,
-            false
-        ) ?: $article->getTranslation(
-            'intro',
-            'nl'
-        ),
-
-        'hero_image' => $heroImageUrl,
-
-        'sections' => $sections,
-
-        'seo_title' => $article->getTranslation(
-            'seo_title',
-            $locale,
-            false
-        ),
-
-        'seo_description' => $article->getTranslation(
-            'seo_description',
-            $locale,
-            false
-        ),
-
-        'published_at' => $article->published_at
-            ?->toIso8601String(),
-
-        'updated_at' => $article->updated_at
-            ?->toIso8601String(),
-
-        'category' => $article->knowledgeCategory
-            ? [
-                'id' => $article->knowledgeCategory->id,
-
-                'name' => $article->knowledgeCategory
-                    ->getTranslation(
-                        'name',
-                        $locale,
-                        false
-                    )
-                    ?: $article->knowledgeCategory
-                        ->getTranslation(
-                            'name',
-                            'nl'
-                        ),
-
-                'slug' => $article->knowledgeCategory
-                    ->getTranslation(
-                        'slug',
-                        $locale,
-                        false
-                    )
-                    ?: $article->knowledgeCategory
-                        ->getTranslation(
-                            'slug',
-                            'nl'
-                        ),
-            ]
-            : null,
-
-        'service' => $article->service
-            ? [
-                'id' => $article->service->id,
-
-                'name' => $article->service
-                    ->getTranslation(
-                        'name',
-                        $locale,
-                        false
-                    )
-                    ?: $article->service
-                        ->getTranslation(
-                            'name',
-                            'nl'
-                        ),
-
-                'slug' => $article->service
-                    ->getTranslation(
-                        'slug',
-                        $locale,
-                        false
-                    )
-                    ?: $article->service
-                        ->getTranslation(
-                            'slug',
-                            'nl'
-                        ),
-
-                'alternate_slugs' => [
-                    'nl' => $article->service
-                        ->getTranslation(
-                            'slug',
-                            'nl',
-                            false
-                        ),
-
-                    'fr' => $article->service
-                        ->getTranslation(
-                            'slug',
-                            'fr',
-                            false
-                        )
-                        ?: $article->service
-                            ->getTranslation(
-                                'slug',
-                                'nl',
-                                false
-                            ),
-
-                    'en' => $article->service
-                        ->getTranslation(
-                            'slug',
-                            'en',
-                            false
-                        )
-                        ?: $article->service
-                            ->getTranslation(
-                                'slug',
-                                'nl',
-                                false
-                            ),
-                ],
-            ]
-            : null,
-    ];
-}
-
-function formatKnowledgeArticleCard(
-    KnowledgeArticle $article,
-    string $locale
-): array {
-    /** @var \Illuminate\Filesystem\FilesystemAdapter $s3 */
-    $s3 = Storage::disk('s3');
-
-    $heroImageUrl = $article->hero_image
-        ? $s3->url($article->hero_image)
-        : null;
-
-    return [
-        'id' => $article->id,
-
-        'title' => $article->getTranslation(
-            'title',
-            $locale,
-            false
-        ) ?: $article->getTranslation(
-            'title',
-            'nl'
-        ),
-
-        'slug' => $article->getTranslation(
-            'slug',
-            $locale,
-            false
-        ) ?: $article->getTranslation(
-            'slug',
-            'nl'
-        ),
-
-        'alternate_slugs' => [
-            'nl' => $article->getTranslation(
-                'slug',
-                'nl',
-                false
-            ),
-
-            'fr' => $article->getTranslation(
-                'slug',
-                'fr',
-                false
-            ) ?: $article->getTranslation(
-                'slug',
-                'nl',
-                false
-            ),
-
-            'en' => $article->getTranslation(
-                'slug',
-                'en',
-                false
-            ) ?: $article->getTranslation(
-                'slug',
-                'nl',
-                false
-            ),
-        ],
-
-        'excerpt' => $article->getTranslation(
-            'excerpt',
-            $locale,
-            false
-        ) ?: $article->getTranslation(
-            'excerpt',
-            'nl'
-        ),
-
-        'hero_image' => $heroImageUrl,
-
-        'category' => $article->knowledgeCategory
-            ? [
-                'id' => $article->knowledgeCategory->id,
-
-                'name' => $article->knowledgeCategory
-                    ->getTranslation(
-                        'name',
-                        $locale,
-                        false
-                    )
-                    ?: $article->knowledgeCategory
-                        ->getTranslation(
-                            'name',
-                            'nl'
-                        ),
-
-                'slug' => $article->knowledgeCategory
-                    ->getTranslation(
-                        'slug',
-                        $locale,
-                        false
-                    )
-                    ?: $article->knowledgeCategory
-                        ->getTranslation(
-                            'slug',
-                            'nl'
-                        ),
-            ]
-            : null,
-
-        'published_at' => $article->published_at
-            ?->toIso8601String(),
-
-        'featured' => (bool) $article->featured,
-    ];
-}
-
-function formatProjectResponse(Project $project, string $locale): array
-{
-    return [
-        'id' => $project->id,
-        'title' => $project->getTranslation('title', $locale, false) ?: $project->getTranslation('title', 'nl'),
-        'slug' => $project->getTranslation('slug', $locale, false) ?: $project->getTranslation('slug', 'nl'),
-        'all_slugs' => [
-            'nl' => $project->getTranslation('slug', 'nl', false),
-            'fr' => $project->getTranslation('slug', 'fr', false) ?: $project->getTranslation('slug', 'nl', false),
-            'en' => $project->getTranslation('slug', 'en', false) ?: $project->getTranslation('slug', 'nl', false),
-        ],
-        'short_description' => $project->getTranslation('short_description', $locale, false) ?: $project->getTranslation('short_description', 'nl'),
-        'description' => $project->getTranslation('description', $locale, false) ?: $project->getTranslation('description', 'nl'),
-        'meta_title' => $project->getTranslation('meta_title', $locale, false),
-        'meta_description' => $project->getTranslation('meta_description', $locale, false),
-        'service' => [
-            'id' => $project->service?->id,
-            'name' => $project->service?->getTranslation('name', $locale, false) ?: $project->service?->getTranslation('name', 'nl'),
-            'slug' => $project->service?->getTranslation('slug', $locale, false) ?: $project->service?->getTranslation('slug', 'nl'),
-        ],
-        'city' => [
-            'id' => $project->city?->id,
-            'name' => $project->city?->name,
-            'slug' => $project->city?->slug,
-            'province' => $project->city?->province,
-        ],
-        'images' => $project->images,
-    ];
-}
+Route::middleware('throttle:60,1')->get('/seo-inventory', SeoInventoryController::class);
