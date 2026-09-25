@@ -1,4 +1,4 @@
-import { routing } from './i18n/config';
+import { routing } from '@/i18n/config';
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
