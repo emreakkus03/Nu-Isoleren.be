@@ -10,43 +10,28 @@ const nextConfig: NextConfig = {
       routing.locales.flatMap(locale => {
         const destination = typeof localized === 'string' ? localized : localized[locale];
         if (key === destination) return [];
-        return [{
-          source: `/${locale}${key.replace('[slug]', ':slug')}`,
-          destination: `/${locale}${destination.replace('[slug]', ':slug')}`,
-          permanent: true
-        }];
+        return [{ source: `/${locale}${key.replace('[slug]', ':slug')}`, destination: `/${locale}${destination.replace('[slug]', ':slug')}`, permanent: true }];
       })
     );
   },
-
   images: {
-    unoptimized: true,
     qualities: [75, 90],
     dangerouslyAllowLocalIP: process.env.DEPLOYMENT_ENV !== 'production',
-
     remotePatterns: [
-      ...(process.env.MEDIA_URL
-        ? [new URL(`${process.env.MEDIA_URL.replace(/\/$/, '')}/**`)]
-        : []),
-
+      ...(process.env.MEDIA_URL ? [new URL(`${process.env.MEDIA_URL.replace(/\/$/, '')}/**`)] : []),
       {
         protocol: 'http' as const,
         hostname: '127.0.0.1',
         port: '9000',
         pathname: '/nu-isoleren/**',
       },
-
       {
         protocol: 'http' as const,
         hostname: 'localhost',
         port: '9000',
         pathname: '/nu-isoleren/**',
       },
-    ].filter(
-      pattern =>
-        process.env.DEPLOYMENT_ENV !== 'production' ||
-        pattern instanceof URL
-    ),
+    ].filter(pattern => process.env.DEPLOYMENT_ENV !== 'production' || pattern instanceof URL),
   },
 };
 
