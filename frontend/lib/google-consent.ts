@@ -10,6 +10,7 @@ export function googleConsentState(preferences: ConsentPreferences) {
 }
 
 let initialized = false;
+let previousPreferences: ConsentPreferences | undefined;
 
 export function updateGoogleConsent(preferences: ConsentPreferences) {
   if (typeof window === 'undefined') return;
@@ -26,4 +27,13 @@ export function updateGoogleConsent(preferences: ConsentPreferences) {
     initialized = true;
   }
   target.gtag('consent', 'update', googleConsentState(preferences));
+  if (!previousPreferences || previousPreferences.analytics !== preferences.analytics || previousPreferences.marketing !== preferences.marketing) {
+    target.dataLayer.push({
+      event: 'nu_consent_update',
+      consent_necessary: true,
+      consent_analytics: preferences.analytics,
+      consent_marketing: preferences.marketing,
+    });
+    previousPreferences = { ...preferences };
+  }
 }

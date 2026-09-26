@@ -10,6 +10,8 @@ import "../globals.css";
 import { AlternateLinksProvider } from '@/context/AlternateLinksContext';
 
 import CookieConsent from '@/components/cookie/CookieConsent';
+import GoogleTagManager from '@/components/cookie/GoogleTagManager';
+import { validGtmId } from '@/lib/gtm';
 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -31,14 +33,27 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages();
+  const gtmId = validGtmId(process.env.NEXT_PUBLIC_GTM_ID);
 
   return (
     <html lang={locale}>
       <body suppressHydrationWarning>
+        {gtmId && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+              height="0"
+              width="0"
+              className="hidden invisible"
+              title="Google Tag Manager"
+            />
+          </noscript>
+        )}
         <AlternateLinksProvider>
           <NextIntlClientProvider messages={messages}>
             <JsonLd data={await businessSchema()} />
             <CookieConsent />
+            {gtmId && <GoogleTagManager id={gtmId} />}
             <Header />
             <FloatingButtons />
             <main className="min-h-screen">
