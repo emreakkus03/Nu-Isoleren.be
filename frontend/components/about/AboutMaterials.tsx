@@ -14,7 +14,7 @@ export default function AboutMaterials() {
           <div className="lg:col-span-6">
             <div className="relative w-full aspect-[5/4] lg:aspect-auto lg:h-[560px] overflow-hidden rounded-2xl bg-gray-100">
               <Image
-                src="/images/about/materials.jpeg"
+                src="/images/about/materials.jpg"
                 alt={t('imageAlt')}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

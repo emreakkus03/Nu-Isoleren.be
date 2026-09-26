@@ -54,7 +54,7 @@ export default async function BrusselsGrantsHero({
 
           <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[470px] overflow-hidden rounded-2xl">
             <Image
-              src="/images/grants/brussels/brussels-renovation.jpg"
+              src="/images/grants/flanders/isolation-project.jpg"
               alt={t('imageAlt')}
               fill
               priority

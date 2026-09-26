@@ -19,7 +19,7 @@ export default async function GrantsIntro({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[460px] overflow-hidden rounded-2xl">
             <Image
-              src="/images/areas-city-hero.jpg"
+              src="/images/grants/isolatie.jpg"
               alt={t('imageAlt')}
               fill
               className="object-cover"

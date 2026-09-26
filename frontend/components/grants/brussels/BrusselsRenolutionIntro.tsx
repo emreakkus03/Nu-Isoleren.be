@@ -45,7 +45,7 @@ export default async function BrusselsRenolutionIntro({
 
           <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[460px] overflow-hidden rounded-2xl">
             <Image
-              src="/images/grants/brussels/renolution-renovation.jpg"
+              src="/images/grants/flanders/mijn-verbouwpremie-renovatie.jpg"
               alt={t('imageAlt')}
               fill
               className="object-cover"
