@@ -4,7 +4,6 @@ import { Link } from '@/i18n/routing';
 
 export default function Hero() {
   const t = useTranslations('Hero');
-  const tPrices = useTranslations('PricesPage.hero');
 
   return (
     <section className="relative w-full min-h-[580px] md:min-h-[640px] lg:min-h-[700px] flex items-center overflow-hidden">
@@ -46,10 +45,10 @@ export default function Hero() {
 
           <div className="pt-2 flex justify-center md:justify-start w-full">
             <Link
-              href="/prices"
+              href="/services"
               className="inline-block bg-[#C82024] hover:bg-red-800 text-white text-base md:text-lg font-bold px-5 py-2 max-md:min-h-11 max-md:inline-flex max-md:items-center max-md:justify-center lg:px-5 lg:py-3 lg:text-xl rounded-full transition shadow-lg hover:shadow-xl active:scale-95"
             >
-              {tPrices('cta')}
+              {t('cta')}
             </Link>
           </div>
         </div>
