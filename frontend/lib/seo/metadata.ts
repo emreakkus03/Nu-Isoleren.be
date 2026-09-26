@@ -29,7 +29,9 @@ export function pageMetadata(route: RouteKey, locale: string, existing: Metadata
     })
   : [];
 
-const fallbackOgImage = publicImage('/og-image.jpg');
+const fallbackOgImage = origin
+  ? `${origin}/og-image.jpg`
+  : undefined;
 
 const finalImages =
   images.length > 0
