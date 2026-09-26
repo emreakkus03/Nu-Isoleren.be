@@ -2,6 +2,8 @@
   "General": {
     "company": {
       "name": "Nu-Isoleren.be",
+      "legalName": "Nu-Isoleren.be BV",
+      "enterpriseNumber": "0726.774.181",
       "email": "info@nu-isoleren.be",
       "phone": "+32 (0) 800 63 63 5",
       "phoneHref": "+3280063635",
@@ -2130,5 +2132,106 @@
     "preferencesDescription": "Choose which non-essential cookies you want to allow. You can change your choice at any time.",
     "close": "Close",
     "storageUnavailable": "Your browser cannot save your choice. Your preferences apply to this visit; we will ask you again on your next visit."
+  },
+  "LegalPages": {
+    "enterpriseNumber": "Enterprise number",
+    "vatNumber": "VAT number",
+    "policyLinks": "Privacy and cookies",
+    "updated": "Last updated:",
+    "controller": "Controller and contact details",
+    "authority": "Lodge a complaint with the Belgian Data Protection Authority",
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "How Nu-Isoleren.be processes personal data when you use this website or submit an enquiry.",
+      "sections": [
+        {
+          "title": "Who handles your data?",
+          "text": "Nu-Isoleren.be BV is the controller of personal data collected through this website. For questions about your data or to exercise your rights, contact us using the email address, telephone number or postal address above."
+        },
+        {
+          "title": "Contact and quote requests",
+          "text": "The contact form collects your first and last name, email address, optional phone number and message. A quote request also requires a phone number, street, house number, postcode, town and selected services; its message is optional. Both forms record the language and the time you confirm the privacy checkbox. Contact requests also store the source “contact_page”.\nRequests are stored in the backend database with creation/update timestamps and a handling status. Quotes receive a reference and links to selected services. Contact requests may have internal follow-up notes. Neither form offers file uploads. Required fields are needed to submit the form."
+        },
+        {
+          "title": "Purposes and legal bases",
+          "text": "We use your request to reply, contact you, assess the proposed work and prepare a quote. Quotes and enquiries made with a view to entering a contract involve steps taken at your request before a contract is concluded. The basis for other enquiries and technical logging still needs to be documented; we do not assume blanket consent for all processing.\nThe required privacy checkbox records your confirmation, not permission for advertising or a newsletter. Optional marketing technology has a separate consent choice. You may withdraw consent to processing that relies on it."
+        },
+        {
+          "title": "Hosting, storage and email",
+          "text": "Vercel hosts the frontend; the Laravel backend and database are managed through Laravel Cloud. Brevo provides transactional email: internal contact notifications, and internal notifications and customer confirmations for quotes. Messages may include the request details, your name and email address. Form success confirms database receipt, not email delivery.\nWebsite images use configurable object storage; its final provider and region remain to be confirmed. An optional CRM webhook exists for quote follow-up. Its activation and recipient must be checked before it is described as an active transfer."
+        },
+        {
+          "title": "Technical data and security",
+          "text": "Delivering pages and processing requests sends connection information, including your IP address, to the relevant servers. The backend validates input, limits requests and logs errors. External service error responses may appear in logs. Production log fields, access permissions and retention are not yet fully established. This website does not place form data in thank-you page URLs. This does not guarantee the practices of every external provider."
+        },
+        {
+          "title": "Google, Meta and embedded content",
+          "text": "Google Tag Manager manages Google Ads and Meta Pixel. The marketing agency does not currently use Google Analytics. The site passes analytics and marketing preferences to the container; whether every tag respects them must be checked in GTM. The forms do not themselves send names, email addresses or other form fields to the dataLayer.\nGoogle Places supplies business reviews through the server; reviewer photos may load from Google. The contact page includes a Google Maps iframe which is currently not blocked by cookie preferences. Google receives connection information when it loads. See also our cookie policy."
+        },
+        {
+          "title": "International transfers",
+          "text": "International providers may process data outside the European Economic Area. Specific regions, recipients and applicable transfer safeguards have not yet been confirmed. We therefore do not claim any particular adequacy arrangement or contractual safeguard. Contact us for information about your data; these details need to be completed before production readiness is finalised."
+        },
+        {
+          "title": "Retention",
+          "text": "Ordinary leads and contact enquiries that do not result in a customer relationship: at most 2 years after the last contact.\n\nQuote requests that do not result in a customer relationship: at most 2 years after the last contact.\n\nWhen a prospect becomes a customer, personal data needed to perform the contract, handle administration, keep accounts, issue invoices or meet legal obligations may be retained longer in accordance with the applicable statutory retention periods. This does not mean that all earlier prospect data automatically remains necessary.\n\nBelgian accounting and tax documents must generally be retained for 10 years, subject to the applicable rules and any exceptions. This statutory document-retention obligation is separate from the period for ordinary contact enquiries and quote requests without a customer relationship.\n\nCookie consent (nu-isoleren.consent) remains valid for at most 180 days, as technically configured. The site then asks for your choice again.\n\nSeparate periods for technical logs, backups and storage by external providers still need to be established. The contact and quote retention periods above are company policy; practical deletion procedures must be aligned with that policy."
+        },
+        {
+          "title": "Your rights and withdrawing consent",
+          "text": "Subject to the applicable conditions, you may request access, correction, erasure, restriction or portability of your data and object to processing. Use the contact details above. Clarification or proportionate identity verification may be needed. Withdrawing consent does not affect the lawfulness of earlier processing based on consent. Change cookie preferences using the button below or in the footer. You may also complain to the Belgian Data Protection Authority using the link below."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie policy",
+      "description": "Cookies and similar technologies on this website and how to manage your preferences.",
+      "sections": [
+        {
+          "title": "Cookies and similar storage",
+          "text": "Cookies are small pieces of data stored by your browser and potentially sent with matching requests. localStorage keeps data in your browser without automatically sending it with every request. Tags, pixels and iframes may also contact external services."
+        },
+        {
+          "title": "Necessary storage",
+          "text": "nu-isoleren.consent is this site’s localStorage item. It stores necessary, analytics and marketing choices, the consent version and saved/expiry timestamps. A choice is valid for at most 180 days. Afterwards it is no longer applied and the banner appears again; localStorage does not automatically physically delete the old value. Necessary storage remains active.\nNEXT_LOCALE is the next-intl language cookie, saved when needed. The current configuration sets no max-age: it is a session cookie, whose restoration also depends on browser settings. No other application-owned sessionStorage use was identified."
+        },
+        {
+          "title": "Analytics",
+          "text": "Analytics is off by default and reserved for optional statistics services. The marketing agency does not currently use Google Analytics. An analytics choice is not marketing consent and does not itself load a separate Analytics script in this site."
+        },
+        {
+          "title": "Marketing: Google Ads and Meta Pixel",
+          "text": "Google Ads and Meta Pixel are managed through GTM, not separate website scripts. Marketing is off by default. With consent these services can measure campaigns and conversions, including visits to contact or quote thank-you pages. Exact tags, cookies, recipients, individual purposes and lifetimes still need checking in the external container and production browser. We do not publish an unverified cookie list."
+        },
+        {
+          "title": "Google Tag Manager and Consent Mode v2",
+          "text": "GTM-P6K3L9WQ loads after the site first sets analytics_storage, ad_storage, ad_user_data and ad_personalization to denied and processes any valid stored choice. Analytics controls analytics_storage; marketing controls the three advertising values. Changes are sent through Consent Mode and nu_consent_update.\nGTM may load while denied. Depending on settings, Google tags can send cookieless measurement requests. Meta tags require their own GTM restrictions; Consent Mode does not automatically block every tag. Without JavaScript, the noscript iframe may contact Google but cannot read localStorage preferences. This fallback must not run optional tags; its container settings need checking."
+        },
+        {
+          "title": "Google Maps and reviews",
+          "text": "The contact-page Maps iframe currently loads directly when the browser loads it, independently of cookie preferences. Google may receive technical data and use its own storage. Exact cookies and durations have not been established. Google Places supplies reviews through our server; external reviewer photos may also make requests to Google. These services are not described as already consent-gated."
+        },
+        {
+          "title": "Accepting, rejecting and changing preferences",
+          "text": "On your first visit you can reject all, set preferences or accept all. Analytics and marketing can be chosen independently. “Cookie preferences” in the footer or below lets you change or withdraw your choice. Missing, invalid, expired or outdated-version preferences cause the banner to appear again.\nClearing browser storage also clears your choice. Withdrawal changes future permission but does not automatically remove cookies or data already held by external providers. Use browser settings where necessary and contact us to exercise your privacy rights."
+        },
+        {
+          "title": "External storage still to verify",
+          "text": "The GTM container contents and providers’ production settings are outside this website code. Specific names, domains, lifetimes and transfers will be added only after reliable verification. See the privacy policy for contact details, data processing and your rights."
+        }
+      ]
+    }
+  },
+  "ThankYouPage": {
+    "home": "Back to home",
+    "services": "Explore our services",
+    "contact": {
+      "title": "Thank you for your message",
+      "description": "We have received your enquiry. We will contact you to answer your question."
+    },
+    "quote": {
+      "title": "Thank you for your quote request",
+      "description": "We have received your quote request. We will review it and contact you about your project."
+    }
   }
+
 }

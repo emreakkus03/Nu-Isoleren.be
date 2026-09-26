@@ -2,6 +2,8 @@
   "General": {
     "company": {
       "name": "Nu-Isoleren.be",
+      "legalName": "Nu-Isoleren.be BV",
+      "enterpriseNumber": "0726.774.181",
       "email": "info@nu-isoleren.be",
       "phone": "+32 (0) 800 63 63 5",
       "phoneHref": "+3280063635",
@@ -2126,5 +2128,106 @@
     "preferencesDescription": "Choisissez les cookies non essentiels que vous souhaitez autoriser. Vous pourrez modifier votre choix à tout moment.",
     "close": "Fermer",
     "storageUnavailable": "Votre navigateur ne peut pas enregistrer votre choix. Vos préférences s’appliquent à cette visite ; nous vous demanderons de choisir à nouveau lors de votre prochaine visite."
+  },
+  "LegalPages": {
+    "enterpriseNumber": "Numéro d’entreprise",
+    "vatNumber": "Numéro de TVA",
+    "policyLinks": "Confidentialité et cookies",
+    "updated": "Dernière modification :",
+    "controller": "Responsable et coordonnées",
+    "authority": "Introduire une plainte auprès de l’Autorité belge de protection des données",
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "description": "Comment Nu-Isoleren.be traite vos données personnelles lorsque vous utilisez ce site ou envoyez une demande.",
+      "sections": [
+        {
+          "title": "Qui traite vos données ?",
+          "text": "Nu-Isoleren.be BV est le responsable du traitement des données personnelles collectées via ce site. Pour toute question concernant vos données ou l’exercice de vos droits, contactez-nous à l’adresse e-mail, au numéro de téléphone ou à l’adresse postale indiqués ci-dessus."
+        },
+        {
+          "title": "Demandes de contact et de devis",
+          "text": "Le formulaire de contact demande votre prénom, nom, adresse e-mail, un numéro de téléphone facultatif et votre message. Pour un devis, le téléphone, la rue, le numéro, le code postal, la commune et les prestations souhaitées sont également demandés ; le message est facultatif. Les deux formulaires enregistrent la langue et la date de validation de la case relative à la confidentialité. Le contact conserve aussi la provenance « contact_page ».\nLes demandes sont conservées dans la base de données du backend avec leurs dates et leur statut de traitement. Les devis reçoivent une référence et sont liés aux services choisis. Des notes internes peuvent accompagner les demandes de contact. Aucun téléversement de fichier n’est proposé. Les champs obligatoires sont nécessaires à l’envoi du formulaire."
+        },
+        {
+          "title": "Finalités et bases juridiques",
+          "text": "Les données servent à répondre, vous contacter, examiner les travaux souhaités et préparer un devis. Un devis ou une demande en vue d’un contrat relève des mesures prises à votre demande avant la conclusion de ce contrat. La base applicable aux autres questions et aux journaux techniques reste à préciser ; nous ne présumons pas un consentement général à tous les traitements.\nLa case du formulaire enregistre votre confirmation et ne constitue pas une autorisation de publicité ou de newsletter. Les technologies marketing optionnelles font l’objet d’un choix distinct. Vous pouvez retirer un consentement donné pour un traitement fondé sur celui-ci."
+        },
+        {
+          "title": "Hébergement, stockage et e-mails",
+          "text": "Le frontend est hébergé par Vercel ; le backend Laravel et la base de données sont gérés via Laravel Cloud. Brevo assure les e-mails transactionnels : notification interne d’un contact, notification interne et confirmation au demandeur pour un devis. Ces messages peuvent contenir les données de la demande, votre nom et votre adresse e-mail. Le succès du formulaire confirme l’enregistrement, pas la livraison de l’e-mail.\nLes images du site utilisent un stockage objet configurable dont le fournisseur définitif et la région restent à confirmer. Un webhook CRM optionnel existe pour le suivi des devis ; son activation et son destinataire doivent être vérifiés avant de le présenter comme un transfert actif."
+        },
+        {
+          "title": "Données techniques et sécurité",
+          "text": "La consultation du site et l’envoi des demandes transmettent aux serveurs concernés des informations de connexion, notamment l’adresse IP. Le backend valide les saisies, limite les requêtes et journalise les erreurs. Des réponses d’erreur de prestataires peuvent apparaître dans les journaux. Les champs des logs de production, les accès et leurs durées ne sont pas encore entièrement établis. Le site ne place pas les données des formulaires dans l’URL de remerciement. Cela ne garantit pas les pratiques de chaque prestataire externe."
+        },
+        {
+          "title": "Google, Meta et contenus externes",
+          "text": "Google Tag Manager gère les intégrations Google Ads et Meta Pixel. L’agence marketing n’utilise actuellement pas Google Analytics. Le site transmet les choix analytics et marketing ; leur respect effectif par toutes les balises doit être contrôlé dans GTM. Les formulaires n’envoient pas eux-mêmes leurs noms, adresses e-mail ou autres champs à la dataLayer.\nGoogle Places fournit des avis via le serveur ; les photos des auteurs peuvent être chargées depuis Google. La page contact contient une carte Google Maps qui n’est actuellement pas bloquée par les préférences de cookies. Google reçoit des informations de connexion lors de son chargement. Consultez aussi la politique de cookies."
+        },
+        {
+          "title": "Transferts internationaux",
+          "text": "Le recours à des prestataires internationaux peut impliquer un traitement hors de l’Espace économique européen. Les régions, destinataires et garanties applicables restent à confirmer. Nous ne revendiquons donc pas de décision d’adéquation ou de garantie contractuelle particulière. Contactez-nous pour des précisions ; ces informations doivent être complétées avant la finalisation de la mise en production."
+        },
+        {
+          "title": "Durées de conservation",
+          "text": "Prospects et demandes de contact qui ne débouchent pas sur une relation client : au maximum 2 ans après le dernier contact.\n\nDemandes de devis qui ne débouchent pas sur une relation client : au maximum 2 ans après le dernier contact.\n\nLorsqu’un prospect devient client, les données nécessaires à l’exécution du contrat, à l’administration, à la comptabilité, à la facturation ou aux obligations légales peuvent être conservées plus longtemps, conformément aux délais légaux applicables. Cela ne signifie pas que toutes les anciennes données du prospect restent automatiquement nécessaires.\n\nEn Belgique, les documents comptables et fiscaux doivent en principe être conservés pendant 10 ans, selon les règles applicables et leurs éventuelles exceptions. Cette obligation documentaire est distincte du délai applicable aux simples demandes de contact ou de devis sans relation client.\n\nLe consentement aux cookies (nu-isoleren.consent) reste valable au maximum 180 jours, conformément au fonctionnement technique du site. Votre choix est ensuite demandé à nouveau.\n\nLes délais propres aux journaux techniques, aux sauvegardes et au stockage chez les prestataires externes restent à définir. Les délais ci-dessus pour les contacts et devis constituent la politique de l’entreprise ; les procédures de suppression doivent être alignées sur celle-ci."
+        },
+        {
+          "title": "Vos droits et retrait du consentement",
+          "text": "Sous les conditions applicables, vous pouvez demander l’accès, la rectification, l’effacement, la limitation ou la portabilité de vos données et vous opposer à un traitement. Utilisez les coordonnées ci-dessus. Des précisions ou une vérification d’identité proportionnée peuvent être nécessaires. Le retrait du consentement ne remet pas en cause la licéité du traitement antérieur. Modifiez vos préférences via le bouton ci-dessous ou le pied de page. Vous pouvez également saisir l’Autorité belge de protection des données via le lien ci-dessous."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Politique de cookies",
+      "description": "Les cookies et technologies similaires utilisés sur ce site et la gestion de vos préférences.",
+      "sections": [
+        {
+          "title": "Cookies et stockage similaire",
+          "text": "Les cookies sont de petites données conservées par le navigateur et pouvant être envoyées avec les requêtes correspondantes. Le localStorage conserve des données dans votre navigateur sans les envoyer automatiquement avec chaque requête. Les balises, pixels et iframes peuvent aussi contacter des services externes."
+        },
+        {
+          "title": "Stockage nécessaire",
+          "text": "nu-isoleren.consent est un élément localStorage du site. Il contient les choix necessary, analytics et marketing, la version et les dates d’enregistrement et d’expiration. Le choix reste valable au maximum 180 jours. Ensuite, il n’est plus appliqué et la bannière réapparaît ; le localStorage ne supprime pas automatiquement l’ancienne valeur. Le stockage nécessaire reste actif.\nNEXT_LOCALE est le cookie de langue de next-intl, enregistré lorsque nécessaire. La configuration ne définit pas de max-age : il s’agit d’un cookie de session, dont la restauration dépend aussi du navigateur. Aucun autre stockage sessionStorage propre à l’application n’a été identifié."
+        },
+        {
+          "title": "Analytics",
+          "text": "Cette catégorie est désactivée par défaut et prévue pour des statistiques optionnelles. L’agence marketing n’utilise actuellement pas Google Analytics. Un choix analytics n’autorise pas le marketing et ne charge pas, à lui seul, un script Analytics distinct dans le site."
+        },
+        {
+          "title": "Marketing : Google Ads et Meta Pixel",
+          "text": "Google Ads et Meta Pixel sont gérés via GTM, sans scripts séparés dans le site. Le marketing est désactivé par défaut. Avec consentement, ces services peuvent mesurer les campagnes et conversions, notamment la visite d’une page de remerciement contact ou devis. Les balises, cookies, destinataires, finalités détaillées et durées doivent encore être vérifiés dans le conteneur externe et le navigateur en production. Aucune liste de cookies non confirmée n’est publiée ici."
+        },
+        {
+          "title": "Google Tag Manager et Consent Mode v2",
+          "text": "GTM-P6K3L9WQ est chargé après que le site a fixé analytics_storage, ad_storage, ad_user_data et ad_personalization à denied, puis traité les préférences enregistrées valides. Analytics contrôle analytics_storage ; marketing contrôle les trois valeurs publicitaires. Les changements passent par Consent Mode et nu_consent_update.\nGTM peut se charger avec denied. Selon leur configuration, les balises Google peuvent émettre des requêtes de mesure sans cookies. Les balises Meta nécessitent des restrictions propres dans GTM : Consent Mode ne les bloque pas toutes automatiquement. Sans JavaScript, l’iframe noscript peut contacter Google sans pouvoir lire vos préférences localStorage. Cette solution de secours ne doit pas exécuter de balises optionnelles ; le conteneur doit être contrôlé."
+        },
+        {
+          "title": "Google Maps et avis",
+          "text": "La carte Maps de la page contact se charge directement lorsque le navigateur charge l’iframe, indépendamment de votre choix de cookies. Google peut recevoir des données techniques et utiliser son propre stockage. Les cookies et durées exacts restent à vérifier. Google Places fournit les avis via notre serveur ; les photos externes des auteurs peuvent également générer une requête vers Google. Ces services ne sont pas présentés comme déjà bloqués par le consentement."
+        },
+        {
+          "title": "Accepter, refuser et modifier",
+          "text": "À la première visite, vous pouvez tout refuser, définir vos préférences ou tout accepter. Analytics et marketing sont indépendants. Le bouton « Préférences de cookies », dans le pied de page ou ci-dessous, permet de modifier ou retirer votre choix. Un choix absent, invalide, expiré ou d’une ancienne version fait réapparaître la bannière.\nEffacer le stockage du navigateur efface aussi le choix. Le retrait modifie l’autorisation future mais ne supprime pas automatiquement les cookies ou données déjà conservés par les prestataires. Utilisez si nécessaire les réglages du navigateur et contactez-nous pour exercer vos droits."
+        },
+        {
+          "title": "Stockage externe à vérifier",
+          "text": "Le conteneur GTM et les réglages de production des prestataires ne figurent pas dans le code du site. Les noms, domaines, durées et transferts seront précisés après vérification fiable. La politique de confidentialité détaille les coordonnées, les traitements et vos droits."
+        }
+      ]
+    }
+  },
+  "ThankYouPage": {
+    "home": "Retour à l’accueil",
+    "services": "Découvrir nos services",
+    "contact": {
+      "title": "Merci pour votre message",
+      "description": "Nous avons reçu votre demande de contact. Nous vous recontacterons pour répondre à votre question."
+    },
+    "quote": {
+      "title": "Merci pour votre demande de devis",
+      "description": "Nous avons reçu votre demande de devis. Nous allons l’examiner et vous recontacter au sujet de votre projet."
+    }
   }
+
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react';
 import { useTranslations } from 'next-intl';
+import PolicyLinks from '@/components/legal/PolicyLinks';
 import { DEFAULT_CONSENT, type ConsentPreferences } from '@/lib/consent';
 import { closeConsentPreferences, saveConsent } from '@/lib/consent-store';
 
@@ -64,6 +65,7 @@ export default function CookiePreferences({ preferences }: { preferences: Consen
         <button type="button" className={buttonClass} onClick={() => saveConsent({ necessary: true, analytics: true, marketing: true })}>{t('acceptAll')}</button>
         <button type="button" className="cursor-pointer rounded-full bg-[#C82024] px-4 py-3 text-sm font-bold text-white hover:bg-red-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A669A] sm:col-span-2" onClick={() => saveConsent(selection)}>{t('savePreferences')}</button>
       </div>
+      <PolicyLinks />
     </dialog>
   );
 }

@@ -2,6 +2,8 @@
   "General": {
     "company": {
       "name": "Nu-Isoleren.be",
+      "legalName": "Nu-Isoleren.be BV",
+      "enterpriseNumber": "0726.774.181",
       "email": "info@nu-isoleren.be",
       "phone": "+32 (0) 800 63 63 5",
       "phoneHref": "+3280063635",
@@ -2108,5 +2110,106 @@
     "preferencesDescription": "Kies welke niet-noodzakelijke cookies u wilt toestaan. U kunt uw keuze later altijd wijzigen.",
     "close": "Sluiten",
     "storageUnavailable": "Uw browser kan uw keuze niet bewaren. Uw voorkeur geldt voor dit bezoek; bij een volgend bezoek vragen we opnieuw om uw keuze."
+  },
+  "LegalPages": {
+    "enterpriseNumber": "Ondernemingsnummer",
+    "vatNumber": "BTW-nummer",
+    "policyLinks": "Privacy en cookies",
+    "updated": "Laatst gewijzigd:",
+    "controller": "Verantwoordelijke en contact",
+    "authority": "Een klacht indienen bij de Belgische Gegevensbeschermingsautoriteit",
+    "privacy": {
+      "title": "Privacybeleid",
+      "description": "Hoe Nu-Isoleren.be uw persoonsgegevens verwerkt wanneer u onze website gebruikt of een aanvraag indient.",
+      "sections": [
+        {
+          "title": "Wie verwerkt uw gegevens?",
+          "text": "Nu-Isoleren.be BV is de verwerkingsverantwoordelijke voor de persoonsgegevens die via deze website worden verzameld. Voor vragen over uw persoonsgegevens of de uitoefening van uw rechten kunt u contact opnemen via het hierboven vermelde e-mailadres, telefoonnummer of postadres."
+        },
+        {
+          "title": "Contact- en offerteaanvragen",
+          "text": "Het contactformulier vraagt uw voornaam, achternaam, e-mailadres, een optioneel telefoonnummer en uw bericht. Bij een offerte vragen we daarnaast een telefoonnummer, straat, huisnummer, postcode, gemeente en de gewenste diensten; een toelichting is optioneel. Beide formulieren registreren de taal en het tijdstip waarop u het privacyvakje aanvinkt. Bij contact wordt ook de herkomst “contact_page” opgeslagen.\nAanvragen worden in onze backenddatabase bewaard met aanmaak-/wijzigingsdatums en een behandelstatus. Offertes krijgen een referentienummer en een koppeling met de gekozen diensten. Contactaanvragen kunnen interne opvolgnotities bevatten. De formulieren bieden geen bestandsupload. Zonder de vereiste velden kunnen we het formulier niet verwerken."
+        },
+        {
+          "title": "Doeleinden en rechtsgronden",
+          "text": "We gebruiken uw aanvraag om uw vraag te beantwoorden, contact op te nemen, de gevraagde werkzaamheden te beoordelen en een offerte voor te bereiden. Voor een offerte of een vraag met het oog op een overeenkomst gaat het om stappen op uw verzoek vóór het sluiten van een overeenkomst. De grondslag voor overige vragen en technische logverwerking moet nog afzonderlijk worden vastgelegd; we nemen geen algemene toestemming voor alle verwerkingen aan.\nHet verplichte privacyvakje registreert uw bevestiging bij het formulier en geeft geen toestemming voor advertenties of een nieuwsbrief. Optionele marketingtechnologie gebruikt een afzonderlijke cookievoorkeur. Voor verwerking op basis van toestemming kunt u die toestemming intrekken."
+        },
+        {
+          "title": "Hosting, opslag en e-mail",
+          "text": "De frontend wordt gehost op Vercel; de Laravel-backend en database worden beheerd via Laravel Cloud. Brevo wordt gebruikt voor transactionele e-mail: een contactaanvraag wordt aan het bedrijf gemeld; bij een offerte zijn een interne melding en een bevestiging aan de aanvrager voorzien. Daarbij kunnen de ingevulde aanvraaggegevens, uw e-mailadres en naam worden verwerkt. Een succesvol formulier bevestigt databaseontvangst, niet de aflevering van de e-mail.\nWebsiteafbeeldingen gebruiken configureerbare object storage. De uiteindelijke opslagleverancier en regio moeten nog worden bevestigd. Er bestaat ook een optionele CRM-webhook voor offerteopvolging; activatie en ontvanger moeten worden gecontroleerd voordat die als actieve ontvanger worden vermeld."
+        },
+        {
+          "title": "Technische gegevens en beveiliging",
+          "text": "Voor het afleveren van webpagina’s en het verwerken van aanvragen worden technische verbindingsgegevens, zoals het IP-adres, aan de betrokken servers doorgegeven. De backend valideert invoer, begrenst het aantal aanvragen en registreert fouten. Foutmeldingen van externe diensten kunnen in logs terechtkomen. Exacte productie-logvelden, toegangsrechten en logtermijnen zijn nog niet volledig vastgesteld. Formuliergegevens worden niet door deze website in de URL van de bedankpagina geplaatst. Dit is geen garantie dat elke externe dienst dezelfde gegevens of termijnen hanteert."
+        },
+        {
+          "title": "Google, Meta en externe inhoud",
+          "text": "Google Tag Manager beheert de Google Ads- en Meta Pixel-integraties. Er is momenteel geen Google Analytics-gebruik door het marketingbureau bevestigd. De website geeft analytics- en marketingvoorkeuren door; het daadwerkelijk respecteren daarvan door alle tags moet in de GTM-container worden gecontroleerd. De formulieren sturen zelf geen namen, e-mailadressen of andere formuliervelden naar de dataLayer.\nGoogle Places levert bedrijfsbeoordelingen via de server; profielfoto’s van reviewers kunnen vanuit Google worden geladen. De contactpagina bevat een Google Maps-iframe dat momenteel niet door de cookievoorkeur wordt tegengehouden. Bij het laden ontvangt Google verbindingsgegevens. Meer informatie staat in het cookiebeleid."
+        },
+        {
+          "title": "Internationale doorgiften",
+          "text": "Bij diensten van internationale leveranciers kan verwerking buiten de Europese Economische Ruimte plaatsvinden. De concrete opslagregio’s, ontvangers en toepasselijke doorgiftewaarborgen zijn nog niet bevestigd. We claimen daarom geen specifieke adequaatheidsregeling of contractuele waarborg. Neem contact op voor informatie over uw gegevens; deze gegevens moeten vóór volledige productieafronding worden aangevuld."
+        },
+        {
+          "title": "Bewaartermijnen",
+          "text": "Gewone leads en contactaanvragen die niet tot een klantrelatie leiden: maximaal 2 jaar na het laatste contact.\n\nOfferteaanvragen die niet tot een klantrelatie leiden: maximaal 2 jaar na het laatste contact.\n\nWanneer een prospect klant wordt, kunnen de persoonsgegevens die noodzakelijk zijn voor de uitvoering van de overeenkomst, administratie, boekhouding, facturatie of wettelijke verplichtingen langer worden bewaard volgens de toepasselijke wettelijke bewaartermijnen. Dit betekent niet dat alle eerdere prospectgegevens automatisch langer nodig zijn.\n\nBelgische boekhoudkundige en fiscale documenten moeten in principe 10 jaar worden bewaard, overeenkomstig de toepasselijke regels en eventuele uitzonderingen. Deze wettelijke bewaarplicht voor documenten is te onderscheiden van de termijn voor gewone contact- en offerteaanvragen zonder klantrelatie.\n\nCookieconsent (nu-isoleren.consent) is maximaal 180 dagen geldig, zoals technisch ingesteld. Daarna vraagt de website opnieuw om uw keuze.\n\nAfzonderlijke termijnen voor technische logs, back-ups en de opslag bij externe diensten moeten nog worden vastgelegd. De hierboven genoemde termijnen voor contact- en offerteaanvragen vormen het bedrijfsbeleid; de praktische uitvoering van verwijdering moet daarop worden afgestemd."
+        },
+        {
+          "title": "Uw rechten en toestemming intrekken",
+          "text": "Afhankelijk van de toepasselijke voorwaarden kunt u inzage, correctie, verwijdering, beperking of overdraagbaarheid van uw persoonsgegevens vragen en bezwaar maken tegen verwerking. Gebruik de contactgegevens bovenaan deze pagina. Om uw verzoek correct te behandelen kan verduidelijking of een passende identiteitscontrole nodig zijn. Intrekken van toestemming doet geen afbreuk aan de rechtmatigheid van verwerking vóór die intrekking. Cookievoorkeuren kunt u via de knop onderaan of in de footer wijzigen. U kunt een klacht indienen bij de Belgische Gegevensbeschermingsautoriteit via onderstaande link."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookiebeleid",
+      "description": "Welke cookies en vergelijkbare technieken deze website gebruikt en hoe u uw voorkeuren beheert.",
+      "sections": [
+        {
+          "title": "Cookies en vergelijkbare opslag",
+          "text": "Cookies zijn kleine gegevens die een browser voor een website bewaart en bij passende requests kan meesturen. localStorage bewaart gegevens lokaal in uw browser en stuurt ze niet automatisch met iedere request mee. Tags, pixels en iframes kunnen daarnaast verbinding maken met externe diensten."
+        },
+        {
+          "title": "Noodzakelijke opslag",
+          "text": "nu-isoleren.consent is een localStorage-item van deze website. Het bewaart necessary, analytics en marketing, de consentversie en het opslag- en vervaltijdstip. Uw keuze is maximaal 180 dagen geldig. Na afloop wordt de oude keuze niet meer toegepast en verschijnt de banner opnieuw; localStorage ruimt de oude waarde niet vanzelf fysiek op. Noodzakelijke opslag blijft actief.\nNEXT_LOCALE is de taalcookie van next-intl. Hij bewaart de taalkeuze wanneer die cookie nodig is. De huidige configuratie stelt geen vaste max-age in: het is een sessiecookie, waarvan het herstel ook van uw browserinstellingen afhangt. Er is geen andere applicatie-eigen sessionStorage-opslag aangetroffen."
+        },
+        {
+          "title": "Analytics",
+          "text": "De analyticscategorie staat standaard uit. Ze is voorbereid voor optionele statistiekdiensten. Het marketingbureau gebruikt momenteel geen Google Analytics. Een analyticskeuze is geen marketingtoestemming en activeert op zichzelf geen afzonderlijk Analytics-script in de websitecode."
+        },
+        {
+          "title": "Marketing: Google Ads en Meta Pixel",
+          "text": "Google Ads en Meta Pixel worden beheerd via Google Tag Manager, niet via afzonderlijke scripts in de website. Marketing staat standaard uit. Bij toestemming kunnen deze diensten campagnebezoek en conversies meten, waaronder een bezoek aan een contact- of offertebedankpagina. De precieze tags, cookies, ontvangers, doeleinden per tag en bewaartermijnen moeten nog in de externe GTM-container en de productie-browser worden gecontroleerd. Er wordt hier geen onbevestigde cookielijst gepubliceerd."
+        },
+        {
+          "title": "Google Tag Manager en Consent Mode v2",
+          "text": "GTM-P6K3L9WQ wordt geladen nadat de website eerst analytics_storage, ad_storage, ad_user_data en ad_personalization op denied heeft gezet en de geldige opgeslagen keuze heeft verwerkt. Analytics bepaalt analytics_storage; marketing bepaalt de drie advertentiewaarden. Wijzigingen worden doorgestuurd via Consent Mode en nu_consent_update.\nGTM zelf mag laden bij denied. Google-tags kunnen dan, afhankelijk van hun instellingen, cookieless meetrequests verzenden. Meta-tags moeten afzonderlijk in GTM worden begrensd; Consent Mode doet dit niet automatisch voor alle tags. Zonder JavaScript kan het noscript-iframe naar Google laden, maar het kan uw localStorage-keuze niet lezen. Die fallback mag geen optionele marketing-/analyticstags uitvoeren; dit vergt containercontrole."
+        },
+        {
+          "title": "Google Maps en beoordelingen",
+          "text": "De Google Maps-kaart op de contactpagina laadt momenteel rechtstreeks zodra de browser het iframe laadt, onafhankelijk van uw cookiekeuze. Google kan daarbij technische gegevens ontvangen en eigen opslag gebruiken. De exacte cookies en termijnen zijn nog niet vastgesteld. Google Places levert reviews via onze server; externe reviewprofielfoto’s kunnen ook een request naar Google veroorzaken. We schrijven deze diensten niet ten onrechte toe aan een reeds bestaande consent-gate."
+        },
+        {
+          "title": "Accepteren, weigeren en wijzigen",
+          "text": "Bij uw eerste bezoek kunt u alles weigeren, voorkeuren instellen of alles aanvaarden. Analytics en marketing zijn onafhankelijk instelbaar. Via “Cookievoorkeuren” in de footer of hieronder kunt u uw keuze later wijzigen of intrekken. Een ontbrekende, ongeldige, verlopen of oude consentversie leidt opnieuw tot een keuze.\nHet wissen van browseropslag verwijdert ook uw opgeslagen keuze. Intrekken wijzigt de toekomstige toestemming, maar verwijdert niet automatisch cookies of gegevens die externe leveranciers al hebben opgeslagen. Gebruik zo nodig ook uw browserinstellingen en neem contact op voor een privacyverzoek."
+        },
+        {
+          "title": "Nog te verifiëren externe opslag",
+          "text": "De inhoud van de GTM-container en de productie-instellingen van externe diensten zijn niet in deze websitecode opgenomen. Specifieke cookienamen, domeinen, looptijden en internationale doorgiften worden pas toegevoegd nadat die betrouwbaar zijn gecontroleerd. Voor contactgegevens, gegevensverwerking en uw rechten verwijzen we naar het privacybeleid."
+        }
+      ]
+    }
+  },
+  "ThankYouPage": {
+    "home": "Terug naar de homepage",
+    "services": "Bekijk onze diensten",
+    "contact": {
+      "title": "Bedankt voor uw bericht",
+      "description": "We hebben uw contactaanvraag ontvangen. We nemen contact met u op om uw vraag te beantwoorden."
+    },
+    "quote": {
+      "title": "Bedankt voor uw offerteaanvraag",
+      "description": "We hebben uw offerteaanvraag ontvangen. We bekijken uw aanvraag en nemen contact met u op over uw project."
+    }
   }
+
 }

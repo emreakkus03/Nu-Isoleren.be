@@ -15,7 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   };
   const inventory = await getSeoInventory();
   for (const route of Object.keys(routing.pathnames) as RouteKey[]) {
-    if (!route.includes('[slug]') && !['/privacy-policy', '/cookie-policy'].includes(route)) add(route);
+    if (!route.includes('[slug]') && !['/privacy-policy', '/cookie-policy', '/thank-you/contact', '/thank-you/quote'].includes(route)) add(route);
   }
   for (const entry of inventory) if (entry.is_indexable) add(contentRoutes[entry.type], entry.slugs, entry.updated_at);
   return entries;

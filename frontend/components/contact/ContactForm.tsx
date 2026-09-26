@@ -1,8 +1,8 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { Link, useRouter } from '@/i18n/routing';
 
 interface ContactFormData {
   first_name: string;
@@ -23,6 +23,8 @@ const initialFormData: ContactFormData = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
+  const submissionLocked = useRef(false);
   const t = useTranslations('ContactPage.form');
   const locale = useLocale();
 
@@ -33,7 +35,7 @@ export default function ContactForm() {
     useState(false);
 
   const [status, setStatus] = useState<
-    'idle' | 'success' | 'error'
+    'idle' | 'error'
   >('idle');
 
   const handleChange = (
@@ -54,11 +56,13 @@ export default function ContactForm() {
     event: FormEvent<HTMLFormElement>,
   ) => {
     event.preventDefault();
+    if (submissionLocked.current) return;
 
     if (!formData.privacy_accepted) {
       return;
     }
 
+    submissionLocked.current = true;
     setIsSubmitting(true);
     setStatus('idle');
 
@@ -88,17 +92,17 @@ export default function ContactForm() {
         },
       );
 
-      if (!response.ok) {
+      const data = await response.json();
+      if (!response.ok || data.success !== true) {
         throw new Error(
           'Contactaanvraag kon niet worden verzonden.',
         );
       }
 
-      setFormData(initialFormData);
-      setStatus('success');
+      router.replace('/thank-you/contact');
     } catch {
       setStatus('error');
-    } finally {
+      submissionLocked.current = false;
       setIsSubmitting(false);
     }
   };
@@ -305,11 +309,7 @@ export default function ContactForm() {
         </button>
       </div>
 
-      {status === 'success' && (
-        <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-medium text-green-800">
-          {t('success')}
-        </div>
-      )}
+
 
       {status === 'error' && (
         <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-800">

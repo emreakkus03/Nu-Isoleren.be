@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import PolicyLinks from '@/components/legal/PolicyLinks';
 import { DEFAULT_CONSENT } from '@/lib/consent';
 import { initializeConsent, openConsentPreferences, saveConsent } from '@/lib/consent-store';
 import { useConsent } from './useConsent';
@@ -25,6 +26,7 @@ export default function CookieConsent() {
             <button id="cookie-banner-preferences" type="button" className={buttonClass} onClick={openConsentPreferences}>{t('preferences')}</button>
             <button type="button" className={buttonClass} onClick={() => saveConsent({ necessary: true, analytics: true, marketing: true })}>{t('acceptAll')}</button>
           </div>
+          <PolicyLinks />
         </section>
       )}
       {ready && panelOpen && <CookiePreferences preferences={preferences} />}

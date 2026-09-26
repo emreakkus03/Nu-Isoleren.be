@@ -1,7 +1,8 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link, useRouter } from '@/i18n/routing';
 
 interface Service {
   id: number;
@@ -55,6 +56,8 @@ export default function QuoteForm({
   apiUrl,
   initialServiceIds = [],
 }: QuoteFormProps) {
+  const router = useRouter();
+  const submissionLocked = useRef(false);
   const t = useTranslations('QuotePage.form');
 
  const [step, setStep] = useState(initialServiceIds.length > 0 ? 2 : 1);
@@ -64,7 +67,6 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
 );
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [reference, setReference] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const toggleService = (id: number) => {
@@ -103,12 +105,14 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
     event: FormEvent<HTMLFormElement>,
   ) => {
     event.preventDefault();
+    if (submissionLocked.current) return;
 
     if (!formData.privacy_consent) {
       setError(t('errors.privacy'));
       return;
     }
 
+    submissionLocked.current = true;
     setIsSubmitting(true);
     setError(null);
 
@@ -140,51 +144,20 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
 
       const data = await response.json();
 
-      if (!response.ok) {
+      if (!response.ok || data.success !== true) {
         throw new Error(
           data.message ?? 'Quote request failed',
         );
       }
 
-      setReference(data.data.reference);
+      router.replace('/thank-you/quote');
     } catch {
       setError(t('errors.submit'));
-    } finally {
+      submissionLocked.current = false;
       setIsSubmitting(false);
     }
   };
 
-  if (reference) {
-    return (
-      <div className="w-full max-w-lg bg-white rounded-3xl p-5 sm:p-7 md:p-9 shadow-xl shadow-gray-200/50 border border-gray-100">
-        <div className="flex flex-col items-center text-center">
-          <div className="flex items-center justify-center w-14 h-14 rounded-full bg-green-50">
-            <span className="text-2xl font-black text-green-600">
-              ✓
-            </span>
-          </div>
-
-          <h2 className="mt-5 text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-950 tracking-tight">
-            {t('success.title')}
-          </h2>
-
-          <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed max-w-md">
-            {t('success.description')}
-          </p>
-
-          <div className="w-full mt-7 rounded-2xl bg-gray-50 border border-gray-100 px-5 py-4">
-            <span className="text-xs sm:text-sm font-medium text-gray-500">
-              {t('success.reference')}
-            </span>
-
-            <p className="mt-1 text-base sm:text-lg font-extrabold text-gray-950">
-              {reference}
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="w-full max-w-lg bg-white rounded-3xl p-5 sm:p-7 md:p-9 shadow-xl shadow-gray-200/50 border border-gray-100">
@@ -408,7 +381,7 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
             />
 
             <span className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              {t('privacy')}
+              <Link href="/privacy-policy" className="underline">{t('privacy')}</Link>
             </span>
           </label>
 
