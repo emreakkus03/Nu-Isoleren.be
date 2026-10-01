@@ -60,4 +60,13 @@ class StoreContactSubmissionRequest extends FormRequest
             ],
         ];
     }
+
+    public function messages(): array
+{
+    return [
+        'message.required' => 'Gelieve een bericht in te vullen.',
+        'message.min' => 'Het bericht moet minstens 10 tekens bevatten.',
+        'message.max' => 'Het bericht mag maximaal 5000 tekens bevatten.',
+    ];
+}
 }

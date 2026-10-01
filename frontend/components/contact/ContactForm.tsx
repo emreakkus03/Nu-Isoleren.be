@@ -242,6 +242,8 @@ export default function ContactForm() {
           id="message"
           name="message"
           required
+          minLength={10}
+          maxLength={5000}
           rows={7}
           value={formData.message}
           onChange={(event) =>
