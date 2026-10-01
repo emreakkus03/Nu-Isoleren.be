@@ -2136,7 +2136,7 @@
         },
         {
           "title": "Hosting, opslag en e-mail",
-          "text": "De frontend wordt gehost op Vercel; de Laravel-backend en database worden beheerd via Laravel Cloud. Brevo wordt gebruikt voor transactionele e-mail: een contactaanvraag wordt aan het bedrijf gemeld; bij een offerte zijn een interne melding en een bevestiging aan de aanvrager voorzien. Daarbij kunnen de ingevulde aanvraaggegevens, uw e-mailadres en naam worden verwerkt. Een succesvol formulier bevestigt databaseontvangst, niet de aflevering van de e-mail.\nWebsiteafbeeldingen gebruiken configureerbare object storage. De uiteindelijke opslagleverancier en regio moeten nog worden bevestigd. Er bestaat ook een optionele CRM-webhook voor offerteopvolging; activatie en ontvanger moeten worden gecontroleerd voordat die als actieve ontvanger worden vermeld."
+          "text": "De frontend, Laravel-backend en database worden gehost op een OVHcloud VPS in Gravelines, Frankrijk. Brevo wordt gebruikt voor transactionele e-mail: een contactaanvraag wordt aan het bedrijf gemeld; bij een offerte zijn een interne melding en een bevestiging aan de aanvrager voorzien. Daarbij kunnen de ingevulde aanvraaggegevens, uw e-mailadres en naam worden verwerkt. Een succesvol formulier bevestigt databaseontvangst, niet de aflevering van de e-mail.\nWebsiteafbeeldingen gebruiken configureerbare object storage. De uiteindelijke opslagleverancier en regio moeten nog worden bevestigd. Er bestaat ook een optionele CRM-webhook voor offerteopvolging; activatie en ontvanger moeten worden gecontroleerd voordat die als actieve ontvanger worden vermeld."
         },
         {
           "title": "Technische gegevens en beveiliging",

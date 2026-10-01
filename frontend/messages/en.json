@@ -2158,7 +2158,7 @@
         },
         {
           "title": "Hosting, storage and email",
-          "text": "Vercel hosts the frontend; the Laravel backend and database are managed through Laravel Cloud. Brevo provides transactional email: internal contact notifications, and internal notifications and customer confirmations for quotes. Messages may include the request details, your name and email address. Form success confirms database receipt, not email delivery.\nWebsite images use configurable object storage; its final provider and region remain to be confirmed. An optional CRM webhook exists for quote follow-up. Its activation and recipient must be checked before it is described as an active transfer."
+          "text": "The frontend, Laravel backend, and database are hosted on an OVHcloud VPS in Gravelines, France. Brevo provides transactional email: internal contact notifications, and internal notifications and customer confirmations for quotes. Messages may include the request details, your name and email address. Form success confirms database receipt, not email delivery.\nWebsite images use configurable object storage; its final provider and region remain to be confirmed. An optional CRM webhook exists for quote follow-up. Its activation and recipient must be checked before it is described as an active transfer."
         },
         {
           "title": "Technical data and security",

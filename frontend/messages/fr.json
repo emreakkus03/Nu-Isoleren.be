@@ -2154,7 +2154,7 @@
         },
         {
           "title": "Hébergement, stockage et e-mails",
-          "text": "Le frontend est hébergé par Vercel ; le backend Laravel et la base de données sont gérés via Laravel Cloud. Brevo assure les e-mails transactionnels : notification interne d’un contact, notification interne et confirmation au demandeur pour un devis. Ces messages peuvent contenir les données de la demande, votre nom et votre adresse e-mail. Le succès du formulaire confirme l’enregistrement, pas la livraison de l’e-mail.\nLes images du site utilisent un stockage objet configurable dont le fournisseur définitif et la région restent à confirmer. Un webhook CRM optionnel existe pour le suivi des devis ; son activation et son destinataire doivent être vérifiés avant de le présenter comme un transfert actif."
+          "text": "Le frontend, le backend Laravel et la base de données sont hébergés sur un VPS OVHcloud à Gravelines, en France. Brevo assure les e-mails transactionnels : notification interne d’un contact, notification interne et confirmation au demandeur pour un devis. Ces messages peuvent contenir les données de la demande, votre nom et votre adresse e-mail. Le succès du formulaire confirme l’enregistrement, pas la livraison de l’e-mail.\nLes images du site utilisent un stockage objet configurable dont le fournisseur définitif et la région restent à confirmer. Un webhook CRM optionnel existe pour le suivi des devis ; son activation et son destinataire doivent être vérifiés avant de le présenter comme un transfert actif."
         },
         {
           "title": "Données techniques et sécurité",

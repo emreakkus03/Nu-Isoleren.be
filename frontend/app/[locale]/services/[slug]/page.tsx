@@ -20,7 +20,7 @@ import { getPathname } from '@/i18n/routing';
 
 
 const MEDIA_BASE_URL =
-  process.env.MEDIA_URL || process.env.NEXT_PUBLIC_S3_PUBLIC_URL || '';
+  process.env.NEXT_PUBLIC_S3_PUBLIC_URL || '';
 
 interface ServiceDetailPageProps {
   params: Promise<{
