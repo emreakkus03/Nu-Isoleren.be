@@ -45,7 +45,7 @@ export default function ServiceCard({
     (max-width: 1279px) calc(33.333vw - 37px),
     389px
   "
-  quality={60}
+  quality={50}
   className="object-cover transition-transform duration-500 group-hover:scale-105"
   onError={() => {
     if (currentSrc !== FALLBACK_IMAGE) {

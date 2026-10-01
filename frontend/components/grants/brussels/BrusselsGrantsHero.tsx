@@ -57,7 +57,8 @@ export default async function BrusselsGrantsHero({
               src="/images/grants/flanders/isolation-project.jpg"
               alt={t('imageAlt')}
               fill
-              preload
+              loading="eager"
+              fetchPriority="high"
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />

@@ -207,7 +207,7 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-  qualities: [60, 75, 90],
+  qualities: [50, 60, 75, 90],
   dangerouslyAllowLocalIP: process.env.DEPLOYMENT_ENV !== 'production',
   remotePatterns: [
     ...(process.env.NEXT_PUBLIC_S3_PUBLIC_URL

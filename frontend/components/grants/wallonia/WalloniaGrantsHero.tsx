@@ -57,7 +57,8 @@ export default async function WalloniaGrantsHero({
               src="/images/grants/wallonia/wallonia-renovation.jpg"
               alt={t('imageAlt')}
               fill
-              preload
+              loading="eager"
+              fetchPriority="high"
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />

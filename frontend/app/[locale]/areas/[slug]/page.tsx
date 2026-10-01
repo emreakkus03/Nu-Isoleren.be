@@ -204,7 +204,8 @@ const grantsHref = isWallonia
               city: city.name,
             })}
             fill
-            preload
+            loading="eager"
+            fetchPriority="high"
             quality={90}
             sizes="100vw"
             className="object-cover object-[30%_center] md:object-[25%_center]"

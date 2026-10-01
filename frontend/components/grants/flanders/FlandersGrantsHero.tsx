@@ -57,7 +57,8 @@ export default async function FlandersGrantsHero({
               src="/images/grants/flanders/isolation-project.jpg"
               alt="Woning in Vlaanderen na isolatiewerken door Nu-Isoleren"
               fill
-              preload
+              loading="eager"
+              fetchPriority="high"
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />

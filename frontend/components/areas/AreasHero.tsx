@@ -16,7 +16,8 @@ export default function AreasHero({ breadcrumbs }: AreasHeroProps) {
           src="/images/areas-hero.jpg"
           alt={t('title')}
           fill
-          preload
+          loading="eager"
+          fetchPriority="high"
           quality={90}
           sizes="100vw"
           className="object-cover object-center"

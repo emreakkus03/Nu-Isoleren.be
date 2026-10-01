@@ -64,7 +64,6 @@ export default async function KnowledgeArticleHero({
             src={article.hero_image}
             alt={article.title}
             fill
-            fetchPriority="high"
             sizes="(max-width: 1280px) 100vw, 1280px"
             className="object-cover"
           />
