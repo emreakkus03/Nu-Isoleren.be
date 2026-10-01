@@ -12,7 +12,7 @@ export default function Hero() {
           src="/images/hero.jpg"
           alt="Nu-Isoleren Gevelwerken en Spouwmuurisolatie"
           fill
-          fetchPriority="high"
+          preload
           quality={75}
           sizes="100vw"
           className="object-cover object-[65%_center] md:object-center"

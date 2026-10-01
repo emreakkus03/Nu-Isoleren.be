@@ -194,6 +194,7 @@ export default async function Footer({
                   alt="Nu-Isoleren.be"
                   width={942}
                   height={239}
+                  sizes="(max-width: 639px) 180px, (max-width: 1023px) 205px, 230px"
                   className="
                     h-auto
                     w-[180px]

@@ -38,7 +38,7 @@ export default async function Header() {
               alt="Nu-Isoleren Logo"
               width={942}
               height={239}
-              priority
+              sizes="160px"
               className="w-[160px] h-auto"
             />
           </Link>
@@ -55,7 +55,7 @@ export default async function Header() {
               alt="Nu-Isoleren Logo"
               width={942}
               height={239}
-              priority
+              sizes="200px"
               className="w-[200px] h-auto"
             />
           </Link>

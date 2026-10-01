@@ -36,7 +36,7 @@ export default function MaterialHero({
               src={material.hero_image}
               alt={material.hero_title || material.name}
               fill
-              fetchPriority="high"
+              preload
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />

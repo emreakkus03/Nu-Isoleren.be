@@ -97,6 +97,7 @@ export default async function GoogleReviewsSection({
               alt="Google"
               width={762}
               height={248}
+              sizes="(max-width: 639px) 78px, 86px"
               className="w-[78px] sm:w-[86px] h-auto"
             />
           </a>

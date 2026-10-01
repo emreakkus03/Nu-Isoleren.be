@@ -77,6 +77,7 @@ export default async function GoogleReviews({
           alt="Google"
           width={762}
           height={248}
+          sizes="(max-width: 639px) 64px, 72px"
           className="ml-1 h-auto w-[64px] sm:w-[72px]"
         />
       </a>
@@ -114,6 +115,7 @@ export default async function GoogleReviews({
         alt="Google Reviews"
         width={762}
         height={248}
+        sizes="(max-width: 767px) 40px, 60px"
         className="ml-1 h-auto w-10 md:w-[60px]"
       />
     </a>
