@@ -60,7 +60,7 @@ export default async function AboutHero({
                 src="/images/about/nu-isoleren-wagen.jpg"
                 alt={t('hero.imageAlt')}
                 fill
-                priority
+                fetchPriority="high"
                 quality={90}
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 className="object-cover"

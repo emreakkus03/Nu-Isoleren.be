@@ -15,7 +15,7 @@ interface ServiceCardProps {
   description?: string;
 }
 
-const FALLBACK_IMAGE = '/logo/logo.svg';
+const FALLBACK_IMAGE = '/logo/logo.webp';
 
 export default function ServiceCard({
   href,
@@ -35,17 +35,24 @@ export default function ServiceCard({
       className="group relative block aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300"
     >
       <Image
-        src={currentSrc}
-        alt={imageAlt || 'Service afbeelding'}
-        fill
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-        onError={() => {
-          if (currentSrc !== FALLBACK_IMAGE) {
-            setCurrentSrc(FALLBACK_IMAGE);
-          }
-        }}
-      />
+  src={currentSrc}
+  alt={imageAlt || 'Service afbeelding'}
+  fill
+  sizes="
+    (max-width: 639px) calc(100vw - 32px),
+    (max-width: 767px) calc(50vw - 28px),
+    (max-width: 1023px) calc(50vw - 36px),
+    (max-width: 1279px) calc(33.333vw - 37px),
+    389px
+  "
+  quality={60}
+  className="object-cover transition-transform duration-500 group-hover:scale-105"
+  onError={() => {
+    if (currentSrc !== FALLBACK_IMAGE) {
+      setCurrentSrc(FALLBACK_IMAGE);
+    }
+  }}
+/>
 
       {badge && (
         <div className="relative mx-4 mt-4 mb-16 z-20 md:absolute md:left-4 md:top-4 md:m-0">

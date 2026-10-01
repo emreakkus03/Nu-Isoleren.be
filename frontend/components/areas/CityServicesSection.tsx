@@ -40,7 +40,7 @@ export default function CityServicesSection({
             const image =
               service.thumbnail ||
               service.hero_image ||
-              '/logo/logo.svg';
+              '/logo/logo.webp';
 
             return (
               <ServiceCard

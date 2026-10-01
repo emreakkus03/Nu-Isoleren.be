@@ -190,7 +190,7 @@ export default async function Footer({
                 className="inline-block"
               >
                 <Image
-                  src="/logo/logo.svg"
+                  src="/logo/logo.webp"
                   alt="Nu-Isoleren.be"
                   width={942}
                   height={239}

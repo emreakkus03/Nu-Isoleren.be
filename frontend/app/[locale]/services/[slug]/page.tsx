@@ -1473,7 +1473,7 @@ export default async function ServiceDetailPage({
                   service.name
                 }
                 fill
-                priority
+                fetchPriority="high"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 65vw"
                 className="object-cover"
               />

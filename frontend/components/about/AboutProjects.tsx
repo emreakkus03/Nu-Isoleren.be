@@ -48,7 +48,7 @@ export default async function AboutProjects() {
             const firstImage = project.images?.[0];
 
             const imageUrl =
-              firstImage?.image_url || '/logo/logo.svg';
+              firstImage?.image_url || '/logo/logo.webp';
 
             const imageAlt =
               firstImage?.alt || project.title;

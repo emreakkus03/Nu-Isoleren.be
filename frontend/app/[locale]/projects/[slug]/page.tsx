@@ -119,7 +119,7 @@ export default async function ProjectDetailPage({
               src={mainImage.image_url}
               alt={mainImage.alt || project.title}
               fill
-              priority
+              fetchPriority="high"
               className="object-cover"
               sizes="(max-width: 1200px) 100vw, 1200px"
             />

@@ -34,7 +34,7 @@ export default async function Header() {
         <div className="md:hidden relative flex items-center justify-center">
           <Link href="/" className="shrink-0">
             <Image
-              src="/logo/logo.svg"
+              src="/logo/logo.webp"
               alt="Nu-Isoleren Logo"
               width={942}
               height={239}
@@ -51,7 +51,7 @@ export default async function Header() {
         <div className="hidden md:flex items-center justify-between w-full">
           <Link href="/" className="flex-1 flex justify-start shrink-0">
             <Image
-              src="/logo/logo.svg"
+              src="/logo/logo.webp"
               alt="Nu-Isoleren Logo"
               width={942}
               height={239}

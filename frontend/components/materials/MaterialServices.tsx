@@ -52,7 +52,7 @@ export default async function MaterialServices({
               }
               imageSrc={
                 service.thumbnail ||
-                '/logo/logo.svg'
+                '/logo/logo.webp'
               }
               imageAlt={service.name}
               badge={service.badge ?? undefined}

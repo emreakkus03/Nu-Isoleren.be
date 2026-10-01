@@ -29,7 +29,7 @@ export default async function ServicesSection() {
             <ServiceCard
               key={service.id}
               href={`/services/${service.slug}`}
-              imageSrc={service.thumbnail || '/logo/logo.svg'}
+              imageSrc={service.thumbnail || '/logo/logo.webp'}
               imageAlt={service.name}
               badge={service.badge}
               title={service.name}

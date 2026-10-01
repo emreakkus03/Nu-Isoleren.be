@@ -181,17 +181,18 @@ export default function GoogleReviewsCarousel({
 
               <div className="mt-auto max-md:mt-0 pt-6 flex items-center gap-3">
                 {review.author.photoUri && (
-                  <Image
-                    src={review.author.photoUri}
-                    alt={review.author.displayName}
-                    width={38}
-                    height={38}
-                    unoptimized
-                    loading="eager"
-                    referrerPolicy="no-referrer"
-                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover"
-                  />
-                )}
+  <Image
+    src={review.author.photoUri}
+    alt={review.author.displayName}
+    width={40}
+    height={40}
+    sizes="40px"
+    loading="lazy"
+    quality={60}
+    referrerPolicy="no-referrer"
+    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover"
+  />
+)}
 
                 <div className="min-w-0">
                   <p className="font-extrabold text-black truncate">

@@ -43,7 +43,7 @@ export default function ServiceProjects({
 
             const imageUrl =
               firstImage?.image_url ||
-              '/logo/logo.svg';
+              '/logo/logo.webp';
 
             const imageAlt =
               firstImage?.alt ||

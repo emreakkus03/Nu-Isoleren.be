@@ -42,7 +42,7 @@ export default function CityProjectsSection({
             const imageUrl =
               firstImage?.image_url ||
               project.image_url ||
-              '/logo/logo.svg';
+              '/logo/logo.webp';
 
             const imageAlt =
               firstImage?.alt ||

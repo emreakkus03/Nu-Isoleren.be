@@ -207,33 +207,34 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    qualities: [75, 90],
-    dangerouslyAllowLocalIP: process.env.DEPLOYMENT_ENV !== 'production',
-    remotePatterns: [
-      ...(process.env.NEXT_PUBLIC_S3_PUBLIC_URL
-        ? [
-            new URL(
-              `${process.env.NEXT_PUBLIC_S3_PUBLIC_URL.replace(/\/$/, '')}/**`
-            ),
-          ]
-        : []),
-      {
-        protocol: 'http' as const,
-        hostname: '127.0.0.1',
-        port: '9000',
-        pathname: '/nu-isoleren/**',
-      },
-      {
-        protocol: 'http' as const,
-        hostname: 'localhost',
-        port: '9000',
-        pathname: '/nu-isoleren/**',
-      },
-    ].filter(
-      (pattern) =>
-        process.env.DEPLOYMENT_ENV !== 'production' || pattern instanceof URL
-    ),
-  },
+  qualities: [60, 75, 90],
+  dangerouslyAllowLocalIP: process.env.DEPLOYMENT_ENV !== 'production',
+  remotePatterns: [
+    ...(process.env.NEXT_PUBLIC_S3_PUBLIC_URL
+      ? [
+          new URL(
+            `${process.env.NEXT_PUBLIC_S3_PUBLIC_URL.replace(/\/$/, '')}/**`
+          ),
+        ]
+      : []),
+    new URL('https://lh3.googleusercontent.com/**'),
+    {
+      protocol: 'http' as const,
+      hostname: '127.0.0.1',
+      port: '9000',
+      pathname: '/nu-isoleren/**',
+    },
+    {
+      protocol: 'http' as const,
+      hostname: 'localhost',
+      port: '9000',
+      pathname: '/nu-isoleren/**',
+    },
+  ].filter(
+    (pattern) =>
+      process.env.DEPLOYMENT_ENV !== 'production' || pattern instanceof URL
+  ),
+},
 };
 
 export default nextIntlPlugin(nextConfig);

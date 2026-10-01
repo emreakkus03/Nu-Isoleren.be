@@ -73,7 +73,7 @@ export default async function GoogleReviews({
         </span>
 
         <Image
-          src="/icons/google.svg"
+          src="/icons/google.webp"
           alt="Google"
           width={762}
           height={248}
@@ -110,7 +110,7 @@ export default async function GoogleReviews({
       </span>
 
       <Image
-        src="/icons/google.svg"
+        src="/icons/google.webp"
         alt="Google Reviews"
         width={762}
         height={248}

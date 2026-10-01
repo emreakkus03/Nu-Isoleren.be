@@ -96,7 +96,7 @@ export default async function ProjectsPage({ params, searchParams }: ProjectsPag
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {projects.map((project) => {
                     const firstImage = project.images?.[0];
-                    const imageUrl = firstImage?.image_url || '/logo/logo.svg';
+                    const imageUrl = firstImage?.image_url || '/logo/logo.webp';
                     const imageAlt = firstImage?.alt || project.title;
                     const projectTitle = project.city?.name
                       ? `${project.service?.name} in ${project.city.name}`

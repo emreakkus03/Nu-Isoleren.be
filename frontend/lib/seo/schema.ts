@@ -8,7 +8,7 @@ export async function businessSchema() {
   const origin = siteOrigin();
   if (!origin) return null;
   const t = await getTranslations('General.company');
-  return { '@context': 'https://schema.org', '@type': 'HomeAndConstructionBusiness', '@id': `${origin}/#organization`, name: t('name'), url: origin, logo: `${origin}/logo/logo.svg`, telephone: t('phoneHref'), address: { '@type': 'PostalAddress', streetAddress: 'Neerstraat 5', postalCode: '9220', addressLocality: 'Hamme', addressCountry: 'BE' }, openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' }] };
+  return { '@context': 'https://schema.org', '@type': 'HomeAndConstructionBusiness', '@id': `${origin}/#organization`, name: t('name'), url: origin, logo: `${origin}/logo/logo.webp`, telephone: t('phoneHref'), address: { '@type': 'PostalAddress', streetAddress: 'Neerstraat 5', postalCode: '9220', addressLocality: 'Hamme', addressCountry: 'BE' }, openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' }] };
 }
 export function serviceSchema(service: ServiceItem, locale: string) {
   const origin = siteOrigin();

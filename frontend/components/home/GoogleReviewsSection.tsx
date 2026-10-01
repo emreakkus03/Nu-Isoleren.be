@@ -93,7 +93,7 @@ export default async function GoogleReviewsSection({
             className="mt-4 transition-opacity hover:opacity-75"
           >
             <Image
-              src="/icons/google.svg"
+              src="/icons/google.webp"
               alt="Google"
               width={762}
               height={248}
