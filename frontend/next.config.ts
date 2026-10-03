@@ -201,40 +201,220 @@ const nextConfig: NextConfig = {
         destination: '/nl/werkgebieden',
         permanent: true,
       },
+
+      {
+        source: '/werkgebied/isolatie-aalst',
+        destination: '/nl/werkgebieden/aalst',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-aarschot',
+        destination: '/nl/werkgebieden/aarschot',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-antwerpen',
+        destination: '/nl/werkgebieden/antwerpen',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-beringen',
+        destination: '/nl/werkgebieden/beringen',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-beveren',
+        destination: '/nl/werkgebieden/beveren',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-brugge',
+        destination: '/nl/werkgebieden/brugge',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-brussel',
+        destination: '/nl/werkgebieden',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-deinze',
+        destination: '/nl/werkgebieden/deinze',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-dendermonde',
+        destination: '/nl/werkgebieden/dendermonde',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-genk',
+        destination: '/nl/werkgebieden/genk',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-gent',
+        destination: '/nl/werkgebieden/gent',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-hasselt',
+        destination: '/nl/werkgebieden/hasselt',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-kortrijk',
+        destination: '/nl/werkgebieden/kortrijk',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-lokeren',
+        destination: '/nl/werkgebieden/lokeren',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-mechelen',
+        destination: '/nl/werkgebieden/mechelen',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-oostende',
+        destination: '/nl/werkgebieden/oostende',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-roeselaere',
+        destination: '/nl/werkgebieden/roeselare',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-sint-niklaas',
+        destination: '/nl/werkgebieden/sint-niklaas',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-turnhout',
+        destination: '/nl/werkgebieden/turnhout',
+        permanent: true,
+      },
+      {
+        source: '/werkgebied/isolatie-vilvoorde',
+        destination: '/nl/werkgebieden/vilvoorde',
+        permanent: true,
+      },
+
+      {
+        source: '/blog',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source: '/blog/crepi',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/isoleren/wanneer-is-je-woning-aan-isolatie-toe-5-signalen-die-je-niet-mag-negeren',
+        destination:
+          '/nl/kennisbank/wanneer-is-je-woning-aan-isolatie-toe-5-signalen-die-je-niet-mag-negeren',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/crepi/crepi-isolatie-of-spouwmuurisolatie-wat-is-de-beste-keuze-voor-jouw-woning',
+        destination:
+          '/nl/kennisbank/crepi-isolatie-of-spouwmuurisolatie-wat-is-de-beste-keuze-voor-jouw-woning',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/isoleren/hoe-kies-je-een-betrouwbaar-isolatiebedrijf-dit-zijn-de-7-belangrijkste-aandachtspunten',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/isoleren/spouwmuurisolatie-in-dendermonde-hoe-deze-woning-op-een-dag-energiezuiniger-werd',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/isoleren/hoe-werkt-spouwmuurisolatie-in-belgie-stap-voor-stap-uitgelegd',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/isoleren/hoe-lang-gaat-spouwmuurisolatie-mee-dit-moet-je-weten',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/isoleren/hoe-lang-gaat-crepi-isolatie-mee-en-hoe-onderhoud-je-het',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/isoleren/spouwmuurisolatie-in-de-zomer-is-dit-het-ideale-moment',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/isoleren/spouwmuurisolatie-en-warmtecomfort-je-woning-koeler-in-de-zomer',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/crepi/crepi-isolatie-wat-is-het-hoe-werkt-het-en-wat-zijn-de-voordelen',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source:
+          '/blog/isoleren/mijn-verbouwpremie-voor-spouwmuurisolatie-heb-jij-er-recht-op',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
     ];
 
     return [...hostRedirects, ...legacyRedirects, ...localeRedirects];
   },
 
   images: {
-  qualities: [50, 60, 75, 90],
-  dangerouslyAllowLocalIP: process.env.DEPLOYMENT_ENV !== 'production',
-  remotePatterns: [
-    ...(process.env.NEXT_PUBLIC_S3_PUBLIC_URL
-      ? [
-          new URL(
-            `${process.env.NEXT_PUBLIC_S3_PUBLIC_URL.replace(/\/$/, '')}/**`
-          ),
-        ]
-      : []),
-    new URL('https://lh3.googleusercontent.com/**'),
-    {
-      protocol: 'http' as const,
-      hostname: '127.0.0.1',
-      port: '9000',
-      pathname: '/nu-isoleren/**',
-    },
-    {
-      protocol: 'http' as const,
-      hostname: 'localhost',
-      port: '9000',
-      pathname: '/nu-isoleren/**',
-    },
-  ].filter(
-    (pattern) =>
-      process.env.DEPLOYMENT_ENV !== 'production' || pattern instanceof URL
-  ),
-},
+    qualities: [50, 60, 75, 90],
+    dangerouslyAllowLocalIP: process.env.DEPLOYMENT_ENV !== 'production',
+    remotePatterns: [
+      ...(process.env.NEXT_PUBLIC_S3_PUBLIC_URL
+        ? [
+            new URL(
+              `${process.env.NEXT_PUBLIC_S3_PUBLIC_URL.replace(/\/$/, '')}/**`
+            ),
+          ]
+        : []),
+      new URL('https://lh3.googleusercontent.com/**'),
+      {
+        protocol: 'http' as const,
+        hostname: '127.0.0.1',
+        port: '9000',
+        pathname: '/nu-isoleren/**',
+      },
+      {
+        protocol: 'http' as const,
+        hostname: 'localhost',
+        port: '9000',
+        pathname: '/nu-isoleren/**',
+      },
+    ].filter(
+      (pattern) =>
+        process.env.DEPLOYMENT_ENV !== 'production' || pattern instanceof URL
+    ),
+  },
 };
 
 export default nextIntlPlugin(nextConfig);
