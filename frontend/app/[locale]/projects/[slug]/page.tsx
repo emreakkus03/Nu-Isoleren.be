@@ -133,10 +133,35 @@ export default async function ProjectDetailPage({
               </h2>
 
               {project.description ? (
-                <div
-                  className="max-md:[overflow-wrap:anywhere] max-md:[&_img]:max-w-full max-md:[&_table]:block max-md:[&_table]:overflow-x-auto text-slate-800 leading-relaxed text-base sm:text-lg space-y-4 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>h3]:text-xl [&>h3]:font-bold [&>h3]:text-slate-900"
-                  dangerouslySetInnerHTML={{ __html: project.description }}
-                />
+               <div
+  className="
+    max-md:[overflow-wrap:anywhere]
+    max-md:[&_img]:max-w-full
+    max-md:[&_table]:block
+    max-md:[&_table]:overflow-x-auto
+    text-slate-800
+    leading-relaxed
+    text-base
+    sm:text-lg
+    space-y-4
+    [&>p]:mb-4
+    [&>ul]:list-disc
+    [&>ul]:pl-5
+    [&>h3]:text-xl
+    [&>h3]:font-bold
+    [&>h3]:text-slate-900
+
+    [&_a]:text-[#1A669A]
+    [&_a]:font-semibold
+    [&_a]:underline
+    [&_a]:underline-offset-4
+    [&_a]:decoration-[#1A669A]/50
+    [&_a]:transition-colors
+    hover:[&_a]:text-[#14547F]
+    hover:[&_a]:decoration-[#14547F]
+  "
+  dangerouslySetInnerHTML={{ __html: project.description }}
+/>
               ) : (
                 <p className="text-slate-500 italic">
                   Geen verdere beschrijving beschikbaar.
