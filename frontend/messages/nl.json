@@ -2147,6 +2147,10 @@
           "text": "Google Tag Manager beheert de Google Ads- en Meta Pixel-integraties. Er is momenteel geen Google Analytics-gebruik door het marketingbureau bevestigd. De website geeft analytics- en marketingvoorkeuren door; het daadwerkelijk respecteren daarvan door alle tags moet in de GTM-container worden gecontroleerd. De formulieren sturen zelf geen namen, e-mailadressen of andere formuliervelden naar de dataLayer.\nGoogle Places levert bedrijfsbeoordelingen via de server; profielfoto’s van reviewers kunnen vanuit Google worden geladen. De contactpagina bevat een Google Maps-iframe dat momenteel niet door de cookievoorkeur wordt tegengehouden. Bij het laden ontvangt Google verbindingsgegevens. Meer informatie staat in het cookiebeleid."
         },
         {
+  "title": "Microsoft Clarity",
+  "text": "Wij gebruiken Microsoft Clarity om te analyseren hoe bezoekers onze website gebruiken en om de gebruiksvriendelijkheid te verbeteren. Clarity registreert onder andere paginaweergaven, klikken, scrollgedrag, muisbewegingen, scherm- en vensterafmetingen en technische gebeurtenissen. Deze gegevens kunnen worden gebruikt voor heatmaps en sessieweergaven.\nClarity is ingesteld met maskering van gevoelige inhoud. Formulierinvoer wordt gemaskeerd zodat ingevoerde persoonsgegevens niet leesbaar in sessieweergaven verschijnen. Clarity gebruikt onze bestaande cookievoorkeuren via Google Consent Mode. Zonder toestemming voor analytische cookies kan Clarity beperkte cookieless meetgegevens verzamelen; volledige sessiekoppeling en Clarity-cookies worden pas toegestaan wanneer u analytische cookies accepteert."
+},
+        {
           "title": "Internationale doorgiften",
           "text": "Bij diensten van internationale leveranciers kan verwerking buiten de Europese Economische Ruimte plaatsvinden. De concrete opslagregio’s, ontvangers en toepasselijke doorgiftewaarborgen zijn nog niet bevestigd. We claimen daarom geen specifieke adequaatheidsregeling of contractuele waarborg. Neem contact op voor informatie over uw gegevens; deze gegevens moeten vóór volledige productieafronding worden aangevuld."
         },
@@ -2173,9 +2177,13 @@
           "text": "nu-isoleren.consent is een localStorage-item van deze website. Het bewaart necessary, analytics en marketing, de consentversie en het opslag- en vervaltijdstip. Uw keuze is maximaal 180 dagen geldig. Na afloop wordt de oude keuze niet meer toegepast en verschijnt de banner opnieuw; localStorage ruimt de oude waarde niet vanzelf fysiek op. Noodzakelijke opslag blijft actief.\nNEXT_LOCALE is de taalcookie van next-intl. Hij bewaart de taalkeuze wanneer die cookie nodig is. De huidige configuratie stelt geen vaste max-age in: het is een sessiecookie, waarvan het herstel ook van uw browserinstellingen afhangt. Er is geen andere applicatie-eigen sessionStorage-opslag aangetroffen."
         },
         {
-          "title": "Analytics",
-          "text": "De analyticscategorie staat standaard uit. Ze is voorbereid voor optionele statistiekdiensten. Het marketingbureau gebruikt momenteel geen Google Analytics. Een analyticskeuze is geen marketingtoestemming en activeert op zichzelf geen afzonderlijk Analytics-script in de websitecode."
-        },
+  "title": "Analytics",
+  "text": "De analyticscategorie staat standaard uit. Wij gebruiken Microsoft Clarity voor gebruiksanalyse, heatmaps en sessieweergaven. Clarity helpt ons onder andere te begrijpen waar bezoekers klikken, hoe ver zij scrollen en waar mogelijke gebruiksproblemen optreden. Het marketingbureau gebruikt momenteel geen Google Analytics. Toestemming voor analytics staat los van toestemming voor marketing."
+},
+{
+  "title": "Microsoft Clarity",
+  "text": "Microsoft Clarity wordt gebruikt voor gedragsanalyse, heatmaps en sessieweergaven. De Clarity-tag kan zonder analytische toestemming beperkte cookieless meetgegevens verzenden. Wanneer u analytische cookies accepteert, mag Clarity cookies gebruiken om paginaweergaven en sessies aan elkaar te koppelen.\nDe belangrijkste first-party cookies zijn _clck, waarmee een pseudonieme Clarity-gebruikers-ID en voorkeuren voor deze website worden bewaard, en _clsk, waarmee meerdere paginaweergaven binnen één Clarity-sessie worden gekoppeld. Afhankelijk van uw toestemmingskeuzes en Microsoft-instellingen kunnen ook Microsoft-cookies zoals CLID, MUID, ANONCHK, MR en SM worden gebruikt. Analytische opslag wordt alleen toegestaan wanneer analytics_storage op granted staat; advertentiegerelateerde opslag blijft afhankelijk van de afzonderlijke marketingtoestemming."
+},
         {
           "title": "Marketing: Google Ads en Meta Pixel",
           "text": "Google Ads en Meta Pixel worden beheerd via Google Tag Manager, niet via afzonderlijke scripts in de website. Marketing staat standaard uit. Bij toestemming kunnen deze diensten campagnebezoek en conversies meten, waaronder een bezoek aan een contact- of offertebedankpagina. De precieze tags, cookies, ontvangers, doeleinden per tag en bewaartermijnen moeten nog in de externe GTM-container en de productie-browser worden gecontroleerd. Er wordt hier geen onbevestigde cookielijst gepubliceerd."

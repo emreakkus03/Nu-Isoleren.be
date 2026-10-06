@@ -2169,6 +2169,10 @@
           "text": "Google Tag Manager manages Google Ads and Meta Pixel. The marketing agency does not currently use Google Analytics. The site passes analytics and marketing preferences to the container; whether every tag respects them must be checked in GTM. The forms do not themselves send names, email addresses or other form fields to the dataLayer.\nGoogle Places supplies business reviews through the server; reviewer photos may load from Google. The contact page includes a Google Maps iframe which is currently not blocked by cookie preferences. Google receives connection information when it loads. See also our cookie policy."
         },
         {
+  "title": "Microsoft Clarity",
+  "text": "We use Microsoft Clarity to understand how visitors use our website and to improve its usability. Clarity records information such as page views, clicks, scrolling, mouse movements, screen and window dimensions, and certain technical events. This information may be used to generate heatmaps and session replays.\nClarity is configured to mask sensitive content. Information entered into forms is masked so that personal data entered by visitors is not readable in session replays. Clarity uses our existing cookie preferences through Google Consent Mode. Without consent for analytics cookies, Clarity may collect limited cookieless measurement data; full session continuity and Clarity cookies are only permitted when you accept analytics cookies."
+},
+        {
           "title": "International transfers",
           "text": "International providers may process data outside the European Economic Area. Specific regions, recipients and applicable transfer safeguards have not yet been confirmed. We therefore do not claim any particular adequacy arrangement or contractual safeguard. Contact us for information about your data; these details need to be completed before production readiness is finalised."
         },
@@ -2195,9 +2199,13 @@
           "text": "nu-isoleren.consent is this site’s localStorage item. It stores necessary, analytics and marketing choices, the consent version and saved/expiry timestamps. A choice is valid for at most 180 days. Afterwards it is no longer applied and the banner appears again; localStorage does not automatically physically delete the old value. Necessary storage remains active.\nNEXT_LOCALE is the next-intl language cookie, saved when needed. The current configuration sets no max-age: it is a session cookie, whose restoration also depends on browser settings. No other application-owned sessionStorage use was identified."
         },
         {
-          "title": "Analytics",
-          "text": "Analytics is off by default and reserved for optional statistics services. The marketing agency does not currently use Google Analytics. An analytics choice is not marketing consent and does not itself load a separate Analytics script in this site."
-        },
+  "title": "Analytics",
+  "text": "The analytics category is disabled by default. We use Microsoft Clarity for website usage analysis, heatmaps and session replays. Clarity helps us understand, among other things, where visitors click, how far they scroll and where usability issues may occur. The marketing agency does not currently use Google Analytics. Analytics consent is separate from marketing consent."
+},
+{
+  "title": "Microsoft Clarity",
+  "text": "Microsoft Clarity is used for behavioural analytics, heatmaps and session replays. Without analytics consent, the Clarity tag may send limited cookieless measurement data. When you accept analytics cookies, Clarity may use cookies to link page views and sessions together.\nThe main first-party cookies are _clck, which stores a pseudonymous Clarity user ID and preferences for this website, and _clsk, which links multiple page views into a single Clarity session. Depending on your consent choices and Microsoft settings, Microsoft cookies such as CLID, MUID, ANONCHK, MR and SM may also be used. Analytics storage is only permitted when analytics_storage is set to granted; advertising-related storage remains subject to the separate marketing consent."
+},
         {
           "title": "Marketing: Google Ads and Meta Pixel",
           "text": "Google Ads and Meta Pixel are managed through GTM, not separate website scripts. Marketing is off by default. With consent these services can measure campaigns and conversions, including visits to contact or quote thank-you pages. Exact tags, cookies, recipients, individual purposes and lifetimes still need checking in the external container and production browser. We do not publish an unverified cookie list."

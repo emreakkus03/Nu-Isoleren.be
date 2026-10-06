@@ -11,6 +11,7 @@ import { AlternateLinksProvider } from '@/context/AlternateLinksContext';
 
 import CookieConsent from '@/components/cookie/CookieConsent';
 import GoogleTagManager from '@/components/cookie/GoogleTagManager';
+import MicrosoftClarity from '@/components/cookie/MicrosoftClarity';
 import { validGtmId } from '@/lib/gtm';
 
 import Header from '@/components/layout/Header';
@@ -54,6 +55,7 @@ export default async function LocaleLayout({
             <JsonLd data={await businessSchema()} />
             <CookieConsent />
             {gtmId && <GoogleTagManager id={gtmId} />}
+            <MicrosoftClarity />
             <Header />
             <FloatingButtons />
             <main className="min-h-screen">

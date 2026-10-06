@@ -2165,6 +2165,10 @@
           "text": "Google Tag Manager gère les intégrations Google Ads et Meta Pixel. L’agence marketing n’utilise actuellement pas Google Analytics. Le site transmet les choix analytics et marketing ; leur respect effectif par toutes les balises doit être contrôlé dans GTM. Les formulaires n’envoient pas eux-mêmes leurs noms, adresses e-mail ou autres champs à la dataLayer.\nGoogle Places fournit des avis via le serveur ; les photos des auteurs peuvent être chargées depuis Google. La page contact contient une carte Google Maps qui n’est actuellement pas bloquée par les préférences de cookies. Google reçoit des informations de connexion lors de son chargement. Consultez aussi la politique de cookies."
         },
         {
+  "title": "Microsoft Clarity",
+  "text": "Nous utilisons Microsoft Clarity afin d’analyser la manière dont les visiteurs utilisent notre site et d’en améliorer l’ergonomie. Clarity enregistre notamment les pages consultées, les clics, le défilement, les mouvements de souris, les dimensions de l’écran et de la fenêtre ainsi que certains événements techniques. Ces informations peuvent être utilisées pour produire des cartes de chaleur et des reconstitutions de sessions.\nClarity est configuré pour masquer les contenus sensibles. Les données saisies dans les formulaires sont masquées afin que les données personnelles introduites ne soient pas lisibles dans les reconstitutions de sessions. Clarity utilise nos préférences de cookies existantes via Google Consent Mode. Sans consentement aux cookies analytiques, Clarity peut collecter des données de mesure limitées sans cookies ; le suivi complet des sessions et les cookies Clarity ne sont autorisés que lorsque vous acceptez les cookies analytiques."
+},
+        {
           "title": "Transferts internationaux",
           "text": "Le recours à des prestataires internationaux peut impliquer un traitement hors de l’Espace économique européen. Les régions, destinataires et garanties applicables restent à confirmer. Nous ne revendiquons donc pas de décision d’adéquation ou de garantie contractuelle particulière. Contactez-nous pour des précisions ; ces informations doivent être complétées avant la finalisation de la mise en production."
         },
@@ -2191,9 +2195,13 @@
           "text": "nu-isoleren.consent est un élément localStorage du site. Il contient les choix necessary, analytics et marketing, la version et les dates d’enregistrement et d’expiration. Le choix reste valable au maximum 180 jours. Ensuite, il n’est plus appliqué et la bannière réapparaît ; le localStorage ne supprime pas automatiquement l’ancienne valeur. Le stockage nécessaire reste actif.\nNEXT_LOCALE est le cookie de langue de next-intl, enregistré lorsque nécessaire. La configuration ne définit pas de max-age : il s’agit d’un cookie de session, dont la restauration dépend aussi du navigateur. Aucun autre stockage sessionStorage propre à l’application n’a été identifié."
         },
         {
-          "title": "Analytics",
-          "text": "Cette catégorie est désactivée par défaut et prévue pour des statistiques optionnelles. L’agence marketing n’utilise actuellement pas Google Analytics. Un choix analytics n’autorise pas le marketing et ne charge pas, à lui seul, un script Analytics distinct dans le site."
-        },
+  "title": "Analytics",
+  "text": "La catégorie analytics est désactivée par défaut. Nous utilisons Microsoft Clarity pour l’analyse de l’utilisation du site, les cartes de chaleur et les reconstitutions de sessions. Clarity nous aide notamment à comprendre où les visiteurs cliquent, jusqu’où ils font défiler les pages et où des problèmes d’utilisation peuvent apparaître. L’agence marketing n’utilise actuellement pas Google Analytics. Le consentement aux analytics est distinct du consentement au marketing."
+},
+{
+  "title": "Microsoft Clarity",
+  "text": "Microsoft Clarity est utilisé pour l’analyse comportementale, les cartes de chaleur et les reconstitutions de sessions. Sans consentement analytique, la balise Clarity peut transmettre des données de mesure limitées sans cookies. Lorsque vous acceptez les cookies analytiques, Clarity peut utiliser des cookies afin de relier les pages consultées et les sessions.\nLes principaux cookies first-party sont _clck, qui conserve un identifiant Clarity pseudonyme et les préférences propres à ce site, et _clsk, qui relie plusieurs pages consultées au sein d’une même session Clarity. Selon vos choix de consentement et les paramètres Microsoft, des cookies Microsoft tels que CLID, MUID, ANONCHK, MR et SM peuvent également être utilisés. Le stockage analytique n’est autorisé que lorsque analytics_storage est défini sur granted ; le stockage lié à la publicité reste soumis au consentement marketing distinct."
+},
         {
           "title": "Marketing : Google Ads et Meta Pixel",
           "text": "Google Ads et Meta Pixel sont gérés via GTM, sans scripts séparés dans le site. Le marketing est désactivé par défaut. Avec consentement, ces services peuvent mesurer les campagnes et conversions, notamment la visite d’une page de remerciement contact ou devis. Les balises, cookies, destinataires, finalités détaillées et durées doivent encore être vérifiés dans le conteneur externe et le navigateur en production. Aucune liste de cookies non confirmée n’est publiée ici."
