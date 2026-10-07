@@ -107,8 +107,12 @@ export default async function GoogleReviews({
       </div>
 
       <span className="text-[10px] md:text-sm font-bold text-gray-600">
-        ({rating.toFixed(1)})
-      </span>
+  {rating.toFixed(1)}
+</span>
+
+<span className="text-[10px] md:text-sm font-semibold text-gray-600">
+  · {reviewCount} {reviewsLabel}
+</span>
 
       <Image
         src="/icons/google.webp"

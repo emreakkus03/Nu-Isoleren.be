@@ -12,6 +12,7 @@ import { AlternateLinksProvider } from '@/context/AlternateLinksContext';
 import CookieConsent from '@/components/cookie/CookieConsent';
 import GoogleTagManager from '@/components/cookie/GoogleTagManager';
 import MicrosoftClarity from '@/components/cookie/MicrosoftClarity';
+import GoogleAnalytics from '@/components/cookie/GoogleAnalytics';
 import { validGtmId } from '@/lib/gtm';
 
 import Header from '@/components/layout/Header';
@@ -56,6 +57,9 @@ export default async function LocaleLayout({
             <CookieConsent />
             {gtmId && <GoogleTagManager id={gtmId} />}
             <MicrosoftClarity />
+            {process.env.NEXT_PUBLIC_GA_ID && (
+  <GoogleAnalytics id={process.env.NEXT_PUBLIC_GA_ID} />
+)}
             <Header />
             <FloatingButtons />
             <main className="min-h-screen">

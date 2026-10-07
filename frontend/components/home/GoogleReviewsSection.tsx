@@ -53,10 +53,11 @@ export default async function GoogleReviewsSection({
 
         {data.reviews.length > 0 && (
           <GoogleReviewsCarousel
-            reviews={data.reviews}
-            previousLabel={previousLabel}
-            nextLabel={nextLabel}
-          />
+  reviews={data.reviews}
+  reviewsUrl={reviewsUrl}
+  previousLabel={previousLabel}
+  nextLabel={nextLabel}
+/>
         )}
 
         <div className="mt-8 sm:mt-10 flex flex-col items-center text-center">

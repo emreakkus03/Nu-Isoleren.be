@@ -2118,6 +2118,7 @@
     "updated": "Laatst gewijzigd:",
     "controller": "Verantwoordelijke en contact",
     "authority": "Een klacht indienen bij de Belgische Gegevensbeschermingsautoriteit",
+
     "privacy": {
       "title": "Privacybeleid",
       "description": "Hoe Nu-Isoleren.be uw persoonsgegevens verwerkt wanneer u onze website gebruikt of een aanvraag indient.",
@@ -2144,12 +2145,12 @@
         },
         {
           "title": "Google, Meta en externe inhoud",
-          "text": "Google Tag Manager beheert de Google Ads- en Meta Pixel-integraties. Er is momenteel geen Google Analytics-gebruik door het marketingbureau bevestigd. De website geeft analytics- en marketingvoorkeuren door; het daadwerkelijk respecteren daarvan door alle tags moet in de GTM-container worden gecontroleerd. De formulieren sturen zelf geen namen, e-mailadressen of andere formuliervelden naar de dataLayer.\nGoogle Places levert bedrijfsbeoordelingen via de server; profielfoto’s van reviewers kunnen vanuit Google worden geladen. De contactpagina bevat een Google Maps-iframe dat momenteel niet door de cookievoorkeur wordt tegengehouden. Bij het laden ontvangt Google verbindingsgegevens. Meer informatie staat in het cookiebeleid."
+          "text": "Wij gebruiken Google Analytics 4 om het gebruik en de prestaties van onze website te meten. De website gebruikt een rechtstreeks geïntegreerde Google Analytics-tag en daarnaast kunnen Google-tags via Google Tag Manager worden beheerd. Analytische opslag staat standaard uit en wordt alleen toegestaan wanneer u analytische cookies accepteert. Zonder analytische toestemming kunnen Google-tags, afhankelijk van hun werking onder Consent Mode, beperkte cookieless meetrequests verzenden. Onze formulieren sturen zelf geen namen, e-mailadressen of andere ingevulde formuliervelden naar Google Analytics of de dataLayer.\nGoogle Tag Manager beheert daarnaast onder meer Google Ads- en Meta Pixel-integraties. Marketingtoestemming staat los van analytische toestemming.\nGoogle Places levert bedrijfsbeoordelingen via de server; profielfoto’s van reviewers kunnen vanuit Google worden geladen. De contactpagina bevat een Google Maps-iframe dat momenteel niet door de cookievoorkeur wordt tegengehouden. Bij het laden kan Google technische verbindingsgegevens ontvangen. Meer informatie staat in het cookiebeleid."
         },
         {
-  "title": "Microsoft Clarity",
-  "text": "Wij gebruiken Microsoft Clarity om te analyseren hoe bezoekers onze website gebruiken en om de gebruiksvriendelijkheid te verbeteren. Clarity registreert onder andere paginaweergaven, klikken, scrollgedrag, muisbewegingen, scherm- en vensterafmetingen en technische gebeurtenissen. Deze gegevens kunnen worden gebruikt voor heatmaps en sessieweergaven.\nClarity is ingesteld met maskering van gevoelige inhoud. Formulierinvoer wordt gemaskeerd zodat ingevoerde persoonsgegevens niet leesbaar in sessieweergaven verschijnen. Clarity gebruikt onze bestaande cookievoorkeuren via Google Consent Mode. Zonder toestemming voor analytische cookies kan Clarity beperkte cookieless meetgegevens verzamelen; volledige sessiekoppeling en Clarity-cookies worden pas toegestaan wanneer u analytische cookies accepteert."
-},
+          "title": "Microsoft Clarity",
+          "text": "Wij gebruiken Microsoft Clarity om te analyseren hoe bezoekers onze website gebruiken en om de gebruiksvriendelijkheid te verbeteren. Clarity registreert onder andere paginaweergaven, klikken, scrollgedrag, muisbewegingen, scherm- en vensterafmetingen en technische gebeurtenissen. Deze gegevens kunnen worden gebruikt voor heatmaps en sessieweergaven.\nClarity is ingesteld met maskering van gevoelige inhoud. Formulierinvoer wordt gemaskeerd zodat ingevoerde persoonsgegevens niet leesbaar in sessieweergaven verschijnen. Clarity gebruikt onze bestaande cookievoorkeuren via Google Consent Mode. Zonder toestemming voor analytische cookies kan Clarity beperkte cookieless meetgegevens verzamelen; volledige sessiekoppeling en Clarity-cookies worden pas toegestaan wanneer u analytische cookies accepteert."
+        },
         {
           "title": "Internationale doorgiften",
           "text": "Bij diensten van internationale leveranciers kan verwerking buiten de Europese Economische Ruimte plaatsvinden. De concrete opslagregio’s, ontvangers en toepasselijke doorgiftewaarborgen zijn nog niet bevestigd. We claimen daarom geen specifieke adequaatheidsregeling of contractuele waarborg. Neem contact op voor informatie over uw gegevens; deze gegevens moeten vóór volledige productieafronding worden aangevuld."
@@ -2164,6 +2165,7 @@
         }
       ]
     },
+
     "cookies": {
       "title": "Cookiebeleid",
       "description": "Welke cookies en vergelijkbare technieken deze website gebruikt en hoe u uw voorkeuren beheert.",
@@ -2177,20 +2179,24 @@
           "text": "nu-isoleren.consent is een localStorage-item van deze website. Het bewaart necessary, analytics en marketing, de consentversie en het opslag- en vervaltijdstip. Uw keuze is maximaal 180 dagen geldig. Na afloop wordt de oude keuze niet meer toegepast en verschijnt de banner opnieuw; localStorage ruimt de oude waarde niet vanzelf fysiek op. Noodzakelijke opslag blijft actief.\nNEXT_LOCALE is de taalcookie van next-intl. Hij bewaart de taalkeuze wanneer die cookie nodig is. De huidige configuratie stelt geen vaste max-age in: het is een sessiecookie, waarvan het herstel ook van uw browserinstellingen afhangt. Er is geen andere applicatie-eigen sessionStorage-opslag aangetroffen."
         },
         {
-  "title": "Analytics",
-  "text": "De analyticscategorie staat standaard uit. Wij gebruiken Microsoft Clarity voor gebruiksanalyse, heatmaps en sessieweergaven. Clarity helpt ons onder andere te begrijpen waar bezoekers klikken, hoe ver zij scrollen en waar mogelijke gebruiksproblemen optreden. Het marketingbureau gebruikt momenteel geen Google Analytics. Toestemming voor analytics staat los van toestemming voor marketing."
-},
-{
-  "title": "Microsoft Clarity",
-  "text": "Microsoft Clarity wordt gebruikt voor gedragsanalyse, heatmaps en sessieweergaven. De Clarity-tag kan zonder analytische toestemming beperkte cookieless meetgegevens verzenden. Wanneer u analytische cookies accepteert, mag Clarity cookies gebruiken om paginaweergaven en sessies aan elkaar te koppelen.\nDe belangrijkste first-party cookies zijn _clck, waarmee een pseudonieme Clarity-gebruikers-ID en voorkeuren voor deze website worden bewaard, en _clsk, waarmee meerdere paginaweergaven binnen één Clarity-sessie worden gekoppeld. Afhankelijk van uw toestemmingskeuzes en Microsoft-instellingen kunnen ook Microsoft-cookies zoals CLID, MUID, ANONCHK, MR en SM worden gebruikt. Analytische opslag wordt alleen toegestaan wanneer analytics_storage op granted staat; advertentiegerelateerde opslag blijft afhankelijk van de afzonderlijke marketingtoestemming."
-},
+          "title": "Analytics",
+          "text": "De analyticscategorie staat standaard uit. Wij gebruiken Google Analytics 4 voor website- en bezoekersstatistieken en Microsoft Clarity voor gebruiksanalyse, heatmaps en sessieweergaven. Analytische cookies worden alleen toegestaan wanneer u hiervoor toestemming geeft. Wanneer analytics_storage op denied staat, kunnen ondersteunde diensten beperkte cookieless meetrequests verzenden zonder analytische cookies te gebruiken. Toestemming voor analytics staat los van toestemming voor marketing."
+        },
+        {
+          "title": "Google Analytics 4",
+          "text": "Google Analytics 4 wordt gebruikt om onder meer paginaweergaven, websitegebruik en technische informatie over bezoeken te meten zodat wij de website en onze dienstverlening kunnen verbeteren. Wanneer u analytische cookies accepteert, kan Google Analytics first-party cookies zoals _ga en _ga_* plaatsen voor pseudonieme meting en het koppelen van bezoeken en sessies.\nZonder analytische toestemming blijft analytics_storage op denied en worden analytische cookies niet toegestaan. Wanneer u eerder toestemming gaf en die later intrekt, verwijdert de website de door haar toegankelijke first-party cookies _ga en _ga_*. Reeds eerder verwerkte gegevens bij externe leveranciers worden daardoor niet automatisch verwijderd."
+        },
+        {
+          "title": "Microsoft Clarity",
+          "text": "Microsoft Clarity wordt gebruikt voor gedragsanalyse, heatmaps en sessieweergaven. De Clarity-tag kan zonder analytische toestemming beperkte cookieless meetgegevens verzenden. Wanneer u analytische cookies accepteert, mag Clarity cookies gebruiken om paginaweergaven en sessies aan elkaar te koppelen.\nDe belangrijkste first-party cookies zijn _clck, waarmee een pseudonieme Clarity-gebruikers-ID en voorkeuren voor deze website worden bewaard, en _clsk, waarmee meerdere paginaweergaven binnen één Clarity-sessie worden gekoppeld. Afhankelijk van uw toestemmingskeuzes en Microsoft-instellingen kunnen ook Microsoft-cookies zoals CLID, MUID, ANONCHK, MR en SM worden gebruikt. Analytische opslag wordt alleen toegestaan wanneer analytics_storage op granted staat; advertentiegerelateerde opslag blijft afhankelijk van de afzonderlijke marketingtoestemming."
+        },
         {
           "title": "Marketing: Google Ads en Meta Pixel",
           "text": "Google Ads en Meta Pixel worden beheerd via Google Tag Manager, niet via afzonderlijke scripts in de website. Marketing staat standaard uit. Bij toestemming kunnen deze diensten campagnebezoek en conversies meten, waaronder een bezoek aan een contact- of offertebedankpagina. De precieze tags, cookies, ontvangers, doeleinden per tag en bewaartermijnen moeten nog in de externe GTM-container en de productie-browser worden gecontroleerd. Er wordt hier geen onbevestigde cookielijst gepubliceerd."
         },
         {
           "title": "Google Tag Manager en Consent Mode v2",
-          "text": "GTM-P6K3L9WQ wordt geladen nadat de website eerst analytics_storage, ad_storage, ad_user_data en ad_personalization op denied heeft gezet en de geldige opgeslagen keuze heeft verwerkt. Analytics bepaalt analytics_storage; marketing bepaalt de drie advertentiewaarden. Wijzigingen worden doorgestuurd via Consent Mode en nu_consent_update.\nGTM zelf mag laden bij denied. Google-tags kunnen dan, afhankelijk van hun instellingen, cookieless meetrequests verzenden. Meta-tags moeten afzonderlijk in GTM worden begrensd; Consent Mode doet dit niet automatisch voor alle tags. Zonder JavaScript kan het noscript-iframe naar Google laden, maar het kan uw localStorage-keuze niet lezen. Die fallback mag geen optionele marketing-/analyticstags uitvoeren; dit vergt containercontrole."
+          "text": "GTM-P6K3L9WQ wordt geladen nadat de website eerst analytics_storage, ad_storage, ad_user_data en ad_personalization op denied heeft gezet en de geldige opgeslagen keuze heeft verwerkt. Analytics bepaalt analytics_storage; marketing bepaalt de drie advertentiewaarden. Dezelfde analytische toestemmingsstatus wordt gebruikt door de rechtstreeks geïntegreerde Google Analytics 4-tag. Wijzigingen worden onmiddellijk doorgestuurd via Consent Mode en nu_consent_update.\nGTM zelf mag laden bij denied. Google-tags kunnen dan, afhankelijk van hun instellingen, beperkte cookieless meetrequests verzenden. Meta-tags moeten afzonderlijk in GTM worden begrensd; Consent Mode doet dit niet automatisch voor alle tags. Zonder JavaScript kan het noscript-iframe naar Google laden, maar het kan uw localStorage-keuze niet lezen. Die fallback mag geen optionele marketing- of analyticstags uitvoeren; dit vergt containercontrole."
         },
         {
           "title": "Google Maps en beoordelingen",
@@ -2198,7 +2204,7 @@
         },
         {
           "title": "Accepteren, weigeren en wijzigen",
-          "text": "Bij uw eerste bezoek kunt u alles weigeren, voorkeuren instellen of alles aanvaarden. Analytics en marketing zijn onafhankelijk instelbaar. Via “Cookievoorkeuren” in de footer of hieronder kunt u uw keuze later wijzigen of intrekken. Een ontbrekende, ongeldige, verlopen of oude consentversie leidt opnieuw tot een keuze.\nHet wissen van browseropslag verwijdert ook uw opgeslagen keuze. Intrekken wijzigt de toekomstige toestemming, maar verwijdert niet automatisch cookies of gegevens die externe leveranciers al hebben opgeslagen. Gebruik zo nodig ook uw browserinstellingen en neem contact op voor een privacyverzoek."
+          "text": "Bij uw eerste bezoek kunt u alles weigeren, voorkeuren instellen of alles aanvaarden. Analytics en marketing zijn onafhankelijk instelbaar. Via “Cookievoorkeuren” in de footer of hieronder kunt u uw keuze later wijzigen of intrekken. Een ontbrekende, ongeldige, verlopen of oude consentversie leidt opnieuw tot een keuze.\nWanneer u analytische toestemming intrekt, wordt analytics_storage onmiddellijk op denied gezet en verwijdert de website de door haar toegankelijke first-party Google Analytics-cookies _ga en _ga_*. Dit verwijdert niet automatisch gegevens die externe leveranciers vóór de intrekking al hebben verwerkt of opgeslagen. Het wissen van uw browseropslag verwijdert ook uw opgeslagen cookievoorkeur."
         },
         {
           "title": "Nog te verifiëren externe opslag",

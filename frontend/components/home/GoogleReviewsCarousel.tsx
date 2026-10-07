@@ -6,12 +6,14 @@ import type { GoogleReviewItem } from '@/lib/google-reviews';
 
 interface GoogleReviewsCarouselProps {
   reviews: GoogleReviewItem[];
+  reviewsUrl: string;
   previousLabel: string;
   nextLabel: string;
 }
 
 export default function GoogleReviewsCarousel({
   reviews,
+  reviewsUrl,
   previousLabel,
   nextLabel,
 }: GoogleReviewsCarouselProps) {
@@ -113,7 +115,7 @@ export default function GoogleReviewsCarousel({
           const reviewHref =
             review.googleMapsUri ||
             review.author.uri ||
-            '#';
+            reviewsUrl;
 
           const filledStars = Math.round(
             review.rating

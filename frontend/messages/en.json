@@ -2140,6 +2140,7 @@
     "updated": "Last updated:",
     "controller": "Controller and contact details",
     "authority": "Lodge a complaint with the Belgian Data Protection Authority",
+
     "privacy": {
       "title": "Privacy policy",
       "description": "How Nu-Isoleren.be processes personal data when you use this website or submit an enquiry.",
@@ -2166,12 +2167,12 @@
         },
         {
           "title": "Google, Meta and embedded content",
-          "text": "Google Tag Manager manages Google Ads and Meta Pixel. The marketing agency does not currently use Google Analytics. The site passes analytics and marketing preferences to the container; whether every tag respects them must be checked in GTM. The forms do not themselves send names, email addresses or other form fields to the dataLayer.\nGoogle Places supplies business reviews through the server; reviewer photos may load from Google. The contact page includes a Google Maps iframe which is currently not blocked by cookie preferences. Google receives connection information when it loads. See also our cookie policy."
+          "text": "We use Google Analytics 4 to measure the use and performance of our website. The website uses a directly integrated Google Analytics tag, while additional Google tags may also be managed through Google Tag Manager. Analytics storage is disabled by default and is only permitted when you accept analytics cookies. Without analytics consent, Google tags may, depending on their Consent Mode behaviour, send limited cookieless measurement requests. Our forms do not themselves send names, email addresses or other entered form fields to Google Analytics or the dataLayer.\nGoogle Tag Manager also manages integrations including Google Ads and Meta Pixel. Marketing consent is separate from analytics consent.\nGoogle Places supplies business reviews through the server; reviewer profile images may load from Google. The contact page contains a Google Maps iframe which is currently not blocked by cookie preferences. Google may receive technical connection information when it loads. See our cookie policy for more information."
         },
         {
-  "title": "Microsoft Clarity",
-  "text": "We use Microsoft Clarity to understand how visitors use our website and to improve its usability. Clarity records information such as page views, clicks, scrolling, mouse movements, screen and window dimensions, and certain technical events. This information may be used to generate heatmaps and session replays.\nClarity is configured to mask sensitive content. Information entered into forms is masked so that personal data entered by visitors is not readable in session replays. Clarity uses our existing cookie preferences through Google Consent Mode. Without consent for analytics cookies, Clarity may collect limited cookieless measurement data; full session continuity and Clarity cookies are only permitted when you accept analytics cookies."
-},
+          "title": "Microsoft Clarity",
+          "text": "We use Microsoft Clarity to understand how visitors use our website and to improve its usability. Clarity records information such as page views, clicks, scrolling, mouse movements, screen and window dimensions, and certain technical events. This information may be used to generate heatmaps and session replays.\nClarity is configured to mask sensitive content. Information entered into forms is masked so that personal data entered by visitors is not readable in session replays. Clarity uses our existing cookie preferences through Google Consent Mode. Without consent for analytics cookies, Clarity may collect limited cookieless measurement data; full session continuity and Clarity cookies are only permitted when you accept analytics cookies."
+        },
         {
           "title": "International transfers",
           "text": "International providers may process data outside the European Economic Area. Specific regions, recipients and applicable transfer safeguards have not yet been confirmed. We therefore do not claim any particular adequacy arrangement or contractual safeguard. Contact us for information about your data; these details need to be completed before production readiness is finalised."
@@ -2186,6 +2187,7 @@
         }
       ]
     },
+
     "cookies": {
       "title": "Cookie policy",
       "description": "Cookies and similar technologies on this website and how to manage your preferences.",
@@ -2199,20 +2201,24 @@
           "text": "nu-isoleren.consent is this site’s localStorage item. It stores necessary, analytics and marketing choices, the consent version and saved/expiry timestamps. A choice is valid for at most 180 days. Afterwards it is no longer applied and the banner appears again; localStorage does not automatically physically delete the old value. Necessary storage remains active.\nNEXT_LOCALE is the next-intl language cookie, saved when needed. The current configuration sets no max-age: it is a session cookie, whose restoration also depends on browser settings. No other application-owned sessionStorage use was identified."
         },
         {
-  "title": "Analytics",
-  "text": "The analytics category is disabled by default. We use Microsoft Clarity for website usage analysis, heatmaps and session replays. Clarity helps us understand, among other things, where visitors click, how far they scroll and where usability issues may occur. The marketing agency does not currently use Google Analytics. Analytics consent is separate from marketing consent."
-},
-{
-  "title": "Microsoft Clarity",
-  "text": "Microsoft Clarity is used for behavioural analytics, heatmaps and session replays. Without analytics consent, the Clarity tag may send limited cookieless measurement data. When you accept analytics cookies, Clarity may use cookies to link page views and sessions together.\nThe main first-party cookies are _clck, which stores a pseudonymous Clarity user ID and preferences for this website, and _clsk, which links multiple page views into a single Clarity session. Depending on your consent choices and Microsoft settings, Microsoft cookies such as CLID, MUID, ANONCHK, MR and SM may also be used. Analytics storage is only permitted when analytics_storage is set to granted; advertising-related storage remains subject to the separate marketing consent."
-},
+          "title": "Analytics",
+          "text": "The analytics category is disabled by default. We use Google Analytics 4 for website and visitor statistics and Microsoft Clarity for usage analysis, heatmaps and session replays. Analytics cookies are only permitted when you consent to them. When analytics_storage is set to denied, supported services may send limited cookieless measurement requests without using analytics cookies. Analytics consent is separate from marketing consent."
+        },
+        {
+          "title": "Google Analytics 4",
+          "text": "Google Analytics 4 is used to measure information such as page views, website usage and technical information about visits so that we can improve the website and our services. When you accept analytics cookies, Google Analytics may set first-party cookies such as _ga and _ga_* for pseudonymous measurement and to associate visits and sessions.\nWithout analytics consent, analytics_storage remains set to denied and analytics cookies are not permitted. If you previously gave consent and later withdraw it, the website removes accessible first-party _ga and _ga_* cookies. This does not automatically erase information already processed or stored by external providers."
+        },
+        {
+          "title": "Microsoft Clarity",
+          "text": "Microsoft Clarity is used for behavioural analytics, heatmaps and session replays. Without analytics consent, the Clarity tag may send limited cookieless measurement data. When you accept analytics cookies, Clarity may use cookies to link page views and sessions together.\nThe main first-party cookies are _clck, which stores a pseudonymous Clarity user ID and preferences for this website, and _clsk, which links multiple page views into a single Clarity session. Depending on your consent choices and Microsoft settings, Microsoft cookies such as CLID, MUID, ANONCHK, MR and SM may also be used. Analytics storage is only permitted when analytics_storage is set to granted; advertising-related storage remains subject to the separate marketing consent."
+        },
         {
           "title": "Marketing: Google Ads and Meta Pixel",
           "text": "Google Ads and Meta Pixel are managed through GTM, not separate website scripts. Marketing is off by default. With consent these services can measure campaigns and conversions, including visits to contact or quote thank-you pages. Exact tags, cookies, recipients, individual purposes and lifetimes still need checking in the external container and production browser. We do not publish an unverified cookie list."
         },
         {
           "title": "Google Tag Manager and Consent Mode v2",
-          "text": "GTM-P6K3L9WQ loads after the site first sets analytics_storage, ad_storage, ad_user_data and ad_personalization to denied and processes any valid stored choice. Analytics controls analytics_storage; marketing controls the three advertising values. Changes are sent through Consent Mode and nu_consent_update.\nGTM may load while denied. Depending on settings, Google tags can send cookieless measurement requests. Meta tags require their own GTM restrictions; Consent Mode does not automatically block every tag. Without JavaScript, the noscript iframe may contact Google but cannot read localStorage preferences. This fallback must not run optional tags; its container settings need checking."
+          "text": "GTM-P6K3L9WQ loads after the website first sets analytics_storage, ad_storage, ad_user_data and ad_personalization to denied and processes any valid stored choice. Analytics controls analytics_storage; marketing controls the three advertising values. The same analytics consent state is also used by the directly integrated Google Analytics 4 tag. Changes are immediately passed through Consent Mode and nu_consent_update.\nGTM itself may load while consent is denied. Depending on their settings, Google tags may then send limited cookieless measurement requests. Meta tags require their own restrictions in GTM; Consent Mode does not automatically restrict every tag. Without JavaScript, the noscript iframe may contact Google but cannot read localStorage preferences. This fallback must not run optional marketing or analytics tags; its container settings need to be checked."
         },
         {
           "title": "Google Maps and reviews",
@@ -2220,7 +2226,7 @@
         },
         {
           "title": "Accepting, rejecting and changing preferences",
-          "text": "On your first visit you can reject all, set preferences or accept all. Analytics and marketing can be chosen independently. “Cookie preferences” in the footer or below lets you change or withdraw your choice. Missing, invalid, expired or outdated-version preferences cause the banner to appear again.\nClearing browser storage also clears your choice. Withdrawal changes future permission but does not automatically remove cookies or data already held by external providers. Use browser settings where necessary and contact us to exercise your privacy rights."
+          "text": "On your first visit you can reject all, set preferences or accept all. Analytics and marketing can be selected independently. “Cookie preferences” in the footer or below lets you change or withdraw your choice later. Missing, invalid, expired or outdated-version preferences cause the banner to appear again.\nWhen you withdraw analytics consent, analytics_storage is immediately set to denied and the website removes accessible first-party Google Analytics cookies _ga and _ga_*. This does not automatically erase information that external providers processed or stored before consent was withdrawn. Clearing browser storage also removes your saved cookie preference."
         },
         {
           "title": "External storage still to verify",

@@ -2136,6 +2136,7 @@
     "updated": "Dernière modification :",
     "controller": "Responsable et coordonnées",
     "authority": "Introduire une plainte auprès de l’Autorité belge de protection des données",
+
     "privacy": {
       "title": "Politique de confidentialité",
       "description": "Comment Nu-Isoleren.be traite vos données personnelles lorsque vous utilisez ce site ou envoyez une demande.",
@@ -2162,12 +2163,12 @@
         },
         {
           "title": "Google, Meta et contenus externes",
-          "text": "Google Tag Manager gère les intégrations Google Ads et Meta Pixel. L’agence marketing n’utilise actuellement pas Google Analytics. Le site transmet les choix analytics et marketing ; leur respect effectif par toutes les balises doit être contrôlé dans GTM. Les formulaires n’envoient pas eux-mêmes leurs noms, adresses e-mail ou autres champs à la dataLayer.\nGoogle Places fournit des avis via le serveur ; les photos des auteurs peuvent être chargées depuis Google. La page contact contient une carte Google Maps qui n’est actuellement pas bloquée par les préférences de cookies. Google reçoit des informations de connexion lors de son chargement. Consultez aussi la politique de cookies."
+          "text": "Nous utilisons Google Analytics 4 afin de mesurer l’utilisation et les performances de notre site. Le site utilise une balise Google Analytics intégrée directement et d’autres balises Google peuvent également être gérées via Google Tag Manager. Le stockage analytique est désactivé par défaut et n’est autorisé que lorsque vous acceptez les cookies analytiques. Sans consentement analytique, les balises Google peuvent, selon leur fonctionnement avec Consent Mode, envoyer des requêtes de mesure limitées sans cookies. Nos formulaires n’envoient pas eux-mêmes les noms, adresses e-mail ou autres champs saisis à Google Analytics ou à la dataLayer.\nGoogle Tag Manager gère également notamment les intégrations Google Ads et Meta Pixel. Le consentement marketing est distinct du consentement analytique.\nGoogle Places fournit les avis via notre serveur ; les photos de profil des auteurs peuvent être chargées depuis Google. La page de contact contient une carte Google Maps qui n’est actuellement pas bloquée par les préférences de cookies. Google peut recevoir des données techniques de connexion lors de son chargement. Consultez notre politique de cookies pour plus d’informations."
         },
         {
-  "title": "Microsoft Clarity",
-  "text": "Nous utilisons Microsoft Clarity afin d’analyser la manière dont les visiteurs utilisent notre site et d’en améliorer l’ergonomie. Clarity enregistre notamment les pages consultées, les clics, le défilement, les mouvements de souris, les dimensions de l’écran et de la fenêtre ainsi que certains événements techniques. Ces informations peuvent être utilisées pour produire des cartes de chaleur et des reconstitutions de sessions.\nClarity est configuré pour masquer les contenus sensibles. Les données saisies dans les formulaires sont masquées afin que les données personnelles introduites ne soient pas lisibles dans les reconstitutions de sessions. Clarity utilise nos préférences de cookies existantes via Google Consent Mode. Sans consentement aux cookies analytiques, Clarity peut collecter des données de mesure limitées sans cookies ; le suivi complet des sessions et les cookies Clarity ne sont autorisés que lorsque vous acceptez les cookies analytiques."
-},
+          "title": "Microsoft Clarity",
+          "text": "Nous utilisons Microsoft Clarity afin d’analyser la manière dont les visiteurs utilisent notre site et d’en améliorer l’ergonomie. Clarity enregistre notamment les pages consultées, les clics, le défilement, les mouvements de souris, les dimensions de l’écran et de la fenêtre ainsi que certains événements techniques. Ces informations peuvent être utilisées pour produire des cartes de chaleur et des reconstitutions de sessions.\nClarity est configuré pour masquer les contenus sensibles. Les données saisies dans les formulaires sont masquées afin que les données personnelles introduites ne soient pas lisibles dans les reconstitutions de sessions. Clarity utilise nos préférences de cookies existantes via Google Consent Mode. Sans consentement aux cookies analytiques, Clarity peut collecter des données de mesure limitées sans cookies ; le suivi complet des sessions et les cookies Clarity ne sont autorisés que lorsque vous acceptez les cookies analytiques."
+        },
         {
           "title": "Transferts internationaux",
           "text": "Le recours à des prestataires internationaux peut impliquer un traitement hors de l’Espace économique européen. Les régions, destinataires et garanties applicables restent à confirmer. Nous ne revendiquons donc pas de décision d’adéquation ou de garantie contractuelle particulière. Contactez-nous pour des précisions ; ces informations doivent être complétées avant la finalisation de la mise en production."
@@ -2182,6 +2183,7 @@
         }
       ]
     },
+
     "cookies": {
       "title": "Politique de cookies",
       "description": "Les cookies et technologies similaires utilisés sur ce site et la gestion de vos préférences.",
@@ -2195,20 +2197,24 @@
           "text": "nu-isoleren.consent est un élément localStorage du site. Il contient les choix necessary, analytics et marketing, la version et les dates d’enregistrement et d’expiration. Le choix reste valable au maximum 180 jours. Ensuite, il n’est plus appliqué et la bannière réapparaît ; le localStorage ne supprime pas automatiquement l’ancienne valeur. Le stockage nécessaire reste actif.\nNEXT_LOCALE est le cookie de langue de next-intl, enregistré lorsque nécessaire. La configuration ne définit pas de max-age : il s’agit d’un cookie de session, dont la restauration dépend aussi du navigateur. Aucun autre stockage sessionStorage propre à l’application n’a été identifié."
         },
         {
-  "title": "Analytics",
-  "text": "La catégorie analytics est désactivée par défaut. Nous utilisons Microsoft Clarity pour l’analyse de l’utilisation du site, les cartes de chaleur et les reconstitutions de sessions. Clarity nous aide notamment à comprendre où les visiteurs cliquent, jusqu’où ils font défiler les pages et où des problèmes d’utilisation peuvent apparaître. L’agence marketing n’utilise actuellement pas Google Analytics. Le consentement aux analytics est distinct du consentement au marketing."
-},
-{
-  "title": "Microsoft Clarity",
-  "text": "Microsoft Clarity est utilisé pour l’analyse comportementale, les cartes de chaleur et les reconstitutions de sessions. Sans consentement analytique, la balise Clarity peut transmettre des données de mesure limitées sans cookies. Lorsque vous acceptez les cookies analytiques, Clarity peut utiliser des cookies afin de relier les pages consultées et les sessions.\nLes principaux cookies first-party sont _clck, qui conserve un identifiant Clarity pseudonyme et les préférences propres à ce site, et _clsk, qui relie plusieurs pages consultées au sein d’une même session Clarity. Selon vos choix de consentement et les paramètres Microsoft, des cookies Microsoft tels que CLID, MUID, ANONCHK, MR et SM peuvent également être utilisés. Le stockage analytique n’est autorisé que lorsque analytics_storage est défini sur granted ; le stockage lié à la publicité reste soumis au consentement marketing distinct."
-},
+          "title": "Analytics",
+          "text": "La catégorie analytics est désactivée par défaut. Nous utilisons Google Analytics 4 pour les statistiques du site et des visiteurs et Microsoft Clarity pour l’analyse de l’utilisation, les cartes de chaleur et les reconstitutions de sessions. Les cookies analytiques ne sont autorisés que lorsque vous y consentez. Lorsque analytics_storage est défini sur denied, les services compatibles peuvent envoyer des requêtes de mesure limitées sans cookies analytiques. Le consentement analytique est distinct du consentement marketing."
+        },
+        {
+          "title": "Google Analytics 4",
+          "text": "Google Analytics 4 est utilisé pour mesurer notamment les pages consultées, l’utilisation du site et certaines informations techniques relatives aux visites afin d’améliorer le site et nos services. Lorsque vous acceptez les cookies analytiques, Google Analytics peut placer des cookies first-party tels que _ga et _ga_* pour effectuer des mesures pseudonymes et associer des visites et des sessions.\nSans consentement analytique, analytics_storage reste défini sur denied et les cookies analytiques ne sont pas autorisés. Si vous avez donné votre consentement puis le retirez ultérieurement, le site supprime les cookies first-party _ga et _ga_* auxquels il a accès. Cela ne supprime pas automatiquement les données déjà traitées ou conservées par des prestataires externes."
+        },
+        {
+          "title": "Microsoft Clarity",
+          "text": "Microsoft Clarity est utilisé pour l’analyse comportementale, les cartes de chaleur et les reconstitutions de sessions. Sans consentement analytique, la balise Clarity peut transmettre des données de mesure limitées sans cookies. Lorsque vous acceptez les cookies analytiques, Clarity peut utiliser des cookies afin de relier les pages consultées et les sessions.\nLes principaux cookies first-party sont _clck, qui conserve un identifiant Clarity pseudonyme et les préférences propres à ce site, et _clsk, qui relie plusieurs pages consultées au sein d’une même session Clarity. Selon vos choix de consentement et les paramètres Microsoft, des cookies Microsoft tels que CLID, MUID, ANONCHK, MR et SM peuvent également être utilisés. Le stockage analytique n’est autorisé que lorsque analytics_storage est défini sur granted ; le stockage lié à la publicité reste soumis au consentement marketing distinct."
+        },
         {
           "title": "Marketing : Google Ads et Meta Pixel",
           "text": "Google Ads et Meta Pixel sont gérés via GTM, sans scripts séparés dans le site. Le marketing est désactivé par défaut. Avec consentement, ces services peuvent mesurer les campagnes et conversions, notamment la visite d’une page de remerciement contact ou devis. Les balises, cookies, destinataires, finalités détaillées et durées doivent encore être vérifiés dans le conteneur externe et le navigateur en production. Aucune liste de cookies non confirmée n’est publiée ici."
         },
         {
           "title": "Google Tag Manager et Consent Mode v2",
-          "text": "GTM-P6K3L9WQ est chargé après que le site a fixé analytics_storage, ad_storage, ad_user_data et ad_personalization à denied, puis traité les préférences enregistrées valides. Analytics contrôle analytics_storage ; marketing contrôle les trois valeurs publicitaires. Les changements passent par Consent Mode et nu_consent_update.\nGTM peut se charger avec denied. Selon leur configuration, les balises Google peuvent émettre des requêtes de mesure sans cookies. Les balises Meta nécessitent des restrictions propres dans GTM : Consent Mode ne les bloque pas toutes automatiquement. Sans JavaScript, l’iframe noscript peut contacter Google sans pouvoir lire vos préférences localStorage. Cette solution de secours ne doit pas exécuter de balises optionnelles ; le conteneur doit être contrôlé."
+          "text": "GTM-P6K3L9WQ est chargé après que le site a d’abord défini analytics_storage, ad_storage, ad_user_data et ad_personalization sur denied, puis traité tout choix enregistré valide. Analytics contrôle analytics_storage ; marketing contrôle les trois valeurs publicitaires. Le même état de consentement analytique est également appliqué à la balise Google Analytics 4 intégrée directement. Les modifications sont immédiatement transmises via Consent Mode et nu_consent_update.\nGTM peut lui-même être chargé lorsque le consentement est refusé. Selon leur configuration, les balises Google peuvent alors envoyer des requêtes de mesure limitées sans cookies. Les balises Meta nécessitent leurs propres restrictions dans GTM ; Consent Mode ne limite pas automatiquement toutes les balises. Sans JavaScript, l’iframe noscript peut contacter Google mais ne peut pas lire les préférences localStorage. Cette solution de secours ne doit pas exécuter de balises marketing ou analytics optionnelles ; la configuration du conteneur doit être contrôlée."
         },
         {
           "title": "Google Maps et avis",
@@ -2216,7 +2222,7 @@
         },
         {
           "title": "Accepter, refuser et modifier",
-          "text": "À la première visite, vous pouvez tout refuser, définir vos préférences ou tout accepter. Analytics et marketing sont indépendants. Le bouton « Préférences de cookies », dans le pied de page ou ci-dessous, permet de modifier ou retirer votre choix. Un choix absent, invalide, expiré ou d’une ancienne version fait réapparaître la bannière.\nEffacer le stockage du navigateur efface aussi le choix. Le retrait modifie l’autorisation future mais ne supprime pas automatiquement les cookies ou données déjà conservés par les prestataires. Utilisez si nécessaire les réglages du navigateur et contactez-nous pour exercer vos droits."
+          "text": "Lors de votre première visite, vous pouvez tout refuser, définir vos préférences ou tout accepter. Analytics et marketing peuvent être choisis indépendamment. Le bouton « Préférences de cookies », dans le pied de page ou ci-dessous, permet de modifier ou retirer votre choix ultérieurement. Un choix absent, invalide, expiré ou provenant d’une ancienne version fait réapparaître la bannière.\nLorsque vous retirez votre consentement analytique, analytics_storage est immédiatement défini sur denied et le site supprime les cookies first-party Google Analytics _ga et _ga_* auxquels il a accès. Cela ne supprime pas automatiquement les données qu’un prestataire externe a déjà traitées ou conservées avant le retrait. Effacer le stockage du navigateur supprime également votre préférence enregistrée."
         },
         {
           "title": "Stockage externe à vérifier",
