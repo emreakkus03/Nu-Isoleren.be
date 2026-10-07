@@ -8,120 +8,143 @@ interface KnowledgeArticleContentProps {
 }
 
 const richTextClasses = `
-  prose prose-slate max-w-none
-  max-md:[overflow-wrap:anywhere]
-  max-md:[&_img]:max-w-full
-  max-md:[&_table]:block
-  max-md:[&_table]:overflow-x-auto
-
-  text-sm sm:text-base
+  max-w-none
+  text-sm
+  leading-7
   text-slate-600
-  leading-relaxed
+  sm:text-base
+  sm:leading-8
+  max-md:[overflow-wrap:anywhere]
 
-  prose-p:my-4
-  prose-p:leading-7
+  [&_p]:my-4
 
-  prose-strong:font-extrabold
-  prose-strong:text-slate-900
+  [&_strong]:font-extrabold
+  [&_strong]:text-slate-900
 
-  prose-em:text-slate-700
-
-  prose-a:font-bold
-  prose-a:text-[#1A669A]
-  prose-a:underline
-  prose-a:decoration-2
-  prose-a:underline-offset-4
-  prose-a:decoration-[#1A669A]/40
-  hover:prose-a:text-[#C82024]
-  hover:prose-a:decoration-[#C82024]
-
-  prose-h2:mt-9
-  prose-h2:mb-4
-  prose-h2:text-2xl
-  prose-h2:font-extrabold
-  prose-h2:tracking-tight
-  prose-h2:text-slate-900
-  sm:prose-h2:text-3xl
-
-  prose-h3:mt-7
-  prose-h3:mb-3
-  prose-h3:text-xl
-  prose-h3:font-extrabold
-  prose-h3:text-[#1A669A]
-  sm:prose-h3:text-2xl
-
-  prose-ul:my-6
-  prose-ul:space-y-2
-  prose-ol:my-6
-  prose-ol:space-y-2
-
-  prose-li:my-0
-  prose-li:pl-1
-  prose-li:leading-7
-
-  prose-ul:marker:text-[#C82024]
-  prose-ul:marker:text-lg
-
-  prose-ol:marker:font-extrabold
-  prose-ol:marker:text-[#C82024]
-
-  prose-blockquote:my-7
-  prose-blockquote:rounded-r-xl
-  prose-blockquote:border-l-4
-  prose-blockquote:border-[#1A669A]
-  prose-blockquote:bg-[#F2F8FC]
-  prose-blockquote:px-5
-  prose-blockquote:py-4
-  prose-blockquote:not-italic
-  prose-blockquote:text-slate-700
-
-  prose-code:rounded-md
-  prose-code:bg-slate-100
-  prose-code:px-1.5
-  prose-code:py-0.5
-  prose-code:font-semibold
-  prose-code:text-[#1A669A]
-  prose-code:before:content-none
-  prose-code:after:content-none
-
-  prose-pre:my-6
-  prose-pre:overflow-x-auto
-  prose-pre:rounded-xl
-  prose-pre:bg-slate-900
-  prose-pre:text-slate-100
-
-  prose-table:my-7
-  prose-table:w-full
-  prose-table:border-collapse
-
-  prose-thead:bg-slate-50
-
-  prose-th:border
-  prose-th:border-slate-200
-  prose-th:px-4
-  prose-th:py-3
-  prose-th:text-left
-  prose-th:font-extrabold
-  prose-th:text-slate-900
-
-  prose-td:border
-  prose-td:border-slate-200
-  prose-td:px-4
-  prose-td:py-3
-  prose-td:align-top
-
-  prose-hr:my-9
-  prose-hr:border-slate-200
+  [&_em]:italic
+  [&_em]:text-slate-700
 
   [&_u]:decoration-2
   [&_u]:underline-offset-2
 
   [&_s]:text-slate-500
 
+  [&_a]:font-bold
+  [&_a]:text-[#1A669A]
+  [&_a]:underline
+  [&_a]:decoration-2
+  [&_a]:decoration-[#1A669A]/40
+  [&_a]:underline-offset-4
+  [&_a]:transition-colors
+  hover:[&_a]:text-[#C82024]
+  hover:[&_a]:decoration-[#C82024]
+
+  [&_h2]:mt-10
+  [&_h2]:mb-4
+  [&_h2]:text-2xl
+  [&_h2]:font-extrabold
+  [&_h2]:leading-tight
+  [&_h2]:tracking-tight
+  [&_h2]:text-slate-900
+  sm:[&_h2]:text-3xl
+
+  [&_h3]:mt-8
+  [&_h3]:mb-3
+  [&_h3]:text-xl
+  [&_h3]:font-extrabold
+  [&_h3]:leading-snug
+  [&_h3]:text-[#1A669A]
+  sm:[&_h3]:text-2xl
+
+  [&_ul]:my-6
+  [&_ul]:list-disc
+  [&_ul]:space-y-2
+  [&_ul]:pl-7
+
+  [&_ol]:my-6
+  [&_ol]:list-decimal
+  [&_ol]:space-y-2
+  [&_ol]:pl-7
+
+  [&_li]:pl-1
+  [&_li]:leading-7
+
+  [&_li::marker]:font-extrabold
+  [&_li::marker]:text-[#C82024]
+
+  [&_ul_ul]:mt-2
+  [&_ul_ul]:mb-2
+  [&_ul_ul]:list-[circle]
+
+  [&_ol_ol]:mt-2
+  [&_ol_ol]:mb-2
+
+  [&_blockquote]:my-7
+  [&_blockquote]:rounded-r-xl
+  [&_blockquote]:border-l-4
+  [&_blockquote]:border-[#1A669A]
+  [&_blockquote]:bg-[#F2F8FC]
+  [&_blockquote]:px-5
+  [&_blockquote]:py-4
+  [&_blockquote]:font-medium
+  [&_blockquote]:text-slate-700
+
+  [&_blockquote_p]:my-0
+
+  [&_code]:rounded
+  [&_code]:bg-slate-100
+  [&_code]:px-1.5
+  [&_code]:py-0.5
+  [&_code]:font-semibold
+  [&_code]:text-[#1A669A]
+
+  [&_pre]:my-7
+  [&_pre]:overflow-x-auto
+  [&_pre]:rounded-xl
+  [&_pre]:bg-slate-900
+  [&_pre]:p-5
+  [&_pre]:text-sm
+  [&_pre]:text-white
+
+  [&_pre_code]:bg-transparent
+  [&_pre_code]:p-0
+  [&_pre_code]:text-inherit
+
+  [&_table]:my-7
+  [&_table]:w-full
+  [&_table]:border-collapse
+  [&_table]:text-sm
+
+  [&_thead]:bg-slate-50
+
+  [&_th]:border
+  [&_th]:border-slate-200
+  [&_th]:px-4
+  [&_th]:py-3
+  [&_th]:text-left
+  [&_th]:font-extrabold
+  [&_th]:text-slate-900
+
+  [&_td]:border
+  [&_td]:border-slate-200
+  [&_td]:px-4
+  [&_td]:py-3
+  [&_td]:align-top
+
+  [&_hr]:my-9
+  [&_hr]:border-0
+  [&_hr]:border-t
+  [&_hr]:border-slate-200
+
   [&_sub]:text-xs
   [&_sup]:text-xs
 
+  [&_img]:h-auto
+  [&_img]:max-w-full
   [&_img]:rounded-xl
+
+  max-md:[&_table]:block
+  max-md:[&_table]:overflow-x-auto
 `;
 
 export default function KnowledgeArticleContent({
@@ -130,7 +153,11 @@ export default function KnowledgeArticleContent({
   const sections = article.sections ?? [];
 
   const tocItems = sections
-    .filter((section) => section.nav_title && section.slug)
+    .filter(
+      (section) =>
+        section.nav_title &&
+        section.slug,
+    )
     .map((section) => ({
       nav_title: section.nav_title,
       slug: section.slug,
