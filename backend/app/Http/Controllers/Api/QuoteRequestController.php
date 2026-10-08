@@ -6,6 +6,7 @@ use App\Events\QuoteRequestCreated;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreQuoteRequestRequest;
 use App\Models\QuoteRequest;
+use App\Services\LeadsAppDispatch;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -21,7 +22,7 @@ class QuoteRequestController extends Controller
                 $validated = $request->validated();
 
                 $quoteRequest = QuoteRequest::create([
-                    'reference' => 'TMP-' . Str::uuid(),
+                    'reference' => 'TMP-'.Str::uuid(),
                     'first_name' => $validated['first_name'],
                     'last_name' => $validated['last_name'],
                     'email' => $validated['email'],
@@ -64,6 +65,8 @@ class QuoteRequestController extends Controller
         } catch (Throwable $exception) {
             report($exception);
         }
+
+        app(LeadsAppDispatch::class)->dispatch($quoteRequest);
 
         return response()->json([
             'success' => true,

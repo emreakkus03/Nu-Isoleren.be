@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreContactSubmissionRequest;
 use App\Models\ContactSubmission;
 use App\Services\BrevoService;
+use App\Services\LeadsAppDispatch;
 use Illuminate\Http\JsonResponse;
 use Throwable;
 
@@ -54,6 +55,8 @@ class ContactSubmissionController extends Controller
         } catch (Throwable $exception) {
             report($exception);
         }
+
+        app(LeadsAppDispatch::class)->dispatch($submission);
 
         return response()->json([
             'success' => true,
