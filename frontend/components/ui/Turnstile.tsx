@@ -8,7 +8,6 @@ export const turnstileEnabled = process.env.NEXT_PUBLIC_TURNSTILE_ENABLED === 't
 const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim();
 
 type TurnstileApi = {
-  ready: (callback: () => void) => void;
   render: (container: HTMLElement, options: {
     sitekey: string;
     language: string;
@@ -30,24 +29,28 @@ export default function Turnstile({ onToken }: { onToken: (token: string | null)
   const locale = useLocale();
   const t = useTranslations('Turnstile');
   const container = useRef<HTMLDivElement>(null);
+  const widgetId = useRef<string | null>(null);
+  const renderWidget = useRef<(() => void) | null>(null);
+  const mounted = useRef(false);
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
 
   useEffect(() => {
-    if (!turnstileEnabled || !siteKey || !ready || !window.turnstile) return;
-    const api = window.turnstile;
+    if (!turnstileEnabled || !siteKey) return;
+    mounted.current = true;
     let cancelled = false;
-    let id: string | undefined;
+    let api: TurnstileApi | undefined;
     const fail = () => {
       if (cancelled) return;
       onToken(null);
       setFailed(true);
     };
-    api.ready(() => {
-      if (cancelled || !container.current) return;
+    renderWidget.current = () => {
+      if (cancelled || !container.current || widgetId.current !== null || !window.turnstile) return;
+      api = window.turnstile;
       try {
-        id = api.render(container.current, {
+        widgetId.current = api.render(container.current, {
           sitekey: siteKey,
           language: locale,
           size: 'compact',
@@ -62,13 +65,26 @@ export default function Turnstile({ onToken }: { onToken: (token: string | null)
           'timeout-callback': fail,
         });
       } catch { fail(); }
-    });
+    };
+    renderWidget.current();
     return () => {
       cancelled = true;
+      mounted.current = false;
+      renderWidget.current = null;
+      const id = widgetId.current;
+      widgetId.current = null;
       onToken(null);
-      if (id !== undefined) api.remove(id);
+      if (id !== null) {
+        try { api?.remove(id); } catch {}
+      }
     };
-  }, [ready, locale, attempt, onToken]);
+  }, [locale, attempt, onToken]);
+
+  const handleScriptLoaded = () => {
+    if (!mounted.current) return;
+    setReady(true);
+    renderWidget.current?.();
+  };
 
   if (!turnstileEnabled) return null;
   if (!siteKey) return <p role="alert" className="text-sm text-red-800">{t('unavailable')}</p>;
@@ -79,8 +95,13 @@ export default function Turnstile({ onToken }: { onToken: (token: string | null)
         id="cloudflare-turnstile"
         src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
         strategy="afterInteractive"
-        onReady={() => setReady(true)}
-        onError={() => { onToken(null); setFailed(true); }}
+        onLoad={handleScriptLoaded}
+        onReady={handleScriptLoaded}
+        onError={() => {
+          if (!mounted.current) return;
+          onToken(null);
+          setFailed(true);
+        }}
       />
       <div ref={container} />
       {failed && <p role="alert" className="mt-2 text-sm text-red-800">{t('failed')}</p>}
