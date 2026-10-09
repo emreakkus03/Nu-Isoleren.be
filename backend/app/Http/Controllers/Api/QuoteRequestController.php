@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreQuoteRequestRequest;
 use App\Models\QuoteRequest;
 use App\Services\LeadsAppDispatch;
+use App\Services\TurnstileService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -17,6 +18,13 @@ class QuoteRequestController extends Controller
     public function store(
         StoreQuoteRequestRequest $request
     ): JsonResponse {
+        $turnstile = app(TurnstileService::class);
+        if (! $turnstile->verify($request->input('turnstile_token'))) {
+            $message = $turnstile->failureMessage($request->validated('locale'));
+
+            return response()->json(['message' => $message, 'errors' => ['turnstile_token' => [$message]]], 422);
+        }
+
         try {
             $quoteRequest = DB::transaction(function () use ($request) {
                 $validated = $request->validated();

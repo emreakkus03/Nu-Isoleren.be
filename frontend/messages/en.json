@@ -2246,6 +2246,11 @@
       "title": "Thank you for your quote request",
       "description": "We have received your quote request. We will review it and contact you about your project."
     }
+  },
+  "Turnstile": {
+    "unavailable": "The security check is unavailable. Submitting is temporarily unavailable.",
+    "failed": "The security check failed or expired. Please try again. Reload the page if the check does not appear.",
+    "retry": "Retry security check",
+    "loading": "Loading security check…"
   }
-
 }

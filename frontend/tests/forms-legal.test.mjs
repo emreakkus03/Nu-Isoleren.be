@@ -16,12 +16,12 @@ function walk(node) {
   return [node, ...walk(node.props?.children)];
 }
 const routing = load('i18n/config.ts', { 'next-intl/routing': { defineRouting: value => value } }).routing;
-for (const kind of ['contact', 'quote']) for (const locale of ['nl', 'fr', 'en']) {
-  test(`${kind} ${locale}: confirmed success redirects; duplicates blocked; failures remain retryable`, async () => {
+for (const kind of ['contact', 'quote']) for (const locale of ['nl', 'fr', 'en']) for (const enabled of [false, true]) {
+  test(`${kind} ${locale} Turnstile=${enabled}: confirmed success redirects; duplicates blocked; failures remain retryable`, async () => {
     const state = []; let cursor = 0; const navigations = []; let requests = 0; let resolveResponse;
     const previousFetch = global.fetch; const previousApi = process.env.NEXT_PUBLIC_API_URL;
     process.env.NEXT_PUBLIC_API_URL = 'https://api.example.test';
-    global.fetch = async (_url, options) => { requests++; assert.equal(JSON.parse(options.body).locale, locale); return new Promise(resolve => { resolveResponse = resolve; }); };
+    global.fetch = async (_url, options) => { requests++; assert.equal(JSON.parse(options.body).locale, locale); assert.equal(JSON.parse(options.body).turnstile_token, enabled ? 'test-token' : undefined); return new Promise(resolve => { resolveResponse = resolve; }); };
     const hooks = {
       useState: initial => { const index = cursor++; if (!(index in state)) state[index] = initial; return [state[index], value => { state[index] = typeof value === 'function' ? value(state[index]) : value; }]; },
       useRef: initial => { const index = cursor++; return state[index] ??= { current: initial }; },
@@ -29,6 +29,7 @@ for (const kind of ['contact', 'quote']) for (const locale of ['nl', 'fr', 'en']
     const file = `components/${kind}/${kind === 'contact' ? 'Contact' : 'Quote'}Form.tsx`;
     const Component = load(file, {
       react: hooks,
+      '@/components/ui/Turnstile': { default: 'turnstile-widget', turnstileEnabled: enabled },
       'next-intl': { useLocale: () => locale, useTranslations: () => key => key },
       '@/i18n/routing': { Link: 'a', useRouter: () => ({ replace: route => navigations.push('/' + locale + routing.pathnames[route][locale]) }) },
     }).default;
@@ -37,13 +38,21 @@ for (const kind of ['contact', 'quote']) for (const locale of ['nl', 'fr', 'en']
       let nodes = render();
       nodes.find(node => node.type === 'input' && node.props.type === 'checkbox').props.onChange({ target: { checked: true } });
       for (const response of [{ ok: false, body: { success: false } }, { ok: true, body: { success: false } }, { ok: true, body: { success: true } }]) {
+        if (enabled) {
+          nodes = render();
+          assert.equal(nodes.find(node => node.type === 'button' && node.props.type === 'submit').props.disabled, true);
+          const beforeBlocked = requests;
+          await nodes.find(node => node.type === 'form').props.onSubmit({ preventDefault() {} });
+          assert.equal(requests, beforeBlocked);
+          nodes.find(node => node.type === 'turnstile-widget').props.onToken('test-token');
+        }
         nodes = render(); const submit = nodes.find(node => node.type === 'form').props.onSubmit; const before = requests;
         const pending = submit({ preventDefault() {} }); await submit({ preventDefault() {} }); assert.equal(requests, before + 1);
         resolveResponse({ ok: response.ok, json: async () => response.body }); await pending;
         nodes = render();
         if (!response.ok || !response.body.success) {
           assert.equal(navigations.length, 0); assert(nodes.some(node => node.props?.children === (kind === 'contact' ? 'error' : 'errors.submit')));
-          assert.equal(nodes.find(node => node.type === 'button' && node.props.type === 'submit').props.disabled, false);
+          assert.equal(nodes.find(node => node.type === 'button' && node.props.type === 'submit').props.disabled, enabled);
         }
       }
       const route = '/thank-you/' + kind; assert.deepEqual(navigations, ['/' + locale + routing.pathnames[route][locale]]);

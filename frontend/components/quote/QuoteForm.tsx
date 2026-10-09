@@ -3,6 +3,7 @@
 import { FormEvent, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, useRouter } from '@/i18n/routing';
+import Turnstile, { turnstileEnabled } from '@/components/ui/Turnstile';
 
 interface Service {
   id: number;
@@ -57,6 +58,9 @@ export default function QuoteForm({
   initialServiceIds = [],
 }: QuoteFormProps) {
   const router = useRouter();
+  const tSecurity = useTranslations('Turnstile');
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [turnstileAttempt, setTurnstileAttempt] = useState(0);
   const submissionLocked = useRef(false);
   const t = useTranslations('QuotePage.form');
 
@@ -106,6 +110,7 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
   ) => {
     event.preventDefault();
     if (submissionLocked.current) return;
+    if (turnstileEnabled && !turnstileToken) return;
 
     if (!formData.privacy_consent) {
       setError(t('errors.privacy'));
@@ -126,6 +131,7 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
+            ...(turnstileEnabled ? { turnstile_token: turnstileToken } : {}),
             service_ids: selectedServices,
             first_name: formData.first_name,
             last_name: formData.last_name,
@@ -144,6 +150,9 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
 
       const data = await response.json();
 
+      if (response.status === 422 && data.errors?.turnstile_token) {
+        throw new Error('turnstile');
+      }
       if (!response.ok || data.success !== true) {
         throw new Error(
           data.message ?? 'Quote request failed',
@@ -151,8 +160,10 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
       }
 
       router.replace('/thank-you/quote');
-    } catch {
-      setError(t('errors.submit'));
+    } catch (error) {
+      setTurnstileToken(null);
+      setTurnstileAttempt(value => value + 1);
+      setError(error instanceof Error && error.message === 'turnstile' ? tSecurity('failed') : t('errors.submit'));
       submissionLocked.current = false;
       setIsSubmitting(false);
     }
@@ -391,11 +402,14 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
             </p>
           )}
 
+          <Turnstile key={turnstileAttempt} onToken={setTurnstileToken} />
+
           <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3 mt-7">
             <button
               type="button"
               onClick={() => {
                 setError(null);
+                setTurnstileToken(null);
                 setStep(1);
               }}
               className="inline-flex items-center justify-center gap-2 border border-gray-200 bg-gray-50/60 hover:bg-gray-100 text-gray-700 font-bold text-sm px-5 py-3 rounded-full transition cursor-pointer"
@@ -405,7 +419,7 @@ const [selectedServices, setSelectedServices] = useState<number[]>(
 
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || (turnstileEnabled && !turnstileToken)}
               className="inline-flex items-center justify-center gap-2.5 bg-[#C82024] hover:bg-red-800 text-white font-bold text-sm sm:text-base px-6 py-3 rounded-full cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap max-md:whitespace-normal max-md:[overflow-wrap:anywhere] transition shadow-sm hover:shadow-md active:scale-95 group"
             >
               <span>

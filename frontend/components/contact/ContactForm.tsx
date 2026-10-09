@@ -3,6 +3,7 @@
 import { FormEvent, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link, useRouter } from '@/i18n/routing';
+import Turnstile, { turnstileEnabled } from '@/components/ui/Turnstile';
 
 interface ContactFormData {
   first_name: string;
@@ -24,6 +25,9 @@ const initialFormData: ContactFormData = {
 
 export default function ContactForm() {
   const router = useRouter();
+  const tSecurity = useTranslations('Turnstile');
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [turnstileAttempt, setTurnstileAttempt] = useState(0);
   const submissionLocked = useRef(false);
   const t = useTranslations('ContactPage.form');
   const locale = useLocale();
@@ -33,6 +37,8 @@ export default function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] =
     useState(false);
+
+  const [securityFailed, setSecurityFailed] = useState(false);
 
   const [status, setStatus] = useState<
     'idle' | 'error'
@@ -57,6 +63,7 @@ export default function ContactForm() {
   ) => {
     event.preventDefault();
     if (submissionLocked.current) return;
+    if (turnstileEnabled && !turnstileToken) return;
 
     if (!formData.privacy_accepted) {
       return;
@@ -85,6 +92,7 @@ export default function ContactForm() {
             Accept: 'application/json',
           },
           body: JSON.stringify({
+            ...(turnstileEnabled ? { turnstile_token: turnstileToken } : {}),
             ...formData,
             locale,
             source: 'contact_page',
@@ -93,6 +101,9 @@ export default function ContactForm() {
       );
 
       const data = await response.json();
+      if (response.status === 422 && data.errors?.turnstile_token) {
+        throw new Error('turnstile');
+      }
       if (!response.ok || data.success !== true) {
         throw new Error(
           'Contactaanvraag kon niet worden verzonden.',
@@ -100,7 +111,10 @@ export default function ContactForm() {
       }
 
       router.replace('/thank-you/contact');
-    } catch {
+    } catch (error) {
+      setTurnstileToken(null);
+      setTurnstileAttempt(value => value + 1);
+      setSecurityFailed(error instanceof Error && error.message === 'turnstile');
       setStatus('error');
       submissionLocked.current = false;
       setIsSubmitting(false);
@@ -287,11 +301,14 @@ export default function ContactForm() {
         </span>
       </label>
 
+      <Turnstile key={turnstileAttempt} onToken={setTurnstileToken} />
+
       <div className="pt-2">
         <button
           type="submit"
           disabled={
             isSubmitting ||
+            (turnstileEnabled && !turnstileToken) ||
             !formData.privacy_accepted
           }
           className="inline-flex items-center justify-center gap-2 bg-[#C82024] hover:bg-red-800 text-white text-base md:text-lg font-bold px-6 py-3 lg:px-7 lg:py-3.5 rounded-full transition shadow-lg hover:shadow-xl transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#C82024] disabled:hover:shadow-lg cursor-pointer"
@@ -315,7 +332,7 @@ export default function ContactForm() {
 
       {status === 'error' && (
         <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-800">
-          {t('error')}
+          {securityFailed ? tSecurity('failed') : t('error')}
         </div>
       )}
     </form>

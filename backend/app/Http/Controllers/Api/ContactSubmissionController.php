@@ -7,6 +7,7 @@ use App\Http\Requests\StoreContactSubmissionRequest;
 use App\Models\ContactSubmission;
 use App\Services\BrevoService;
 use App\Services\LeadsAppDispatch;
+use App\Services\TurnstileService;
 use Illuminate\Http\JsonResponse;
 use Throwable;
 
@@ -16,6 +17,13 @@ class ContactSubmissionController extends Controller
         StoreContactSubmissionRequest $request,
         BrevoService $brevo
     ): JsonResponse {
+        $turnstile = app(TurnstileService::class);
+        if (! $turnstile->verify($request->input('turnstile_token'))) {
+            $message = $turnstile->failureMessage($request->validated('locale'));
+
+            return response()->json(['message' => $message, 'errors' => ['turnstile_token' => [$message]]], 422);
+        }
+
         $validated = $request->validated();
 
         $submission = ContactSubmission::create([

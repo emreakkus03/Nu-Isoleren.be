@@ -2224,6 +2224,11 @@
       "title": "Bedankt voor uw offerteaanvraag",
       "description": "We hebben uw offerteaanvraag ontvangen. We bekijken uw aanvraag en nemen contact met u op over uw project."
     }
+  },
+  "Turnstile": {
+    "unavailable": "De beveiligingscontrole is niet beschikbaar. Verzenden is tijdelijk niet mogelijk.",
+    "failed": "De beveiligingscontrole is mislukt of verlopen. Probeer opnieuw. Herlaad de pagina als de controle niet verschijnt.",
+    "retry": "Beveiligingscontrole opnieuw proberen",
+    "loading": "Beveiligingscontrole laden…"
   }
-
 }

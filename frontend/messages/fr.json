@@ -2242,6 +2242,11 @@
       "title": "Merci pour votre demande de devis",
       "description": "Nous avons reçu votre demande de devis. Nous allons l’examiner et vous recontacter au sujet de votre projet."
     }
+  },
+  "Turnstile": {
+    "unavailable": "Le contrôle de sécurité est indisponible. L’envoi est temporairement impossible.",
+    "failed": "Le contrôle de sécurité a échoué ou a expiré. Réessayez. Rechargez la page si le contrôle ne s’affiche pas.",
+    "retry": "Réessayer le contrôle de sécurité",
+    "loading": "Chargement du contrôle de sécurité…"
   }
-
 }
