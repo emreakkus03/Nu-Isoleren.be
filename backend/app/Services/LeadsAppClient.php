@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\ContactSubmission;
+use Illuminate\Support\Facades\Log;
 use App\Models\QuoteRequest;
 use App\Models\Service;
 use Illuminate\Support\Facades\Http;
@@ -54,12 +55,25 @@ final class LeadsAppClient
                 'Api-Password' => config('services.leads_app.pass'),
             ])->connectTimeout(5)->timeout(10)->withoutRedirecting()
                 ->post(config('services.leads_app.url'), $payload);
-        } catch (Throwable) {
-            throw new RuntimeException('Leads App transport failed; delivery is uncertain.');
-        }
+        } catch (Throwable $e) {
+    Log::warning('Leads App transport failed.', [
+        'exception' => $e::class,
+        'message' => $e->getMessage(),
+    ]);
 
-        if (! $response->successful()) {
-            throw new RuntimeException('Leads App returned a non-success response.');
-        }
+    throw new RuntimeException(
+        'Leads App transport failed; delivery is uncertain.',
+        previous: $e
+    );
+}
+
+       if (! $response->successful()) {
+    Log::warning('Leads App returned non-success response.', [
+        'status' => $response->status(),
+        'body' => mb_substr($response->body(), 0, 1000),
+    ]);
+
+    throw new RuntimeException('Leads App returned a non-success response.');
+}
     }
 }
