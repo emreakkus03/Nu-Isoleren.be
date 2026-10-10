@@ -442,6 +442,13 @@ export default async function Footer({
 
                   <nav className="mt-4 sm:mt-5 flex flex-col gap-2.5 sm:gap-3">
                     <Link
+                      href="/jobs"
+                      className="text-sm sm:text-base lg:text-lg transition hover:text-[#C82024]"
+                    >
+                      {(await getTranslations({ locale, namespace: 'Jobs' }))('title')}
+                    </Link>
+
+                    <Link
                       href="/about"
                       className="text-sm sm:text-base lg:text-lg transition hover:text-[#C82024]"
                     >

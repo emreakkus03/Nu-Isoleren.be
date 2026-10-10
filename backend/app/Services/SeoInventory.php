@@ -13,6 +13,7 @@ final class SeoInventory
             $entries = [];
             foreach (ContentSeo::MODELS as $type => $model) {
                 $fields = match ($type) {
+                    'vacancies' => ['title', 'content', 'short_description', 'valid_through'],
                     'cities' => ['hero_title', 'local_content'],
                     'projects' => ['title', 'description'],
                     'articles' => ['title', 'intro'],
@@ -21,7 +22,8 @@ final class SeoInventory
                 foreach (ContentSeo::publicQuery($type)->get(['id', 'slug', 'is_indexable', 'updated_at', ...$fields]) as $record) {
                     $slugs = ContentSeo::slugs($record);
                     if ($slugs !== []) {
-                        $entries[] = ['type' => $type, 'id' => $record->id, 'slugs' => $slugs, 'is_indexable' => (bool) $record->is_indexable, 'updated_at' => $record->updated_at?->toIso8601String()];
+                        $entries[] = ['type' => $type,
+                            ...($type === 'vacancies' ? ['valid_through' => $record->valid_through?->toIso8601String()] : []), 'id' => $record->id, 'slugs' => $slugs, 'is_indexable' => (bool) $record->is_indexable, 'updated_at' => $record->updated_at?->toIso8601String()];
                     }
                 }
             }

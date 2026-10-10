@@ -7,6 +7,8 @@ export const routing = defineRouting({
   
   pathnames: {
     '/': '/',
+    '/jobs': { nl: '/vacatures', fr: '/offres-emploi', en: '/jobs' },
+    '/jobs/[slug]': { nl: '/vacatures/[slug]', fr: '/offres-emploi/[slug]', en: '/jobs/[slug]' },
     '/thank-you/contact': {
       nl: '/bedankt/contact',
       fr: '/merci/contact',

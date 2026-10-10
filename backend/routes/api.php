@@ -3,9 +3,11 @@
 use App\Http\Controllers\Api\ContactSubmissionController;
 use App\Http\Controllers\Api\EnergyRatingController;
 use App\Http\Controllers\Api\EnergySavingsController;
+use App\Http\Controllers\Api\JobApplicationController;
 use App\Http\Controllers\Api\MaterialController;
 use App\Http\Controllers\Api\QuoteRequestController;
 use App\Http\Controllers\Api\SeoInventoryController;
+use App\Http\Controllers\Api\VacancyController;
 use App\Models\City;
 use App\Models\Faq;
 use App\Models\KnowledgeArticle;
@@ -900,3 +902,7 @@ Route::middleware('throttle:60,1')->get('/knowledge-articles/{slug}', function (
 });
 
 Route::middleware('throttle:60,1')->get('/seo-inventory', SeoInventoryController::class);
+
+Route::get('/vacancies', [VacancyController::class, 'index']);
+Route::get('/vacancies/{slug}', [VacancyController::class, 'show']);
+Route::post('/vacancies/{vacancy}/applications', [JobApplicationController::class, 'store']);

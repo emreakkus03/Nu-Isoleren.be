@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 final class SeoRefresh
 {
-    public const ALL = ['services', 'cities', 'articles', 'projects', 'materials', 'faqs', 'sitemap'];
+    public const ALL = ['vacancies', 'services', 'cities', 'articles', 'projects', 'materials', 'faqs', 'sitemap'];
 
     public function tags(Model $record): array
     {
@@ -21,6 +21,8 @@ final class SeoRefresh
             default => $record->getTable(),
         };
         $related = match ($type) {
+            'vacancy_questions' => ['vacancies', 'sitemap'],
+            'vacancies' => ['vacancies', 'sitemap'],
             'services' => ['projects', 'articles', 'materials', 'faqs'],
             'cities' => ['projects', 'services'],
             'projects' => ['services', 'cities'],

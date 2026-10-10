@@ -2,7 +2,7 @@ import { getPathname, routing } from '@/i18n/routing';
 export type Locale = (typeof routing.locales)[number];
 export type RouteKey = keyof typeof routing.pathnames;
 export const contentRoutes = {
-  services: '/services/[slug]', cities: '/areas/[slug]', articles: '/knowledge/[slug]', projects: '/projects/[slug]', materials: '/materials/[slug]',
+  vacancies: '/jobs/[slug]', services: '/services/[slug]', cities: '/areas/[slug]', articles: '/knowledge/[slug]', projects: '/projects/[slug]', materials: '/materials/[slug]',
 } as const;
 export type ContentType = keyof typeof contentRoutes;
 export const languageTags: Record<Locale, string> = { nl: 'nl-BE', fr: 'fr-BE', en: 'en' };

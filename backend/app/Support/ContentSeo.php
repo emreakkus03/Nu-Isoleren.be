@@ -7,12 +7,14 @@ use App\Models\KnowledgeArticle;
 use App\Models\Material;
 use App\Models\Project;
 use App\Models\Service;
+use App\Models\Vacancy;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 final class ContentSeo
 {
-    public const MODELS = ['services' => Service::class, 'cities' => City::class, 'articles' => KnowledgeArticle::class, 'projects' => Project::class, 'materials' => Material::class];
+    public const MODELS = ['vacancies' => Vacancy::class,
+        'services' => Service::class, 'cities' => City::class, 'articles' => KnowledgeArticle::class, 'projects' => Project::class, 'materials' => Material::class];
 
     public const LOCALES = ['nl', 'fr', 'en'];
 
@@ -28,6 +30,7 @@ final class ContentSeo
         $query = self::MODELS[$type]::query();
 
         return match ($type) {
+            'vacancies' => $query->open(),
             'cities' => $query->where('is_published', true),
             'articles' => $query->published(),
             'projects' => $query->where('published', true),
@@ -40,6 +43,7 @@ final class ContentSeo
         self::locale($locale);
         $fields = match ($type) {
             'cities' => ['hero_title', 'local_content'],
+            'vacancies' => ['slug', 'title', 'short_description', 'content'],
             'projects' => ['slug', 'title', 'description'],
             'articles' => ['slug', 'title', 'intro'],
             default => ['slug', 'name', 'intro_text'],
@@ -62,13 +66,17 @@ final class ContentSeo
                 $body = $record->getTranslation('local_content', $locale, false);
             } else {
                 $slug = $record->getTranslation('slug', $locale, false);
-                $title = $record->getTranslation($record instanceof Project || $record instanceof KnowledgeArticle ? 'title' : 'name', $locale, false);
+                $title = $record->getTranslation($record instanceof Project || $record instanceof KnowledgeArticle || $record instanceof Vacancy ? 'title' : 'name', $locale, false);
                 $field = match (true) {
+                    $record instanceof Vacancy => 'content',
                     $record instanceof KnowledgeArticle => 'intro',
                     $record instanceof Project => 'description',
                     default => 'intro_text',
                 };
                 $body = $record->getTranslation($field, $locale, false);
+            }
+            if ($record instanceof Vacancy && blank($record->getTranslation('short_description', $locale, false))) {
+                continue;
             }
             if (is_string($slug) && trim($slug) !== '' && filled($title) && filled($body)) {
                 $result[$locale] = $slug;

@@ -1,5 +1,5 @@
 import { timingSafeEqual } from 'node:crypto';
-export const allowedTags = ['services', 'cities', 'articles', 'projects', 'materials', 'faqs', 'sitemap'] as const;
+export const allowedTags = ['vacancies', 'services', 'cities', 'articles', 'projects', 'materials', 'faqs', 'sitemap'] as const;
 export function authorized(header: string | null, secret: string | undefined): boolean {
   if (!secret || secret.length < 32 || !header?.startsWith('Bearer ')) return false;
   const actual = Buffer.from(header.slice(7));

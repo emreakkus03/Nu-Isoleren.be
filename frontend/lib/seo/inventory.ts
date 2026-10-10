@@ -2,7 +2,7 @@ import 'server-only';
 import { cache } from 'react';
 import { contentRequest } from '@/lib/content-api';
 import type { ContentType, Locale } from './urls';
-export interface SeoEntry { type: ContentType; id: number; slugs: Partial<Record<Locale, string>>; is_indexable: boolean; updated_at: string | null }
+export interface SeoEntry { type: ContentType; id: number; slugs: Partial<Record<Locale, string>>; is_indexable: boolean; updated_at: string | null; valid_through?: string | null }
 export const getSeoInventory = cache(async (): Promise<SeoEntry[]> => {
   const response = await contentRequest('/seo-inventory', ['sitemap']);
   const result = await response.json();

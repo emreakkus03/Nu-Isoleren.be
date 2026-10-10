@@ -11,6 +11,8 @@ use App\Models\Project;
 use App\Models\ProjectImage;
 use App\Models\SeoRelation;
 use App\Models\Service;
+use App\Models\Vacancy;
+use App\Models\VacancyQuestion;
 use App\Observers\SeoContentObserver;
 use Illuminate\Support\ServiceProvider;
 
@@ -29,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        foreach ([Service::class, City::class, KnowledgeArticle::class, KnowledgeCategory::class, Project::class, ProjectImage::class, Material::class, Faq::class, SeoRelation::class] as $model) {
+        foreach ([Vacancy::class, VacancyQuestion::class, Service::class, City::class, KnowledgeArticle::class, KnowledgeCategory::class, Project::class, ProjectImage::class, Material::class, Faq::class, SeoRelation::class] as $model) {
             $model::observe(SeoContentObserver::class);
         }
     }
