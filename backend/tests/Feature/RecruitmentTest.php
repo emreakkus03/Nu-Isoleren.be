@@ -7,6 +7,7 @@ use App\Filament\Resources\JobApplications\Pages\ListJobApplications;
 use App\Filament\Resources\Vacancies\Pages\CreateVacancy;
 use App\Filament\Resources\Vacancies\Pages\EditVacancy;
 use App\Filament\Resources\Vacancies\Pages\ListVacancies;
+use App\Mail\ApplicationConfirmation;
 use App\Models\JobApplication;
 use App\Models\User;
 use App\Models\Vacancy;
@@ -22,6 +23,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Testing\TestResponse;
 use Livewire\Livewire;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -135,6 +137,11 @@ class RecruitmentTest extends TestCase
             $this->assertSame('Nu-Isoleren Sollicitaties', $request['to'][0]['name']);
             $this->assertTrue($request->hasHeader('api-key', 'fake-brevo-key'));
             $this->assertStringContainsString('Screening', $request['subject']);
+            $this->assertStringContainsString('Ada Test', $request['htmlContent']);
+            $this->assertStringContainsString('ada@example.test', $request['htmlContent']);
+            $this->assertStringContainsString('Snelle screening', $request['htmlContent']);
+            $this->assertStringContainsString('#C82024', $request['htmlContent']);
+            $this->assertStringContainsString('images/logo.png', $request['htmlContent']);
             $this->assertArrayNotHasKey('attachment', $request->data());
 
             return true;
@@ -254,20 +261,70 @@ class RecruitmentTest extends TestCase
     #[DataProvider('locales')]
     public function test_confirmation_language_and_multipart_answers(string $locale): void
     {
+        URL::forceRootUrl('https://api.nu-isoleren.be');
+        URL::forceScheme('https');
+        $expected = [
+            'nl' => ['Sollicitatie ontvangen | Nu-Isoleren', 'Bedankt voor uw sollicitatie', 'Beste Ada,', 'Wat gebeurt er nu?'],
+            'fr' => ['Candidature reçue | Nu-Isoleren', 'Merci pour votre candidature', 'Bonjour Ada,', 'Que se passe-t-il maintenant ?'],
+            'en' => ['Application received | Nu-Isoleren', 'Thank you for your application', 'Dear Ada,', 'What happens next?'],
+        ][$locale];
         $vacancy = $this->vacancy();
         $question = $this->question($vacancy);
         $this->submit($vacancy, ['locale' => $locale, 'answers' => json_encode([$question->id => true])])->assertCreated();
-        Http::assertSent(function (Request $request) use ($locale): bool {
+        $application = JobApplication::sole();
+        $this->assertSame($locale, $application->locale);
+        $this->assertSame($vacancy->getTranslation('title', $locale, false), $application->vacancy_title);
+        $answer = $application->answers->sole();
+        $this->assertSame($locale, $answer->locale);
+        $this->assertSame($question->getTranslation('question', $locale, false), $answer->question);
+        $this->assertSame(__('recruitment.yes', [], $locale), $answer->answer_label);
+        Http::assertSent(function (Request $request) use ($locale, $expected, $application): bool {
             if ($request->url() !== self::BREVO_URL || $request['to'][0]['email'] !== 'ada@example.test') {
                 return false;
             }
-            $this->assertSame(__('recruitment.confirmation_subject', [], $locale), $request['subject']);
-            $this->assertStringContainsString(__('recruitment.confirmation_body', [], $locale), html_entity_decode($request['htmlContent']));
+            $html = html_entity_decode($request['htmlContent']);
+            $this->assertSame($expected[0], $request['subject']);
+            foreach (array_slice($expected, 1) as $text) {
+                $this->assertStringContainsString($text, $html);
+            }
+            $this->assertStringContainsString('<html lang="'.$locale.'">', $html);
+            $this->assertStringContainsString($application->vacancy_title, $html);
+            $this->assertStringContainsString('https://api.nu-isoleren.be/images/logo.png', $html);
+            $this->assertStringContainsString('mailto:info@nu-isoleren.be', $html);
+            $this->assertStringContainsString('tel:+3280063635', $html);
+            $this->assertSame(['email' => 'info@nu-isoleren.be', 'name' => 'Nu-Isoleren'], $request['replyTo']);
             $this->assertSame(['email' => 'verified@example.test', 'name' => 'Verified sender'], $request['sender']);
             $this->assertArrayNotHasKey('attachment', $request->data());
+            if ($locale !== 'nl') {
+                $this->assertStringNotContainsString('Bedankt voor uw sollicitatie', $html);
+                $this->assertStringNotContainsString('Beste Ada', $html);
+                $this->assertStringNotContainsString('We hebben uw sollicitatie', $html);
+                $this->assertStringNotContainsString('Testfunctie', $html);
+            }
 
             return true;
         });
+        Http::assertSent(function (Request $request) use ($answer): bool {
+            if ($request->url() !== self::BREVO_URL || $request['to'][0]['email'] !== 'recruitment@example.test') {
+                return false;
+            }
+            $this->assertStringContainsString($answer->question, html_entity_decode($request['htmlContent']));
+            $this->assertStringContainsString($answer->answer_label, html_entity_decode($request['htmlContent']));
+            $this->assertSame(['email' => 'ada@example.test', 'name' => 'Ada Test'], $request['replyTo']);
+
+            return true;
+        });
+    }
+
+    public function test_confirmation_template_uses_stored_locale_independently_of_global_locale(): void
+    {
+        app()->setLocale('nl');
+        foreach (['fr' => 'Merci pour votre candidature', 'en' => 'Thank you for your application', 'invalid' => 'Bedankt voor uw sollicitatie'] as $locale => $title) {
+            $application = new JobApplication(['locale' => $locale, 'first_name' => 'Ada', 'vacancy_title' => 'Snapshot']);
+            $mail = new ApplicationConfirmation($application);
+            $this->assertStringContainsString($title, $mail->render());
+            $this->assertSame('mail.recruitment.customer-'.($locale === 'invalid' ? 'nl' : $locale), $mail->content()->view);
+        }
     }
 
     public function test_mail_failure_retains_record_and_returns_honest_error_without_pii_logs(): void

@@ -10,7 +10,7 @@ return [
     'linkedin' => 'Enter a valid LinkedIn profile URL.',
     'received' => 'Your application has been received.',
     'mail_failed' => 'Your details were recorded, but the recruitment email could not be sent. Any CV has not been retained. Please contact Nu-Isoleren and mention this message.',
-    'confirmation_subject' => 'Your interest in Nu-Isoleren has been received',
+    'confirmation_subject' => 'Application received | Nu-Isoleren',
     'thanks' => 'Thank you for your interest.',
     'confirmation_body' => 'We have received your details. We will review your experience and contact you about a possible collaboration.',
     'meeting' => 'During an introductory meeting, we will discuss the position or collaboration, region, working arrangements and next steps.',

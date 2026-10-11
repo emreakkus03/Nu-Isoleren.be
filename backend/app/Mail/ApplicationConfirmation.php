@@ -16,12 +16,18 @@ class ApplicationConfirmation extends Mailable
     {
         return new Envelope(
             from: new Address(config('services.brevo.sender.email'), config('services.brevo.sender.name')),
-            subject: __('recruitment.confirmation_subject', [], $this->application->locale),
+            replyTo: [new Address('info@nu-isoleren.be', 'Nu-Isoleren')],
+            subject: __('recruitment.confirmation_subject', [], $this->applicationLocale()),
         );
     }
 
     public function content(): Content
     {
-        return new Content(view: 'mail.application-confirmation');
+        return new Content(view: 'mail.recruitment.customer-'.$this->applicationLocale());
+    }
+
+    private function applicationLocale(): string
+    {
+        return in_array($this->application->locale, ['nl', 'fr', 'en'], true) ? $this->application->locale : 'nl';
     }
 }

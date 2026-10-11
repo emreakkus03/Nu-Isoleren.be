@@ -10,7 +10,7 @@ return [
     'linkedin' => 'Vul een geldige LinkedIn-profiel-URL in.',
     'received' => 'Je sollicitatie is ontvangen.',
     'mail_failed' => 'Je gegevens zijn geregistreerd, maar de recruitmentmail kon niet worden verstuurd. Een eventueel CV is niet bewaard. Neem contact op met Nu-Isoleren en vermeld deze melding.',
-    'confirmation_subject' => 'Je interesse in Nu-Isoleren is goed ontvangen',
+    'confirmation_subject' => 'Sollicitatie ontvangen | Nu-Isoleren',
     'thanks' => 'Bedankt voor je interesse.',
     'confirmation_body' => 'We hebben je gegevens goed ontvangen. We bekijken je ervaring en nemen contact met je op over de mogelijke samenwerking.',
     'meeting' => 'Tijdens een kennismaking bespreken we de functie/samenwerking, regio, werkwijze en verdere afspraken.',

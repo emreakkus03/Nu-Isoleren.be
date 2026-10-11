@@ -41,10 +41,12 @@ class RecruitmentMailService
         }
         try {
             $mail = new ApplicationConfirmation($application);
+            $envelope = $mail->envelope();
             $this->brevo->send(
                 to: ['email' => $application->email, 'name' => trim($application->first_name.' '.$application->last_name)],
-                subject: $mail->envelope()->subject,
+                subject: $envelope->subject,
                 htmlContent: $mail->render(),
+                replyTo: ['email' => $envelope->replyTo[0]->address, 'name' => $envelope->replyTo[0]->name],
             );
             $application->update(['confirmation_mail_status' => 'sent']);
         } catch (Throwable) {

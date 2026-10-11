@@ -21,13 +21,13 @@ class RecruitmentApplication extends Mailable
 
         return new Envelope(
             from: new Address(config('services.brevo.sender.email'), config('services.brevo.sender.name')),
-            replyTo: [new Address($this->application->email)],
+            replyTo: [new Address($this->application->email, trim($this->application->first_name.' '.$this->application->last_name))],
             subject: Str::limit(preg_replace('/[\r\n\x00-\x1F\x7F]+/u', ' ', $subject), 180),
         );
     }
 
     public function content(): Content
     {
-        return new Content(view: 'mail.recruitment-application');
+        return new Content(view: 'mail.recruitment.admin');
     }
 }
