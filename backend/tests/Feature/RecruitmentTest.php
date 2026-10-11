@@ -7,8 +7,6 @@ use App\Filament\Resources\JobApplications\Pages\ListJobApplications;
 use App\Filament\Resources\Vacancies\Pages\CreateVacancy;
 use App\Filament\Resources\Vacancies\Pages\EditVacancy;
 use App\Filament\Resources\Vacancies\Pages\ListVacancies;
-use App\Mail\ApplicationConfirmation;
-use App\Mail\RecruitmentApplication;
 use App\Models\JobApplication;
 use App\Models\User;
 use App\Models\Vacancy;
@@ -16,6 +14,7 @@ use App\Models\VacancyQuestion;
 use App\Services\SeoInventory;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Http\Client\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -32,11 +31,24 @@ class RecruitmentTest extends TestCase
 {
     use DatabaseMigrations;
 
+    private const BREVO_URL = 'https://api.brevo.com/v3/smtp/email';
+
+    private array $brevoStatuses = [201];
+
     protected function setUp(): void
     {
         parent::setUp();
         config(['services.turnstile.enabled' => false, 'recruitment.to' => 'recruitment@example.test', 'mail.default' => 'smtp', 'recruitment.max_cv_mb' => 5]);
         Mail::fake();
+        config([
+            'services.brevo.enabled' => true, 'services.brevo.api_key' => 'fake-brevo-key',
+            'services.brevo.sender.email' => 'verified@example.test', 'services.brevo.sender.name' => 'Verified sender',
+        ]);
+        Http::fake([self::BREVO_URL => function () {
+            $status = count($this->brevoStatuses) > 1 ? array_shift($this->brevoStatuses) : $this->brevoStatuses[0];
+
+            return Http::response(['messageId' => 'fake-message'], $status);
+        }]);
         Queue::fake();
         Http::preventStrayRequests();
         Storage::fake('local');
@@ -84,7 +96,7 @@ class RecruitmentTest extends TestCase
         $entries = collect(app(SeoInventory::class)->entries())->where('type', 'vacancies');
         $this->assertSame([$vacancy->id], $entries->pluck('id')->all());
         $this->assertDatabaseCount('job_applications', 0);
-        Mail::assertNothingSent();
+        Http::assertNotSent(fn (Request $request): bool => $request->url() === self::BREVO_URL);
     }
 
     public static function answerCases(): array
@@ -112,15 +124,22 @@ class RecruitmentTest extends TestCase
         $question->delete();
         $this->assertSame('Vraag?', $answer->fresh()->question);
         $this->assertSame($label, $answer->fresh()->answer_label);
-        Mail::assertSent(RecruitmentApplication::class, function ($mail) use ($label): bool {
-            $this->assertStringContainsString($label, $mail->render());
-            $this->assertStringContainsString('facebook', $mail->render());
-            $this->assertSame('ada@example.test', $mail->envelope()->replyTo[0]->address);
-            $this->assertStringContainsString('Screening', $mail->envelope()->subject);
+        Http::assertSent(function (Request $request) use ($label): bool {
+            if ($request->url() !== self::BREVO_URL || $request['to'][0]['email'] !== 'recruitment@example.test') {
+                return false;
+            }
+            $this->assertStringContainsString($label, $request['htmlContent']);
+            $this->assertStringContainsString('facebook', $request['htmlContent']);
+            $this->assertSame(['email' => 'ada@example.test', 'name' => 'Ada Test'], $request['replyTo']);
+            $this->assertSame(['email' => 'verified@example.test', 'name' => 'Verified sender'], $request['sender']);
+            $this->assertSame('Nu-Isoleren Sollicitaties', $request['to'][0]['name']);
+            $this->assertTrue($request->hasHeader('api-key', 'fake-brevo-key'));
+            $this->assertStringContainsString('Screening', $request['subject']);
+            $this->assertArrayNotHasKey('attachment', $request->data());
 
-            return $mail->hasTo('recruitment@example.test');
+            return true;
         });
-        Mail::assertSent(ApplicationConfirmation::class);
+        Http::assertSent(fn (Request $request): bool => $request->url() === self::BREVO_URL && $request['to'][0]['email'] === 'ada@example.test');
     }
 
     public static function invalidAnswers(): array
@@ -135,7 +154,7 @@ class RecruitmentTest extends TestCase
         $q = $this->question($vacancy, $type);
         $this->submit($vacancy, ['answers' => [$q->id => $value]])->assertUnprocessable();
         $this->assertDatabaseCount('job_applications', 0);
-        Mail::assertNothingSent();
+        Http::assertNotSent(fn (Request $request): bool => $request->url() === self::BREVO_URL);
     }
 
     public function test_questions_from_other_vacancies_and_inactive_questions_are_rejected(): void
@@ -180,11 +199,21 @@ class RecruitmentTest extends TestCase
         $this->assertTrue($application->has_cv);
         $this->assertFalse(Schema::hasColumn('job_applications', 'cv_path'));
         $this->assertFalse(Schema::hasColumn('job_applications', 'cv'));
-        Mail::assertSent(RecruitmentApplication::class, function ($mail): bool {
-            $attachment = $mail->attachments()[0];
-            $this->assertSame('cv.pdf', $attachment->as);
-            $this->assertSame('application/pdf', $attachment->mime);
-            $this->assertTrue($mail->hasAttachment($attachment));
+        Http::assertSent(function (Request $request) use ($file): bool {
+            if ($request->url() !== self::BREVO_URL || $request['to'][0]['email'] !== 'recruitment@example.test') {
+                return false;
+            }
+            $this->assertSame([['name' => 'cv.pdf', 'content' => base64_encode($file->get())]], $request['attachment']);
+            $this->assertStringStartsWith('%PDF-', base64_decode($request['attachment'][0]['content']));
+
+            return true;
+        });
+        Http::assertSent(function (Request $request): bool {
+            if ($request->url() !== self::BREVO_URL || $request['to'][0]['email'] !== 'ada@example.test') {
+                return false;
+            }
+            $this->assertArrayNotHasKey('attachment', $request->data());
+            $this->assertStringNotContainsString('Snelle screening', $request['htmlContent']);
 
             return true;
         });
@@ -201,20 +230,20 @@ class RecruitmentTest extends TestCase
             $this->submit($vacancy, ['cv' => $file])->assertUnprocessable()->assertJsonValidationErrors('cv');
         }
         $this->assertDatabaseCount('job_applications', 0);
-        Mail::assertNothingSent();
+        Http::assertNotSent(fn (Request $request): bool => $request->url() === self::BREVO_URL);
     }
 
     public function test_turnstile_rejection_and_success(): void
     {
         config(['services.turnstile.enabled' => true, 'services.turnstile.secret' => 'test-secret']);
-        Http::fake(['*' => Http::sequence()->push(['success' => false])->push(['success' => true])]);
+        Http::fake([config('services.turnstile.verify_url') => Http::sequence()->push(['success' => false])->push(['success' => true])]);
         $vacancy = $this->vacancy();
         $this->submit($vacancy)->assertUnprocessable();
         $this->submit($vacancy, ['turnstile_token' => 'test'])->assertUnprocessable();
         $this->assertDatabaseCount('job_applications', 0);
-        Mail::assertNothingSent();
+        Http::assertNotSent(fn (Request $request): bool => $request->url() === self::BREVO_URL);
         $this->submit($vacancy, ['turnstile_token' => 'test'])->assertCreated();
-        Http::assertSent(fn ($request): bool => $request['secret'] === 'test-secret' && $request['response'] === 'test');
+        Http::assertSent(fn ($request): bool => $request->url() === config('services.turnstile.verify_url') && $request['secret'] === 'test-secret' && $request['response'] === 'test');
     }
 
     public static function locales(): array
@@ -228,17 +257,22 @@ class RecruitmentTest extends TestCase
         $vacancy = $this->vacancy();
         $question = $this->question($vacancy);
         $this->submit($vacancy, ['locale' => $locale, 'answers' => json_encode([$question->id => true])])->assertCreated();
-        Mail::assertSent(ApplicationConfirmation::class, function ($mail) use ($locale): bool {
-            $this->assertSame(__('recruitment.confirmation_subject', [], $locale), $mail->envelope()->subject);
-            $this->assertStringContainsString(__('recruitment.confirmation_body', [], $locale), html_entity_decode($mail->render()));
+        Http::assertSent(function (Request $request) use ($locale): bool {
+            if ($request->url() !== self::BREVO_URL || $request['to'][0]['email'] !== 'ada@example.test') {
+                return false;
+            }
+            $this->assertSame(__('recruitment.confirmation_subject', [], $locale), $request['subject']);
+            $this->assertStringContainsString(__('recruitment.confirmation_body', [], $locale), html_entity_decode($request['htmlContent']));
+            $this->assertSame(['email' => 'verified@example.test', 'name' => 'Verified sender'], $request['sender']);
+            $this->assertArrayNotHasKey('attachment', $request->data());
 
-            return $mail->hasTo('ada@example.test');
+            return true;
         });
     }
 
     public function test_mail_failure_retains_record_and_returns_honest_error_without_pii_logs(): void
     {
-        Mail::shouldReceive('to')->once()->andThrow(new \RuntimeException('private upstream detail'));
+        $this->brevoStatuses = [503];
         Log::shouldReceive('error')->once()->with('Recruitment internal mail delivery failed', \Mockery::on(fn (array $context): bool => array_keys($context) === ['application_id']));
         $this->submit($this->vacancy())->assertStatus(503)->assertJsonPath('recorded', true)->assertJsonPath('success', false);
         $this->assertSame('failed', JobApplication::sole()->internal_mail_status);
@@ -246,20 +280,34 @@ class RecruitmentTest extends TestCase
 
     public function test_confirmation_failure_does_not_report_internal_delivery_as_lost(): void
     {
-        $recipient = \Mockery::mock();
-        $recipient->shouldReceive('send')->once();
-        Mail::shouldReceive('to')->once()->with('recruitment@example.test', 'Nu-Isoleren Sollicitaties')->andReturn($recipient);
-        Mail::shouldReceive('to')->once()->with('ada@example.test')->andThrow(new \RuntimeException('failure'));
+        $this->brevoStatuses = [201, 503];
         $this->submit($this->vacancy())->assertCreated();
         $this->assertSame('sent', JobApplication::sole()->internal_mail_status);
         $this->assertSame('failed', JobApplication::sole()->confirmation_mail_status);
     }
 
-    public function test_log_transport_never_logs_candidate_mail(): void
+    public function test_brevo_delivery_ignores_laravel_log_mailer(): void
     {
         config(['mail.default' => 'log']);
-        $this->submit($this->vacancy())->assertStatus(503);
+        $this->submit($this->vacancy())->assertCreated();
+        Http::assertSentCount(2);
         Mail::assertNothingSent();
+    }
+
+    public function test_disabled_brevo_fails_without_falsely_marking_mail_sent(): void
+    {
+        config(['services.brevo.enabled' => false]);
+        $this->submit($this->vacancy())->assertStatus(503);
+        $this->assertSame('failed', JobApplication::sole()->internal_mail_status);
+        Http::assertNothingSent();
+    }
+
+    public function test_missing_brevo_key_fails_without_delivery(): void
+    {
+        config(['services.brevo.api_key' => null]);
+        $this->submit($this->vacancy())->assertStatus(503);
+        $this->assertSame('failed', JobApplication::sole()->internal_mail_status);
+        Http::assertNothingSent();
     }
 
     public function test_filament_pages_render_and_only_application_followup_is_editable(): void

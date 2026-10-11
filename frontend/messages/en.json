@@ -2298,7 +2298,7 @@
       "last_name": "Last name",
       "email": "Email",
       "phone": "Phone number",
-      "city": "Town or city",
+      "city": "City / town",
       "cv": "CV (PDF)",
       "linkedin": "LinkedIn profile",
       "cvInstruction": "Attach a PDF CV (up to {max} MB) or provide your LinkedIn profile. You can also provide both.",

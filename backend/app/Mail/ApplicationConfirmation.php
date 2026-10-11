@@ -15,7 +15,7 @@ class ApplicationConfirmation extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address(config('recruitment.from') ?: config('mail.from.address'), config('recruitment.from_name')),
+            from: new Address(config('services.brevo.sender.email'), config('services.brevo.sender.name')),
             subject: __('recruitment.confirmation_subject', [], $this->application->locale),
         );
     }

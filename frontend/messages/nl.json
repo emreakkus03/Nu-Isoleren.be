@@ -2276,7 +2276,7 @@
       "last_name": "Achternaam",
       "email": "E-mail",
       "phone": "Telefoonnummer",
-      "city": "Gemeente",
+      "city": "Woonplaats",
       "cv": "CV (PDF)",
       "linkedin": "LinkedIn-profiel",
       "cvInstruction": "Voeg minstens een PDF-cv (maximaal {max} MB) of je LinkedIn-profiel toe. Beide mag ook.",

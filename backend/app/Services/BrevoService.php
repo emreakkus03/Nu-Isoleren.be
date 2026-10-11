@@ -23,6 +23,7 @@ class BrevoService
         ?string $textContent = null,
         ?array $replyTo = null,
         array $tags = [],
+        array $attachments = [],
     ): void {
         if (app()->environment('local')) {
             $this->sendWithLaravelMail(
@@ -30,6 +31,7 @@ class BrevoService
                 subject: $subject,
                 htmlContent: $htmlContent,
                 replyTo: $replyTo,
+                attachments: $attachments,
             );
 
             return;
@@ -46,6 +48,7 @@ class BrevoService
             textContent: $textContent,
             replyTo: $replyTo,
             tags: $tags,
+            attachments: $attachments,
         );
     }
 
@@ -54,13 +57,15 @@ class BrevoService
         string $subject,
         string $htmlContent,
         ?array $replyTo = null,
+        array $attachments = [],
     ): void {
         Mail::html(
             $htmlContent,
             function ($message) use (
                 $to,
                 $subject,
-                $replyTo
+                $replyTo,
+                $attachments
             ) {
                 $message
                     ->to(
@@ -68,6 +73,14 @@ class BrevoService
                         $to['name'] ?? null
                     )
                     ->subject($subject);
+
+                foreach ($attachments as $attachment) {
+                    $content = base64_decode($attachment['content'], true);
+                    if ($content === false) {
+                        throw new RuntimeException('Invalid email attachment encoding');
+                    }
+                    $message->attachData($content, $attachment['name']);
+                }
 
                 if ($replyTo) {
                     $message->replyTo(
@@ -86,6 +99,7 @@ class BrevoService
         ?string $textContent = null,
         ?array $replyTo = null,
         array $tags = [],
+        array $attachments = [],
     ): void {
         $payload = [
             'sender' => [
@@ -119,6 +133,10 @@ class BrevoService
             $payload['tags'] = $tags;
         }
 
+        if ($attachments !== []) {
+            $payload['attachment'] = $attachments;
+        }
+
         $response = Http::acceptJson()
             ->withHeaders([
                 'api-key' => config('services.brevo.api_key'),
@@ -129,7 +147,7 @@ class BrevoService
 
         if ($response->failed()) {
             throw new RuntimeException(
-                'Brevo email failed: ' . $response->body()
+                'Brevo email failed: '.$response->body()
             );
         }
     }

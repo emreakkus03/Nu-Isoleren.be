@@ -2,11 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Mail\ApplicationConfirmation;
-use App\Mail\RecruitmentApplication;
 use App\Models\JobApplication;
 use App\Models\Vacancy;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Queue;
@@ -17,6 +16,10 @@ class RecruitmentCorsTest extends TestCase
 {
     use DatabaseMigrations;
 
+    private const BREVO_URL = 'https://api.brevo.com/v3/smtp/email';
+
+    private array $brevoStatuses = [201];
+
     private const ORIGIN = 'https://www.nu-isoleren.be';
 
     protected function setUp(): void
@@ -24,6 +27,15 @@ class RecruitmentCorsTest extends TestCase
         parent::setUp();
         config(['services.turnstile.enabled' => false, 'recruitment.to' => 'recruitment@example.test', 'mail.default' => 'smtp']);
         Mail::fake();
+        config([
+            'services.brevo.enabled' => true, 'services.brevo.api_key' => 'fake-brevo-key',
+            'services.brevo.sender.email' => 'verified@example.test', 'services.brevo.sender.name' => 'Verified sender',
+        ]);
+        Http::fake([self::BREVO_URL => function () {
+            $status = count($this->brevoStatuses) > 1 ? array_shift($this->brevoStatuses) : $this->brevoStatuses[0];
+
+            return Http::response(['messageId' => 'fake-message'], $status);
+        }]);
         Queue::fake();
         Http::preventStrayRequests();
     }
@@ -83,7 +95,7 @@ class RecruitmentCorsTest extends TestCase
         $this->postJson($path, [], ['Origin' => self::ORIGIN])->assertUnprocessable()
             ->assertHeader('Access-Control-Allow-Origin', self::ORIGIN);
         $this->assertDatabaseCount('job_applications', 0);
-        Mail::assertNothingSent();
+        Http::assertNotSent(fn (Request $request): bool => $request->url() === self::BREVO_URL);
         Queue::assertNothingPushed();
     }
 
@@ -94,26 +106,26 @@ class RecruitmentCorsTest extends TestCase
         $vacancy = Vacancy::factory()->create(['status' => 'closed']);
         $this->postJson("/api/vacancies/{$vacancy->id}/applications", $this->payload(), ['Origin' => self::ORIGIN])
             ->assertUnprocessable()->assertHeader('Access-Control-Allow-Origin', self::ORIGIN);
-        Mail::assertNothingSent();
+        Http::assertNotSent(fn (Request $request): bool => $request->url() === self::BREVO_URL);
     }
 
     public function test_turnstile_failure_has_cors_headers_and_no_application_or_mail(): void
     {
         config(['services.turnstile.enabled' => true, 'services.turnstile.secret' => 'fake-test-secret']);
-        Http::fake(['*' => Http::response(['success' => false])]);
+        Http::fake([config('services.turnstile.verify_url') => Http::response(['success' => false])]);
         $vacancy = Vacancy::factory()->create();
         Queue::fake();
         $this->postJson("/api/vacancies/{$vacancy->id}/applications", $this->payload(['turnstile_token' => 'fake-token']), ['Origin' => self::ORIGIN])
             ->assertUnprocessable()->assertHeader('Access-Control-Allow-Origin', self::ORIGIN);
         $this->assertDatabaseCount('job_applications', 0);
-        Mail::assertNothingSent();
+        Http::assertNotSent(fn (Request $request): bool => $request->url() === self::BREVO_URL);
         Queue::assertNothingPushed();
     }
 
     public function test_multipart_submission_with_turnstile_answers_and_mail_is_successful_cross_origin(): void
     {
         config(['services.turnstile.enabled' => true, 'services.turnstile.secret' => 'fake-test-secret']);
-        Http::fake(['*' => Http::response(['success' => true])]);
+        Http::fake([config('services.turnstile.verify_url') => Http::response(['success' => true])]);
         $vacancy = Vacancy::factory()->create();
         $question = $vacancy->questions()->create([
             'type' => 'yes_no', 'question' => ['nl' => 'Ervaring?'], 'required' => true,
@@ -127,14 +139,14 @@ class RecruitmentCorsTest extends TestCase
         $this->assertTrue($application->answers->sole()->value);
         $this->assertNotNull($application->privacy_accepted_at);
         $this->assertSame('sent', $application->internal_mail_status);
-        Mail::assertSent(RecruitmentApplication::class);
-        Mail::assertSent(ApplicationConfirmation::class);
-        Http::assertSent(fn ($request): bool => $request['response'] === 'fake-token' && $request['secret'] === 'fake-test-secret');
+        Http::assertSent(fn (Request $request): bool => $request->url() === self::BREVO_URL && $request['to'][0]['email'] === 'recruitment@example.test');
+        Http::assertSent(fn (Request $request): bool => $request->url() === self::BREVO_URL && $request['to'][0]['email'] === 'ada@example.test');
+        Http::assertSent(fn ($request): bool => $request->url() === config('services.turnstile.verify_url') && $request['response'] === 'fake-token' && $request['secret'] === 'fake-test-secret');
     }
 
     public function test_mail_failure_response_has_cors_headers_and_preserves_application(): void
     {
-        Mail::shouldReceive('to')->once()->andThrow(new \RuntimeException('Test delivery failure'));
+        $this->brevoStatuses = [503];
         $vacancy = Vacancy::factory()->create();
         $this->postJson("/api/vacancies/{$vacancy->id}/applications", $this->payload(), ['Origin' => self::ORIGIN])
             ->assertStatus(503)->assertJsonPath('recorded', true)->assertHeader('Access-Control-Allow-Origin', self::ORIGIN);

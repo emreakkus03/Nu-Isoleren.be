@@ -7,19 +7,31 @@ use App\Mail\RecruitmentApplication;
 use App\Models\JobApplication;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 use RuntimeException;
 use Throwable;
 
 class RecruitmentMailService
 {
+    public function __construct(private readonly BrevoService $brevo) {}
+
     public function send(JobApplication $application, ?UploadedFile $cv): bool
     {
         try {
-            if (! filter_var(config('recruitment.to'), FILTER_VALIDATE_EMAIL) || ! $this->delivers((string) config('mail.default'))) {
+            if (! filter_var(config('recruitment.to'), FILTER_VALIDATE_EMAIL)
+                || ! $this->brevo->enabled()
+                || ! filter_var(config('services.brevo.sender.email'), FILTER_VALIDATE_EMAIL)) {
                 throw new RuntimeException('Recruitment mail configuration unavailable');
             }
-            Mail::to(config('recruitment.to'), config('recruitment.to_name'))->send(new RecruitmentApplication($application->load(['answers', 'vacancy']), $cv));
+            $application->load(['answers', 'vacancy']);
+            $mail = new RecruitmentApplication($application);
+            $attachments = $cv ? [['name' => 'cv.pdf', 'content' => base64_encode($cv->get())]] : [];
+            $this->brevo->send(
+                to: ['email' => config('recruitment.to'), 'name' => config('recruitment.to_name')],
+                subject: $mail->envelope()->subject,
+                htmlContent: $mail->render(),
+                replyTo: ['email' => $application->email, 'name' => trim($application->first_name.' '.$application->last_name)],
+                attachments: $attachments,
+            );
             $application->update(['internal_mail_status' => 'sent']);
         } catch (Throwable) {
             $application->update(['internal_mail_status' => 'failed']);
@@ -28,7 +40,12 @@ class RecruitmentMailService
             return false;
         }
         try {
-            Mail::to($application->email)->send(new ApplicationConfirmation($application));
+            $mail = new ApplicationConfirmation($application);
+            $this->brevo->send(
+                to: ['email' => $application->email, 'name' => trim($application->first_name.' '.$application->last_name)],
+                subject: $mail->envelope()->subject,
+                htmlContent: $mail->render(),
+            );
             $application->update(['confirmation_mail_status' => 'sent']);
         } catch (Throwable) {
             $application->update(['confirmation_mail_status' => 'failed']);
@@ -36,19 +53,5 @@ class RecruitmentMailService
         }
 
         return true;
-    }
-
-    private function delivers(string $name, array $seen = []): bool
-    {
-        if (in_array($name, $seen, true)) {
-            return false;
-        }
-        $config = config("mail.mailers.$name", []);
-        $transport = $config['transport'] ?? '';
-        if (in_array($transport, ['failover', 'roundrobin'], true)) {
-            return ! empty($config['mailers']) && collect($config['mailers'])->every(fn (string $mailer): bool => $this->delivers($mailer, [...$seen, $name]));
-        }
-
-        return in_array($transport, ['smtp', 'sendmail', 'ses', 'ses-v2', 'postmark', 'resend'], true);
     }
 }
