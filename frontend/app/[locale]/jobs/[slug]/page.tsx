@@ -54,7 +54,6 @@ export default async function VacancyPage({ params, searchParams }: Props) {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <section className="mx-auto max-w-3xl py-10 sm:py-14">
         <RichTextContent html={vacancy.content} />
-        {canApply && <div className="mt-8 border-t border-slate-100 pt-7 max-md:text-center"><a href="#application" className={applyClass}>{t('apply')}<span aria-hidden="true">→</span></a></div>}
       </section>
       {canApply && <ApplicationForm vacancy={vacancy} source={recruitmentSource(await searchParams)} />}
       <div className="mx-auto mt-10 max-w-3xl max-md:text-center"><Link href="/jobs" className="inline-flex min-h-11 items-center gap-2 font-bold text-[#1A669A] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A669A]"><span aria-hidden="true">←</span>{t('back')}</Link></div>

@@ -184,7 +184,7 @@ export default function Turnstile({
       {failed && ready && (
         <button
           type="button"
-          className="mt-2 text-sm font-semibold text-[#1A669A] underline"
+          className="mt-2 cursor-pointer text-sm font-semibold text-[#1A669A] underline disabled:cursor-not-allowed"
           onClick={() => {
             onToken(null);
             setFailed(false);

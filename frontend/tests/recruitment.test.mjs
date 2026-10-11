@@ -76,14 +76,24 @@ test('final step sends multipart, preserves locale/source and gates on Turnstile
   const old = global.fetch; const sent = [];
   global.fetch = async (url, options) => { sent.push([url, options]); return { ok: true, json: async () => ({ success: true }) }; };
   try {
-    const h = harness({ ...base, require_cv_or_linkedin: false }, true); h.render();
+    const h = harness(base, true); h.render();
     assert.equal(h.find(n => n.props?.type === 'submit').props.disabled, true);
+    const values = ['Ada', 'Test', 'ada@example.test', '123', 'Teststad'];
+    values.forEach((value, index) => {
+      h.all(n => n.type === 'input' && n.props.autoComplete)[index].props.onChange({ target: { value } });
+      h.render();
+    });
+    h.find(n => n.type === 'input' && n.props.type === 'url').props.onChange({ target: { value: 'https://www.linkedin.com/in/test' } });
+    h.render();
     h.find(n => n.type === 'input' && n.props.type === 'checkbox').props.onChange({ target: { checked: true } });
     h.find(n => n.type === 'turnstile').props.onToken('test-token'); h.render();
     await h.submit();
     assert.equal(sent.length, 1); const body = sent[0][1].body;
     assert.ok(body instanceof FormData); assert.equal(body.get('locale'), 'fr'); assert.equal(body.get('utm_source'), 'facebook');
     assert.equal(body.get('turnstile_token'), 'test-token'); assert.equal(body.get('answers'), '{}');
+    assert.equal(body.get('first_name'), 'Ada'); assert.equal(body.get('email'), 'ada@example.test');
+    assert.equal(body.get('linkedin_url'), 'https://www.linkedin.com/in/test');
+    assert.equal(body.get('privacy_accepted'), '1');
     assert.ok(h.find(n => n.props?.role === 'status'));
     assert.ok(h.find(n => n.props?.href === '/jobs' && n.props.children === 'otherJobs'));
     assert.ok(h.find(n => n.type === 'h2' && n.props.children === 'successTitle'));
@@ -128,7 +138,9 @@ test('localized pages render, closed job hides form, shared rich text preserves 
     const list = load('app/[locale]/jobs/page.tsx', mocks);
     assert.ok(nodes(await list.default(props)).some(n => n.type === 'h1'));
     const detail = load('app/[locale]/jobs/[slug]/page.tsx', mocks);
-    assert.ok(nodes(await detail.default(props)).some(n => n.type === 'application'));
+    const openDetail = nodes(await detail.default(props));
+    assert.ok(openDetail.some(n => n.type === 'application'));
+    assert.equal(openDetail.filter(n => n.props?.href === '#application').length, 1);
     open = false;
     assert.equal(nodes(await detail.default(props)).some(n => n.type === 'application'), false);
     assert.equal((await detail.generateMetadata(props))[3].indexable, false);
