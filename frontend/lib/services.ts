@@ -1,3 +1,4 @@
+import { localizeCmsRichText } from './cms-rich-text';
 import { contentRequest } from './content-api';
 import { ServiceItem } from '@/types/service';
 
@@ -19,7 +20,7 @@ export async function getServices(
     }
 
     const json = await res.json();
-    return json.data || [];
+    return localizeCmsRichText(json.data || [], locale);
 
 }
 
@@ -40,6 +41,6 @@ export async function getServiceBySlug(
 
     const json = await res.json();
 
-    return json.data || null;
+    return localizeCmsRichText(json.data || null, locale);
 
 }

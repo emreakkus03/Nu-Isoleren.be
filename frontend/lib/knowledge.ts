@@ -1,3 +1,4 @@
+import { localizeCmsRichText } from './cms-rich-text';
 import { contentRequest } from './content-api';
 import {
   KnowledgeArticlesResponse,
@@ -20,7 +21,7 @@ export async function getKnowledgeCategories(
 
     const json = await res.json();
 
-    return json.data || [];
+    return localizeCmsRichText(json.data || [], locale);
 
 }
 
@@ -57,7 +58,7 @@ export async function getKnowledgeArticles(
       return emptyKnowledgeResponse();
     }
 
-    return await res.json();
+    return localizeCmsRichText(await res.json(), locale);
 
 }
 
@@ -86,6 +87,6 @@ export async function getKnowledgeArticleBySlug(
       return null;
     }
 
-    return await res.json();
+    return localizeCmsRichText(await res.json(), locale);
 
 }

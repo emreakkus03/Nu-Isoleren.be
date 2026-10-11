@@ -1,3 +1,4 @@
+import { localizeCmsRichText } from './cms-rich-text';
 import { contentRequest } from './content-api';
 import { Project, PaginatedProjects, ProjectFiltersData } from '@/types/project';
 
@@ -12,7 +13,7 @@ export async function getFeaturedProjects(
 
     if (!res.ok) return [];
 
-    return await res.json();
+    return localizeCmsRichText(await res.json(), locale);
 
 }
 
@@ -27,7 +28,7 @@ export async function getRecentProjects(
 
     if (!res.ok) return [];
 
-    return await res.json();
+    return localizeCmsRichText(await res.json(), locale);
 
 }
 
@@ -64,7 +65,7 @@ export async function getAllProjects(
       };
     }
 
-    return await res.json();
+    return localizeCmsRichText(await res.json(), locale);
 
 }
 
@@ -83,7 +84,7 @@ export async function getProjectFilters(
       };
     }
 
-    return await res.json();
+    return localizeCmsRichText(await res.json(), locale);
 
 }
 
@@ -98,6 +99,6 @@ export async function getProjectBySlug(
 
     if (!res.ok) return null;
 
-    return await res.json();
+    return localizeCmsRichText(await res.json(), locale);
 
 }

@@ -1,3 +1,4 @@
+import { localizeCmsRichText } from './cms-rich-text';
 import { getLocale } from 'next-intl/server';
 import { contentRequest } from './content-api';
 import { CitiesResponse, City } from '@/types/city';
@@ -19,7 +20,7 @@ export async function getCities(
       };
     }
 
-    return await res.json();
+    return localizeCmsRichText(await res.json(), locale);
 
 }
 
@@ -38,6 +39,6 @@ export async function getCityBySlug(
       return null;
     }
 
-    return await res.json();
+    return localizeCmsRichText(await res.json(), locale);
 
 }

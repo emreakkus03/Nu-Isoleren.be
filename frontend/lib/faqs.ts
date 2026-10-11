@@ -1,3 +1,4 @@
+import { localizeCmsRichText } from './cms-rich-text';
 import { contentRequest } from './content-api';
 import { FaqItem } from '@/types/faq';
 
@@ -41,6 +42,6 @@ export async function getFaqs(
 
     const json = await res.json();
 
-    return Array.isArray(json) ? json : json.data || [];
+    return localizeCmsRichText(Array.isArray(json) ? json : json.data || [], locale);
 
 }

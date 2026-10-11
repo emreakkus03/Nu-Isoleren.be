@@ -1,3 +1,4 @@
+import { localizeCmsRichText } from './cms-rich-text';
 import 'server-only';
 import { cache } from 'react';
 import { contentRequest } from '@/lib/content-api';
@@ -6,10 +7,10 @@ import type { Vacancy } from '@/types/vacancy';
 export const getVacancies = cache(async (locale: string): Promise<Vacancy[]> => {
   const response = await contentRequest(`/vacancies?locale=${encodeURIComponent(locale)}`, ['vacancies']);
   const result = await response.json();
-  return (result.data as Vacancy[]).filter(vacancyOpen);
+  return localizeCmsRichText((result.data as Vacancy[]).filter(vacancyOpen), locale);
 });
 export const getVacancy = cache(async (locale: string, slug: string): Promise<Vacancy | null> => {
   const response = await contentRequest(`/vacancies/${encodeURIComponent(slug)}?locale=${encodeURIComponent(locale)}`, ['vacancies'], true);
   if (response.status === 404) return null;
-  return (await response.json()).data;
+  return localizeCmsRichText((await response.json()).data, locale);
 });

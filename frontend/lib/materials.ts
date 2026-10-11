@@ -1,3 +1,4 @@
+import { localizeCmsRichText } from './cms-rich-text';
 import { contentRequest } from './content-api';
 import {
   Material,
@@ -24,7 +25,7 @@ export async function getMaterials(
   const result =
     (await response.json()) as MaterialsResponse;
 
-  return result.data;
+  return localizeCmsRichText(result.data, locale);
 }
 
 export async function getMaterial(
@@ -52,5 +53,5 @@ export async function getMaterial(
     (await response.json()) as MaterialResponse;
 
 
-  return result.data;
+  return localizeCmsRichText(result.data, locale);
 }

@@ -184,6 +184,7 @@ test('open vacancy count excludes drafts, closed, expired and unpublished record
   const entries = [base, { ...base, status: 'draft' }, { ...base, is_open: false }, { ...base, valid_through: '2000-01-01' }, { ...base, published_at: null }, { ...base, published_at: '2999-01-01' }];
   const { getVacancies } = load('lib/vacancies.ts', {
     'server-only': {}, react: { cache: fn => fn }, '@/lib/recruitment': helpers,
+    './cms-rich-text': { localizeCmsRichText: async value => value },
     '@/lib/content-api': { contentRequest: async (path, tags) => { assert.match(path, /locale=(nl|fr|en)$/); assert.deepEqual(tags, ['vacancies']); return { json: async () => ({ data: entries }) }; } },
   });
   for (const locale of ['nl', 'fr', 'en']) assert.deepEqual(await getVacancies(locale), [base]);

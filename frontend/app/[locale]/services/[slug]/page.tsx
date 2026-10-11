@@ -1,3 +1,4 @@
+import { normalizeRichTextHtml as localizeRichTextHtml } from '@/lib/rich-text-links';
 import type { Locale, RouteKey } from '@/lib/seo/urls';
 import JsonLd from '@/components/seo/JsonLd';
 import { serviceSchema } from '@/lib/seo/schema';
@@ -357,28 +358,6 @@ const localizeHref = (
   return `/${locale}${pathname}${suffix}`;
 };
 
-const localizeRichTextHtml = (
-  html: string,
-  locale: string,
-) => {
-  if (!html) {
-    return '';
-  }
-
-  return html.replace(
-    /href=(["'])(.*?)\1/gi,
-    (
-      fullMatch,
-      quote: string,
-      href: string,
-    ) => {
-      const localizedHref =
-        localizeHref(href, locale);
-
-      return `href=${quote}${localizedHref}${quote}`;
-    },
-  );
-};
 
 const getContentWidthClass = (
   width?: 'normal' | 'wide' | 'full',
