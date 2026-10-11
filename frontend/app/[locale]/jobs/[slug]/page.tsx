@@ -26,23 +26,38 @@ export default async function VacancyPage({ params, searchParams }: Props) {
   const t = await getTranslations({ locale, namespace: 'Jobs' });
   const crumbs = await getTranslations({ locale, namespace: 'Breadcrumbs' });
   const open = vacancyOpen(vacancy);
-  return <main className="page-header-start pb-16 sm:pb-24">
+  const canApply = open && vacancy.application_available;
+  const applyClass = 'inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-[#C82024] px-7 py-3.5 text-center text-base font-bold text-white shadow-md transition hover:bg-red-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A669A]';
+  return <div className="bg-white pb-16 sm:pb-24">
     <JsonLd data={await jobSchema(vacancy, locale)} />
     <VacancyAlternateLinks slugs={vacancy.alternate_slugs} />
+    <section className="page-header-start border-b border-slate-100 bg-gradient-to-b from-slate-50 to-white pb-10 md:pb-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs items={[{ label: crumbs('home'), href: '/' }, { label: t('title'), href: '/jobs' }, { label: vacancy.title }]} />
+        <div className={`grid items-center gap-8 lg:gap-12 ${vacancy.image ? 'lg:grid-cols-2' : ''}`}>
+          <header className="min-w-0 max-w-3xl max-md:text-center">
+            <p className="text-sm font-extrabold uppercase tracking-wider text-[#1A669A] [overflow-wrap:anywhere] md:text-base">{vacancy.region}</p>
+            <h1 className="mt-3 text-3xl font-extrabold leading-[1.1] tracking-tight text-gray-950 [overflow-wrap:anywhere] max-md:text-balance sm:text-4xl md:text-5xl">{vacancy.title}</h1>
+            <p className="mt-5 text-sm leading-relaxed text-gray-600 [overflow-wrap:anywhere] sm:text-base md:text-lg">{vacancy.short_description}</p>
+            <p className="mt-5 inline-flex rounded-full bg-[#1A669A]/10 px-4 py-2 text-sm font-bold text-[#1A669A]">{t(`employment.${vacancy.employment_type}`)}</p>
+            <p className="mt-4 text-sm text-slate-500 [overflow-wrap:anywhere]">{[vacancy.location_city, vacancy.location_region, vacancy.location_country].filter(Boolean).join(', ')}</p>
+            {vacancy.published_at && <p className="mt-2 text-sm text-slate-500">{t('published')} <time dateTime={vacancy.published_at}>{new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'Europe/Brussels' }).format(new Date(vacancy.published_at))}</time></p>}
+            {canApply ? <a href="#application" className={`mt-7 ${applyClass}`}>{t('apply')}<span aria-hidden="true">→</span></a> : <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+              <p className="font-bold text-slate-900">{t(open ? 'unavailable' : 'closed')}</p>
+              <Link href="/jobs" className="mt-3 inline-flex min-h-11 items-center font-bold text-[#1A669A] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-[#1A669A]">{t('otherJobs')}</Link>
+            </div>}
+          </header>
+          {vacancy.image && <div className="relative aspect-[4/3] min-w-0 overflow-hidden rounded-2xl bg-slate-100 shadow-sm"><Image src={vacancy.image} alt={vacancy.title} fill sizes="(max-width: 1023px) calc(100vw - 48px), 584px" className="object-cover" /></div>}
+        </div>
+      </div>
+    </section>
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: crumbs('home'), href: '/' }, { label: t('title'), href: '/jobs' }, { label: vacancy.title }]} />
-      <header className="max-w-3xl max-md:text-center">
-        <p className="font-bold text-[#1A669A]">{vacancy.region} · {t(`employment.${vacancy.employment_type}`)}</p>
-        <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 [overflow-wrap:anywhere] sm:text-4xl">{vacancy.title}</h1>
-        <p className="mt-5 text-base leading-8 text-slate-600">{vacancy.short_description}</p>
-        <p className="mt-3 text-sm text-slate-500">{[vacancy.location_city, vacancy.location_region, vacancy.location_country].filter(Boolean).join(', ')}</p>
-        {vacancy.published_at && <p className="mt-2 text-sm text-slate-500">{t('published')} <time dateTime={vacancy.published_at}>{new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'Europe/Brussels' }).format(new Date(vacancy.published_at))}</time></p>}
-        {open && vacancy.application_available ? <a href="#application" className="mt-6 inline-flex rounded-lg bg-[#C82024] px-6 py-3 font-bold text-white">{t('apply')}</a> : <p className="mt-6 font-bold text-[#C82024]">{t(open ? 'unavailable' : 'closed')}</p>}
-      </header>
-      {vacancy.image && <div className="relative mt-10 aspect-[16/7] overflow-hidden rounded-2xl"><Image src={vacancy.image} alt={vacancy.title} fill sizes="(max-width: 1280px) 100vw, 1216px" className="object-cover" /></div>}
-      <section className="max-w-3xl py-10 sm:py-14"><RichTextContent html={vacancy.content} /></section>
-      {open && vacancy.application_available && <ApplicationForm vacancy={vacancy} source={recruitmentSource(await searchParams)} />}
-      <Link href="/jobs" className="mt-10 inline-block font-bold text-[#1A669A] underline">{t('back')}</Link>
+      <section className="mx-auto max-w-3xl py-10 sm:py-14">
+        <RichTextContent html={vacancy.content} />
+        {canApply && <div className="mt-8 border-t border-slate-100 pt-7 max-md:text-center"><a href="#application" className={applyClass}>{t('apply')}<span aria-hidden="true">→</span></a></div>}
+      </section>
+      {canApply && <ApplicationForm vacancy={vacancy} source={recruitmentSource(await searchParams)} />}
+      <div className="mx-auto mt-10 max-w-3xl max-md:text-center"><Link href="/jobs" className="inline-flex min-h-11 items-center gap-2 font-bold text-[#1A669A] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A669A]"><span aria-hidden="true">←</span>{t('back')}</Link></div>
     </div>
-  </main>;
+  </div>;
 }

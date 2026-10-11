@@ -5,13 +5,15 @@ import { Link, usePathname } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import Image from 'next/image';
+import VacancyBadge from '@/components/jobs/VacancyBadge';
 
-export default function MobileMenu() {
+export default function MobileMenu({ vacancyCount = 0 }: { vacancyCount?: number }) {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('Header');
   const tFloating = useTranslations('Floating');
 
   const pathname = usePathname();
+  const jobs = useTranslations('Jobs');
 
   const isActive = (href: string) => {
     if (href === '/') {
@@ -52,8 +54,9 @@ export default function MobileMenu() {
     <>
       <button 
         onClick={() => setIsOpen(true)}
-        className="p-2 -ml-2 text-gray-900 focus:outline-none"
-        aria-label="Open menu"
+        className="p-2 -ml-2 text-gray-900 focus-visible:outline-2 focus-visible:outline-[#1A669A]"
+        aria-label={t('menuOpen')}
+        aria-expanded={isOpen}
       >
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16" />
@@ -63,7 +66,7 @@ export default function MobileMenu() {
       {isOpen && (
         <div className="fixed inset-0 bg-white z-[100] flex flex-col overflow-y-auto">
           <div className="flex justify-end p-6">
-            <button onClick={closeMenu} className="p-2 text-gray-500 hover:text-red-600">
+            <button aria-label={t('menuClose')} onClick={closeMenu} className="p-2 text-gray-500 hover:text-red-600">
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -118,6 +121,9 @@ export default function MobileMenu() {
               >
                 <span>{t('mainbar.knowledgeBase')}</span>
                 {isActive('/knowledge') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+              </Link>
+              <Link href="/jobs" onClick={closeMenu} aria-current={isActive('/jobs') ? 'page' : undefined} className={`min-h-11 gap-3 focus-visible:outline-2 focus-visible:outline-[#1A669A] ${getMainLinkClasses('/jobs')}`}>
+                <span>{jobs('title')}</span><VacancyBadge count={vacancyCount} />
               </Link>
             </nav>
 

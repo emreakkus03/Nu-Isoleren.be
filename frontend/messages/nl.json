@@ -71,6 +71,8 @@
     "knowledge": "Kennisbank"
   },
   "Header": {
+    "menuOpen": "Menu openen",
+    "menuClose": "Menu sluiten",
     "reviews": "Uitstekend",
     "topbar": {
       "serviceAreas": "Werkgebieden",
@@ -2132,6 +2134,18 @@
           "text": "Het contactformulier vraagt uw voornaam, achternaam, e-mailadres, een optioneel telefoonnummer en uw bericht. Bij een offerte vragen we daarnaast een telefoonnummer, straat, huisnummer, postcode, gemeente en de gewenste diensten; een toelichting is optioneel. Beide formulieren registreren de taal en het tijdstip waarop u het privacyvakje aanvinkt. Bij contact wordt ook de herkomst “contact_page” opgeslagen.\nAanvragen worden in onze backenddatabase bewaard met aanmaak-/wijzigingsdatums en een behandelstatus. Offertes krijgen een referentienummer en een koppeling met de gekozen diensten. Contactaanvragen kunnen interne opvolgnotities bevatten. De formulieren bieden geen bestandsupload. Zonder de vereiste velden kunnen we het formulier niet verwerken."
         },
         {
+          "title": "Sollicitaties en kandidaatstellingen",
+          "text": "Wanneer u solliciteert, verwerken we uw voornaam, achternaam, e-mailadres, telefoonnummer, gemeente of woonplaats, de vacature waarop u reageert en uw antwoorden op de sollicitatievragen. Als u deze verstrekt, verwerken we ook uw LinkedIn-profiel-URL en PDF-cv. Daarnaast registreren we de taal, de datum van kandidaatstelling, uw privacybevestiging en eventuele campagne- en broninformatie, zoals UTM-parameters. Voor de opvolging kunnen een interne status en interne notities worden bijgehouden.\nWe gebruiken deze gegevens om uw kandidaatstelling en geschiktheid voor de functie of samenwerking te beoordelen, u te contacteren, het sollicitatieproces op te volgen en kennismakingsgesprekken of andere afspraken te organiseren. De sollicitatie wordt in onze backenddatabase geregistreerd en per e-mail naar de geconfigureerde recruitmentmailbox gestuurd. Bij succesvolle interne verzending wordt ook een bevestigingsmail naar u gestuurd. Sollicitatiegegevens schrijven u niet automatisch in voor nieuwsbrieven of andere marketing. Het privacyvakje verandert uw afzonderlijke cookie- of marketingvoorkeuren niet."
+        },
+        {
+          "title": "Uw CV en de recruitmentmailbox",
+          "text": "Een meegestuurd PDF-cv wordt als tijdelijk uploadbestand verwerkt om de recruitmentmail met bijlage te verzenden. Het CV wordt niet permanent als bestand opgeslagen in de applicatiestorage of VPS-opslag van Nu-Isoleren. De database bevat geen CV-bestandsinhoud, geen permanent CV-pad en geen oorspronkelijke bestandsnaam; er wordt wel bijgehouden of een CV werd meegestuurd.\nOmdat het CV als e-mailbijlage wordt verzonden, kan het wel in de recruitmentmailbox en de gebruikte e-mailomgeving aanwezig blijven, overeenkomstig het beheer en de toepasselijke bewaartermijnen van die mailbox. Dat is iets anders dan permanente opslag in onze webapplicatie."
+        },
+        {
+          "title": "Bewaren van kandidaatstellingen",
+          "text": "Kandidaatgegevens worden niet langer bewaard dan noodzakelijk voor de behandeling en opvolging van de kandidaatstelling. Dit geldt voor de sollicitatierecords, antwoorden en interne opvolgingsgegevens, en moet ook worden toegepast op recruitmentmails en CV-bijlagen in de mailbox. De bewaartermijnen voor contact- en offerteaanvragen of boekhoudkundige documenten worden niet automatisch op sollicitaties toegepast. Voor vragen over uw gegevens of een verzoek tot inzage, correctie of verwijdering kunt u de contactgegevens en rechten hieronder gebruiken."
+        },
+        {
           "title": "Doeleinden en rechtsgronden",
           "text": "We gebruiken uw aanvraag om uw vraag te beantwoorden, contact op te nemen, de gevraagde werkzaamheden te beoordelen en een offerte voor te bereiden. Voor een offerte of een vraag met het oog op een overeenkomst gaat het om stappen op uw verzoek vóór het sluiten van een overeenkomst. De grondslag voor overige vragen en technische logverwerking moet nog afzonderlijk worden vastgelegd; we nemen geen algemene toestemming voor alle verwerkingen aan.\nHet verplichte privacyvakje registreert uw bevestiging bij het formulier en geeft geen toestemming voor advertenties of een nieuwsbrief. Optionele marketingtechnologie gebruikt een afzonderlijke cookievoorkeur. Voor verwerking op basis van toestemming kunt u die toestemming intrekken."
         },
@@ -2233,12 +2247,12 @@
   },
   "Jobs": {
     "title": "Vacatures",
-    "intro": "Ontdek onze openstaande vacatures en mogelijkheden om samen te werken met Nu-Isoleren. Bekijk de functie, de regio en de gewenste ervaring en stel je kandidaat.",
-    "empty": "Er zijn momenteel geen openstaande vacatures.",
+    "intro": "Bekijk onze openstaande vacatures en ontdek waar jouw ervaring en ambitie binnen Nu-Isoleren het verschil kunnen maken.",
+    "empty": "Momenteel hebben we geen openstaande vacatures.",
     "view": "Bekijk vacature",
     "apply": "Solliciteer",
     "back": "Terug naar vacatures",
-    "closed": "Deze vacature is gesloten.",
+    "closed": "Deze vacature is niet langer beschikbaar.",
     "unavailable": "Solliciteren in deze taal is momenteel niet beschikbaar.",
     "published": "Gepubliceerd op",
     "employment": {
@@ -2267,8 +2281,8 @@
       "linkedin": "LinkedIn-profiel",
       "cvInstruction": "Voeg minstens een PDF-cv (maximaal {max} MB) of je LinkedIn-profiel toe. Beide mag ook.",
       "cvOptional": "Je mag een PDF-cv (maximaal {max} MB) en/of LinkedIn-profiel toevoegen.",
-      "cvPrivacy": "Je CV wordt alleen als e-mailbijlage voor je kandidaatstelling gebruikt en niet permanent in onze websiteopslag bewaard.",
-      "privacy": "Ik ga akkoord dat Nu-Isoleren mijn gegevens gebruikt om mijn kandidaatstelling te behandelen en contact met mij op te nemen.",
+      "cvPrivacy": "Je PDF-cv wordt tijdelijk verwerkt en als bijlage naar onze recruitmentmailbox gestuurd. Het wordt niet permanent in onze applicatiestorage opgeslagen, maar kan wel in de e-mailomgeving bewaard blijven.",
+      "privacy": "Ik heb de <policy>privacyverklaring</policy> gelezen en begrijp dat Nu-Isoleren mijn gegevens verwerkt om mijn kandidaatstelling te behandelen en contact met mij op te nemen.",
       "privacyLink": "Privacyverklaring",
       "previous": "Vorige",
       "next": "Volgende",
@@ -2281,11 +2295,22 @@
       "checkRequired": "Bevestig je privacykeuze en rond de beveiligingscontrole af.",
       "validationError": "Controleer je antwoorden en gegevens en rond de beveiligingscontrole opnieuw af. De vacature of vragen kunnen ondertussen gewijzigd zijn.",
       "submitError": "We konden de ontvangst niet bevestigen. Probeer opnieuw of neem contact op met Nu-Isoleren.",
-      "successTitle": "Bedankt voor je interesse",
-      "success": "We hebben je sollicitatie ontvangen. We bekijken je ervaring en nemen contact met je op over de mogelijke samenwerking.",
+      "successTitle": "Bedankt voor je sollicitatie",
+      "success": "We hebben je gegevens goed ontvangen. We bekijken je profiel en nemen contact met je op als er een mogelijke match is.",
       "mailFailedTitle": "Gegevens ontvangen, mail niet verstuurd",
       "mailFailed": "Je gegevens zijn geregistreerd, maar de recruitmentmail kon niet worden verstuurd. Een eventueel CV is niet bewaard. Neem contact op met Nu-Isoleren en vermeld deze melding. Verstuur niet opnieuw dezelfde sollicitatie.",
-      "contact": "Neem contact op"
-    }
+      "contact": "Neem contact op",
+      "profile": "CV of LinkedIn",
+      "or": "Of",
+      "privacyTitle": "Privacy",
+      "otherJobs": "Bekijk andere vacatures"
+    },
+    "heroTitle": "Werken bij Nu-Isoleren",
+    "metaTitle": "Vacatures bij Nu-Isoleren | Bekijk onze openstaande jobs",
+    "metaDescription": "Bekijk de openstaande vacatures bij Nu-Isoleren en ontdek onze mogelijkheden in sales, techniek en isolatie. Solliciteer eenvoudig online.",
+    "count": "{count, plural, one {# openstaande vacature} other {# openstaande vacatures}}",
+    "emptyDescription": "Hou onze vacaturepagina in de gaten voor nieuwe mogelijkheden bij Nu-Isoleren.",
+    "about": "Over Nu-Isoleren",
+    "otherJobs": "Bekijk andere vacatures"
   }
 }

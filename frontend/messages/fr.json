@@ -70,6 +70,8 @@
     "knowledge": "Base de connaissances"
   },
   "Header": {
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
     "reviews": "Excellent",
     "topbar": {
       "serviceAreas": "Zones d'intervention",
@@ -2150,6 +2152,18 @@
           "text": "Le formulaire de contact demande votre prénom, nom, adresse e-mail, un numéro de téléphone facultatif et votre message. Pour un devis, le téléphone, la rue, le numéro, le code postal, la commune et les prestations souhaitées sont également demandés ; le message est facultatif. Les deux formulaires enregistrent la langue et la date de validation de la case relative à la confidentialité. Le contact conserve aussi la provenance « contact_page ».\nLes demandes sont conservées dans la base de données du backend avec leurs dates et leur statut de traitement. Les devis reçoivent une référence et sont liés aux services choisis. Des notes internes peuvent accompagner les demandes de contact. Aucun téléversement de fichier n’est proposé. Les champs obligatoires sont nécessaires à l’envoi du formulaire."
         },
         {
+          "title": "Candidatures",
+          "text": "Lorsque vous postulez, nous traitons votre prénom, nom, adresse e-mail, numéro de téléphone, commune de résidence, le poste concerné et vos réponses aux questions de candidature. Si vous les fournissez, nous traitons également l’URL de votre profil LinkedIn et votre CV PDF. Nous enregistrons aussi la langue, la date de candidature, votre confirmation relative à la confidentialité et les éventuelles informations de campagne ou de provenance, notamment les paramètres UTM. Un statut interne et des notes peuvent être tenus pour le suivi.\nCes données servent à examiner votre candidature et votre adéquation avec la fonction ou la collaboration, à vous contacter, à assurer le suivi et à organiser des entretiens ou rendez-vous. La candidature est enregistrée dans notre base de données et envoyée par e-mail à la boîte de recrutement configurée. Après l’envoi interne réussi, un e-mail de confirmation vous est également adressé. Une candidature ne vous inscrit pas automatiquement à une newsletter ou à d’autres communications marketing. La case de confidentialité ne modifie pas vos préférences distinctes de cookies ou de marketing."
+        },
+        {
+          "title": "Votre CV et la messagerie de recrutement",
+          "text": "Un CV PDF transmis est traité comme un fichier temporaire afin d’être joint au courriel de recrutement. Le CV n’est pas conservé de manière permanente dans le stockage de l’application ou du VPS de Nu-Isoleren. La base de données ne contient ni le fichier CV, ni un chemin permanent vers celui-ci, ni son nom de fichier d’origine ; elle indique uniquement si un CV a été joint.\nLe CV étant envoyé en pièce jointe, il peut néanmoins rester dans la boîte de recrutement et l’environnement de messagerie utilisé, conformément à leur gestion et aux durées de conservation applicables. Il ne s’agit pas d’un stockage permanent dans notre application web."
+        },
+        {
+          "title": "Conservation des candidatures",
+          "text": "Les données des candidats ne sont pas conservées au-delà de ce qui est nécessaire au traitement et au suivi de la candidature. Ce principe concerne les dossiers, réponses et informations de suivi interne, et doit également s’appliquer aux courriels de recrutement et aux CV joints présents dans la messagerie. Les délais relatifs aux demandes de contact, de devis ou aux documents comptables ne s’appliquent pas automatiquement aux candidatures. Pour toute question ou demande d’accès, de rectification ou d’effacement, utilisez les coordonnées et les informations sur vos droits présentées dans cette politique."
+        },
+        {
           "title": "Finalités et bases juridiques",
           "text": "Les données servent à répondre, vous contacter, examiner les travaux souhaités et préparer un devis. Un devis ou une demande en vue d’un contrat relève des mesures prises à votre demande avant la conclusion de ce contrat. La base applicable aux autres questions et aux journaux techniques reste à préciser ; nous ne présumons pas un consentement général à tous les traitements.\nLa case du formulaire enregistre votre confirmation et ne constitue pas une autorisation de publicité ou de newsletter. Les technologies marketing optionnelles font l’objet d’un choix distinct. Vous pouvez retirer un consentement donné pour un traitement fondé sur celui-ci."
         },
@@ -2251,12 +2265,12 @@
   },
   "Jobs": {
     "title": "Offres d’emploi",
-    "intro": "Découvrez nos postes à pourvoir et les possibilités de collaboration avec Nu-Isoleren. Consultez la fonction, la région et l’expérience recherchée, puis posez votre candidature.",
-    "empty": "Aucune offre n’est ouverte pour le moment.",
-    "view": "Consulter l’offre",
+    "intro": "Découvrez nos offres d’emploi et comment votre expérience et votre ambition peuvent faire la différence chez Nu-Isoleren.",
+    "empty": "Nous n’avons pas d’offre ouverte pour le moment.",
+    "view": "Voir l’offre",
     "apply": "Postuler",
     "back": "Retour aux offres d’emploi",
-    "closed": "Cette offre est clôturée.",
+    "closed": "Cette offre n’est plus disponible.",
     "unavailable": "La candidature dans cette langue est momentanément indisponible.",
     "published": "Publié le",
     "employment": {
@@ -2285,8 +2299,8 @@
       "linkedin": "Profil LinkedIn",
       "cvInstruction": "Ajoutez au moins un CV PDF ({max} Mo maximum) ou votre profil LinkedIn. Vous pouvez fournir les deux.",
       "cvOptional": "Vous pouvez ajouter un CV PDF ({max} Mo maximum) et/ou un profil LinkedIn.",
-      "cvPrivacy": "Votre CV est uniquement joint au courriel de candidature et n’est pas conservé de manière permanente dans le stockage de notre site.",
-      "privacy": "J’accepte que Nu-Isoleren utilise mes données pour traiter ma candidature et me contacter.",
+      "cvPrivacy": "Votre CV PDF est traité temporairement et joint au courriel envoyé à notre boîte de recrutement. Il n’est pas conservé de manière permanente dans le stockage de notre application, mais peut rester dans l’environnement de messagerie.",
+      "privacy": "J’ai lu la <policy>politique de confidentialité</policy> et je comprends que Nu-Isoleren traite mes données pour examiner ma candidature et me contacter.",
       "privacyLink": "Politique de confidentialité",
       "previous": "Précédent",
       "next": "Suivant",
@@ -2299,11 +2313,22 @@
       "checkRequired": "Confirmez votre accord et terminez le contrôle de sécurité.",
       "validationError": "Vérifiez vos réponses et coordonnées, puis recommencez le contrôle de sécurité. L’offre ou les questions ont pu changer.",
       "submitError": "Nous n’avons pas pu confirmer la réception. Réessayez ou contactez Nu-Isoleren.",
-      "successTitle": "Merci pour votre intérêt",
-      "success": "Nous avons reçu votre candidature. Nous examinerons votre expérience et vous contacterons au sujet d’une éventuelle collaboration.",
+      "successTitle": "Merci pour votre candidature",
+      "success": "Nous avons bien reçu vos informations. Nous examinerons votre profil et vous contacterons si une collaboration semble possible.",
       "mailFailedTitle": "Données reçues, courriel non envoyé",
       "mailFailed": "Vos informations ont été enregistrées, mais le courriel de recrutement n’a pas pu être envoyé. Le CV éventuel n’a pas été conservé. Contactez Nu-Isoleren en mentionnant ce message. Ne renvoyez pas la même candidature.",
-      "contact": "Contactez-nous"
-    }
+      "contact": "Contactez-nous",
+      "profile": "CV ou LinkedIn",
+      "or": "Ou",
+      "privacyTitle": "Confidentialité",
+      "otherJobs": "Voir les autres offres"
+    },
+    "heroTitle": "Rejoignez Nu-Isoleren",
+    "metaTitle": "Offres d’emploi chez Nu-Isoleren | Découvrez nos postes ouverts",
+    "metaDescription": "Découvrez les offres d’emploi de Nu-Isoleren dans la vente, la technique et l’isolation. Consultez nos possibilités de collaboration et postulez en ligne.",
+    "count": "{count, plural, one {# offre disponible} other {# offres disponibles}}",
+    "emptyDescription": "Consultez régulièrement cette page pour découvrir de nouvelles opportunités chez Nu-Isoleren.",
+    "about": "À propos de Nu-Isoleren",
+    "otherJobs": "Voir les autres offres"
   }
 }

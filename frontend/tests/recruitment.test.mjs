@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createRequire } from 'node:module';
 import ts from 'typescript';
+import { createTranslator } from 'next-intl';
 const require = createRequire(import.meta.url);
 function load(path, mocks = {}) {
   const code = ts.transpileModule(fs.readFileSync(new URL(`../${path}`, import.meta.url), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX } }).outputText;
@@ -26,7 +27,7 @@ function harness(vacancy, enabled = false) {
     useEffect: () => { cursor++; },
   };
   const Component = load('components/jobs/ApplicationForm.tsx', {
-    react: hooks, 'next-intl': { useLocale: () => 'fr', useTranslations: () => key => key },
+    react: hooks, 'next-intl': { useLocale: () => 'fr', useTranslations: () => Object.assign(key => key, { rich: (_, values) => values.policy('privacyLink') }) },
     '@/i18n/routing': { Link: 'a' }, '@/lib/recruitment': helpers,
     '@/components/ui/Turnstile': { default: 'turnstile', turnstileEnabled: enabled },
   }).default;
@@ -84,6 +85,8 @@ test('final step sends multipart, preserves locale/source and gates on Turnstile
     assert.ok(body instanceof FormData); assert.equal(body.get('locale'), 'fr'); assert.equal(body.get('utm_source'), 'facebook');
     assert.equal(body.get('turnstile_token'), 'test-token'); assert.equal(body.get('answers'), '{}');
     assert.ok(h.find(n => n.props?.role === 'status'));
+    assert.ok(h.find(n => n.props?.href === '/jobs' && n.props.children === 'otherJobs'));
+    assert.ok(h.find(n => n.type === 'h2' && n.props.children === 'successTitle'));
   } finally { global.fetch = old; }
 });
 
@@ -159,4 +162,73 @@ test('sitemap includes real translated open jobs and excludes closed/expired/noi
   assert.deepEqual(job.alternates.languages, { 'nl-BE': job.url, 'fr-BE': 'https://www.nu-isoleren.be/fr/offres-emploi/fonction', 'x-default': job.url });
   assert.equal(result.some(item => /expired|private/.test(item.url)), false);
   assert.equal(result.some(item => /en\/jobs\/functie/.test(item.url)), false);
+});
+
+
+test('open vacancy count excludes drafts, closed, expired and unpublished records', async () => {
+  const entries = [base, { ...base, status: 'draft' }, { ...base, is_open: false }, { ...base, valid_through: '2000-01-01' }, { ...base, published_at: null }, { ...base, published_at: '2999-01-01' }];
+  const { getVacancies } = load('lib/vacancies.ts', {
+    'server-only': {}, react: { cache: fn => fn }, '@/lib/recruitment': helpers,
+    '@/lib/content-api': { contentRequest: async (path, tags) => { assert.match(path, /locale=(nl|fr|en)$/); assert.deepEqual(tags, ['vacancies']); return { json: async () => ({ data: entries }) }; } },
+  });
+  for (const locale of ['nl', 'fr', 'en']) assert.deepEqual(await getVacancies(locale), [base]);
+});
+
+test('desktop and mobile jobs navigation, active detail state and badge are localized', () => {
+  for (const locale of ['nl', 'fr', 'en']) {
+    const messages = JSON.parse(fs.readFileSync(new URL(`../messages/${locale}.json`, import.meta.url)));
+    const useTranslations = namespace => (key, values) => key === 'count' ? `${values.count} ${messages.Jobs.title}` : `${namespace}.${key}`.split('.').reduce((value, part) => value[part], messages);
+    const badge = load('components/jobs/VacancyBadge.tsx', { 'next-intl': { useTranslations } }).default;
+    assert.equal(badge({ count: 0 }), null);
+    assert.ok(nodes(badge({ count: 2 })).some(n => n.props?.className === 'sr-only' && n.props.children.includes(messages.Jobs.title)));
+    for (const pathname of ['/jobs', '/jobs/[slug]', '/contact']) {
+      for (const file of ['HeaderNav', 'MobileMenu']) {
+        let open = false;
+        const Component = load(`components/layout/${file}.tsx`, {
+          react: { useState: () => [open, value => { open = value; }], useEffect: () => {} },
+          'next-intl': { useTranslations }, '@/i18n/routing': { Link: 'a', usePathname: () => pathname },
+          'next/image': { default: 'image' }, './LanguageSwitcher': { default: 'language' }, '@/components/jobs/VacancyBadge': { default: badge },
+        }).default;
+        if (file === 'MobileMenu') nodes(Component({ vacancyCount: 2 })).find(n => n.type === 'button').props.onClick();
+        const tree = nodes(Component({ vacancyCount: 2 }));
+        const links = tree.filter(n => n.props?.href === '/jobs');
+        assert.equal(links.length, 1);
+        assert.equal(links[0].props['aria-current'], pathname.startsWith('/jobs') ? 'page' : undefined);
+        assert.ok(nodes(links[0]).some(n => n.props?.children === messages.Jobs.title) || links[0].props.children.includes(messages.Jobs.title));
+        assert.equal(nodes(links[0]).find(n => n.type === badge).props.count, 2);
+        if (file === 'MobileMenu') { links[0].props.onClick(); assert.equal(nodes(Component({})).some(n => n.props?.href === '/jobs'), false); }
+      }
+    }
+  }
+});
+
+test('empty overview offers a useful link; application has inline privacy link and masking', async () => {
+  const page = load('app/[locale]/jobs/page.tsx', {
+    'next-intl/server': { getTranslations: async () => key => key }, '@/i18n/routing': { Link: 'a' },
+    '@/components/ui/Breadcrumbs': { default: 'breadcrumbs' }, '@/lib/vacancies': { getVacancies: async () => [] },
+    '@/lib/recruitment': helpers, '@/lib/seo/metadata': { pageMetadata: () => ({}) }, 'next/image': { default: 'image' },
+  }).default;
+  const tree = nodes(await page({ params: Promise.resolve({ locale: 'nl' }), searchParams: Promise.resolve({}) }));
+  assert.ok(tree.some(n => n.props?.children === 'empty'));
+  assert.ok(tree.some(n => n.props?.href === '/about'));
+  const h = harness(base); h.render();
+  assert.ok(h.find(n => n.props?.href === '/privacy-policy'));
+  assert.ok(h.find(n => n.props?.['data-clarity-mask'] === 'true'));
+  assert.equal(h.find(n => n.type === 'progress').props.value, 1);
+});
+
+
+test('NL/FR/EN recruitment copy, rich privacy link and count messages resolve', () => {
+  for (const locale of ['nl', 'fr', 'en']) {
+    const messages = JSON.parse(fs.readFileSync(new URL(`../messages/${locale}.json`, import.meta.url)));
+    const errors = [];
+    const t = createTranslator({ locale, messages, namespace: 'Jobs', onError: error => errors.push(error) });
+    for (const key of ['heroTitle', 'metaTitle', 'metaDescription', 'emptyDescription', 'otherJobs', 'application.profile', 'application.or', 'application.privacyTitle', 'application.successTitle', 'application.success', 'application.cvPrivacy']) assert.notEqual(t(key), `Jobs.${key}`);
+    assert.match(t('count', { count: 2 }), /2/);
+    assert.equal(typeof t.rich('application.privacy', { policy: chunks => chunks }), 'string');
+    assert.deepEqual(errors, []);
+    const policy = JSON.stringify(messages.LegalPages.privacy);
+    assert.match(policy, /LinkedIn/);
+    assert.match(policy, /UTM/);
+  }
 });

@@ -4,8 +4,11 @@ export const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content
 export function recruitmentSource(params: Record<string, string | string[] | undefined>): Record<string, string> {
   return Object.fromEntries(utmKeys.flatMap(key => typeof params[key] === 'string' ? [[key, params[key].slice(0, 255)]] : []));
 }
-export function vacancyOpen(vacancy: Pick<Vacancy, 'is_open' | 'valid_through'>): boolean {
-  return vacancy.is_open && (!vacancy.valid_through || Date.parse(vacancy.valid_through) > Date.now());
+export function vacancyOpen(vacancy: Pick<Vacancy, 'is_open' | 'valid_through' | 'status' | 'published_at'>): boolean {
+  const now = Date.now();
+  return vacancy.status === 'published' && vacancy.published_at !== null &&
+    Date.parse(vacancy.published_at) <= now && vacancy.is_open &&
+    (!vacancy.valid_through || Date.parse(vacancy.valid_through) > now);
 }
 export function validAnswer(question: VacancyQuestion, value: Answer | undefined): boolean {
   const empty = value === undefined || value === '' || (Array.isArray(value) && value.length === 0);

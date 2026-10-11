@@ -8,12 +8,16 @@ import MobileMenu from "@/components/layout/MobileMenu";
 import MobileQuickContact from "@/components/layout/MobileQuickContact";
 import HeaderNav from "@/components/layout/HeaderNav";
 import TopbarNav from "@/components/layout/TopbarNav";
+import { getVacancies } from '@/lib/vacancies';
 import { getServices } from "@/lib/services";
 
 export default async function Header() {
   const t = await getTranslations("Header");
   const locale = await getLocale();
-  const services = await getServices(locale);
+  const [services, vacancyCount] = await Promise.all([
+    getServices(locale),
+    getVacancies(locale).then(vacancies => vacancies.length).catch(() => 0),
+  ]);
 
   return (
     <header className="w-full bg-white flex flex-col z-50 sticky top-0 border-b border-gray-200 shadow-sm">
@@ -44,7 +48,7 @@ export default async function Header() {
           </Link>
 
           <div className="absolute right-0">
-            <MobileMenu />
+            <MobileMenu vacancyCount={vacancyCount} />
           </div>
         </div>
 
@@ -60,7 +64,7 @@ export default async function Header() {
             />
           </Link>
 
-          <HeaderNav services={services} />
+          <HeaderNav services={services} vacancyCount={vacancyCount} />
 
           <div className="flex-1 flex justify-end items-center gap-4">
             <Link
@@ -70,8 +74,8 @@ export default async function Header() {
               {t("mainbar.cta")}
             </Link>
 
-            <div className="lg:hidden flex items-center">
-              <MobileMenu />
+            <div className="xl:hidden flex items-center">
+              <MobileMenu vacancyCount={vacancyCount} />
             </div>
           </div>
         </div>

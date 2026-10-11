@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start:local": "next start --hostname localhost",
     "lint": "eslint",
     "test:seo": "node --test tests/seo.test.mjs"
   },

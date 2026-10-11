@@ -30,6 +30,7 @@ export default async function PolicyPage({
     namespace: 'Breadcrumbs',
   });
 
+  const updated = kind === 'privacy' ? '2026-10-10' : '2026-09-26';
   const sections = t.raw(`${kind}.sections`) as Section[];
 
   return (
@@ -58,10 +59,10 @@ export default async function PolicyPage({
 
           <p className="mt-3 text-sm text-gray-500">
             {t('updated')}{' '}
-            <time dateTime="2026-09-26">
+            <time dateTime={updated}>
               {new Intl.DateTimeFormat(locale, {
                 dateStyle: 'long',
-              }).format(new Date('2026-09-26T12:00:00Z'))}
+              }).format(new Date(`${updated}T12:00:00Z`))}
             </time>
           </p>
         </header>

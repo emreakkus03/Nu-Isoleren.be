@@ -28,12 +28,16 @@ const nextConfig: NextConfig = {
               ? localized
               : localized[locale];
 
-          if (key === destination) return [];
+          const sourcePath = `/${locale}${key.replace('[slug]', ':slug')}`;
+          const destinationPath = `/${locale}${destination.replace('[slug]', ':slug')}`;
+          const normalize = (path: string) => path.replace(/\/+/g, '/').replace(/\/$/, '') || '/';
+
+          if (normalize(sourcePath) === normalize(destinationPath)) return [];
 
           return [
             {
-              source: `/${locale}${key.replace('[slug]', ':slug')}`,
-              destination: `/${locale}${destination.replace('[slug]', ':slug')}`,
+              source: sourcePath,
+              destination: destinationPath,
               permanent: true,
             },
           ];

@@ -70,6 +70,8 @@
     "knowledge": "Knowledge base"
   },
   "Header": {
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
     "reviews": "Excellent",
     "topbar": {
       "serviceAreas": "Service Areas",
@@ -2154,6 +2156,18 @@
           "text": "The contact form collects your first and last name, email address, optional phone number and message. A quote request also requires a phone number, street, house number, postcode, town and selected services; its message is optional. Both forms record the language and the time you confirm the privacy checkbox. Contact requests also store the source “contact_page”.\nRequests are stored in the backend database with creation/update timestamps and a handling status. Quotes receive a reference and links to selected services. Contact requests may have internal follow-up notes. Neither form offers file uploads. Required fields are needed to submit the form."
         },
         {
+          "title": "Job applications",
+          "text": "When you apply, we process your first and last name, email address, phone number, town or city, the vacancy you apply for and your answers to the application questions. If provided, we also process your LinkedIn profile URL and PDF CV. We record the language, application date, privacy acknowledgement and any campaign or source information, such as UTM parameters. An internal status and notes may be kept for follow-up.\nWe use these details to assess your application and suitability for the role or collaboration, contact you, manage the application process and arrange introductory meetings or appointments. The application is recorded in our backend database and emailed to the configured recruitment mailbox. Following successful internal sending, a confirmation email is also sent to you. Applying does not automatically subscribe you to newsletters or other marketing. The privacy checkbox does not change your separate cookie or marketing preferences."
+        },
+        {
+          "title": "Your CV and the recruitment mailbox",
+          "text": "A submitted PDF CV is processed as a temporary upload so it can be attached to the recruitment email. The CV is not stored permanently as a file in Nu-Isoleren’s application or VPS storage. The database contains no CV file content, permanent CV path or original filename; it records only whether a CV was submitted.\nBecause the CV is sent as an email attachment, it may remain in the recruitment mailbox and email environment, subject to that mailbox’s management and applicable retention periods. This is distinct from permanent storage in our web application."
+        },
+        {
+          "title": "Retention of applications",
+          "text": "Candidate data is not retained longer than necessary to process and follow up on the application. This applies to application records, answers and internal follow-up information, and must also be applied to recruitment emails and CV attachments in the mailbox. Retention periods for contact requests, quote requests or accounting documents do not automatically apply to job applications. For questions about your data or requests for access, correction or erasure, use the contact details and information about your rights in this policy."
+        },
+        {
           "title": "Purposes and legal bases",
           "text": "We use your request to reply, contact you, assess the proposed work and prepare a quote. Quotes and enquiries made with a view to entering a contract involve steps taken at your request before a contract is concluded. The basis for other enquiries and technical logging still needs to be documented; we do not assume blanket consent for all processing.\nThe required privacy checkbox records your confirmation, not permission for advertising or a newsletter. Optional marketing technology has a separate consent choice. You may withdraw consent to processing that relies on it."
         },
@@ -2255,12 +2269,12 @@
   },
   "Jobs": {
     "title": "Jobs",
-    "intro": "Explore open positions and opportunities to work with Nu-Isoleren. Read about the role, region and experience we are looking for, then submit your application.",
-    "empty": "There are currently no open positions.",
-    "view": "View position",
+    "intro": "Explore our open positions and discover how your experience and ambition can make a difference at Nu-Isoleren.",
+    "empty": "We currently have no open positions.",
+    "view": "View job",
     "apply": "Apply",
     "back": "Back to jobs",
-    "closed": "This position is closed.",
+    "closed": "This position is no longer available.",
     "unavailable": "Applications in this language are temporarily unavailable.",
     "published": "Published on",
     "employment": {
@@ -2289,8 +2303,8 @@
       "linkedin": "LinkedIn profile",
       "cvInstruction": "Attach a PDF CV (up to {max} MB) or provide your LinkedIn profile. You can also provide both.",
       "cvOptional": "You may attach a PDF CV (up to {max} MB) and/or provide your LinkedIn profile.",
-      "cvPrivacy": "Your CV is used only as an application email attachment and is not permanently retained in our website storage.",
-      "privacy": "I agree that Nu-Isoleren may use my details to process my application and contact me.",
+      "cvPrivacy": "Your PDF CV is processed temporarily and attached to an email sent to our recruitment mailbox. It is not stored permanently in our application storage, but may remain in the email environment.",
+      "privacy": "I have read the <policy>privacy policy</policy> and understand that Nu-Isoleren processes my details to review my application and contact me.",
       "privacyLink": "Privacy policy",
       "previous": "Previous",
       "next": "Next",
@@ -2303,11 +2317,22 @@
       "checkRequired": "Confirm your privacy agreement and complete the security check.",
       "validationError": "Check your answers and details, then complete the security check again. The vacancy or questions may have changed.",
       "submitError": "We could not confirm receipt. Please try again or contact Nu-Isoleren.",
-      "successTitle": "Thank you for your interest",
-      "success": "We have received your application. We will review your experience and contact you about a possible collaboration.",
+      "successTitle": "Thank you for your application",
+      "success": "We have received your details. We will review your profile and contact you if there is a potential match.",
       "mailFailedTitle": "Details received, email not sent",
       "mailFailed": "Your details were recorded, but the recruitment email could not be sent. Any CV has not been retained. Please contact Nu-Isoleren and mention this message. Do not submit the same application again.",
-      "contact": "Contact us"
-    }
+      "contact": "Contact us",
+      "profile": "CV or LinkedIn",
+      "or": "Or",
+      "privacyTitle": "Privacy",
+      "otherJobs": "View other jobs"
+    },
+    "heroTitle": "Work at Nu-Isoleren",
+    "metaTitle": "Jobs at Nu-Isoleren | Explore our open positions",
+    "metaDescription": "Explore jobs at Nu-Isoleren in sales, technical work and insulation. Discover opportunities to work with us and apply online.",
+    "count": "{count, plural, one {# open position} other {# open positions}}",
+    "emptyDescription": "Check this page for new opportunities at Nu-Isoleren.",
+    "about": "About Nu-Isoleren",
+    "otherJobs": "View other jobs"
   }
 }
