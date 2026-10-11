@@ -64,7 +64,7 @@ for (const kind of ['contact', 'quote']) for (const locale of ['nl', 'fr', 'en']
   });
 }
 test('new pages use noindex metadata and sitemap excludes thank-you routes', async () => {
-  for (const route of ['thank-you/contact', 'thank-you/quote', 'privacy-policy', 'cookie-policy']) {
+  for (const route of ['thank-you/contact', 'thank-you/quote', 'thank-you/application', 'privacy-policy', 'cookie-policy']) {
     const page = load(`app/[locale]/${route}/page.tsx`, {
       'next-intl/server': { getTranslations: async () => key => key },
       '@/lib/seo/metadata': { pageMetadata: (key, locale, values, options) => ({ key, locale, values, options }) },
@@ -79,4 +79,29 @@ test('new pages use noindex metadata and sitemap excludes thank-you routes', asy
     '@/lib/seo/urls': { contentRoutes: {}, languageTags: { nl: 'nl-BE', fr: 'fr-BE', en: 'en' }, localizedPath: (route, locale) => '/' + locale + (typeof routing.pathnames[route] === 'string' ? routing.pathnames[route] : routing.pathnames[route][locale]) },
   }).default;
   assert((await sitemap()).every(entry => !/bedankt|merci|thank-you/.test(entry.url)));
+});
+
+test('application thank-you content, CTA and localized routes exist in every locale', async () => {
+  const paths = { nl: '/bedankt/sollicitatie', fr: '/merci/candidature', en: '/thank-you/application' };
+  const titles = { nl: 'Bedankt voor uw sollicitatie', fr: 'Merci pour votre candidature', en: 'Thank you for your application' };
+  for (const locale of ['nl', 'fr', 'en']) {
+    const messages = JSON.parse(fs.readFileSync(new URL(`../messages/${locale}.json`, import.meta.url)));
+    const t = key => key.split('.').reduce((value, part) => value[part], messages.ThankYouPage);
+    const Component = load('components/legal/ThankYouPage.tsx', {
+      'next-intl/server': { getTranslations: async () => t }, '@/i18n/routing': { Link: 'a' },
+    }).default;
+    const tree = walk(await Component({ locale, kind: 'application' }));
+    assert.equal(tree.find(n => n.type === 'h1').props.children, titles[locale]);
+    for (const key of ['eyebrow', 'description', 'details', 'email', 'jobs']) assert(tree.some(n => n.props?.children === t('application.' + key)));
+    assert.deepEqual(tree.filter(n => n.type === 'a').map(n => n.props.href), ['/jobs', '/']);
+    assert.equal(routing.pathnames['/thank-you/application'][locale], paths[locale]);
+    const page = load('app/[locale]/thank-you/application/page.tsx', {
+      'next-intl/server': { getTranslations: async () => t }, '@/components/legal/ThankYouPage': { default: Component },
+      '@/lib/seo/metadata': { pageMetadata: (route, language, values, options) => ({ route, language, values, robots: { index: options.indexable, follow: true } }) },
+    });
+    const metadata = await page.generateMetadata({ params: Promise.resolve({ locale }) });
+    assert.deepEqual(metadata.robots, { index: false, follow: true });
+    assert.equal(metadata.route, '/thank-you/application');
+    assert.equal(walk(await page.default({ params: Promise.resolve({ locale }) }))[0].props.kind, 'application');
+  }
 });

@@ -2250,6 +2250,14 @@
     }
   },
   "ThankYouPage": {
+    "application": {
+      "eyebrow": "Application received",
+      "title": "Thank you for your application",
+      "description": "We have successfully received your application.",
+      "details": "Our team will carefully review your application. If your profile matches what we are looking for, we will contact you to discuss the next steps.",
+      "email": "You will also receive a confirmation by email.",
+      "jobs": "View other vacancies"
+    },
     "home": "Back to home",
     "services": "Explore our services",
     "contact": {

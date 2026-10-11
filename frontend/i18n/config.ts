@@ -14,6 +14,11 @@ export const routing = defineRouting({
       fr: '/merci/contact',
       en: '/thank-you/contact',
     },
+    '/thank-you/application': {
+      nl: '/bedankt/sollicitatie',
+      fr: '/merci/candidature',
+      en: '/thank-you/application',
+    },
     '/thank-you/quote': {
       nl: '/bedankt/offerte',
       fr: '/merci/devis',

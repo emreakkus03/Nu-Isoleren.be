@@ -2228,6 +2228,14 @@
     }
   },
   "ThankYouPage": {
+    "application": {
+      "eyebrow": "Sollicitatie ontvangen",
+      "title": "Bedankt voor uw sollicitatie",
+      "description": "We hebben uw sollicitatie goed ontvangen.",
+      "details": "Ons team bekijkt uw kandidatuur zorgvuldig. Indien uw profiel aansluit bij wat we zoeken, nemen we contact met u op om de volgende stappen te bespreken.",
+      "email": "U ontvangt ook een bevestiging per e-mail.",
+      "jobs": "Bekijk andere vacatures"
+    },
     "home": "Terug naar de homepage",
     "services": "Bekijk onze diensten",
     "contact": {

@@ -6,7 +6,7 @@ export default async function ThankYouPage({
   kind,
 }: {
   locale: string;
-  kind: 'contact' | 'quote';
+  kind: 'contact' | 'quote' | 'application';
 }) {
   const t = await getTranslations({
     locale,
@@ -23,6 +23,8 @@ export default async function ThankYouPage({
         ✓
       </span>
 
+      {kind === 'application' && <p className="mt-5 text-sm font-bold uppercase tracking-wide text-[#1A669A]">{t('application.eyebrow')}</p>}
+
       <h1 className="mt-6 text-3xl sm:text-4xl font-extrabold text-[#1A669A]">
         {t(`${kind}.title`)}
       </h1>
@@ -31,19 +33,24 @@ export default async function ThankYouPage({
         {t(`${kind}.description`)}
       </p>
 
+      {kind === 'application' && <>
+        <p className="mt-5 text-lg leading-relaxed text-gray-600">{t('application.details')}</p>
+        <p className="mt-5 leading-relaxed text-gray-600">{t('application.email')}</p>
+      </>}
+
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <Link
-          href="/"
+          href={kind === 'application' ? '/jobs' : '/'}
           className="rounded-full bg-[#C82024] px-6 py-3 font-bold text-white"
         >
-          {t('home')}
+          {t(kind === 'application' ? 'application.jobs' : 'home')}
         </Link>
 
         <Link
-          href="/services"
+          href={kind === 'application' ? '/' : '/services'}
           className="rounded-full border border-[#1A669A] px-6 py-3 font-bold text-[#1A669A]"
         >
-          {t('services')}
+          {t(kind === 'application' ? 'home' : 'services')}
         </Link>
       </div>
     </div>

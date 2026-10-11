@@ -2246,6 +2246,14 @@
     }
   },
   "ThankYouPage": {
+    "application": {
+      "eyebrow": "Candidature reçue",
+      "title": "Merci pour votre candidature",
+      "description": "Nous avons bien reçu votre candidature.",
+      "details": "Notre équipe examinera attentivement votre candidature. Si votre profil correspond à ce que nous recherchons, nous vous contacterons afin de discuter des prochaines étapes.",
+      "email": "Vous recevrez également une confirmation par e-mail.",
+      "jobs": "Voir les autres offres d’emploi"
+    },
     "home": "Retour à l’accueil",
     "services": "Découvrir nos services",
     "contact": {

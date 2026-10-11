@@ -19,7 +19,8 @@ function nodes(node) {
   if (Array.isArray(node)) return node.flatMap(nodes);
   return [node, ...nodes(node.props?.children)];
 }
-function harness(vacancy, enabled = false) {
+function harness(vacancy, enabled = false, locale = 'fr') {
+  const navigations = [];
   const slots = []; let cursor = 0; const focus = [];
   const hooks = {
     useRef: value => slots[cursor++] ??= { current: value },
@@ -27,14 +28,14 @@ function harness(vacancy, enabled = false) {
     useEffect: () => { cursor++; },
   };
   const Component = load('components/jobs/ApplicationForm.tsx', {
-    react: hooks, 'next-intl': { useLocale: () => 'fr', useTranslations: () => Object.assign(key => key, { rich: (_, values) => values.policy('privacyLink') }) },
-    '@/i18n/routing': { Link: 'a' }, '@/lib/recruitment': helpers,
+    react: hooks, 'next-intl': { useLocale: () => locale, useTranslations: () => Object.assign(key => key, { rich: (_, values) => values.policy('privacyLink') }) },
+    '@/i18n/routing': { Link: 'a', useRouter: () => ({ replace: route => navigations.push(route) }) }, '@/lib/recruitment': helpers,
     '@/components/ui/Turnstile': { default: 'turnstile', turnstileEnabled: enabled },
   }).default;
   let tree;
   const render = () => { cursor = 0; tree = nodes(Component({ vacancy, source: { utm_source: 'facebook' } })); for (const n of tree) if (n.props?.ref) n.props.ref.current = { focus: () => focus.push(true) }; return tree; };
   const submit = async () => { await tree.find(n => n.type === 'form').props.onSubmit({ preventDefault() {} }); return render(); };
-  return { render, submit, find: predicate => tree.find(predicate), all: predicate => tree.filter(predicate) };
+  return { navigations, render, submit, find: predicate => tree.find(predicate), all: predicate => tree.filter(predicate) };
 }
 
 test('all question types validate strict values, required and optional inputs', () => {
@@ -74,7 +75,7 @@ test('progress, required error, previous/next and final personal step retain ans
 
 test('final step sends multipart, preserves locale/source and gates on Turnstile', async () => {
   const old = global.fetch; const sent = [];
-  global.fetch = async (url, options) => { sent.push([url, options]); return { ok: true, json: async () => ({ success: true }) }; };
+  global.fetch = async (url, options) => { sent.push([url, options]); return { ok: true, status: 201, json: async () => ({ success: true }) }; };
   try {
     const h = harness(base, true); h.render();
     assert.equal(h.find(n => n.props?.type === 'submit').props.disabled, true);
@@ -94,9 +95,9 @@ test('final step sends multipart, preserves locale/source and gates on Turnstile
     assert.equal(body.get('first_name'), 'Ada'); assert.equal(body.get('email'), 'ada@example.test');
     assert.equal(body.get('linkedin_url'), 'https://www.linkedin.com/in/test');
     assert.equal(body.get('privacy_accepted'), '1');
-    assert.ok(h.find(n => n.props?.role === 'status'));
-    assert.ok(h.find(n => n.props?.href === '/jobs' && n.props.children === 'otherJobs'));
-    assert.ok(h.find(n => n.type === 'h2' && n.props.children === 'successTitle'));
+    assert.equal(h.find(n => n.props?.role === 'status'), undefined);
+    assert.equal(h.find(n => n.props?.type === 'submit').props.disabled, true);
+    assert.deepEqual(h.navigations, ['/thank-you/application']);
   } finally { global.fetch = old; }
 });
 
@@ -112,8 +113,10 @@ test('validation error resets Turnstile; recorded mail failure prevents duplicat
     await h.submit(); assert.notEqual(h.find(n => n.type === 'turnstile').key, before);
     assert.equal(h.find(n => n.props?.type === 'submit').props.disabled, true);
     recorded = true; h.find(n => n.type === 'turnstile').props.onToken('new-token'); h.render(); await h.submit();
-    assert.ok(h.find(n => n.type === 'h2' && n.props.children === 'mailFailedTitle'));
-    assert.equal(h.find(n => n.type === 'form'), undefined);
+    assert.equal(h.find(n => n.props?.role === 'alert').props.children, 'mailFailed');
+    assert.ok(h.find(n => n.type === 'form'));
+    assert.equal(h.find(n => n.props?.type === 'submit').props.disabled, true);
+    assert.deepEqual(h.navigations, []);
   } finally { global.fetch = old; }
 });
 
@@ -252,4 +255,28 @@ test('NL/FR/EN recruitment copy, rich privacy link and count messages resolve', 
     assert.match(policy, /LinkedIn/);
     assert.match(policy, /UTM/);
   }
+});
+
+for (const locale of ['nl', 'fr', 'en']) test(`application ${locale}: only HTTP 201 redirects; failures retain form data`, async () => {
+  const previousFetch = global.fetch;
+  const h = harness({ ...base, require_cv_or_linkedin: false }, false, locale);
+  try {
+    h.render();
+    h.find(n => n.type === 'input' && n.props.autoComplete === 'given-name').props.onChange({ target: { value: 'Ada' } });
+    h.find(n => n.type === 'input' && n.props.type === 'checkbox').props.onChange({ target: { checked: true } });
+    for (const status of [422, 503, 200, 'network', 201]) {
+      global.fetch = async (_url, options) => {
+        assert.equal(options.body.get('locale'), locale);
+        if (status === 'network') throw new Error('Network failure');
+        return { status, json: async () => ({ success: status === 201 || status === 200 }) };
+      };
+      h.render(); await h.submit();
+      if (status === 201) assert.deepEqual(h.navigations, ['/thank-you/application']);
+      else {
+        assert.deepEqual(h.navigations, []);
+        assert.ok(h.find(n => n.props?.role === 'alert'));
+        assert.equal(h.find(n => n.props?.autoComplete === 'given-name').props.value, 'Ada');
+      }
+    }
+  } finally { global.fetch = previousFetch; }
 });

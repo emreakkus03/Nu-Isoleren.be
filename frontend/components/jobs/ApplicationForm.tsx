@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { Link, useRouter } from '@/i18n/routing';
 import Turnstile, { turnstileEnabled } from '@/components/ui/Turnstile';
 import { validAnswer, validCv, validLinkedIn } from '@/lib/recruitment';
 import type { Answer, Vacancy } from '@/types/vacancy';
@@ -13,6 +13,7 @@ const buttonClass = 'cursor-pointer inline-flex min-h-12 w-full items-center jus
 export default function ApplicationForm({ vacancy, source }: { vacancy: Vacancy; source: Record<string, string> }) {
   const t = useTranslations('Jobs.application');
   const locale = useLocale();
+  const router = useRouter();
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
   const [person, setPerson] = useState({ first_name: '', last_name: '', email: '', phone: '', city: '', linkedin_url: '' });
@@ -22,7 +23,7 @@ export default function ApplicationForm({ vacancy, source }: { vacancy: Vacancy;
   const [attempt, setAttempt] = useState(0);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<'success' | 'mail-failed' | null>(null);
+  const [recorded, setRecorded] = useState(false);
   const locked = useRef(false);
   const heading = useRef<HTMLHeadingElement>(null);
   const previousStep = useRef(step);
@@ -60,16 +61,19 @@ export default function ApplicationForm({ vacancy, source }: { vacancy: Vacancy;
     body.set('locale', locale); body.set('privacy_accepted', '1'); body.set('answers', JSON.stringify(answers));
     if (cv) body.set('cv', cv);
     if (turnstileEnabled && token) body.set('turnstile_token', token);
+    let completed = false;
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL;
       if (!apiUrl) throw new Error('API unavailable');
       const response = await fetch(`${apiUrl.replace(/\/$/, '')}/vacancies/${vacancy.id}/applications`, { method: 'POST', headers: { Accept: 'application/json' }, body });
       const data = await response.json();
-      if (response.ok && data.success === true) {
-        setResult('success'); setCv(null); return;
+      if (response.status === 201 && data.success === true) {
+        completed = true;
+        router.replace('/thank-you/application');
+        return;
       }
       if (data.recorded === true) {
-        setResult('mail-failed'); setCv(null); return;
+        completed = true; setRecorded(true); setBusy(false); setError(t('mailFailed')); return;
       }
       const invalidQuestion = Object.keys(data.errors ?? {}).find(key => key.startsWith('answers.'));
       if (invalidQuestion) {
@@ -80,24 +84,16 @@ export default function ApplicationForm({ vacancy, source }: { vacancy: Vacancy;
     } catch {
       setError(t('submitError'));
     } finally {
-      setBusy(false); locked.current = false; setToken(null); setAttempt(current => current + 1);
+      if (!completed) { setBusy(false); locked.current = false; setToken(null); setAttempt(current => current + 1); }
     }
   }
-
-  if (result) return <section id="application" className="mx-auto max-w-3xl scroll-mt-48 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center text-slate-700 shadow-sm sm:p-10" role="status">
-    <span aria-hidden="true" className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#1A669A]/10 text-2xl font-bold text-[#1A669A]">{result === 'success' ? '✓' : '!'}</span>
-    <h2 className="text-2xl font-extrabold text-gray-950">{t(result === 'success' ? 'successTitle' : 'mailFailedTitle')}</h2>
-    <p className="mt-4 leading-7">{t(result === 'success' ? 'success' : 'mailFailed')}</p>
-    {result === 'success' && <Link href="/jobs" className={`mt-6 ${buttonClass}`}>{t('otherJobs')}</Link>}
-    {result === 'mail-failed' && <Link href="/contact" className="mt-4 inline-block cursor-pointer font-bold text-[#1A669A] underline">{t('contact')}</Link>}
-  </section>;
 
   return <section id="application" data-clarity-mask="true" className="mx-auto min-w-0 max-w-3xl scroll-mt-48 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-slate-700 shadow-sm sm:p-8 md:p-10">
     <h2 ref={heading} tabIndex={-1} className="text-2xl font-extrabold text-slate-900 outline-none max-md:text-center">{t('title')}</h2>
     <p className="mt-3 text-sm font-bold text-[#1A669A]" aria-live="polite">{t('step', { current: step + 1, total })}</p>
     <progress className="mt-3 block h-2 w-full overflow-hidden rounded-full accent-[#1A669A] [&::-webkit-progress-bar]:rounded-full [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:rounded-full [&::-webkit-progress-value]:bg-[#1A669A] [&::-moz-progress-bar]:bg-[#1A669A]" value={step + 1} max={total} aria-label={t('progress')} />
     <form onSubmit={submit} className="mt-7 space-y-6" aria-busy={busy}>
-      <fieldset disabled={busy} className="min-w-0 space-y-5">
+      <fieldset disabled={busy || recorded} className="min-w-0 space-y-5">
         {!final ? <>
           <legend className="mb-2 text-lg font-extrabold leading-snug text-slate-900 [overflow-wrap:anywhere] sm:text-xl">{question.question} {question.required ? '*' : `(${t('optional')})`}</legend>
           {question.help_text && <p id="question-help" className="text-sm leading-6 text-slate-600">{question.help_text}</p>}
@@ -137,8 +133,8 @@ export default function ApplicationForm({ vacancy, source }: { vacancy: Vacancy;
       </fieldset>
       {error && <p role="alert" className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-semibold leading-6 text-red-800">{error}</p>}
       <div className="flex flex-col-reverse gap-3 border-t border-slate-200 pt-6 sm:flex-row sm:justify-between">
-        {step > 0 && <button type="button" disabled={busy} className="cursor-pointer min-h-12 w-full rounded-full border border-slate-300 bg-white px-6 py-3 font-bold text-slate-700 transition hover:border-[#1A669A] hover:text-[#1A669A] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A669A] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto" onClick={() => { setError(null); setToken(null); setStep(current => current - 1); }}>{t('previous')}</button>}
-        <button type="submit" disabled={busy || (final && turnstileEnabled && !token)} className={buttonClass}>{t(busy ? 'sending' : final ? 'submit' : 'next')}</button>
+        {step > 0 && <button type="button" disabled={busy || recorded} className="cursor-pointer min-h-12 w-full rounded-full border border-slate-300 bg-white px-6 py-3 font-bold text-slate-700 transition hover:border-[#1A669A] hover:text-[#1A669A] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A669A] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto" onClick={() => { setError(null); setToken(null); setStep(current => current - 1); }}>{t('previous')}</button>}
+        <button type="submit" disabled={busy || recorded || (final && turnstileEnabled && !token)} className={buttonClass}>{t(busy ? 'sending' : final ? 'submit' : 'next')}</button>
       </div>
     </form>
   </section>;
