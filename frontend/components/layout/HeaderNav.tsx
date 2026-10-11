@@ -3,18 +3,15 @@
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import Image from 'next/image';
-import VacancyBadge from '@/components/jobs/VacancyBadge';
 import type { ServiceItem } from '@/types/service';
 
 interface HeaderNavProps {
   services?: ServiceItem[];
-  vacancyCount?: number;
 }
 
-export default function HeaderNav({ services = [], vacancyCount = 0 }: HeaderNavProps) {
+export default function HeaderNav({ services = [] }: HeaderNavProps) {
   const t = useTranslations('Header');
   const pathname = usePathname();
-  const jobs = useTranslations('Jobs');
 
   const isActive = (href: string) => {
     if (href === '/') {
@@ -130,9 +127,6 @@ export default function HeaderNav({ services = [], vacancyCount = 0 }: HeaderNav
         className={getLinkClasses('/knowledge')}
       >
         {t('mainbar.knowledgeBase')}
-      </Link>
-      <Link href="/jobs" aria-current={isActive('/jobs') ? 'page' : undefined} className={`inline-flex items-center gap-2 whitespace-nowrap ${getLinkClasses('/jobs')}`}>
-        {jobs('title')}<VacancyBadge count={vacancyCount} />
       </Link>
     </nav>
   );

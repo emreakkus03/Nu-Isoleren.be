@@ -26,7 +26,7 @@ export default async function Header() {
           <GoogleReviews label={t("reviews")} />
 
           <div className="flex items-center gap-3 lg:gap-6">
-            <TopbarNav />
+            <TopbarNav vacancyCount={vacancyCount} />
             <div className="hidden md:flex items-center px-0 py-0">
               <LanguageSwitcher />
             </div>
@@ -64,7 +64,7 @@ export default async function Header() {
             />
           </Link>
 
-          <HeaderNav services={services} vacancyCount={vacancyCount} />
+          <HeaderNav services={services} />
 
           <div className="flex-1 flex justify-end items-center gap-4">
             <Link

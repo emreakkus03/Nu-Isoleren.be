@@ -174,15 +174,21 @@ test('open vacancy count excludes drafts, closed, expired and unpublished record
   for (const locale of ['nl', 'fr', 'en']) assert.deepEqual(await getVacancies(locale), [base]);
 });
 
-test('desktop and mobile jobs navigation, active detail state and badge are localized', () => {
+test('topbar and mobile jobs navigation, active detail state and badge are localized', () => {
   for (const locale of ['nl', 'fr', 'en']) {
     const messages = JSON.parse(fs.readFileSync(new URL(`../messages/${locale}.json`, import.meta.url)));
     const useTranslations = namespace => (key, values) => key === 'count' ? `${values.count} ${messages.Jobs.title}` : `${namespace}.${key}`.split('.').reduce((value, part) => value[part], messages);
     const badge = load('components/jobs/VacancyBadge.tsx', { 'next-intl': { useTranslations } }).default;
     assert.equal(badge({ count: 0 }), null);
     assert.ok(nodes(badge({ count: 2 })).some(n => n.props?.className === 'sr-only' && n.props.children.includes(messages.Jobs.title)));
+    const mainNav = load('components/layout/HeaderNav.tsx', {
+      'next-intl': { useTranslations }, '@/i18n/routing': { Link: 'a', usePathname: () => '/jobs' }, 'next/image': { default: 'image' },
+    }).default;
+    const mainLinks = nodes(mainNav({})).filter(n => n.type === 'a').map(n => n.props.href);
+    assert.equal(mainLinks.includes('/jobs'), false);
+    assert.deepEqual(mainLinks.filter(href => href !== '/services'), ['/projects', '/prices', '/knowledge']);
     for (const pathname of ['/jobs', '/jobs/[slug]', '/contact']) {
-      for (const file of ['HeaderNav', 'MobileMenu']) {
+      for (const file of ['TopbarNav', 'MobileMenu']) {
         let open = false;
         const Component = load(`components/layout/${file}.tsx`, {
           react: { useState: () => [open, value => { open = value; }], useEffect: () => {} },
@@ -191,11 +197,14 @@ test('desktop and mobile jobs navigation, active detail state and badge are loca
         }).default;
         if (file === 'MobileMenu') nodes(Component({ vacancyCount: 2 })).find(n => n.type === 'button').props.onClick();
         const tree = nodes(Component({ vacancyCount: 2 }));
+        if (file === 'TopbarNav') assert.deepEqual(tree.filter(n => n.type === 'a').map(n => n.props.href), ['/areas', '/about', '/grants', '/jobs', '/faq', '/contact']);
         const links = tree.filter(n => n.props?.href === '/jobs');
         assert.equal(links.length, 1);
         assert.equal(links[0].props['aria-current'], pathname.startsWith('/jobs') ? 'page' : undefined);
-        assert.ok(nodes(links[0]).some(n => n.props?.children === messages.Jobs.title) || links[0].props.children.includes(messages.Jobs.title));
+        assert.ok(nodes(links[0]).some(n => n.props?.children === messages.Jobs.title || (Array.isArray(n.props?.children) && n.props.children.includes(messages.Jobs.title))));
         assert.equal(nodes(links[0]).find(n => n.type === badge).props.count, 2);
+        const zeroTree = nodes(Component({ vacancyCount: 0 }));
+        assert.equal(badge(nodes(zeroTree.find(n => n.props?.href === '/jobs')).find(n => n.type === badge).props), null);
         if (file === 'MobileMenu') { links[0].props.onClick(); assert.equal(nodes(Component({})).some(n => n.props?.href === '/jobs'), false); }
       }
     }
