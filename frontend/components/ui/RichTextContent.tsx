@@ -1,63 +1,63 @@
+import styles from './RichTextContent.module.css';
+
 const richTextClasses = `
-  max-w-none
-  text-sm
-  leading-7
-  text-slate-600
-  sm:text-base
-  sm:leading-8
-  max-md:[overflow-wrap:anywhere]
+  prose prose-slate max-w-none min-w-0
+  text-sm sm:text-base text-black leading-relaxed
+  [overflow-wrap:anywhere]
+  max-md:[&_h2]:text-center max-md:[&_h2]:text-balance
 
-  [&_p]:my-4
+  [&_p]:mb-4
+  [&_p:last-child]:mb-0
+  [&_p]:text-black
 
-  [&_strong]:font-extrabold
-  [&_strong]:text-slate-900
+  [&_strong]:font-bold
+  [&_strong]:text-black
 
   [&_em]:italic
-  [&_em]:text-slate-700
+  [&_em]:text-black
 
+  [&_u]:underline
   [&_u]:decoration-2
   [&_u]:underline-offset-2
 
-  [&_s]:text-slate-500
+  [&_s]:line-through
+  [&_del]:line-through
 
-  [&_a]:font-bold
-  [&_a]:text-[#1A669A]
-  [&_a]:underline
+  [&_a]:font-extrabold
+  [&_a]:cursor-pointer
   [&_a]:decoration-2
-  [&_a]:decoration-[#1A669A]/40
   [&_a]:underline-offset-4
   [&_a]:transition-colors
-  hover:[&_a]:text-[#C82024]
-  hover:[&_a]:decoration-[#C82024]
 
   [&_h2]:mt-10
   [&_h2]:mb-4
-  [&_h2]:text-2xl
+  [&_h2]:text-xl
   [&_h2]:font-extrabold
-  [&_h2]:leading-tight
+  [&_h2]:leading-snug
   [&_h2]:tracking-tight
-  [&_h2]:text-slate-900
-  sm:[&_h2]:text-3xl
+  [&_h2]:text-black
+  sm:[&_h2]:text-2xl
+  md:[&_h2]:text-3xl
 
   [&_h3]:mt-8
   [&_h3]:mb-3
   [&_h3]:text-xl
   [&_h3]:font-extrabold
   [&_h3]:leading-snug
-  [&_h3]:text-[#1A669A]
-  sm:[&_h3]:text-2xl
+  [&_h3]:text-black
 
-  [&_ul]:my-6
+  [&_ul]:my-5
   [&_ul]:list-disc
   [&_ul]:space-y-2
   [&_ul]:pl-7
 
-  [&_ol]:my-6
+  [&_ol]:my-5
   [&_ol]:list-decimal
   [&_ol]:space-y-2
   [&_ol]:pl-7
 
-  [&_li]:pl-1
+  [&_li]:my-1
+  [&_li]:text-black
   [&_li]:leading-7
 
   [&_li::marker]:font-extrabold
@@ -128,7 +128,9 @@ const richTextClasses = `
   [&_hr]:border-slate-200
 
   [&_sub]:text-xs
+  [&_sub]:align-sub
   [&_sup]:text-xs
+  [&_sup]:align-super
 
   [&_img]:h-auto
   [&_img]:max-w-full
@@ -136,8 +138,9 @@ const richTextClasses = `
 
   max-md:[&_table]:block
   max-md:[&_table]:overflow-x-auto
+  max-md:[&_table]:max-w-full
 `;
 
 export default function RichTextContent({ html, className = '' }: { html: string; className?: string }) {
-  return <div className={`${richTextClasses} ${className}`} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div className={`${styles.content} ${richTextClasses} ${className}`} dangerouslySetInnerHTML={{ __html: html }} />;
 }

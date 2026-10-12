@@ -121,7 +121,7 @@ test('validation error resets Turnstile; recorded mail failure prevents duplicat
 });
 
 test('localized pages render, closed job hides form, shared rich text preserves HTML', async () => {
-  const rich = load('components/ui/RichTextContent.tsx').default({ html: base.content });
+  const rich = load('components/ui/RichTextContent.tsx', { './RichTextContent.module.css': { default: { content: 'cms-rich-text' } } }).default({ html: base.content });
   assert.equal(rich.props.dangerouslySetInnerHTML.__html, base.content);
   assert.match(rich.props.className, /\[&_table\]/);
   const routing = load('i18n/config.ts', { 'next-intl/routing': { defineRouting: value => value } }).routing;

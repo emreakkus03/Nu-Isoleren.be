@@ -462,7 +462,7 @@
       "description": "Bekijk onze richtprijs voor spouwmuurisolatie en gebruik onze gratis tools om uw mogelijke energiebesparing, EPC-waarde of geschikte werken voor uw woning te verkennen.",
       "price": {
         "title": "Prijs spouwmuurisolatie",
-        "description": "Spouwmuurisolatie kost indicatief €21 tot €25 per m². Bekijk de richtprijs en ontdek welke factoren de uiteindelijke prijs bepalen.",
+        "description": "Spouwmuurisolatie kost indicatief €21 tot €25 per m² excl. btw. Bekijk de richtprijs en ontdek welke factoren de uiteindelijke prijs bepalen.",
         "cta": "Bekijk de richtprijs"
       },
       "savings": {
@@ -484,13 +484,13 @@
     "servicePrices": {
       "badge": "PRIJS SPOUWMUURISOLATIE",
       "title": "Wat kost spouwmuurisolatie?",
-      "description": "Voor spouwmuurisolatie hanteren we doorgaans een richtprijs van €21 tot €25 per m². De exacte prijs hangt onder andere af van de oppervlakte, de breedte en toestand van de spouw en de bereikbaarheid van de gevel.",
+      "description": "Voor spouwmuurisolatie hanteren we doorgaans een richtprijs van €21 tot €25 per m² excl. btw. De exacte prijs hangt onder andere af van de oppervlakte, de breedte en toestand van de spouw en de bereikbaarheid van de gevel.",
       "calculate": "Vraag gratis offerte",
       "service": "Bekijk spouwmuurisolatie",
       "disclaimer": "De prijs voor spouwmuurisolatie is een indicatieve richtprijs. Voor alle werkzaamheden bepalen we de definitieve prijs op basis van de specifieke situatie van uw woning en project.",
       "cavityWall": {
         "title": "Spouwmuurisolatie",
-        "price": "€21 – €25 per m²"
+        "price": "€21 – €25 per m² excl. btw"
       },
       "otherWorks": {
         "title": "Prijs voor andere werkzaamheden",
@@ -505,7 +505,7 @@
       "items": {
         "ranges": {
           "title": "Richtprijs waar mogelijk",
-          "description": "Voor spouwmuurisolatie kunnen we een indicatieve richtprijs van €21 tot €25 per m² meegeven."
+          "description": "Voor spouwmuurisolatie kunnen we een indicatieve richtprijs van €21 tot €25 per m² excl. btw meegeven."
         },
         "project": {
           "title": "Afgestemd op de situatie",
@@ -520,12 +520,12 @@
     "examples": {
       "badge": "PRIJSVOORBEELD",
       "title": "Wat kost 100 m² spouwmuurisolatie?",
-      "description": "Bij een richtprijs van €21 tot €25 per m² komt 100 m² spouwmuurisolatie indicatief uit op ongeveer €2.100 tot €2.500. De definitieve prijs kan verschillen door de technische situatie van de woning en de uitvoering.",
+      "description": "Bij een richtprijs van €21 tot €25 per m² excl. btw komt 100 m² spouwmuurisolatie indicatief uit op ongeveer €2.100 tot €2.500 excl. btw. De definitieve prijs kan verschillen door de technische situatie van de woning en de uitvoering.",
       "cavityWall": {
         "title": "Spouwmuurisolatie",
         "example": "Voorbeeld: 100 m²",
-        "price": "€2.100 – €2.500",
-        "calculation": "100 m² × €21 – €25 per m²"
+        "price": "€2.100 – €2.500 excl. btw",
+        "calculation": "100 m² × €21 – €25 per m² excl. btw"
       },
       "cta": "Vraag gratis offerte",
       "disclaimer": "Indicatief voorbeeld. De exacte prijs hangt af van uw woning en project."

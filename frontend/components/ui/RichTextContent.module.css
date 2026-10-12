@@ -1,0 +1,25 @@
+.content {
+  --cms-link-color: #1A669A;
+  --cms-link-active-color: #C82024;
+}
+
+.content a {
+  color: var(--cms-link-color) !important;
+  text-decoration-line: underline;
+  text-decoration-color: currentColor !important;
+}
+
+.content a:hover,
+.content a:focus {
+  color: var(--cms-link-active-color) !important;
+}
+
+.content a:focus-visible {
+  outline: 2px solid var(--cms-link-active-color);
+  outline-offset: 3px;
+}
+
+.content a * {
+  color: inherit !important;
+  text-decoration-color: currentColor !important;
+}

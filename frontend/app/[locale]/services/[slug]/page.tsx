@@ -1,3 +1,4 @@
+import RichTextContent from '@/components/ui/RichTextContent';
 import { normalizeRichTextHtml as localizeRichTextHtml } from '@/lib/rich-text-links';
 import type { Locale, RouteKey } from '@/lib/seo/urls';
 import JsonLd from '@/components/seo/JsonLd';
@@ -197,38 +198,7 @@ const formatIntroParagraphs = (rawText: string) => {
   return rawText;
 };
 
-const RICH_TEXT_CLASSES = `
-  prose prose-slate max-w-none max-md:[overflow-wrap:anywhere] max-md:[&_img]:max-w-full max-md:[&_table]:block max-md:[&_table]:overflow-x-auto max-md:[&_h2]:text-center max-md:[&_h2]:text-balance
-  text-sm sm:text-base
-  text-black
-  leading-relaxed
 
-  [&_p]:mb-4
-  [&_p:last-child]:mb-0
-  [&_p]:text-black
-
-  [&_strong]:font-bold
-  [&_strong]:text-black
-
-  [&_em]:text-black
-
-  [&_ul]:my-5
-  [&_ol]:my-5
-  [&_li]:my-1
-  [&_li]:text-black
-
-  [&_a]:font-extrabold
-  [&_a]:text-[#1A669A]
-  [&_a]:underline
-  [&_a]:decoration-2
-  [&_a]:decoration-[#1A669A]
-  [&_a]:underline-offset-4
-  [&_a]:cursor-pointer
-  [&_a]:transition-colors
-
- [&_a:hover]:text-[#C82024]
-[&_a:hover]:decoration-[#C82024]
-`;
 
 const splitHrefSuffix = (href: string) => {
   const match = href.match(/^([^?#]*)(.*)$/);
@@ -457,14 +427,8 @@ function ContentBlockRenderer({
       }
 
       return (
-        <div
-          className={RICH_TEXT_CLASSES}
-          dangerouslySetInnerHTML={{
-            __html: localizeRichTextHtml(
-              data.content,
-              locale,
-            ),
-          }}
+        <RichTextContent
+          html={localizeRichTextHtml(data.content, locale)}
         />
       );
     }
@@ -505,14 +469,8 @@ function ContentBlockRenderer({
             }
           >
             {data.content && (
-              <div
-                className={RICH_TEXT_CLASSES}
-                dangerouslySetInnerHTML={{
-                  __html: localizeRichTextHtml(
-                    data.content,
-                    locale,
-                  ),
-                }}
+              <RichTextContent
+                html={localizeRichTextHtml(data.content, locale)}
               />
             )}
           </div>
@@ -1046,14 +1004,8 @@ function ContentBlockRenderer({
           )}
 
           {data.content && (
-            <div
-              className={RICH_TEXT_CLASSES}
-              dangerouslySetInnerHTML={{
-                __html: localizeRichTextHtml(
-                  data.content,
-                  locale,
-                ),
-              }}
+            <RichTextContent
+              html={localizeRichTextHtml(data.content, locale)}
             />
           )}
 
@@ -1429,16 +1381,12 @@ export default async function ServiceDetailPage({
             </h1>
 
             {service.intro_text && (
-              <div
-                className={`${RICH_TEXT_CLASSES} [overflow-wrap:anywhere]`}
-                dangerouslySetInnerHTML={{
-                  __html: localizeRichTextHtml(
-                    formatIntroParagraphs(
-                      service.intro_text,
-                    ),
-                    locale,
-                  ),
-                }}
+              <RichTextContent
+                className="[overflow-wrap:anywhere]"
+                html={localizeRichTextHtml(
+                  formatIntroParagraphs(service.intro_text),
+                  locale,
+                )}
               />
             )}
           </div>
@@ -1519,14 +1467,9 @@ export default async function ServiceDetailPage({
                         )}
 
                         {section.body && (
-                          <div
-                            className={`${RICH_TEXT_CLASSES} mb-6`}
-                            dangerouslySetInnerHTML={{
-                              __html: localizeRichTextHtml(
-                                section.body,
-                                locale,
-                              ),
-                            }}
+                          <RichTextContent
+                            className="mb-6"
+                            html={localizeRichTextHtml(section.body, locale)}
                           />
                         )}
 

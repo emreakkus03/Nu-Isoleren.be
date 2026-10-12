@@ -462,7 +462,7 @@
       "description": "Consultez notre prix indicatif pour l’isolation des murs creux et utilisez nos outils gratuits pour explorer vos économies d’énergie potentielles, votre valeur PEB ou les travaux adaptés à votre habitation.",
       "price": {
         "title": "Prix de l’isolation des murs creux",
-        "description": "L’isolation des murs creux coûte à titre indicatif entre 21 € et 25 € par m². Consultez ce prix indicatif et découvrez les facteurs qui déterminent le prix final.",
+        "description": "L’isolation des murs creux coûte à titre indicatif entre 21 € et 25 € par m² hors TVA. Consultez ce prix indicatif et découvrez les facteurs qui déterminent le prix final.",
         "cta": "Voir le prix indicatif"
       },
       "savings": {
@@ -484,13 +484,13 @@
     "servicePrices": {
       "badge": "PRIX DE L’ISOLATION DES MURS CREUX",
       "title": "Combien coûte l’isolation des murs creux ?",
-      "description": "Pour l’isolation des murs creux, nous appliquons généralement un prix indicatif de 21 € à 25 € par m². Le prix exact dépend notamment de la surface, de la largeur et de l’état de la coulisse ainsi que de l’accessibilité de la façade.",
+      "description": "Pour l’isolation des murs creux, nous appliquons généralement un prix indicatif de 21 € à 25 € par m² hors TVA. Le prix exact dépend notamment de la surface, de la largeur et de l’état de la coulisse ainsi que de l’accessibilité de la façade.",
       "calculate": "Demander un devis gratuit",
       "service": "Découvrir l’isolation des murs creux",
       "disclaimer": "Le prix de l’isolation des murs creux est donné à titre indicatif. Pour tous les travaux, nous déterminons le prix définitif en fonction de la situation spécifique de votre habitation et de votre projet.",
       "cavityWall": {
         "title": "Isolation des murs creux",
-        "price": "21 € – 25 € par m²"
+        "price": "21 € – 25 € par m² hors TVA"
       },
       "otherWorks": {
         "title": "Prix des autres travaux",
@@ -505,7 +505,7 @@
       "items": {
         "ranges": {
           "title": "Un prix indicatif lorsque c’est possible",
-          "description": "Pour l’isolation des murs creux, nous pouvons communiquer un prix indicatif de 21 € à 25 € par m²."
+          "description": "Pour l’isolation des murs creux, nous pouvons communiquer un prix indicatif de 21 € à 25 € par m² hors TVA."
         },
         "project": {
           "title": "Adapté à la situation",
@@ -520,12 +520,12 @@
     "examples": {
       "badge": "EXEMPLE DE PRIX",
       "title": "Combien coûte l’isolation de 100 m² de murs creux ?",
-      "description": "Avec un prix indicatif de 21 € à 25 € par m², l’isolation de 100 m² de murs creux revient à environ 2 100 € à 2 500 €. Le prix définitif peut varier selon la situation technique de l’habitation et la mise en œuvre.",
+      "description": "Avec un prix indicatif de 21 € à 25 € par m² hors TVA, l’isolation de 100 m² de murs creux revient à environ 2 100 € à 2 500 € hors TVA. Le prix définitif peut varier selon la situation technique de l’habitation et la mise en œuvre.",
       "cavityWall": {
         "title": "Isolation des murs creux",
         "example": "Exemple : 100 m²",
-        "price": "2.100 € – 2.500 €",
-        "calculation": "100 m² × 21 € – 25 € par m²"
+        "price": "2.100 € – 2.500 € hors TVA",
+        "calculation": "100 m² × 21 € – 25 € par m² hors TVA"
       },
       "cta": "Demander un devis gratuit",
       "disclaimer": "Exemple indicatif. Le prix exact dépend de votre habitation et de votre projet."

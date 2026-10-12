@@ -461,7 +461,7 @@
       "description": "View our guide price for cavity wall insulation and use our free tools to explore your potential energy savings, EPC rating or suitable improvements for your home.",
       "price": {
         "title": "Cavity wall insulation price",
-        "description": "Cavity wall insulation typically costs €21 to €25 per m². View the guide price and find out which factors determine the final cost.",
+        "description": "Cavity wall insulation typically costs €21 to €25 per m² excl. VAT. View the guide price and find out which factors determine the final cost.",
         "cta": "View the guide price"
       },
       "savings": {
@@ -483,13 +483,13 @@
     "servicePrices": {
       "badge": "CAVITY WALL INSULATION PRICE",
       "title": "How much does cavity wall insulation cost?",
-      "description": "For cavity wall insulation, our usual guide price is €21 to €25 per m². The exact price depends on factors such as the surface area, the width and condition of the cavity and access to the façade.",
+      "description": "For cavity wall insulation, our usual guide price is €21 to €25 per m² excl. VAT. The exact price depends on factors such as the surface area, the width and condition of the cavity and access to the façade.",
       "calculate": "Request a free quote",
       "service": "View cavity wall insulation",
       "disclaimer": "The cavity wall insulation price is an indicative guide price. For all services, we determine the final price based on the specific circumstances of your home and project.",
       "cavityWall": {
         "title": "Cavity wall insulation",
-        "price": "€21 – €25 per m²"
+        "price": "€21 – €25 per m² excl. VAT"
       },
       "otherWorks": {
         "title": "Pricing for other services",
@@ -504,7 +504,7 @@
       "items": {
         "ranges": {
           "title": "A guide price where possible",
-          "description": "For cavity wall insulation, we can provide an indicative guide price of €21 to €25 per m²."
+          "description": "For cavity wall insulation, we can provide an indicative guide price of €21 to €25 per m² excl. VAT."
         },
         "project": {
           "title": "Tailored to the situation",
@@ -519,12 +519,12 @@
     "examples": {
       "badge": "PRICE EXAMPLE",
       "title": "How much does 100 m² of cavity wall insulation cost?",
-      "description": "At a guide price of €21 to €25 per m², 100 m² of cavity wall insulation comes to approximately €2,100 to €2,500. The final price may vary depending on the technical condition of the home and the installation work.",
+      "description": "At a guide price of €21 to €25 per m² excl. VAT, 100 m² of cavity wall insulation comes to approximately €2,100 to €2,500 excl. VAT. The final price may vary depending on the technical condition of the home and the installation work.",
       "cavityWall": {
         "title": "Cavity wall insulation",
         "example": "Example: 100 m²",
-        "price": "€2,100 – €2,500",
-        "calculation": "100 m² × €21 – €25 per m²"
+        "price": "€2,100 – €2,500 excl. VAT",
+        "calculation": "100 m² × €21 – €25 per m² excl. VAT"
       },
       "cta": "Request a free quote",
       "disclaimer": "Indicative example. The exact price depends on your home and project."
