@@ -4,6 +4,9 @@ export const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content
 export function recruitmentSource(params: Record<string, string | string[] | undefined>): Record<string, string> {
   return Object.fromEntries(utmKeys.flatMap(key => typeof params[key] === 'string' ? [[key, params[key].slice(0, 255)]] : []));
 }
+export function vacancyPublishedIn(vacancy: Pick<Vacancy, 'published_locales'>, locale: string): boolean {
+  return !vacancy.published_locales || vacancy.published_locales.some(published => published === locale);
+}
 export function vacancyOpen(vacancy: Pick<Vacancy, 'is_open' | 'valid_through' | 'status' | 'published_at'>): boolean {
   const now = Date.now();
   return vacancy.status === 'published' && vacancy.published_at !== null &&

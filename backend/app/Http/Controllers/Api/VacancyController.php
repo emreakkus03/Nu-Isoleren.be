@@ -22,7 +22,7 @@ class VacancyController extends Controller
     public function show(Request $request, string $slug): JsonResponse
     {
         $locale = ContentSeo::locale((string) $request->query('locale', 'nl'));
-        $records = Vacancy::whereIn('status', ['published', 'closed'])->where('published_at', '<=', now())
+        $records = Vacancy::publishedIn($locale)->whereIn('status', ['published', 'closed'])->where('published_at', '<=', now())
             ->where("slug->{$locale}", $slug)->limit(2)->get();
         abort_unless($records->count() === 1, 404);
         $vacancy = $records->first();
@@ -42,6 +42,7 @@ class VacancyController extends Controller
     private function format(Vacancy $vacancy, string $locale): array
     {
         return [
+            'published_locales' => $vacancy->publishedLocales(),
             'id' => $vacancy->id, 'status' => $vacancy->status, 'is_open' => $vacancy->isOpen(),
             'title' => $vacancy->getTranslation('title', $locale, false),
             'slug' => $vacancy->getTranslation('slug', $locale, false),

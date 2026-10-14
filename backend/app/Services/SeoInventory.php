@@ -13,7 +13,7 @@ final class SeoInventory
             $entries = [];
             foreach (ContentSeo::MODELS as $type => $model) {
                 $fields = match ($type) {
-                    'vacancies' => ['title', 'content', 'short_description', 'valid_through'],
+                    'vacancies' => ['title', 'content', 'short_description', 'valid_through', 'published_locales'],
                     'cities' => ['hero_title', 'local_content'],
                     'projects' => ['title', 'description'],
                     'articles' => ['title', 'intro'],

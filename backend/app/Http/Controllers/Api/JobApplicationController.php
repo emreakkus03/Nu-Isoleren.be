@@ -32,7 +32,7 @@ class JobApplicationController extends Controller
         }
         $application = DB::transaction(function () use ($data, $locale, $vacancy, $request, $answers): JobApplication {
             $current = Vacancy::whereKey($vacancy->id)->lockForUpdate()->firstOrFail();
-            if (! $current->isOpen()) {
+            if (! $current->isOpen() || ! isset(ContentSeo::slugs($current)[$locale])) {
                 throw ValidationException::withMessages(['vacancy' => __('recruitment.closed', [], $locale)]);
             }
             $snapshots = $answers->snapshots($current, $data['answers'], $locale);

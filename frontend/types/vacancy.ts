@@ -9,6 +9,7 @@ export interface VacancyQuestion {
   options: { value: string; label: string }[];
 }
 export interface Vacancy {
+  published_locales?: Locale[];
   id: number; status: 'draft' | 'published' | 'closed'; is_open: boolean;
   title: string; slug: string; short_description: string; content: string;
   meta_title: string | null; meta_description: string | null;

@@ -281,3 +281,43 @@ for (const locale of ['nl', 'fr', 'en']) test(`application ${locale}: only HTTP 
     }
   } finally { global.fetch = previousFetch; }
 });
+
+test('published locales gate listings, detail metadata/alternates and JobPosting without hiding legacy multilingual jobs', async () => {
+  const routing = load('i18n/config.ts', { 'next-intl/routing': { defineRouting: value => value } }).routing;
+  const apiVacancy = { ...base, published_locales: ['nl'] };
+  const loaders = load('lib/vacancies.ts', {
+    'server-only': {}, react: { cache: fn => fn }, '@/lib/recruitment': helpers,
+    './cms-rich-text': { localizeCmsRichText: async value => value },
+    '@/lib/content-api': { contentRequest: async path => ({ status: 200, json: async () => ({ data: path.includes('/vacancies?') ? [apiVacancy, base] : { ...apiVacancy } }) }) },
+  });
+  assert.equal((await loaders.getVacancies('nl')).length, 2);
+  assert.equal((await loaders.getVacancies('fr')).length, 1);
+  assert.equal((await loaders.getVacancies('en')).length, 1);
+  assert.equal(await loaders.getVacancy('fr', 'fr-test'), null);
+  assert.equal(await loaders.getVacancy('en', 'en-test'), null);
+  const vacancy = await loaders.getVacancy('nl', 'nl-test');
+  assert.deepEqual(vacancy.alternate_slugs, { nl: 'nl-test' });
+  assert.equal(helpers.vacancyPublishedIn({ published_locales: ['nl', 'fr'] }, 'fr'), true);
+  assert.equal(helpers.vacancyPublishedIn({ published_locales: [] }, 'nl'), false);
+  const metadata = load('lib/seo/metadata.ts', {
+    './config': { indexingEnabled: () => true, siteOrigin: () => 'https://www.nu-isoleren.be' },
+    './urls': { languageTags: { nl: 'nl-BE', fr: 'fr-BE', en: 'en' }, localizedPath: (route, locale, slug) => `/${locale}${routing.pathnames[route][locale].replace('[slug]', slug)}` },
+    './inventory': {},
+  }).pageMetadata('/jobs/[slug]', 'nl', {}, { slugs: vacancy.alternate_slugs });
+  assert.deepEqual(metadata.alternates.languages, { 'nl-BE': 'https://www.nu-isoleren.be/nl/vacatures/nl-test', 'x-default': 'https://www.nu-isoleren.be/nl/vacatures/nl-test' });
+  const schema = load('lib/seo/job-schema.ts', {
+    'server-only': {}, './config': { siteOrigin: () => 'https://www.nu-isoleren.be', publicImage: () => undefined },
+    './schema': { businessSchema: async () => ({ '@id': 'https://www.nu-isoleren.be/#organization' }) },
+    './urls': { localizedPath: (_route, locale, slug) => `/${locale}/jobs/${slug}` }, '@/lib/recruitment': helpers,
+  }).jobSchema;
+  assert.equal(await schema(apiVacancy, 'fr'), null);
+  assert.equal((await schema(apiVacancy, 'nl'))['@type'], 'JobPosting');
+  const sitemap = await load('app/sitemap.ts', {
+    '@/i18n/routing': { routing }, '@/lib/seo/config': { indexingEnabled: () => true, siteOrigin: () => 'https://www.nu-isoleren.be' },
+    '@/lib/seo/inventory': { getSeoInventory: async () => [{ type: 'vacancies', id: 1, slugs: vacancy.alternate_slugs, is_indexable: true }] },
+    '@/lib/seo/urls': { contentRoutes: { vacancies: '/jobs/[slug]' }, languageTags: { nl: 'nl-BE', fr: 'fr-BE', en: 'en' }, localizedPath: (route, locale, slug) => { const pathname = routing.pathnames[route]; return `/${locale}${(typeof pathname === 'string' ? pathname : pathname[locale]).replace('[slug]', slug ?? '')}`; } },
+  }).default();
+  const details = sitemap.filter(item => item.url.includes('nl-test'));
+  assert.equal(details.length, 1);
+  assert.deepEqual(Object.keys(details[0].alternates.languages), ['nl-BE', 'x-default']);
+});

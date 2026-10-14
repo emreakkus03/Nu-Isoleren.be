@@ -49,6 +49,9 @@ final class ContentSeo
             default => ['slug', 'name', 'intro_text'],
         };
         $query = self::publicQuery($type);
+        if ($type === 'vacancies') {
+            $query->publishedIn($locale);
+        }
         foreach ($fields as $field) {
             $query->whereNotNull("{$field}->{$locale}")->where("{$field}->{$locale}", '!=', '');
         }
@@ -60,6 +63,9 @@ final class ContentSeo
     {
         $result = [];
         foreach (self::LOCALES as $locale) {
+            if ($record instanceof Vacancy && ! $record->isPublishedIn($locale)) {
+                continue;
+            }
             if ($record instanceof City) {
                 $slug = $record->slug;
                 $title = $record->getTranslation('hero_title', $locale, false);

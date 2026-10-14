@@ -27,7 +27,11 @@ class VacancyForm
     {
         return $schema->components([
             Section::make('Algemeen')->columns(2)->schema([
-                Select::make('status')->label('Status')->options(Vacancy::STATUSES)->default('draft')->required(),
+                Select::make('status')->label('Status')->options(Vacancy::STATUSES)->default('draft')->required()->live(),
+                Select::make('published_locales')->label('Gepubliceerde talen')->options(Vacancy::LOCALES)->multiple()->default(array_keys(Vacancy::LOCALES))->live()
+                    ->required(fn (Get $get): bool => $get('status') === 'published')
+                    ->rules(['array'])
+                    ->nestedRecursiveRules([Rule::in(array_keys(Vacancy::LOCALES))]),
                 TextInput::make('region')->label('Regio')->required()->maxLength(255),
                 Select::make('employment_type')->label('Samenwerkingstype')->options(Vacancy::EMPLOYMENT_TYPES)->required(),
                 DateTimePicker::make('published_at')->label('Publicatiedatum')->seconds(false),
@@ -49,33 +53,44 @@ class VacancyForm
                     Toggle::make('active')->label('Actief')->default(true),
                     Toggle::make('show_in_email_subject')->label('In mailonderwerp')->default(false),
                     Tabs::make('Vraagvertalingen')->tabs(array_map(fn (string $locale): Tab => Tab::make(strtoupper($locale))->schema([
-                        TextInput::make("question.$locale")->label('Vraag')->required($locale === 'nl')->maxLength(500),
+                        TextInput::make("question.$locale")->label('Vraag')->required(fn (Get $get): bool => self::requiresTranslation($get, $locale))->maxLength(500),
                         Textarea::make("help_text.$locale")->label('Helptekst')->maxLength(1000),
                     ]), ['nl', 'fr', 'en']))->columnSpanFull(),
                     Repeater::make('options')->label('Keuzes')->visible(fn (Get $get): bool => in_array($get('type'), ['single_choice', 'multiple_choice'], true))->required(fn (Get $get): bool => in_array($get('type'), ['single_choice', 'multiple_choice'], true))->minItems(1)->schema([
                         TextInput::make('value')->label('Vaste interne waarde')->required()->regex('/^[a-zA-Z0-9_-]+$/')->maxLength(80)->distinct(),
-                        TextInput::make('labels.nl')->label('Label NL')->required()->maxLength(255),
-                        TextInput::make('labels.fr')->label('Label FR')->maxLength(255),
-                        TextInput::make('labels.en')->label('Label EN')->maxLength(255),
+                        TextInput::make('labels.nl')->label('Label NL')->required(fn (Get $get): bool => self::requiresTranslation($get, 'nl'))->maxLength(255),
+                        TextInput::make('labels.fr')->label('Label FR')->required(fn (Get $get): bool => self::requiresTranslation($get, 'fr'))->maxLength(255),
+                        TextInput::make('labels.en')->label('Label EN')->required(fn (Get $get): bool => self::requiresTranslation($get, 'en'))->maxLength(255),
                     ])->columnSpanFull(),
                 ])->columns(2)->columnSpanFull(),
             ])->columnSpanFull(),
         ]);
     }
 
+    private static function requiresTranslation(Get $get, string $locale): bool
+    {
+        return $get('data.status', true) === 'published'
+            && in_array($locale, $get('data.published_locales', true) ?? [], true);
+    }
+
     private static function translation(string $locale): Tab
     {
         return Tab::make(strtoupper($locale))->schema([
-            TextInput::make("title.$locale")->label('Titel')->required($locale === 'nl')->maxLength(255)->live(onBlur: true)
+            TextInput::make("title.$locale")->label('Titel')->required(fn (Get $get): bool => self::requiresTranslation($get, $locale))->maxLength(255)->live(onBlur: true)
                 ->afterStateUpdated(function (?string $state, Set $set, string $operation) use ($locale): void {
                     if ($operation === 'create') {
                         $set("slug.$locale", Str::slug($state ?? ''));
                     }
                 }),
-            TextInput::make("slug.$locale")->label('Slug')->required($locale === 'nl')->maxLength(255)->regex('/^[a-z0-9]+(?:-[a-z0-9]+)*$/')
+            TextInput::make("slug.$locale")->label('Slug')->required(fn (Get $get): bool => self::requiresTranslation($get, $locale))->maxLength(255)->regex('/^[a-z0-9]+(?:-[a-z0-9]+)*$/')
                 ->rules(fn (?Vacancy $record): array => [Rule::unique('vacancies', "slug->$locale")->ignore($record?->id)]),
-            Textarea::make("short_description.$locale")->label('Korte omschrijving')->required($locale === 'nl')->maxLength(2000),
-            RichEditor::make("content.$locale")->label('Inhoud')->required($locale === 'nl')->columnSpanFull(),
+            Textarea::make("short_description.$locale")->label('Korte omschrijving')->required(fn (Get $get): bool => self::requiresTranslation($get, $locale))->maxLength(2000),
+            RichEditor::make("content.$locale")->label('Inhoud')->required(fn (Get $get): bool => self::requiresTranslation($get, $locale))
+                ->rules(fn (Get $get): array => self::requiresTranslation($get, $locale) ? [function (string $attribute, mixed $value, \Closure $fail): void {
+                    if (is_string($value) && trim(str_replace("\u{00A0}", ' ', html_entity_decode(strip_tags($value)))) === '' && ! preg_match('/<(?:img|table)\b/i', $value)) {
+                        $fail(__('validation.required', ['attribute' => 'Inhoud']));
+                    }
+                }] : [])->columnSpanFull(),
             TextInput::make("meta_title.$locale")->label('SEO-titel')->maxLength(255),
             Textarea::make("meta_description.$locale")->label('SEO-omschrijving')->maxLength(500),
         ]);

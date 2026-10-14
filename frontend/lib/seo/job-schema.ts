@@ -2,11 +2,11 @@ import 'server-only';
 import { publicImage, siteOrigin } from './config';
 import { localizedPath } from './urls';
 import { businessSchema } from './schema';
-import { vacancyOpen } from '@/lib/recruitment';
+import { vacancyOpen, vacancyPublishedIn } from '@/lib/recruitment';
 import type { Vacancy } from '@/types/vacancy';
 export async function jobSchema(vacancy: Vacancy, locale: string) {
   const origin = siteOrigin();
-  if (!origin || !vacancyOpen(vacancy) || !vacancy.is_indexable || !vacancy.published_at) return null;
+  if (!origin || !vacancyPublishedIn(vacancy, locale) || !vacancyOpen(vacancy) || !vacancy.is_indexable || !vacancy.published_at) return null;
   const business = await businessSchema();
   if (!business) return null;
   return {
