@@ -54,7 +54,7 @@ class LeadsAppTest extends TestCase
     {
         $payload = ['first_name' => 'Ada', 'last_name' => 'Tester', 'email' => 'ada@example.test', 'phone' => '+32000000000', 'message' => $message, 'locale' => 'nl'];
         if ($type === 'contact') {
-            return $payload + ['privacy_accepted' => true, 'city' => 'Hamme'];
+            return $payload + ['privacy_accepted' => true, 'city' => 'Sint-Niklaas'];
         }
         $ids = Service::withoutEvents(function (): array {
             return collect(['Spouwmuurisolatie', 'Crepi'])->map(fn (string $name): int => Service::create([
@@ -125,7 +125,7 @@ class LeadsAppTest extends TestCase
             $this->assertSame([
                 'name' => 'Ada Tester', 'email' => 'ada@example.test', 'phone' => '+32000000000', 'company' => '',
                 'address' => $type === 'quote' ? 'Teststraat 12 A' : '',
-                'postal' => $type === 'quote' ? '9220' : '', 'place' => $type === 'quote' ? 'Hamme' : '',
+                'postal' => $type === 'quote' ? '9220' : '', 'place' => $type === 'quote' ? 'Hamme' : 'Sint-Niklaas',
                 'message' => $type === 'quote' ? "Diensten: Spouwmuurisolatie, Crepi\n\nOpmerking:\nDit is mijn vraag." : 'Dit is mijn vraag.',
                 'sender' => 'test-configured-sender',
             ], $request->data());

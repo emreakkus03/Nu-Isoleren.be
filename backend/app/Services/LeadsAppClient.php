@@ -44,7 +44,7 @@ final class LeadsAppClient
             'company' => '',
             'address' => $lead instanceof QuoteRequest ? trim($lead->street.' '.$lead->house_number) : '',
             'postal' => $lead instanceof QuoteRequest ? $lead->postcode : '',
-            'place' => $lead instanceof QuoteRequest ? $lead->city : '',
+            'place' => $lead instanceof QuoteRequest ? $lead->city : (string) $lead->city,
             'message' => $message,
             'sender' => config('services.leads_app.sender'),
         ];
