@@ -344,6 +344,7 @@
         "lastName": "Nom *",
         "email": "Adresse e-mail *",
         "phone": "Numéro de téléphone *",
+        "city": "Ville / commune",
         "message": "Votre message *"
       },
       "placeholders": {
@@ -351,7 +352,11 @@
         "lastName": "Nom",
         "email": "nom@email.be",
         "phone": "+32 ...",
+        "city": "Ville / commune",
         "message": "Expliquez-nous brièvement votre question ou votre projet..."
+      },
+      "errors": {
+        "cityRequired": "Veuillez indiquer votre ville ou commune."
       },
       "privacyPrefix": "J’ai lu la",
       "privacyLink": "politique de confidentialité",

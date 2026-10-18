@@ -35,6 +35,7 @@ class StoreContactSubmissionRequest extends FormRequest
                 'string',
                 'max:50',
             ],
+            'city' => ['required', 'string', 'max:255'],
             'message' => [
                 'required',
                 'string',
@@ -62,11 +63,16 @@ class StoreContactSubmissionRequest extends FormRequest
     }
 
     public function messages(): array
-{
-    return [
-        'message.required' => 'Gelieve een bericht in te vullen.',
-        'message.min' => 'Het bericht moet minstens 10 tekens bevatten.',
-        'message.max' => 'Het bericht mag maximaal 5000 tekens bevatten.',
-    ];
-}
+    {
+        return [
+            'city.required' => match ($this->input('locale')) {
+                'fr' => 'Veuillez indiquer votre ville ou commune.',
+                'en' => 'Please enter your city or municipality.',
+                default => 'Vul uw woonplaats in.',
+            },
+            'message.required' => 'Gelieve een bericht in te vullen.',
+            'message.min' => 'Het bericht moet minstens 10 tekens bevatten.',
+            'message.max' => 'Het bericht mag maximaal 5000 tekens bevatten.',
+        ];
+    }
 }

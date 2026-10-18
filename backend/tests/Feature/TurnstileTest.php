@@ -39,7 +39,7 @@ class TurnstileTest extends TestCase
     {
         $data = ['first_name' => 'Ada', 'last_name' => 'Test', 'email' => 'ada@example.test', 'phone' => '123', 'message' => 'Een testaanvraag.', 'locale' => 'nl', 'turnstile_token' => 'test-token'];
         if ($type === 'contact') {
-            return $data + ['privacy_accepted' => true];
+            return $data + ['privacy_accepted' => true, 'city' => 'Hamme'];
         }
         $service = Service::withoutEvents(fn () => Service::create(['name' => ['nl' => 'Isolatie'], 'slug' => ['nl' => 'isolatie'], 'badge' => ['nl' => 'Isolatie'], 'is_active' => true]));
 

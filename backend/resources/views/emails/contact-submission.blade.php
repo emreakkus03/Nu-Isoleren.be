@@ -50,6 +50,15 @@
 
                 <tr>
                     <td style="padding:10px 0;font-weight:bold;">
+                        Woonplaats
+                    </td>
+                    <td style="padding:10px 0;">
+                        {{ $submission->city ?: 'Niet opgegeven' }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding:10px 0;font-weight:bold;">
                         Taal
                     </td>
                     <td style="padding:10px 0;">

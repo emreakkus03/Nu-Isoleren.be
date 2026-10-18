@@ -344,6 +344,7 @@
         "lastName": "Achternaam *",
         "email": "E-mailadres *",
         "phone": "Telefoonnummer *",
+        "city": "Woonplaats",
         "message": "Uw bericht *"
       },
       "placeholders": {
@@ -351,7 +352,11 @@
         "lastName": "Achternaam",
         "email": "naam@email.be",
         "phone": "+32 ...",
+        "city": "Woonplaats",
         "message": "Vertel ons kort over uw vraag of project..."
+      },
+      "errors": {
+        "cityRequired": "Vul uw woonplaats in."
       },
       "privacyPrefix": "Ik heb het",
       "privacyLink": "privacybeleid gelezen",

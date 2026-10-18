@@ -1,5 +1,7 @@
 import { routing } from './i18n/config';
+
 import type { NextConfig } from 'next';
+
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextIntlPlugin = createNextIntlPlugin();
@@ -30,7 +32,9 @@ const nextConfig: NextConfig = {
 
           const sourcePath = `/${locale}${key.replace('[slug]', ':slug')}`;
           const destinationPath = `/${locale}${destination.replace('[slug]', ':slug')}`;
-          const normalize = (path: string) => path.replace(/\/+/g, '/').replace(/\/$/, '') || '/';
+
+          const normalize = (path: string) =>
+            path.replace(/\/+/g, '/').replace(/\/$/, '') || '/';
 
           if (normalize(sourcePath) === normalize(destinationPath)) return [];
 
@@ -105,6 +109,121 @@ const nextConfig: NextConfig = {
         destination: '/nl/diensten/spouwmuurisolatie',
         permanent: true,
       },
+
+      {
+        source: '/home',
+        destination: '/nl',
+        permanent: true,
+      },
+      {
+        source: '/spouwmuurisolatie-de-pinte',
+        destination: '/nl/diensten/spouwmuurisolatie',
+        permanent: true,
+      },
+      {
+        source: '/spouwmuurisolatie-haaltert',
+        destination: '/nl/diensten/spouwmuurisolatie',
+        permanent: true,
+      },
+      {
+        source: '/spouwmuurisolatie-ninove',
+        destination: '/nl/diensten/spouwmuurisolatie',
+        permanent: true,
+      },
+      {
+        source: '/spouwmuurisolatie-destelbergen',
+        destination: '/nl/diensten/spouwmuurisolatie',
+        permanent: true,
+      },
+      {
+        source: '/muurisolatie-muur-isoleren',
+        destination: '/nl/diensten',
+        permanent: true,
+      },
+      {
+        source: '/muurisolatie-muur-isoleren/:path*',
+        destination: '/nl/diensten',
+        permanent: true,
+      },
+      {
+        source: '/vergeet-de-koude-tijden-met-effectieve-muurisolatie',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source: '/buitenmuurisolatie-met-crepi',
+        destination: '/nl/diensten/crepi',
+        permanent: true,
+      },
+      {
+        source: '/buitengevelisolatie-met-crepi-isoleren',
+        destination: '/nl/diensten/crepi',
+        permanent: true,
+      },
+      {
+        source: '/eps-parels-polystyreen-korrels',
+        destination: '/nl/eps-isolatie',
+        permanent: true,
+      },
+      {
+        source: '/spouwmuurisolatie-prijs-kosten',
+        destination:
+          '/nl/kennisbank/wat-kost-spouwmuurisolatie-in-2026-prijs-per-m2-totale-kost-besparing',
+        permanent: true,
+      },
+      {
+        source:
+          '/spouwmuur-reinigen-spouwvervuiling-verwijderen-te-bonheiden',
+        destination: '/nl/diensten/spouwmuurisolatie-verwijderen',
+        permanent: true,
+      },
+      {
+        source:
+          '/realisatie-134m-eps-isomo-pearls-spouwmuurisolatie-te-bonheiden',
+        destination: '/nl/realisaties',
+        permanent: true,
+      },
+      {
+        source: '/gemeenten-spouwmuurisolatie-oost-vlaanderen',
+        destination: '/nl/werkgebieden',
+        permanent: true,
+      },
+      {
+        source: '/gemeenten-spouwmuurisolatie-oost-vlaanderen/:path*',
+        destination: '/nl/werkgebieden',
+        permanent: true,
+      },
+      {
+        source: '/spouwmuurisolatie-spouwmuur-isoleren',
+        destination: '/nl/diensten/spouwmuurisolatie',
+        permanent: true,
+      },
+      {
+        source: '/dakisolatie-dak-isoleren',
+        destination: '/nl/diensten/dakisolatie',
+        permanent: true,
+      },
+      {
+        source: '/soorten-isolatie',
+        destination: '/nl/kennisbank',
+        permanent: true,
+      },
+      {
+        source: '/spouwmuurisolatie-antwerpen',
+        destination: '/nl/werkgebieden/antwerpen',
+        permanent: true,
+      },
+      {
+        source: '/spouwmuurisolatie-vlaams-brabant',
+        destination: '/nl/werkgebieden',
+        permanent: true,
+      },
+      {
+        source: '/spouwmuurisolatie-west-vlaanderen',
+        destination: '/nl/werkgebieden',
+        permanent: true,
+      },
+
       {
         source: '/isolatie-aalst',
         destination: '/nl/werkgebieden/aalst',

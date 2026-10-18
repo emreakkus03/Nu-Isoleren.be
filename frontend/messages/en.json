@@ -343,6 +343,7 @@
         "lastName": "Last name *",
         "email": "Email address *",
         "phone": "Phone number *",
+        "city": "City / municipality",
         "message": "Your message *"
       },
       "placeholders": {
@@ -350,7 +351,11 @@
         "lastName": "Last name",
         "email": "name@email.com",
         "phone": "+32 ...",
+        "city": "City / municipality",
         "message": "Tell us briefly about your question or project..."
+      },
+      "errors": {
+        "cityRequired": "Please enter your city or municipality."
       },
       "privacyPrefix": "I have read the",
       "privacyLink": "privacy policy",

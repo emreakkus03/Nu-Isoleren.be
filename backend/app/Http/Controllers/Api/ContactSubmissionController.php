@@ -31,6 +31,7 @@ class ContactSubmissionController extends Controller
             'last_name' => $validated['last_name'],
             'email' => $validated['email'],
             'phone' => $validated['phone'] ?? null,
+            'city' => $validated['city'],
             'message' => $validated['message'],
             'locale' => $validated['locale'],
             'source' => $validated['source'] ?? 'contact_page',

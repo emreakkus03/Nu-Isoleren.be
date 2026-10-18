@@ -54,7 +54,7 @@ class LeadsAppTest extends TestCase
     {
         $payload = ['first_name' => 'Ada', 'last_name' => 'Tester', 'email' => 'ada@example.test', 'phone' => '+32000000000', 'message' => $message, 'locale' => 'nl'];
         if ($type === 'contact') {
-            return $payload + ['privacy_accepted' => true];
+            return $payload + ['privacy_accepted' => true, 'city' => 'Hamme'];
         }
         $ids = Service::withoutEvents(function (): array {
             return collect(['Spouwmuurisolatie', 'Crepi'])->map(fn (string $name): int => Service::create([

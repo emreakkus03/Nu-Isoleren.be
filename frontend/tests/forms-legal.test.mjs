@@ -21,7 +21,7 @@ for (const kind of ['contact', 'quote']) for (const locale of ['nl', 'fr', 'en']
     const state = []; let cursor = 0; const navigations = []; let requests = 0; let resolveResponse;
     const previousFetch = global.fetch; const previousApi = process.env.NEXT_PUBLIC_API_URL;
     process.env.NEXT_PUBLIC_API_URL = 'https://api.example.test';
-    global.fetch = async (_url, options) => { requests++; assert.equal(JSON.parse(options.body).locale, locale); assert.equal(JSON.parse(options.body).turnstile_token, enabled ? 'test-token' : undefined); return new Promise(resolve => { resolveResponse = resolve; }); };
+    global.fetch = async (_url, options) => { requests++; assert.equal(JSON.parse(options.body).locale, locale); if (kind === 'contact') assert.equal(JSON.parse(options.body).city, 'Hamme'); assert.equal(JSON.parse(options.body).turnstile_token, enabled ? 'test-token' : undefined); return new Promise(resolve => { resolveResponse = resolve; }); };
     const hooks = {
       useState: initial => { const index = cursor++; if (!(index in state)) state[index] = initial; return [state[index], value => { state[index] = typeof value === 'function' ? value(state[index]) : value; }]; },
       useRef: initial => { const index = cursor++; return state[index] ??= { current: initial }; },
@@ -37,6 +37,7 @@ for (const kind of ['contact', 'quote']) for (const locale of ['nl', 'fr', 'en']
     try {
       let nodes = render();
       nodes.find(node => node.type === 'input' && node.props.type === 'checkbox').props.onChange({ target: { checked: true } });
+      if (kind === 'contact') nodes.find(node => node.props?.name === 'city').props.onChange({ target: { value: '  Hamme  ' }, currentTarget: { setCustomValidity() {} } });
       for (const response of [{ ok: false, body: { success: false } }, { ok: true, body: { success: false } }, { ok: true, body: { success: true } }]) {
         if (enabled) {
           nodes = render();
@@ -103,5 +104,49 @@ test('application thank-you content, CTA and localized routes exist in every loc
     assert.deepEqual(metadata.robots, { index: false, follow: true });
     assert.equal(metadata.route, '/thank-you/application');
     assert.equal(walk(await page.default({ params: Promise.resolve({ locale }) }))[0].props.kind, 'application');
+  }
+});
+
+for (const [locale, label, requiredMessage] of [
+  ['nl', 'Woonplaats', 'Vul uw woonplaats in.'],
+  ['fr', 'Ville / commune', 'Veuillez indiquer votre ville ou commune.'],
+  ['en', 'City / municipality', 'Please enter your city or municipality.'],
+]) test(`contact ${locale}: city label, required feedback, position and JSON payload`, async () => {
+  const messages = JSON.parse(fs.readFileSync(new URL(`../messages/${locale}.json`, import.meta.url)));
+  const previousFetch = global.fetch; const previousApi = process.env.NEXT_PUBLIC_API_URL;
+  const slots = []; let cursor = 0; const sent = []; const navigations = [];
+  process.env.NEXT_PUBLIC_API_URL = 'https://api.example.test';
+  global.fetch = async (_url, options) => { sent.push(JSON.parse(options.body)); return { ok: true, status: 201, json: async () => ({ success: true }) }; };
+  const Component = load('components/contact/ContactForm.tsx', {
+    react: {
+      useState: initial => { const i = cursor++; if (!(i in slots)) slots[i] = initial; return [slots[i], value => { slots[i] = typeof value === 'function' ? value(slots[i]) : value; }]; },
+      useRef: initial => { const i = cursor++; return slots[i] ??= { current: initial }; },
+    },
+    'next-intl': { useLocale: () => locale, useTranslations: namespace => key => (namespace + '.' + key).split('.').reduce((value, part) => value[part], messages) },
+    '@/i18n/routing': { Link: 'a', useRouter: () => ({ replace: route => navigations.push(route) }) },
+    '@/components/ui/Turnstile': { default: 'turnstile-widget', turnstileEnabled: false },
+  }).default;
+  function render() { cursor = 0; return walk(Component()); }
+  try {
+    let tree = render();
+    const city = tree.find(node => node.type === 'input' && node.props.name === 'city');
+    assert.ok(tree.some(node => node.type === 'label' && node.props.htmlFor === 'city' && node.props.children.includes(label)));
+    assert.equal(city.props.required, true); assert.equal(city.props.autoComplete, 'address-level2'); assert.equal(city.props.maxLength, 255);
+    assert.equal(city.props.className, tree.find(node => node.props?.name === 'phone').props.className);
+    assert.ok(tree.indexOf(city) < tree.findIndex(node => node.type === 'textarea'));
+    tree.find(node => node.type === 'input' && node.props.type === 'checkbox').props.onChange({ target: { checked: true } });
+    await render().find(node => node.type === 'form').props.onSubmit({ preventDefault() {} });
+    assert.equal(sent.length, 0);
+    tree = render(); assert.ok(tree.some(node => node.props?.role === 'alert' && node.props.children === requiredMessage));
+    let nativeMessage;
+    city.props.onInvalid({ currentTarget: { value: '', setCustomValidity: value => { nativeMessage = value; } } });
+    assert.equal(nativeMessage, requiredMessage);
+    city.props.onChange({ target: { value: '  Sint-Niklaas  ' }, currentTarget: { setCustomValidity() {} } });
+    await render().find(node => node.type === 'form').props.onSubmit({ preventDefault() {} });
+    assert.equal(sent[0].city, 'Sint-Niklaas'); assert.equal(sent[0].locale, locale);
+    assert.deepEqual(navigations, ['/thank-you/contact']);
+  } finally {
+    global.fetch = previousFetch;
+    if (previousApi === undefined) delete process.env.NEXT_PUBLIC_API_URL; else process.env.NEXT_PUBLIC_API_URL = previousApi;
   }
 });

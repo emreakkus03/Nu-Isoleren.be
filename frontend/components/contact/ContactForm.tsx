@@ -10,6 +10,7 @@ interface ContactFormData {
   last_name: string;
   email: string;
   phone: string;
+  city: string;
   message: string;
   privacy_accepted: boolean;
 }
@@ -19,6 +20,7 @@ const initialFormData: ContactFormData = {
   last_name: '',
   email: '',
   phone: '',
+  city: '',
   message: '',
   privacy_accepted: false,
 };
@@ -38,6 +40,8 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] =
     useState(false);
 
+  const [cityError, setCityError] = useState(false);
+
   const [securityFailed, setSecurityFailed] = useState(false);
 
   const [status, setStatus] = useState<
@@ -53,6 +57,8 @@ export default function ContactForm() {
       [field]: value,
     }));
 
+    if (field === 'city') setCityError(false);
+
     if (status !== 'idle') {
       setStatus('idle');
     }
@@ -66,6 +72,11 @@ export default function ContactForm() {
     if (turnstileEnabled && !turnstileToken) return;
 
     if (!formData.privacy_accepted) {
+      return;
+    }
+
+    if (!formData.city.trim()) {
+      setCityError(true);
       return;
     }
 
@@ -94,6 +105,7 @@ export default function ContactForm() {
           body: JSON.stringify({
             ...(turnstileEnabled ? { turnstile_token: turnstileToken } : {}),
             ...formData,
+            city: formData.city.trim(),
             locale,
             source: 'contact_page',
           }),
@@ -242,6 +254,36 @@ export default function ContactForm() {
             )}
           />
         </div>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <label htmlFor="city" className="text-sm font-bold text-gray-900">
+          {t('fields.city')} *
+        </label>
+        <input
+          id="city"
+          name="city"
+          type="text"
+          required
+          maxLength={255}
+          autoComplete="address-level2"
+          value={formData.city}
+          onChange={(event) => {
+            event.currentTarget.setCustomValidity('');
+            handleChange('city', event.target.value);
+          }}
+          onInvalid={(event) => {
+            if (!event.currentTarget.value.trim()) {
+              event.currentTarget.setCustomValidity(t('errors.cityRequired'));
+              setCityError(true);
+            }
+          }}
+          aria-invalid={cityError || undefined}
+          aria-describedby={cityError ? 'city_error' : undefined}
+          className={inputClasses}
+          placeholder={t('placeholders.city')}
+        />
+        {cityError && <p id="city_error" role="alert" className="text-sm font-medium text-red-800">{t('errors.cityRequired')}</p>}
       </div>
 
       <div className="flex flex-col gap-2">
