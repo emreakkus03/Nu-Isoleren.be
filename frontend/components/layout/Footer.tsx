@@ -4,7 +4,16 @@ import { getTranslations } from 'next-intl/server';
 
 import { Link } from '@/i18n/routing';
 import { getServices } from '@/lib/services';
+import { getSocialLinks } from '@/lib/socialLinks';
 import GoogleReviews from '@/components/layout/GoogleReviews';
+
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedinIn,
+} from 'react-icons/fa6';
 
 interface FooterProps {
   locale: string;
@@ -61,80 +70,6 @@ function ArrowRightIcon() {
   );
 }
 
-function FacebookIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-5 w-5 sm:h-6 sm:w-6"
-      aria-hidden="true"
-    >
-      <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.7.3-1 1-1Z" />
-    </svg>
-  );
-}
-
-function InstagramIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-5 w-5 sm:h-6 sm:w-6"
-      aria-hidden="true"
-    >
-      <rect
-        x="3"
-        y="3"
-        width="18"
-        height="18"
-        rx="5"
-      />
-
-      <circle
-        cx="12"
-        cy="12"
-        r="4"
-      />
-
-      <circle
-        cx="17.5"
-        cy="6.5"
-        r="1"
-        fill="currentColor"
-        stroke="none"
-      />
-    </svg>
-  );
-}
-
-function LinkedInIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      className="h-5 w-5 sm:h-6 sm:w-6"
-      aria-hidden="true"
-    >
-      <rect
-        x="3"
-        y="9"
-        width="4"
-        height="12"
-      />
-
-      <path d="M5 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
-
-      <path d="M11 21V9h4v2c1-1.5 2.5-2.5 4.5-2.5 3 0 4.5 2 4.5 5.5v7h-4v-6.5c0-1.8-.7-2.8-2.2-2.8-1.7 0-2.8 1.2-2.8 3.3v6Z" />
-    </svg>
-  );
-}
-
 export default async function Footer({
   locale,
 }: FooterProps) {
@@ -147,14 +82,12 @@ export default async function Footer({
     getServices(locale),
   ]);
 
-  const facebookUrl =
-    process.env.NEXT_PUBLIC_FACEBOOK_URL;
-
-  const instagramUrl =
-    process.env.NEXT_PUBLIC_INSTAGRAM_URL;
-
-  const linkedinUrl =
-    process.env.NEXT_PUBLIC_LINKEDIN_URL;
+const {
+  facebook: facebookUrl,
+  instagram: instagramUrl,
+  youtube: youtubeUrl,
+  linkedin: linkedinUrl,
+} = getSocialLinks(locale);
 
   return (
     <footer className="w-full bg-[#EEF2F4] text-slate-950">
@@ -208,43 +141,51 @@ export default async function Footer({
                 {t('description')}
               </p>
 
-              <div className="mt-5 flex items-center gap-3">
-                {facebookUrl && (
-                  <a
-                    href={facebookUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="transition hover:text-[#C82024]"
-                  >
-                    <FacebookIcon />
-                  </a>
-                )}
+              
 
-                {instagramUrl && (
-                  <a
-                    href={instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="transition hover:text-[#C82024]"
-                  >
-                    <InstagramIcon />
-                  </a>
-                )}
+<div className="mt-5 flex items-center gap-2.5">
+  {[
+    {
+      name: 'Facebook',
+      url: facebookUrl,
+      Icon: FaFacebookF,
+    },
+    {
+      name: 'Instagram',
+      url: instagramUrl,
+      Icon: FaInstagram,
+    },
+    {
+      name: 'YouTube',
+      url: youtubeUrl,
+      Icon: FaYoutube,
+    },
+    {
+      name: 'LinkedIn',
+      url: linkedinUrl,
+      Icon: FaLinkedinIn,
+    },
+  ]
+    .filter((social) => Boolean(social.url))
+    .map(({ name, url, Icon }) => (
+      <a
+        key={name}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Nu-Isoleren.be op ${name}`}
+        title={name}
+        className="group flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-800 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#C82024] hover:bg-[#C82024] hover:text-white hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A669A]"
+      >
+        <Icon
+          aria-hidden="true"
+          className="h-5 w-5"
+        />
+      </a>
+    ))}
+</div>
 
-                {linkedinUrl && (
-                  <a
-                    href={linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    className="transition hover:text-[#C82024]"
-                  >
-                    <LinkedInIcon />
-                  </a>
-                )}
-              </div>
+
             </div>
 
             <div>

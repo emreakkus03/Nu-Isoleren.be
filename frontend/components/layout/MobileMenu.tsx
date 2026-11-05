@@ -1,23 +1,27 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Link, usePathname } from '@/i18n/routing';
-import { useTranslations } from 'next-intl';
-import LanguageSwitcher from './LanguageSwitcher';
-import Image from 'next/image';
-import VacancyBadge from '@/components/jobs/VacancyBadge';
+import { useState, useEffect } from "react";
+import { Link, usePathname } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
+import Image from "next/image";
+import VacancyBadge from "@/components/jobs/VacancyBadge";
 
-export default function MobileMenu({ vacancyCount = 0 }: { vacancyCount?: number }) {
+export default function MobileMenu({
+  vacancyCount = 0,
+}: {
+  vacancyCount?: number;
+}) {
   const [isOpen, setIsOpen] = useState(false);
-  const t = useTranslations('Header');
-  const tFloating = useTranslations('Floating');
+  const t = useTranslations("Header");
+  const tFloating = useTranslations("Floating");
 
   const pathname = usePathname();
-  const jobs = useTranslations('Jobs');
+  const jobs = useTranslations("Jobs");
 
   const isActive = (href: string) => {
-    if (href === '/') {
-      return pathname === '/';
+    if (href === "/") {
+      return pathname === "/";
     }
     return pathname === href || pathname.startsWith(`${href}/`);
   };
@@ -25,188 +29,275 @@ export default function MobileMenu({ vacancyCount = 0 }: { vacancyCount?: number
   const getMainLinkClasses = (href: string) => {
     const active = isActive(href);
     return `border-b border-gray-100 pb-2 transition flex items-center justify-between ${
-      active ? 'text-[#C82024] font-bold' : 'text-gray-900 hover:text-[#C82024]'
+      active ? "text-[#C82024] font-bold" : "text-gray-900 hover:text-[#C82024]"
     }`;
   };
 
   const getSubLinkClasses = (href: string) => {
     const active = isActive(href);
     return `transition flex items-center justify-between ${
-      active ? 'text-[#C82024] font-bold' : 'text-gray-500 hover:text-gray-900'
+      active ? "text-[#C82024] font-bold" : "text-gray-500 hover:text-gray-900"
     }`;
   };
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
-    return () => { document.body.style.overflow = 'unset'; };
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, [isOpen]);
 
   const closeMenu = () => setIsOpen(false);
 
-  const company = useTranslations('General.company');
-  const rawPhoneNumber = company('phoneHref');
+  const company = useTranslations("General.company");
+  const rawPhoneNumber = company("phoneHref");
 
   return (
     <>
-      <button 
+      <button
         onClick={() => setIsOpen(true)}
         className="p-2 -ml-2 text-gray-900 focus-visible:outline-2 focus-visible:outline-[#1A669A]"
-        aria-label={t('menuOpen')}
+        aria-label={t("menuOpen")}
         aria-expanded={isOpen}
       >
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16" />
+        <svg
+          className="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2.5}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
         </svg>
       </button>
 
       {isOpen && (
         <div className="fixed inset-0 bg-white z-[100] flex flex-col overflow-y-auto">
           <div className="flex justify-end p-6">
-            <button aria-label={t('menuClose')} onClick={closeMenu} className="p-2 text-gray-500 hover:text-red-600">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <button
+              aria-label={t("menuClose")}
+              onClick={closeMenu}
+              className="p-2 text-gray-500 hover:text-red-600"
+            >
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
 
           <div className="flex flex-col px-8 pb-12 gap-8">
-            <nav className="flex flex-col gap-6 text-xl font-bold text-gray-900">
-              <Link 
-                href="/" 
-                onClick={closeMenu} 
-                className={getMainLinkClasses('/')}
+            <Link
+              href="/quote"
+              onClick={closeMenu}
+              className="flex min-h-14 items-center justify-center gap-2 rounded-full bg-[#C82024] px-5 py-4 text-center text-lg font-bold text-white shadow-sm transition-colors hover:bg-[#AD1B20] active:bg-[#99171B] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A669A]"
+            >
+              <span>{t("mainbar.cta")}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
               >
-                <span>{t('mainbar.home')}</span>
-                {isActive('/') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </Link>
+
+            <nav className="flex flex-col gap-6 text-xl font-bold text-gray-900">
+              <Link
+                href="/"
+                onClick={closeMenu}
+                className={getMainLinkClasses("/")}
+              >
+                <span>{t("mainbar.home")}</span>
+                {isActive("/") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
 
-              <Link 
-                href="/services" 
-                onClick={closeMenu} 
-                className={getMainLinkClasses('/services')}
+              <Link
+                href="/services"
+                onClick={closeMenu}
+                className={getMainLinkClasses("/services")}
               >
                 <span className="flex items-center gap-2">
-                  {t('mainbar.services')}
-                  <Image src="/icons/red-arrow-down.svg" alt="Arrow" width={20} height={20} className="-rotate-90" />
+                  {t("mainbar.services")}
+                  <Image
+                    src="/icons/red-arrow-down.svg"
+                    alt="Arrow"
+                    width={20}
+                    height={20}
+                    className="-rotate-90"
+                  />
                 </span>
-                {isActive('/services') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                {isActive("/services") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
 
-              <Link 
-                href="/projects" 
-                onClick={closeMenu} 
-                className={getMainLinkClasses('/projects')}
+              <Link
+                href="/projects"
+                onClick={closeMenu}
+                className={getMainLinkClasses("/projects")}
               >
-                <span>{t('mainbar.projects')}</span>
-                {isActive('/projects') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                <span>{t("mainbar.projects")}</span>
+                {isActive("/projects") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
 
-              <Link 
-                href="/prices" 
-                onClick={closeMenu} 
-                className={getMainLinkClasses('/prices')}
+              <Link
+                href="/prices"
+                onClick={closeMenu}
+                className={getMainLinkClasses("/prices")}
               >
-                <span>{t('mainbar.pricing')}</span>
-                {isActive('/prices') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                <span>{t("mainbar.pricing")}</span>
+                {isActive("/prices") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
 
-              <Link 
-                href="/knowledge" 
-                onClick={closeMenu} 
-                className={getMainLinkClasses('/knowledge')}
+              <Link
+                href="/knowledge"
+                onClick={closeMenu}
+                className={getMainLinkClasses("/knowledge")}
               >
-                <span>{t('mainbar.knowledgeBase')}</span>
-                {isActive('/knowledge') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                <span>{t("mainbar.knowledgeBase")}</span>
+                {isActive("/knowledge") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
-              <Link href="/jobs" onClick={closeMenu} aria-current={isActive('/jobs') ? 'page' : undefined} className={`min-h-11 gap-3 focus-visible:outline-2 focus-visible:outline-[#1A669A] ${getMainLinkClasses('/jobs')}`}>
-                <span>{jobs('title')}</span><VacancyBadge count={vacancyCount} />
+              <Link
+                href="/jobs"
+                onClick={closeMenu}
+                aria-current={isActive("/jobs") ? "page" : undefined}
+                className={`min-h-11 gap-3 focus-visible:outline-2 focus-visible:outline-[#1A669A] ${getMainLinkClasses("/jobs")}`}
+              >
+                <span>{jobs("title")}</span>
+                <VacancyBadge count={vacancyCount} />
               </Link>
             </nav>
 
             <nav className="flex flex-col gap-4 text-gray-500 font-medium mt-2">
-              <Link 
-                href="/areas" 
-                onClick={closeMenu} 
-                className={getSubLinkClasses('/areas')}
+              <Link
+                href="/areas"
+                onClick={closeMenu}
+                className={getSubLinkClasses("/areas")}
               >
-                <span>{t('topbar.serviceAreas')}</span>
-                {isActive('/areas') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                <span>{t("topbar.serviceAreas")}</span>
+                {isActive("/areas") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
 
-              <Link 
-                href="/about" 
-                onClick={closeMenu} 
-                className={getSubLinkClasses('/about')}
+              <Link
+                href="/about"
+                onClick={closeMenu}
+                className={getSubLinkClasses("/about")}
               >
-                <span>{t('topbar.aboutUs')}</span>
-                {isActive('/about') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                <span>{t("topbar.aboutUs")}</span>
+                {isActive("/about") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
 
-              <Link 
-                href="/grants" 
-                onClick={closeMenu} 
-                className={getSubLinkClasses('/grants')}
+              <Link
+                href="/grants"
+                onClick={closeMenu}
+                className={getSubLinkClasses("/grants")}
               >
-                <span>{t('topbar.grants')}</span>
-                {isActive('/grants') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                <span>{t("topbar.grants")}</span>
+                {isActive("/grants") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
 
-              <Link 
-                href="/faq" 
-                onClick={closeMenu} 
-                className={getSubLinkClasses('/faq')}
+              <Link
+                href="/faq"
+                onClick={closeMenu}
+                className={getSubLinkClasses("/faq")}
               >
-                <span>{t('topbar.faq')}</span>
-                {isActive('/faq') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                <span>{t("topbar.faq")}</span>
+                {isActive("/faq") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
 
-              <Link 
-                href="/contact" 
-                onClick={closeMenu} 
-                className={getSubLinkClasses('/contact')}
+              <Link
+                href="/contact"
+                onClick={closeMenu}
+                className={getSubLinkClasses("/contact")}
               >
-                <span>{t('topbar.contact')}</span>
-                {isActive('/contact') && <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />}
+                <span>{t("topbar.contact")}</span>
+                {isActive("/contact") && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C82024]" />
+                )}
               </Link>
             </nav>
 
             <div className="mt-2 flex flex-col gap-6">
               <div className="flex items-center justify-between border-t border-gray-100 pt-6">
-                <span className="text-gray-500 font-bold">{t('topbar.language')}</span>
+                <span className="text-gray-500 font-bold">
+                  {t("topbar.language")}
+                </span>
                 <LanguageSwitcher />
               </div>
-              
-              <Link 
-                href="/quote" 
-                onClick={closeMenu}
-                className="bg-[#C82024] text-white text-center py-4 rounded-full font-bold shadow-md hover:bg-red-800 transition text-lg"
-              >
-                {t('mainbar.cta')}
-              </Link>
 
               <div className="flex flex-col gap-3 bg-gray-50 rounded-2xl p-4 border border-gray-100">
-                <a 
+                <a
                   href={`tel:${rawPhoneNumber}`}
                   className="flex items-center gap-3 text-gray-800 hover:text-[#C82024] transition text-sm font-semibold"
                 >
                   <div className="w-9 h-9 rounded-full bg-[#C82024] shadow-sm flex items-center justify-center shrink-0">
-                    <Image src="/icons/phone.svg" alt="Phone" width={16} height={16} className="brightness-0 invert" />
+                    <Image
+                      src="/icons/phone.svg"
+                      alt="Phone"
+                      width={16}
+                      height={16}
+                      className="brightness-0 invert"
+                    />
                   </div>
-                  <span>{tFloating('number')}</span>
+                  <span>{tFloating("number")}</span>
                 </a>
 
-                <a 
-                  href={`mailto:${tFloating('mailAddress')}`}
+                <a
+                  href={`mailto:${tFloating("mailAddress")}`}
                   className="flex items-center gap-3 text-gray-800 hover:text-[#C82024] transition text-sm font-semibold"
                 >
                   <div className="w-9 h-9 rounded-full bg-[#C82024] shadow-sm flex items-center justify-center shrink-0">
-                    <Image src="/icons/mail.svg" alt="Mail" width={16} height={16} className="brightness-0 invert" />
+                    <Image
+                      src="/icons/mail.svg"
+                      alt="Mail"
+                      width={16}
+                      height={16}
+                      className="brightness-0 invert"
+                    />
                   </div>
-                  <span className="truncate">{tFloating('mailAddress')}</span>
+                  <span className="truncate">{tFloating("mailAddress")}</span>
                 </a>
               </div>
             </div>

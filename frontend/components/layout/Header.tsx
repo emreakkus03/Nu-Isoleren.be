@@ -74,7 +74,7 @@ export default async function Header() {
               {t("mainbar.cta")}
             </Link>
 
-            <div className="xl:hidden flex items-center">
+            <div className="lg:hidden flex items-center">
               <MobileMenu vacancyCount={vacancyCount} />
             </div>
           </div>

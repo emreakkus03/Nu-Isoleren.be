@@ -29,7 +29,7 @@ export default function TopbarNav({ vacancyCount = 0 }: { vacancyCount?: number 
   };
 
   return (
-    <nav className="hidden xl:flex items-center gap-3 lg:gap-6 font-medium text-xs lg:text-sm">
+    <nav className="hidden lg:flex items-center gap-3 lg:gap-6 font-medium text-xs lg:text-sm">
       {links.map((link) => {
         const active = isActive(link.href);
         return (

@@ -100,12 +100,14 @@
     "callDirect": "Call us",
   "askQuestion": "Ask a question"
   },
-  "Hero": {
-    "badge": "INSULATION • FAÇADES • MOISTURE CONTROL",
-    "title": "Make your home more comfortable, energy efficient, and better protected.",
-    "subtitle": "From cavity wall and roof insulation to render, facade cleaning, hydrofuge, and damp proofing.",
-    "cta": "View our services"
-  },
+  
+"Hero": {
+  "badge": "INSULATION • FACADES • MOISTURE CONTROL",
+  "title": "Insulation and facade work for a more comfortable home.",
+  "subtitle": "From cavity wall and roof insulation to exterior render, facade cleaning, water-repellent treatments and damp proofing. Solutions tailored to your home.",
+  "ctaPrimary": "Request your free quote",
+  "ctaSecondary": "Explore our services"
+},
   "ServicesSection": {
     "title": "Discover our solutions for your home",
     "subtitle": "From insulation and facade works to damp proofing: we offer a suitable solution for your home.",
@@ -206,7 +208,8 @@
     "ctaTitleWithService": "Interested in {service} in {city}?",
     "ctaTitleFallback": "Looking to insulate your property?",
     "ctaDescription": "Request a free, non-binding quote today. Our specialist will inspect your property and provide tailored advice.",
-    "ctaButton": "Request a free quote"
+    "ctaButton": "Request a free quote",
+    "descriptionTitle": "About this project"
   },
   "FaqPage": {
     "title": "Frequently asked questions about insulation and façade works",

@@ -30,7 +30,7 @@ export default function HeaderNav({ services = [] }: HeaderNavProps) {
   };
 
   return (
-    <nav className="hidden xl:flex justify-center items-center gap-5 font-medium text-gray-900 shrink-0 px-4">
+    <nav className="hidden lg:flex justify-center items-center gap-5 font-medium text-gray-900 shrink-0 px-4">
       <div className="relative group py-2">
         <Link
           href="/services"

@@ -130,7 +130,7 @@ export default async function ProjectDetailPage({
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
               <h2 className="text-xl font-extrabold text-slate-900 mb-4 max-md:text-balance max-md:[overflow-wrap:anywhere] max-md:w-full max-md:text-center">
-                Over dit project
+                {t("descriptionTitle")}
               </h2>
 
               {project.description ? (

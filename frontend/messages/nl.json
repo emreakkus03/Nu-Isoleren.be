@@ -101,12 +101,14 @@
     "callDirect": "Bel direct",
 "askQuestion": "Stel een vraag"
   },
-  "Hero": {
-    "badge": "ISOLATIE • GEVELWERKEN • VOCHTBESTRIJDING",
-    "title": "Maak uw woning comfortabeler, energiezuiniger en beter beschermd.",
-    "subtitle": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging, hydrofuge en vochtbestrijding.",
-    "cta": "Bekijk onze diensten"
-  },
+  
+"Hero": {
+  "badge": "ISOLATIE • GEVELWERKEN • VOCHTBESTRIJDING",
+  "title": "Isolatie en gevelwerken voor een comfortabelere woning.",
+  "subtitle": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging, hydrofuge en vochtbestrijding. Wij helpen u uw woning duurzaam te verbeteren.",
+  "ctaPrimary": "Vraag uw gratis offerte aan",
+  "ctaSecondary": "Bekijk onze diensten"
+},
   "ServicesSection": {
     "title": "Ontdek onze oplossingen voor uw woning",
     "subtitle": "Van isolatie en gevelwerken tot vochtbestrijding: wij bieden een passende oplossing voor uw woning.",
@@ -207,7 +209,8 @@
     "ctaTitleWithService": "Interesse in {service} in {city}?",
     "ctaTitleFallback": "Heeft uw woning ook nood aan isolatie?",
     "ctaDescription": "Vraag een gratis en vrijblijvende offerte aan voor uw project. Onze specialist komt bij u langs voor advies op maat.",
-    "ctaButton": "Vraag een gratis offerte aan"
+    "ctaButton": "Vraag een gratis offerte aan",
+    "descriptionTitle": "Over dit project"
   },
   "FaqPage": {
     "title": "Veelgestelde vragen over isolatie en gevelwerken",

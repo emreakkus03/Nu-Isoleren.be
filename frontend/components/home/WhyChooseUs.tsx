@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
@@ -14,69 +15,89 @@ export default function WhyChooseUs() {
   const t = useTranslations('WhyChooseUs');
 
   return (
-    <section className="w-full bg-white py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pb-16 max-md:pb-6 md:pb-20">
-  <div className="lg:col-span-6 flex flex-col items-center lg:items-start gap-3 md:gap-4 text-center lg:text-left">
-    <span className="text-md md:text-lg font-extrabold tracking-wider text-[#1A669A] uppercase">
-      {t('badge')}
-    </span>
+    <section className="w-full bg-white py-12 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 md:px-6">
+        <div className="grid grid-cols-1 items-start gap-6 pb-10 md:gap-8 md:pb-20 lg:grid-cols-12 lg:gap-12">
+          <div className="flex flex-col items-center gap-3 text-center lg:col-span-6 lg:items-start lg:gap-4 lg:text-left">
+            <span className="text-base font-extrabold uppercase tracking-wider text-[#1A669A] md:text-lg">
+              {t('badge')}
+            </span>
 
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15] max-md:text-balance max-md:[overflow-wrap:anywhere]">
-      {t('title')}
-    </h2>
-  </div>
+            <h2 className="text-balance text-[28px] font-extrabold leading-[1.15] tracking-tight text-gray-950 sm:text-4xl md:text-5xl">
+              {t('title')}
+            </h2>
+          </div>
 
-  <div className="lg:col-span-6 flex flex-col gap-5 text-gray-700 text-sm sm:text-base leading-relaxed">
-    <p className="text-left">
-      {t.rich('description', {
-        highlight: (chunks) => (
-          <span className="font-bold text-[#1A669A]">
-            {chunks}
-          </span>
-        ),
-      })}
-    </p>
+          <div className="flex flex-col gap-5 text-sm leading-relaxed text-gray-700 sm:text-base lg:col-span-6">
+            <p className="text-left">
+              {t.rich('description', {
+                highlight: (chunks) => (
+                  <span className="font-bold text-[#1A669A]">
+                    {chunks}
+                  </span>
+                ),
+              })}
+            </p>
 
-    <div className="flex justify-center lg:justify-start">
-      <Link
-        href="/about"
-        className="inline-flex items-center gap-2 text-[#C82024] hover:text-red-800 font-bold text-sm sm:text-base transition group"
-      >
-        <span className="underline underline-offset-4">
-          {t('cta')}
-        </span>
+            <div className="flex justify-start">
+              <Link
+                href="/about"
+                className="group inline-flex min-h-11 items-center gap-2 text-sm font-bold text-[#C82024] transition hover:text-red-800 sm:text-base"
+              >
+                <span className="underline underline-offset-4">
+                  {t('cta')}
+                </span>
 
-        <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
-          &rarr;
-        </span>
-      </Link>
-    </div>
-  </div>
-</div>
+                <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
+                  &rarr;
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 mt-4 md:mt-8">
+        <div className="mt-2 grid grid-cols-1 gap-3 md:mt-8 md:grid-cols-3 md:gap-8 lg:gap-12">
           {FEATURE_KEYS.map((key) => (
-            <div key={key} className="flex flex-col items-center text-center gap-4">
-              <div className="w-20 h-20 relative flex items-center justify-center shrink-0">
+            <div
+              key={key}
+              className="flex flex-row items-start gap-3.5 rounded-2xl border border-gray-100 bg-gray-50/70 p-4 md:flex-col md:items-center md:gap-4 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:text-center"
+            >
+              <div className="relative flex h-12 w-12 shrink-0 items-center justify-center md:h-20 md:w-20">
                 <Image
                   src={FEATURE_ICONS[key]}
-                  alt={t(`features.${key}.title`)}
-                  width={key === 'expertise' ? 406 : key === 'cleanWork' ? 507 : 327}
-                  height={key === 'expertise' ? 341 : key === 'cleanWork' ? 475 : 327}
-                  className={`h-auto object-contain transition-transform ${
-                    key === 'cleanWork' ? 'w-24 scale-150' : 'w-[72px]'
+                  alt=""
+                  aria-hidden="true"
+                  width={
+                    key === 'expertise'
+                      ? 406
+                      : key === 'cleanWork'
+                        ? 507
+                        : 327
+                  }
+                  height={
+                    key === 'expertise'
+                      ? 341
+                      : key === 'cleanWork'
+                        ? 475
+                        : 327
+                  }
+                  className={`h-12 w-12 object-contain md:h-auto ${
+                    key === 'cleanWork'
+                      ? 'md:w-24 md:scale-150'
+                      : 'md:w-[72px]'
                   }`}
                 />
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-gray-950 tracking-tight">
-                {t(`features.${key}.title`)}
-              </h3>
+              <div className="flex min-w-0 flex-1 flex-col gap-2 md:items-center md:gap-4">
+                <h3 className="text-base font-bold leading-snug tracking-tight text-gray-950 sm:text-lg md:text-xl lg:text-2xl">
+                  {t(`features.${key}.title`)}
+                </h3>
 
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-sm max-md:text-left">
-                {t(`features.${key}.description`)}
-              </p>
+                <p className="max-w-sm text-left text-sm leading-relaxed text-gray-600 md:text-center md:text-base">
+                  {t(`features.${key}.description`)}
+                </p>
+              </div>
             </div>
           ))}
         </div>

@@ -101,12 +101,14 @@
   "askQuestion": "Posez une question"
 
   },
-  "Hero": {
-    "badge": "ISOLATION • FAÇADES • TRAITEMENT DE L'HUMIDITÉ",
-    "title": "Rendez votre logement plus confortable, économe en énergie et mieux protégé.",
-    "subtitle": "De l'isolation des murs creux et toitures au crépi, nettoyage de façade, hydrofuge et humidité.",
-    "cta": "Découvrez nos services"
-  },
+  
+"Hero": {
+  "badge": "ISOLATION • FAÇADES • HUMIDITÉ",
+  "title": "Isolation et travaux de façade pour une maison plus confortable.",
+  "subtitle": "Isolation des murs creux et de toiture, crépi, nettoyage de façade, hydrofuge et traitement de l'humidité. Des solutions adaptées à votre habitation.",
+  "ctaPrimary": "Demandez votre devis gratuit",
+  "ctaSecondary": "Découvrez nos services"
+},
   "ServicesSection": {
     "title": "Découvrez nos solutions pour votre logement",
     "subtitle": "De l'isolation et façades au traitement de l'humidité : nous offrons une solution adaptée à votre bien.",
@@ -207,7 +209,8 @@
     "ctaTitleWithService": "Intéressé par {service} à {city} ?",
     "ctaTitleFallback": "Votre habitation a-t-elle besoin d'isolation ?",
     "ctaDescription": "Demandez un devis gratuit et sans engagement. Notre spécialiste se déplace pour un diagnostic thermique sur mesure.",
-    "ctaButton": "Demander un devis gratuit"
+    "ctaButton": "Demander un devis gratuit",
+    "descriptionTitle": "À propos de ce projet"
   },
   "FaqPage": {
     "title": "Questions fréquentes sur l’isolation et les travaux de façade",
