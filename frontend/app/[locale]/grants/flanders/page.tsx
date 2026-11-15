@@ -10,6 +10,7 @@ import FlandersEligibleWorks from '@/components/grants/flanders/FlandersEligible
 import FlandersGrantsApplication from '@/components/grants/flanders/FlandersGrantsApplication';
 import FlandersGrants2027 from '@/components/grants/flanders/FlandersGrants2027';
 import CtaBanner from '@/components/common/CtaBanner';
+import FlandersGrantsQuality from '@/components/grants/flanders/FlandersGrantsQuality';
 
 interface FlandersGrantsPageProps {
   params: Promise<{
@@ -50,6 +51,7 @@ export default async function FlandersGrantsPage({
         <FlandersGrantsIntro locale={locale} />
         <FlandersGrantsEligibility locale={locale} />
         <FlandersEligibleWorks locale={locale} />
+        <FlandersGrantsQuality locale={locale} />
         <FlandersGrantsApplication locale={locale} />
         <FlandersGrants2027 locale={locale} />
         <CtaBanner />

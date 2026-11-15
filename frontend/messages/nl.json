@@ -53,15 +53,14 @@
       "description": "De prijs van uw project hangt af van onder andere de oppervlakte, de staat van uw woning, het materiaal en de gekozen uitvoering. Bekijk onze richtprijs voor spouwmuurisolatie en gebruik onze gratis tools voor meer inzicht in uw woning."
     },
     "epcCalculator": {
-      "title": "EPC waarde berekenen | Gratis EPC calculator | Nu-Isoleren",
-      "description": "Bereken een indicatieve EPC-waarde van uw woning. Beantwoord enkele vragen over isolatie, ramen en verwarming en krijg direct een eerste EPC-inschatting."
-    },
+  "title": "EPC-waarde berekenen: gratis EPC-calculator | Nu-Isoleren",
+  "description": "Bereken gratis een indicatieve EPC-waarde van uw woning. Ontvang een geschatte energiescore en energielabel voor Vlaanderen, Brussel of Wallonië."
+},
     "knowledge": {
-    "title": "Kennisbank over isolatie & renovatie | Nu-Isoleren",
-    "description": "Praktische informatie en advies over isolatie, gevelwerken, vochtproblemen, premies en energiezuinig renoveren."
-  }
+      "title": "Kennisbank over isolatie & renovatie | Nu-Isoleren",
+      "description": "Praktische informatie en advies over isolatie, gevelwerken, vochtproblemen, premies en energiezuinig renoveren."
+    }
   },
-  
   "Breadcrumbs": {
     "home": "Home",
     "projects": "Realisaties",
@@ -99,16 +98,15 @@
     "phoneHref": "+3280063635",
     "mailAddress": "info@nu-isoleren.be",
     "callDirect": "Bel direct",
-"askQuestion": "Stel een vraag"
+    "askQuestion": "Stel een vraag"
   },
-  
-"Hero": {
-  "badge": "ISOLATIE • GEVELWERKEN • VOCHTBESTRIJDING",
-  "title": "Isolatie en gevelwerken voor een comfortabelere woning.",
-  "subtitle": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging, hydrofuge en vochtbestrijding. Wij helpen u uw woning duurzaam te verbeteren.",
-  "ctaPrimary": "Vraag uw gratis offerte aan",
-  "ctaSecondary": "Bekijk onze diensten"
-},
+  "Hero": {
+    "badge": "ISOLATIE • GEVELWERKEN • VOCHTBESTRIJDING",
+    "title": "Isolatie en gevelwerken voor een comfortabelere woning.",
+    "subtitle": "Van spouwmuurisolatie en dakisolatie tot crepi, gevelreiniging, hydrofuge en vochtbestrijding. Wij helpen u uw woning duurzaam te verbeteren.",
+    "ctaPrimary": "Vraag uw gratis offerte aan",
+    "ctaSecondary": "Bekijk onze diensten"
+  },
   "ServicesSection": {
     "title": "Ontdek onze oplossingen voor uw woning",
     "subtitle": "Van isolatie en gevelwerken tot vochtbestrijding: wij bieden een passende oplossing voor uw woning.",
@@ -157,8 +155,8 @@
     "cardTitle": "Welke werken wilt u laten uitvoeren?",
     "cta": "Ga verder",
     "services": {
-  "helpMeChoose": "Help mij kiezen"
-}
+      "helpMeChoose": "Help mij kiezen"
+    }
   },
   "WhyChooseUs": {
     "badge": "WAAROM KIEZEN VOOR ONS?",
@@ -262,74 +260,74 @@
     "meta_title": "Isolatie en gevelwerken in {city} | Nu-Isoleren",
     "meta_description": "Nu-Isoleren voert spouwmuurisolatie, dakisolatie, crepi, gevelreiniging, hydrofuge en vochtbestrijding uit in {city} en omgeving.",
     "services": {
-    "eyebrow": "ONZE DIENSTEN",
-    "title": "Isolatie- en gevelwerken in {city}",
-    "description": "Ontdek onze oplossingen voor isolatie, gevelwerken en vochtbestrijding in {city}. We bekijken per woning welke aanpak technisch het meest geschikt is."
-  },
-  "solutions": {
-  "eyebrow": "ISOLATIEOPLOSSINGEN",
-  "title": "Welke oplossing past bij uw woning?",
-  "link_label": "Bekijk deze dienst",
-  "cavity": {
-    "description": "Heeft uw woning een geschikte spouwmuur, dan kan spouwmuurisolatie een efficiënte manier zijn om warmteverlies via de buitenmuren te beperken."
-  },
-  "facade": {
-    "description": "Wanneer de buitengevel grondiger moet worden aangepakt, kunnen isolatieplaten langs de buitenzijde gecombineerd worden met een nieuwe crepiafwerking."
-  },
-  "roof": {
-    "description": "Via een slecht geïsoleerd dak kan veel warmte verloren gaan. Afhankelijk van de dakopbouw isoleren we onder meer met glaswol of PIR-isolatie."
-  }
-},
-"projects": {
-  "eyebrow": "REALISATIES",
-  "title": "Realisaties in {city}",
-  "description": "Bekijk enkele isolatie- en gevelwerken die Nu-Isoleren heeft uitgevoerd in {city}."
-},
-"grants": {
-  "eyebrow": "PREMIES & STEUN",
-  "flanders": {
-    "title": "Premies voor isolatiewerken in {city}",
-    "description": "Voor bepaalde isolatie- en renovatiewerken aan een woning in {city} kunnen Vlaamse premies of andere steunmaatregelen van toepassing zijn. De voorwaarden hangen onder meer af van het type werk, de woning en de geldende regelgeving.",
-    "button": "Bekijk premies in Vlaanderen"
-  },
-  "wallonia": {
-    "title": "Premies voor isolatiewerken in {city}",
-    "description": "Voor bepaalde isolatie- en renovatiewerken aan een woning in {city} kunnen Waalse premies of andere steunmaatregelen van toepassing zijn. De voorwaarden hangen af van het type werk, de woning en de geldende regelgeving.",
-    "button": "Bekijk premies in Wallonië"
-  }
-},
-"process": {
-  "eyebrow": "ONZE WERKWIJZE",
-  "title": "Van aanvraag tot uitvoering",
-  "description": "We begeleiden u stap voor stap, van de eerste aanvraag tot de uitvoering en oplevering van de werken.",
-  "steps": {
-    "request": {
-      "title": "Aanvraag",
-      "description": "U neemt contact met ons op en bezorgt ons de eerste informatie over uw woning en de gewenste werken."
+      "eyebrow": "ONZE DIENSTEN",
+      "title": "Isolatie- en gevelwerken in {city}",
+      "description": "Ontdek onze oplossingen voor isolatie, gevelwerken en vochtbestrijding in {city}. We bekijken per woning welke aanpak technisch het meest geschikt is."
     },
-    "analysis": {
-      "title": "Analyse",
-      "description": "We bekijken de situatie en beoordelen welke oplossing technisch geschikt is voor uw woning."
+    "solutions": {
+      "eyebrow": "ISOLATIEOPLOSSINGEN",
+      "title": "Welke oplossing past bij uw woning?",
+      "link_label": "Bekijk deze dienst",
+      "cavity": {
+        "description": "Heeft uw woning een geschikte spouwmuur, dan kan spouwmuurisolatie een efficiënte manier zijn om warmteverlies via de buitenmuren te beperken."
+      },
+      "facade": {
+        "description": "Wanneer de buitengevel grondiger moet worden aangepakt, kunnen isolatieplaten langs de buitenzijde gecombineerd worden met een nieuwe crepiafwerking."
+      },
+      "roof": {
+        "description": "Via een slecht geïsoleerd dak kan veel warmte verloren gaan. Afhankelijk van de dakopbouw isoleren we onder meer met glaswol of PIR-isolatie."
+      }
     },
-    "quote": {
-      "title": "Advies & offerte",
-      "description": "U ontvangt een duidelijke toelichting van de voorgestelde werken en een offerte op maat."
+    "projects": {
+      "eyebrow": "REALISATIES",
+      "title": "Realisaties in {city}",
+      "description": "Bekijk enkele isolatie- en gevelwerken die Nu-Isoleren heeft uitgevoerd in {city}."
     },
-    "execution": {
-      "title": "Uitvoering",
-      "description": "Na akkoord plannen we de werken in en voeren onze vakmensen deze zorgvuldig uit."
+    "grants": {
+      "eyebrow": "PREMIES & STEUN",
+      "flanders": {
+        "title": "Premies voor isolatiewerken in {city}",
+        "description": "Voor bepaalde isolatie- en renovatiewerken aan een woning in {city} kunnen Vlaamse premies of andere steunmaatregelen van toepassing zijn. De voorwaarden hangen onder meer af van het type werk, de woning en de geldende regelgeving.",
+        "button": "Bekijk premies in Vlaanderen"
+      },
+      "wallonia": {
+        "title": "Premies voor isolatiewerken in {city}",
+        "description": "Voor bepaalde isolatie- en renovatiewerken aan een woning in {city} kunnen Waalse premies of andere steunmaatregelen van toepassing zijn. De voorwaarden hangen af van het type werk, de woning en de geldende regelgeving.",
+        "button": "Bekijk premies in Wallonië"
+      }
     },
-    "completion": {
-      "title": "Oplevering",
-      "description": "Na de uitvoering controleren we de werken en overlopen we het resultaat met u."
+    "process": {
+      "eyebrow": "ONZE WERKWIJZE",
+      "title": "Van aanvraag tot uitvoering",
+      "description": "We begeleiden u stap voor stap, van de eerste aanvraag tot de uitvoering en oplevering van de werken.",
+      "steps": {
+        "request": {
+          "title": "Aanvraag",
+          "description": "U neemt contact met ons op en bezorgt ons de eerste informatie over uw woning en de gewenste werken."
+        },
+        "analysis": {
+          "title": "Analyse",
+          "description": "We bekijken de situatie en beoordelen welke oplossing technisch geschikt is voor uw woning."
+        },
+        "quote": {
+          "title": "Advies & offerte",
+          "description": "U ontvangt een duidelijke toelichting van de voorgestelde werken en een offerte op maat."
+        },
+        "execution": {
+          "title": "Uitvoering",
+          "description": "Na akkoord plannen we de werken in en voeren onze vakmensen deze zorgvuldig uit."
+        },
+        "completion": {
+          "title": "Oplevering",
+          "description": "Na de uitvoering controleren we de werken en overlopen we het resultaat met u."
+        }
+      }
+    },
+    "nearby": {
+      "eyebrow": "WERKGEBIEDEN",
+      "title": "Ook actief rond {city}",
+      "description": "Naast {city} voert Nu-Isoleren ook isolatie- en gevelwerken uit in verschillende steden en gemeenten in de omgeving."
     }
-  }
-},
-"nearby": {
-  "eyebrow": "WERKGEBIEDEN",
-  "title": "Ook actief rond {city}",
-  "description": "Naast {city} voert Nu-Isoleren ook isolatie- en gevelwerken uit in verschillende steden en gemeenten in de omgeving."
-}
   },
   "ContactPage": {
     "hero": {
@@ -557,7 +555,7 @@
       "breadcrumb": "EPC-waarde berekenen",
       "badge": "EPC-CALCULATOR",
       "title": "Bereken de EPC-waarde van uw woning",
-      "description": "Beantwoord enkele vragen over uw woning, isolatie, ramen en verwarming en krijg een eerste inschatting van de energieprestatie van uw woning.",
+      "description": "Wilt u weten hoe energiezuinig uw woning is? Bereken gratis een indicatieve EPC-waarde met onze online calculator. Beantwoord vragen over uw woning, isolatie, ramen en verwarming en ontdek uw geschatte energiescore en energielabel.",
       "disclaimer": "De berekening is indicatief en vervangt geen officieel EPC-attest.",
       "cta": "Start de EPC-berekening"
     },
@@ -576,7 +574,7 @@
       "building": {
         "badge": "UW WONING",
         "title": "Vertel ons eerst iets over uw woning",
-        "description": "Deze basisgegevens helpen ons om de juiste regionale methode en uitgangspunten voor de berekening te bepalen.",
+        "description": "Deze gegevens helpen ons rekening te houden met het gewest en de kenmerken van uw woning bij het maken van een indicatieve berekening.",
         "region": {
           "question": "Waar ligt uw woning?",
           "options": {
@@ -1369,739 +1367,713 @@
         "contact": "Vraag persoonlijk advies",
         "again": "Woningcheck opnieuw doen"
       }
-      
     },
     "advice": {
-        "badge": "VAN CHECK NAAR OPLOSSING",
-        "title": "Van woningcheck naar de juiste aanpak",
-        "description": "Elke woning is anders. De woningcheck helpt om mogelijke aandachtspunten snel zichtbaar te maken en koppelt die aan oplossingen die Nu-Isoleren zelf uitvoert.",
-        "points": {
-          "check": "U krijgt op basis van uw antwoorden een eerste indicatie van mogelijke isolatie-, gevel- of vochtproblemen.",
-          "solution": "De woningcheck koppelt deze aandachtspunten rechtstreeks aan passende diensten van Nu-Isoleren.",
-          "inspection": "Voor de definitieve oplossing bekijken we de technische situatie indien nodig ter plaatse."
-        },
-        "notice": "Een online woningcheck kan niet alle details van een woning beoordelen. De staat van de spouw, het dak, de gevel en eventuele vochtproblemen kan ter plaatse nauwkeuriger worden onderzocht.",
-        "imageAlt": "Afgewerkte woning na isolatie- en gevelwerken door Nu-Isoleren"
+      "badge": "VAN CHECK NAAR OPLOSSING",
+      "title": "Van woningcheck naar de juiste aanpak",
+      "description": "Elke woning is anders. De woningcheck helpt om mogelijke aandachtspunten snel zichtbaar te maken en koppelt die aan oplossingen die Nu-Isoleren zelf uitvoert.",
+      "points": {
+        "check": "U krijgt op basis van uw antwoorden een eerste indicatie van mogelijke isolatie-, gevel- of vochtproblemen.",
+        "solution": "De woningcheck koppelt deze aandachtspunten rechtstreeks aan passende diensten van Nu-Isoleren.",
+        "inspection": "Voor de definitieve oplossing bekijken we de technische situatie indien nodig ter plaatse."
       },
-      "faq": {
-  "badge": "VEELGESTELDE VRAGEN",
-  "title": "Veelgestelde vragen over uw woning isoleren",
-  "description": "Vind antwoorden over de woningcheck, geschikte isolatiemaatregelen, spouwmuren, vochtproblemen en de oplossingen van Nu-Isoleren."
-}
+      "notice": "Een online woningcheck kan niet alle details van een woning beoordelen. De staat van de spouw, het dak, de gevel en eventuele vochtproblemen kan ter plaatse nauwkeuriger worden onderzocht.",
+      "imageAlt": "Afgewerkte woning na isolatie- en gevelwerken door Nu-Isoleren"
+    },
+    "faq": {
+      "badge": "VEELGESTELDE VRAGEN",
+      "title": "Veelgestelde vragen over uw woning isoleren",
+      "description": "Vind antwoorden over de woningcheck, geschikte isolatiemaatregelen, spouwmuren, vochtproblemen en de oplossingen van Nu-Isoleren."
+    }
   },
-
   "GrantsPage": {
-  "metadata": {
-    "title": "Isolatiepremies 2026 in België | Nu-Isoleren",
-    "description": "Ontdek welke isolatiepremies en renovatiesteun er in 2026 bestaan in Vlaanderen, Brussel en Wallonië. Bekijk de voorwaarden per gewest."
-  },
-
-  "hero": {
-    "breadcrumb": "Premies",
-    "badge": "ISOLATIEPREMIES 2026",
-    "title": "Welke isolatiepremies zijn er in België?",
-    "description": "Voor isolatie- en renovatiewerken bestaan verschillende premies en steunmaatregelen. De voorwaarden en bedragen verschillen per gewest. Bekijk de actuele mogelijkheden voor Vlaanderen, Brussel en Wallonië."
-  },
-
-  "intro": {
-    "badge": "PREMIES & STEUNMAATREGELEN",
-    "title": "Premies voor het isoleren en renoveren van uw woning",
-    "imageAlt": "Afbeelding van een woning in België met een isolatiepremie",
-    "description": "Wie investeert in dakisolatie, muurisolatie of andere energetische renovatiewerken kan in bepaalde situaties recht hebben op financiële steun. Welke premie van toepassing is, hangt onder andere af van het gewest waarin de woning ligt, het type werken en uw persoonlijke situatie.",
-    "descriptionSecond": "Nu-Isoleren helpt u hieronder om snel naar de juiste informatie voor uw gewest te gaan. Op de detailpagina's vindt u de belangrijkste voorwaarden, ondersteunde isolatiewerken en informatie over de aanvraag."
-  },
-
-  "regions": {
-    "badge": "KIES UW GEWEST",
-    "title": "Bekijk de isolatiepremies in uw gewest",
-    
-    "description": "De regels voor renovatie- en isolatiepremies verschillen tussen Vlaanderen, Brussel en Wallonië.",
-
-    "flanders": {
-      "title": "Isolatiepremies Vlaanderen",
-      "description": "Bekijk welke Vlaamse premies en steunmaatregelen van toepassing kunnen zijn op isolatie- en renovatiewerken.",
-      "button": "Bekijk premies in Vlaanderen"
+    "metadata": {
+      "title": "Isolatiepremies 2026 in België | Nu-Isoleren",
+      "description": "Ontdek welke isolatiepremies en renovatiesteun er in 2026 bestaan in Vlaanderen, Brussel en Wallonië. Bekijk de voorwaarden per gewest."
     },
-
-    "brussels": {
-      "title": "Isolatiepremies Brussel",
-      "description": "Bekijk de beschikbare informatie over premies en steun voor energetische renovaties in het Brussels Hoofdstedelijk Gewest.",
-      "button": "Bekijk premies in Brussel"
+    "hero": {
+      "breadcrumb": "Premies",
+      "badge": "ISOLATIEPREMIES 2026",
+      "title": "Welke isolatiepremies zijn er in België?",
+      "description": "Voor isolatie- en renovatiewerken bestaan verschillende premies en steunmaatregelen. De voorwaarden en bedragen verschillen per gewest. Bekijk de actuele mogelijkheden voor Vlaanderen, Brussel en Wallonië."
     },
-
-    "wallonia": {
-      "title": "Isolatiepremies Wallonië",
-      "description": "Ontdek welke Waalse steunmaatregelen mogelijk bestaan voor isolatie en energetische renovatiewerken.",
-      "button": "Bekijk premies in Wallonië"
-    }
-  },
-  "faq": {
-  "badge": "VEELGESTELDE VRAGEN",
-  "title": "Veelgestelde vragen over isolatiepremies",
-  "description": "Vind antwoorden op algemene vragen over isolatiepremies, regionale verschillen en steun voor dak-, muur- en gevelisolatie."
-}
-},
-"FlandersGrantsPage": {
-  "metadata": {
-    "title": "Isolatiepremies Vlaanderen 2026 & 2027 | Nu-Isoleren",
-    "description": "Ontdek de actuele isolatiepremies in Vlaanderen in 2026, waaronder Mijn VerbouwPremie voor dakisolatie en buitenmuurisolatie. Bekijk bedragen, voorwaarden en wijzigingen voor 2027."
-  },
-
-  "hero": {
-    "parentBreadcrumb": "Premies",
-    "breadcrumb": "Vlaanderen",
-    "badge": "ISOLATIEPREMIES VLAANDEREN",
-    "title": "Isolatiepremies in Vlaanderen in 2026",
-    "description": "Wie zijn woning isoleert, kan in bepaalde situaties recht hebben op Mijn VerbouwPremie. De regels zijn sinds 1 maart 2026 gewijzigd. Bekijk hieronder wie nog in aanmerking komt, welke isolatiewerken ondersteund worden en hoeveel premie mogelijk is.",
-    "updated": "Laatst bijgewerkt: september 2026"
-  },
-
- "update": {
-  "badge": "BELANGRIJKE UPDATE 2026",
-  "title": "Hoeveel bedraagt Mijn VerbouwPremie voor isolatie?",
-  "description": "Sinds 1 maart 2026 komen eigenaar-bewoners uit inkomenscategorie 1 en 2 niet meer in aanmerking voor Mijn VerbouwPremie voor deze isolatiewerken. Voor inkomenscategorie 3 en 4 blijft financiële steun mogelijk.",
-
-  "table": {
-    "work": "Isolatiewerk",
-    "category1": "Inkomenscategorie 1",
-    "category2": "Inkomenscategorie 2",
-    "category3": "Inkomenscategorie 3",
-    "category4": "Inkomenscategorie 4",
-
-    "rows": {
-      "roof": {
-        "label": "Dakisolatie",
-        "category1": "n.v.t.",
-        "category2": "n.v.t.",
-        "category3": "Tot € 4.025 (max. 35% van de factuur)",
-        "category4": "Tot € 5.750 (max. 50% van de factuur)"
+    "intro": {
+      "badge": "PREMIES & STEUNMAATREGELEN",
+      "title": "Premies voor het isoleren en renoveren van uw woning",
+      "imageAlt": "Afbeelding van een woning in België met een isolatiepremie",
+      "description": "Wie investeert in dakisolatie, muurisolatie of andere energetische renovatiewerken kan in bepaalde situaties recht hebben op financiële steun. Welke premie van toepassing is, hangt onder andere af van het gewest waarin de woning ligt, het type werken en uw persoonlijke situatie.",
+      "descriptionSecond": "Nu-Isoleren helpt u hieronder om snel naar de juiste informatie voor uw gewest te gaan. Op de detailpagina's vindt u de belangrijkste voorwaarden, ondersteunde isolatiewerken en informatie over de aanvraag."
+    },
+    "regions": {
+      "badge": "KIES UW GEWEST",
+      "title": "Bekijk de isolatiepremies in uw gewest",
+      "description": "De regels voor renovatie- en isolatiepremies verschillen tussen Vlaanderen, Brussel en Wallonië.",
+      "flanders": {
+        "title": "Isolatiepremies Vlaanderen",
+        "description": "Bekijk welke Vlaamse premies en steunmaatregelen van toepassing kunnen zijn op isolatie- en renovatiewerken.",
+        "button": "Bekijk premies in Vlaanderen"
       },
-
-      "floor": {
-        "label": "Vloerisolatie",
-        "category1": "n.v.t.",
-        "category2": "n.v.t.",
-        "category3": "Tot € 1.050 (max. 35% van de factuur)",
-        "category4": "Tot € 1.500 (max. 50% van de factuur)"
+      "brussels": {
+        "title": "Isolatiepremies Brussel",
+        "description": "Bekijk de beschikbare informatie over premies en steun voor energetische renovaties in het Brussels Hoofdstedelijk Gewest.",
+        "button": "Bekijk premies in Brussel"
       },
-
-      "wall": {
-        "label": "Muurisolatie",
-        "category1": "n.v.t.",
-        "category2": "n.v.t.",
-        "category3": "Tot € 3.500 (max. 35% van de factuur)",
-        "category4": "Tot € 5.000 (max. 50% van de factuur)"
+      "wallonia": {
+        "title": "Isolatiepremies Wallonië",
+        "description": "Ontdek welke Waalse steunmaatregelen mogelijk bestaan voor isolatie en energetische renovatiewerken.",
+        "button": "Bekijk premies in Wallonië"
       }
+    },
+    "faq": {
+      "badge": "VEELGESTELDE VRAGEN",
+      "title": "Veelgestelde vragen over isolatiepremies",
+      "description": "Vind antwoorden op algemene vragen over isolatiepremies, regionale verschillen en steun voor dak-, muur- en gevelisolatie."
     }
   },
-
-  "notice": "De bovenstaande bedragen zijn maximale premiebedragen. Het uiteindelijke bedrag hangt af van de in aanmerking komende factuur, uw inkomenscategorie en de geldende voorwaarden van Mijn VerbouwPremie. De aanvraagdatum bepaalt welke regeling van toepassing is."
-},
-"intro": {
-  "badge": "MIJN VERBOUWPREMIE",
-  "title": "Wat is Mijn VerbouwPremie?",
-  "description": "Mijn VerbouwPremie is een premie van de Vlaamse overheid voor renovatie en energiebesparende investeringen aan woningen en appartementen in het Vlaamse Gewest.",
-  "descriptionSecond": "Voor Nu-Isoleren zijn vooral de categorieën dak en buitenmuur relevant. Daaronder vallen onder andere dakisolatie, spouwmuurisolatie en buitengevelisolatie.",
-  "highlight": "Of u recht heeft op een premie hangt onder andere af van uw inkomenscategorie, het type woning, de uitgevoerde werken en de technische voorwaarden.",
-  "imageAlt": "Woning in Vlaanderen tijdens energetische renovatie en isolatiewerken"
-},
-"eligibility": {
-  "badge": "VOOR WIE?",
-  "title": "Wie komt in aanmerking voor een isolatiepremie?",
-  "description": "Voor premieaanvragen vanaf 1 maart 2026 komen eigenaar-bewoners uit inkomenscategorie 3 en 4 nog in aanmerking voor Mijn VerbouwPremie voor dak- en muurisolatie. Uw inkomen en gezinssituatie bepalen tot welke categorie u behoort.",
-  "points": {
-    "building": "De woning of het appartement moet in het Vlaamse Gewest liggen en voor 1 januari 2006 aangesloten zijn op het elektriciteitsnet, of volgens het kadaster voor die datum voor het eerst in gebruik zijn genomen.",
-    "income": "Voor uw inkomenscategorie wordt gekeken naar het laatst beschikbare aanslagbiljet op het moment van de premieaanvraag.",
-    "property": "Wie naast de premiewoning nog een andere woning, appartement of bouwgrond volledig in volle eigendom heeft, valt als eigenaar-bewoner automatisch in inkomenscategorie 1."
-  },
-  "table": {
-    "situation": "Gezinssituatie",
-    "category4": "Categorie 4",
-    "category3": "Categorie 3",
-    "single": {
-      "label": "Alleenstaande",
-      "category4": "Tot € 24.750",
-      "category3": "€ 24.750 – € 43.240"
+  "FlandersGrantsPage": {
+    "metadata": {
+      "title": "Isolatiepremies Vlaanderen 2026–2027 | Nu-Isoleren",
+      "description": "Welke isolatiepremie kunt u in Vlaanderen aanvragen? Bekijk Mijn VerbouwPremie 2026, bedragen voor spouwmuur, dak en gevel, voorwaarden en de vooruitblik op 2027."
     },
-    "family": {
-      "label": "Koppel of alleenstaande + 1 persoon ten laste",
-      "category4": "Tot € 37.110",
-      "category3": "€ 37.110 – € 60.520"
+    "hero": {
+      "parentBreadcrumb": "Premies",
+      "breadcrumb": "Vlaanderen",
+      "badge": "ISOLATIEPREMIES VLAANDEREN",
+      "title": "Isolatiepremies Vlaanderen 2026: bedragen, voorwaarden en 2027",
+      "description": "Heeft u recht op een premie voor spouwmuurisolatie, dakisolatie of buitengevelisolatie? Ontdek welke regels sinds 1 maart 2026 gelden, welke bedragen mogelijk zijn en wat er voor aanvragen in 2027 verandert.",
+      "updated": "Laatst inhoudelijk gecontroleerd: 15 november 2026"
     },
-    "extra": {
-      "label": "Per bijkomende persoon ten laste",
-      "category4": "+ € 4.420",
-      "category3": "+ € 4.420"
+    "update": {
+      "badge": "BELANGRIJKE UPDATE 2026",
+      "title": "Hoeveel isolatiepremie kunt u in 2026 krijgen?",
+      "description": "Voor aanvragen sinds 1 maart 2026 krijgen eigenaar-bewoners in inkomenscategorie 1 en 2 geen Mijn VerbouwPremie meer voor dak-, vloer- of buitenmuurisolatie. Categorie 3 en 4 en verhuurders aan een woonmaatschappij kunnen onder voorwaarden nog steun krijgen.",
+      "table": {
+        "work": "Isolatiewerk",
+        "category1": "Inkomenscategorie 1",
+        "category2": "Inkomenscategorie 2",
+        "category3": "Inkomenscategorie 3",
+        "category4": "Inkomenscategorie 4",
+        "rows": {
+          "roof": {
+            "label": "Dakisolatie",
+            "category1": "n.v.t.",
+            "category2": "n.v.t.",
+            "category3": "Tot € 4.025 (max. 35% van de factuur)",
+            "category4": "Tot € 5.750 (max. 50% van de factuur)"
+          },
+          "floor": {
+            "label": "Vloerisolatie",
+            "category1": "n.v.t.",
+            "category2": "n.v.t.",
+            "category3": "Tot € 1.050 (max. 35% van de factuur)",
+            "category4": "Tot € 1.500 (max. 50% van de factuur)"
+          },
+          "wall": {
+            "label": "Muurisolatie",
+            "category1": "n.v.t.",
+            "category2": "n.v.t.",
+            "category3": "Tot € 3.500 (max. 35% van de factuur)",
+            "category4": "Tot € 5.000 (max. 50% van de factuur)"
+          }
+        }
+      },
+      "notice": "De bedragen zijn maxima voor de betrokken categorie van werken, berekend op het in aanmerking komende factuurbedrag exclusief btw. Voor dak, vloer en buitenmuur geldt in de regel een minimale factuur van € 1.000 excl. btw. Het toegekende bedrag hangt af van de aanvraagdatum, de doelgroep, de factuur en de technische voorwaarden. Voor aanvragen in 2027 gebruikt u de geïndexeerde inkomensgrenzen."
     },
-    "notice": "Deze inkomensgrenzen gelden voor premieaanvragen vanaf 1 januari 2026. De aanvraagdatum, het laatst beschikbare aanslagbiljet en uw gezinssituatie zijn bepalend."
-  }
-},
-
-"works": {
-  "badge": "ISOLATIEWERKEN",
-  "title": "Welke isolatiewerken komen in aanmerking?",
-  "description": "Voor Mijn VerbouwPremie gelden per type isolatiewerk technische voorwaarden. Voor de diensten van Nu-Isoleren zijn vooral dakisolatie, spouwmuurisolatie en buitengevelisolatie relevant.",
-  "roof": {
-    "title": "Dakisolatie",
-    "description": "Nieuwe dak- of zoldervloerisolatie kan in aanmerking komen wanneer de isolatie voldoet aan de technische voorwaarden van Mijn VerbouwPremie.",
-    "requirement1": "De nieuw geplaatste isolatie moet een Rd-waarde van minstens 4,5 m²K/W hebben.",
-    "requirement2": "Bij isolatie van een hellend dak is langs de binnenzijde een correct uitgevoerd dampscherm vereist."
-  },
-  "cavity": {
-    "title": "Spouwmuurisolatie",
-    "description": "Ook het na-isoleren van een geschikte bestaande spouwmuur valt onder de categorie buitenmuur.",
-    "requirement1": "De spouw moet volledig worden gevuld, minimaal 50 mm breed zijn en het isolatiemateriaal mag een lambdawaarde van maximaal 0,065 W/mK hebben.",
-    "requirement2": "De werken moeten worden uitgevoerd door een STS 71-1-erkende aannemer. Een reeds gedeeltelijk geïsoleerde spouw komt niet in aanmerking voor bijkomende navulling."
-  },
-  "facade": {
-    "title": "Buitengevelisolatie",
-    "description": "Isolatie langs de buitenzijde van de gevel kan eveneens onder de categorie buitenmuur vallen, bijvoorbeeld bij een gevelrenovatie met isolatie en crepi.",
-    "requirement1": "De nieuwe buitenmuurisolatie langs de buitenzijde moet minstens een Rd-waarde van 3 m²K/W hebben.",
-    "requirement2": "Gevelafwerking zoals crepi komt enkel mee in aanmerking wanneer ze gecombineerd wordt met voldoende nieuwe buitenmuurisolatie."
-  },
-  "notice": "De isolatiewerken moeten voldoen aan alle technische en administratieve voorwaarden die gelden op het moment van uw premieaanvraag."
-},
-
-"application": {
-  "badge": "PREMIE AANVRAGEN",
-  "title": "Hoe vraagt u Mijn VerbouwPremie aan?",
-  "description": "De premie wordt aangevraagd nadat de werken zijn uitgevoerd en u over de vereiste facturen en attesten beschikt.",
-  "steps": {
+    "intro": {
+      "badge": "MIJN VERBOUWPREMIE",
+      "title": "Wat is Mijn VerbouwPremie?",
+      "description": "Mijn VerbouwPremie is een premie van de Vlaamse overheid voor renovatie en energiebesparende investeringen aan woningen en appartementen in het Vlaamse Gewest.",
+      "descriptionSecond": "Voor isolatieprojecten zijn vooral de categorieën dak, vloer en buitenmuur relevant. Spouwmuurisolatie met EPS-parels en nieuwe buitengevelisolatie achter crepi behoren tot de categorie buitenmuur; niet elke gevelafwerking zonder nieuwe isolatie komt in aanmerking.",
+      "highlight": "De aanvraagdatum bepaalt welke regels en inkomensgrenzen gelden. Controleer eerst de geschiktheid van de woning, uw inkomenscategorie en de technische voorwaarden voor het gekozen isolatiewerk.",
+      "imageAlt": "Woning in Vlaanderen tijdens energetische renovatie en isolatiewerken"
+    },
+    "eligibility": {
+      "badge": "VOOR WIE?",
+      "title": "Wie komt in aanmerking voor een isolatiepremie?",
+      "description": "Sinds 1 maart 2026 komen eigenaar-bewoners uit inkomenscategorie 3 en 4 nog in aanmerking voor Mijn VerbouwPremie voor dak-, vloer- en buitenmuurisolatie. Ook verhuurders aan een woonmaatschappij kunnen onder voorwaarden een premie krijgen.",
+      "points": {
+        "building": "De woning of het appartement moet in het Vlaamse Gewest liggen en voor 1 januari 2006 aangesloten zijn op het elektriciteitsnet, of volgens het kadaster voor die datum voor het eerst in gebruik zijn genomen.",
+        "income": "Voor uw inkomenscategorie wordt gekeken naar het laatst beschikbare aanslagbiljet op het moment van de premieaanvraag.",
+        "property": "Wie naast de premiewoning nog een andere woning, appartement of bouwgrond volledig in volle eigendom heeft, valt als eigenaar-bewoner automatisch in inkomenscategorie 1."
+      },
+      "table": {
+        "situation": "Gezinssituatie",
+        "category4": "Categorie 4",
+        "category3": "Categorie 3",
+        "single": {
+          "label": "Alleenstaande",
+          "category4": "Tot en met € 24.750",
+          "category3": "Meer dan € 24.750 t.e.m. € 43.240"
+        },
+        "family": {
+          "label": "Koppel of alleenstaande + 1 persoon ten laste",
+          "category4": "Tot en met € 37.110",
+          "category3": "Meer dan € 37.110 t.e.m. € 60.520"
+        },
+        "extra": {
+          "label": "Per bijkomende persoon ten laste",
+          "category4": "+ € 4.420",
+          "category3": "+ € 4.420"
+        },
+        "notice": "Deze grenzen gelden voor aanvragen in 2026 (1 januari t.e.m. 31 december). Vanaf 1 januari 2027 gelden geïndexeerde grenzen. Gebruik de officiële simulator voor het jaar waarin u aanvraagt."
+      }
+    },
     "works": {
-      "title": "Laat de isolatiewerken uitvoeren",
-      "description": "Voor dak- en buitenmuurisolatie komen enkel werken uitgevoerd door een aannemer in aanmerking. Voor bepaalde technieken gelden bijkomende erkenningsvoorwaarden."
-    },
-    "documents": {
-      "title": "Verzamel facturen en attesten",
-      "description": "Bewaar de eindfactuur, eventuele voorschot- en tussentijdse facturen en het vereiste aannemersattest. Voor spouwmuurisolatie is ook het VVO-attest STS 71-1 vereist."
-    },
-    "portal": {
-      "title": "Dien de aanvraag in via Mijn VerbouwLoket",
-      "description": "U dient Mijn VerbouwPremie digitaal in via Mijn VerbouwLoket en vraagt de premie per categorie van werken aan."
-    },
-    "followup": {
-      "title": "Volg uw aanvraag op",
-      "description": "Na indiening kunt u de aanvraag verder opvolgen via Mijn VerbouwLoket. De overheid kan bijkomende bewijsstukken opvragen."
-    }
-  },
-  "notice": "De facturen mogen op de datum van de premieaanvraag maximaal 2 jaar oud zijn. Dien uw aanvraag daarom tijdig in."
-},
-
-"future": {
-  "badge": "VOORUITBLIK 2027",
-  "title": "Wat verandert er mogelijk in 2027?",
-  "description": "De Vlaamse Regering bereidt een uitbreiding van Mijn VerbouwPremie voor bepaalde verhuurders voor. Verhuurders die onder voorwaarden betaalbaar verhuren, zouden toegang kunnen krijgen tot een premiepercentage van 35%, vergelijkbaar met inkomenscategorie 3.",
-  "social": "Voor verhuurders die hun woning minstens negen jaar via een woonmaatschappij verhuren, is daarnaast een mogelijke extra bonus aangekondigd boven op het premiepercentage van inkomenscategorie 4.",
-  "warning": "Deze wijzigingen zijn aangekondigd, maar waren in september 2026 nog niet definitief goedgekeurd. Nu-Isoleren past deze pagina aan zodra de definitieve regelgeving gepubliceerd wordt."
-}
-},
-
-"BrusselsGrantsPage": {
-  "metadata": {
-    "title": "Isolatiepremies Brussel 2026 & 2027 | RENOLUTION & ECORENO",
-    "description": "Bekijk de actuele situatie rond isolatiepremies in Brussel in 2026 en 2027. Lees meer over RENOLUTION, het ECORENO-krediet en beschikbare renovatiesteun."
-  },
-
-  "hero": {
-    "parentBreadcrumb": "Premies",
-    "breadcrumb": "Brussel",
-    "badge": "ISOLATIEPREMIES BRUSSEL",
-    "title": "Isolatiepremies in Brussel in 2026",
-    "description": "De situatie rond renovatie- en isolatiepremies in het Brussels Hoofdstedelijk Gewest is in 2026 uitzonderlijk. Bekijk de actuele status van de RENOLUTION-premies en welke andere vormen van renovatiesteun momenteel beschikbaar zijn.",
-    "updated": "Laatst bijgewerkt: september 2026",
-    "imageAlt": "Woningen in Brussel waar energetische renovatie mogelijk is"
-  },
-
-  "status": {
-    "badge": "BELANGRIJKE UPDATE 2026",
-    "title": "Geen RENOLUTION-aanvragen voor eindfacturen uit 2025 of 2026",
-    "description": "Volgens het Brussels Hoofdstedelijk Gewest is er momenteel nog geen regeringsbeslissing genomen over eventuele RENOLUTION-premies voor 2025 en 2026.",
-    "highlight": "Op dit moment kunnen geen RENOLUTION-premieaanvragen worden ingediend voor werken waarvan de eindfactuur uit 2025 of 2026 dateert.",
-    "notice": "Premiebedragen en voorwaarden uit vroegere RENOLUTION-regelingen, zoals die van 2024, mogen daarom niet als actuele premie-informatie voor 2026 worden beschouwd."
-  },
-
-  "renolution": {
-    "badge": "RENOLUTION",
-    "title": "Wat zijn de RENOLUTION-premies?",
-    "description": "Sinds 1 januari 2022 is RENOLUTION de naam van het Brusselse systeem waarin de vroegere Energiepremies, de premie voor renovatie van het woonmilieu en de premie voor gevelverfraaiing werden samengebracht.",
-    "descriptionSecond": "Het systeem omvatte steun voor uiteenlopende renovatie- en energiebesparende werkzaamheden, waaronder isolatie. Voor eindfacturen uit 2025 en 2026 is momenteel echter geen nieuwe premieregeling beschikbaar om een aanvraag op te baseren.",
-    "highlight": "Plan renovatiewerken in Brussel daarom niet op basis van oude RENOLUTION-bedragen zonder eerst de actuele officiële situatie te controleren.",
-    "imageAlt": "Renovatie van een woning in het Brussels Hoofdstedelijk Gewest"
-  },
-
-  "support": {
-    "badge": "STEUN IN 2026",
-    "title": "Welke renovatiesteun is momenteel wel beschikbaar?",
-    "description": "Het ontbreken van een actuele RENOLUTION-premieregeling betekent niet dat er helemaal geen financiële ondersteuning bestaat. Afhankelijk van uw situatie zijn andere vormen van steun of financiering mogelijk.",
-
-    "ecoreno": {
-      "title": "ECORENO-krediet",
-      "description": "Een financieringsoplossing voor renovatiewerken aan een woning in het Brussels Hoofdstedelijk Gewest, waaronder werkzaamheden die de energieprestatie verbeteren."
-    },
-
-    "municipal": {
-      "title": "Gemeentelijke steun",
-      "description": "Sommige Brusselse gemeenten bieden eigen premies of financiële voordelen aan. De voorwaarden en beschikbaarheid verschillen per gemeente."
-    },
-
-    "vat": {
-      "title": "6% btw bij renovatie",
-      "description": "Voor bepaalde renovatiewerken kan onder de wettelijke voorwaarden het verlaagde btw-tarief van 6% van toepassing zijn. Dit is een fiscaal voordeel en geen RENOLUTION-premie."
-    },
-
-    "notice": "Welke steun voor u van toepassing is, hangt onder andere af van het type woning, uw statuut, uw inkomen en de geplande werken."
-  },
-
-  "ecoreno": {
-    "badge": "ECORENO-KREDIET",
-    "title": "Renovatiewerken financieren met het ECORENO-krediet",
-    "description": "Het ECORENO-krediet biedt een financieringsoplossing voor verschillende renovatiewerken aan een woning in Brussel.",
-    "notGrant": "ECORENO is een lening en geen renovatiepremie.",
-
-    "table": {
-      "item": "Onderdeel",
-      "details": "Actuele situatie",
-
-      "rate": {
-        "label": "Rentevoet",
-        "value": "Preferentieel tarief van 2,5% tot 3,5%, afhankelijk van de toepasselijke voorwaarden en inkomensbarema's."
+      "badge": "ISOLATIEWERKEN",
+      "title": "Welke isolatiewerken komen in aanmerking?",
+      "description": "De categorie buitenmuur omvat onder voorwaarden na-isolatie van de spouw en nieuwe buitengevelisolatie. Ook dak- en vloerisolatie kunnen in aanmerking komen als aan de vereiste technische prestaties en administratieve voorwaarden is voldaan.",
+      "roof": {
+        "title": "Dakisolatie",
+        "description": "Nieuwe dak- of zoldervloerisolatie kan in aanmerking komen wanneer de isolatie voldoet aan de technische voorwaarden van Mijn VerbouwPremie.",
+        "requirement1": "De nieuw geplaatste isolatie moet een Rd-waarde van minstens 4,5 m²K/W hebben.",
+        "requirement2": "Bij isolatie van een hellend dak is langs de binnenzijde een correct uitgevoerd dampscherm vereist."
       },
-
-      "applicants": {
-        "label": "Voor wie?",
-        "value": "Eigenaars, toekomstige eigenaars en huurders van een woning in het Brussels Hoofdstedelijk Gewest kunnen onder voorwaarden in aanmerking komen."
+      "cavity": {
+        "title": "Spouwmuurisolatie",
+        "description": "Een bestaande, technisch geschikte spouwmuur na-isoleren kan in aanmerking komen onder Mijn VerbouwPremie voor buitenmuur. Het gaat om een premie voor de uitgevoerde werken, niet om een afzonderlijke premie voor EPS-parels.",
+        "requirement1": "De spouw moet volledig worden gevuld, minimaal 50 mm breed zijn en het isolatiemateriaal mag een lambdawaarde van maximaal 0,065 W/mK hebben.",
+        "requirement2": "De werken moeten worden uitgevoerd door een volgens STS 71-1 erkende aannemer. De vereiste Verklaring van Overeenkomstigheid (VVO) met STS 71-1 moet bij de aanvraag worden toegevoegd. Een reeds gedeeltelijk geïsoleerde spouw komt niet in aanmerking voor navulling."
       },
-
-      "works": {
-        "label": "Welke werken?",
-        "value": "Onder andere klassieke renovatiewerken, verbetering van de energieprestatie, veiligheid, gezondheid en bewoonbaarheid en bepaalde werken rond autonomie."
+      "facade": {
+        "title": "Buitengevelisolatie",
+        "description": "Isolatie langs de buitenzijde van de gevel kan eveneens onder de categorie buitenmuur vallen, bijvoorbeeld bij een gevelrenovatie met isolatie en crepi.",
+        "requirement1": "De nieuwe buitenmuurisolatie langs de buitenzijde moet minstens een Rd-waarde van 3 m²K/W hebben.",
+        "requirement2": "Gevelafwerking zoals crepi kan mee in aanmerking komen wanneer zij samengaat met voldoende nieuwe buitenmuurisolatie langs de buitenkant. Crepi zonder nieuwe buitengevelisolatie, of crepi in combinatie met uitsluitend nieuwe spouwmuurisolatie, valt hiervoor niet onder de premie."
       },
-
-      "contractor": {
-        "label": "Uitvoering",
-        "value": "De werken moeten worden uitgevoerd door een professionele aannemer die aan de toepasselijke beroeps- en registratievoorwaarden voldoet."
-      }
+      "notice": "Ook de staat van de woning, de aanvraagdatum, het type werk, de vereiste facturen en de technische voorwaarden zijn bepalend. De officiële voorwaarden van Vlaanderen.be gaan altijd voor."
     },
-
-    "notice": "Volgens de actuele informatie van Homegrade is het ECORENO-krediet momenteel niet beschikbaar voor eigenaar-verhuurders of verenigingen van mede-eigenaars. Er gelden daarnaast financiële en administratieve voorwaarden."
-  },
-
-  "future": {
-    "badge": "VOORUITBLIK 2027",
-    "title": "Wat weten we over de Brusselse premies in 2027?",
-    "description": "Voor 2027 publiceren we pas concrete premiebedragen en voorwaarden wanneer die officieel door het Brussels Hoofdstedelijk Gewest zijn vastgesteld.",
-    "descriptionSecond": "In september 2026 is er nog geen definitieve RENOLUTION-regeling voor 2027 gepubliceerd waarop betrouwbare premiebedragen voor isolatiewerken kunnen worden gebaseerd.",
-    "warning": "Nu-Isoleren vermeldt bewust geen geschatte of oude premiebedragen als informatie voor 2027. Deze pagina wordt aangepast wanneer nieuwe officiële regelgeving beschikbaar is."
-  },
-
-  "sources": {
-    "title": "Bronnen & actualiteit",
-    "description": "Deze pagina werd in september 2026 gecontroleerd op basis van actuele informatie van het Brussels Hoofdstedelijk Gewest en Homegrade. Regelingen en voorwaarden kunnen wijzigen.",
-    "region": "Brussels Hoofdstedelijk Gewest",
-    "homegrade": "Homegrade – ECORENO",
-    "back": "Terug naar alle premies"
-  }
-},
-
-"WalloniaGrantsPage": {
-  "metadata": {
-    "title": "Isolatiepremies Wallonië 2026 & 2027 | Nu-Isoleren",
-    "description": "Bekijk de actuele isolatiepremies in Wallonië in 2026 en het nieuwe renovatiestelsel vanaf 1 oktober 2026. Ontdek bedragen, inkomenscategorieën, Rénopack en Rénoprêt."
-  },
-
-  "hero": {
-    "parentBreadcrumb": "Premies",
-    "breadcrumb": "Wallonië",
-    "badge": "ISOLATIEPREMIES WALLONIË",
-    "title": "Isolatiepremies in Wallonië in 2026",
-    "description": "De Waalse renovatiesteun verandert ingrijpend in 2026. Het tijdelijke stelsel van Primes Habitation loopt af op 30 september 2026 en wordt vanaf 1 oktober vervangen door een nieuw systeem rond Rénopack en Rénoprêt.",
-    "updated": "Laatst bijgewerkt: september 2026",
-    "imageAlt": "Woning in Wallonië tijdens energetische renovatiewerken"
-  },
-
-  "transition": {
-    "badge": "BELANGRIJKE OVERGANG 2026",
-    "title": "Op 1 oktober 2026 verandert de Waalse renovatiesteun",
-    "description": "In september 2026 zijn twee verschillende systemen relevant. Welke regeling voor u geldt, hangt af van het moment waarop uw project en aanvraag vallen.",
-
-    "current": {
-      "date": "Tot 30 september 2026",
-      "title": "Primes Habitation 2025-2026",
-      "description": "Het tijdelijke premiestelsel blijft van toepassing tot en met 30 september 2026. De aanvraag voor de premie, inclusief de eindfactuur, moet uiterlijk op die datum worden ingediend."
-    },
-
-    "new": {
-      "date": "Vanaf 1 oktober 2026",
-      "title": "Nieuw renovatiestelsel",
-      "description": "De regionale steun verschuift naar Rénopack en Rénoprêt. Het nieuwe systeem focust op energie-intensieve woningen die via een renovatie een voldoende grote verbetering van hun PEB-label realiseren."
-    },
-
-    "notice": "De onderstaande premies per m² gelden voor het tijdelijke stelsel tot en met 30 september 2026 en mogen niet als premiebedragen voor het nieuwe systeem vanaf 1 oktober 2026 worden gebruikt."
-  },
-
-  "currentPremiums": {
-    "badge": "PRIMES HABITATION 2025-2026",
-    "title": "Hoeveel bedraagt de huidige isolatiepremie in Wallonië?",
-    "description": "Binnen het tijdelijke stelsel wordt een basisbedrag vermenigvuldigd volgens de inkomenscategorie van het huishouden. Hieronder staan de bedragen voor werken die relevant zijn voor de diensten van Nu-Isoleren.",
-
-    "table": {
-      "work": "Werk",
-
-      "rows": {
-        "roof": {
-          "label": "Dak- of zolderisolatie",
-          "r1": "€ 120/m²",
-          "r2": "€ 80/m²",
-          "r3": "€ 60/m²",
-          "r4": "€ 40/m²"
+    "application": {
+      "badge": "PREMIE AANVRAGEN",
+      "title": "Hoe vraagt u Mijn VerbouwPremie aan?",
+      "description": "De premie wordt aangevraagd nadat de werken zijn uitgevoerd en u over de vereiste facturen en attesten beschikt.",
+      "steps": {
+        "works": {
+          "title": "Laat de isolatiewerken uitvoeren",
+          "description": "Voor dak- en buitenmuurisolatie komen enkel werken uitgevoerd door een aannemer in aanmerking. Voor bepaalde technieken gelden bijkomende erkenningsvoorwaarden."
         },
-
-        "wall": {
-          "label": "Thermische muurisolatie",
-          "r1": "€ 52,80/m²",
-          "r2": "€ 35,20/m²",
-          "r3": "€ 26,40/m²",
-          "r4": "€ 17,60/m²"
+        "documents": {
+          "title": "Verzamel facturen en attesten",
+          "description": "Bewaar de eindfactuur, eventuele voorschot- en tussentijdse facturen en het relevante aannemersattest. Voor spouwmuurisolatie is de Verklaring van Overeenkomstigheid (VVO) volgens STS 71-1 vereist."
         },
-
-        "damp": {
-          "label": "Behandeling opstijgend vocht",
-          "r1": "€ 19,20/lm",
-          "r2": "€ 12,80/lm",
-          "r3": "€ 9,60/lm",
-          "r4": "€ 6,40/lm"
+        "portal": {
+          "title": "Dien de aanvraag in via Mijn VerbouwLoket",
+          "description": "Dien Mijn VerbouwPremie digitaal in via het officiële Mijn VerbouwLoket. U dient de aanvraag afzonderlijk per categorie van werken in."
+        },
+        "followup": {
+          "title": "Volg uw aanvraag op",
+          "description": "Na indiening kunt u de aanvraag verder opvolgen via Mijn VerbouwLoket. De overheid kan bijkomende bewijsstukken opvragen."
         }
-      }
-    },
-
-    "notice": "Voor inkomenscategorie R1 en R2 is de premie beperkt tot maximaal 70% van de in aanmerking komende factuurbedragen. Voor R3 en R4 geldt een maximum van 50%. Voor bio-based isolatiematerialen bestaan binnen het tijdelijke stelsel hogere basisbedragen."
-  },
-
-  "eligibility": {
-    "badge": "VOORWAARDEN TOT 30 SEPTEMBER",
-    "title": "Wie komt nog in aanmerking voor Primes Habitation?",
-    "description": "Voor het tijdelijke stelsel gelden voorwaarden voor zowel de aanvrager, de woning als de uitvoering van de werken.",
-
-    "points": {
-      "location": "De woning moet in het Waalse Gewest liggen, buiten het grondgebied van de Duitstalige Gemeenschap.",
-      "age": "Het gebouw moet meer dan 15 jaar oud zijn.",
-      "usage": "Het gebouw moet voor meer dan 50% bestemd zijn of worden voor bewoning.",
-      "contractor": "De werken moeten worden uitgevoerd door een aannemer die is ingeschreven in de Kruispuntbank van Ondernemingen en waar vereist over de juiste beroepsbekwaamheid beschikt.",
-      "audit": "Voor de meeste renovatiewerken is vóór de start een Audit Logement verplicht. Voor dakwerken en thermische isolatie van dak of zolder is die voorafgaande audit niet verplicht."
-    },
-
-    "imageAlt": "Energiezuinige renovatie van een woning in Wallonië"
-  },
-
-  "newRegime": {
-    "badge": "VANAF 1 OKTOBER 2026",
-    "title": "Hoe werkt het nieuwe Waalse renovatiestelsel?",
-    "description": "Vanaf 1 oktober 2026 wordt de steun gericht op woningen met een zwakke energieprestatie. Het project moet de woning naar een duidelijk beter PEB-label brengen.",
-
-    "peb": {
-      "gf": {
-        "label": "PEB F of G",
-        "value": "De renovatie moet de woning minstens naar PEB-label D brengen."
       },
-
-      "e": {
-        "label": "PEB E",
-        "value": "De renovatie moet de woning minstens naar PEB-label C brengen."
-      }
+      "notice": "U kunt de premie pas na de werken aanvragen. De eindfactuur moet op de aanvraagdatum maximaal 24 maanden oud zijn. Oudere voorschot- of tussentijdse facturen kunnen buiten de premieberekening vallen."
     },
-
-    "audit": "Een voorafgaande audit wordt verplicht om toegang te krijgen tot de nieuwe financiering. De steun wordt berekend over het volledige renovatieproject en niet langer afzonderlijk per isolatiewerk."
-  },
-
-  "loans": {
-    "badge": "RÉNOPACK & RÉNOPRÊT",
-    "title": "Welke financiële steun geldt vanaf oktober 2026?",
-    "description": "De Waalse steun wordt opgebouwd rond twee renovatieleningen. De inkomenscategorie bepaalt welk systeem en welke vermindering van toepassing is.",
-
-    "table": {
-      "category": "Categorie",
-      "income": "Referentie-inkomen",
-      "loan": "Financiering",
-      "reduction": "Vermindering terugbetaling",
-
-      "rows": {
-        "c1": {
-          "income": "Tot € 28.900",
-          "loan": "Rénopack aan 0%",
-          "reduction": "50%"
-        },
-
-        "c2": {
-          "income": "€ 28.900,01 – € 41.100",
-          "loan": "Rénopack aan 0%",
-          "reduction": "40%"
-        },
-
-        "c3": {
-          "income": "€ 41.100,01 – € 67.100",
-          "loan": "Rénopack aan 0%",
-          "reduction": "15%"
-        },
-
-        "c4": {
-          "income": "€ 67.100,01 – € 122.800",
-          "loan": "Rénoprêt aan preferentieel tarief",
-          "reduction": "0%"
-        }
-      }
-    },
-
-    "renopack": {
-      "title": "Rénopack",
-      "description": "Voor categorie C1, C2 en C3. Het gaat om een renteloze renovatielening gecombineerd met een vermindering van het bedrag dat uiteindelijk moet worden terugbetaald."
-    },
-
-    "renopret": {
-      "title": "Rénoprêt",
-      "description": "Voor categorie C4, eigenaar-verhuurders en verenigingen van mede-eigenaars. De rente wordt bepaald volgens de toepasselijke voorwaarden en ligt onder de gewone marktvoorwaarden."
-    },
-
-    "notice": "Voor een eengezinswoning kan de financiering oplopen tot € 75.000. De officiële percentages voor C1, C2 en C3 omvatten volgens de Waalse overheid ook de mogelijke verhoging van 5% voor het gebruik van ecomaterialen. De inkomensbedragen zijn geïndexeerd op 1 januari 2026."
-  },
-
-  "application": {
-    "badge": "WAT MOET U DOEN?",
-    "title": "Welke procedure geldt voor uw renovatie?",
-    "description": "Door de overgang op 1 oktober 2026 is het belangrijk om eerst vast te stellen onder welk systeem uw renovatieproject valt.",
-
-    "before": {
-      "title": "Tot 30 september 2026",
-      "description": "Aanvragen binnen het tijdelijke Primes Habitation-stelsel moeten uiterlijk op 30 september 2026 worden ingediend, inclusief de eindfactuur. De aanvraag kan via Mon Espace of via de officiële formulieren gebeuren."
-    },
-
-    "after": {
-      "title": "Vanaf 1 oktober 2026",
-      "description": "Nieuwe projecten vallen onder het nieuwe Rénopack- en Rénoprêtstelsel. Een voorafgaande audit is verplicht en het volledige renovatieproject moet voldoen aan de voorwaarden rond PEB-verbetering en financiering."
-    }
-  },
-
-  "sources": {
-    "title": "Bronnen & actualiteit",
-    "description": "Deze pagina werd in september 2026 gecontroleerd op basis van officiële informatie van de Waalse overheid. De overgang naar het nieuwe stelsel vindt plaats op 1 oktober 2026 en voorwaarden kunnen verder administratief worden verduidelijkt.",
-    "current": "Wallonië – Primes Habitation 2025-2026",
-    "new": "Wallonië – nieuw renovatiestelsel",
-    "back": "Terug naar alle premies"
-  }
-},
-
-"QuotePage": {
-  "metadata": {
-    "title": "Gratis offerte voor isolatie & gevelwerken | Nu-Isoleren",
-    "description": "Vraag gratis en vrijblijvend een offerte aan voor isolatie, gevelwerken of vochtbestrijding. Nu-Isoleren is actief in Vlaanderen en Wallonië."
-  },
-
-  "hero": {
-    "badge": "GRATIS & VRIJBLIJVEND",
-    "title": "Vraag gratis uw offerte aan",
-    "description": "Selecteer de werken waarin u geïnteresseerd bent en laat uw gegevens achter. Ons team bekijkt uw aanvraag en neemt contact met u op om de werken verder te bespreken.",
-
-    "points": {
-      "free": "Gratis en volledig vrijblijvend",
-      "personal": "Persoonlijke opvolging door ons team",
-      "areas": "Actief in Vlaanderen en Wallonië"
-    }
-  },
-
-  "form": {
-    "step": "Stap {current} van {total}",
-
-    "services": {
-      "title": "Welke werken wilt u laten uitvoeren?",
-      "description": "U kunt één of meerdere diensten selecteren."
-    },
-
-    "contact": {
-      "title": "Uw gegevens",
-      "description": "Laat uw gegevens achter zodat ons team contact met u kan opnemen."
-    },
-
-    "fields": {
-      "firstName": "Voornaam",
-      "lastName": "Achternaam",
-      "email": "E-mailadres",
-      "phone": "Telefoonnummer",
-      "street": "Straat",
-      "houseNumber": "Nr.",
-      "postcode": "Postcode",
-      "city": "Gemeente",
-      "message": "Opmerking of vraag",
-      "messagePlaceholder": "Vertel ons eventueel iets meer over de gewenste werken..."
-    },
-
-    "privacy": "Ik geef Nu-Isoleren toestemming om mijn gegevens te gebruiken om contact met mij op te nemen over deze offerteaanvraag. *",
-
-    "buttons": {
-      "next": "Verder",
-      "back": "Terug",
-      "submit": "Gratis offerte aanvragen",
-      "submitting": "Aanvraag verzenden..."
-    },
-
-    "errors": {
-      "service": "Selecteer minstens één dienst.",
-      "privacy": "U moet toestemming geven voordat u de aanvraag kunt verzenden.",
-      "submit": "Er ging iets mis bij het verzenden van uw aanvraag. Probeer het opnieuw."
-    },
-
-    "success": {
-      "title": "Uw aanvraag is goed ontvangen",
-      "description": "Bedankt voor uw offerteaanvraag. Ons team bekijkt uw gegevens en neemt contact met u op om de werken verder te bespreken.",
-      "reference": "Referentienummer"
-    }
-  },
-  "trust": {
-  "badge": "WAAROM NU-ISOLEREN?",
-  "title": "Uw woning verdient een aanpak op maat",
-  "description": "Een goede renovatie begint met duidelijk advies en een correcte uitvoering. We bekijken iedere aanvraag afzonderlijk en zoeken samen naar een oplossing die technisch én praktisch bij uw woning past.",
-
-  "items": {
-    "free": {
-      "title": "Gratis & vrijblijvend",
-      "description": "U vraagt volledig gratis een offerte aan, zonder verdere verplichtingen."
-    },
-    "personal": {
-      "title": "Persoonlijke aanpak",
-      "description": "We bekijken uw woning en situatie afzonderlijk en adviseren een oplossing die daarbij past."
-    },
-    "professional": {
-      "title": "Correcte uitvoering",
-      "description": "We besteden aandacht aan zowel de technische uitvoering als een nette en verzorgde afwerking."
+    "future": {
+      "badge": "VOORUITBLIK 2027",
+      "title": "Mijn VerbouwPremie 2027: wat staat vast en wat is nog gepland?",
+      "description": "Voor premieaanvragen vanaf 1 januari 2027 zijn geïndexeerde inkomensgrenzen gepubliceerd. U kunt uw situatie voor 2027 nagaan via de officiële simulator. De premiebedragen en voorwaarden hangen af van het type werk en de doelgroep.",
+      "social": "Daarnaast ligt een voorstel voor om bepaalde private verhuurders met een betaalbare huurprijs, conformiteitsattest en huurperiode van minstens drie jaar onder voorwaarden toegang te geven tot 35% steun. Voor verhuurders aan een woonmaatschappij met minstens negen jaar verhuur wordt een aanvullende bonus van 10% voorgesteld boven op het huidige premiepercentage van 50%.",
+      "warning": "De Vlaamse Regering keurde dit ontwerp op 23 oktober 2026 voor de tweede keer principieel goed. Het is op 15 november 2026 nog geen definitieve regelgeving; de beoogde invoering ligt in 2027. Behandel voorgestelde steun niet als een verworven recht."
     },
     "quality": {
-      "title": "Kwaliteitsmaterialen",
-      "description": "We werken met betrouwbare materialen en systemen die geschikt zijn voor duurzame renovatiewerken."
+      "badge": "ERKENDE UITVOERING",
+      "title": "Spouwmuurisolatie: wat betekenen ATG 3170 en STS 71-1 voor uw premie?",
+      "description": "Bij spouwmuurisolatie zijn zowel het gekozen isolatiesysteem als de correcte uitvoering belangrijk. Nu-Isoleren werkt met gebonden EPS-parels van Isomo en voert spouwmuurisolatie uit volgens de vereisten van STS 71-1.",
+      "atg": {
+        "title": "ISOMOPEARLS — ATG 3170",
+        "description": "ATG 3170 is de technische goedkeuring van het ISOMOPEARLS-isolatiesysteem van Isomo. Het is een goedkeuring van het systeem, niet op zichzelf een bedrijfsattest van Nu-Isoleren."
+      },
+      "sts": {
+        "title": "Uitvoering volgens STS 71-1",
+        "description": "Nu-Isoleren werkt voor spouwmuurisolatie als erkende installateur volgens STS 71-1. Bij een premieaanvraag is een Verklaring van Overeenkomstigheid (VVO) volgens STS 71-1 vereist."
+      },
+      "check": {
+        "title": "Controleer uw premie vóór de aanvraag",
+        "description": "De technische uitvoering alleen geeft geen automatisch recht op een premie. Ook uw inkomen, het gebouw, de factuur en de aanvraagdatum zijn bepalend."
+      },
+      "official": "Officiële voorwaarden voor buitenmuur",
+      "simulator": "Open de officiële premiesimulator",
+      "footnote": "De actuele erkenning en het eigen STS-/BCCA-nummer van de uitvoerende onderneming moeten aantoonbaar zijn. De premie wordt altijd door de Vlaamse overheid beoordeeld.",
+      "atgDocument": "Bekijk technische goedkeuring ATG 3170"
     }
-  }
-},
-"process": {
-  "badge": "HOE WERKT HET?",
-  "title": "Zo verloopt uw aanvraag",
-  "description": "In drie eenvoudige stappen van uw aanvraag naar een persoonlijk voorstel voor uw woning.",
-
-  "steps": {
-    "request": {
-      "title": "Vraag uw offerte aan",
-      "description": "Selecteer de gewenste werken en laat uw contactgegevens achter via het formulier."
+  },
+  "BrusselsGrantsPage": {
+    "metadata": {
+      "title": "Isolatiepremies Brussel 2026 & 2027 | RENOLUTION & ECORENO",
+      "description": "Bekijk de actuele situatie rond isolatiepremies in Brussel in 2026 en 2027. Lees meer over RENOLUTION, het ECORENO-krediet en beschikbare renovatiesteun."
+    },
+    "hero": {
+      "parentBreadcrumb": "Premies",
+      "breadcrumb": "Brussel",
+      "badge": "ISOLATIEPREMIES BRUSSEL",
+      "title": "Isolatiepremies in Brussel in 2026",
+      "description": "De situatie rond renovatie- en isolatiepremies in het Brussels Hoofdstedelijk Gewest is in 2026 uitzonderlijk. Bekijk de actuele status van de RENOLUTION-premies en welke andere vormen van renovatiesteun momenteel beschikbaar zijn.",
+      "updated": "Laatst bijgewerkt: september 2026",
+      "imageAlt": "Woningen in Brussel waar energetische renovatie mogelijk is"
+    },
+    "status": {
+      "badge": "BELANGRIJKE UPDATE 2026",
+      "title": "Geen RENOLUTION-aanvragen voor eindfacturen uit 2025 of 2026",
+      "description": "Volgens het Brussels Hoofdstedelijk Gewest is er momenteel nog geen regeringsbeslissing genomen over eventuele RENOLUTION-premies voor 2025 en 2026.",
+      "highlight": "Op dit moment kunnen geen RENOLUTION-premieaanvragen worden ingediend voor werken waarvan de eindfactuur uit 2025 of 2026 dateert.",
+      "notice": "Premiebedragen en voorwaarden uit vroegere RENOLUTION-regelingen, zoals die van 2024, mogen daarom niet als actuele premie-informatie voor 2026 worden beschouwd."
+    },
+    "renolution": {
+      "badge": "RENOLUTION",
+      "title": "Wat zijn de RENOLUTION-premies?",
+      "description": "Sinds 1 januari 2022 is RENOLUTION de naam van het Brusselse systeem waarin de vroegere Energiepremies, de premie voor renovatie van het woonmilieu en de premie voor gevelverfraaiing werden samengebracht.",
+      "descriptionSecond": "Het systeem omvatte steun voor uiteenlopende renovatie- en energiebesparende werkzaamheden, waaronder isolatie. Voor eindfacturen uit 2025 en 2026 is momenteel echter geen nieuwe premieregeling beschikbaar om een aanvraag op te baseren.",
+      "highlight": "Plan renovatiewerken in Brussel daarom niet op basis van oude RENOLUTION-bedragen zonder eerst de actuele officiële situatie te controleren.",
+      "imageAlt": "Renovatie van een woning in het Brussels Hoofdstedelijk Gewest"
+    },
+    "support": {
+      "badge": "STEUN IN 2026",
+      "title": "Welke renovatiesteun is momenteel wel beschikbaar?",
+      "description": "Het ontbreken van een actuele RENOLUTION-premieregeling betekent niet dat er helemaal geen financiële ondersteuning bestaat. Afhankelijk van uw situatie zijn andere vormen van steun of financiering mogelijk.",
+      "ecoreno": {
+        "title": "ECORENO-krediet",
+        "description": "Een financieringsoplossing voor renovatiewerken aan een woning in het Brussels Hoofdstedelijk Gewest, waaronder werkzaamheden die de energieprestatie verbeteren."
+      },
+      "municipal": {
+        "title": "Gemeentelijke steun",
+        "description": "Sommige Brusselse gemeenten bieden eigen premies of financiële voordelen aan. De voorwaarden en beschikbaarheid verschillen per gemeente."
+      },
+      "vat": {
+        "title": "6% btw bij renovatie",
+        "description": "Voor bepaalde renovatiewerken kan onder de wettelijke voorwaarden het verlaagde btw-tarief van 6% van toepassing zijn. Dit is een fiscaal voordeel en geen RENOLUTION-premie."
+      },
+      "notice": "Welke steun voor u van toepassing is, hangt onder andere af van het type woning, uw statuut, uw inkomen en de geplande werken."
+    },
+    "ecoreno": {
+      "badge": "ECORENO-KREDIET",
+      "title": "Renovatiewerken financieren met het ECORENO-krediet",
+      "description": "Het ECORENO-krediet biedt een financieringsoplossing voor verschillende renovatiewerken aan een woning in Brussel.",
+      "notGrant": "ECORENO is een lening en geen renovatiepremie.",
+      "table": {
+        "item": "Onderdeel",
+        "details": "Actuele situatie",
+        "rate": {
+          "label": "Rentevoet",
+          "value": "Preferentieel tarief van 2,5% tot 3,5%, afhankelijk van de toepasselijke voorwaarden en inkomensbarema's."
+        },
+        "applicants": {
+          "label": "Voor wie?",
+          "value": "Eigenaars, toekomstige eigenaars en huurders van een woning in het Brussels Hoofdstedelijk Gewest kunnen onder voorwaarden in aanmerking komen."
+        },
+        "works": {
+          "label": "Welke werken?",
+          "value": "Onder andere klassieke renovatiewerken, verbetering van de energieprestatie, veiligheid, gezondheid en bewoonbaarheid en bepaalde werken rond autonomie."
+        },
+        "contractor": {
+          "label": "Uitvoering",
+          "value": "De werken moeten worden uitgevoerd door een professionele aannemer die aan de toepasselijke beroeps- en registratievoorwaarden voldoet."
+        }
+      },
+      "notice": "Volgens de actuele informatie van Homegrade is het ECORENO-krediet momenteel niet beschikbaar voor eigenaar-verhuurders of verenigingen van mede-eigenaars. Er gelden daarnaast financiële en administratieve voorwaarden."
+    },
+    "future": {
+      "badge": "VOORUITBLIK 2027",
+      "title": "Wat weten we over de Brusselse premies in 2027?",
+      "description": "Voor 2027 publiceren we pas concrete premiebedragen en voorwaarden wanneer die officieel door het Brussels Hoofdstedelijk Gewest zijn vastgesteld.",
+      "descriptionSecond": "In september 2026 is er nog geen definitieve RENOLUTION-regeling voor 2027 gepubliceerd waarop betrouwbare premiebedragen voor isolatiewerken kunnen worden gebaseerd.",
+      "warning": "Nu-Isoleren vermeldt bewust geen geschatte of oude premiebedragen als informatie voor 2027. Deze pagina wordt aangepast wanneer nieuwe officiële regelgeving beschikbaar is."
+    },
+    "sources": {
+      "title": "Bronnen & actualiteit",
+      "description": "Deze pagina werd in september 2026 gecontroleerd op basis van actuele informatie van het Brussels Hoofdstedelijk Gewest en Homegrade. Regelingen en voorwaarden kunnen wijzigen.",
+      "region": "Brussels Hoofdstedelijk Gewest",
+      "homegrade": "Homegrade – ECORENO",
+      "back": "Terug naar alle premies"
+    }
+  },
+  "WalloniaGrantsPage": {
+    "metadata": {
+      "title": "Isolatiepremies Wallonië 2026–2027: Rénopack | Nu-Isoleren",
+      "description": "Welke steun voor spouwmuur- en gevelisolatie in Wallonië? Ontdek Rénopack, Rénoprêt, inkomensgrenzen, PEB-voorwaarden en oude premies tot 2027."
+    },
+    "hero": {
+      "parentBreadcrumb": "Premies",
+      "breadcrumb": "Wallonië",
+      "badge": "ISOLATIEPREMIES WALLONIË",
+      "title": "Isolatiepremies in Wallonië: wat geldt in 2026 en 2027?",
+      "description": "Sinds 1 oktober 2026 geldt in Wallonië een nieuw renovatiestelsel met Rénopack en Rénoprêt. De vroegere Primes Habitation 2025–2026 zijn afgelopen. Ontdek welke financiering mogelijk is voor isolatie, welke PEB-voorwaarden gelden en wat u nu al kunt voorbereiden.",
+      "updated": "Laatst inhoudelijk gecontroleerd: 15 november 2026",
+      "imageAlt": "Woning in Wallonië tijdens energetische renovatiewerken"
+    },
+    "transition": {
+      "badge": "BELANGRIJKE OVERGANG 2026",
+      "title": "Welke isolatiesteun geldt sinds 1 oktober 2026?",
+      "description": "Voor nieuwe renovatieprojecten staat financiering via Rénopack of Rénoprêt centraal. De vroegere premies per m² uit Primes Habitation 2025–2026 zijn niet meer beschikbaar voor nieuwe aanvragen onder dat tijdelijke stelsel. Voor bepaalde oudere renovatiedossiers bestaat een afzonderlijke overgangsregeling tot 30 september 2027.",
+      "current": {
+        "date": "Afgelopen op 30 september 2026",
+        "title": "Primes Habitation 2025–2026",
+        "description": "Het tijdelijke stelsel sloot op 30 september 2026. De bedragen per m² verderop op deze pagina zijn historische informatie en gelden niet voor nieuwe projecten die vandaag starten."
+      },
+      "new": {
+        "date": "Sinds 1 oktober 2026",
+        "title": "Rénopack en Rénoprêt",
+        "description": "De nieuwe steun werkt via renovatieleningen en beoordeelt het volledige project, met aandacht voor inkomen, de energieprestatie van de woning en de geplande PEB-verbetering. De SWCS verwacht volledige operationele uitvoering begin 2027."
+      },
+      "notice": "Let op: het nieuwe stelsel is juridisch ingegaan, maar een voorinschrijving bij de SWCS is geen officiële financieringsaanvraag en garandeert geen steun."
+    },
+    "currentPremiums": {
+      "badge": "HISTORISCHE PREMIES 2025–2026",
+      "title": "Hoeveel bedroegen de Waalse isolatiepremies tot september 2026?",
+      "description": "Onder het inmiddels afgesloten tijdelijke stelsel Primes Habitation 2025–2026 golden premies per m² of lopende meter, afhankelijk van de inkomenscategorie. Deze bedragen tonen we uitsluitend als historisch overzicht; ze gelden niet voor nieuwe aanvragen onder Rénopack of Rénoprêt.",
+      "table": {
+        "work": "Werk (oude regeling)",
+        "rows": {
+          "roof": {
+            "label": "Dak- of zolderisolatie",
+            "r1": "€ 120/m²",
+            "r2": "€ 80/m²",
+            "r3": "€ 60/m²",
+            "r4": "€ 40/m²"
+          },
+          "wall": {
+            "label": "Thermische muurisolatie",
+            "r1": "€ 52,80/m²",
+            "r2": "€ 35,20/m²",
+            "r3": "€ 26,40/m²",
+            "r4": "€ 17,60/m²"
+          },
+          "damp": {
+            "label": "Behandeling opstijgend vocht",
+            "r1": "€ 19,20/lm",
+            "r2": "€ 12,80/lm",
+            "r3": "€ 9,60/lm",
+            "r4": "€ 6,40/lm"
+          }
+        }
+      },
+      "notice": "Historische bedragen uit Primes Habitation 2025–2026, afgesloten op 30 september 2026. Inkomenscategorieën R1–R2: maximaal 70% van de in aanmerking komende factuur inclusief btw; R3–R4: maximaal 50%. Deze oude categorieën en bedragen zijn niet van toepassing op de nieuwe C1–C4-financiering. De afzonderlijke overgangsmaatregelen tot 2027 betreffen bepaalde projecten die vóór 14 februari 2025 werden aangevat."
+    },
+    "eligibility": {
+      "badge": "OUDE REGELING 2025–2026",
+      "title": "Welke voorwaarden golden voor de vroegere Primes Habitation?",
+      "description": "Dit onderdeel beschrijft uitsluitend de afgesloten regeling 2025–2026. Controleer voor oudere projecten altijd welke historische of overgangsvoorwaarden op uw eigen dossier van toepassing zijn.",
+      "points": {
+        "location": "De woning moest in het Waalse Gewest liggen, buiten het grondgebied van de Duitstalige Gemeenschap.",
+        "age": "Het gebouw moest meer dan 15 jaar oud zijn.",
+        "usage": "Het gebouw moest voor meer dan 50% bestemd zijn of worden voor bewoning.",
+        "contractor": "De werken moesten worden uitgevoerd door een aannemer die bij de Kruispuntbank van Ondernemingen is ingeschreven en waar nodig de vereiste beroepsbekwaamheid bezit.",
+        "audit": "Voor de meeste renovatiewerken was vooraf een Audit Logement nodig. Voor bepaalde dakwerken en dak- of zolderisolatie gold binnen dit tijdelijke stelsel een uitzondering."
+      },
+      "imageAlt": "Energiezuinige renovatie van een woning in Wallonië"
+    },
+    "newRegime": {
+      "badge": "NIEUW STELSEL SINDS OKTOBER 2026",
+      "title": "Welke PEB-voorwaarden gelden voor Rénopack?",
+      "description": "Het nieuwe renovatiestelsel ondersteunt in de eerste plaats woningen met een zwakke energieprestatie. De geplande renovatie moet aantonen dat de vereiste energieverbetering haalbaar is. Een afzonderlijke spouwmuurisolatie- of gevelisolatie-ingreep geeft niet automatisch recht op financiering.",
+      "peb": {
+        "gf": {
+          "label": "PEB F of G",
+          "value": "Het renovatieproject moet de woning normaal minstens naar PEB-label D brengen."
+        },
+        "e": {
+          "label": "PEB E",
+          "value": "Het renovatieproject moet de woning normaal minstens naar PEB-label C brengen."
+        }
+      },
+      "audit": "Meestal is vóór de werken een recent Audit Logement nodig, uitgevoerd of geactualiseerd binnen het jaar vóór de financieringsaanvraag. Voor bepaalde C1-dossiers en gecombineerde Accesspack-aanvragen kan een expertise van de kredietverstrekker in de plaats komen. Bij aantoonbare technische, functionele of economische beperkingen kunnen uitzonderingen gelden."
+    },
+    "loans": {
+      "badge": "RÉNOPACK & RÉNOPRÊT",
+      "title": "Hoeveel steun kunt u krijgen voor renovatie in Wallonië?",
+      "description": "De Waalse renovatiesteun bestaat uit leningen. Rénopack biedt voor bepaalde eigenaar-bewoners met inkomenscategorie C1, C2 of C3 een lening aan 0% met een vermindering van het terug te betalen bedrag. Rénoprêt richt zich onder meer op categorie C4, verhuurders en mede-eigendommen.",
+      "table": {
+        "category": "Categorie",
+        "income": "Referentie-inkomen (2026)",
+        "loan": "Financiering",
+        "reduction": "Basisvermindering terugbetaling",
+        "rows": {
+          "c1": {
+            "income": "Tot € 28.900",
+            "loan": "Rénopack aan 0%",
+            "reduction": "45%"
+          },
+          "c2": {
+            "income": "€ 28.900,01 – € 41.100",
+            "loan": "Rénopack aan 0%",
+            "reduction": "35%"
+          },
+          "c3": {
+            "income": "€ 41.100,01 – € 67.100",
+            "loan": "Rénopack aan 0%",
+            "reduction": "10%"
+          },
+          "c4": {
+            "income": "€ 67.100,01 – € 122.800",
+            "loan": "Rénoprêt aan preferentieel tarief",
+            "reduction": "0%"
+          }
+        }
+      },
+      "renopack": {
+        "title": "Rénopack",
+        "description": "Renteloze renovatielening voor in aanmerking komende eigenaar-bewoners uit categorie C1–C3. De vermindering van het terug te betalen bedrag bedraagt standaard 45%, 35% of 10%, afhankelijk van het inkomen. Een verhoging van 5 procentpunten is onder strikte voorwaarden mogelijk wanneer alle relevante isolatiewerken aan de gebouwschil, behalve buitenschrijnwerk, met kwalificerende ecomaterialen worden uitgevoerd."
+      },
+      "renopret": {
+        "title": "Rénoprêt",
+        "description": "Renovatielening voor onder meer categorie C4, bepaalde verhuurders en verenigingen van mede-eigenaars. De rente is doorgaans preferentieel; in specifieke wettelijk voorziene situaties kan 0% gelden. Er is geen Rénopack-vermindering van het terug te betalen bedrag."
+      },
+      "notice": "De bedragen zijn inkomensgrenzen voor 2026 en geen gegarandeerde individuele goedkeuring. Voor het bepalen van de categorie wordt € 5.000 per persoon ten laste afgetrokken van het in aanmerking genomen inkomen. Het krediet kan maximaal € 75.000 bedragen voor een eengezinswoning en € 60.000 voor een appartement. Het bonuspercentage voor ecomaterialen geldt niet automatisch bij EPS-parels of andere conventionele isolatiematerialen."
+    },
+    "application": {
+      "badge": "FINANCIERING AANVRAGEN",
+      "title": "Hoe vraagt u renovatiefinanciering aan in Wallonië?",
+      "description": "Het tijdelijke premiestelsel is afgesloten. Voor nieuwe projecten kunt u de nieuwe financieringsvoorwaarden controleren en uw dossier voorbereiden. Volgens de SWCS wordt het vernieuwde proces naar verwachting begin 2027 volledig operationeel.",
+      "before": {
+        "title": "Oude Primes Habitation: termijn verstreken",
+        "description": "Aanvragen onder het tijdelijke stelsel 2025–2026 moesten uiterlijk op 30 september 2026 ingediend zijn. Alleen voor bepaalde projecten die vóór 14 februari 2025 zijn aangevat, bestaat een afzonderlijke overgangsregeling met een uiterste datum van 30 september 2027."
+      },
+      "after": {
+        "title": "Nieuwe projecten: eerst controleren en voorbereiden",
+        "description": "Controleer uw PEB-label en inkomenscategorie, bereid een recente woningaudit, offertes en inkomensdocumenten voor en neem contact op met de SWCS of het Fonds du Logement. Een SWCS-voorinschrijving is geen officiële kredietaanvraag. Begin geen werken en betaal geen voorschot vóór het kredietcontract is ondertekend als u op deze financiering rekent."
+      }
+    },
+    "sources": {
+      "title": "Officiële bronnen en laatste controle",
+      "description": "Inhoudelijk gecontroleerd op 15 november 2026 aan de hand van de Waalse overheid, de SWCS en de geldende regelgeving. De praktische invoering van de nieuwe aanvraagprocedure kan wijzigen; raadpleeg vóór elke beslissing de actuele voorwaarden bij de bevoegde kredietverstrekker.",
+      "current": "Wallonië – vroegere Primes Habitation 2025–2026",
+      "new": "Wallonië – Rénopack, Rénoprêt en overgangsmaatregelen",
+      "back": "Terug naar alle premies"
+    },
+    "eligibleWorks": {
+      "badge": "ISOLATIEWERKEN IN WALLONIË",
+      "title": "Welke isolatiewerken kunnen deel uitmaken van Rénopack?",
+      "description": "De nieuwe financiering kan verschillende energetische renovatiewerken omvatten, mits zij deel uitmaken van een goedgekeurd renovatieproject en in de audit of toegelaten expertise zijn opgenomen. Er bestaat geen automatisch nieuw premiebedrag per m² spouwmuur of gevel.",
+      "cavity": {
+        "title": "Spouwmuurisolatie",
+        "description": "Het na-isoleren van een technisch geschikte bestaande spouwmuur kan bijdragen aan de vereiste PEB-verbetering. Een voorafgaande controle bepaalt of de spouw geschikt is. Of de werken financierbaar zijn, hangt af van het volledige dossier.",
+        "link": "Lees meer over spouwmuurisolatie"
+      },
+      "facade": {
+        "title": "Buitengevelisolatie en crepi",
+        "description": "Buitengevelisolatie kan warmteverliezen beperken en deel uitmaken van een ruimere renovatie. De geplande isolatie en eventuele gevelafwerking moeten passen binnen de goedgekeurde werken en de toepasselijke voorwaarden."
+      },
+      "roof": {
+        "title": "Dakisolatie",
+        "description": "Ook dakisolatie kan deel uitmaken van een financierbaar renovatieproject wanneer zij in de audit of toegelaten expertise is opgenomen. De totale PEB-doelstelling blijft bepalend."
+      },
+      "damp": {
+        "title": "Vochtproblemen en muursanering",
+        "description": "Bepaalde werken om vochtproblemen aan muren en vloeren te verhelpen kunnen binnen de regels voor veiligheid en bewoonbaarheid in aanmerking komen. De kredietverstrekker beoordeelt het concrete dossier."
+      },
+      "notice": "Een afzonderlijke offerte of isolatiewerk is geen toezegging van Rénopack of Rénoprêt. Raadpleeg eerst de officiële financieringsvoorwaarden en de bevoegde kredietverstrekker.",
+      "official": "Bekijk de officiële renovatiefinanciering"
+    },
+    "legacy2027": {
+      "badge": "OVERGANGSMAATREGELEN TOT 2027",
+      "title": "Kan een oud renovatieproject nog een premie krijgen in 2027?",
+      "description": "Voor bepaalde renovatieprojecten die aantoonbaar vóór 14 februari 2025 werden aangevat, bestaan aangepaste overgangsmaatregelen. Dat is niet hetzelfde als een nieuwe isolatiepremie voor projecten die vandaag starten.",
+      "condition": "Een gedateerde en ondertekende offerte of definitieve bestelbon van uiterlijk 13 februari 2025 kan onder de toepasselijke voorwaarden belangrijk zijn. De vroeger vereiste voorafbetaling van minstens 20% is afgeschaft.",
+      "deadline": "Voor de betrokken oude premieregelingen moet de aanvraag uiterlijk op 30 september 2027 worden ingediend. Andere voorwaarden, zoals een voorafgaande audit bij bepaalde oude Primes Habitation, blijven relevant.",
+      "notice": "Wie al een premiedossier heeft ingediend, hoeft volgens de Waalse overheid niet automatisch opnieuw een aanvraag in te dienen. Laat het toepasselijke regime voor uw dossier controleren.",
+      "official": "Lees de officiële overgangsmaatregelen"
+    },
+    "quality": {
+      "badge": "VAKKENNIS VAN NU-ISOLEREN",
+      "title": "Spouwmuurisolatie met technische onderbouwing",
+      "description": "Een correcte materiaalkeuze en uitvoering zijn essentieel, los van de vraag of een renovatielening mogelijk is. Nu-Isoleren werkt met het ISOMOPEARLS-systeem van Isomo voor geschikte spouwmuren en laat de toepasbaarheid vooraf beoordelen.",
+      "atgTitle": "ISOMOPEARLS — ATG 3170",
+      "atgDescription": "ATG 3170 is de technische goedkeuring van het isolatiesysteem ISOMOPEARLS, waarvan ISOMO de goedkeuringshouder is. Het is geen afzonderlijk ATG-certificaat dat op naam van Nu-Isoleren staat.",
+      "stsTitle": "Uitvoering volgens STS 71-1",
+      "stsDescription": "Nu-Isoleren is erkend als installateur voor spouwmuurisolatie binnen het STS 71-1-kwaliteitskader. Dat kader omvat onder meer het controleren van de spouw, uitvoeringsvoorschriften en kwaliteitsopvolging.",
+      "notice": "ATG 3170 en STS 71-1 zijn geen garantie op een Waalse renovatielening. Controleer de actuele installateurserkenning en de voorwaarden van de kredietverstrekker.",
+      "official": "Meer informatie over het BCCA-kwaliteitskader"
+    }
+  },
+  "QuotePage": {
+    "metadata": {
+      "title": "Gratis offerte voor isolatie & gevelwerken | Nu-Isoleren",
+      "description": "Vraag gratis en vrijblijvend een offerte aan voor isolatie, gevelwerken of vochtbestrijding. Nu-Isoleren is actief in Vlaanderen en Wallonië."
+    },
+    "hero": {
+      "badge": "GRATIS & VRIJBLIJVEND",
+      "title": "Vraag gratis uw offerte aan",
+      "description": "Selecteer de werken waarin u geïnteresseerd bent en laat uw gegevens achter. Ons team bekijkt uw aanvraag en neemt contact met u op om de werken verder te bespreken.",
+      "points": {
+        "free": "Gratis en volledig vrijblijvend",
+        "personal": "Persoonlijke opvolging door ons team",
+        "areas": "Actief in Vlaanderen en Wallonië"
+      }
+    },
+    "form": {
+      "step": "Stap {current} van {total}",
+      "services": {
+        "title": "Welke werken wilt u laten uitvoeren?",
+        "description": "U kunt één of meerdere diensten selecteren."
+      },
+      "contact": {
+        "title": "Uw gegevens",
+        "description": "Laat uw gegevens achter zodat ons team contact met u kan opnemen."
+      },
+      "fields": {
+        "firstName": "Voornaam",
+        "lastName": "Achternaam",
+        "email": "E-mailadres",
+        "phone": "Telefoonnummer",
+        "street": "Straat",
+        "houseNumber": "Nr.",
+        "postcode": "Postcode",
+        "city": "Gemeente",
+        "message": "Opmerking of vraag",
+        "messagePlaceholder": "Vertel ons eventueel iets meer over de gewenste werken..."
+      },
+      "privacy": "Ik geef Nu-Isoleren toestemming om mijn gegevens te gebruiken om contact met mij op te nemen over deze offerteaanvraag. *",
+      "buttons": {
+        "next": "Verder",
+        "back": "Terug",
+        "submit": "Gratis offerte aanvragen",
+        "submitting": "Aanvraag verzenden..."
+      },
+      "errors": {
+        "service": "Selecteer minstens één dienst.",
+        "privacy": "U moet toestemming geven voordat u de aanvraag kunt verzenden.",
+        "submit": "Er ging iets mis bij het verzenden van uw aanvraag. Probeer het opnieuw."
+      },
+      "success": {
+        "title": "Uw aanvraag is goed ontvangen",
+        "description": "Bedankt voor uw offerteaanvraag. Ons team bekijkt uw gegevens en neemt contact met u op om de werken verder te bespreken.",
+        "reference": "Referentienummer"
+      }
+    },
+    "trust": {
+      "badge": "WAAROM NU-ISOLEREN?",
+      "title": "Uw woning verdient een aanpak op maat",
+      "description": "Een goede renovatie begint met duidelijk advies en een correcte uitvoering. We bekijken iedere aanvraag afzonderlijk en zoeken samen naar een oplossing die technisch én praktisch bij uw woning past.",
+      "items": {
+        "free": {
+          "title": "Gratis & vrijblijvend",
+          "description": "U vraagt volledig gratis een offerte aan, zonder verdere verplichtingen."
+        },
+        "personal": {
+          "title": "Persoonlijke aanpak",
+          "description": "We bekijken uw woning en situatie afzonderlijk en adviseren een oplossing die daarbij past."
+        },
+        "professional": {
+          "title": "Correcte uitvoering",
+          "description": "We besteden aandacht aan zowel de technische uitvoering als een nette en verzorgde afwerking."
+        },
+        "quality": {
+          "title": "Kwaliteitsmaterialen",
+          "description": "We werken met betrouwbare materialen en systemen die geschikt zijn voor duurzame renovatiewerken."
+        }
+      }
+    },
+    "process": {
+      "badge": "HOE WERKT HET?",
+      "title": "Zo verloopt uw aanvraag",
+      "description": "In drie eenvoudige stappen van uw aanvraag naar een persoonlijk voorstel voor uw woning.",
+      "steps": {
+        "request": {
+          "title": "Vraag uw offerte aan",
+          "description": "Selecteer de gewenste werken en laat uw contactgegevens achter via het formulier."
+        },
+        "contact": {
+          "title": "Wij nemen contact op",
+          "description": "We bekijken uw aanvraag en nemen contact met u op om uw woning en de gewenste werken te bespreken."
+        },
+        "proposal": {
+          "title": "U ontvangt een voorstel",
+          "description": "Indien nodig plannen we eerst een plaatsbezoek. Daarna ontvangt u een duidelijk voorstel voor de werken."
+        }
+      }
+    }
+  },
+  "KnowledgePage": {
+    "metadata": {
+      "title": "Kennisbank over isolatie & renovatie | Nu-Isoleren",
+      "description": "Ontdek praktische informatie en deskundig advies over isolatie, gevelwerken, vochtproblemen, premies en energiezuinig renoveren."
+    },
+    "hero": {
+      "badge": "KENNISBANK",
+      "title": "Alles wat u wilt weten over isoleren en renoveren",
+      "description": "Praktische uitleg, advies en antwoorden op veelgestelde vragen over isolatie, gevelwerken, vochtproblemen, premies en energie."
+    },
+    "filtersTitle": "Filter artikels",
+    "articlesCount": "{count, plural, =0 {Geen artikels} =1 {1 artikel} other {# artikels}}",
+    "reset": "Wissen",
+    "categoryLabel": "Onderwerpen",
+    "readArticle": "Lees artikel",
+    "pagination": {
+      "previous": "Vorige",
+      "next": "Volgende",
+      "page": "Pagina {current} van {total}"
+    },
+    "empty": {
+      "title": "Geen artikels gevonden",
+      "description": "Er zijn momenteel geen artikels beschikbaar binnen dit onderwerp."
+    }
+  },
+  "KnowledgeArticlePage": {
+    "updated": "Bijgewerkt op",
+    "contents": "Inhoud",
+    "related": {
+      "badge": "MEER ADVIES",
+      "title": "Lees ook deze artikels",
+      "description": "Ontdek meer praktische informatie en advies rond dit onderwerp."
+    }
+  },
+  "Footer": {
+    "reviews": {
+      "excellent": "Uitstekend",
+      "outOfFive": "uit 5",
+      "basedOn": "op basis van",
+      "reviews": "reviews"
+    },
+    "description": "Isolatie, gevelwerken & vochtbestrijding voor uw woning.",
+    "services": {
+      "title": "Diensten"
+    },
+    "workAreas": {
+      "title": "Werkgebieden",
+      "all": "Alle werkgebieden"
+    },
+    "calculate": {
+      "title": "Berekenen",
+      "epc": "EPC-schatting",
+      "savings": "Besparing",
+      "homeCheck": "Woningcheck"
+    },
+    "about": {
+      "title": "Over ons",
+      "aboutUs": "Over ons",
+      "projects": "Realisaties",
+      "knowledge": "Kennisbank",
+      "faq": "FAQ"
     },
     "contact": {
-      "title": "Wij nemen contact op",
-      "description": "We bekijken uw aanvraag en nemen contact met u op om uw woning en de gewenste werken te bespreken."
+      "title": "Contact"
     },
-    "proposal": {
-      "title": "U ontvangt een voorstel",
-      "description": "Indien nodig plannen we eerst een plaatsbezoek. Daarna ontvangt u een duidelijk voorstel voor de werken."
+    "legal": {
+      "privacy": "Privacybeleid",
+      "cookies": "Cookiebeleid"
+    },
+    "builtBy": "Build by"
+  },
+  "MaterialPage": {
+    "services": {
+      "badge": "GERELATEERDE DIENSTEN",
+      "title": "Waar passen we dit materiaal toe?",
+      "description": "Ontdek de isolatiediensten waarbij we dit materiaal gebruiken."
     }
-  }
-}
-},
-
-"KnowledgePage": {
-  "metadata": {
-    "title": "Kennisbank over isolatie & renovatie | Nu-Isoleren",
-    "description": "Ontdek praktische informatie en deskundig advies over isolatie, gevelwerken, vochtproblemen, premies en energiezuinig renoveren."
   },
-
-  "hero": {
-    "badge": "KENNISBANK",
-    "title": "Alles wat u wilt weten over isoleren en renoveren",
-    "description": "Praktische uitleg, advies en antwoorden op veelgestelde vragen over isolatie, gevelwerken, vochtproblemen, premies en energie."
-  },
-
-  "filtersTitle": "Filter artikels",
-  "articlesCount": "{count, plural, =0 {Geen artikels} =1 {1 artikel} other {# artikels}}",
-  "reset": "Wissen",
-  "categoryLabel": "Onderwerpen",
-  "readArticle": "Lees artikel",
-
-  "pagination": {
-    "previous": "Vorige",
-    "next": "Volgende",
-    "page": "Pagina {current} van {total}"
-  },
-
-  "empty": {
-    "title": "Geen artikels gevonden",
-    "description": "Er zijn momenteel geen artikels beschikbaar binnen dit onderwerp."
-  }
-},
-
-"KnowledgeArticlePage": {
-  "updated": "Bijgewerkt op",
-  "contents": "Inhoud",
-
-  "related": {
-    "badge": "MEER ADVIES",
-    "title": "Lees ook deze artikels",
-    "description": "Ontdek meer praktische informatie en advies rond dit onderwerp."
-  }
-},
-
-"Footer": {
-  "reviews": {
-    "excellent": "Uitstekend",
-    "outOfFive": "uit 5",
-    "basedOn": "op basis van",
-    "reviews": "reviews"
-  },
-  "description": "Isolatie, gevelwerken & vochtbestrijding voor uw woning.",
-  "services": {
-    "title": "Diensten"
-  },
-  "workAreas": {
-    "title": "Werkgebieden",
-    "all": "Alle werkgebieden"
-  },
-  "calculate": {
-    "title": "Berekenen",
-    "epc": "EPC-schatting",
-    "savings": "Besparing",
-    "homeCheck": "Woningcheck"
-  },
-  "about": {
-    "title": "Over ons",
-    "aboutUs": "Over ons",
-    "projects": "Realisaties",
-    "knowledge": "Kennisbank",
-    "faq": "FAQ"
-  },
-  "contact": {
-    "title": "Contact"
-  },
-  "legal": {
-    "privacy": "Privacybeleid",
-    "cookies": "Cookiebeleid"
-  },
-  "builtBy": "Build by"
-},
-
-"MaterialPage": {
-  "services": {
-    "badge": "GERELATEERDE DIENSTEN",
-    "title": "Waar passen we dit materiaal toe?",
-    "description": "Ontdek de isolatiediensten waarbij we dit materiaal gebruiken."
-  }
-},
   "CtaBanner": {
     "title": "Klaar om uw woning te verbeteren?",
     "description": "Vraag vrijblijvend een offerte aan en ontdek wat we voor uw woning kunnen betekenen.",
     "button": "Bespreek uw project"
   },
   "googleReviews": {
-  "eyebrow": "KLANTEN AAN HET WOORD",
-  "title": "Wat onze klanten zeggen",
-  "scoreLabel": "Een score van",
-  "outOfFive": "uit 5",
-  "basedOn": "op basis van",
-  "reviews": "reviews",
-  "selection": "Bekijk een selectie van onze Google-reviews.",
-  "previous": "Vorige reviews",
-  "next": "Volgende reviews"
-},
+    "eyebrow": "KLANTEN AAN HET WOORD",
+    "title": "Wat onze klanten zeggen",
+    "scoreLabel": "Een score van",
+    "outOfFive": "uit 5",
+    "basedOn": "op basis van",
+    "reviews": "reviews",
+    "selection": "Bekijk een selectie van onze Google-reviews.",
+    "previous": "Vorige reviews",
+    "next": "Volgende reviews"
+  },
   "CookieConsent": {
     "title": "Uw privacy, uw keuze",
     "description": "Wij gebruiken noodzakelijke cookies om de website goed te laten werken. U bepaalt of u ook analytische en marketingcookies wilt toestaan, bijvoorbeeld om de website te verbeteren en campagnes te meten.",
@@ -2128,7 +2100,6 @@
     "updated": "Laatst gewijzigd:",
     "controller": "Verantwoordelijke en contact",
     "authority": "Een klacht indienen bij de Belgische Gegevensbeschermingsautoriteit",
-
     "privacy": {
       "title": "Privacybeleid",
       "description": "Hoe Nu-Isoleren.be uw persoonsgegevens verwerkt wanneer u onze website gebruikt of een aanvraag indient.",
@@ -2187,7 +2158,6 @@
         }
       ]
     },
-
     "cookies": {
       "title": "Cookiebeleid",
       "description": "Welke cookies en vergelijkbare technieken deze website gebruikt en hoe u uw voorkeuren beheert.",

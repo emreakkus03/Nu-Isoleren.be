@@ -1,3 +1,4 @@
+
 import { pageMetadata } from '@/lib/seo/metadata';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
@@ -10,8 +11,12 @@ import WalloniaNewRegime from '@/components/grants/wallonia/WalloniaNewRegime';
 import WalloniaRenovationLoans from '@/components/grants/wallonia/WalloniaRenovationLoans';
 import WalloniaGrantsApplication from '@/components/grants/wallonia/WalloniaGrantsApplication';
 import WalloniaGrantsSources from '@/components/grants/wallonia/WalloniaGrantsSources';
-import CtaBanner from '@/components/common/CtaBanner';
 
+import WalloniaEligibleWorks from '@/components/grants/wallonia/WalloniaEligibleWorks';
+import WalloniaLegacy2027 from '@/components/grants/wallonia/WalloniaLegacy2027';
+import WalloniaGrantsQuality from '@/components/grants/wallonia/WalloniaGrantsQuality';
+
+import CtaBanner from '@/components/common/CtaBanner';
 
 interface WalloniaGrantsPageProps {
   params: Promise<{
@@ -48,15 +53,22 @@ export default async function WalloniaGrantsPage({
   return (
     <main className="w-full min-h-screen bg-white overflow-x-clip">
       <WalloniaGrantsHero locale={locale} />
+
       <WalloniaGrantsTransition locale={locale} />
-      <WalloniaCurrentPremiums locale={locale} />
-      <WalloniaGrantsEligibility locale={locale} />
+
       <WalloniaNewRegime locale={locale} />
       <WalloniaRenovationLoans locale={locale} />
+      <WalloniaEligibleWorks locale={locale} />
       <WalloniaGrantsApplication locale={locale} />
+
+      <WalloniaLegacy2027 locale={locale} />
+      <WalloniaCurrentPremiums locale={locale} />
+      <WalloniaGrantsEligibility locale={locale} />
+
+      <WalloniaGrantsQuality locale={locale} />
       <WalloniaGrantsSources locale={locale} />
-        <CtaBanner />
-      
+
+      <CtaBanner />
     </main>
   );
 }
